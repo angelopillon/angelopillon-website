@@ -84,7 +84,7 @@ nav.scrolled{background:rgba(250,248,245,.93);backdrop-filter:blur(20px) saturat
 
 /* HERO */
 .hero{position:relative;height:100svh;min-height:680px;overflow:hidden;display:flex;align-items:flex-end;background:var(--ink);}
-.hero-img{position:absolute;inset:0;width:100%;height:115%;object-fit:cover;object-position:center 25%;transform:translateY(-8%);opacity:.5;will-change:transform;}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;opacity:.5;}
 .hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(17,16,16,1) 0%,rgba(17,16,16,.62) 42%,rgba(17,16,16,.1) 100%),linear-gradient(to right,rgba(17,16,16,.58) 0%,transparent 62%);}
 .hero-body{position:relative;z-index:2;padding:0 var(--px) 100px;max-width:1000px;}
 .hero-tag{display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.22em;font-weight:500;text-transform:uppercase;color:var(--gold2);margin-bottom:36px;opacity:0;}
@@ -410,7 +410,6 @@ body{transition:background-color .55s cubic-bezier(.16,1,.3,1);}
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   background-clip:text;
   transition:transform .4s var(--ease);
-  will-change:transform;
   display:inline-block;
 }
 .proof-cell:hover .proof-n{
@@ -435,8 +434,7 @@ body{transition:background-color .55s cubic-bezier(.16,1,.3,1);}
 }
 .proof-cell{z-index:1;position:relative;}
 
-/* About section image — parallax ready */
-.about-img img{will-change:transform;}
+.about-img img{}
 
 /* Floating label on proof section */
 .proof-cell::after{
@@ -609,9 +607,9 @@ body{transition:background-color .55s cubic-bezier(.16,1,.3,1);}
 .why-cell{contain:layout;}
 .rev-card{contain:layout;}
 .step{contain:layout;}
-.proof-n{will-change:transform,opacity;}
-.h1-in{will-change:transform;}
-.about-img img{will-change:transform;}
+.proof-n{}
+.h1-in{}
+.about-img img{}
 
 </style>
 <!-- Google AdSense -->
@@ -1013,16 +1011,12 @@ function boot(){
   gsap.set('.r',{opacity:0,y:30});
 
   // ─── HERO ──────────────────────────────────────────────────────────────────
-  // Parallax on hero image
-  gsap.to('#heroImg',{
-    yPercent:22,ease:'none',
-    scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}
-  });
+  // Hero image — static (no parallax for performance)
 
   // Hero progress line
   gsap.to('#heroProgress',{
     width:'100%',ease:'none',
-    scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}
+    scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:0.8}
   });
 
   // Hero entrance sequence
@@ -1101,11 +1095,7 @@ function boot(){
     scrollTrigger:{trigger:'#aboutImg',start:'top 76%',once:true}
   });
 
-  // About image parallax
-  gsap.to('.about-img img',{
-    yPercent:-6,ease:'none',
-    scrollTrigger:{trigger:'.about-img',start:'top bottom',end:'bottom top',scrub:true}
-  });
+  // About image — static
 
   // ─── TAG EYEBROWS ───────────────────────────────────────────────────────────
   document.querySelectorAll('.tag').forEach(function(el){
@@ -1256,7 +1246,7 @@ function boot(){
   // ─── HERO SECTION EXIT FADE ─────────────────────────────────────────────────
   gsap.to('.hero-body',{
     opacity:.4,ease:'none',
-    scrollTrigger:{trigger:'.hero',start:'center top',end:'bottom top',scrub:true}
+    scrollTrigger:{trigger:'.hero',start:'center top',end:'bottom top',scrub:0.8}
   });
 
   // ─── NAV SCROLL STATE ────────────────────────────────────────────────────────
