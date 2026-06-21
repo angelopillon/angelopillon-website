@@ -60,8 +60,8 @@ input,textarea,select,button{font-family:var(--f);}
 .pre-pct{font-size:12px;letter-spacing:.2em;color:rgba(255,255,255,.28);}
 
 /* CURSOR */
-.cd{position:fixed;width:7px;height:7px;background:var(--gold2);border-radius:50%;pointer-events:none;z-index:8000;transform:translate(-50%,-50%);}
-.cr{position:fixed;border:1px solid rgba(184,146,42,.3);border-radius:50%;pointer-events:none;z-index:7999;transform:translate(-50%,-50%);transition:width .4s var(--ease),height .4s var(--ease),border-color .3s;width:40px;height:40px;}
+.cd{position:fixed;width:7px;height:7px;background:var(--gold2);border-radius:50%;pointer-events:none;z-index:8000;top:0;left:0;}
+.cr{position:fixed;border:1px solid rgba(184,146,42,.3);border-radius:50%;pointer-events:none;z-index:7999;top:0;left:0;transition:width .4s var(--ease),height .4s var(--ease),border-color .3s;width:40px;height:40px;}
 .cr.big{width:68px;height:68px;border-color:rgba(184,146,42,.55);}
 @media(pointer:coarse){.cd,.cr{display:none;}}
 
@@ -310,6 +310,8 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:
 /* ── FLOATING PATHS ── */
 #floatingPathsSvg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:1;}
 @keyframes fpAnim{0%{opacity:.3;}50%{opacity:.8;}100%{opacity:.3;}}
+#floatingPathsSvg path{animation-play-state:paused;}
+#floatingPathsSvg.fp-run path{animation-play-state:running;}
 
 /* ── SCROLL PROGRESS ── */
 #scrollProgress{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(to right,var(--gold),var(--gold2),var(--gold));z-index:600;box-shadow:0 0 8px rgba(201,164,64,.5);pointer-events:none;}
@@ -338,7 +340,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:
 .why::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(201,164,64,.18),transparent);}
 
 /* ── LUFS MOCKUP ── */
-#mockBars div{will-change:height,background;transition:height .5s cubic-bezier(.16,1,.3,1),background .5s;}
+#mockBars div{transition:height .5s cubic-bezier(.16,1,.3,1),background .5s;}
 
 /* ── STEP NUMBERS SUBTLE PULSE ── */
 @keyframes stepPulse{0%,100%{color:rgba(201,164,64,.1);}50%{color:rgba(201,164,64,.22);}}
@@ -982,11 +984,29 @@ let lang='en';
 function detectLang(){const n=(navigator.language||'en').slice(0,2).toLowerCase();return['en','it','de','es'].includes(n)?n:'en';}
 function setLang(l){lang=l;document.documentElement.lang=l;const t=T[l]||T.en;document.querySelectorAll('[data-k]').forEach(el=>{const k=el.getAttribute('data-k');if(t[k]!==undefined)el.innerHTML=t[k];});document.querySelectorAll('.f-lang').forEach(b=>b.classList.toggle('on',b.textContent.toLowerCase()===l));document.getElementById('langSel').value=l;}
 
-const cDot=document.getElementById('cDot'),cRing=document.getElementById('cRing');
-let mx=0,my=0,cx=0,cy=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
-(function ac(){cDot.style.left=mx+'px';cDot.style.top=my+'px';cx+=(mx-cx)*.1;cy+=(my-cy)*.1;cRing.style.left=cx+'px';cRing.style.top=cy+'px';requestAnimationFrame(ac);})();
-document.querySelectorAll('a,button,select,input,textarea').forEach(el=>{el.addEventListener('mouseenter',()=>cRing.classList.add('big'));el.addEventListener('mouseleave',()=>cRing.classList.remove('big'));});
+(function(){
+  const cDot=document.getElementById('cDot'),cRing=document.getElementById('cRing');
+  if(!cDot||!cRing)return;
+  // Only run the custom cursor on real pointer devices — never on touch.
+  if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches){cDot.style.display='none';cRing.style.display='none';return;}
+  let mx=window.innerWidth/2,my=window.innerHeight/2,cx=mx,cy=my,raf=null,moving=false;
+  function place(){
+    cDot.style.transform='translate3d('+mx+'px,'+my+'px,0) translate(-50%,-50%)';
+    cRing.style.transform='translate3d('+cx+'px,'+cy+'px,0) translate(-50%,-50%)';
+  }
+  place();
+  function loop(){
+    cx+=(mx-cx)*0.18;cy+=(my-cy)*0.18;
+    place();
+    // Keep animating only while the ring is still catching up — then stop (0% CPU when idle).
+    if(moving||Math.abs(mx-cx)>0.1||Math.abs(my-cy)>0.1){moving=false;raf=requestAnimationFrame(loop);}else{raf=null;}
+  }
+  window.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;moving=true;if(!raf)raf=requestAnimationFrame(loop);},{passive:true});
+  document.querySelectorAll('a,button,select,input,textarea,.btn-cream,.btn-outline-w,.btn-dark,.btn-gold,.btn-submit').forEach(function(el){
+    el.addEventListener('mouseenter',function(){cRing.classList.add('big');});
+    el.addEventListener('mouseleave',function(){cRing.classList.remove('big');});
+  });
+})();
 
 window.addEventListener('load',()=>{
   const bar=document.getElementById('preBar'),pct=document.getElementById('prePct'),pre=document.getElementById('pre'),logo=document.getElementById('preLogo');
@@ -1000,6 +1020,8 @@ window.addEventListener('load',()=>{
 function boot(){
   if(typeof gsap==='undefined'||typeof ScrollTrigger==='undefined')return;
   gsap.registerPlugin(ScrollTrigger);
+  // Don't re-run all ScrollTriggers when the mobile address bar shows/hides — kills mobile scroll jank.
+  ScrollTrigger.config({ ignoreMobileResize: true });
 
   // ─── INITIAL STATES (set via GSAP, not CSS) ────────────────────────────────
   gsap.set('.sv-card',{opacity:0,y:40,scale:.97});
@@ -1306,6 +1328,10 @@ function buildFloatingPaths() {
     path.style.animation = 'fpAnim ' + dur + 's ' + delay + 's ease-in-out infinite';
     svg.appendChild(path);
   }
+  // Pause the path animation while the hero is off-screen (saves CPU + battery).
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(es){ es.forEach(function(en){ svg.classList.toggle('fp-run', en.isIntersecting); }); }, { threshold: 0 }).observe(svg);
+  } else { svg.classList.add('fp-run'); }
 }
 
 // ─── ANIMATED LUFS MOCKUP ────────────────────────────────────────────────────
@@ -1331,8 +1357,8 @@ function buildFloatingPaths() {
   const stVals   = [-12.8,-11.9,-13.2,-12.4,-13.0,-12.1,-11.7,-12.9];
   const tpVals   = ['-0.8','-0.6','-1.1','-0.9','-0.7','-1.0','-0.8','-0.6'];
   let vidx = 0;
-
-  setInterval(function() {
+  let _lufsIv = null;
+  function _lufsTick() {
     vidx = (vidx + 1) % lufsVals.length;
     const lufs = lufsVals[vidx];
     lufsEl.textContent = lufs.toFixed(1);
@@ -1347,30 +1373,53 @@ function buildFloatingPaths() {
       const pct = h / 40;
       bar.style.background = pct > 0.85 ? 'rgba(232,128,64,.75)' : pct > 0.65 ? 'rgba(201,164,64,.75)' : 'rgba(76,175,130,.72)';
     });
-  }, 1100);
+  }
+  // Only tick while the meter is actually visible (saves CPU when scrolled away).
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(es){ es.forEach(function(en){
+      if (en.isIntersecting) { if (!_lufsIv) _lufsIv = setInterval(_lufsTick, 1100); }
+      else if (_lufsIv) { clearInterval(_lufsIv); _lufsIv = null; }
+    }); }, { threshold: 0 }).observe(barsEl);
+  } else { setInterval(_lufsTick, 1100); }
 })();
 
 // ─── MAGNETIC BUTTONS ────────────────────────────────────────────────────────
-document.querySelectorAll('.btn-cream,.btn-outline-w,.btn-dark,.btn-gold,.btn-submit').forEach(function(btn) {
-  btn.addEventListener('mousemove', function(e) {
-    const r = btn.getBoundingClientRect();
-    const x = (e.clientX - r.left - r.width/2)  * 0.15;
-    const y = (e.clientY - r.top  - r.height/2) * 0.15;
-    btn.style.transform = 'translate(' + x + 'px,' + y + 'px) translateY(-2px)';
+// ─── MAGNETIC BUTTONS (rAF-throttled, rect cached, desktop only) ─────────────
+if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+  document.querySelectorAll('.btn-cream,.btn-outline-w,.btn-dark,.btn-gold,.btn-submit').forEach(function(btn) {
+    var r = null, raf = null, lx = 0, ly = 0;
+    btn.addEventListener('mouseenter', function() { r = btn.getBoundingClientRect(); });
+    btn.addEventListener('mousemove', function(e) {
+      if (!r) r = btn.getBoundingClientRect();
+      lx = (e.clientX - r.left - r.width/2)  * 0.15;
+      ly = (e.clientY - r.top  - r.height/2) * 0.15;
+      if (!raf) raf = requestAnimationFrame(function(){ raf = null; btn.style.transform = 'translate3d(' + lx + 'px,' + ly + 'px,0) translateY(-2px)'; });
+    });
+    btn.addEventListener('mouseleave', function() {
+      if (raf) { cancelAnimationFrame(raf); raf = null; }
+      r = null;
+      btn.style.transform = '';
+    });
   });
-  btn.addEventListener('mouseleave', function() {
-    btn.style.transform = '';
-  });
-});
+}
 
-// ─── SCROLL PROGRESS ─────────────────────────────────────────────────────────
+// ─── SCROLL PROGRESS (transform-based, cached height) ────────────────────────
 (function() {
   const bar = document.getElementById('scrollProgress');
   if (!bar) return;
-  window.addEventListener('scroll', function() {
-    const total = document.documentElement.scrollHeight - window.innerHeight;
-    if (total > 0) bar.style.width = (window.scrollY / total * 100) + '%';
-  }, { passive: true });
+  bar.style.transformOrigin = 'left center';
+  bar.style.width = '100%';
+  let total = 0, ticking = false;
+  function measure(){ total = document.documentElement.scrollHeight - window.innerHeight; }
+  function update(){
+    ticking = false;
+    var p = total > 0 ? window.scrollY / total : 0;
+    bar.style.transform = 'scaleX(' + (p < 0 ? 0 : p > 1 ? 1 : p) + ')';
+  }
+  window.addEventListener('scroll', function(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  window.addEventListener('resize', function(){ measure(); update(); }, { passive: true });
+  if (typeof ScrollTrigger !== 'undefined' && ScrollTrigger.addEventListener) ScrollTrigger.addEventListener('refreshInit', measure);
+  measure(); update();
 })();
 
 
