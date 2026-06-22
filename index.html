@@ -361,7 +361,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:
    ══════════════════════════════════════════ */
 
 /* Background color morph — driven by JS */
-body{transition:background-color .55s cubic-bezier(.16,1,.3,1);}
+/* body background is constant — full-page color morph removed to stop Chrome flashing */
 
 /* Section transitions */
 .sec{transition:background-color .6s ease;}
@@ -1054,24 +1054,10 @@ function boot(){
   buildFloatingPaths();
 
   // ─── BACKGROUND COLOR MORPH ON SCROLL ──────────────────────────────────────
-  var sections = [
-    {trigger:'.hero',     bg:'#080808'},
-    {trigger:'.proof',    bg:'#0d0c0b'},
-    {trigger:'#about',    bg:'#faf8f5'},
-    {trigger:'#services', bg:'#f3f0eb'},
-    {trigger:'#why',      bg:'#080808'},
-    {trigger:'#process',  bg:'#faf8f5'},
-    {trigger:'#reviews',  bg:'#f3f0eb'},
-    {trigger:'#contact',  bg:'#faf8f5'},
-  ];
-  sections.forEach(function(s){
-    ScrollTrigger.create({
-      trigger:s.trigger, start:'top 60%',
-      invalidateOnRefresh:true,
-      onEnter:    function(){gsap.to('body',{backgroundColor:s.bg,duration:.75,ease:'power2.out',overwrite:'auto'});},
-      onEnterBack:function(){gsap.to('body',{backgroundColor:s.bg,duration:.75,ease:'power2.out',overwrite:'auto'});}
-    });
-  });
+  // Full-page background color morph removed: it was the source of the Chrome
+  // strobe/flicker (fast scroll through the dark "Why" block between light
+  // sections made the whole screen flash light-dark-light). Each section already
+  // paints its own background, so the look is identical with zero flashing.
 
   // ─── PROOF NUMBERS ──────────────────────────────────────────────────────────
   // Set initial state via GSAP (not CSS) so it works even above the fold
