@@ -1,962 +1,1627 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="js-pre">
 <head>
-<meta charset="UTF-8">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
-<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>Free LUFS Meter Online - Loudness Analyzer | Angelo Pillon</title>
-<meta name="description" content="Free professional LUFS meter. Measure Integrated LUFS, True Peak, LRA. Compare against Spotify, Apple Music, YouTube. ITU-R BS.1770-4. No upload required.">
-<meta name="keywords" content="LUFS meter online free, loudness meter, True Peak meter, LRA, streaming loudness, mastering tool, Spotify LUFS, Apple Music LUFS, audio analyzer">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free LUFS Meter & Key Finder Online — Loudness Analyzer | Angelo Pillon</title>
+<meta name="description" content="Free professional LUFS meter and key finder. Measure Integrated LUFS, True Peak, LRA, detect musical key, Camelot code and BPM. ITU-R BS.1770-4. Runs in your browser, no upload.">
 <link rel="canonical" href="https://angelopillon.com/loudness-meter/">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1931563231268808" crossorigin="anonymous"></script>
-<style>
-:root{
-  --bg:#080808;--bg2:#101010;--bg3:#161616;--bg4:#1c1c1c;
-  --cream:#efefef;--mid:#a0a0a0;--dim:#525252;
-  --gold:#c9a440;--gold2:#e8c97a;
-  --green:#3dba7a;--yellow:#e8c140;--orange:#e87840;--red:#e84040;--blue:#5080ff;
-  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);
-  --f:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free LUFS Meter & Key Finder — Angelo Pillon">
+<meta property="og:description" content="Integrated LUFS, True Peak, LRA, musical key, Camelot and BPM. Professional analysis, entirely in your browser.">
+<meta property="og:url" content="https://angelopillon.com/loudness-meter/">
+<meta name="theme-color" content="#0b0a08">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script>document.documentElement.className += ' js';</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Free LUFS Meter & Key Finder",
+  "url": "https://angelopillon.com/loudness-meter/",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "description": "Measure Integrated LUFS, True Peak, LRA and detect musical key, Camelot code and BPM. ITU-R BS.1770-4 compliant, runs entirely in the browser.",
+  "publisher": { "@type": "Person", "name": "Angelo Pillon", "url": "https://angelopillon.com" }
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--cream);font-family:var(--f);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-a{color:inherit;text-decoration:none;}
-button,input{font-family:var(--f);}
-#sp{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(to right,var(--gold),var(--gold2));z-index:600;box-shadow:0 0 8px rgba(201,164,64,.5);pointer-events:none;}
-.cd{position:fixed;width:7px;height:7px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9000;transform:translate(-50%,-50%);}
-.cr{position:fixed;width:36px;height:36px;border:1px solid rgba(201,164,64,.35);border-radius:50%;pointer-events:none;z-index:8999;transform:translate(-50%,-50%);transition:width .35s,height .35s,border-color .3s;}
-.cr.big{width:60px;height:60px;border-color:rgba(201,164,64,.6);}
-@media(pointer:coarse){.cd,.cr{display:none;}}
-nav{height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(8,8,8,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:500;}
-.nav-logo{display:flex;align-items:center;gap:10px;}
-.nav-logo svg{width:26px;height:26px;transition:transform .4s cubic-bezier(.34,1.56,.64,1);}
-.nav-logo:hover svg{transform:rotate(-8deg) scale(1.1);}
-.nav-logo-name{font-size:15px;font-weight:600;letter-spacing:-.02em;color:var(--cream);}
-.nav-links{display:flex;gap:28px;align-items:center;}
-.nav-links a{font-size:13px;color:var(--dim);transition:color .2s;}
-.nav-links a:hover,.nav-links a.active{color:var(--cream);}
-.nav-cta{font-size:13px;font-weight:500;padding:8px 18px;background:var(--gold);color:#080808;border-radius:4px;transition:background .2s;}
-.nav-cta:hover{background:var(--gold2);}
-.wrap{max-width:1280px;margin:0 auto;padding:0 48px;}
-.hero-area{padding:56px 0 0;position:relative;overflow:hidden;}
-.hero-tag{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:18px;}
-.hero-tag::before{content:'';width:24px;height:1px;background:var(--gold);}
-.hero-h1{font-size:clamp(34px,5vw,68px);font-weight:700;letter-spacing:-.045em;line-height:.95;color:var(--cream);margin-bottom:14px;}
-.hero-h1 em{font-style:italic;font-weight:300;color:var(--gold);}
-.hero-sub{font-size:15px;font-weight:300;color:var(--mid);line-height:1.65;max-width:520px;margin-bottom:36px;}
-.ad-strip{margin-bottom:16px;}
-.ad-slot{border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.ad-banner{height:auto;min-height:0;width:100%;}
-.app-grid{display:grid;grid-template-columns:1fr 300px;gap:14px;padding-bottom:80px;}
-.left-col{display:flex;flex-direction:column;gap:14px;}
-.dropzone{border:1.5px dashed rgba(255,255,255,.12);border-radius:10px;padding:44px 36px;text-align:center;cursor:pointer;transition:border-color .3s,background .3s;position:relative;overflow:hidden;background:rgba(255,255,255,.015);}
-.dropzone::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,164,64,.06) 0%,transparent 60%);pointer-events:none;}
-.dropzone:hover,.dropzone.drag{border-color:rgba(201,164,64,.4);background:rgba(201,164,64,.03);}
-.dropzone.has-file{border-color:rgba(201,164,64,.25);border-style:solid;}
-#fileInput{display:none;}
-.dz-icon{width:52px;height:52px;margin:0 auto 18px;background:rgba(201,164,64,.1);border:1px solid rgba(201,164,64,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--gold);transition:transform .3s;}
-.dropzone:hover .dz-icon{transform:translateY(-3px);}
-.dz-title{font-size:18px;font-weight:600;letter-spacing:-.02em;color:var(--cream);margin-bottom:8px;}
-.dz-sub{font-size:13px;color:var(--mid);}
-.dz-formats{font-size:11px;color:var(--dim);margin-top:8px;letter-spacing:.05em;}
-.btn-analyze{display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:#080808;font-size:14px;font-weight:600;padding:12px 26px;border-radius:5px;border:none;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;margin-top:22px;box-shadow:0 4px 20px rgba(201,164,64,.25);}
-.btn-analyze:hover:not(:disabled){background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,164,64,.35);}
-.btn-analyze:disabled{opacity:.4;cursor:not-allowed;}
-.prog-wrap{height:3px;background:rgba(255,255,255,.06);border-radius:2px;margin-top:18px;overflow:hidden;display:none;}
-.prog-fill{height:100%;background:linear-gradient(to right,var(--gold),var(--gold2));width:0%;border-radius:2px;transition:width .15s;}
-.prog-label{font-size:12px;color:var(--dim);margin-top:8px;letter-spacing:.05em;display:none;min-height:16px;}
-.meters-area{display:flex;flex-direction:column;gap:12px;}
-.meters-area.hidden{display:none;}
-.big-display{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:28px 32px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;position:relative;overflow:hidden;}
-.big-display::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(201,164,64,.3),transparent);}
-.big-val{font-size:clamp(60px,8vw,96px);font-weight:700;letter-spacing:-.06em;line-height:.9;font-variant-numeric:tabular-nums;transition:color .4s;color:var(--cream);}
-.big-label{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:6px;}
-.big-unit{font-size:15px;color:var(--dim);letter-spacing:.08em;margin-top:5px;}
-.big-status{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 11px;border-radius:3px;}
-.s-good{background:rgba(61,186,122,.12);color:var(--green);}
-.s-warn{background:rgba(232,193,64,.12);color:var(--yellow);}
-.s-hot{background:rgba(232,120,64,.12);color:var(--orange);}
-.s-clip{background:rgba(232,64,64,.12);color:var(--red);}
-.s-cold{background:rgba(80,128,255,.12);color:var(--blue);}
-.s-na{background:rgba(255,255,255,.04);color:var(--dim);}
-.sec-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
-.mc{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:8px;transition:border-color .3s;}
-.mc:hover{border-color:rgba(201,164,64,.2);}
-.mc-label{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);}
-.mc-val{font-size:24px;font-weight:700;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums;}
-.mc-sub{font-size:11px;color:var(--dim);}
-.mc-track{height:4px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden;}
-.mc-fill{height:100%;border-radius:2px;transition:width .4s,background .4s;}
-.hist-panel{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
-.hist-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border);}
-.hist-title{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);}
-#histCanvas{width:100%;height:88px;display:block;}
-.four-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
-.fm{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:5px;transition:border-color .3s,transform .3s;}
-.fm:hover{border-color:rgba(201,164,64,.22);transform:translateY(-2px);}
-.fm-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);}
-.fm-val{font-size:20px;font-weight:700;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums;}
-.fm-sub{font-size:11px;color:var(--dim);}
-.btn-export{width:100%;padding:11px;background:none;border:1px solid var(--border2);border-radius:5px;color:var(--cream);font-size:13px;font-weight:500;cursor:pointer;transition:border-color .2s,background .2s;display:none;}
-.btn-export:hover{border-color:var(--gold);background:rgba(201,164,64,.06);}
-.right-col{display:flex;flex-direction:column;gap:12px;}
-.panel{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
-.panel-head{padding:12px 16px;border-bottom:1px solid var(--border);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);}
-.fi-name{padding:10px 16px;font-size:13px;font-weight:500;color:var(--cream);border-bottom:1px solid var(--border);word-break:break-all;display:none;line-height:1.4;}
-.fi-row{display:flex;justify-content:space-between;align-items:center;padding:8px 16px;border-bottom:1px solid var(--border);}
-.fi-row:last-child{border-bottom:none;}
-.fi-k{font-size:12px;color:var(--dim);}
-.fi-v{font-size:12px;font-weight:500;color:var(--cream);}
-.plat-row{display:flex;align-items:center;padding:9px 16px;border-bottom:1px solid var(--border);transition:background .2s;}
-.plat-row:last-child{border-bottom:none;}
-.plat-row:hover{background:rgba(255,255,255,.02);}
-.plat-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-right:9px;}
-.plat-name{font-size:13px;color:var(--cream);flex:1;}
-.plat-tgt{font-size:11px;color:var(--dim);width:58px;text-align:center;}
-.badge{font-size:10px;font-weight:600;letter-spacing:.05em;padding:3px 8px;border-radius:3px;min-width:50px;text-align:center;}
-.b-ok{background:rgba(61,186,122,.12);color:var(--green);}
-.b-hot{background:rgba(232,120,64,.12);color:var(--orange);}
-.b-soft{background:rgba(80,128,255,.12);color:var(--blue);}
-.b-na{background:rgba(255,255,255,.04);color:var(--dim);}
-.tips{padding:16px;}
-.tips-title{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:12px;}
-.tip{font-size:12px;font-weight:300;color:var(--mid);line-height:1.65;padding-left:12px;position:relative;margin-bottom:8px;}
-.tip:last-child{margin-bottom:0;}
-.tip::before{content:'*';position:absolute;left:0;color:var(--gold);}
-.seo-section{border-top:1px solid var(--border);padding:56px 0 80px;}
-.seo-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;}
-.seo-section h2{font-size:26px;font-weight:700;letter-spacing:-.03em;color:var(--cream);margin-bottom:14px;}
-.seo-section h3{font-size:16px;font-weight:600;color:var(--cream);margin:24px 0 8px;}
-.seo-section p{font-size:14px;font-weight:300;color:var(--mid);line-height:1.75;margin-bottom:12px;}
-.pt{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px;}
-.pt th{text-align:left;padding:7px 10px;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);border-bottom:1px solid var(--border);}
-.pt td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--mid);}
-.pt td:first-child{color:var(--cream);font-weight:400;}
-.pt tr:last-child td{border-bottom:none;}
-.cta-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:28px;text-align:center;}
-.cta-card h3{font-size:19px;font-weight:700;letter-spacing:-.03em;color:var(--cream);margin:0 0 8px;}
-.cta-card p{font-size:13px;color:var(--dim);line-height:1.65;margin-bottom:20px;}
-.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#080808;font-size:13px;font-weight:600;padding:11px 22px;border-radius:4px;transition:background .2s,transform .15s;}
-.btn-gold:hover{background:var(--gold2);transform:translateY(-1px);}
-footer{background:var(--bg2);border-top:1px solid var(--border);padding:28px 48px;}
-.foot{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
-.f-l{font-size:13px;color:var(--dim);}
-.f-l a{color:var(--mid);transition:color .2s;}
-.f-l a:hover{color:var(--cream);}
-.f-c{font-size:12px;color:rgba(255,255,255,.16);}
-/* COOKIE BANNER */
-#cookieBanner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(16,16,16,.97);backdrop-filter:blur(24px);border-top:1px solid rgba(255,255,255,.08);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;transform:translateY(100%);transition:transform .5s cubic-bezier(.16,1,.3,1);}
-#cookieBanner.show{transform:translateY(0);}
-.cb-text{font-size:13px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.55;flex:1;min-width:240px;}
-.cb-text a{color:var(--gold);}
-.cb-btns{display:flex;gap:9px;flex-shrink:0;}
-.cb-accept{font-size:13px;font-weight:500;padding:8px 18px;background:var(--gold);color:#111;border:none;border-radius:4px;cursor:pointer;font-family:var(--f);}
-.cb-accept:hover{background:var(--gold2);}
-.cb-decline{font-size:13px;font-weight:400;padding:8px 14px;background:none;color:rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.12);border-radius:4px;cursor:pointer;font-family:var(--f);}
-.cb-decline:hover{border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.7);}
-/* ── ANIMATIONS ──────────────────────────────────────────── */
-@keyframes fadeInUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
-@keyframes pulseRing{0%{transform:scale(1);opacity:.55;}100%{transform:scale(2.6);opacity:0;}}
-@keyframes glowBurst{0%,100%{box-shadow:none;}45%{box-shadow:0 0 44px 12px rgba(201,164,64,.18);}}
-@keyframes shimmerSlide{0%{background-position:-200% center;}100%{background-position:200% center;}}
-@keyframes barGrow{from{width:0%;}to{width:var(--target-w,0%);}}
+</script>
+<style>
+/* ============================================================
+   ANGELO PILLON — LUFS METER & KEY FINDER
+   Same "Control Room" system as angelopillon.com.
+   All analysis is client-side. Animations: transform/opacity,
+   canvas loops gated by visibility, reduced-motion respected.
+   ============================================================ */
+:root{
+  --ink:#0b0a08; --ink-2:#12100c; --ink-3:#1a1712;
+  --cream:#ede6d8; --muted:#98907f; --faint:#5c564a;
+  --line:rgba(237,230,216,.10); --line-soft:rgba(237,230,216,.06);
+  --vu:#e4a62e; --vu-soft:rgba(228,166,46,.14); --peak:#ff4e2a;
+  --font-d:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --font-s:"Instrument Serif",Georgia,serif;
+  --font-m:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+  --pad:clamp(20px,5vw,72px); --max:1180px;
+}
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  background:var(--ink); color:var(--cream); font-family:var(--font-d);
+  font-weight:450; font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+::selection{ background:var(--vu); color:var(--ink); }
+img,svg,canvas{ display:block; max-width:100%; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
+:focus-visible{ outline:2px solid var(--vu); outline-offset:3px; border-radius:2px; }
+.wrap{ max-width:var(--max); margin-inline:auto; padding-inline:var(--pad); }
+.mono{ font-family:var(--font-m); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:500; }
+.serif-i{ font-family:var(--font-s); font-style:italic; font-weight:400; text-transform:none; letter-spacing:0; }
+.h2{ font-size:clamp(1.7rem,3.6vw,2.7rem); font-stretch:110%; font-weight:800; line-height:1.05; letter-spacing:-.01em; }
+.h2 .serif-i{ color:var(--vu); font-size:1.06em; }
+.cta{
+  display:inline-flex; align-items:center; gap:10px; font-size:.8rem; font-weight:700;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--ink); background:var(--vu);
+  border-radius:99px; padding:11px 22px; transition:transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s;
+}
+.cta:hover{ transform:translateY(-2px); box-shadow:0 8px 28px rgba(228,166,46,.28); }
+.cta.ghost{ background:transparent; color:var(--cream); box-shadow:inset 0 0 0 1px var(--line); }
+.cta.ghost:hover{ box-shadow:inset 0 0 0 1px var(--vu), 0 8px 28px rgba(228,166,46,.12); }
+.card{ border:1px solid var(--line); border-radius:14px; background:var(--ink-2); }
 
-/* entrance helpers */
-.afu{opacity:0;animation:fadeInUp .8s cubic-bezier(.22,1,.36,1) forwards;}
-.afu.d1{animation-delay:.07s;}.afu.d2{animation-delay:.18s;}.afu.d3{animation-delay:.32s;}.afu.d4{animation-delay:.48s;}
+/* header */
+.hd{ position:fixed; inset:0 0 auto 0; z-index:60; background:rgba(11,10,8,.84);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line-soft); }
+.hd-in{ max-width:var(--max); margin-inline:auto; padding:0 var(--pad); height:64px; display:flex; align-items:center; gap:26px; }
+.brand{ font-stretch:118%; font-weight:850; text-transform:uppercase; font-size:.95rem; white-space:nowrap; }
+.brand em{ font-style:normal; color:var(--vu); }
+.nav{ display:flex; gap:24px; margin-left:auto; }
+.nav a{ font-size:.8rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); transition:color .2s; }
+.nav a:hover{ color:var(--cream); }
+@media (max-width:680px){ .nav{ display:none; } .hd .cta{ margin-left:auto; } }
 
-/* hero wave canvas */
-#heroWave{position:absolute;right:0;top:0;bottom:0;width:58%;pointer-events:none;
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.9) 45%);
-  mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.9) 45%);}
+/* hero + dropzone */
+.hero{ padding:clamp(120px,16vh,170px) 0 clamp(40px,6vw,70px); }
+.kick{ display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+.dot{ width:7px; height:7px; border-radius:50%; background:var(--peak); box-shadow:0 0 12px var(--peak); animation:pulse 2.2s ease-in-out infinite; }
+@keyframes pulse{ 50%{ opacity:.35; } }
+h1{ font-size:clamp(2.4rem,6.4vw,4.6rem); font-stretch:116%; font-weight:850; text-transform:uppercase; letter-spacing:-.015em; line-height:1; }
+h1 .serif-i{ color:var(--vu); font-size:1.04em; }
+.hero .lead{ color:var(--muted); max-width:62ch; margin-top:18px; font-size:clamp(.98rem,1.3vw,1.1rem); }
 
-/* dropzone pulse rings */
-.dz-ring,.dz-ring2{position:absolute;inset:0;border-radius:12px;
-  border:1.5px solid rgba(201,164,64,.5);
-  animation:pulseRing 2.6s ease-out infinite;pointer-events:none;}
-.dz-ring2{border-width:1px;border-color:rgba(201,164,64,.28);animation-delay:1.3s;}
-.dropzone.has-file .dz-ring,.dropzone.has-file .dz-ring2{display:none;}
+.drop{
+  margin-top:clamp(28px,4vw,44px); position:relative; border:1.5px dashed rgba(237,230,216,.22);
+  border-radius:18px; background:var(--ink-2); min-height:230px; cursor:pointer;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+  transition:border-color .25s, transform .25s cubic-bezier(.22,1,.36,1); overflow:hidden;
+}
+.drop:hover, .drop.hot{ border-color:var(--vu); transform:scale(1.008); }
+.drop canvas{ position:absolute; inset:0; width:100%; height:100%; opacity:.5; pointer-events:none; }
+.drop > *{ position:relative; z-index:1; }
+.drop-t{ font-stretch:112%; font-weight:800; font-size:clamp(1.15rem,2.2vw,1.6rem); text-transform:uppercase; }
+.drop-s{ color:var(--muted); font-size:.9rem; }
+.drop .fmt{ display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:8px; }
+.fmt span{ font-family:var(--font-m); font-size:.6rem; letter-spacing:.12em; border:1px solid var(--line); border-radius:99px; padding:5px 10px; color:var(--faint); }
+.priv{ margin-top:14px; display:flex; align-items:center; gap:8px; }
 
-/* result-card stagger */
-.rc{opacity:0;transform:translateY(18px);
-  transition:opacity .5s cubic-bezier(.22,1,.36,1),transform .5s cubic-bezier(.22,1,.36,1);}
-.rc.in{opacity:1;transform:none;}
+/* progress */
+.prog{ margin-top:clamp(28px,4vw,44px); display:none; }
+.prog.on{ display:block; }
+.prog-bar{ height:6px; border-radius:3px; background:var(--ink-3); overflow:hidden; border:1px solid var(--line-soft); }
+.prog-fill{ height:100%; width:0%; background:linear-gradient(90deg, rgba(228,166,46,.5), var(--vu)); transform-origin:left; transition:width .18s linear; }
+.prog-row{ display:flex; justify-content:space-between; margin-top:10px; }
+.prog-row .mono i{ font-style:normal; color:var(--vu); }
+</style>
+<style>
+/* ---------- results ---------- */
+.res{ display:none; padding-bottom:clamp(50px,7vw,90px); }
+.res.on{ display:block; }
+.js .rv{ opacity:0; transform:translateY(20px); }
+.rv.in{ opacity:1; transform:none; transition:opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1); }
 
-/* big display complete glow */
-.big-display.glow{animation:glowBurst 1.2s ease;}
+.file-row{ display:flex; flex-wrap:wrap; align-items:center; gap:12px 22px; margin:26px 0 14px; }
+.file-row b{ font-weight:700; font-size:.95rem; }
+.file-row .mono{ font-size:.62rem; }
+.file-row .again{ margin-left:auto; }
+.wave-ovr{ height:88px; border:1px solid var(--line-soft); border-radius:10px; background:rgba(11,10,8,.55); }
+.wave-ovr canvas{ width:100%; height:100%; }
 
-/* big val count-up shimmer */
-.big-val.counting{
-  background:linear-gradient(90deg,var(--cream) 0%,var(--gold2) 50%,var(--cream) 100%);
-  background-size:200% auto;
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:shimmerSlide .9s ease 1 forwards;}
+.res-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:16px; margin-top:16px; }
+@media (max-width:860px){ .res-grid{ grid-template-columns:1fr; } }
+.pane{ padding:clamp(20px,2.6vw,30px); position:relative; }
+.pane-h{ display:flex; justify-content:space-between; margin-bottom:16px; }
 
-/* scroll reveal */
-.reveal{opacity:0;transform:translateY(22px);
-  transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
-.reveal.in-view{opacity:1;transform:none;}
+/* gauge */
+.gauge-wrap{ display:flex; flex-direction:column; align-items:center; }
+.gauge-wrap canvas{ width:min(100%,420px); height:auto; }
+.g-num{ margin-top:-30px; text-align:center; }
+.g-num b{ font-stretch:116%; font-weight:850; font-size:clamp(3rem,6vw,4.4rem); line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+.g-num .mono{ display:block; margin-top:6px; }
+.g-verdict{ margin-top:14px; font-family:var(--font-m); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase;
+  border:1px solid var(--line); border-radius:99px; padding:7px 14px; color:var(--muted); }
+.g-verdict.ok{ color:var(--vu); border-color:rgba(228,166,46,.5); }
+.g-verdict.hot{ color:var(--peak); border-color:rgba(255,78,42,.5); }
 
-/* disclaimer note */
-.note-box{background:rgba(201,164,64,.055);border:1px solid rgba(201,164,64,.2);
-  border-radius:8px;padding:14px 16px;}
-.note-title{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:7px;display:flex;align-items:center;gap:6px;}
-.note-body{font-size:12px;font-weight:300;color:var(--mid);line-height:1.72;}
-.note-body strong{color:var(--cream);font-weight:500;}
-.note-body em{color:var(--gold);font-style:normal;}
+/* key card */
+.key-wrap{ display:flex; flex-direction:column; align-items:center; }
+.key-wrap canvas{ width:min(100%,330px); height:auto; }
+.key-meta{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:14px; }
+.kchip{ font-family:var(--font-m); font-size:.64rem; letter-spacing:.12em; text-transform:uppercase;
+  border:1px solid var(--line); border-radius:99px; padding:7px 13px; color:var(--muted); }
+.kchip i{ font-style:normal; color:var(--vu); font-weight:700; }
+.kchip.cam{ background:var(--vu); color:var(--ink); border-color:var(--vu); font-weight:700; }
 
-@media(max-width:1024px){.app-grid{grid-template-columns:1fr;}.right-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;}}
-@media(max-width:700px){nav{padding:0 20px;}.wrap{padding:0 20px;}.four-row{grid-template-columns:1fr 1fr;}.sec-row{grid-template-columns:1fr 1fr;}.seo-grid{grid-template-columns:1fr;}.right-col{grid-template-columns:1fr;}.foot{flex-direction:column;text-align:center;}footer{padding:24px 20px;}#cookieBanner{padding:14px 20px;}.nav-links{display:none;}}
+/* metric chips */
+.mrow{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:16px; }
+@media (max-width:860px){ .mrow{ grid-template-columns:repeat(2,1fr); } }
+.mc{ padding:16px 18px; text-align:left; }
+.mc b{ display:block; font-stretch:112%; font-weight:800; font-size:clamp(1.2rem,2vw,1.6rem); font-variant-numeric:tabular-nums; letter-spacing:-.01em; }
+.mc b i{ font-style:normal; color:var(--vu); font-size:.62em; margin-left:3px; }
+.mc .mono{ display:block; margin-top:6px; font-size:.58rem; }
+.mc.warn b{ color:var(--peak); }
+
+/* timeline */
+.tl{ margin-top:16px; padding:clamp(18px,2.4vw,26px); }
+.tl canvas{ width:100%; height:170px; }
+
+/* platforms */
+.plat{ margin-top:16px; padding:clamp(18px,2.4vw,26px); }
+.p-row{ display:grid; grid-template-columns:1.1fr .7fr 1.4fr .8fr; gap:14px; align-items:center;
+  padding:12px 0; border-bottom:1px solid var(--line-soft); }
+.p-row:last-child{ border-bottom:0; }
+.p-name{ font-weight:650; font-size:.92rem; }
+.p-tgt{ font-family:var(--font-m); font-size:.66rem; letter-spacing:.08em; color:var(--faint); }
+.p-bar{ height:5px; border-radius:3px; background:var(--ink-3); position:relative; overflow:hidden; }
+.p-fill{ position:absolute; inset:0 auto 0 50%; width:0; background:var(--vu); border-radius:3px; transition:width .8s cubic-bezier(.22,1,.36,1), transform .8s; transform-origin:left; }
+.p-fill.neg{ inset:0 50% 0 auto; transform-origin:right; }
+.p-fill.hot{ background:var(--peak); }
+.p-delta{ font-family:var(--font-m); font-size:.7rem; letter-spacing:.06em; text-align:right; color:var(--muted); font-variant-numeric:tabular-nums; }
+.p-delta.ok{ color:var(--vu); }
+.p-delta.hot{ color:var(--peak); }
+@media (max-width:640px){ .p-row{ grid-template-columns:1fr .7fr .9fr; } .p-bar{ display:none; } }
+
+/* reality + reference + seo prose */
+.note-grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:16px; margin-top:16px; }
+@media (max-width:860px){ .note-grid{ grid-template-columns:1fr; } }
+.note{ padding:clamp(18px,2.4vw,26px); }
+.note h3{ font-size:1rem; font-stretch:110%; text-transform:uppercase; letter-spacing:.02em; margin-bottom:10px; }
+.note p, .note li{ color:var(--muted); font-size:.92rem; }
+.note ul{ list-style:none; display:grid; gap:8px; }
+.note li{ padding-left:16px; position:relative; }
+.note li::before{ content:""; position:absolute; left:0; top:.55em; width:7px; height:7px; transform:rotate(45deg); background:var(--vu-soft); border:1px solid rgba(228,166,46,.4); }
+.note b, .note strong{ color:var(--cream); font-weight:650; }
+.note .serif-i{ color:var(--vu); }
+
+.seo{ padding:clamp(50px,7vw,90px) 0; border-top:1px solid var(--line); }
+.seo h2{ margin-bottom:14px; }
+.seo p{ color:var(--muted); max-width:72ch; margin-bottom:14px; }
+.seo table{ border-collapse:collapse; width:100%; max-width:640px; margin:18px 0 26px; }
+.seo th, .seo td{ text-align:left; padding:10px 14px; border-bottom:1px solid var(--line-soft); font-size:.9rem; }
+.seo th{ font-family:var(--font-m); font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); font-weight:600; }
+.seo td{ color:var(--muted); } .seo td:first-child{ color:var(--cream); font-weight:600; }
+.seo h3{ font-size:1.15rem; font-stretch:110%; margin:26px 0 10px; }
+
+.cta-band{ margin-top:26px; padding:clamp(24px,3.4vw,40px); display:flex; flex-wrap:wrap; align-items:center; gap:18px 30px; justify-content:space-between; border-color:rgba(228,166,46,.35); }
+.cta-band .h2{ max-width:20ch; }
+
+/* footer + cookie */
+.ft{ border-top:1px solid var(--line); padding:30px 0; }
+.ft-in{ display:flex; flex-wrap:wrap; gap:12px 26px; justify-content:space-between; align-items:center; }
+.ft-in span, .ft-in a{ font-family:var(--font-m); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); }
+.ft-in a:hover{ color:var(--vu); }
+.ck{ position:fixed; left:16px; right:16px; bottom:16px; z-index:70; max-width:420px; background:var(--ink-3);
+  border:1px solid var(--line); border-radius:14px; padding:20px; transform:translateY(calc(100% + 24px));
+  transition:transform .45s cubic-bezier(.22,1,.36,1); box-shadow:0 18px 60px rgba(0,0,0,.5); }
+.ck.show{ transform:none; }
+.ck p{ font-size:.82rem; color:var(--muted); }
+.ck p a{ color:var(--vu); text-decoration:underline; text-underline-offset:3px; }
+.ck-btns{ display:flex; gap:10px; margin-top:14px; }
+.ck-btns .cta{ padding:9px 18px; font-size:.72rem; }
+
+/* grain */
+.grain{ position:fixed; inset:-100%; z-index:105; pointer-events:none; opacity:.045;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="140" height="140" filter="url(%23n)" opacity="0.55"/></svg>');
+  background-size:170px; animation:grain 6s steps(10) infinite; }
+@keyframes grain{ 0%{transform:translate(0,0)} 20%{transform:translate(2%,-4%)} 40%{transform:translate(3%,4%)} 60%{transform:translate(4%,-1%)} 80%{transform:translate(1%,3%)} 100%{transform:translate(0,0)} }
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  .js .rv{ opacity:1; transform:none; transition:none; }
+  .grain, .dot{ animation:none !important; display:none; }
+  .dot{ display:inline-block; }
+  .cta, .drop, .prog-fill, .p-fill{ transition:none !important; }
+}
+</style>
+<style>
+/* extras: player, spectrum, stereo, compare */
+.file-actions{ display:flex; gap:8px; flex-wrap:wrap; margin-left:auto; }
+.file-actions .cta{ padding:8px 14px; font-size:.64rem; }
+.ovl{ position:absolute; inset:0; width:100%; height:100%; cursor:pointer; }
+.wave-ovr{ position:relative; }
+.tl-wrap{ position:relative; }
+.tgt-row{ display:flex; gap:5px; }
+.tch{ font-family:var(--font-m); font-size:.58rem; letter-spacing:.1em; border:1px solid var(--line);
+  border-radius:99px; padding:5px 10px; color:var(--muted); transition:color .2s, border-color .2s; }
+.tch:hover{ color:var(--cream); }
+.tch.on{ background:var(--vu); color:var(--ink); border-color:var(--vu); font-weight:700; }
+.bands{ display:grid; grid-template-columns:repeat(6,1fr); gap:8px; margin-top:14px; }
+.bnd{ text-align:center; }
+.bnd .bar{ height:44px; border:1px solid var(--line-soft); border-radius:6px; position:relative; overflow:hidden; background:rgba(11,10,8,.5); }
+.bnd .bar i{ position:absolute; left:0; right:0; bottom:0; background:linear-gradient(to top, rgba(228,166,46,.85), rgba(228,166,46,.35)); transition:height .8s cubic-bezier(.22,1,.36,1); }
+.bnd b{ display:block; font-family:var(--font-m); font-size:.52rem; letter-spacing:.1em; color:var(--faint); margin-top:6px; font-weight:600; }
+.bnd span{ font-family:var(--font-m); font-size:.6rem; color:var(--vu); }
+.hrow{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; }
+.hrow .mc{ padding:12px 14px; }
+.hrow .mc b{ font-size:1.05rem; }
+.c-row{ display:grid; grid-template-columns:1.2fr 1fr 1fr .8fr; gap:14px; padding:11px 0;
+  border-bottom:1px solid var(--line-soft); align-items:baseline; }
+.c-row:last-child{ border-bottom:0; }
+.c-row .p-name{ font-size:.88rem; }
+.c-row .cv{ font-family:var(--font-m); font-size:.72rem; color:var(--cream); font-variant-numeric:tabular-nums; }
+.c-row .cd{ font-family:var(--font-m); font-size:.7rem; text-align:right; color:var(--muted); }
+.c-row .cd.ok{ color:var(--vu); } .c-row .cd.hot{ color:var(--peak); }
+#embers2{ position:fixed; inset:0; z-index:104; pointer-events:none; }
+@media (prefers-reduced-motion: reduce){ #embers2{ display:none !important; } .bnd .bar i{ transition:none; } }
 </style>
 </head>
 <body>
 
-<div id="sp"></div>
-<div class="cd" id="cDot"></div>
-<div class="cr" id="cRing"></div>
-
-<nav>
-  <a href="index.html" class="nav-logo">
-    <svg viewBox="0 0 32 32" fill="none" width="26" height="26"><rect width="32" height="32" rx="7" fill="#C9A440"/><path d="M9 11L16 16L9 21" stroke="#111010" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 11L24 16L17 21" stroke="#111010" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.38"/></svg>
-    <span class="nav-logo-name">Angelo Pillon</span>
-  </a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#services">Services</a>
-    <a href="articles.html">Articles</a>
-    <a href="loudness-meter.html" class="active">LUFS Meter</a>
-    <a href="index.html#contact" class="nav-cta">Contact</a>
+<header class="hd">
+  <div class="hd-in">
+    <a class="brand" href="https://angelopillon.com">Angelo Pillon<em>.</em></a>
+    <nav class="nav" aria-label="Main">
+      <a href="https://angelopillon.com/#services">Services</a>
+      <a href="https://angelopillon.com/#reviews">Reviews</a>
+      <a href="https://angelopillon.com/articles">Articles</a>
+    </nav>
+    <a class="cta" href="https://angelopillon.com/#contact">Get it mastered</a>
   </div>
-</nav>
+</header>
 
-<div class="wrap">
-  <div class="hero-area">
-    <canvas id="heroWave" aria-hidden="true"></canvas>
-    <div class="hero-tag afu d1">Free Professional Tool</div>
-    <h1 class="hero-h1 afu d2">Online <em>LUFS Meter</em></h1>
-    <p class="hero-sub afu d3">Professional loudness analysis in your browser. ITU-R BS.1770-4 algorithm. Integrated LUFS, True Peak, LRA. Compare against every major streaming platform. Free, instant, nothing leaves your device.</p>
+<main>
+<section class="hero wrap">
+  <p class="kick"><span class="dot" aria-hidden="true"></span><span class="mono">Free tool · ITU-R BS.1770-4 · 100% in your browser</span></p>
+  <h1>Online LUFS Meter <span class="serif-i">&amp; Key Finder</span></h1>
+  <p class="lead">Professional loudness analysis and musical key detection in one pass. Integrated LUFS with true gating, oversampled True Peak, loudness range, short-term timeline, plus key, Camelot code and BPM. Nothing is uploaded — your audio never leaves this device.</p>
+
+  <div class="drop" id="drop" tabindex="0" role="button" aria-label="Drop an audio file or click to browse">
+    <canvas id="dropCv" aria-hidden="true"></canvas>
+    <div class="drop-t" id="dropT">Drop your track</div>
+    <p class="drop-s">or click to browse</p>
+    <div class="fmt"><span>WAV</span><span>MP3</span><span>FLAC</span><span>AIFF</span><span>M4A</span><span>OGG</span></div>
   </div>
+  <p class="priv"><span class="dot" style="background:var(--vu);box-shadow:0 0 10px var(--vu)" aria-hidden="true"></span><span class="mono">Private by design — analysis runs locally, nothing leaves your browser</span></p>
 
-  <div class="ad-strip">
-    <div class="ad-slot ad-banner">
-      <ins class="adsbygoogle" style="display:block;width:100%;" data-ad-client="ca-pub-1931563231268808" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
-    </div>
+  <div class="prog" id="prog">
+    <div class="prog-bar"><div class="prog-fill" id="progFill"></div></div>
+    <div class="prog-row"><span class="mono" id="progTxt">Decoding…</span><span class="mono"><i id="progPct">0%</i></span></div>
   </div>
+</section>
 
-  <div class="app-grid">
-    <div class="left-col">
+<section class="res wrap" id="res">
+  <div class="file-row">
+    <b id="fName">—</b>
+    <span class="mono" id="fDur">—</span>
+    <span class="mono" id="fSr">—</span>
+    <span class="mono" id="fCh">—</span>
+    <span class="file-actions">
+      <button class="cta ghost" id="playBtn" disabled>&#9658;&#160;Play</button>
+      <button class="cta ghost" id="copyBtn">Copy</button>
+      <button class="cta ghost" id="exportBtn">Export</button>
+      <button class="cta ghost" id="cmpBtn">Compare</button>
+      <button class="cta ghost" id="againBtn">New file</button>
+    </span>
+  </div>
+  <div class="wave-ovr rv"><canvas id="waveCv"></canvas><canvas id="waveOv" class="ovl"></canvas></div>
 
-      <input type="file" id="fileInput" accept="audio/*">
-      <div class="dropzone afu d4" id="dropzone">
-        <div class="dz-icon">
-          <span class="dz-ring" aria-hidden="true"></span>
-          <span class="dz-ring2" aria-hidden="true"></span>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-        </div>
-        <div class="dz-title" id="dzTitle">Drop your audio file here</div>
-        <div class="dz-sub" id="dzSub">or click to browse your computer</div>
-        <div class="dz-formats">WAV &nbsp; AIFF &nbsp; MP3 &nbsp; M4A &nbsp; OGG &nbsp; FLAC</div>
-        <button class="btn-analyze" id="btnAnalyze" disabled>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          Analyze Loudness
-        </button>
-        <div class="prog-wrap" id="progWrap"><div class="prog-fill" id="progFill"></div></div>
-        <div class="prog-label" id="progLabel"></div>
-      </div>
-
-      <div class="meters-area hidden" id="metersArea">
-
-        <div class="big-display rc">
-          <div>
-            <div class="big-label">Integrated Loudness - ITU-R BS.1770-4</div>
-            <div class="big-val" id="valInt">--</div>
-            <div class="big-unit">LUFS</div>
-          </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;">
-            <div class="big-status s-na" id="intStatus">--</div>
-            <div style="font-size:11px;color:var(--dim);text-align:right;line-height:1.6;">
-              Streaming: <span style="color:var(--cream);">-14 to -16 LUFS</span><br>
-              Club/Beatport: <span style="color:var(--cream);">-9 to -11 LUFS</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="sec-row">
-          <div class="mc rc"><div class="mc-label">Momentary Max</div><div class="mc-val" id="valMom">--</div><div class="mc-sub">LUFS</div><div class="mc-track"><div class="mc-fill" id="barMom"></div></div></div>
-          <div class="mc rc"><div class="mc-label">Short-Term Max</div><div class="mc-val" id="valST">--</div><div class="mc-sub">LUFS</div><div class="mc-track"><div class="mc-fill" id="barST"></div></div></div>
-          <div class="mc rc"><div class="mc-label">Dynamic Range</div><div class="mc-val" id="valDyn">--</div><div class="mc-sub">dB</div><div class="mc-track"><div class="mc-fill" id="barDyn" style="background:var(--blue)"></div></div></div>
-        </div>
-
-        <div class="hist-panel rc">
-          <div class="hist-head">
-            <div class="hist-title">Loudness History</div>
-            <div style="font-size:10px;color:var(--dim);">Target zone: -14 to -16 LUFS</div>
-          </div>
-          <canvas id="histCanvas" width="800" height="88"></canvas>
-        </div>
-
-        <div class="four-row">
-          <div class="fm rc"><div class="fm-label">True Peak</div><div class="fm-val" id="valTP">--</div><div class="fm-sub">dBTP</div></div>
-          <div class="fm rc"><div class="fm-label">Loudness Range</div><div class="fm-val" id="valLRA">--</div><div class="fm-sub">LU (LRA)</div></div>
-          <div class="fm rc"><div class="fm-label">Sample Peak</div><div class="fm-val" id="valSP">--</div><div class="fm-sub">dBFS</div></div>
-          <div class="fm rc"><div class="fm-label">Duration</div><div class="fm-val" id="valDur" style="font-size:17px;">--</div><div class="fm-sub">min:sec</div></div>
-        </div>
-
-        <button class="btn-export" id="btnExport">Export Results as Text</button>
-
+  <div class="res-grid">
+    <div class="card pane rv">
+      <div class="pane-h"><span class="mono">Integrated loudness</span><span class="tgt-row" role="group" aria-label="Target"><button class="tch on" data-t="-14">-14</button><button class="tch" data-t="-16">-16</button><button class="tch" data-t="-10">Club</button></span></div>
+      <div class="gauge-wrap">
+        <canvas id="gaugeCv" width="420" height="250"></canvas>
+        <div class="g-num"><b id="gInt">—</b><span class="mono">LUFS · Integrated</span></div>
+        <div class="g-verdict" id="gVerdict">—</div>
       </div>
     </div>
-
-    <div class="right-col">
-      <div class="panel">
-        <div class="panel-head">File Info</div>
-        <div class="fi-name" id="fiName"></div>
-        <div class="fi-row"><span class="fi-k">Status</span><span class="fi-v" id="fiStatus">Drop a file to start</span></div>
-        <div class="fi-row"><span class="fi-k">Duration</span><span class="fi-v" id="fiDur">--</span></div>
-        <div class="fi-row"><span class="fi-k">Sample Rate</span><span class="fi-v" id="fiSR">--</span></div>
-        <div class="fi-row"><span class="fi-k">Channels</span><span class="fi-v" id="fiCh">--</span></div>
-        <div class="fi-row"><span class="fi-k">File Size</span><span class="fi-v" id="fiSz">--</span></div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-head">Platform Comparison</div>
-        <div class="plat-row"><span class="plat-dot" style="background:#1db954"></span><span class="plat-name">Spotify</span><span class="plat-tgt">-14 LUFS</span><span class="badge b-na" id="pp-spotify">--</span></div>
-        <div class="plat-row"><span class="plat-dot" style="background:#fc3c44"></span><span class="plat-name">Apple Music</span><span class="plat-tgt">-16 LUFS</span><span class="badge b-na" id="pp-apple">--</span></div>
-        <div class="plat-row"><span class="plat-dot" style="background:#ff0000"></span><span class="plat-name">YouTube</span><span class="plat-tgt">-14 LUFS</span><span class="badge b-na" id="pp-youtube">--</span></div>
-        <div class="plat-row"><span class="plat-dot" style="background:#00ffff"></span><span class="plat-name">Tidal</span><span class="plat-tgt">-14 LUFS</span><span class="badge b-na" id="pp-tidal">--</span></div>
-        <div class="plat-row"><span class="plat-dot" style="background:#00a8e0"></span><span class="plat-name">Amazon Music</span><span class="plat-tgt">-14 LUFS</span><span class="badge b-na" id="pp-amazon">--</span></div>
-        <div class="plat-row"><span class="plat-dot" style="background:#feaa2d"></span><span class="plat-name">Deezer</span><span class="plat-tgt">-15 LUFS</span><span class="badge b-na" id="pp-deezer">--</span></div>
-        <div class="plat-row"><span class="plat-dot" style="background:#ff6600"></span><span class="plat-name">SoundCloud</span><span class="plat-tgt">-14 LUFS</span><span class="badge b-na" id="pp-soundcloud">--</span></div>
-        <div class="plat-row"><span class="plat-dot" style="background:#ff1144"></span><span class="plat-name">Beatport</span><span class="plat-tgt">No limit</span><span class="badge b-na" id="pp-beatport">--</span></div>
-      </div>
-
-      <div class="note-box">
-        <div class="note-title">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Industry Reality Check
+    <div class="card pane rv">
+      <div class="pane-h"><span class="mono">Musical key</span><span class="mono">Chromagram · K-S</span></div>
+      <div class="key-wrap">
+        <canvas id="keyCv" width="330" height="330"></canvas>
+        <div class="key-meta">
+          <span class="kchip cam" id="kCam">—</span>
+          <span class="kchip">Relative <i id="kRel">—</i></span>
+          <span class="kchip">BPM <i id="kBpm">—</i></span>
+          <span class="kchip">Confidence <i id="kConf">—</i></span>
+          <span class="kchip">Mixes with <i id="kMix">—</i></span>
         </div>
-        <div class="note-body">
-          Il <strong>-14 LUFS</strong> è il target di normalizzazione streaming, ma i master commerciali moderni si attestano tipicamente tra <em>-8 e -9 LUFS</em> — lo standard de facto in pop, EDM e hip-hop. La piattaforma abbassa comunque il volume in playback, ma un master più forte suona più incisivo e presente rispetto ai competitor. Per release club/DJ (Beatport, Traxsource) il range accettato è <strong>-9 a -11 LUFS</strong>.
-        </div>
-      </div>
-
-      <div class="ad-slot" id="adSlotRight">
-        <ins class="adsbygoogle" style="display:block;width:100%;" data-ad-client="ca-pub-1931563231268808" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </div>
-
-      <div class="panel tips">
-        <div class="tips-title">Mastering Reference</div>
-        <div class="tip">Streaming targets: -14 to -16 LUFS integrated</div>
-        <div class="tip">True Peak must not exceed -1.0 dBTP for streaming</div>
-        <div class="tip">LRA: Pop 6-12 LU, Electronic 4-8 LU, Classical 12-20 LU</div>
-        <div class="tip">Apple Digital Masters requires True Peak below -1 dBTP</div>
-        <div class="tip">Beatport and club releases: -9 to -11 LUFS</div>
       </div>
     </div>
   </div>
 
-  <div class="seo-section">
-    <div class="seo-grid">
-      <div class="reveal">
-        <h2>How This LUFS Meter Works</h2>
-        <p>This free tool measures your audio against the ITU-R BS.1770-4 standard. Drop any audio file and get instant analysis of Integrated LUFS, True Peak, LRA and more. Your audio is processed entirely in your browser. No data is uploaded anywhere.</p>
-        <h3>Streaming Loudness Targets</h3>
-        <table class="pt">
-          <tr><th>Platform</th><th>Target</th><th>True Peak</th></tr>
-          <tr><td>Spotify</td><td>-14 LUFS</td><td>-1 dBTP</td></tr>
-          <tr><td>Apple Music</td><td>-16 LUFS</td><td>-1 dBTP</td></tr>
-          <tr><td>YouTube</td><td>-14 LUFS</td><td>-1 dBTP</td></tr>
-          <tr><td>Tidal</td><td>-14 LUFS</td><td>-1 dBTP</td></tr>
-          <tr><td>Amazon Music</td><td>-14 LUFS</td><td>-2 dBTP</td></tr>
-          <tr><td>Deezer</td><td>-15 LUFS</td><td>-1 dBTP</td></tr>
-          <tr><td>Beatport</td><td>No limit</td><td>0 dBTP</td></tr>
-        </table>
-        <h3>What is LUFS?</h3>
-        <p>LUFS stands for Loudness Units relative to Full Scale. It measures perceived loudness using K-weighting and time integration. Unlike peak meters, LUFS tells you how loud your music actually sounds to a listener.</p>
+  <div class="mrow">
+    <div class="card mc rv" id="mcTP"><b><span id="mTP">—</span><i>dBTP</i></b><span class="mono">True Peak · 4× oversampled</span></div>
+    <div class="card mc rv"><b><span id="mLRA">—</span><i>LU</i></b><span class="mono">Loudness Range · EBU R128</span></div>
+    <div class="card mc rv"><b><span id="mST">—</span><i>LUFS</i></b><span class="mono">Short-term max · 3s</span></div>
+    <div class="card mc rv"><b><span id="mM">—</span><i>LUFS</i></b><span class="mono">Momentary max · 400ms</span></div>
+    <div class="card mc rv"><b><span id="mPLR">—</span><i>dB</i></b><span class="mono">PLR · Peak to loudness</span></div>
+  </div>
+
+  <div class="res-grid">
+    <div class="card pane rv">
+      <div class="pane-h"><span class="mono">Frequency balance</span><span class="mono" id="tonal">—</span></div>
+      <canvas id="specCv" style="width:100%;height:190px"></canvas>
+      <div class="bands" id="bands"></div>
+    </div>
+    <div class="card pane rv">
+      <div class="pane-h"><span class="mono">Stereo image</span><span class="mono" id="stVerd">—</span></div>
+      <canvas id="corrCv" style="width:100%;height:96px"></canvas>
+      <div class="key-meta" style="margin-top:8px">
+        <span class="kchip">Correlation <i id="stCorr">—</i></span>
+        <span class="kchip">Width <i id="stWidth">—</i></span>
       </div>
-      <div class="reveal" style="display:flex;flex-direction:column;gap:20px;">
-        <div class="cta-card">
-          <h3>Need a professional master?</h3>
-          <p>Professional mastering from Milan, Italy. Apple Digital Masters certified. 681 five-star reviews. From EUR 60 with 48h turnaround.</p>
-          <a href="index.html#services" class="btn-gold">View Mastering Services</a>
-        </div>
-        <div>
-          <h3 style="color:var(--cream);font-size:16px;font-weight:600;margin-bottom:8px;">Privacy</h3>
-          <p>Your audio is processed entirely in your browser using the Web Audio API. No files are uploaded. No account required. Completely free.</p>
-        </div>
+      <div class="hrow">
+        <div class="card mc"><b id="hClip">—</b><span class="mono">Clipping events</span></div>
+        <div class="card mc"><b><span id="hFloor">—</span><i>LUFS</i></b><span class="mono">Noise floor · p5</span></div>
+        <div class="card mc"><b id="hDC">—</b><span class="mono">DC offset</span></div>
+        <div class="card mc"><b id="hLoud">—</b><span class="mono">Loudest section</span></div>
       </div>
     </div>
   </div>
-</div>
 
-<footer>
-  <div class="foot">
-    <div class="f-l"><a href="index.html">Angelo Pillon</a> &nbsp;|&nbsp; Milan, Italy &nbsp;|&nbsp; <a href="index.html#services">Mastering Services</a> &nbsp;|&nbsp; <a href="articles.html">Articles</a></div>
-    <div class="f-c">&copy; 2026 Angelo Pillon &nbsp;|&nbsp; <a href="privacy-policy.html" style="color:rgba(255,255,255,.3);">Privacy Policy</a></div>
+  <div class="card tl rv">
+    <div class="pane-h"><span class="mono">Loudness timeline · Short-term</span><span class="mono" id="tlLive">3s window · 1s hop</span></div>
+    <div class="tl-wrap"><canvas id="tlCv"></canvas><canvas id="tlOv" class="ovl"></canvas></div>
+  </div>
+
+  <div class="card plat rv">
+    <div class="pane-h"><span class="mono">Streaming targets</span><span class="mono">Normalization delta</span></div>
+    <div id="platRows"></div>
+  </div>
+
+  <div class="note-grid">
+    <div class="card note rv">
+      <h3>Industry reality check</h3>
+      <p>Streaming platforms normalize <strong>down</strong>, not up: a -8 LUFS master on Spotify simply gets turned down to -14. Yet most modern commercial masters in electronic music still land around <strong>-8 to -9 LUFS</strong> with true peaks at -0.5 to -1 dBTP, because loud masters keep their density and attitude even after normalization. <span class="serif-i">Don't chase a number — chase translation.</span> The right target depends on where your track will live: playlist, club, radio or sync.</p>
+    </div>
+    <div class="card note rv">
+      <h3>Mastering reference</h3>
+      <ul>
+        <li><b>Streaming:</b> -14 to -16 LUFS integrated</li>
+        <li><b>True Peak:</b> ≤ -1.0 dBTP for lossy encoding</li>
+        <li><b>Club / Beatport:</b> -9 to -11 LUFS typical</li>
+        <li><b>LRA:</b> 4–8 LU for electronic music</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card plat rv" id="cmpCard" style="display:none">
+    <div class="pane-h"><span class="mono">A/B vs reference</span><span class="mono" id="cmpName">—</span></div>
+    <div id="cmpRows"></div>
+  </div>
+
+  <div class="card cta-band rv">
+    <h2 class="h2">Not where it should be? <em class="serif-i">I can fix that.</em></h2>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a class="cta" href="https://angelopillon.com/#contact">Get it mastered · From EUR 60</a>
+      <a class="cta ghost" href="https://angelopillon.com/#reviews">700+ five-star reviews</a>
+    </div>
+  </div>
+</section>
+
+<section class="seo wrap">
+  <h2 class="h2">How the <em class="serif-i">LUFS meter</em> works</h2>
+  <p>Drop any audio file and the analyzer decodes it locally, applies the K-weighting filter chain defined by ITU-R BS.1770-4, and measures loudness in 400 ms gated blocks with both absolute (-70 LUFS) and relative (-10 LU) gating — the same method used by Spotify, Apple Music and broadcast standards. True Peak is estimated with 4× polyphase oversampling to catch inter-sample peaks that a simple sample-peak meter misses.</p>
+  <p>The key finder computes a chromagram of your track — the energy of the twelve pitch classes over time — and correlates it against Krumhansl-Schmuckler key profiles for all 24 major and minor keys. You get the detected key, its relative key, the Camelot wheel code for harmonic mixing, and an estimated BPM.</p>
+
+  <h3>Streaming loudness targets</h3>
+  <table>
+    <tr><th>Platform</th><th>Target</th><th>Normalization</th></tr>
+    <tr><td>Spotify</td><td>-14 LUFS</td><td>Turns louder tracks down</td></tr>
+    <tr><td>Apple Music</td><td>-16 LUFS</td><td>Sound Check on by default</td></tr>
+    <tr><td>YouTube</td><td>-14 LUFS</td><td>Turns down only</td></tr>
+    <tr><td>Amazon Music</td><td>-14 LUFS</td><td>Loudness normalization</td></tr>
+    <tr><td>Tidal</td><td>-14 LUFS</td><td>Album normalization</td></tr>
+    <tr><td>Deezer</td><td>-15 LUFS</td><td>Turns down only</td></tr>
+    <tr><td>Beatport / Club</td><td>No limit</td><td>-9 to -11 LUFS typical</td></tr>
+  </table>
+
+  <h3>What is LUFS?</h3>
+  <p>LUFS (Loudness Units relative to Full Scale) measures perceived loudness the way human hearing works, not just electrical signal level. Unlike peak or RMS meters, LUFS applies frequency weighting that mirrors the ear's sensitivity and gates out silence, which is why every major streaming platform uses it to normalize playback volume between tracks.</p>
+
+  <h3>What is the Camelot wheel?</h3>
+  <p>The Camelot wheel maps all 24 musical keys onto a clock face (1A–12A for minor, 1B–12B for major) so DJs and producers can mix harmonically: adjacent numbers and same-number A/B pairs blend smoothly. If your track reads 8A (A minor), it will mix cleanly with 7A, 9A and 8B.</p>
+
+  <h3>Privacy</h3>
+  <p>Everything runs in your browser using the Web Audio API. No upload, no server processing, no storage of your audio — close the tab and it's gone.</p>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap ft-in">
+    <span>© <span id="yr">2026</span> Angelo Pillon · Milan, Italy</span>
+    <span style="display:flex;gap:22px">
+      <a href="https://angelopillon.com">Home</a>
+      <a href="https://angelopillon.com/articles">Articles</a>
+      <a href="https://angelopillon.com/privacy-policy">Privacy Policy</a>
+    </span>
   </div>
 </footer>
 
-<div id="cookieBanner">
-  <div class="cb-text">This site uses cookies for analytics and advertising. <a href="privacy-policy.html">Privacy Policy</a></div>
-  <div class="cb-btns">
-    <button class="cb-decline" onclick="cookieChoice(false)">Decline</button>
-    <button class="cb-accept" onclick="cookieChoice(true)">Accept All</button>
+<aside class="ck" id="ck" aria-label="Cookies">
+  <p>This site uses cookies for analytics and advertising. By accepting you consent to our use of cookies as described in our <a href="https://angelopillon.com/privacy-policy">Privacy Policy</a>.</p>
+  <div class="ck-btns">
+    <button class="cta" id="ckAccept">Accept all</button>
+    <button class="cta ghost" id="ckDecline">Decline</button>
   </div>
-</div>
+</aside>
+
+<div class="grain" aria-hidden="true"></div>
 
 <script>
-/* ============================================================
-   LUFS METER - Clean implementation, no blocking
-   ITU-R BS.1770-4 with chunked async processing
-   ============================================================ */
+/* ================= DSP CORE ================= */
+var DSP = (function(){
 
-// K-weighting coefficients
-function kCoeffs(sr) {
-  var f0=1681.974450955533, G=3.999843853973347, Q=0.7071752369554196;
-  var K=Math.tan(Math.PI*f0/sr), Vh=Math.pow(10,G/20), Vb=Math.pow(Vh,0.4996667741545416);
-  var a0=1+K/Q+K*K;
-  var hs={b:[(Vh+Vb*K/Q+K*K)/a0, 2*(K*K-Vh)/a0, (Vh-Vb*K/Q+K*K)/a0], a:[1, 2*(K*K-1)/a0, (1-K/Q+K*K)/a0]};
-  var f1=38.13547087602444, Q2=0.5003270373238773, K2=Math.tan(Math.PI*f1/sr);
-  var a0b=1+K2/Q2+K2*K2;
-  var hp={b:[1/a0b, -2/a0b, 1/a0b], a:[1, 2*(K2*K2-1)/a0b, (1-K2/Q2+K2*K2)/a0b]};
-  return {hs:hs, hp:hp};
-}
-
-// Yield control back to browser
-function yld() { return new Promise(function(r){ setTimeout(r, 0); }); }
-
-// Apply IIR filter in CHUNKS to avoid blocking
-async function filterChunked(input, coeff) {
-  var out = new Float32Array(input.length);
-  var CHUNK = 44100; // process 1 second at a time
-  var b0=coeff.b[0], b1=coeff.b[1], b2=coeff.b[2], a1=coeff.a[1], a2=coeff.a[2];
-  var x1=0, x2=0, y1=0, y2=0;
-  for (var start=0; start<input.length; start+=CHUNK) {
-    var end = Math.min(start+CHUNK, input.length);
-    for (var i=start; i<end; i++) {
-      var x0=input[i];
-      var y0=b0*x0+b1*x1+b2*x2-a1*y1-a2*y2;
-      out[i]=y0; x2=x1; x1=x0; y2=y1; y1=y0;
+  /* ---- radix-2 FFT ---- */
+  function FFT(n){
+    this.n = n;
+    this.rev = new Uint32Array(n);
+    var bits = Math.log2(n);
+    for(var i = 0; i < n; i++){
+      var r = 0;
+      for(var b = 0; b < bits; b++){ r = (r << 1) | ((i >> b) & 1); }
+      this.rev[i] = r;
     }
-    await yld(); // yield every second of audio
-  }
-  return out;
-}
-
-async function analyze(buf, onProg) {
-  var sr=buf.sampleRate, nCh=Math.min(buf.numberOfChannels,2), nS=buf.length;
-  var C=kCoeffs(sr);
-
-  onProg(0.02, 'Applying K-weighting filter...');
-
-  // Apply K-weighting to each channel (chunked)
-  var kw=[];
-  for (var c=0; c<nCh; c++) {
-    var raw=buf.getChannelData(c);
-    var pass1=await filterChunked(raw, C.hs);
-    onProg(0.02+(c*2+1)/(nCh*2)*0.3, 'K-weighting channel '+(c+1)+' pass 1...');
-    var pass2=await filterChunked(pass1, C.hp);
-    pass1=null; // free memory immediately
-    kw.push(pass2);
-    onProg(0.02+(c*2+2)/(nCh*2)*0.3, 'K-weighting channel '+(c+1)+' pass 2...');
-  }
-
-  // Sample peak (chunked)
-  var sPeak=0;
-  for (var c=0; c<nCh; c++) {
-    var d=buf.getChannelData(c);
-    for (var i=0; i<d.length; i++) { var a=Math.abs(d[i]); if(a>sPeak) sPeak=a; }
-    await yld();
-  }
-
-  // Block loudness - 400ms blocks, 100ms hop
-  var bSz=Math.round(0.4*sr), hSz=Math.round(0.1*sr);
-  var blocks=[], momMax=-Infinity;
-  var total=Math.floor((nS-bSz)/hSz)+1;
-  var proc=0;
-
-  onProg(0.35, 'Calculating loudness blocks...');
-
-  for (var s=0; s+bSz<=nS; s+=hSz) {
-    var sum=0;
-    for (var c=0; c<nCh; c++) {
-      var ms=0, w=kw[c];
-      for (var i=s; i<s+bSz; i++) ms+=w[i]*w[i];
-      sum+=ms/bSz;
-    }
-    blocks.push(sum);
-    if (sum>0) { var l=-0.691+10*Math.log10(sum); if(l>momMax) momMax=l; }
-    proc++;
-    if (proc%200===0) {
-      onProg(0.35+(proc/total)*0.4, 'Block '+proc+' of '+total+'...');
-      await yld();
+    this.cs = new Float64Array(n/2);
+    this.sn = new Float64Array(n/2);
+    for(var k = 0; k < n/2; k++){
+      this.cs[k] = Math.cos(-2*Math.PI*k/n);
+      this.sn[k] = Math.sin(-2*Math.PI*k/n);
     }
   }
-
-  kw=null; // free k-weighted arrays
-
-  onProg(0.78, 'Applying loudness gate...');
-  await yld();
-
-  // Integrated LUFS with double gate
-  var absT=Math.pow(10,(-70+0.691)/10);
-  var g1=blocks.filter(function(b){return b>absT;});
-  var integrated=-Infinity;
-  if (g1.length>0) {
-    var m1=g1.reduce(function(a,b){return a+b;},0)/g1.length;
-    var rt=m1*Math.pow(10,-10/10);
-    var g2=blocks.filter(function(b){return b>rt;});
-    if (g2.length>0) {
-      var m2=g2.reduce(function(a,b){return a+b;},0)/g2.length;
-      integrated=-0.691+10*Math.log10(m2);
-    }
-  }
-
-  // LRA
-  var lra=0;
-  var lg=blocks.filter(function(b){return b>absT;});
-  if (lg.length>=2) {
-    var ml=lg.reduce(function(a,b){return a+b;},0)/lg.length;
-    var rtl=ml*Math.pow(10,-20/10);
-    var lg2=lg.filter(function(b){return b>rtl;});
-    if (lg2.length>=2) {
-      var sv=lg2.map(function(b){return -0.691+10*Math.log10(b);}).sort(function(a,b){return a-b;});
-      lra=Math.max(0, sv[Math.floor(sv.length*0.95)]-sv[Math.floor(sv.length*0.1)]);
-    }
-  }
-
-  // Short-term max (3s = 30 blocks)
-  var stMax=-Infinity, stN=30;
-  for (var i=0; i+stN<=blocks.length; i++) {
-    var ss=0; for(var j=i;j<i+stN;j++) ss+=blocks[j];
-    var ms=ss/stN; if(ms>0){var l=-0.691+10*Math.log10(ms);if(l>stMax)stMax=l;}
-  }
-
-  onProg(0.88, 'Measuring True Peak...');
-  await yld();
-  var tp=await truePeak(buf);
-  onProg(1.0, 'Complete');
-
-  var hist=blocks.map(function(b){return b>0?Math.max(-60,-0.691+10*Math.log10(b)):-60;});
-  return {
-    integrated:integrated, momMax:momMax, stMax:stMax, lra:lra,
-    truePeak:tp, samplePeak:sPeak>0?20*Math.log10(sPeak):-Infinity, hist:hist
-  };
-}
-
-async function truePeak(buf) {
-  try {
-    var f = buf.sampleRate <= 48000 ? 4 : 2;
-    var outSr = Math.min(buf.sampleRate * f, 192000);
-    var CHUNK = Math.round(buf.sampleRate * 30); // 30s chunks — keeps memory under ~50 MB
-    var pk = 0;
-    for (var off = 0; off < buf.length; off += CHUNK) {
-      var len = Math.min(CHUNK, buf.length - off);
-      var outLen = Math.round(len * outSr / buf.sampleRate);
-      var ctx = new OfflineAudioContext(buf.numberOfChannels, outLen, outSr);
-      var tmp = ctx.createBuffer(buf.numberOfChannels, len, buf.sampleRate);
-      for (var c = 0; c < buf.numberOfChannels; c++) {
-        tmp.getChannelData(c).set(buf.getChannelData(c).subarray(off, off + len));
+  FFT.prototype.run = function(re, im){
+    var n = this.n, rev = this.rev;
+    for(var i = 0; i < n; i++){
+      var j = rev[i];
+      if(j > i){
+        var tr = re[i]; re[i] = re[j]; re[j] = tr;
+        var ti = im[i]; im[i] = im[j]; im[j] = ti;
       }
-      var src = ctx.createBufferSource();
-      src.buffer = tmp; src.connect(ctx.destination); src.start(0);
-      var r = await ctx.startRendering();
-      for (var c = 0; c < r.numberOfChannels; c++) {
-        var d = r.getChannelData(c);
-        for (var i = 0; i < d.length; i++) { var a = Math.abs(d[i]); if (a > pk) pk = a; }
-      }
-      tmp = null; r = null;
-      await yld();
     }
-    return pk > 0 ? 20 * Math.log10(pk) : -Infinity;
-  } catch(e) {
-    // fallback: sample peak (no upsampling)
-    var pk = 0;
-    for (var c = 0; c < buf.numberOfChannels; c++) {
-      var d = buf.getChannelData(c);
-      for (var i = 0; i < d.length; i++) { var a = Math.abs(d[i]); if (a > pk) pk = a; }
-    }
-    return pk > 0 ? 20 * Math.log10(pk) : -Infinity;
-  }
-}
-
-/* ---- UI ---- */
-var audioBuf=null, results=null, fileName='';
-var dz=document.getElementById('dropzone');
-var fi=document.getElementById('fileInput');
-var btnA=document.getElementById('btnAnalyze');
-
-function setStatus(m){document.getElementById('fiStatus').textContent=m;}
-function setProg(f,m){document.getElementById('progFill').style.width=(f*100)+'%';document.getElementById('progLabel').textContent=m;}
-
-dz.addEventListener('click',function(e){if(!e.target.closest('#btnAnalyze'))fi.click();});
-dz.addEventListener('dragover',function(e){e.preventDefault();dz.classList.add('drag');});
-dz.addEventListener('dragleave',function(e){if(!dz.contains(e.relatedTarget))dz.classList.remove('drag');});
-dz.addEventListener('drop',function(e){e.preventDefault();dz.classList.remove('drag');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0]);});
-fi.addEventListener('change',function(e){if(e.target.files[0]){loadFile(e.target.files[0]);fi.value='';}});
-
-function loadFile(file) {
-  fileName=file.name;
-  var sz=(file.size/1024/1024).toFixed(1);
-  if (parseFloat(sz)>150) {
-    setStatus('File too large - max 150 MB');
-    document.getElementById('dzSub').textContent=sz+' MB - please use a file under 150 MB';
-    return;
-  }
-  setStatus('Decoding...');
-  document.getElementById('dzTitle').textContent=file.name;
-  document.getElementById('dzSub').textContent=sz+' MB - decoding...';
-  document.getElementById('fiName').textContent=file.name;
-  document.getElementById('fiName').style.display='block';
-  document.getElementById('fiSz').textContent=sz+' MB';
-  dz.classList.add('has-file');
-  btnA.disabled=true;
-
-  // Use FileReader instead of arrayBuffer for broader compatibility
-  var reader=new FileReader();
-  reader.onload=function(ev){
-    var actx=new (window.AudioContext||window.webkitAudioContext)();
-    actx.decodeAudioData(ev.target.result,
-      function(decoded){
-        audioBuf=decoded;
-        actx.close();
-        var dur=decoded.duration, m=Math.floor(dur/60), s=(dur%60).toFixed(1);
-        document.getElementById('fiDur').textContent=m+':'+(parseFloat(s)<10?'0':'')+s;
-        document.getElementById('fiSR').textContent=(decoded.sampleRate/1000).toFixed(1)+' kHz';
-        document.getElementById('fiCh').textContent=decoded.numberOfChannels===1?'Mono':'Stereo';
-        document.getElementById('valDur').textContent=m+':'+(parseFloat(s)<10?'0':'')+s;
-        setStatus('Ready');
-        btnA.disabled=false;
-        document.getElementById('dzSub').textContent=sz+' MB - ready to analyze';
-        // Auto-start analysis
-        startAnalysis();
-      },
-      function(err){
-        setStatus('Decode failed');
-        document.getElementById('dzTitle').textContent='Could not decode file';
-        document.getElementById('dzSub').textContent='Re-export as WAV 44.1 or 48 kHz and try again.';
-        dz.classList.remove('has-file');
+    for(var len = 2; len <= n; len <<= 1){
+      var half = len >> 1, step = n/len;
+      for(var s = 0; s < n; s += len){
+        for(var k = 0; k < half; k++){
+          var idx = k*step;
+          var wr = this.cs[idx], wi = this.sn[idx];
+          var a = s + k, b = s + k + half;
+          var xr = re[b]*wr - im[b]*wi;
+          var xi = re[b]*wi + im[b]*wr;
+          re[b] = re[a] - xr; im[b] = im[a] - xi;
+          re[a] += xr; im[a] += xi;
+        }
       }
-    );
+    }
   };
-  reader.onerror=function(){
-    setStatus('Could not read file');
-    dz.classList.remove('has-file');
-  };
-  reader.readAsArrayBuffer(file);
-}
 
-function startAnalysis() {
-  if (!audioBuf) return;
-  btnA.disabled=true;
-  document.getElementById('progWrap').style.display='block';
-  document.getElementById('progLabel').style.display='block';
-  document.getElementById('metersArea').classList.add('hidden');
+  /* ---- K-weighting (48 kHz, BS.1770-4) ---- */
+  var ST1 = { b0:1.53512485958697, b1:-2.69169618940638, b2:1.19839281085285, a1:-1.69065929318241, a2:0.73248077421585 };
+  var ST2 = { b0:1.0, b1:-2.0, b2:1.0, a1:-1.99004745483398, a2:0.99007225036621 };
+  function loudness(E){ return -0.691 + 10*Math.log10(E); }
 
-  analyze(audioBuf, setProg).then(function(r){
-    results=r;
-    showResults(r);
-    document.getElementById('metersArea').classList.remove('hidden');
-    document.getElementById('btnExport').style.display='block';
-    document.getElementById('progWrap').style.display='none';
-    document.getElementById('progLabel').style.display='none';
-    btnA.disabled=false;
-    setStatus('Analysis complete');
-  }).catch(function(e){
-    document.getElementById('progLabel').textContent='Error: '+(e&&e.message?e.message:'Analysis failed');
-    document.getElementById('progWrap').style.display='none';
-    btnA.disabled=false;
-    setStatus('Error — try a different file');
-  });
-}
-
-btnA.addEventListener('click',function(e){e.stopPropagation();startAnalysis();});
-
-/* ---- DISPLAY ---- */
-function f(v,d){ return (isFinite(v)&&!isNaN(v))?v.toFixed(d!==undefined?d:1):'--'; }
-
-function lColor(l){
-  if(!isFinite(l)) return 'var(--cream)';
-  if(l>-8)  return 'var(--red)';
-  if(l>-11) return 'var(--orange)';
-  if(l>-14) return 'var(--yellow)';
-  if(l>-18) return 'var(--green)';
-  return 'var(--blue)';
-}
-function pColor(v){
-  if(!isFinite(v)) return 'var(--cream)';
-  if(v>0)  return 'var(--red)';
-  if(v>-1) return 'var(--orange)';
-  if(v>-3) return 'var(--yellow)';
-  return 'var(--green)';
-}
-function toBar(l){ return isFinite(l)?Math.max(0,Math.min(100,(l+60)/60*100)):0; }
-
-function showResults(r) {
-  // Reset stagger state
-  document.querySelectorAll('.rc').forEach(function(c){ c.classList.remove('in'); });
-
-  var iv=document.getElementById('valInt');
-  countUp(iv, r.integrated, lColor(r.integrated));
-
-  var st='--', sc='s-na';
-  if(isFinite(r.integrated)){
-    if(r.integrated>-8){st='Clipping';sc='s-clip';}
-    else if(r.integrated>-11){st='Too Hot';sc='s-hot';}
-    else if(r.integrated>-14){st='On Target';sc='s-good';}
-    else if(r.integrated>-18){st='Good';sc='s-good';}
-    else{st='Too Quiet';sc='s-cold';}
+  /* ---- 4x polyphase interpolator for True Peak ---- */
+  function tpCoeffs(){
+    var N = 32, c = (N - 1)/2, h = new Float64Array(N);
+    for(var n = 0; n < N; n++){
+      var x = (n - c)/4;
+      var s = x === 0 ? 1 : Math.sin(Math.PI*x)/(Math.PI*x);
+      var w = 0.42 - 0.5*Math.cos(2*Math.PI*n/(N - 1)) + 0.08*Math.cos(4*Math.PI*n/(N - 1));
+      h[n] = s*w;
+    }
+    var P = [];
+    for(var p = 1; p <= 3; p++){
+      var taps = [], sum = 0;
+      for(var k = 0; k < 8; k++){ var v = h[4*k + p]; taps.push(v); sum += v; }
+      for(var k2 = 0; k2 < 8; k2++){ taps[k2] /= sum; }
+      P.push(taps);
+    }
+    return P;
   }
-  var sb=document.getElementById('intStatus');
-  sb.textContent=st; sb.className='big-status '+sc;
 
-  setMC('valMom','barMom',r.momMax);
-  setMC('valST','barST',r.stMax);
-  var dyn=isFinite(r.truePeak)&&isFinite(r.integrated)?r.truePeak-r.integrated:NaN;
-  document.getElementById('valDyn').textContent=f(dyn);
-  document.getElementById('barDyn').style.width=Math.min(100,Math.max(0,(dyn+30)/30*100))+'%';
-
-  var tpEl=document.getElementById('valTP'); tpEl.textContent=f(r.truePeak); tpEl.style.color=pColor(r.truePeak);
-  var lrEl=document.getElementById('valLRA'); lrEl.textContent=f(r.lra);
-  lrEl.style.color=r.lra<4?'var(--orange)':r.lra<14?'var(--green)':'var(--blue)';
-  var spEl=document.getElementById('valSP'); spEl.textContent=f(r.samplePeak); spEl.style.color=pColor(r.samplePeak);
-
-  var plats=[
-    {id:'pp-spotify',t:-14},{id:'pp-apple',t:-16},{id:'pp-youtube',t:-14},
-    {id:'pp-tidal',t:-14},{id:'pp-amazon',t:-14},{id:'pp-deezer',t:-15},
-    {id:'pp-soundcloud',t:-14},{id:'pp-beatport',t:null}
-  ];
-  plats.forEach(function(p){
-    var el=document.getElementById(p.id);
-    if(!isFinite(r.integrated)){el.textContent='--';el.className='badge b-na';return;}
-    if(p.t===null){el.textContent=r.truePeak<=0?'OK':'Clips';el.className='badge '+(r.truePeak<=0?'b-ok':'b-hot');return;}
-    var d=r.integrated-p.t;
-    if(Math.abs(d)<=1){el.textContent='Target';el.className='badge b-ok';}
-    else if(d>1){el.textContent='+'+f(d)+' LU';el.className='badge b-hot';}
-    else{el.textContent=f(d)+' LU';el.className='badge b-soft';}
-  });
-
-  drawHist(r.hist);
-
-  // Stagger cascade + glow
-  setTimeout(function(){
-    var cards = document.querySelectorAll('.rc');
-    cards.forEach(function(c, i){
-      setTimeout(function(){ c.classList.add('in'); }, i * 65);
+  function decode(file, onProg){
+    onProg('Decoding\u2026', 0);
+    return file.arrayBuffer().then(function(ab){
+      var OAC = window.OfflineAudioContext || window.webkitOfflineAudioContext;
+      var oc = new OAC(2, 48000, 48000);
+      return new Promise(function(res, rej){ oc.decodeAudioData(ab, res, rej); });
     });
-    var bd = document.querySelector('.big-display');
-    if(bd){ bd.classList.remove('glow'); void bd.offsetWidth; bd.classList.add('glow'); }
-  }, 55);
-}
-
-function setMC(vid,bid,v){
-  var el=document.getElementById(vid);
-  if(isFinite(v)){
-    el.textContent=f(v); el.style.color=lColor(v);
-    var bar=document.getElementById(bid);
-    bar.style.width=toBar(v)+'%'; bar.style.background=lColor(v);
   }
-}
 
-function drawHist(hist) {
-  var cv=document.getElementById('histCanvas');
-  var ctx=cv.getContext('2d');
-  var W=cv.width, H=cv.height;
-  ctx.clearRect(0,0,W,H);
-  ctx.fillStyle='#161616'; ctx.fillRect(0,0,W,H);
-  var y14=H-((-14+60)/60*H), y16=H-((-16+60)/60*H);
-  ctx.fillStyle='rgba(61,186,122,.08)';
-  ctx.fillRect(0,y14,W,y16-y14);
-  [-60,-40,-18,-16,-14,-9,0].forEach(function(l){
-    var y=H-((l+60)/60*H);
-    ctx.strokeStyle=l===-14||l===-16?'rgba(61,186,122,.2)':'rgba(255,255,255,.05)';
-    ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke();
-    if(l!==-60&&l!==0){ctx.fillStyle='rgba(255,255,255,.18)';ctx.font='9px system-ui';ctx.fillText(l,4,y-2);}
-  });
-  if(!hist||hist.length<2) return;
-  var step=W/hist.length;
-  ctx.beginPath();
-  hist.forEach(function(v,i){var x=i*step,y=H-((v+60)/60*H);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});
-  ctx.lineTo(W,H); ctx.lineTo(0,H); ctx.closePath();
-  ctx.fillStyle='rgba(201,164,64,.08)'; ctx.fill();
-  ctx.beginPath();
-  hist.forEach(function(v,i){var x=i*step,y=H-((v+60)/60*H);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});
-  ctx.strokeStyle='rgba(201,164,64,.78)'; ctx.lineWidth=1.5; ctx.stroke();
-}
+  function analyze(buf, onProg){
+    return new Promise(function(resolve){
+      var SR = 48000, L = buf.length;
+      var c0 = buf.getChannelData(0);
+      var c1 = buf.numberOfChannels > 1 ? buf.getChannelData(1) : c0;
+      var HOP = 4800, nHops = Math.floor(L/HOP);
+      var hopE = new Float64Array(nHops);
+      var EHOP = 480, nEnv = Math.floor(L/EHOP);
+      var env = new Float64Array(nEnv);
+      var f = [{x1:0,x2:0,y1:0,y2:0},{x1:0,x2:0,y1:0,y2:0},{x1:0,x2:0,y1:0,y2:0},{x1:0,x2:0,y1:0,y2:0}];
+      var P = tpCoeffs();
+      var peak = 0, tpeak = 0;
+      var sumL = 0, sumR = 0, sumLL = 0, sumRR = 0, sumLR = 0;
+      var clipRunL = 0, clipRunR = 0, clipEv = 0;
+      var i = 0, CH = 720000;
 
-/* ---- EXPORT ---- */
-document.getElementById('btnExport').addEventListener('click',function(){
-  if(!results) return;
-  var sep='='.repeat(44);
-  var lines=[
-    'LUFS Meter - Angelo Pillon - angelopillon.com',
-    sep,
-    'File: '+fileName,'',
-    'Integrated Loudness: '+f(results.integrated)+' LUFS',
-    'Momentary Max:       '+f(results.momMax)+' LUFS',
-    'Short-Term Max:      '+f(results.stMax)+' LUFS',
-    'True Peak:           '+f(results.truePeak)+' dBTP',
-    'Sample Peak:         '+f(results.samplePeak)+' dBFS',
-    'Loudness Range:      '+f(results.lra)+' LU',
-    '','Platform Comparison:',
-    '  Spotify     (-14): '+platDiff(results.integrated,-14),
-    '  Apple Music (-16): '+platDiff(results.integrated,-16),
-    '  YouTube     (-14): '+platDiff(results.integrated,-14),
-    '  Tidal       (-14): '+platDiff(results.integrated,-14),
-    '  Amazon      (-14): '+platDiff(results.integrated,-14),
-    '  Deezer      (-15): '+platDiff(results.integrated,-15)
-  ];
-  var blob=new Blob([lines.join('\n')],{type:'text/plain'});
-  var a=document.createElement('a');
-  a.href=URL.createObjectURL(blob); a.download='lufs-analysis.txt'; a.click();
-});
-function platDiff(l,t){
-  if(!isFinite(l)) return '--';
-  var d=l-t;
-  return Math.abs(d)<=1?'ON TARGET':d>0?'+'+f(d)+' LU (too loud)':f(d)+' LU (quieter than target)';
-}
+      function bq(s, C, x){
+        var y = C.b0*x + C.b1*s.x1 + C.b2*s.x2 - C.a1*s.y1 - C.a2*s.y2;
+        s.x2 = s.x1; s.x1 = x; s.y2 = s.y1; s.y1 = y;
+        return y;
+      }
 
-/* ---- CURSOR ---- */
-var cDot=document.getElementById('cDot'), cRing=document.getElementById('cRing');
-var mx=0,my=0,cx=0,cy=0;
-document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;});
-(function loop(){
-  cDot.style.left=mx+'px'; cDot.style.top=my+'px';
-  cx+=(mx-cx)*0.1; cy+=(my-cy)*0.1;
-  cRing.style.left=cx+'px'; cRing.style.top=cy+'px';
-  requestAnimationFrame(loop);
+      function passA(){
+        var end = Math.min(i + CH, nHops*HOP);
+        for(; i < end; i++){
+          var xL = c0[i], xR = c1[i];
+          var aL = xL < 0 ? -xL : xL, aR = xR < 0 ? -xR : xR;
+          if(aL > peak) peak = aL;
+          if(aR > peak) peak = aR;
+          sumL += xL; sumR += xR;
+          sumLL += xL*xL; sumRR += xR*xR; sumLR += xL*xR;
+          if(aL >= 0.999){ if(++clipRunL === 3) clipEv++; } else { clipRunL = 0; }
+          if(aR >= 0.999){ if(++clipRunR === 3) clipEv++; } else { clipRunR = 0; }
+          if(i >= 7){
+            for(var p = 0; p < 3; p++){
+              var t = P[p], accL = 0, accR = 0;
+              for(var k = 0; k < 8; k++){ accL += t[k]*c0[i - k]; accR += t[k]*c1[i - k]; }
+              if(accL < 0) accL = -accL; if(accR < 0) accR = -accR;
+              if(accL > tpeak) tpeak = accL;
+              if(accR > tpeak) tpeak = accR;
+            }
+          }
+          var m = (xL + xR)*0.5;
+          if(i < nEnv*EHOP) env[(i/EHOP)|0] += m*m;
+          var yL = bq(f[1], ST2, bq(f[0], ST1, xL));
+          var yR = bq(f[3], ST2, bq(f[2], ST1, xR));
+          hopE[(i/HOP)|0] += yL*yL + yR*yR;
+        }
+        onProg('Measuring loudness\u2026', 0.7*i/(nHops*HOP || 1));
+        if(i < nHops*HOP){ setTimeout(passA, 0); } else { postA(); }
+      }
+
+      var R = {};
+      function postA(){
+        if(tpeak < peak) tpeak = peak;
+        for(var h = 0; h < nHops; h++){ hopE[h] /= HOP; }
+        var blocks = [];
+        for(var b = 0; b + 4 <= nHops; b++){ blocks.push((hopE[b] + hopE[b+1] + hopE[b+2] + hopE[b+3])/4); }
+        var Mmax = -Infinity;
+        for(var mb = 0; mb < blocks.length; mb++){
+          var lv = loudness(blocks[mb]);
+          if(lv > Mmax) Mmax = lv;
+        }
+        var abs = blocks.filter(function(E){ return loudness(E) > -70; });
+        var I = -Infinity;
+        if(abs.length){
+          var m1 = abs.reduce(function(a,b2){ return a + b2; }, 0)/abs.length;
+          var thr = loudness(m1) - 10;
+          var rel = abs.filter(function(E){ return loudness(E) > thr; });
+          if(rel.length){
+            I = loudness(rel.reduce(function(a,b2){ return a + b2; }, 0)/rel.length);
+          }
+        }
+        var sts = [], stT = [];
+        for(var s3 = 0; s3 + 30 <= nHops; s3 += 10){
+          var e = 0;
+          for(var k = 0; k < 30; k++){ e += hopE[s3 + k]; }
+          sts.push(loudness(e/30)); stT.push((s3 + 15)*0.1);
+        }
+        var STmax = sts.length ? Math.max.apply(null, sts) : -Infinity;
+        var LRA = NaN;
+        var g1 = sts.filter(function(v){ return v > -70; });
+        if(g1.length > 1){
+          var mE = g1.reduce(function(a,v){ return a + Math.pow(10,(v + 0.691)/10); }, 0)/g1.length;
+          var thr2 = loudness(mE) - 20;
+          var g2 = g1.filter(function(v){ return v > thr2; }).sort(function(a,b3){ return a - b3; });
+          if(g2.length > 1){
+            LRA = g2[Math.floor(0.95*(g2.length - 1))] - g2[Math.floor(0.10*(g2.length - 1))];
+          }
+        }
+        R.I = I; R.Mmax = Mmax; R.STmax = STmax; R.LRA = LRA;
+        R.SP = peak > 0 ? 20*Math.log10(peak) : -Infinity;
+        R.TP = tpeak > 0 ? 20*Math.log10(tpeak) : -Infinity;
+        R.PLR = isFinite(I) ? R.TP - I : NaN;
+        R.tl = sts; R.tlT = stT;
+        R.dur = L/SR; R.ch = buf.numberOfChannels;
+        var corr = (sumLL > 0 && sumRR > 0) ? sumLR/Math.sqrt(sumLL*sumRR) : 1;
+        var EM = (sumLL + 2*sumLR + sumRR)/4, ES = (sumLL - 2*sumLR + sumRR)/4;
+        R.corr = corr;
+        R.widthDb = (EM > 0 && ES > 1e-12) ? 10*Math.log10(ES/EM) : -Infinity;
+        R.dualMono = R.ch > 1 && corr > 0.9995 && (!isFinite(R.widthDb) || R.widthDb < -50);
+        R.dc = Math.max(Math.abs(sumL/L), Math.abs(sumR/L));
+        R.clipEv = clipEv;
+        var bl = blocks.map(loudness).filter(function(v2){ return v2 > -90; }).sort(function(a2,b6){ return a2 - b6; });
+        R.floor = bl.length ? bl[Math.floor(0.05*(bl.length - 1))] : -Infinity;
+        var mo = new Float32Array(blocks.length);
+        for(var mi = 0; mi < blocks.length; mi++){ mo[mi] = loudness(blocks[mi]); }
+        R.mo = mo;
+        var li = 0;
+        for(var si = 1; si < sts.length; si++){ if(sts[si] > sts[li]) li = si; }
+        R.loudAt = sts.length ? stT[li] : 0;
+        passB();
+      }
+
+      /* ---- chroma / key ---- */
+      var CHROMA = new Float64Array(12);
+      var SPEC = null;
+      function passB(){
+        var N = 8192, fft = new FFT(N);
+        var win = new Float64Array(N);
+        for(var w = 0; w < N; w++){ win[w] = 0.5 - 0.5*Math.cos(2*Math.PI*w/(N - 1)); }
+        var span = Math.min(120*SR, L - N);
+        var start = Math.max(0, ((L - span)/2)|0);
+        var F = Math.max(1, Math.floor(span/N));
+        SPEC = new Float64Array(N/2);
+        var re = new Float64Array(N), im = new Float64Array(N);
+        var pc = new Int8Array(N/2);
+        for(var b2 = 0; b2 < N/2; b2++){
+          var fr = b2*SR/N;
+          pc[b2] = (fr >= 70 && fr <= 2200) ? ((Math.round(12*Math.log2(fr/440)) + 69) % 12 + 12) % 12 : -1;
+        }
+        var fi = 0;
+        function frame(){
+          var lim = Math.min(fi + 6, F);
+          for(; fi < lim; fi++){
+            var off = start + fi*N;
+            for(var s = 0; s < N; s++){
+              re[s] = (c0[off + s] + c1[off + s])*0.5*win[s];
+              im[s] = 0;
+            }
+            fft.run(re, im);
+            for(var b3 = 1; b3 < N/2; b3++){
+              var mg = Math.sqrt(re[b3]*re[b3] + im[b3]*im[b3]);
+              SPEC[b3] += mg;
+              if(pc[b3] >= 0) CHROMA[pc[b3]] += Math.log(1 + mg);
+            }
+          }
+          onProg('Detecting key\u2026', 0.7 + 0.24*fi/F);
+          if(fi < F){ setTimeout(frame, 0); } else { keyDone(); }
+        }
+        frame();
+      }
+
+      var NOTES = ['C','C\u266f','D','D\u266f','E','F','F\u266f','G','G\u266f','A','A\u266f','B'];
+      var MAJ = [6.35,2.23,3.48,2.33,4.38,4.09,2.52,5.19,2.39,3.66,2.29,2.88];
+      var MIN = [6.33,2.68,3.52,5.38,2.60,3.53,2.54,4.75,3.98,2.69,3.34,3.17];
+      var CAM_MAJ = {0:'8B',7:'9B',2:'10B',9:'11B',4:'12B',11:'1B',6:'2B',1:'3B',8:'4B',3:'5B',10:'6B',5:'7B'};
+      var CAM_MIN = {9:'8A',4:'9A',11:'10A',6:'11A',1:'12A',8:'1A',3:'2A',10:'3A',5:'4A',0:'5A',7:'6A',2:'7A'};
+      function pearson(a, b, rot){
+        var n = 12, ma = 0, mb = 0;
+        for(var i2 = 0; i2 < n; i2++){ ma += a[i2]; mb += b[i2]; }
+        ma /= n; mb /= n;
+        var num = 0, da = 0, db = 0;
+        for(var j2 = 0; j2 < n; j2++){
+          var x = a[j2] - ma, y = b[(j2 - rot + 12) % 12] - mb;
+          num += x*y; da += x*x; db += y*y;
+        }
+        return num/Math.sqrt(da*db || 1);
+      }
+      function keyDone(){
+        var scores = [];
+        for(var r2 = 0; r2 < 12; r2++){
+          scores.push({ root:r2, mode:'major', c:pearson(CHROMA, MAJ, r2) });
+          scores.push({ root:r2, mode:'minor', c:pearson(CHROMA, MIN, r2) });
+        }
+        scores.sort(function(a,b4){ return b4.c - a.c; });
+        var best = scores[0], margin = best.c - scores[1].c;
+        var isMin = best.mode === 'minor';
+        R.key = {
+          root: best.root, mode: best.mode,
+          name: NOTES[best.root] + (isMin ? ' Minor' : ' Major'),
+          short: NOTES[best.root] + (isMin ? 'm' : ''),
+          cam: isMin ? CAM_MIN[best.root] : CAM_MAJ[best.root],
+          rel: isMin ? NOTES[(best.root + 3) % 12] + ' Major' : NOTES[(best.root + 9) % 12] + ' Minor',
+          conf: margin > 0.10 ? 'High' : margin > 0.04 ? 'Medium' : 'Low'
+        };
+        R.chroma = Array.prototype.slice.call(CHROMA);
+        R.spec = SPEC;
+        passC();
+      }
+
+      /* ---- BPM ---- */
+      function passC(){
+        onProg('Estimating tempo\u2026', 0.95);
+        var e = new Float64Array(nEnv);
+        for(var j = 0; j < nEnv; j++){ e[j] = Math.sqrt(env[j]/EHOP); }
+        /* smooth the envelope (50ms) so texture and beating can't mask the pulse */
+        var es = new Float64Array(nEnv);
+        for(var js = 0; js < nEnv; js++){
+          var sm = 0, nn = 0;
+          for(var k = -2; k <= 2; k++){
+            var jj = js + k;
+            if(jj >= 0 && jj < nEnv){ sm += e[jj]; nn++; }
+          }
+          es[js] = sm/nn;
+        }
+        /* onset: positive log-energy flux */
+        var o = new Float64Array(nEnv);
+        for(var j2 = 1; j2 < nEnv; j2++){
+          var d = Math.log(es[j2] + 1e-7) - Math.log(es[j2 - 1] + 1e-7);
+          o[j2] = d > 0 ? d : 0;
+        }
+        var span2 = Math.min(6000, nEnv);
+        var st2 = Math.max(0, ((nEnv - span2)/2)|0);
+        var mean = 0;
+        for(var j3 = st2; j3 < st2 + span2; j3++){ mean += o[j3]; }
+        mean /= span2;
+        var r0 = 0;
+        for(var j4 = st2; j4 < st2 + span2; j4++){
+          var v = o[j4] - mean; r0 += v*v;
+        }
+        var rr = new Float64Array(173);
+        for(var lag = 20; lag <= 172; lag++){
+          var s = 0;
+          for(var j5 = st2 + lag; j5 < st2 + span2; j5++){
+            s += (o[j5] - mean)*(o[j5 - lag] - mean);
+          }
+          rr[lag] = s;
+        }
+        /* harmonic scoring: a real pulse also correlates at double the lag */
+        var bestL = 0, bestS = -Infinity;
+        for(var l = 33; l <= 86; l++){
+          var sc = rr[l] + (2*l <= 172 ? 0.5*rr[2*l] : 0);
+          if(sc > bestS){ bestS = sc; bestL = l; }
+        }
+        var bpm = null;
+        if(r0 > 0 && bestS/r0 > 0.08 && R.dur > 15){
+          var l2 = Math.round(bestL/2);
+          if(6000/bestL < 90 && l2 >= 33 && rr[l2] + 0.5*rr[l2*2] > 0.8*bestS){ bestL = l2; }
+          var y1 = rr[bestL - 1] || 0, y2 = rr[bestL], y3 = rr[bestL + 1] || 0;
+          var den = (y1 - 2*y2 + y3);
+          var dl = den !== 0 ? 0.5*(y1 - y3)/den : 0;
+          if(dl > 0.5) dl = 0.5; if(dl < -0.5) dl = -0.5;
+          bpm = 6000/(bestL + dl);
+        }
+        R.bpm = bpm;
+        onProg('Done', 1);
+        resolve(R);
+      }
+
+      passA();
+    });
+  }
+
+  function makePeaks(buf, cols){
+    var d = buf.getChannelData(0), L = buf.length;
+    var per = Math.max(1, Math.floor(L/cols));
+    var out = new Float32Array(cols);
+    for(var c = 0; c < cols; c++){
+      var mx = 0, s0 = c*per, s1 = Math.min(L, s0 + per);
+      for(var s = s0; s < s1; s += 6){
+        var a = d[s] < 0 ? -d[s] : d[s];
+        if(a > mx) mx = a;
+      }
+      out[c] = mx;
+    }
+    return out;
+  }
+
+  return { decode:decode, analyze:analyze, makePeaks:makePeaks };
 })();
-document.querySelectorAll('a,button').forEach(function(el){
-  el.addEventListener('mouseenter',function(){cRing.classList.add('big');});
-  el.addEventListener('mouseleave',function(){cRing.classList.remove('big');});
-});
+</script>
 
-/* ---- SCROLL PROGRESS ---- */
-window.addEventListener('scroll',function(){
-  var t=document.documentElement.scrollHeight-window.innerHeight;
-  if(t>0) document.getElementById('sp').style.width=(window.scrollY/t*100)+'%';
-},{passive:true});
-
-/* ---- COOKIE CONSENT ---- */
+<script>
+/* ================= UI ================= */
 (function(){
-  if(localStorage.getItem('ap_cc')===null){
-    setTimeout(function(){
-      var b=document.getElementById('cookieBanner');
-      if(b) b.classList.add('show');
-    },1400);
-  }
-})();
-function cookieChoice(ok){
-  localStorage.setItem('ap_cc',ok?'1':'0');
-  var b=document.getElementById('cookieBanner');
-  if(b){b.style.transition='transform .4s ease';b.classList.remove('show');}
-}
+  var d = document;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(id){ return d.getElementById(id); }
+  function fmt(s){ s = Math.max(0, Math.floor(s)); return Math.floor(s/60) + ':' + ('0' + (s % 60)).slice(-2); }
+  function ease(q){ return 1 - Math.pow(1 - q, 3); }
 
-// AdSense - deferred init after page load
-window.addEventListener('load', function() {
-  try {
-    var ads = document.querySelectorAll('.adsbygoogle');
-    ads.forEach(function() {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    });
-  } catch(e) {}
-  // Hide unfilled ad slots so they don't show as empty boxes
-  setTimeout(function(){
-    document.querySelectorAll('.adsbygoogle').forEach(function(ad){
-      var st = ad.getAttribute('data-ad-status');
-      if(!st || st === 'unfilled'){
-        var wrap = ad.closest('.ad-slot, .ad-strip');
-        if(wrap) wrap.style.display = 'none';
+  var drop = $('drop'), prog = $('prog'), res = $('res');
+  var busy = false, lastR = null, lastFile = null, lastBuf = null;
+
+  /* ---------- idle drop-zone animation ---------- */
+  (function(){
+    var cv = $('dropCv'); if(!cv) return;
+    var ctx = cv.getContext('2d'), dpr = Math.min(devicePixelRatio || 1, 2);
+    var W = 0, H = 0, raf = null, on = true;
+    function rs(){
+      var r = cv.getBoundingClientRect();
+      W = Math.max(1, r.width|0); H = Math.max(1, r.height|0);
+      cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    }
+    function draw(t){
+      ctx.clearRect(0,0,W,H);
+      var N = Math.max(24, (W/26)|0), bw = W/N;
+      for(var i = 0; i < N; i++){
+        var v = 0.14 + 0.5*Math.pow(Math.sin(Math.PI*i/N), 1.3)
+              *(0.55 + 0.45*Math.sin(i*0.6 + t*0.0012));
+        var h = v*H*0.8;
+        ctx.fillStyle = 'rgba(228,166,46,' + (0.1 + v*0.2).toFixed(3) + ')';
+        ctx.fillRect(i*bw + 2, H - h, bw - 4, h);
       }
-    });
-  }, 3500);
-});
+      raf = (on && !d.hidden && !reduced) ? requestAnimationFrame(draw) : null;
+    }
+    rs(); window.addEventListener('resize', function(){ clearTimeout(cv._t); cv._t = setTimeout(rs, 150); }, {passive:true});
+    if(reduced){ draw(0); } else { raf = requestAnimationFrame(draw); }
+    d.addEventListener('visibilitychange', function(){ if(!d.hidden && on && !raf && !reduced){ raf = requestAnimationFrame(draw); } });
+    window.__dropIdle = function(v){ on = v; if(v && !raf && !reduced){ raf = requestAnimationFrame(draw); } };
+  })();
 
-/* ── HERO WAVEFORM ──────────────────────────────────────── */
-(function(){
-  var cv = document.getElementById('heroWave');
-  if(!cv) return;
-  var ctx = cv.getContext('2d');
-  var t = 0;
-  var waves = [
-    {a:.14, f:1.6, s:.28, op:.22, lw:1.6, ph:0},
-    {a:.09, f:2.9, s:.52, op:.13, lw:1.1, ph:Math.PI*.8},
-    {a:.06, f:5.1, s:.88, op:.08, lw:.8,  ph:Math.PI*1.7},
-    {a:.04, f:8.3, s:1.3, op:.05, lw:.6,  ph:Math.PI*.4}
-  ];
-  var dpr = window.devicePixelRatio || 1;
-  function resize(){
-    cv.width  = (cv.offsetWidth  || 500) * dpr;
-    cv.height = (cv.offsetHeight || 200) * dpr;
+  /* ---------- file intake ---------- */
+  var input = d.createElement('input');
+  input.type = 'file'; input.accept = 'audio/*'; input.style.display = 'none';
+  d.body.appendChild(input);
+  input.addEventListener('change', function(){ if(input.files[0]) run(input.files[0]); input.value = ''; });
+  drop.addEventListener('click', function(){ if(!busy) input.click(); });
+  drop.addEventListener('keydown', function(e){ if((e.key === 'Enter' || e.key === ' ') && !busy){ e.preventDefault(); input.click(); } });
+  ['dragenter','dragover'].forEach(function(ev){ drop.addEventListener(ev, function(e){ e.preventDefault(); drop.classList.add('hot'); }); });
+  ['dragleave','drop'].forEach(function(ev){ drop.addEventListener(ev, function(e){ e.preventDefault(); drop.classList.remove('hot'); }); });
+  drop.addEventListener('drop', function(e){
+    var f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+    if(f && !busy) run(f);
+  });
+  window.addEventListener('dragover', function(e){ e.preventDefault(); });
+  window.addEventListener('drop', function(e){ e.preventDefault(); });
+
+  function onProg(txt, p){
+    $('progTxt').textContent = txt;
+    $('progPct').textContent = Math.round(p*100) + '%';
+    $('progFill').style.width = (p*100).toFixed(1) + '%';
   }
-  resize();
-  window.addEventListener('resize', resize);
-  function draw(){
-    var W = cv.width, H = cv.height;
-    ctx.clearRect(0, 0, W, H);
-    waves.forEach(function(w){
+
+  function run(file){
+    if(window.__busy) return;
+    busy = true; window.__busy = true; lastFile = file;
+    if(file.size > 262144000){
+      prog.classList.add('on');
+      onProg('File too large \u2014 max 250 MB', 0);
+      busy = false; window.__busy = false;
+      setTimeout(function(){ prog.classList.remove('on'); $('dropT').textContent = 'Drop your track'; }, 2600);
+      return;
+    }
+    res.classList.remove('on');
+    prog.classList.add('on');
+    $('dropT').textContent = file.name.length > 34 ? file.name.slice(0,33) + '\u2026' : file.name;
+    DSP.decode(file, onProg).then(function(buf){
+      lastBuf = buf;
+      return DSP.analyze(buf, onProg);
+    }).then(function(R){
+      lastR = R;
+      prog.classList.remove('on');
+      render(R, lastBuf, file);
+      busy = false; window.__busy = false;
+    }).catch(function(){
+      onProg('Could not decode this file \u2014 try WAV or MP3', 0);
+      busy = false; window.__busy = false;
+      setTimeout(function(){ prog.classList.remove('on'); $('dropT').textContent = 'Drop your track'; }, 3200);
+    });
+  }
+
+  window.__run = run;
+
+  /* ---------- render ---------- */
+  function render(R, buf, file){
+    $('fName').textContent = file.name;
+    $('fDur').textContent = fmt(R.dur) + ' min';
+    $('fSr').textContent = (buf.sampleRate/1000).toFixed(1) + ' kHz \u00b7 analysis';
+    $('fCh').textContent = (R.ch > 1 ? 'Stereo' : 'Mono') + ' \u00b7 ' + (file.size/1048576).toFixed(1) + ' MB';
+
+    set('mLRA', isFinite(R.LRA) ? R.LRA.toFixed(1) : '\u2014');
+    set('mST', isFinite(R.STmax) ? R.STmax.toFixed(1) : '\u2014');
+    set('mM', isFinite(R.Mmax) ? R.Mmax.toFixed(1) : '\u2014');
+    set('mPLR', isFinite(R.PLR) ? R.PLR.toFixed(1) : '\u2014');
+    set('mTP', isFinite(R.TP) ? R.TP.toFixed(1) : '\u2014');
+    $('mcTP').classList.toggle('warn', R.TP > -1);
+
+    var v = $('gVerdict'), dS = R.I - (-14);
+    v.className = 'g-verdict';
+    if(!isFinite(R.I)){ v.textContent = 'Too quiet to gate'; }
+    else if(Math.abs(dS) <= 1){ v.textContent = '\u2713 Streaming sweet spot'; v.classList.add('ok'); }
+    else if(R.I > -10){ v.textContent = 'Club-level loud \u00b7 ' + '+' + dS.toFixed(1) + ' LU over Spotify'; v.classList.add('hot'); }
+    else if(dS > 1){ v.textContent = '+' + dS.toFixed(1) + ' LU over streaming target'; }
+    else { v.textContent = dS.toFixed(1) + ' LU below streaming target'; }
+
+    var kc = $('kCam');
+    kc.textContent = R.key.cam + ' \u00b7 ' + R.key.name;
+    $('kRel').textContent = R.key.rel;
+    $('kBpm').textContent = R.bpm ? R.bpm.toFixed(1) : '\u2014';
+    $('kConf').textContent = R.key.conf;
+
+    buildPlatforms(R.I);
+    drawWave(buf);
+    drawTimeline(R);
+    animateGauge(R.I);
+    animateWheel(R);
+
+    res.classList.add('on');
+    revealAll();
+    window.__dropIdle && window.__dropIdle(true);
+    if(window.__afterRender) window.__afterRender(R, buf, file);
+    res.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+  }
+  function set(id, v){ $(id).textContent = v; }
+
+  function buildPlatforms(I){
+    var P = [['Spotify',-14],['Apple Music',-16],['YouTube',-14],['Amazon Music',-14],['Tidal',-14],['Deezer',-15],['SoundCloud',-14],['Beatport / Club',null]];
+    var html = '';
+    for(var i = 0; i < P.length; i++){
+      var name = P[i][0], t = P[i][1];
+      if(t === null){
+        html += '<div class="p-row"><span class="p-name">' + name + '</span><span class="p-tgt">No limit</span><span class="p-bar"></span><span class="p-delta">-9\u2026-11 typical</span></div>';
+        continue;
+      }
+      var del = I - t, ad = Math.abs(del);
+      var cls = ad <= 1 ? 'ok' : (del > 3 ? 'hot' : '');
+      var w = Math.min(ad, 8)/8*50;
+      html += '<div class="p-row"><span class="p-name">' + name + '</span>'
+        + '<span class="p-tgt">' + t + ' LUFS</span>'
+        + '<span class="p-bar"><span class="p-fill ' + (del < 0 ? 'neg ' : '') + (cls === 'hot' ? 'hot' : '') + '" data-w="' + w.toFixed(1) + '"></span></span>'
+        + '<span class="p-delta ' + cls + '">' + (isFinite(del) ? (del > 0 ? '+' : '') + del.toFixed(1) + ' LU' : '\u2014') + '</span></div>';
+    }
+    $('platRows').innerHTML = html;
+    requestAnimationFrame(function(){
+      [].forEach.call(d.querySelectorAll('.p-fill'), function(el){ el.style.width = el.getAttribute('data-w') + '%'; });
+    });
+  }
+
+  function drawWave(buf){
+    var cv = $('waveCv'), ctx = cv.getContext('2d');
+    var dpr = Math.min(devicePixelRatio || 1, 2);
+    var r = cv.getBoundingClientRect();
+    var W = Math.max(1, r.width|0), H = Math.max(1, r.height|0);
+    cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    var pk = DSP.makePeaks(buf, Math.max(60, (W/2)|0));
+    var cw = W/pk.length;
+    ctx.clearRect(0,0,W,H);
+    for(var c = 0; c < pk.length; c++){
+      var h = Math.max(1.5, pk[c]*H*0.9);
+      ctx.fillStyle = 'rgba(228,166,46,' + (0.25 + pk[c]*0.5).toFixed(3) + ')';
+      ctx.fillRect(c*cw + 0.5, (H - h)/2, Math.max(1, cw - 1.2), h);
+    }
+  }
+
+  /* ---------- gauge ---------- */
+  function gaugeGeom(){ return { cx:210, cy:218, R:176, a0:-125, a1:125, v0:-24, v1:-6 }; }
+  function vDeg(g, v){ v = Math.max(g.v0, Math.min(g.v1, v)); return g.a0 + (v - g.v0)/(g.v1 - g.v0)*(g.a1 - g.a0); }
+  function rad(a){ return (a - 90)*Math.PI/180; }
+  function drawGauge(val, num){
+    var cv = $('gaugeCv'), ctx = cv.getContext('2d');
+    var dpr = Math.min(devicePixelRatio || 1, 2);
+    if(cv.width !== 420*dpr){ cv.width = 420*dpr; cv.height = 250*dpr; }
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,420,250);
+    var g = gaugeGeom();
+    function arc(v1, v2, color, lw){
+      ctx.strokeStyle = color; ctx.lineWidth = lw; ctx.lineCap = 'butt';
+      ctx.beginPath(); ctx.arc(g.cx, g.cy, g.R, rad(vDeg(g, v1)), rad(vDeg(g, v2))); ctx.stroke();
+    }
+    arc(-24, -6, 'rgba(237,230,216,.12)', 10);
+    var TB = window.__tband || [-16, -14], TH = window.__thot || [-9, -6];
+    arc(TB[0], TB[1], 'rgba(228,166,46,.4)', 10);
+    arc(TH[0], TH[1], 'rgba(255,78,42,.35)', 10);
+    if(isFinite(val)) arc(-24, val, 'rgba(228,166,46,.9)', 4);
+    for(var t = -24; t <= -6; t++){
+      var a = rad(vDeg(g, t));
+      var maj = t % 2 === 0;
+      var r1 = g.R - 14, r2 = g.R - (maj ? 26 : 20);
+      ctx.strokeStyle = maj ? 'rgba(237,230,216,.4)' : 'rgba(237,230,216,.16)';
+      ctx.lineWidth = maj ? 2 : 1;
       ctx.beginPath();
-      ctx.strokeStyle = 'rgba(201,164,64,' + w.op + ')';
-      ctx.lineWidth   = w.lw * dpr;
-      for(var x = 0; x <= W; x += 2){
-        var y = H/2 + H * w.a * Math.sin(w.f * Math.PI * 2 * x / W + t * w.s + w.ph);
-        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-      }
+      ctx.moveTo(g.cx + Math.cos(a)*r1, g.cy + Math.sin(a)*r1);
+      ctx.lineTo(g.cx + Math.cos(a)*r2, g.cy + Math.sin(a)*r2);
       ctx.stroke();
-    });
-    t += 0.016;
-    requestAnimationFrame(draw);
+      if(t % 4 === 0){
+        ctx.fillStyle = 'rgba(152,144,127,.9)';
+        ctx.font = '10px ui-monospace, Menlo, monospace';
+        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText(t, g.cx + Math.cos(a)*(g.R - 40), g.cy + Math.sin(a)*(g.R - 40));
+      }
+    }
+    if(isFinite(val)){
+      var an = rad(vDeg(g, val));
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.strokeStyle = 'rgba(228,166,46,.3)'; ctx.lineWidth = 6; ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(g.cx, g.cy);
+      ctx.lineTo(g.cx + Math.cos(an)*(g.R - 34), g.cy + Math.sin(an)*(g.R - 34)); ctx.stroke();
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = '#ede6d8'; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.moveTo(g.cx, g.cy);
+      ctx.lineTo(g.cx + Math.cos(an)*(g.R - 34), g.cy + Math.sin(an)*(g.R - 34)); ctx.stroke();
+    }
+    ctx.fillStyle = '#e4a62e';
+    ctx.beginPath(); ctx.arc(g.cx, g.cy, 6, 0, 6.2832); ctx.fill();
+    $('gInt').textContent = isFinite(num) ? num.toFixed(1) : '\u2212\u221e';
   }
-  draw();
-})();
+  function animateGauge(I){
+    if(!isFinite(I) || reduced){ drawGauge(I, I); return; }
+    var t0 = null;
+    function fr(ts){
+      if(!t0) t0 = ts;
+      var q = Math.min(1, (ts - t0)/1400), e = ease(q);
+      var v = -24 + (Math.max(-24, Math.min(-6, I)) + 24)*e;
+      drawGauge(v, -24 + (I + 24)*e);
+      if(q < 1) requestAnimationFrame(fr);
+      else drawGauge(I, I);
+    }
+    requestAnimationFrame(fr);
+  }
 
-/* ── COUNT-UP for big LUFS value ───────────────────────── */
-function countUp(el, target, color){
-  if(!isFinite(target)){
-    el.classList.remove('counting');
-    el.style.removeProperty('-webkit-text-fill-color');
-    el.textContent = '--';
-    el.style.color = color || '';
-    return;
+  window.__gaugeDraw = drawGauge;
+
+  /* ---------- chroma wheel ---------- */
+  var NOTES = ['C','C\u266f','D','D\u266f','E','F','F\u266f','G','G\u266f','A','A\u266f','B'];
+  function drawWheel(R, grow){
+    var cv = $('keyCv'), ctx = cv.getContext('2d');
+    var dpr = Math.min(devicePixelRatio || 1, 2);
+    if(cv.width !== 330*dpr){ cv.width = 330*dpr; cv.height = 330*dpr; }
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,330,330);
+    var cx = 165, cy = 165, r0 = 62, r1 = 128;
+    var mn = Math.min.apply(null, R.chroma), mx = Math.max.apply(null, R.chroma);
+    ctx.strokeStyle = 'rgba(237,230,216,.08)'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.arc(cx, cy, r1 + 6, 0, 6.2832); ctx.stroke();
+    for(var i = 0; i < 12; i++){
+      var n = mx > mn ? (R.chroma[i] - mn)/(mx - mn) : 0.5;
+      var len = r0 + (r1 - r0)*(0.12 + 0.88*n)*grow;
+      var a = rad2(i*30);
+      var hot = i === R.key.root;
+      for(var pass = hot ? 1 : 0; pass >= 0; pass--){
+        ctx.globalCompositeOperation = pass ? 'lighter' : 'source-over';
+        ctx.strokeStyle = hot
+          ? 'rgba(228,166,46,' + (pass ? '.35' : '.95') + ')'
+          : 'rgba(237,230,216,.22)';
+        ctx.lineWidth = pass ? 22 : 14;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        ctx.moveTo(cx + Math.cos(a)*r0, cy + Math.sin(a)*r0);
+        ctx.lineTo(cx + Math.cos(a)*len, cy + Math.sin(a)*len);
+        ctx.stroke();
+      }
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.fillStyle = hot ? '#e4a62e' : 'rgba(152,144,127,.85)';
+      ctx.font = (hot ? '700 ' : '') + '11px ui-monospace, Menlo, monospace';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(NOTES[i], cx + Math.cos(a)*(r1 + 20), cy + Math.sin(a)*(r1 + 20));
+    }
+    ctx.fillStyle = '#ede6d8';
+    ctx.font = '850 36px Archivo, sans-serif';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(R.key.short, cx, cy - 6);
+    ctx.fillStyle = 'rgba(152,144,127,.9)';
+    ctx.font = '10px ui-monospace, Menlo, monospace';
+    ctx.fillText(R.key.mode.toUpperCase(), cx, cy + 20);
   }
-  var prev = parseFloat(el.dataset.lastVal);
-  var from = isFinite(prev) ? prev : (target - 12);
-  el.dataset.lastVal = target;
-  var dur = 700, t0 = null;
-  el.classList.add('counting');
-  el.style.removeProperty('color');
-  function step(ts){
-    if(!t0) t0 = ts;
-    var p    = Math.min((ts - t0) / dur, 1);
-    var ease = 1 - Math.pow(1 - p, 3);
-    el.textContent = (from + (target - from) * ease).toFixed(1);
-    if(p < 1){
-      requestAnimationFrame(step);
-    } else {
-      el.textContent = target.toFixed(1);
-      el.classList.remove('counting');
-      el.style.removeProperty('-webkit-text-fill-color');
-      el.style.color = color || '';
+  function rad2(deg){ return (deg - 90)*Math.PI/180; }
+  function animateWheel(R){
+    if(reduced){ drawWheel(R, 1); return; }
+    var t0 = null;
+    function fr(ts){
+      if(!t0) t0 = ts;
+      var q = Math.min(1, (ts - t0)/900);
+      drawWheel(R, ease(q));
+      if(q < 1) requestAnimationFrame(fr);
+    }
+    requestAnimationFrame(fr);
+  }
+
+  /* ---------- timeline ---------- */
+  function drawTimeline(R){
+    var cv = $('tlCv'), ctx = cv.getContext('2d');
+    var dpr = Math.min(devicePixelRatio || 1, 2);
+    var r = cv.getBoundingClientRect();
+    var W = Math.max(1, r.width|0), H = Math.max(1, r.height|0);
+    cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,W,H);
+    var mL = 36, mR = 8, mT = 8, mB = 20;
+    var y0 = -30, y1 = -4;
+    function Y(v){ return mT + (y1 - Math.max(y0, Math.min(y1, v)))/(y1 - y0)*(H - mT - mB); }
+    function X(t){ return mL + t/(R.dur || 1)*(W - mL - mR); }
+    ctx.fillStyle = 'rgba(228,166,46,.1)';
+    ctx.fillRect(mL, Y(-14), W - mL - mR, Y(-16) - Y(-14));
+    for(var g = -28; g <= -4; g += 4){
+      ctx.strokeStyle = 'rgba(237,230,216,.07)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(mL, Y(g) + 0.5); ctx.lineTo(W - mR, Y(g) + 0.5); ctx.stroke();
+      ctx.fillStyle = 'rgba(92,86,74,.95)';
+      ctx.font = '9px ui-monospace, Menlo, monospace';
+      ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+      ctx.fillText(g, mL - 6, Y(g));
+    }
+    var step = R.dur > 300 ? 60 : 30;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+    for(var t = 0; t <= R.dur; t += step){
+      ctx.fillStyle = 'rgba(92,86,74,.95)';
+      ctx.fillText(fmt(t), X(t), H - mB + 5);
+    }
+    if(R.tl && R.tl.length > 1){
+      for(var pass = 1; pass >= 0; pass--){
+        ctx.globalCompositeOperation = pass ? 'lighter' : 'source-over';
+        ctx.strokeStyle = 'rgba(228,166,46,' + (pass ? '.18' : '.9') + ')';
+        ctx.lineWidth = pass ? 5 : 1.8;
+        ctx.lineJoin = 'round';
+        ctx.beginPath();
+        var started = false;
+        for(var i = 0; i < R.tl.length; i++){
+          if(!isFinite(R.tl[i]) || R.tl[i] < -60) continue;
+          var px = X(R.tlT[i]), py = Y(R.tl[i]);
+          if(!started){ ctx.moveTo(px, py); started = true; } else { ctx.lineTo(px, py); }
+        }
+        ctx.stroke();
+      }
+      ctx.globalCompositeOperation = 'source-over';
     }
   }
-  requestAnimationFrame(step);
-}
 
-/* ── SCROLL REVEAL ──────────────────────────────────────── */
-(function(){
-  if(!window.IntersectionObserver) return;
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in-view'); obs.unobserve(e.target); }
+  /* ---------- reveals / export / reset / chrome ---------- */
+  function revealAll(){
+    var els = res.querySelectorAll('.rv');
+    if(reduced || !('IntersectionObserver' in window)){
+      [].forEach.call(els, function(el){ el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(en){
+      en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -4% 0px' });
+    [].forEach.call(els, function(el){ el.classList.remove('in'); io.observe(el); });
+  }
+
+  $('exportBtn').addEventListener('click', function(){
+    if(!lastR || !lastFile) return;
+    var R = lastR, L = [];
+    L.push('LOUDNESS & KEY REPORT \u2014 angelopillon.com/loudness-meter');
+    L.push('File: ' + lastFile.name + '  \u00b7  Duration: ' + fmt(R.dur));
+    L.push('Date: ' + new Date().toISOString().slice(0,10));
+    L.push('');
+    L.push('Integrated:      ' + (isFinite(R.I) ? R.I.toFixed(1) + ' LUFS' : 'n/a'));
+    L.push('True Peak (4x):  ' + (isFinite(R.TP) ? R.TP.toFixed(1) + ' dBTP' : 'n/a'));
+    L.push('Sample Peak:     ' + (isFinite(R.SP) ? R.SP.toFixed(1) + ' dBFS' : 'n/a'));
+    L.push('Loudness Range:  ' + (isFinite(R.LRA) ? R.LRA.toFixed(1) + ' LU' : 'n/a'));
+    L.push('Short-term max:  ' + (isFinite(R.STmax) ? R.STmax.toFixed(1) + ' LUFS' : 'n/a'));
+    L.push('Momentary max:   ' + (isFinite(R.Mmax) ? R.Mmax.toFixed(1) + ' LUFS' : 'n/a'));
+    L.push('PLR:             ' + (isFinite(R.PLR) ? R.PLR.toFixed(1) + ' dB' : 'n/a'));
+    L.push('');
+    L.push('Key:             ' + R.key.name + '  (' + R.key.cam + ', relative ' + R.key.rel + ', confidence ' + R.key.conf + ')');
+    L.push('BPM (est.):      ' + (R.bpm ? R.bpm.toFixed(1) : 'n/a'));
+    L.push('');
+    [['Spotify',-14],['Apple Music',-16],['YouTube',-14],['Amazon',-14],['Tidal',-14],['Deezer',-15]].forEach(function(p){
+      var del = R.I - p[1];
+      L.push(p[0] + ' (' + p[1] + '): ' + (del > 0 ? '+' : '') + del.toFixed(1) + ' LU');
     });
-  }, {threshold: 0.1, rootMargin: '0px 0px -30px 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+    L.push('');
+    L.push('Analyzed locally \u2014 mastering by Angelo Pillon, Milan \u00b7 angelopillon.com');
+    var blob = new Blob([L.join('\n')], { type:'text/plain' });
+    var a = d.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'loudness-report.txt';
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 4000);
+  });
+
+  $('againBtn').addEventListener('click', function(){
+    res.classList.remove('on');
+    $('dropT').textContent = 'Drop your track';
+    lastR = null; lastBuf = null;
+    window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+  });
+
+  function store(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+  function recall(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+  var ck = $('ck');
+  function loadAnalytics(){
+    /* CONFIG: incolla qui gli stessi loader GA4 / AdSense della homepage. */
+  }
+  var consent = recall('ap_consent');
+  if(consent === 'yes'){ loadAnalytics(); }
+  else if(consent === null && ck){ setTimeout(function(){ ck.classList.add('show'); }, 900); }
+  $('ckAccept').addEventListener('click', function(){ store('ap_consent','yes'); ck.classList.remove('show'); loadAnalytics(); });
+  $('ckDecline').addEventListener('click', function(){ store('ap_consent','no'); ck.classList.remove('show'); });
+  var yr = $('yr'); if(yr) yr.textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+/* ================= EXTRAS: player, targets, spectrum, stereo, compare ================= */
+(function(){
+  var d = document, reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(id){ return d.getElementById(id); }
+  function fmt(s){ s = Math.max(0, Math.floor(s)); return Math.floor(s/60) + ':' + ('0' + (s % 60)).slice(-2); }
+  var R = null, BUF = null, FILE = null;
+  var mL = 36, mR = 8;
+
+  /* ---------- target selector ---------- */
+  var TGT = -14;
+  [].forEach.call(d.querySelectorAll('.tch'), function(ch){
+    ch.addEventListener('click', function(){
+      [].forEach.call(d.querySelectorAll('.tch'), function(c){ c.classList.toggle('on', c === ch); });
+      TGT = parseInt(ch.getAttribute('data-t'), 10);
+      window.__tband = [TGT - 1, TGT + 1];
+      window.__thot = TGT === -10 ? [-6.5, -6] : [-9, -6];
+      if(R && window.__gaugeDraw){ window.__gaugeDraw(R.I, R.I); verdict(); }
+    });
+  });
+  function verdict(){
+    var v = $('gVerdict'); if(!v || !R) return;
+    v.className = 'g-verdict';
+    if(!isFinite(R.I)){ v.textContent = 'Too quiet to gate'; return; }
+    var del = R.I - TGT;
+    if(Math.abs(del) <= 1){ v.textContent = '\u2713 On target (' + TGT + ' LUFS)'; v.classList.add('ok'); }
+    else if(del > 3){ v.textContent = '+' + del.toFixed(1) + ' LU over ' + TGT + ' target'; v.classList.add('hot'); }
+    else if(del > 1){ v.textContent = '+' + del.toFixed(1) + ' LU over ' + TGT + ' target'; }
+    else { v.textContent = del.toFixed(1) + ' LU below ' + TGT + ' target'; }
+  }
+
+  /* ---------- canvas helper ---------- */
+  function cget(cv){
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var r = cv.getBoundingClientRect();
+    var W = Math.max(1, r.width|0), H = Math.max(1, r.height|0);
+    if(cv.width !== W*dpr){ cv.width = W*dpr; cv.height = H*dpr; }
+    var c = cv.getContext('2d');
+    c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { c:c, W:W, H:H };
+  }
+
+  /* ---------- player with playhead + seek ---------- */
+  var actx = null, srcN = null, playing = false, off = 0, startedAt = 0, praf = null;
+  var playBtn = $('playBtn');
+  function ensureCtx(){
+    if(!actx){
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if(!AC) return null;
+      actx = new AC();
+    }
+    if(actx.state === 'suspended') actx.resume();
+    return actx;
+  }
+  function pos(){ return playing ? Math.min(R.dur, off + (actx.currentTime - startedAt)) : off; }
+  function pStart(t){
+    var ctx = ensureCtx(); if(!ctx || !BUF) return;
+    srcN = ctx.createBufferSource();
+    srcN.buffer = BUF;
+    srcN.connect(ctx.destination);
+    off = Math.max(0, Math.min(R.dur - 0.05, t || 0));
+    srcN.start(0, off);
+    startedAt = ctx.currentTime;
+    playing = true;
+    playBtn.innerHTML = '&#10074;&#10074;&#160;Pause';
+    srcN.onended = function(){ if(playing){ pStop(true); } };
+    loop();
+  }
+  function pStop(reset){
+    playing = false;
+    if(srcN){ srcN.onended = null; try{ srcN.stop(); }catch(e){} srcN = null; }
+    if(reset) off = 0;
+    playBtn.innerHTML = '&#9658;&#160;Play';
+    if(praf){ cancelAnimationFrame(praf); praf = null; }
+    drawOv(off);
+    liveTxt(null);
+  }
+  playBtn.addEventListener('click', function(){
+    if(!R) return;
+    if(playing){ off = pos(); pStop(false); } else { pStart(off); }
+  });
+  function loop(){
+    if(!playing) return;
+    var t = pos();
+    drawOv(t);
+    liveTxt(t);
+    if(t >= R.dur - 0.02){ pStop(true); return; }
+    praf = requestAnimationFrame(loop);
+  }
+  function liveTxt(t){
+    var el = $('tlLive'); if(!el) return;
+    if(t === null){ el.textContent = '3s window \u00b7 1s hop'; return; }
+    var m = (R.mo && R.mo.length) ? R.mo[Math.min(R.mo.length - 1, (t*10)|0)] : NaN;
+    el.textContent = '\u25b6 ' + fmt(t) + ' \u00b7 M ' + (isFinite(m) && m > -70 ? m.toFixed(1) : '\u2014') + ' LUFS';
+  }
+  function drawOv(t){
+    if(!R) return;
+    var w = cget($('waveOv'));
+    w.c.clearRect(0, 0, w.W, w.H);
+    var x = t/R.dur*w.W;
+    w.c.fillStyle = 'rgba(237,230,216,.9)';
+    w.c.fillRect(x - 1, 2, 2, w.H - 4);
+    var g = cget($('tlOv'));
+    g.c.clearRect(0, 0, g.W, g.H);
+    var iw = g.W - mL - mR;
+    var x1 = mL + Math.max(0, R.loudAt - 7.5)/R.dur*iw;
+    var x2 = mL + Math.min(R.dur, R.loudAt + 7.5)/R.dur*iw;
+    g.c.fillStyle = 'rgba(255,78,42,.07)';
+    g.c.fillRect(x1, 8, x2 - x1, g.H - 28);
+    var gx = mL + t/R.dur*iw;
+    g.c.fillStyle = 'rgba(237,230,216,.9)';
+    g.c.fillRect(gx - 1, 8, 2, g.H - 28);
+  }
+  function seekFrom(cv, e, mapped){
+    var r = cv.getBoundingClientRect();
+    var x = e.clientX - r.left;
+    var t = mapped ? (x - mL)/(r.width - mL - mR)*R.dur : x/r.width*R.dur;
+    t = Math.max(0, Math.min(R.dur, t));
+    if(playing){
+      playing = false;
+      if(srcN){ srcN.onended = null; try{ srcN.stop(); }catch(e2){} srcN = null; }
+      pStart(t);
+    } else { off = t; drawOv(t); }
+  }
+  $('waveOv').addEventListener('click', function(e){ if(R) seekFrom($('waveOv'), e, false); });
+  $('tlOv').addEventListener('click', function(e){ if(R) seekFrom($('tlOv'), e, true); });
+
+  /* ---------- spectrum + tonal balance ---------- */
+  var BANDS = [['SUB',20,60],['BASS',60,250],['LO-MID',250,800],['MID',800,2500],['HI-MID',2500,8000],['AIR',8000,20000]];
+  function renderSpec(){
+    var cv = $('specCv'); if(!cv || !R.spec) return;
+    var o = cget(cv), c = o.c, W = o.W, H = o.H;
+    c.clearRect(0, 0, W, H);
+    var N2 = R.spec.length, SR2 = 48000, FN = N2*2;
+    var mx = 0;
+    for(var i = 4; i < N2; i++){ if(R.spec[i] > mx) mx = R.spec[i]; }
+    if(!mx) return;
+    function xOf(f){ return Math.log(f/20)/Math.log(1000)*W; }
+    function smooth(bin){
+      var s = 0, n = 0;
+      for(var k = -2; k <= 2; k++){ var b = bin + k; if(b >= 1 && b < N2){ s += R.spec[b]; n++; } }
+      return s/(n || 1);
+    }
+    c.font = '9px ui-monospace, Menlo, monospace';
+    c.textAlign = 'center';
+    [60,250,800,2500,8000].forEach(function(f){
+      var x = xOf(f);
+      c.strokeStyle = 'rgba(237,230,216,.07)'; c.lineWidth = 1;
+      c.beginPath(); c.moveTo(x, 4); c.lineTo(x, H - 14); c.stroke();
+      c.fillStyle = 'rgba(92,86,74,.9)';
+      c.fillText(f >= 1000 ? (f/1000) + 'k' : String(f), x, H - 4);
+    });
+    for(var pass = 1; pass >= 0; pass--){
+      c.globalCompositeOperation = pass ? 'lighter' : 'source-over';
+      c.strokeStyle = 'rgba(228,166,46,' + (pass ? '.16' : '.9') + ')';
+      c.lineWidth = pass ? 5 : 1.6;
+      c.beginPath();
+      var first = true;
+      for(var px = 0; px <= W; px += 2){
+        var f2 = 20*Math.pow(1000, px/W);
+        var bin = Math.round(f2/SR2*FN);
+        if(bin < 1 || bin >= N2) continue;
+        var db = 20*Math.log10(smooth(bin)/mx + 1e-6);
+        var y = 6 + Math.min(1, Math.max(0, -db/54))*(H - 24);
+        if(first){ c.moveTo(px, y); first = false; } else { c.lineTo(px, y); }
+      }
+      c.stroke();
+    }
+    c.globalCompositeOperation = 'source-over';
+    var tot = 0, be = [];
+    BANDS.forEach(function(b){
+      var e = 0;
+      var b0 = Math.max(1, Math.round(b[1]/SR2*FN)), b1 = Math.min(N2 - 1, Math.round(b[2]/SR2*FN));
+      for(var i2 = b0; i2 <= b1; i2++){ e += R.spec[i2]*R.spec[i2]; }
+      be.push(e); tot += e;
+    });
+    tot = tot || 1;
+    var mxp = Math.max.apply(null, be)/tot;
+    var html = '';
+    for(var bi = 0; bi < BANDS.length; bi++){
+      var p = be[bi]/tot;
+      html += '<div class="bnd"><div class="bar"><i style="height:' + (p/mxp*100).toFixed(0) + '%"></i></div><b>' + BANDS[bi][0] + '</b><span>' + Math.round(p*100) + '%</span></div>';
+    }
+    $('bands').innerHTML = html;
+    var sub = be[0]/tot, low = (be[0] + be[1])/tot, high = (be[4] + be[5])/tot;
+    $('tonal').textContent = sub > 0.34 ? 'Sub-heavy' : low > 0.58 ? 'Bass-forward' : high > 0.4 ? 'Bright' : high < 0.12 ? 'Dark' : 'Balanced';
+  }
+
+  /* ---------- stereo image ---------- */
+  function renderStereo(){
+    $('stCorr').textContent = isFinite(R.corr) ? R.corr.toFixed(2) : '\u2014';
+    $('stWidth').textContent = isFinite(R.widthDb) ? R.widthDb.toFixed(1) + ' dB' : '\u2212\u221e';
+    $('stVerd').textContent = R.dualMono ? 'Dual mono' :
+      R.corr < 0 ? 'Phase issues' :
+      R.corr < 0.3 ? 'Check in mono' :
+      (isFinite(R.widthDb) && R.widthDb > -6) ? 'Very wide' : 'Healthy';
+    var o = cget($('corrCv')), c = o.c, W = o.W, H = o.H;
+    c.clearRect(0, 0, W, H);
+    var y = H*0.55, x0 = 16, x1 = W - 16;
+    function X(v){ return x0 + (v + 1)/2*(x1 - x0); }
+    c.lineWidth = 4;
+    c.strokeStyle = 'rgba(255,78,42,.4)';
+    c.beginPath(); c.moveTo(X(-1), y); c.lineTo(X(0), y); c.stroke();
+    c.strokeStyle = 'rgba(228,166,46,.5)';
+    c.beginPath(); c.moveTo(X(0), y); c.lineTo(X(1), y); c.stroke();
+    c.font = '9px ui-monospace, Menlo, monospace';
+    c.textAlign = 'center';
+    [-1, 0, 1].forEach(function(t){
+      c.strokeStyle = 'rgba(237,230,216,.2)'; c.lineWidth = 1;
+      c.beginPath(); c.moveTo(X(t), y - 8); c.lineTo(X(t), y + 8); c.stroke();
+      c.fillStyle = 'rgba(92,86,74,.95)';
+      c.fillText((t > 0 ? '+' : '') + t, X(t), y + 24);
+    });
+    if(isFinite(R.corr)){
+      var cx = X(Math.max(-1, Math.min(1, R.corr)));
+      c.globalCompositeOperation = 'lighter';
+      c.fillStyle = 'rgba(228,166,46,.3)';
+      c.beginPath(); c.arc(cx, y, 11, 0, 6.2832); c.fill();
+      c.globalCompositeOperation = 'source-over';
+      c.fillStyle = '#ede6d8';
+      c.beginPath(); c.moveTo(cx, y - 13); c.lineTo(cx - 6, y - 25); c.lineTo(cx + 6, y - 25); c.closePath(); c.fill();
+      c.fillStyle = '#e4a62e';
+      c.beginPath(); c.arc(cx, y, 4, 0, 6.2832); c.fill();
+    }
+  }
+
+  /* ---------- health ---------- */
+  function renderHealth(){
+    var hc = $('hClip');
+    hc.textContent = R.clipEv > 0 ? String(R.clipEv) : 'None';
+    hc.style.color = R.clipEv > 0 ? 'var(--peak)' : '';
+    $('hFloor').textContent = isFinite(R.floor) ? R.floor.toFixed(0) : '\u2014';
+    $('hDC').textContent = R.dc > 1e-4 ? (20*Math.log10(R.dc)).toFixed(0) + ' dB' : 'None';
+    $('hLoud').textContent = fmt(R.loudAt);
+  }
+
+  /* ---------- Camelot neighbours ---------- */
+  function mixes(cam){
+    var n = parseInt(cam, 10), s = cam.slice(-1);
+    var p = n === 1 ? 12 : n - 1, q = n === 12 ? 1 : n + 1;
+    return p + s + ' \u00b7 ' + q + s + ' \u00b7 ' + n + (s === 'A' ? 'B' : 'A');
+  }
+
+  /* ---------- compare vs reference ---------- */
+  var input2 = d.createElement('input');
+  input2.type = 'file'; input2.accept = 'audio/*'; input2.style.display = 'none';
+  d.body.appendChild(input2);
+  $('cmpBtn').addEventListener('click', function(){ if(R && !window.__busy) input2.click(); });
+  input2.addEventListener('change', function(){
+    var f = input2.files[0]; input2.value = '';
+    if(!f || window.__busy) return;
+    window.__busy = true;
+    var prog = $('prog');
+    prog.classList.add('on');
+    function op(t, p){
+      $('progTxt').textContent = 'Reference: ' + t;
+      $('progPct').textContent = Math.round(p*100) + '%';
+      $('progFill').style.width = (p*100).toFixed(1) + '%';
+    }
+    DSP.decode(f, op).then(function(b){ return DSP.analyze(b, op); }).then(function(R2){
+      prog.classList.remove('on');
+      window.__busy = false;
+      showCmp(R2, f);
+    }).catch(function(){
+      op('Could not decode reference', 0);
+      window.__busy = false;
+      setTimeout(function(){ prog.classList.remove('on'); }, 2600);
+    });
+  });
+  function showCmp(R2, f){
+    $('cmpName').textContent = f.name.length > 26 ? f.name.slice(0, 25) + '\u2026' : f.name;
+    function row(name, a, b, unit, invert){
+      var da = (isFinite(a) && isFinite(b)) ? a - b : NaN;
+      var cls = '';
+      if(isFinite(da)){
+        if(Math.abs(da) <= 1){ cls = 'ok'; }
+        else if(invert ? da < -1 : da > 1){ cls = 'hot'; }
+      }
+      return '<div class="c-row"><span class="p-name">' + name + '</span>'
+        + '<span class="cv">' + (isFinite(a) ? a.toFixed(1) : '\u2014') + ' ' + unit + '</span>'
+        + '<span class="cv" style="color:var(--muted)">' + (isFinite(b) ? b.toFixed(1) : '\u2014') + ' ' + unit + '</span>'
+        + '<span class="cd ' + cls + '">' + (isFinite(da) ? (da > 0 ? '+' : '') + da.toFixed(1) : '\u2014') + '</span></div>';
+    }
+    var h = '<div class="c-row" style="border-bottom:1px solid var(--line)"><span class="mono">Metric</span><span class="mono">Yours</span><span class="mono">Reference</span><span class="mono" style="text-align:right">\u0394</span></div>';
+    h += row('Integrated', R.I, R2.I, 'LUFS');
+    h += row('True Peak', R.TP, R2.TP, 'dBTP', true);
+    h += row('LRA', R.LRA, R2.LRA, 'LU');
+    h += row('Short-term max', R.STmax, R2.STmax, 'LUFS');
+    h += row('PLR', R.PLR, R2.PLR, 'dB');
+    h += '<div class="c-row"><span class="p-name">Key</span><span class="cv">' + R.key.short + ' (' + R.key.cam + ')</span>'
+      + '<span class="cv" style="color:var(--muted)">' + R2.key.short + ' (' + R2.key.cam + ')</span>'
+      + '<span class="cd ' + (R.key.cam === R2.key.cam ? 'ok' : '') + '">' + (R.key.cam === R2.key.cam ? 'Match' : '\u2260') + '</span></div>';
+    h += '<div class="c-row"><span class="p-name">BPM</span><span class="cv">' + (R.bpm ? R.bpm.toFixed(1) : '\u2014') + '</span>'
+      + '<span class="cv" style="color:var(--muted)">' + (R2.bpm ? R2.bpm.toFixed(1) : '\u2014') + '</span><span class="cd"></span></div>';
+    $('cmpRows').innerHTML = h;
+    var card = $('cmpCard');
+    card.style.display = '';
+    card.classList.add('in');
+    card.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
+  }
+
+  /* ---------- copy summary ---------- */
+  $('copyBtn').addEventListener('click', function(){
+    if(!R || !FILE) return;
+    var t = FILE.name + ' \u2014 ' + (isFinite(R.I) ? R.I.toFixed(1) : '\u2212\u221e') + ' LUFS \u00b7 TP '
+      + R.TP.toFixed(1) + ' dBTP \u00b7 LRA ' + (isFinite(R.LRA) ? R.LRA.toFixed(1) : '\u2014') + ' LU \u00b7 '
+      + R.key.name + ' (' + R.key.cam + ')' + (R.bpm ? ' \u00b7 ' + R.bpm.toFixed(1) + ' BPM' : '')
+      + ' \u2014 angelopillon.com/loudness-meter';
+    function done(){
+      var b = $('copyBtn');
+      b.textContent = 'Copied \u2713';
+      setTimeout(function(){ b.textContent = 'Copy'; }, 1600);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(done, done);
+    } else { done(); }
+  });
+
+  /* ---------- whole-page drop ---------- */
+  window.addEventListener('drop', function(e){
+    var f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+    if(f && !window.__busy && window.__run) window.__run(f);
+  });
+
+  /* ---------- embers-lite ---------- */
+  (function(){
+    if(reduced) return;
+    var cv = d.createElement('canvas');
+    cv.id = 'embers2';
+    d.body.appendChild(cv);
+    var c = cv.getContext('2d'), W = 0, H = 0, raf = null;
+    var E = [];
+    for(var i = 0; i < 22; i++){
+      E.push({ x:Math.random(), y:Math.random(), vy:0.008 + Math.random()*0.016, s:0.8 + Math.random()*1.3, ph:Math.random()*6.28 });
+    }
+    function rs(){ W = innerWidth; H = innerHeight; cv.width = W; cv.height = H; }
+    rs();
+    window.addEventListener('resize', function(){ clearTimeout(cv._t); cv._t = setTimeout(rs, 200); }, { passive:true });
+    var lt = performance.now();
+    function fr(t){
+      var dt = Math.min((t - lt)/1000, 0.05); lt = t;
+      c.clearRect(0, 0, W, H);
+      for(var i2 = 0; i2 < E.length; i2++){
+        var e = E[i2];
+        e.y -= e.vy*dt;
+        if(e.y < -0.02){ e.y = 1.02; e.x = Math.random(); }
+        var a = 0.05 + 0.11*(0.5 + 0.5*Math.sin(t*0.001 + e.ph));
+        c.fillStyle = 'rgba(228,166,46,' + a.toFixed(3) + ')';
+        c.fillRect(e.x*W, e.y*H, e.s, e.s);
+      }
+      raf = d.hidden ? null : requestAnimationFrame(fr);
+    }
+    raf = requestAnimationFrame(fr);
+    d.addEventListener('visibilitychange', function(){
+      if(!d.hidden && !raf){ lt = performance.now(); raf = requestAnimationFrame(fr); }
+    });
+  })();
+
+  /* ---------- loudness-tinted waveform ---------- */
+  function stAt(t){
+    if(!R.tl || !R.tl.length) return NaN;
+    var i = Math.max(0, Math.min(R.tl.length - 1, Math.round(t - 1.5)));
+    return R.tl[i];
+  }
+  function tintWave(){
+    var cv = $('waveCv'); if(!cv || !BUF) return;
+    var o = cget(cv), c = o.c, W = o.W, H = o.H;
+    var pk = DSP.makePeaks(BUF, Math.max(60, (W/2)|0));
+    var cw = W/pk.length;
+    c.clearRect(0, 0, W, H);
+    for(var i = 0; i < pk.length; i++){
+      var t = i/pk.length*R.dur;
+      var st = stAt(t);
+      var q = isFinite(st) ? Math.max(0, Math.min(1, (st + 26)/18)) : 0.4;
+      var h = Math.max(1.5, pk[i]*H*0.9);
+      var r2 = Math.round(152 + (228 - 152)*q);
+      var g2 = Math.round(144 + (166 - 144)*q);
+      var b2 = Math.round(127 + (46 - 127)*q);
+      c.fillStyle = 'rgba(' + r2 + ',' + g2 + ',' + b2 + ',' + (0.3 + q*0.55).toFixed(2) + ')';
+      c.fillRect(i*cw + 0.5, (H - h)/2, Math.max(1, cw - 1.2), h);
+    }
+  }
+
+  /* ---------- hook ---------- */
+  window.__afterRender = function(R1, buf, file){
+    R = R1; BUF = buf; FILE = file;
+    if(playing) pStop(true);
+    off = 0;
+    playBtn.disabled = false;
+    $('kMix').textContent = mixes(R.key.cam);
+    verdict();
+    renderSpec();
+    renderStereo();
+    renderHealth();
+    tintWave();
+    drawOv(0);
+    var card = $('cmpCard');
+    card.style.display = 'none';
+    card.classList.remove('in');
+  };
 })();
 </script>
 </body>
