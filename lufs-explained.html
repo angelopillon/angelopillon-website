@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Apple Digital Masters: What It Actually Means for Your Music | Angelo Pillon</title>
-<meta name="description" content="Apple Digital Masters is not a plugin or a loudness preset — it is a certified delivery workflow. What the badge really guarantees, how it changes your master, and when it matters.">
-<link rel="canonical" href="https://angelopillon.com/apple-digital-masters-explained/">
+<title>LUFS Explained: The Only Loudness Guide Producers Need | Angelo Pillon</title>
+<meta name="description" content="Integrated, short-term, momentary, LRA, true peak: what each number actually measures, what streaming platforms do with them, and the targets that matter in 2026.">
+<link rel="canonical" href="https://angelopillon.com/lufs-explained/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Apple Digital Masters: What It Actually Means for Your Music">
-<meta property="og:description" content="Apple Digital Masters is not a plugin or a loudness preset — it is a certified delivery workflow. What the badge really guarantees, how it changes your master, and when it matters.">
-<meta property="og:url" content="https://angelopillon.com/apple-digital-masters-explained/">
+<meta property="og:title" content="LUFS Explained: The Only Loudness Guide Producers Need">
+<meta property="og:description" content="Integrated, short-term, momentary, LRA, true peak: what each number actually measures, what streaming platforms do with them, and the targets that matter in 2026.">
+<meta property="og:url" content="https://angelopillon.com/lufs-explained/">
 <meta name="theme-color" content="#0b0a08">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +19,12 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Apple Digital Masters: What It Actually Means for Your Music",
-  "description": "Apple Digital Masters is not a plugin or a loudness preset — it is a certified delivery workflow. What the badge really guarantees, how it changes your master, and when it matters.",
-  "datePublished": "2026-03-22",
+  "headline": "LUFS Explained: The Only Loudness Guide Producers Need",
+  "description": "Integrated, short-term, momentary, LRA, true peak: what each number actually measures, what streaming platforms do with them, and the targets that matter in 2026.",
+  "datePublished": "2026-07-02",
   "author": { "@type": "Person", "name": "Angelo Pillon", "url": "https://angelopillon.com" },
   "publisher": { "@type": "Person", "name": "Angelo Pillon" },
-  "mainEntityOfPage": "https://angelopillon.com/apple-digital-masters-explained/"
+  "mainEntityOfPage": "https://angelopillon.com/lufs-explained/"
 }
 </script>
 <style>
@@ -163,30 +163,32 @@ h1 .serif-i{ font-size:1.04em; }
 <article>
   <div class="a-hero wrap">
     <div class="a-meta">
-      <span class="a-cat">Mastering</span>
-      <span class="mono">Mar 22, 2026 &middot; 5 min read &middot; Angelo Pillon</span>
+      <span class="a-cat">Loudness</span>
+      <span class="mono">Jul 2, 2026 &middot; 8 min read &middot; Angelo Pillon</span>
     </div>
-    <h1>Apple Digital Masters: <em class="serif-i">what it actually means</em> for your music</h1>
-    <p class="a-desc">Apple Digital Masters is not a plugin or a loudness preset — it is a certified delivery workflow. What the badge really guarantees, how it changes your master, and when it matters.</p>
+    <h1>LUFS explained: <em class="serif-i">the only loudness guide</em> producers need</h1>
+    <p class="a-desc">Integrated, short-term, momentary, LRA, true peak: what each number actually measures, what streaming platforms do with them, and the targets that matter in 2026.</p>
     <div class="ruler" aria-hidden="true"></div>
   </div>
   <div class="prose wrap">
 <div class="tldr"><span class="mono">TL;DR</span><ul>
-<li>ADM is a certified workflow: hi-res 24-bit source, validated encoding, true peaks that never clip the AAC encoder.</li>
-<li>Your listeners hear a cleaner, more open version of the same master — especially the top end.</li>
-<li>Only certified engineers and providers can deliver it. The badge is about the pipeline, not a sound preset.</li>
+<li>LUFS measures perceived loudness with frequency weighting and gating — not signal level.</li>
+<li>Integrated = the whole track, short-term = 3s window, momentary = 400ms. LRA = dynamics range.</li>
+<li>Streaming platforms turn loud masters <strong>down</strong> to ~-14 LUFS. They never turn quiet ones meaningfully up.</li>
 </ul></div>
-<p>Artists ask me about the Apple Digital Masters badge more than almost anything else, usually with some mix of curiosity and suspicion. Is it marketing? Is it a mastering style? Neither. It's something more boring and more valuable: <strong>a quality-controlled delivery pipeline</strong>, and understanding it will change how you think about your final master.</p>
-<h2>The problem it solves</h2>
-<p>When your WAV gets encoded to AAC for streaming, the encoding process can create <strong>inter-sample peaks</strong>: moments where the reconstructed analog waveform swings above 0 dBFS even though no single digital sample does. On a hot master, those overshoots clip the encoder, and the distortion lands exactly where your music is most exciting — the loudest, densest moments. It's subtle on one listen and corrosive over a whole record: a papery harshness in the top end that nobody can name but everybody feels.</p>
-<h2>What the certified workflow requires</h2>
-<p>Delivering as an Apple Digital Master means the engineer works from a <strong>24-bit high-resolution source</strong>, encodes with Apple's own validated tools, and — this is the operational core — <strong>controls true peak so the AAC encode never clips</strong>. In practice I master with oversampled true-peak limiting and verify the actual encoded output, not just the WAV. The result on Apple Music is the closest thing to hearing what I heard in the studio: the air stays air, transients keep their snap, dense choruses stay open.</p>
-<blockquote class="pull">ADM doesn't make your master sound different. It makes sure your listeners hear the master you paid for.</blockquote>
-<h2>Does it matter if you're a techno producer? A rapper?</h2>
-<p>Yes, and arguably more. Loud, dense genres — EDM, techno, hip hop, modern pop — are exactly where encoder clipping bites hardest, because they live near full scale with sustained energy. And since the same true-peak-safe master also encodes better everywhere else (Spotify's Ogg, YouTube's Opus), the discipline pays across every platform, not just Apple's. You can check your current release yourself: drop it into my <a href="https://angelopillon.com/loudness-meter">free LUFS meter</a> and look at the True Peak reading — anything above -1 dBTP is gambling with the encoder.</p>
-<h2>The honest limits</h2>
-<p>The badge won't fix a weak mix, won't boost your algorithm, and won't make a 6-LUFS sausage sound dynamic. It's the last mile done right, by someone certified to do it. If the music is there, ADM makes sure nothing is lost between my studio and your listener's ears.</p>
-<div class="callout"><p><strong>Every master I deliver is Apple Digital Masters compliant</strong> — hi-res source, validated encode, true-peak safe. From EUR 60.</p><a class="cta" href="https://angelopillon.com/#contact">Get certified quality</a></div>
+<p>LUFS is the most misunderstood number in modern music production, and the confusion costs real money: crushed masters, weak drops, endless revision loops. Let me give you the working understanding that actually matters, without the broadcast-standard homework.</p>
+<h2>What LUFS actually measures</h2>
+<p>Peak meters read electrical maxima. RMS reads average power. Neither reads what your ear experiences. <strong>LUFS (Loudness Units relative to Full Scale)</strong> applies a frequency weighting that mirrors human hearing — we're more sensitive to upper mids than to sub — measures energy in overlapping 400 ms blocks, and <strong>gates out silence</strong> so intros and breakdowns don't drag the number down. One LU equals one dB of change, but the measurement itself is perceptual. That's why every major platform standardized on it.</p>
+<h2>The four numbers on your meter</h2>
+<p><strong>Integrated</strong> is the loudness of the entire track, gated — the number platforms use to normalize you. <strong>Short-term</strong> (3-second window) shows how loud each section feels; the short-term of your drop matters more to the listener than the integrated of the whole track. <strong>Momentary</strong> (400 ms) catches instant peaks of density. <strong>LRA</strong> (Loudness Range) describes the spread between your quiet and loud sections: electronic music typically lives at 4–8 LU, a dynamic film score might be 15+.</p>
+<blockquote class="pull">Platforms normalize on integrated. Listeners feel short-term. Great masters manage both.</blockquote>
+<h2>What platforms actually do</h2>
+<p>Spotify, YouTube, Amazon and Tidal normalize around <strong>-14 LUFS</strong>; Apple Music around <strong>-16</strong>; Deezer -15. Crucial detail: they <strong>turn louder tracks down</strong> to the target, but (with minor exceptions) do not boost quiet tracks up past their peak ceiling. So a -8 LUFS master plays at -14 on Spotify — same volume as a -14 master, but with all the density and, if done badly, all the distortion of the loudness war baked in. This is why "should I master to -14?" is the wrong question, and I wrote <a href="https://angelopillon.com/how-loud-should-your-master-be">a whole article on the right one</a>.</p>
+<h2>True peak: the other number that bites</h2>
+<p>LUFS says how loud; <strong>true peak (dBTP)</strong> says whether your waveform overshoots full scale between samples. Keep it at or below <strong>-1 dBTP</strong> and lossy encoders (AAC, Ogg) stay clean; ride it at 0 and you're donating distortion to every stream. The two numbers together — integrated LUFS and dBTP — are 90% of your delivery QC.</p>
+<h2>Measure it yourself, free</h2>
+<p>I built a <a href="https://angelopillon.com/loudness-meter">browser-based LUFS meter</a> that runs the full ITU-R BS.1770-4 measurement — gated integrated, short-term timeline, oversampled true peak, LRA — plus key detection and BPM, entirely on your device. Drop your master in before you send it anywhere. Sixty seconds of checking beats a re-delivery every time.</p>
+<div class="callout"><p><strong>Numbers off target?</strong> That's literally my job. Mastering from EUR 60, streaming-perfect on every platform.</p><a class="cta" href="https://angelopillon.com/#contact">Fix my loudness</a></div>
     <div class="author">
       <span class="mono">About the engineer</span>
       <p><b>Angelo Pillon</b> is a mixing &amp; mastering engineer based in Milan, Italy. 15+ years behind the console, a hybrid analog/digital workflow, Apple Digital Masters certification and 700+ five-star reviews from artists, producers, labels and studios in 66+ countries.</p>
@@ -197,9 +199,9 @@ h1 .serif-i{ font-size:1.04em; }
     </div>
     <div class="rel">
       <h3>Keep reading</h3>
-      <a href="https://angelopillon.com/hybrid-vs-itb-mastering"><span class="cat">Mastering</span><b>Hybrid vs Full ITB: What Actually Matters for Your Master</b><span class="arr">&rarr;</span></a>
-      <a href="https://angelopillon.com/lufs-explained"><span class="cat">Loudness</span><b>LUFS Explained: The Only Loudness Guide Producers Need</b><span class="arr">&rarr;</span></a>
+      <a href="https://angelopillon.com/how-loud-should-your-master-be"><span class="cat">Loudness</span><b>How Loud Should Your Master Be in 2026? Streaming vs Club</b><span class="arr">&rarr;</span></a>
       <a href="https://angelopillon.com/beatport-vs-spotify-mastering"><span class="cat">Mastering</span><b>Mastering for Beatport vs Spotify: One Track, Two Masters?</b><span class="arr">&rarr;</span></a>
+      <a href="https://angelopillon.com/apple-digital-masters-explained"><span class="cat">Mastering</span><b>Apple Digital Masters: What It Actually Means for Your Music</b><span class="arr">&rarr;</span></a>
     </div>
   </div>
 </article>
