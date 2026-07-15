@@ -56,6 +56,12 @@ footer{background:var(--ink);padding:32px var(--px);text-align:center;}
 
 @media(max-width:700px){:root{--px:24px;}.page-wrap{padding-top:40px;}}
 </style>
+<meta property="og:image" content="https://angelopillon.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Angelo Pillon — Mixing &amp; Mastering Engineer, Milan, Italy">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/og-image.png">
 </head>
 <body>
 
@@ -159,5 +165,22 @@ footer{background:var(--ink);padding:32px var(--px);text-align:center;}
   <div class="f-copy">&copy; 2026 Angelo Pillon &middot; Milan, Italy &middot; <a href="index.html" style="color:rgba(255,255,255,.4);">Home</a></div>
 </footer>
 
+<script>
+/* GA4 — parte solo se il consenso è già stato dato su un'altra pagina del sito */
+(function(){
+  var c = null;
+  try{ c = localStorage.getItem('ap_consent'); }catch(e){}
+  if(c !== 'yes') return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+  gtag('consent', 'default', { ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied' });
+  gtag('consent', 'update',  { ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted' });
+  gtag('js', new Date());
+  gtag('config', 'G-Y0FEM4JQLD');
+  var s = document.createElement('script');
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Y0FEM4JQLD';
+  s.async = true; document.head.appendChild(s);
+})();
+</script>
 </body>
 </html>

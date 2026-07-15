@@ -8,8 +8,14 @@
 <link rel="canonical" href="https://angelopillon.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Angelo Pillon — Mixing & Mastering Engineer">
-<meta property="og:description" content="Your music, perfected. Hybrid mixing and mastering from Milan, Italy. Apple Digital Masters certified. 700+ five-star reviews.">
+<meta property="og:description" content="Your music, perfected. Hybrid mixing and mastering from Milan, Italy. Apple Digital Masters certified. Rated 4.9/5 across 700+ reviews.">
 <meta property="og:url" content="https://angelopillon.com/">
+<meta property="og:image" content="https://angelopillon.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Angelo Pillon — Mixing &amp; Mastering Engineer, Milan, Italy">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/og-image.png">
 <meta name="theme-color" content="#0b0a08">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +25,15 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": "https://angelopillon.com/#service",
   "name": "Angelo Pillon — Mixing & Mastering",
-  "description": "Professional mixing and mastering engineer. Hybrid analog/digital workflow. Apple Digital Masters certified.",
-  "url": "https://angelopillon.com",
+  "description": "Professional mixing and mastering engineer based in Milan, Italy. Hybrid analog/digital workflow. Apple Digital Masters certified.",
+  "url": "https://angelopillon.com/",
+  "image": "https://angelopillon.com/og-image.png",
   "address": { "@type": "PostalAddress", "addressLocality": "Milan", "addressCountry": "IT" },
-  "founder": { "@type": "Person", "name": "Angelo Pillon", "jobTitle": "Mixing & Mastering Engineer" },
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "700" },
+  "areaServed": "Worldwide",
+  "knowsLanguage": ["en", "it", "de", "es"],
+  "founder": { "@type": "Person", "@id": "https://angelopillon.com/#angelo", "name": "Angelo Pillon", "jobTitle": "Mixing & Mastering Engineer", "url": "https://angelopillon.com/" },
   "sameAs": ["https://www.fiverr.com/angelopillon", "https://soundbetter.com/profiles/618271-angelo-pillon"]
 }
 </script>
@@ -420,9 +429,10 @@ h1,h2,h3{ font-weight:800; line-height:1.02; letter-spacing:-.01em; }
   .mnav{
     position:fixed; inset:64px 0 auto 0; z-index:59; background:var(--ink-2);
     border-bottom:1px solid var(--line); padding:18px var(--pad) 26px;
-    display:grid; gap:4px; transform:translateY(-110%); transition:transform .35s cubic-bezier(.22,1,.36,1);
+    display:grid; gap:4px; transform:translateY(calc(-100% - 66px)); visibility:hidden;
+    transition:transform .35s cubic-bezier(.22,1,.36,1), visibility 0s .35s;
   }
-  .menu-open .mnav{ transform:none; }
+  .menu-open .mnav{ transform:none; visibility:visible; transition:transform .35s cubic-bezier(.22,1,.36,1), visibility 0s; }
   .mnav a{ padding:12px 0; font-size:1rem; font-weight:650; text-transform:uppercase; letter-spacing:.04em; border-bottom:1px solid var(--line-soft); }
   .mnav .lang{ display:flex; margin-top:16px; justify-self:start; }
   .diff,.rev-track{ grid-template-columns:1fr; }
@@ -920,7 +930,10 @@ h1,h2,h3{ font-weight:800; line-height:1.02; letter-spacing:-.01em; }
 </section>
 
 <!-- ================= A/B: raw vs master ================= -->
-<section class="sec" id="ab" style="padding-top:0">
+<!-- TEMP: sezione A/B nascosta finché non ci sono i file audio
+     (ab-edm-raw.mp3 / ab-edm-master.mp3 / ab-pop-raw.mp3 / ab-pop-master.mp3 nella root).
+     Per riattivarla: rimuovi display:none qui sotto. -->
+<section class="sec" id="ab" style="padding-top:0; display:none">
   <span class="wm" aria-hidden="true">HEAR</span>
   <div class="wrap">
     <div class="sec-head rv">
@@ -967,12 +980,12 @@ h1,h2,h3{ font-weight:800; line-height:1.02; letter-spacing:-.01em; }
   <div class="wrap">
     <div class="sec-head rv">
       <span class="mono" data-i18n="rev.eyebrow">Reviews</span>
-      <span class="mono">Fiverr Pro · SoundBetter</span>
+      <span class="mono">Fiverr · SoundBetter</span>
     </div>
     <div class="ruler rv" aria-hidden="true"></div>
     <div class="rev-head rv">
-      <h2 class="h2"><span data-i18n="rev.h1a">700+ artists.</span> <em class="serif-i" data-i18n="rev.h1b">All five stars.</em></h2>
-      <div><span class="stars" aria-hidden="true">★★★★★</span> <span class="mono">5.0 / 5.0</span></div>
+      <h2 class="h2"><span data-i18n="rev.h1a">700+ artists.</span> <em class="serif-i" data-i18n="rev.h1b">Rated 4.9 out of 5.</em></h2>
+      <div><span class="stars" aria-hidden="true">★★★★★</span> <span class="mono">4.9 / 5.0</span></div>
     </div>
     <div class="wmap rv">
       <canvas id="worldMap" aria-hidden="true"></canvas>
@@ -1064,7 +1077,7 @@ h1,h2,h3{ font-weight:800; line-height:1.02; letter-spacing:-.01em; }
         <p data-i18n="cnt.lead">Tell me about your project. I respond within a few hours, every day.</p>
         <p class="mono slots" id="slotsRow"><i class="sdot ok"></i><span id="slotTxt">Only 2 slots left this week</span></p>
         <div class="alt-links">
-          <a class="cta ghost" href="https://www.fiverr.com/angelopillon" target="_blank" rel="noopener">Fiverr Pro ↗</a>
+          <a class="cta ghost" href="https://www.fiverr.com/angelopillon" target="_blank" rel="noopener">Fiverr ↗</a>
           <a class="cta ghost" href="https://soundbetter.com/profiles/618271-angelo-pillon" target="_blank" rel="noopener">SoundBetter ↗</a>
         </div>
         <div class="quote rv" id="quote">
@@ -1126,7 +1139,7 @@ h1,h2,h3{ font-weight:800; line-height:1.02; letter-spacing:-.01em; }
         <h4 data-i18n="ft.contact">Contact</h4>
         <ul>
           <li><a href="#contact" data-i18n="ft.msg">Send a message</a></li>
-          <li><a href="https://www.fiverr.com/angelopillon" target="_blank" rel="noopener">Fiverr Pro</a></li>
+          <li><a href="https://www.fiverr.com/angelopillon" target="_blank" rel="noopener">Fiverr</a></li>
           <li><a href="https://soundbetter.com/profiles/618271-angelo-pillon" target="_blank" rel="noopener">SoundBetter</a></li>
         </ul>
       </div>
@@ -1184,7 +1197,7 @@ en:{
 "prc.2t":"Brief &amp; references","prc.2d":"Tell me your vision. Reference tracks, genre context, target platforms. The more I know, the better the result.",
 "prc.3t":"Engineering","prc.3d":"Mixing, processing, mastering. Hybrid chain, musical decisions. Every track treated as its own world.",
 "prc.4t":"Preview &amp; revisions","prc.4d":"You receive a preview. Feedback, revisions if needed — final files in every format when you're fully satisfied.",
-"rev.eyebrow":"Reviews","rev.h1a":"700+ artists.","rev.h1b":"All five stars.","rev.repeat":"Repeat client",
+"rev.eyebrow":"Reviews","rev.h1a":"700+ artists.","rev.h1b":"Rated 4.9 out of 5.","rev.repeat":"Repeat client",
 "tls.eyebrow":"Free tool","tls.side":"Runs entirely in your browser","tls.h1a":"Online",
 "tls.lead":"Measure Integrated LUFS, True Peak and Loudness Range instantly. Compare your track against Spotify, Apple Music, YouTube and every major platform. Free, no install, nothing leaves your browser.",
 "tls.cta":"Open the LUFS Meter","tls.card":"Live analysis",
@@ -1225,7 +1238,7 @@ it:{
 "prc.2t":"Brief e reference","prc.2d":"Raccontami la tua visione. Tracce di riferimento, contesto di genere, piattaforme di destinazione. Più so, migliore è il risultato.",
 "prc.3t":"Engineering","prc.3d":"Mixing, processing, mastering. Catena ibrida, decisioni musicali. Ogni traccia trattata come un mondo a sé.",
 "prc.4t":"Preview e revisioni","prc.4d":"Ricevi una preview. Feedback, revisioni se servono, file finali in ogni formato quando sei pienamente soddisfatto.",
-"rev.eyebrow":"Recensioni","rev.h1a":"700+ artisti.","rev.h1b":"Tutti a cinque stelle.","rev.repeat":"Cliente abituale",
+"rev.eyebrow":"Recensioni","rev.h1a":"700+ artisti.","rev.h1b":"Valutazione 4.9 su 5.","rev.repeat":"Cliente abituale",
 "tls.eyebrow":"Tool gratuito","tls.side":"Gira interamente nel tuo browser","tls.h1a":"Il tuo",
 "tls.lead":"Misura Integrated LUFS, True Peak e Loudness Range all'istante. Confronta la tua traccia con i target di Spotify, Apple Music, YouTube e tutte le piattaforme principali. Gratis, senza installare nulla: niente esce dal tuo browser.",
 "tls.cta":"Apri il LUFS Meter","tls.card":"Analisi live",
@@ -1266,7 +1279,7 @@ de:{
 "prc.2t":"Brief &amp; Referenzen","prc.2d":"Erzähl mir deine Vision. Referenztracks, Genre-Kontext, Zielplattformen. Je mehr ich weiß, desto besser das Ergebnis.",
 "prc.3t":"Engineering","prc.3d":"Mixing, Processing, Mastering. Hybride Kette, musikalische Entscheidungen. Jeder Track wird als eigene Welt behandelt.",
 "prc.4t":"Preview &amp; Revisionen","prc.4d":"Du bekommst eine Preview. Feedback, Revisionen falls nötig, finale Files in jedem Format, sobald du voll zufrieden bist.",
-"rev.eyebrow":"Bewertungen","rev.h1a":"700+ Artists.","rev.h1b":"Alle fünf Sterne.","rev.repeat":"Stammkunde",
+"rev.eyebrow":"Bewertungen","rev.h1a":"700+ Artists.","rev.h1b":"Bewertung 4,9 von 5.","rev.repeat":"Stammkunde",
 "tls.eyebrow":"Kostenloses Tool","tls.side":"Läuft komplett in deinem Browser","tls.h1a":"Online",
 "tls.lead":"Miss Integrated LUFS, True Peak und Loudness Range sofort. Vergleiche deinen Track mit Spotify, Apple Music, YouTube und allen großen Plattformen. Kostenlos, ohne Installation: nichts verlässt deinen Browser.",
 "tls.cta":"LUFS Meter öffnen","tls.card":"Live-Analyse",
@@ -1307,7 +1320,7 @@ es:{
 "prc.2t":"Brief y referencias","prc.2d":"Cuéntame tu visión. Tracks de referencia, contexto de género, plataformas de destino. Cuanto más sé, mejor el resultado.",
 "prc.3t":"Ingeniería","prc.3d":"Mezcla, procesamiento, mastering. Cadena híbrida, decisiones musicales. Cada track tratado como un mundo propio.",
 "prc.4t":"Preview y revisiones","prc.4d":"Recibes una preview. Feedback, revisiones si hacen falta, archivos finales en todos los formatos cuando estés totalmente satisfecho.",
-"rev.eyebrow":"Reseñas","rev.h1a":"700+ artistas.","rev.h1b":"Todos cinco estrellas.","rev.repeat":"Cliente habitual",
+"rev.eyebrow":"Reseñas","rev.h1a":"700+ artistas.","rev.h1b":"Valoración 4.9 sobre 5.","rev.repeat":"Cliente habitual",
 "tls.eyebrow":"Herramienta gratis","tls.side":"Funciona por completo en tu navegador","tls.h1a":"Tu",
 "tls.lead":"Mide Integrated LUFS, True Peak y Loudness Range al instante. Compara tu track con Spotify, Apple Music, YouTube y todas las plataformas principales. Gratis, sin instalar nada: nada sale de tu navegador.",
 "tls.cta":"Abrir el LUFS Meter","tls.card":"Análisis en vivo",
@@ -1547,15 +1560,20 @@ es:{
   /* ---------- cookies + analytics gate ---------- */
   var ck = d.getElementById('ck');
   function loadAnalytics(){
-    /* CONFIG — incolla qui i tuoi loader GA4 / AdSense.
-       Partono SOLO dopo il consenso. Esempio GA4:
-       var s = d.createElement('script');
-       s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX';
-       s.async = true; d.head.appendChild(s);
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){ dataLayer.push(arguments); }
-       gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
-    */
+    /* GA4 — Consent Mode v2. Parte SOLO dopo "Accept all".
+       Quando attiverai AdSense, il suo loader va qui sotto (dopo la CMP certificata). */
+    if(window.__ga4) return;
+    window.__ga4 = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+    gtag('consent', 'default', { ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied' });
+    gtag('consent', 'update',  { ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted' });
+    gtag('js', new Date());
+    gtag('config', 'G-Y0FEM4JQLD');
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Y0FEM4JQLD';
+    s.async = true;
+    document.head.appendChild(s);
   }
   var consent = recall('ap_consent');
   if(consent === 'yes'){ loadAnalytics(); }
@@ -2725,7 +2743,7 @@ es:{
 
 /* ---------- 6. studio status + weekly slots (CONFIG) ---------- */
 (function(){
-  var AP_SLOTS = 2;              /* CONFIG: slot disponibili questa settimana */
+  var AP_SLOTS = 0;              /* CONFIG: slot REALI della settimana. 0 = riga nascosta. Aggiorna a mano solo con numeri veri. */
   var H_START = 10, H_END = 19;  /* CONFIG: orario studio, Europe/Rome */
   var sDot = document.getElementById('sDot'), sTxt = document.getElementById('sTxt');
   var slotTxt = document.getElementById('slotTxt'), slotsRow = document.getElementById('slotsRow');

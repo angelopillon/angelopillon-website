@@ -10,6 +10,12 @@
 <meta property="og:title" content="Sidechain Compression in EDM: Beyond the Pump">
 <meta property="og:description" content="Sidechain is not just the pumping pad cliché. Frequency-selective ducking, ghost triggers, and release timing by BPM — how professionals carve space instead of stomping on it.">
 <meta property="og:url" content="https://angelopillon.com/sidechain-compression-edm/">
+<meta property="og:image" content="https://angelopillon.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Angelo Pillon — Mixing &amp; Mastering Engineer, Milan, Italy">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/og-image.png">
 <meta name="theme-color" content="#0b0a08">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -189,7 +195,7 @@ h1 .serif-i{ font-size:1.04em; }
 <div class="callout"><p><strong>Mix feeling crowded?</strong> Send me the stems — carving space is the core of what a Mix &amp; Master buys you. From EUR 90.</p><a class="cta" href="https://angelopillon.com/#contact">Clean up my mix</a></div>
     <div class="author">
       <span class="mono">About the engineer</span>
-      <p><b>Angelo Pillon</b> is a mixing &amp; mastering engineer based in Milan, Italy. 15+ years behind the console, a hybrid analog/digital workflow, Apple Digital Masters certification and 700+ five-star reviews from artists, producers, labels and studios in 66+ countries.</p>
+      <p><b>Angelo Pillon</b> is a mixing &amp; mastering engineer based in Milan, Italy. 15+ years behind the console, a hybrid analog/digital workflow, Apple Digital Masters certification and a 4.9/5 rating across 700+ reviews from artists, producers, labels and studios in 66+ countries.</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap">
         <a class="cta" href="https://angelopillon.com/#contact">Work with Angelo</a>
         <a class="cta ghost" href="https://angelopillon.com/loudness-meter">Try the free LUFS Meter</a>
@@ -230,7 +236,20 @@ h1 .serif-i{ font-size:1.04em; }
   function store(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
   function recall(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
   function loadAnalytics(){
-    /* CONFIG: incolla qui gli stessi loader GA4 / AdSense della homepage. */
+    /* GA4 — Consent Mode v2. Parte SOLO dopo "Accept all".
+       Quando attiverai AdSense, il suo loader va qui sotto (dopo la CMP certificata). */
+    if(window.__ga4) return;
+    window.__ga4 = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+    gtag('consent', 'default', { ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied' });
+    gtag('consent', 'update',  { ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted' });
+    gtag('js', new Date());
+    gtag('config', 'G-Y0FEM4JQLD');
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Y0FEM4JQLD';
+    s.async = true;
+    document.head.appendChild(s);
   }
   var ck = document.getElementById('ck');
   var c = recall('ap_consent');

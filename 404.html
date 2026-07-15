@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b0a08">
+<title>404 — Nothing on this channel | Angelo Pillon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0a08;
+    --cream:#ede6d8;
+    --cream-55:rgba(237,230,216,.55);
+    --cream-30:rgba(237,230,216,.30);
+    --hair:rgba(237,230,216,.14);
+    --amber:#dfa054;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{overflow-x:clip}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family:'Archivo',system-ui,sans-serif;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:clamp(24px,6vw,84px);
+    position:relative;
+  }
+  .wm{
+    position:fixed;top:-4vw;right:-3vw;z-index:0;
+    font-weight:900;font-stretch:125%;line-height:1;letter-spacing:-.03em;
+    font-size:clamp(8rem,24vw,20rem);text-transform:uppercase;
+    color:transparent;-webkit-text-stroke:1px rgba(237,230,216,.05);
+    pointer-events:none;user-select:none;
+  }
+  main{position:relative;z-index:1;max-width:820px}
+  .eyebrow{
+    display:flex;align-items:center;gap:14px;
+    font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--cream-55);margin-bottom:28px;
+  }
+  .eyebrow::after{content:"";flex:1;height:1px;background:var(--hair)}
+  .eyebrow b{color:var(--amber);font-weight:600}
+  h1{
+    font-weight:900;font-stretch:125%;
+    font-size:clamp(2.6rem,7.5vw,5.2rem);
+    line-height:1.02;letter-spacing:-.02em;
+    margin-bottom:22px;
+  }
+  h1 em{
+    font-family:'Instrument Serif',serif;
+    font-style:italic;font-weight:400;font-stretch:100%;
+    letter-spacing:0;
+  }
+  p{
+    font-size:clamp(1rem,1.6vw,1.15rem);
+    line-height:1.65;color:var(--cream-55);
+    max-width:52ch;margin-bottom:44px;
+  }
+  /* flatline with a single heartbeat blip */
+  .line{
+    position:relative;height:2px;background:var(--hair);
+    margin:0 0 44px;overflow:hidden;border-radius:2px;
+  }
+  .line span{
+    position:absolute;top:0;left:0;height:100%;width:90px;
+    background:linear-gradient(90deg,transparent,var(--amber),transparent);
+    transform:translateX(-90px);
+    animation:blip 3.2s ease-in-out infinite;
+  }
+  @keyframes blip{
+    0%{transform:translateX(-90px)}
+    60%,100%{transform:translateX(calc(100vw))}
+  }
+  nav{display:flex;flex-wrap:wrap;gap:12px}
+  nav a{
+    color:var(--cream);text-decoration:none;
+    font-size:14px;font-weight:600;letter-spacing:.06em;
+    padding:13px 22px;border:1px solid var(--hair);border-radius:999px;
+    transition:border-color .25s,color .25s,transform .25s;
+  }
+  nav a:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+  nav a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+  nav a.primary{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+  nav a.primary:hover{background:var(--amber);border-color:var(--amber);color:var(--bg)}
+  footer{
+    position:relative;z-index:1;
+    margin-top:64px;padding-top:18px;border-top:1px solid var(--hair);
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--cream-30);
+  }
+  @media (prefers-reduced-motion:reduce){
+    .line span{animation:none;transform:translateX(35vw)}
+    nav a{transition:none}
+  }
+</style>
+</head>
+<body>
+<div class="wm" aria-hidden="true">SILENCE</div>
+<main>
+  <div class="eyebrow"><b>404</b><span>No signal on this address</span></div>
+  <h1>Nothing on this <em>channel.</em></h1>
+  <p>The page you're looking for doesn't exist, or it moved. Either way, this channel is silent. The rest of the studio is still live.</p>
+  <div class="line" aria-hidden="true"><span></span></div>
+  <nav aria-label="Useful pages">
+    <a class="primary" href="/">Back to the studio</a>
+    <a href="/articles">Articles</a>
+    <a href="/loudness-meter">LUFS Meter</a>
+    <a href="/#contact">Start a project</a>
+  </nav>
+</main>
+<footer>
+  <span>Angelo Pillon — Milan, Italy</span>
+  <span>Mixing &amp; Mastering</span>
+</footer>
+</body>
+</html>

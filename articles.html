@@ -4,12 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Studio Journal — Mixing &amp; Mastering Articles | Angelo Pillon</title>
-<meta name="description" content="Practical articles on mixing, mastering, loudness and electronic music production, from the desk of a mastering engineer with 15+ years and 700+ five-star reviews.">
+<meta name="description" content="Practical articles on mixing, mastering, loudness and electronic music production, from the desk of a mastering engineer with 15+ years and a 4.9/5 rating across 700+ reviews.">
 <link rel="canonical" href="https://angelopillon.com/articles/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Studio Journal">
-<meta property="og:description" content="Practical articles on mixing, mastering, loudness and electronic music production, from the desk of a mastering engineer with 15+ years and 700+ five-star reviews.">
+<meta property="og:description" content="Practical articles on mixing, mastering, loudness and electronic music production, from the desk of a mastering engineer with 15+ years and a 4.9/5 rating across 700+ reviews.">
 <meta property="og:url" content="https://angelopillon.com/articles/">
+<meta property="og:image" content="https://angelopillon.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Angelo Pillon — Mixing &amp; Mastering Engineer, Milan, Italy">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/og-image.png">
 <meta name="theme-color" content="#0b0a08">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +26,7 @@
   "@context": "https://schema.org",
   "@type": "Blog",
   "headline": "Studio Journal",
-  "description": "Practical articles on mixing, mastering, loudness and electronic music production, from the desk of a mastering engineer with 15+ years and 700+ five-star reviews.",
+  "description": "Practical articles on mixing, mastering, loudness and electronic music production, from the desk of a mastering engineer with 15+ years and a 4.9/5 rating across 700+ reviews.",
   "datePublished": "2026-07-05",
   "author": { "@type": "Person", "name": "Angelo Pillon", "url": "https://angelopillon.com" },
   "publisher": { "@type": "Person", "name": "Angelo Pillon" },
@@ -270,7 +276,20 @@ h1 .serif-i{ font-size:1.04em; }
   function store(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
   function recall(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
   function loadAnalytics(){
-    /* CONFIG: incolla qui gli stessi loader GA4 / AdSense della homepage. */
+    /* GA4 — Consent Mode v2. Parte SOLO dopo "Accept all".
+       Quando attiverai AdSense, il suo loader va qui sotto (dopo la CMP certificata). */
+    if(window.__ga4) return;
+    window.__ga4 = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+    gtag('consent', 'default', { ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied' });
+    gtag('consent', 'update',  { ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted' });
+    gtag('js', new Date());
+    gtag('config', 'G-Y0FEM4JQLD');
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Y0FEM4JQLD';
+    s.async = true;
+    document.head.appendChild(s);
   }
   var ck = document.getElementById('ck');
   var c = recall('ap_consent');
