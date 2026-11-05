@@ -1,303 +1,188 @@
 <!doctype html>
-<html lang="en" class="js-pre">
+<html lang="en" data-ga="G-Y0FEM4JQLD" data-sw="1">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Studio Journal — Mixing &amp; Mastering Articles | Angelo Pillon</title>
-<meta name="description" content="Practical articles on mixing, mastering, loudness and electronic music production, from the desk of a mastering engineer with 15+ years and a 4.9/5 rating across 700+ reviews.">
-<link rel="canonical" href="https://angelopillon.com/articles/">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Studio Journal">
-<meta property="og:description" content="Practical articles on mixing, mastering, loudness and electronic music production, from the desk of a mastering engineer with 15+ years and a 4.9/5 rating across 700+ reviews.">
-<meta property="og:url" content="https://angelopillon.com/articles/">
-<meta property="og:image" content="https://angelopillon.com/og-image.png">
+<title>Mixing and mastering articles | Angelo Pillon</title>
+<meta name="description" content="Articles on mixing, mastering and loudness: LUFS, true peak, low end, vocals, stems and streaming, from a working mixing and mastering engineer.">
+<link rel="canonical" href="https://angelopillon.com/articles">
+<link rel="alternate" hreflang="en" href="https://angelopillon.com/articles">
+<link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/">
+<link rel="alternate" hreflang="x-default" href="https://angelopillon.com/articles">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Angelo Pillon">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Mixing and mastering articles">
+<meta property="og:description" content="Articles on mixing, mastering and loudness: LUFS, true peak, low end, vocals, stems and streaming, from a working mixing and mastering engineer.">
+<meta property="og:url" content="https://angelopillon.com/articles">
+<meta property="og:image" content="https://angelopillon.com/assets/og/en-articles.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Angelo Pillon — Mixing &amp; Mastering Engineer, Milan, Italy">
+<meta property="og:image:alt" content="Mixing and mastering articles">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://angelopillon.com/og-image.png">
-<meta name="theme-color" content="#0b0a08">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<script>document.documentElement.className += ' js';</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "headline": "Studio Journal",
-  "description": "Practical articles on mixing, mastering, loudness and electronic music production, from the desk of a mastering engineer with 15+ years and a 4.9/5 rating across 700+ reviews.",
-  "datePublished": "2026-07-05",
-  "author": { "@type": "Person", "name": "Angelo Pillon", "url": "https://angelopillon.com" },
-  "publisher": { "@type": "Person", "name": "Angelo Pillon" },
-  "mainEntityOfPage": "https://angelopillon.com/articles/"
-}
-</script>
-<style>
-:root{
-  --ink:#0b0a08; --ink-2:#12100c; --ink-3:#1a1712;
-  --cream:#ede6d8; --muted:#98907f; --faint:#5c564a;
-  --line:rgba(237,230,216,.10); --line-soft:rgba(237,230,216,.06);
-  --vu:#e4a62e; --peak:#ff4e2a;
-  --font-d:"Archivo","Helvetica Neue",Arial,sans-serif;
-  --font-s:"Instrument Serif",Georgia,serif;
-  --font-m:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
-  --pad:clamp(20px,5vw,72px);
-}
-*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
-html{ scroll-behavior:smooth; }
-body{ background:var(--ink); color:var(--cream); font-family:var(--font-d); font-weight:450;
-  font-size:16.5px; line-height:1.7; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
-::selection{ background:var(--vu); color:var(--ink); }
-a{ color:inherit; text-decoration:none; }
-button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
-:focus-visible{ outline:2px solid var(--vu); outline-offset:3px; }
-.wrap{ max-width:760px; margin-inline:auto; padding-inline:var(--pad); }
-.mono{ font-family:var(--font-m); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:500; }
-.serif-i{ font-family:var(--font-s); font-style:italic; font-weight:400; text-transform:none; letter-spacing:0; color:var(--vu); }
-.cta{ display:inline-flex; align-items:center; gap:10px; font-size:.78rem; font-weight:700; letter-spacing:.06em;
-  text-transform:uppercase; color:var(--ink); background:var(--vu); border-radius:99px; padding:11px 22px;
-  transition:transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s; }
-.cta:hover{ transform:translateY(-2px); box-shadow:0 8px 28px rgba(228,166,46,.28); }
-.cta.ghost{ background:transparent; color:var(--cream); box-shadow:inset 0 0 0 1px var(--line); }
-.cta.ghost:hover{ box-shadow:inset 0 0 0 1px var(--vu); }
-
-.hd{ position:fixed; inset:0 0 auto 0; z-index:60; background:rgba(11,10,8,.84);
-  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line-soft); }
-.hd-in{ max-width:1180px; margin-inline:auto; padding:0 var(--pad); height:64px; display:flex; align-items:center; gap:26px; }
-.brand{ font-stretch:118%; font-weight:850; text-transform:uppercase; font-size:.95rem; white-space:nowrap; }
-.brand em{ font-style:normal; color:var(--vu); }
-.nav{ display:flex; gap:24px; margin-left:auto; }
-.nav a{ font-size:.8rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); transition:color .2s; }
-.nav a:hover{ color:var(--cream); }
-@media (max-width:680px){ .nav{ display:none; } .hd .cta{ margin-left:auto; } }
-
-.progress{ position:fixed; left:0; top:0; height:2px; width:100%; background:var(--vu);
-  transform-origin:left; transform:scaleX(0); z-index:62; pointer-events:none; }
-@supports (animation-timeline: scroll()){
-  .progress{ animation:prog linear both; animation-timeline:scroll(root); }
-  @keyframes prog{ from{ transform:scaleX(0); } to{ transform:scaleX(1); } }
-}
-
-.a-hero{ padding:clamp(120px,16vh,160px) 0 clamp(20px,4vw,36px); }
-.a-meta{ display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; margin-bottom:20px; }
-.a-cat{ font-family:var(--font-m); font-size:.62rem; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--vu); border:1px solid rgba(228,166,46,.45); border-radius:99px; padding:5px 12px; }
-h1{ font-size:clamp(2rem,5.4vw,3.4rem); font-stretch:114%; font-weight:850; line-height:1.05; letter-spacing:-.015em; }
-h1 .serif-i{ font-size:1.04em; }
-.a-desc{ color:var(--muted); font-size:1.08rem; margin-top:16px; max-width:60ch; }
-.ruler{ height:14px; margin:clamp(24px,4vw,40px) 0;
-  background:repeating-linear-gradient(to right, var(--line) 0 1px, transparent 1px 12.5%) top/100% 14px no-repeat,
-  repeating-linear-gradient(to right, var(--line-soft) 0 1px, transparent 1px 2.5%) top/100% 7px no-repeat;
-  border-top:1px solid var(--line); }
-
-.prose{ padding-bottom:clamp(40px,6vw,70px); }
-.prose h2{ font-size:clamp(1.35rem,3vw,1.8rem); font-stretch:112%; font-weight:800; letter-spacing:-.01em;
-  margin:2.2em 0 .7em; line-height:1.15; }
-.prose h2 .serif-i{ font-size:1.05em; }
-.prose p{ color:#c9c2b4; margin-bottom:1.15em; }
-.prose p strong, .prose li strong{ color:var(--cream); font-weight:650; }
-.prose ul, .prose ol{ margin:0 0 1.3em 1.2em; color:#c9c2b4; }
-.prose li{ margin-bottom:.5em; }
-.prose a{ color:var(--vu); text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(228,166,46,.4); }
-.prose a:hover{ text-decoration-color:var(--vu); }
-.pull{ margin:2em 0; padding-left:22px; border-left:2px solid var(--vu);
-  font-family:var(--font-s); font-style:italic; font-size:1.35rem; line-height:1.4; color:var(--cream); }
-.tldr{ border:1px solid var(--line); border-radius:14px; background:var(--ink-2); padding:20px 24px; margin:1.8em 0; }
-.tldr .mono{ color:var(--vu); display:block; margin-bottom:10px; }
-.tldr ul{ margin:0 0 0 1.1em; }
-.tldr li{ font-size:.94rem; }
-.callout{ border:1px solid rgba(228,166,46,.35); border-radius:14px; background:var(--ink-2);
-  padding:20px 24px; margin:2em 0; display:flex; flex-wrap:wrap; gap:14px 24px; align-items:center; justify-content:space-between; }
-.callout p{ margin:0; max-width:46ch; font-size:.94rem; }
-.author{ border:1px solid var(--line); border-radius:14px; background:var(--ink-2);
-  padding:clamp(20px,3vw,30px); margin:clamp(30px,5vw,50px) 0; }
-.author .mono{ color:var(--vu); display:block; margin-bottom:10px; }
-.author p{ color:var(--muted); font-size:.95rem; margin-bottom:16px; }
-.author p b{ color:var(--cream); }
-.rel{ margin-bottom:clamp(40px,6vw,70px); }
-.rel h3{ font-family:var(--font-m); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--faint); font-weight:600; margin-bottom:8px; }
-.rel a{ display:grid; grid-template-columns:auto 1fr auto; gap:14px 20px; align-items:baseline;
-  padding:16px 0; border-bottom:1px solid var(--line); transition:transform .25s cubic-bezier(.22,1,.36,1); }
-.rel a:first-of-type{ border-top:1px solid var(--line); }
-.rel a:hover{ transform:translateX(8px); }
-.rel .cat{ font-family:var(--font-m); font-size:.58rem; letter-spacing:.12em; text-transform:uppercase; color:var(--vu); min-width:78px; }
-.rel b{ font-weight:700; font-stretch:108%; font-size:.98rem; }
-.rel .arr{ color:var(--faint); font-family:var(--font-m); }
-.rel a:hover .arr{ color:var(--vu); }
-
-.ft{ border-top:1px solid var(--line); padding:28px 0; }
-.ft-in{ max-width:1180px; margin-inline:auto; padding-inline:var(--pad);
-  display:flex; flex-wrap:wrap; gap:12px 26px; justify-content:space-between; align-items:center; }
-.ft-in span, .ft-in a{ font-family:var(--font-m); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); }
-.ft-in a:hover{ color:var(--vu); }
-.grain{ position:fixed; inset:-100%; z-index:105; pointer-events:none; opacity:.04;
-  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="140" height="140" filter="url(%23n)" opacity="0.55"/></svg>');
-  background-size:170px; animation:grain 6s steps(10) infinite; }
-@keyframes grain{ 0%{transform:translate(0,0)} 25%{transform:translate(2%,-3%)} 50%{transform:translate(-3%,3%)} 75%{transform:translate(3%,2%)} 100%{transform:translate(0,0)} }
-.ck{ position:fixed; left:16px; right:16px; bottom:16px; z-index:70; max-width:420px; background:var(--ink-3);
-  border:1px solid var(--line); border-radius:14px; padding:20px; transform:translateY(calc(100% + 24px));
-  transition:transform .45s cubic-bezier(.22,1,.36,1); box-shadow:0 18px 60px rgba(0,0,0,.5); }
-.ck.show{ transform:none; }
-.ck p{ font-size:.82rem; color:var(--muted); }
-.ck p a{ color:var(--vu); text-decoration:underline; text-underline-offset:3px; }
-.ck-btns{ display:flex; gap:10px; margin-top:14px; }
-.ck-btns .cta{ padding:9px 18px; font-size:.72rem; }
-@media (prefers-reduced-motion: reduce){
-  html{ scroll-behavior:auto; }
-  .grain{ display:none; }
-  .cta, .rel a, .ck{ transition:none !important; }
-}
-</style>
-<style>
-.ai-row{ display:grid; grid-template-columns:auto 1fr auto auto; gap:14px 24px; align-items:baseline;
-  padding:22px 0; border-bottom:1px solid var(--line); transition:transform .25s cubic-bezier(.22,1,.36,1); }
-.ai-row:first-of-type{ border-top:1px solid var(--line); }
-.ai-row:hover{ transform:translateX(8px); }
-.ai-row .cat{ font-family:var(--font-m); font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; color:var(--vu); min-width:86px; }
-.ai-row b{ display:block; font-weight:750; font-stretch:110%; font-size:clamp(1rem,1.9vw,1.25rem); line-height:1.25; }
-.ai-row small{ display:block; color:var(--muted); font-size:.85rem; margin-top:5px; max-width:64ch; }
-.ai-row .ai-d{ font-size:.6rem; white-space:nowrap; }
-.ai-row .arr{ color:var(--faint); font-family:var(--font-m); }
-.ai-row:hover .arr{ color:var(--vu); }
-@media (max-width:680px){ .ai-row{ grid-template-columns:1fr auto; } .ai-row .cat, .ai-row .ai-d{ grid-column:1/-1; min-width:0; } }
-.wrap-wide{ max-width:900px; margin-inline:auto; padding-inline:var(--pad); }
-@media (prefers-reduced-motion: reduce){ .ai-row{ transition:none !important; } }
-</style>
+<meta name="twitter:image" content="https://angelopillon.com/assets/og/en-articles.png">
+<meta name="theme-color" content="#DCDDD8">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Angelo Pillon, studio journal" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611051235">
+<script>(function(){try{var f=localStorage.getItem('ap_finish');if(!f&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)f='black';if(f==='black'){document.documentElement.setAttribute('data-finish','black');}}catch(e){}})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Studio journal","description":"Articles on mixing, mastering and loudness: LUFS, true peak, low end, vocals, stems and streaming, from a working mixing and mastering engineer.","inLanguage":"en","url":"https://angelopillon.com/articles","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://angelopillon.com/lufs-explained","name":"LUFS Explained: The Only Loudness Guide Producers Need"},{"@type":"ListItem","position":2,"url":"https://angelopillon.com/how-loud-should-your-master-be","name":"How Loud Should Your Master Be in 2026? Streaming vs Club"},{"@type":"ListItem","position":3,"url":"https://angelopillon.com/hybrid-vs-itb-mastering","name":"Hybrid vs Full ITB: What Actually Matters for Your Master"},{"@type":"ListItem","position":4,"url":"https://angelopillon.com/low-end-melodic-techno-mixing","name":"Low-End in Melodic Techno: The Techniques That Actually Work"},{"@type":"ListItem","position":5,"url":"https://angelopillon.com/mixing-vocals-pop-rnb","name":"Mixing Vocals for Pop and RnB: Air, Presence and Pocket"},{"@type":"ListItem","position":6,"url":"https://angelopillon.com/camelot-wheel-harmonic-mixing","name":"The Camelot Wheel: Harmonic Mixing for Producers and DJs"},{"@type":"ListItem","position":7,"url":"https://angelopillon.com/stem-preparation-guide","name":"How to Prepare Your Stems for a Professional Mix"},{"@type":"ListItem","position":8,"url":"https://angelopillon.com/apple-digital-masters-explained","name":"Apple Digital Masters: What It Actually Means for Your Music"},{"@type":"ListItem","position":9,"url":"https://angelopillon.com/sidechain-compression-edm","name":"Sidechain Compression in EDM: Beyond the Pump"},{"@type":"ListItem","position":10,"url":"https://angelopillon.com/beatport-vs-spotify-mastering","name":"Mastering for Beatport vs Spotify: One Track, Two Masters?"}]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://angelopillon.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://angelopillon.com/articles"}]}</script>
 </head>
-<body>
-<div class="progress" aria-hidden="true"></div>
-<header class="hd">
-  <div class="hd-in">
-    <a class="brand" href="https://angelopillon.com">Angelo Pillon<em>.</em></a>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="/">Angelo Pillon</a>
     <nav class="nav" aria-label="Main">
-      <a href="https://angelopillon.com/#services">Services</a>
-      <a href="https://angelopillon.com/loudness-meter">LUFS Meter</a>
-      <a href="https://angelopillon.com/#reviews">Reviews</a>
+      <a href="/#services">Services</a>
+      <a href="/tools/">Tools</a>
+      <a href="/articles" aria-current="page">Articles</a>
+      <a href="/#contact">Contact</a>
+      
     </nav>
-    <a class="cta" href="https://angelopillon.com/#contact">Get it mastered</a>
+    <div class="hdr-actions">
+      <details class="lang">
+        <summary aria-label="Language">EN <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <ul>
+          <li><a href="/articles" hreflang="en" lang="en" aria-current="true">English <span>EN</span></a></li>
+          <li><a href="/it/articoli/" hreflang="it" lang="it">Italiano <span>IT</span></a></li>
+          <li><a href="/de/" hreflang="de" lang="de">Deutsch <span>DE</span></a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a></li>
+          
+        </ul>
+      </details>
+      <div class="finish" role="group" aria-label="Panel finish">
+        <button type="button" data-finish-set="silver" aria-pressed="true">Silver</button>
+        <button type="button" data-finish-set="black" aria-pressed="false">Black</button>
+      </div>
+      <a class="btn btn--small" href="/#contact">Start a project</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
-<main>
-  <div class="a-hero wrap-wide">
-    <div class="a-meta">
-      <span class="a-cat">Studio journal</span>
-      <span class="mono">10 articles &middot; Mixing &middot; Mastering &middot; Loudness &middot; Electronic</span>
-    </div>
-    <h1>From the console, <em class="serif-i">in writing.</em></h1>
-    <p class="a-desc">Practical, opinionated articles on mixing, mastering and loudness — the same principles I apply to every track that comes through the studio.</p>
-    <div class="ruler" aria-hidden="true"></div>
-      <a class="ai-row" href="https://angelopillon.com/lufs-explained">
-        <span class="cat">Loudness</span>
-        <span><b>LUFS Explained: The Only Loudness Guide Producers Need</b><small>Integrated, short-term, momentary, LRA, true peak: what each number actually measures, what streaming platforms do with them, and the targets that matter in 2026.</small></span>
-        <span class="mono ai-d">Jul 2, 2026 &middot; 8 min</span>
-        <span class="arr">&rarr;</span>
-      </a>
-      <a class="ai-row" href="https://angelopillon.com/how-loud-should-your-master-be">
-        <span class="cat">Loudness</span>
-        <span><b>How Loud Should Your Master Be in 2026? Streaming vs Club</b><small>Stop chasing -14 LUFS. The real loudness strategy depends on where your track lives: playlists, clubs, or both. Here are the numbers working engineers actually target.</small></span>
-        <span class="mono ai-d">Jun 30, 2026 &middot; 6 min</span>
-        <span class="arr">&rarr;</span>
-      </a>
-      <a class="ai-row" href="https://angelopillon.com/hybrid-vs-itb-mastering">
-        <span class="cat">Mastering</span>
-        <span><b>Hybrid vs Full ITB: What Actually Matters for Your Master</b><small>Analog gear or plugins? After 15 years of running both, here is where hybrid mastering genuinely wins, where it does not, and how to tell if your track needs it.</small></span>
-        <span class="mono ai-d">Jun 18, 2026 &middot; 6 min</span>
-        <span class="arr">&rarr;</span>
-      </a>
-      <a class="ai-row" href="https://angelopillon.com/low-end-melodic-techno-mixing">
-        <span class="cat">Electronic</span>
-        <span><b>Low-End in Melodic Techno: The Techniques That Actually Work</b><small>Kick and bass are 80% of a melodic techno record. Here is the exact framework I use to make the low end huge, clean and club-translatable — sidechain, mono, tuning and headroom.</small></span>
-        <span class="mono ai-d">May 27, 2026 &middot; 7 min</span>
-        <span class="arr">&rarr;</span>
-      </a>
-      <a class="ai-row" href="https://angelopillon.com/mixing-vocals-pop-rnb">
-        <span class="cat">Mixing</span>
-        <span><b>Mixing Vocals for Pop and RnB: Air, Presence and Pocket</b><small>The lead vocal is the record in pop and RnB. My chain and philosophy for vocals that sit on top of dense productions without shouting: gain riding, serial compression, air EQ and the pocket.</small></span>
-        <span class="mono ai-d">May 8, 2026 &middot; 7 min</span>
-        <span class="arr">&rarr;</span>
-      </a>
-      <a class="ai-row" href="https://angelopillon.com/camelot-wheel-harmonic-mixing">
-        <span class="cat">Electronic</span>
-        <span><b>The Camelot Wheel: Harmonic Mixing for Producers and DJs</b><small>8A mixes with 7A, 9A and 8B — and knowing why makes you a better producer, not just a better DJ. The Camelot system explained, with the shortcuts that matter.</small></span>
-        <span class="mono ai-d">Apr 29, 2026 &middot; 5 min</span>
-        <span class="arr">&rarr;</span>
-      </a>
-      <a class="ai-row" href="https://angelopillon.com/stem-preparation-guide">
-        <span class="cat">Mixing</span>
-        <span><b>How to Prepare Your Stems for a Professional Mix</b><small>Badly prepared stems cost you revisions, time and quality. The exact export checklist I send my clients: formats, labeling, gain staging, and the five mistakes that delay every project.</small></span>
-        <span class="mono ai-d">Apr 15, 2026 &middot; 6 min</span>
-        <span class="arr">&rarr;</span>
-      </a>
-      <a class="ai-row" href="https://angelopillon.com/apple-digital-masters-explained">
-        <span class="cat">Mastering</span>
-        <span><b>Apple Digital Masters: What It Actually Means for Your Music</b><small>Apple Digital Masters is not a plugin or a loudness preset — it is a certified delivery workflow. What the badge really guarantees, how it changes your master, and when it matters.</small></span>
-        <span class="mono ai-d">Mar 22, 2026 &middot; 5 min</span>
-        <span class="arr">&rarr;</span>
-      </a>
-      <a class="ai-row" href="https://angelopillon.com/sidechain-compression-edm">
-        <span class="cat">Electronic</span>
-        <span><b>Sidechain Compression in EDM: Beyond the Pump</b><small>Sidechain is not just the pumping pad cliché. Frequency-selective ducking, ghost triggers, and release timing by BPM — how professionals carve space instead of stomping on it.</small></span>
-        <span class="mono ai-d">Mar 5, 2026 &middot; 6 min</span>
-        <span class="arr">&rarr;</span>
-      </a>
-      <a class="ai-row" href="https://angelopillon.com/beatport-vs-spotify-mastering">
-        <span class="cat">Mastering</span>
-        <span><b>Mastering for Beatport vs Spotify: One Track, Two Masters?</b><small>Clubs don't normalize; streaming does. Whether your electronic release needs separate club and streaming masters, and how I decide — with the loudness numbers for each destination.</small></span>
-        <span class="mono ai-d">Feb 12, 2026 &middot; 6 min</span>
-        <span class="arr">&rarr;</span>
-      </a>
-    <div style="height:60px"></div>
+<main id="main">
+<header class="page-head wrap">
+  <ol class="crumbs" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li><span aria-current="page">Articles</span></li></ol>
+  <h1 class="t-h1">Studio journal</h1>
+  <p class="t-lead">Practical, opinionated articles on mixing, mastering and loudness: the same principles I apply to every track that comes through the studio.</p>
+</header>
+<section class="wrap" data-hub style="padding-bottom:var(--sec)">
+  <div class="hub-tools">
+    <label class="sr-only" for="hub-q">Search articles</label>
+    <input class="input" id="hub-q" type="search" placeholder="Search articles" data-hub-search autocomplete="off">
+    <span class="hub-count" data-tpl="{n} articles"></span>
   </div>
+  <div class="chips" role="group" aria-label="Filter by topic" style="margin-bottom:24px">
+    <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+    <button class="chip" type="button" data-filter="loudness" data-cat="loudness" aria-pressed="false">Loudness</button><button class="chip" type="button" data-filter="mastering" data-cat="mastering" aria-pressed="false">Mastering</button><button class="chip" type="button" data-filter="mixing" data-cat="mixing" aria-pressed="false">Mixing</button><button class="chip" type="button" data-filter="electronic" data-cat="electronic" aria-pressed="false">Electronic</button>
+  </div>
+  <div class="rule-list">
+    <a class="post-row" href="/lufs-explained" data-row data-cat="loudness" data-text="lufs explained: the only loudness guide producers need integrated, short-term, momentary, lra, true peak: what each number actually measures, what streaming platforms do with them, and the targets that matter in 2026. integrated, short-term, momentary, lra, true peak: what each number actually measures, what streaming platforms do with them, and the targets that matter in 2026. loudness">
+      <span class="cap" data-cat="loudness">Loudness</span>
+      <h3>LUFS Explained: The Only Loudness Guide Producers Need</h3>
+      <time datetime="2026-07-02">2 July 2026</time>
+      <p>Integrated, short-term, momentary, LRA, true peak: what each number actually measures, what streaming platforms do with them, and the targets that matter in 2026.</p>
+    </a>
+    <a class="post-row" href="/how-loud-should-your-master-be" data-row data-cat="loudness" data-text="how loud should your master be in 2026? streaming vs club stop chasing -14 lufs. the real loudness strategy depends on where your track lives: playlists, clubs, or both. here are the numbers working engineers actually target. stop chasing -14 lufs. the real loudness strategy depends on where your track lives: playlists, clubs, or both. here are the numbers working engineers actually target. loudness">
+      <span class="cap" data-cat="loudness">Loudness</span>
+      <h3>How Loud Should Your Master Be in 2026? Streaming vs Club</h3>
+      <time datetime="2026-06-30">30 June 2026</time>
+      <p>Stop chasing -14 LUFS. The real loudness strategy depends on where your track lives: playlists, clubs, or both. Here are the numbers working engineers actually target.</p>
+    </a>
+    <a class="post-row" href="/hybrid-vs-itb-mastering" data-row data-cat="mastering" data-text="hybrid vs full itb: what actually matters for your master analog gear or plugins? after 15 years of running both, here is where hybrid mastering genuinely wins, where it does not, and how to tell if your track needs it. analog gear or plugins? after 15 years of running both, here is where hybrid mastering genuinely wins, where it does not, and how to tell if your track needs it. mastering">
+      <span class="cap" data-cat="mastering">Mastering</span>
+      <h3>Hybrid vs Full ITB: What Actually Matters for Your Master</h3>
+      <time datetime="2026-06-18">18 June 2026</time>
+      <p>Analog gear or plugins? After 15 years of running both, here is where hybrid mastering genuinely wins, where it does not, and how to tell if your track needs it.</p>
+    </a>
+    <a class="post-row" href="/low-end-melodic-techno-mixing" data-row data-cat="electronic" data-text="low-end in melodic techno: the techniques that actually work kick and bass are 80% of a melodic techno record. here is the exact framework i use to make the low end huge, clean and club-translatable — sidechain, mono, tuning and headroom. kick and bass are 80% of a melodic techno record. here is the exact framework i use to make the low end huge, clean and club-translatable — sidechain, mono, tuning and headroom. electronic">
+      <span class="cap" data-cat="electronic">Electronic</span>
+      <h3>Low-End in Melodic Techno: The Techniques That Actually Work</h3>
+      <time datetime="2026-05-27">27 May 2026</time>
+      <p>Kick and bass are 80% of a melodic techno record. Here is the exact framework I use to make the low end huge, clean and club-translatable — sidechain, mono, tuning and headroom.</p>
+    </a>
+    <a class="post-row" href="/mixing-vocals-pop-rnb" data-row data-cat="mixing" data-text="mixing vocals for pop and rnb: air, presence and pocket the lead vocal is the record in pop and rnb. my chain and philosophy for vocals that sit on top of dense productions without shouting: gain riding, serial compression, air eq and the pocket. the lead vocal is the record in pop and rnb. my chain and philosophy for vocals that sit on top of dense productions without shouting: gain riding, serial compression, air eq and the pocket. mixing">
+      <span class="cap" data-cat="mixing">Mixing</span>
+      <h3>Mixing Vocals for Pop and RnB: Air, Presence and Pocket</h3>
+      <time datetime="2026-05-08">8 May 2026</time>
+      <p>The lead vocal is the record in pop and RnB. My chain and philosophy for vocals that sit on top of dense productions without shouting: gain riding, serial compression, air EQ and the pocket.</p>
+    </a>
+    <a class="post-row" href="/camelot-wheel-harmonic-mixing" data-row data-cat="electronic" data-text="the camelot wheel: harmonic mixing for producers and djs 8a mixes with 7a, 9a and 8b — and knowing why makes you a better producer, not just a better dj. the camelot system explained, with the shortcuts that matter. 8a mixes with 7a, 9a and 8b — and knowing why makes you a better producer, not just a better dj. the camelot system explained, with the shortcuts that matter. electronic">
+      <span class="cap" data-cat="electronic">Electronic</span>
+      <h3>The Camelot Wheel: Harmonic Mixing for Producers and DJs</h3>
+      <time datetime="2026-04-29">29 April 2026</time>
+      <p>8A mixes with 7A, 9A and 8B — and knowing why makes you a better producer, not just a better DJ. The Camelot system explained, with the shortcuts that matter.</p>
+    </a>
+    <a class="post-row" href="/stem-preparation-guide" data-row data-cat="mixing" data-text="how to prepare your stems for a professional mix badly prepared stems cost you revisions, time and quality. the exact export checklist i send my clients: formats, labeling, gain staging, and the five mistakes that delay every project. badly prepared stems cost you revisions, time and quality. the exact export checklist i send my clients: formats, labeling, gain staging, and the five mistakes that delay every project. mixing">
+      <span class="cap" data-cat="mixing">Mixing</span>
+      <h3>How to Prepare Your Stems for a Professional Mix</h3>
+      <time datetime="2026-04-15">15 April 2026</time>
+      <p>Badly prepared stems cost you revisions, time and quality. The exact export checklist I send my clients: formats, labeling, gain staging, and the five mistakes that delay every project.</p>
+    </a>
+    <a class="post-row" href="/apple-digital-masters-explained" data-row data-cat="mastering" data-text="apple digital masters: what it actually means for your music apple digital masters is not a plugin or a loudness preset — it is a certified delivery workflow. what the badge really guarantees, how it changes your master, and when it matters. apple digital masters is not a plugin or a loudness preset — it is a certified delivery workflow. what the badge really guarantees, how it changes your master, and when it matters. mastering">
+      <span class="cap" data-cat="mastering">Mastering</span>
+      <h3>Apple Digital Masters: What It Actually Means for Your Music</h3>
+      <time datetime="2026-03-22">22 March 2026</time>
+      <p>Apple Digital Masters is not a plugin or a loudness preset — it is a certified delivery workflow. What the badge really guarantees, how it changes your master, and when it matters.</p>
+    </a>
+    <a class="post-row" href="/sidechain-compression-edm" data-row data-cat="electronic" data-text="sidechain compression in edm: beyond the pump sidechain is not just the pumping pad cliché. frequency-selective ducking, ghost triggers, and release timing by bpm — how professionals carve space instead of stomping on it. sidechain is not just the pumping pad cliché. frequency-selective ducking, ghost triggers, and release timing by bpm — how professionals carve space instead of stomping on it. electronic">
+      <span class="cap" data-cat="electronic">Electronic</span>
+      <h3>Sidechain Compression in EDM: Beyond the Pump</h3>
+      <time datetime="2026-03-05">5 March 2026</time>
+      <p>Sidechain is not just the pumping pad cliché. Frequency-selective ducking, ghost triggers, and release timing by BPM — how professionals carve space instead of stomping on it.</p>
+    </a>
+    <a class="post-row" href="/beatport-vs-spotify-mastering" data-row data-cat="mastering" data-text="mastering for beatport vs spotify: one track, two masters? clubs don&#39;t normalize; streaming does. whether your electronic release needs separate club and streaming masters, and how i decide — with the loudness numbers for each destination. clubs don&#39;t normalize; streaming does. whether your electronic release needs separate club and streaming masters, and how i decide — with the loudness numbers for each destination. mastering">
+      <span class="cap" data-cat="mastering">Mastering</span>
+      <h3>Mastering for Beatport vs Spotify: One Track, Two Masters?</h3>
+      <time datetime="2026-02-12">12 February 2026</time>
+      <p>Clubs don&#39;t normalize; streaming does. Whether your electronic release needs separate club and streaming masters, and how I decide — with the loudness numbers for each destination.</p>
+    </a>
+    
+  </div>
+  <p class="hub-empty" hidden>No article matches. Try another word.</p>
+  <p class="lang-note">Leggi anche in italiano: <a class="link" href="/it/articoli/" hreflang="it">articoli in italiano</a></p>
+</section>
 </main>
-<footer class="ft">
-  <div class="ft-in">
-    <span>&copy; <span id="yr">2026</span> Angelo Pillon &middot; Milan, Italy</span>
-    <span style="display:flex;gap:22px">
-      <a href="https://angelopillon.com">Home</a>
-      <a href="https://angelopillon.com/loudness-meter">LUFS Meter</a>
-      <a href="https://angelopillon.com/privacy-policy">Privacy Policy</a>
-    </span>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <b>Angelo Pillon</b>
+        <p>Mixing and mastering engineer. Hybrid analog and digital studio in Milan, Apple Digital Masters certified.</p>
+      </div>
+      <div class="ft-col">
+        <h2>Services</h2>
+        <ul><li><a href="/#services">Mastering</a></li><li><a href="/#services">Mix and master</a></li><li><a href="/#services">Stem mastering</a></li><li><a href="/#services">Vocal editing</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Site</h2>
+        <ul><li><a href="/tools/">Free tools</a></li><li><a href="/articles">Articles</a></li><li><a href="/it/articoli/">Articoli in italiano</a></li><li><a href="/feed.xml">RSS feed</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Elsewhere</h2>
+        <ul><li><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Fiverr</a></li><li><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank">SoundBetter</a></li></ul>
+      </div>
+      
+    </div>
+    <div class="ft-bottom">
+      <span>© <span data-year>2026</span> Angelo Pillon, Milan, Italy</span>
+      <nav aria-label="Legal"><a href="/privacy-policy">Privacy policy</a><button type="button" data-consent-open>Cookie settings</button></nav>
+    </div>
   </div>
 </footer>
-<div class="grain" aria-hidden="true"></div>
-<aside class="ck" id="ck" aria-label="Cookies">
-  <p>This site uses cookies for analytics and advertising. By accepting you consent to our use of cookies as described in our <a href="https://angelopillon.com/privacy-policy">Privacy Policy</a>.</p>
-  <div class="ck-btns">
-    <button class="cta" id="ckAccept">Accept all</button>
-    <button class="cta ghost" id="ckDecline">Decline</button>
-  </div>
+<aside class="consent" id="consent" hidden aria-label="Cookies">
+  <p>I use cookies for anonymous traffic statistics, and only if you accept. The tools and the site work either way. Details in the <a href="/privacy-policy">Privacy policy</a>.</p>
+  <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Accept</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Decline</button></div>
 </aside>
-<script>
-(function(){
-  var y = document.getElementById('yr');
-  if(y) y.textContent = new Date().getFullYear();
-  function store(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
-  function recall(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
-  function loadAnalytics(){
-    /* GA4 — Consent Mode v2. Parte SOLO dopo "Accept all".
-       Quando attiverai AdSense, il suo loader va qui sotto (dopo la CMP certificata). */
-    if(window.__ga4) return;
-    window.__ga4 = true;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
-    gtag('consent', 'default', { ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied' });
-    gtag('consent', 'update',  { ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted' });
-    gtag('js', new Date());
-    gtag('config', 'G-Y0FEM4JQLD');
-    var s = document.createElement('script');
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Y0FEM4JQLD';
-    s.async = true;
-    document.head.appendChild(s);
-  }
-  var ck = document.getElementById('ck');
-  var c = recall('ap_consent');
-  if(c === 'yes'){ loadAnalytics(); }
-  else if(c === null && ck){ setTimeout(function(){ ck.classList.add('show'); }, 900); }
-  document.getElementById('ckAccept').addEventListener('click', function(){ store('ap_consent','yes'); ck.classList.remove('show'); loadAnalytics(); });
-  document.getElementById('ckDecline').addEventListener('click', function(){ store('ap_consent','no'); ck.classList.remove('show'); });
-})();
-</script>
+
+<script src="/assets/js/site.js?v=202611051235" defer></script>
+
 </body>
 </html>

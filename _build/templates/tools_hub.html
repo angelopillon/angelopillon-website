@@ -1,0 +1,13 @@
+<header class="page-head wrap">
+  <ol class="crumbs" aria-label="{{ ui.crumbs_label }}"><li><a href="{{ ui.home }}">{{ ui.home_label }}</a></li><li><span aria-current="page">{{ ui.tools_label }}</span></li></ol>
+  <h1 class="t-h1">{{ h.h1 }}</h1>
+  <p class="t-lead">{{ h.lead }}</p>
+</header>
+<section class="wrap" style="padding-bottom:var(--sec)">
+  <div class="rule-list">
+    {% for t in tools %}<a class="tool-row" href="{{ t.href }}"><span class="mini" aria-hidden="true">{{ t.mini }}</span><span><h3>{{ t.name }}</h3><p>{{ t.short }}</p></span><span class="tool-row__go">{{ ui.open }}</span></a>
+    {% endfor %}
+  </div>
+  <div class="explain prose">{{ h.body }}</div>
+  <p class="lang-note">{{ h.other }} <a class="link" href="{{ h.other_href }}" hreflang="{{ h.other_lang }}">{{ h.other_label }}</a></p>
+</section>

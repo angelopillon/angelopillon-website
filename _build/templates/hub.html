@@ -1,0 +1,27 @@
+<header class="page-head wrap">
+  <ol class="crumbs" aria-label="{{ ui.crumbs_label }}"><li><a href="{{ ui.home }}">{{ ui.home_label }}</a></li><li><span aria-current="page">{{ h.crumb }}</span></li></ol>
+  <h1 class="t-h1">{{ h.h1 }}</h1>
+  <p class="t-lead">{{ h.lead }}</p>
+</header>
+<section class="wrap" data-hub style="padding-bottom:var(--sec)">
+  <div class="hub-tools">
+    <label class="sr-only" for="hub-q">{{ h.search }}</label>
+    <input class="input" id="hub-q" type="search" placeholder="{{ h.search }}" data-hub-search autocomplete="off">
+    <span class="hub-count" data-tpl="{{ h.count_tpl }}"></span>
+  </div>
+  <div class="chips" role="group" aria-label="{{ h.filter }}" style="margin-bottom:24px">
+    <button class="chip" type="button" data-filter="all" aria-pressed="true">{{ h.all }}</button>
+    {% for c in cats %}<button class="chip" type="button" data-filter="{{ c.id }}" data-cat="{{ c.id }}" aria-pressed="false">{{ c.label }}</button>{% endfor %}
+  </div>
+  <div class="rule-list">
+    {% for p in posts %}<a class="post-row" href="{{ p.href }}" data-row data-cat="{{ p.cats }}" data-text="{{ p.search }}">
+      <span class="cap" data-cat="{{ p.cat }}">{{ p.cat_label }}</span>
+      <h3>{{ p.title }}</h3>
+      <time datetime="{{ p.date }}">{{ p.date_label }}</time>
+      <p>{{ p.dek }}</p>
+    </a>
+    {% endfor %}
+  </div>
+  <p class="hub-empty" hidden>{{ h.empty }}</p>
+  <p class="lang-note">{{ h.other }} <a class="link" href="{{ h.other_href }}" hreflang="{{ h.other_lang }}">{{ h.other_label }}</a></p>
+</section>

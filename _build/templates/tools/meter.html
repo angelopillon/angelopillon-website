@@ -1,0 +1,57 @@
+<div class="glass panel" id="meter">
+  <div class="panel__head"><span class="state" data-state-text><i></i> {{ L.waiting }}</span><span>ITU-R BS.1770-4 · {{ L.privacy }}</span></div>
+  <div class="drop" data-drop style="margin-top:0">
+    <p>{{ L.drop }}</p>
+    <input type="file" accept="audio/*,.wav,.aif,.aiff,.flac,.mp3,.m4a,.ogg" aria-label="{{ L.choose }}">
+    <button class="btn btn--glass" type="button" data-pick>{{ L.choose }}</button>
+  </div>
+  <div data-results hidden>
+    <dl class="grid-readouts" style="margin-top:28px">
+      <div class="readout"><dt>{{ L.integrated }}</dt><dd><b data-ro="I">—</b><small>LUFS</small></dd></div>
+      <div class="readout"><dt>{{ L.stmax }}</dt><dd><b data-ro="ST">—</b><small>LUFS</small></dd></div>
+      <div class="readout"><dt>{{ L.mmax }}</dt><dd><b data-ro="M">—</b><small>LUFS</small></dd></div>
+      <div class="readout"><dt>{{ L.tp }}</dt><dd><b data-ro="TP">—</b><small>dBTP</small></dd></div>
+      <div class="readout"><dt>{{ L.sp }}</dt><dd><b data-ro="SP">—</b><small>dBFS</small></dd></div>
+      <div class="readout"><dt>LRA</dt><dd><b data-ro="LRA">—</b><small>LU</small></dd></div>
+      <div class="readout"><dt>{{ L.plr }}</dt><dd><b data-ro="PLR">—</b><small>dB</small></dd></div>
+      <div class="readout"><dt>{{ L.corr }}</dt><dd><b data-ro="CORR">—</b></dd></div>
+      <div class="readout"><dt>{{ L.width }}</dt><dd><b data-ro="W">—</b><small>dB</small></dd></div>
+      <div class="readout"><dt>{{ L.tempo }}</dt><dd><b data-ro="BPM">—</b><small>{{ L.tempo_unit }}</small></dd></div>
+      <div class="readout"><dt>{{ L.key }}</dt><dd><b data-ro="KEY" style="font-size:1.6rem">—</b></dd></div>
+      <div class="readout"><dt>{{ L.duration }}</dt><dd><b data-ro="DUR">—</b></dd></div>
+    </dl>
+    <div class="controls" style="margin-top:28px">
+      <div class="gfield"><span>{{ L.target }}</span>
+        <div class="seg" role="group" aria-label="{{ L.target }}">
+          <button type="button" data-target="-14" aria-pressed="true">{{ L.t_stream }}</button>
+          <button type="button" data-target="-16" aria-pressed="false">{{ L.t_apple }}</button>
+          <button type="button" data-target="-9" aria-pressed="false">{{ L.t_club }}</button>
+        </div>
+      </div>
+      <label class="gfield"><span>{{ L.t_custom }} (LUFS)</span><input type="number" step="0.5" min="-40" max="-1" value="-14" data-target-custom></label>
+    </div>
+    <p class="bridge__verdict" data-verdict aria-live="polite"></p>
+    <h2 style="margin-top:28px">{{ L.h_timeline }}</h2>
+    <div class="canvas-box canvas-box--tall" style="margin-top:12px"><canvas data-timeline role="img" aria-label="{{ L.h_timeline }}"></canvas></div>
+    <h2 style="margin-top:24px">{{ L.h_wave }}</h2>
+    <div class="canvas-box" style="margin-top:12px"><canvas data-wave role="img" aria-label="{{ L.h_wave }}"></canvas></div>
+  </div>
+</div>
+<div class="two-col" style="margin-top:16px" data-results hidden>
+  <div class="glass panel"><h2>{{ L.h_platforms }}</h2>
+    <div class="table-scroll" style="margin-top:12px"><table class="vtable" data-platforms><thead><tr><th>{{ L.th_platform }}</th><th class="r">{{ L.th_ref }}</th><th class="r">{{ L.th_gain }}</th><th class="r">{{ L.th_peak }}</th><th>{{ L.th_note }}</th></tr></thead><tbody></tbody></table></div>
+  </div>
+  <div class="glass panel"><h2>{{ L.h_checks }}</h2>
+    <table class="vtable" data-checks style="margin-top:12px"><tbody></tbody></table>
+  </div>
+</div>
+<div class="glass panel" style="margin-top:16px">
+  <h2>{{ L.h_compare }}</h2>
+  <div class="drop" data-drop-ref style="margin-top:12px">
+    <p>{{ L.drop_ref }}</p>
+    <input type="file" accept="audio/*,.wav,.aif,.aiff,.flac,.mp3,.m4a,.ogg" aria-label="{{ L.choose }}">
+    <button class="btn btn--glass" type="button" data-pick>{{ L.choose }}</button>
+  </div>
+  <div class="table-scroll" style="margin-top:16px"><table class="vtable" data-compare hidden><thead><tr><th>{{ L.th_metric }}</th><th class="r">{{ L.th_yours }}</th><th class="r">{{ L.th_refcol }}</th><th class="r">{{ L.th_diff }}</th></tr></thead><tbody></tbody></table></div>
+</div>
+<div class="btn-row" style="margin-top:16px" data-results hidden><button class="btn btn--ghost btn--small" type="button" data-copy-report>{{ L.copy_report }}</button></div>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" data-ga="G-Y0FEM4JQLD" data-sw="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Streaming loudness calculator: Spotify, Apple Music, YouTube | Angelo Pillon</title>
+<meta name="description" content="Enter integrated LUFS and true peak, or measure a file, and see how much Spotify, Apple Music, YouTube, Tidal, Amazon Music and Deezer turn your master up or down.">
+<link rel="canonical" href="https://angelopillon.com/tools/streaming-loudness-calculator">
+<link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/streaming-loudness-calculator">
+<link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-loudness-streaming">
+<link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/streaming-loudness-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Angelo Pillon">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Streaming loudness calculator">
+<meta property="og:description" content="Enter integrated LUFS and true peak, or measure a file, and see how much Spotify, Apple Music, YouTube, Tidal, Amazon Music and Deezer turn your master up or down.">
+<meta property="og:url" content="https://angelopillon.com/tools/streaming-loudness-calculator">
+<meta property="og:image" content="https://angelopillon.com/assets/og/en-tool-streaming.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Streaming loudness calculator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/assets/og/en-tool-streaming.png">
+<meta name="theme-color" content="#DCDDD8">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Angelo Pillon, studio journal" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611051235">
+<script>(function(){try{var f=localStorage.getItem('ap_finish');if(!f&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)f='black';if(f==='black'){document.documentElement.setAttribute('data-finish','black');}}catch(e){}})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Streaming loudness calculator","description":"Enter integrated LUFS and true peak, or measure a file, and see how much Spotify, Apple Music, YouTube, Tidal, Amazon Music and Deezer turn your master up or down.","url":"https://angelopillon.com/tools/streaming-loudness-calculator","inLanguage":"en","applicationCategory":"MultimediaApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-160.jpg"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://angelopillon.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://angelopillon.com/tools/"},{"@type":"ListItem","position":3,"name":"Streaming loudness preview","item":"https://angelopillon.com/tools/streaming-loudness-calculator"}]}</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="/">Angelo Pillon</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#services">Services</a>
+      <a href="/tools/" aria-current="page">Tools</a>
+      <a href="/articles">Articles</a>
+      <a href="/#contact">Contact</a>
+      
+    </nav>
+    <div class="hdr-actions">
+      <details class="lang">
+        <summary aria-label="Language">EN <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <ul>
+          <li><a href="/tools/streaming-loudness-calculator" hreflang="en" lang="en" aria-current="true">English <span>EN</span></a></li>
+          <li><a href="/it/strumenti/calcolatore-loudness-streaming" hreflang="it" lang="it">Italiano <span>IT</span></a></li>
+          <li><a href="/de/" hreflang="de" lang="de">Deutsch <span>DE</span></a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a></li>
+          
+        </ul>
+      </details>
+      <div class="finish" role="group" aria-label="Panel finish">
+        <button type="button" data-finish-set="silver" aria-pressed="true">Silver</button>
+        <button type="button" data-finish-set="black" aria-pressed="false">Black</button>
+      </div>
+      <a class="btn btn--small" href="/#contact">Start a project</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<header class="page-head wrap">
+  <ol class="crumbs" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Streaming loudness preview</span></li></ol>
+  <h1 class="t-h1">Streaming loudness calculator</h1>
+  <p class="t-lead">Normalization decides how loud your master actually plays. This shows the gain each platform applies and what happens to the peaks.</p>
+</header>
+<section class="wrap tool-wrap">
+  <div class="glass panel" id="streaming">
+  <div class="controls">
+    <label class="gfield"><span>Integrated loudness (LUFS)</span><input type="number" step="0.1" min="-40" max="0" value="-9" data-i></label>
+    <label class="gfield"><span>True peak (dBTP)</span><input type="number" step="0.1" min="-20" max="3" value="-0.3" data-tp></label>
+  </div>
+  <p class="bridge__verdict" data-summary aria-live="polite" style="margin-top:20px"></p>
+  <p class="note" data-tpnote></p>
+  <div class="table-scroll" style="margin-top:16px"><table class="vtable"><thead><tr><th>Platform</th><th class="r">Reference</th><th class="r">Gain</th><th class="r">Plays at</th><th class="r">Peak after</th><th>Note</th></tr></thead><tbody data-rows></tbody></table></div>
+  <h2 style="margin-top:28px">Or measure a file</h2>
+  <div class="panel__head" style="margin:10px 0 0"><span class="state" data-state-text><i></i> Runs locally. Nothing is uploaded.</span></div>
+  <div class="drop" data-drop style="margin-top:10px">
+    <p>Drop a WAV, AIFF, FLAC or MP3 here, or choose a file. Analysis runs on your computer; nothing is uploaded.</p>
+    <input type="file" accept="audio/*,.wav,.aif,.aiff,.flac,.mp3,.m4a,.ogg" aria-label="Choose a file">
+    <button class="btn btn--glass" type="button" data-pick>Choose a file</button>
+  </div>
+</div>
+  <div class="explain prose">
+    <h2>How the calculation works</h2>
+<p>Enter the integrated loudness and the true peak of your master, or drop the file and let the page measure it. For each platform, the table shows its reference level, the gain it applies, the level your track plays at and where the true peak ends up after that gain.</p>
+<ul>
+<li><strong>Louder than the reference:</strong> the platform turns the track down. Nothing else changes.</li>
+<li><strong>Quieter than the reference:</strong> Spotify and Apple Music raise it only as far as the peaks allow; YouTube, Tidal, Amazon Music and Deezer don’t raise it.</li>
+<li><strong>Spotify Loud</strong>, at −11 LUFS, raises quieter tracks into a limiter that engages at −1 dB.</li>
+<li><strong>Beatport and club playback</strong> apply no normalization: what you deliver is what plays.</li>
+</ul>
+<h2>Where the values come from</h2>
+<p>Spotify documents its normalization in detail: −14 LUFS in Normal, the default, −11 in Loud, −19 in Quiet, keeping 1 dB of true peak headroom when it raises a track. Apple Music Sound Check works at −16. The figures for YouTube, Tidal and Amazon Music (around −14) and Deezer (around −15) come from shorter documentation and measurements. They are reliable references, and they can change over time.</p>
+<h2>What to do with it</h2>
+<p>A master that is turned down 5 dB isn’t penalized: it plays at the same level as everything else, with whatever density it has. The useful question isn’t how to hit −14, but how your track sounds next to the others once they all play at −14. To hear that, compare it with a reference at matched loudness in the <a href="/tools/ab-reference-player">A/B reference player</a>.</p>
+    <aside class="callout"><p>Numbers off target, or not sure what they mean for your track? That is the job I do every day.</p><a class="cta" href="/#contact">Get it mixed or mastered</a></aside>
+  </div>
+  <div class="related" style="max-width:var(--measure)">
+    <h2>Other free tools</h2>
+    <div class="rule-list">
+      <a class="tool-row" href="/loudness-meter"><span class="mini" aria-hidden="true">−14.0 LUFS</span><span><h3>LUFS meter</h3><p>Integrated, short-term and momentary loudness, true peak, range, key and tempo.</p></span><span class="tool-row__go">Open</span></a>
+      <a class="tool-row" href="/tools/stereo-phase-analyzer"><span class="mini" aria-hidden="true">+0.82 corr</span><span><h3>Stereo and phase analyzer</h3><p>Correlation, mid and side balance, and mono compatibility, overall and per band.</p></span><span class="tool-row__go">Open</span></a>
+      <a class="tool-row" href="/tools/ab-reference-player"><span class="mini" aria-hidden="true">B −1.6 dB</span><span><h3>A/B reference player</h3><p>Your track against a reference, loudness-matched, switched without a gap.</p></span><span class="tool-row__go">Open</span></a>
+      <a class="tool-row" href="/tools/delay-reverb-calculator"><span class="mini" aria-hidden="true">124 BPM 484 ms</span><span><h3>Delay and reverb calculator</h3><p>Tap the tempo and get delay times, pre-delay and decay in milliseconds.</p></span><span class="tool-row__go">Open</span></a>
+      
+    </div>
+  </div>
+</section>
+<script type="application/json" id="tool-i18n">{"decoding": "Decoding…", "busy": "Analyzing… {p}%", "done": "Measured: {name}", "error": "That file could not be read. Try WAV, AIFF, FLAC or MP3.", "notAudio": "That is not an audio file.", "copied": "Copied", "play": "Play", "pause": "Pause", "none": "None", "no": "No", "waiting": "Waiting for a track", "drop": "Drop a WAV, AIFF, FLAC or MP3 here, or choose a file. Analysis runs on your computer; nothing is uploaded.", "choose": "Choose a file", "privacy": "Runs locally. Nothing is uploaded.", "pClub": "No normalization: plays as mastered", "pLimiter": "Raised into Spotify’s limiter", "pNoUp": "Quieter than the reference, not raised", "pCapped": "Raised only as far as the peaks allow", "pDown": "Turned down", "pOn": "At the reference", "i": "Integrated loudness (LUFS)", "tp": "True peak (dBTP)", "th_platform": "Platform", "th_ref": "Reference", "th_gain": "Gain", "th_out": "Plays at", "th_peak": "Peak after", "th_note": "Note", "sDown": "On Spotify this master plays {g} dB quieter than you made it.", "sUp": "On Spotify this master can be raised by about {g} dB.", "sOn": "On Spotify this master plays at the level you made it.", "tpOver": "True peak above −0.1 dBTP: lossy encoding will clip. Lower the limiter ceiling.", "tpEdge": "True peak at the edge: −0.3 to −0.2 dBTP from a proper true peak limiter is the safe ceiling.", "tpLow": "True peak well below −1 dBTP: there is level left on the table.", "tpOk": "True peak is in a safe range.", "measure": "Or measure a file"}</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <b>Angelo Pillon</b>
+        <p>Mixing and mastering engineer. Hybrid analog and digital studio in Milan, Apple Digital Masters certified.</p>
+      </div>
+      <div class="ft-col">
+        <h2>Services</h2>
+        <ul><li><a href="/#services">Mastering</a></li><li><a href="/#services">Mix and master</a></li><li><a href="/#services">Stem mastering</a></li><li><a href="/#services">Vocal editing</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Site</h2>
+        <ul><li><a href="/tools/">Free tools</a></li><li><a href="/articles">Articles</a></li><li><a href="/it/articoli/">Articoli in italiano</a></li><li><a href="/feed.xml">RSS feed</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Elsewhere</h2>
+        <ul><li><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Fiverr</a></li><li><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank">SoundBetter</a></li></ul>
+      </div>
+      
+    </div>
+    <div class="ft-bottom">
+      <span>© <span data-year>2026</span> Angelo Pillon, Milan, Italy</span>
+      <nav aria-label="Legal"><a href="/privacy-policy">Privacy policy</a><button type="button" data-consent-open>Cookie settings</button></nav>
+    </div>
+  </div>
+</footer>
+<aside class="consent" id="consent" hidden aria-label="Cookies">
+  <p>I use cookies for anonymous traffic statistics, and only if you accept. The tools and the site work either way. Details in the <a href="/privacy-policy">Privacy policy</a>.</p>
+  <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Accept</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Decline</button></div>
+</aside>
+
+<script src="/assets/js/site.js?v=202611051235" defer></script>
+<script src="/assets/js/tools/common.js?v=202611051235" defer></script>
+<script src="/assets/js/dsp.js?v=202611051235" defer></script>
+<script src="/assets/js/tools/streaming.js?v=202611051235" defer></script>
+
+</body>
+</html>

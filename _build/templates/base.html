@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="{{ lang }}"{% if ga %} data-ga="{{ ga }}"{% endif %}{% if sw %} data-sw="1"{% endif %}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+{% if not noindex %}<link rel="canonical" href="{{ canonical }}">
+{% endif %}{% for a in alternates %}<link rel="alternate" hreflang="{{ a.hreflang }}" href="{{ a.href }}">
+{% endfor %}<meta property="og:type" content="{{ og_type }}">
+<meta property="og:site_name" content="Angelo Pillon">
+<meta property="og:locale" content="{{ ui.locale }}">
+<meta property="og:title" content="{{ og_title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ og_title }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ og_image }}">
+{% if noindex %}<meta name="robots" content="noindex">
+{% endif %}<meta name="theme-color" content="#DCDDD8">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="{{ ui.feed_title }}" href="{{ ui.feed_href }}">
+<link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v={{ v }}">
+<script>(function(){try{var f=localStorage.getItem('ap_finish');if(!f&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)f='black';if(f==='black'){document.documentElement.setAttribute('data-finish','black');}}catch(e){}})();</script>
+{% for ld in jsonld %}<script type="application/ld+json">{{ ld }}</script>
+{% endfor %}</head>
+<body class="{{ body_class }}">
+<a class="skip" href="#main">{{ ui.skip }}</a>
+{% if progress %}<div class="progress" aria-hidden="true"></div>{% endif %}
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="{{ ui.home }}">Angelo Pillon</a>
+    <nav class="nav" aria-label="{{ ui.nav_label }}">
+      {% for item in ui.nav %}<a href="{{ item.href }}"{% if item.key == nav_current %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+    <div class="hdr-actions">
+      <details class="lang">
+        <summary aria-label="{{ ui.lang_label }}">{{ lang|upper }} <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <ul>
+          {% for l in lang_links %}<li><a href="{{ l.href }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.code == lang %} aria-current="true"{% endif %}>{{ l.name }} <span>{{ l.code|upper }}</span></a></li>
+          {% endfor %}
+        </ul>
+      </details>
+      <div class="finish" role="group" aria-label="{{ ui.finish_label }}">
+        <button type="button" data-finish-set="silver" aria-pressed="true">{{ ui.silver }}</button>
+        <button type="button" data-finish-set="black" aria-pressed="false">{{ ui.black }}</button>
+      </div>
+      <a class="btn btn--small" href="{{ ui.contact_href }}">{{ ui.cta }}</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="{{ ui.menu }}" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+{{ main }}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <b>Angelo Pillon</b>
+        <p>{{ ui.ft_tag }}</p>
+      </div>
+      {% for col in ui.ft_cols %}<div class="ft-col">
+        <h2>{{ col.title }}</h2>
+        <ul>{% for it in col.links %}<li><a href="{{ it.href }}"{% if it.ext %} rel="noopener" target="_blank"{% endif %}>{{ it.label }}</a></li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="ft-bottom">
+      <span>© <span data-year>{{ year }}</span> Angelo Pillon, {{ ui.city }}{% if piva %} · P.IVA {{ piva }}{% endif %}</span>
+      <nav aria-label="{{ ui.legal_label }}"><a href="{{ ui.privacy_href }}">{{ ui.privacy }}</a><button type="button" data-consent-open>{{ ui.cookie_settings }}</button></nav>
+    </div>
+  </div>
+</footer>
+<aside class="consent" id="consent" hidden aria-label="{{ ui.cookies_label }}">
+  <p>{{ ui.consent_text }} <a href="{{ ui.privacy_href }}">{{ ui.privacy }}</a>.</p>
+  <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">{{ ui.accept }}</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">{{ ui.decline }}</button></div>
+</aside>
+{% if contact_float %}<div class="float-contact">{{ contact_float }}</div>{% endif %}
+<script src="/assets/js/site.js?v={{ v }}" defer></script>
+{{ scripts }}
+</body>
+</html>

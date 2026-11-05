@@ -1,0 +1,20 @@
+<header class="page-head wrap">
+  <ol class="crumbs" aria-label="{{ ui.crumbs_label }}"><li><a href="{{ ui.home }}">{{ ui.home_label }}</a></li><li><a href="{{ ui.tools_href }}">{{ ui.tools_label }}</a></li><li><span aria-current="page">{{ t.name }}</span></li></ol>
+  <h1 class="t-h1">{{ t.h1 }}</h1>
+  <p class="t-lead">{{ t.lead }}</p>
+</header>
+<section class="wrap tool-wrap">
+  {{ ui_html }}
+  <div class="explain prose">
+    {{ explain }}
+    <aside class="callout"><p>{{ ui.tool_cta_text }}</p><a class="cta" href="{{ ui.contact_href }}">{{ ui.tool_cta }}</a></aside>
+  </div>
+  <div class="related" style="max-width:var(--measure)">
+    <h2>{{ ui.other_tools }}</h2>
+    <div class="rule-list">
+      {% for o in others %}<a class="tool-row" href="{{ o.href }}"><span class="mini" aria-hidden="true">{{ o.mini }}</span><span><h3>{{ o.name }}</h3><p>{{ o.short }}</p></span><span class="tool-row__go">{{ ui.open }}</span></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<script type="application/json" id="tool-i18n">{{ i18n_json }}</script>

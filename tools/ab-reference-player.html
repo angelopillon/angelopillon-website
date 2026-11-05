@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en" data-ga="G-Y0FEM4JQLD" data-sw="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A/B reference track player, loudness-matched | Angelo Pillon</title>
+<meta name="description" content="Compare your mix with a reference track at the same loudness, switching instantly between them. Blind mode included. Runs in your browser.">
+<link rel="canonical" href="https://angelopillon.com/tools/ab-reference-player">
+<link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/ab-reference-player">
+<link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/confronto-ab-reference">
+<link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/ab-reference-player">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Angelo Pillon">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="A/B reference player">
+<meta property="og:description" content="Compare your mix with a reference track at the same loudness, switching instantly between them. Blind mode included. Runs in your browser.">
+<meta property="og:url" content="https://angelopillon.com/tools/ab-reference-player">
+<meta property="og:image" content="https://angelopillon.com/assets/og/en-tool-ab.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A/B reference player">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/assets/og/en-tool-ab.png">
+<meta name="theme-color" content="#DCDDD8">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Angelo Pillon, studio journal" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611051235">
+<script>(function(){try{var f=localStorage.getItem('ap_finish');if(!f&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)f='black';if(f==='black'){document.documentElement.setAttribute('data-finish','black');}}catch(e){}})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"A/B reference player","description":"Compare your mix with a reference track at the same loudness, switching instantly between them. Blind mode included. Runs in your browser.","url":"https://angelopillon.com/tools/ab-reference-player","inLanguage":"en","applicationCategory":"MultimediaApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-160.jpg"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://angelopillon.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://angelopillon.com/tools/"},{"@type":"ListItem","position":3,"name":"A/B reference player","item":"https://angelopillon.com/tools/ab-reference-player"}]}</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="/">Angelo Pillon</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#services">Services</a>
+      <a href="/tools/" aria-current="page">Tools</a>
+      <a href="/articles">Articles</a>
+      <a href="/#contact">Contact</a>
+      
+    </nav>
+    <div class="hdr-actions">
+      <details class="lang">
+        <summary aria-label="Language">EN <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <ul>
+          <li><a href="/tools/ab-reference-player" hreflang="en" lang="en" aria-current="true">English <span>EN</span></a></li>
+          <li><a href="/it/strumenti/confronto-ab-reference" hreflang="it" lang="it">Italiano <span>IT</span></a></li>
+          <li><a href="/de/" hreflang="de" lang="de">Deutsch <span>DE</span></a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a></li>
+          
+        </ul>
+      </details>
+      <div class="finish" role="group" aria-label="Panel finish">
+        <button type="button" data-finish-set="silver" aria-pressed="true">Silver</button>
+        <button type="button" data-finish-set="black" aria-pressed="false">Black</button>
+      </div>
+      <a class="btn btn--small" href="/#contact">Start a project</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<header class="page-head wrap">
+  <ol class="crumbs" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">A/B reference player</span></li></ol>
+  <h1 class="t-h1">A/B reference player</h1>
+  <p class="t-lead">Louder always sounds better, so the comparison is only fair at equal loudness. Load two tracks and switch without a gap.</p>
+</header>
+<section class="wrap tool-wrap">
+  <div class="glass panel" id="ab">
+  <div class="panel__head"><span class="state" data-state-text><i></i> Waiting for a track</span><span>Runs locally. Nothing is uploaded.</span></div>
+  <div class="two-col">
+    <div class="drop" data-drop-a style="margin:0;display:grid;gap:10px">
+      <b data-side-label="a" style="font-size:1.75rem;font-weight:620">A</b><span class="note">A, your track</span><span class="note" data-info-a>No track loaded</span>
+      <input type="file" accept="audio/*,.wav,.aif,.aiff,.flac,.mp3,.m4a,.ogg" aria-label="A, your track"><button class="btn btn--glass" type="button" data-pick>Choose a file</button>
+    </div>
+    <div class="drop" data-drop-b style="margin:0;display:grid;gap:10px">
+      <b data-side-label="b" style="font-size:1.75rem;font-weight:620">B</b><span class="note">B, reference</span><span class="note" data-info-b>No track loaded</span>
+      <input type="file" accept="audio/*,.wav,.aif,.aiff,.flac,.mp3,.m4a,.ogg" aria-label="B, reference"><button class="btn btn--glass" type="button" data-pick>Choose a file</button>
+    </div>
+  </div>
+  <div data-player hidden style="margin-top:20px">
+    <div class="ab-switch"><button type="button" data-pick-side="a" aria-pressed="true"><b data-side-label="a">A</b></button><button type="button" data-pick-side="b" aria-pressed="false"><b data-side-label="b">B</b></button></div>
+    <div class="transport" style="margin-top:16px"><button class="btn btn--glass" type="button" data-play>Play</button><span class="time" data-time>0:00 / 0:00</span><input type="range" min="0" max="1000" value="0" data-seek aria-label="Position"></div>
+    <div class="controls" style="margin-top:16px">
+      <label class="note" style="display:flex;gap:8px;align-items:center"><input type="checkbox" data-match checked> Match loudness</label>
+      <label class="note" style="display:flex;gap:8px;align-items:center"><input type="checkbox" data-blind> Blind mode</label>
+      <button class="btn btn--glass btn--small" type="button" data-reveal hidden>Reveal</button><span class="note" data-reveal-out></span>
+    </div>
+    <p class="note" style="margin-top:14px">&lt;built-in method keys of dict object at 0x7f38271e0fc0&gt;</p>
+  </div>
+</div>
+  <div class="explain prose">
+    <h2>Why loudness matching matters</h2>
+<p>A track that plays 1 dB louder sounds fuller, brighter and more exciting, even when it isn’t better. Comparing your mix with a mastered reference without matching loudness is the most common way to make the wrong decisions. This player measures the integrated loudness of both tracks and applies the gain that makes them equal before you hear them.</p>
+<h2>How to use it</h2>
+<ol>
+<li>Load your track as A and a reference as B. WAV, AIFF, FLAC and MP3 all work.</li>
+<li>Keep <strong>Match loudness</strong> on. The gain applied to each track appears under its name.</li>
+<li>Press play and switch with the buttons or the keyboard: space plays and pauses, A and B select, X switches. Both tracks keep the same position, so you compare the same moment.</li>
+<li>Turn on <strong>Blind mode</strong> to hide which is which. Listen, decide, then press <strong>Reveal</strong>.</li>
+</ol>
+<h2>What to listen for</h2>
+<p>Start with the low end: at the same level, is your kick as clear and your bass as solid as the reference? Then the voice: does it sit in front in the same way? Then the top: is the reference smoother, or more open? A difference you still hear at matched loudness is a real difference.</p>
+<p>Pick recent references in your genre. Everything runs locally; the files are never uploaded.</p>
+    <aside class="callout"><p>Numbers off target, or not sure what they mean for your track? That is the job I do every day.</p><a class="cta" href="/#contact">Get it mixed or mastered</a></aside>
+  </div>
+  <div class="related" style="max-width:var(--measure)">
+    <h2>Other free tools</h2>
+    <div class="rule-list">
+      <a class="tool-row" href="/loudness-meter"><span class="mini" aria-hidden="true">−14.0 LUFS</span><span><h3>LUFS meter</h3><p>Integrated, short-term and momentary loudness, true peak, range, key and tempo.</p></span><span class="tool-row__go">Open</span></a>
+      <a class="tool-row" href="/tools/stereo-phase-analyzer"><span class="mini" aria-hidden="true">+0.82 corr</span><span><h3>Stereo and phase analyzer</h3><p>Correlation, mid and side balance, and mono compatibility, overall and per band.</p></span><span class="tool-row__go">Open</span></a>
+      <a class="tool-row" href="/tools/delay-reverb-calculator"><span class="mini" aria-hidden="true">124 BPM 484 ms</span><span><h3>Delay and reverb calculator</h3><p>Tap the tempo and get delay times, pre-delay and decay in milliseconds.</p></span><span class="tool-row__go">Open</span></a>
+      <a class="tool-row" href="/tools/kick-808-tuning"><span class="mini" aria-hidden="true">F1 43.7 Hz</span><span><h3>Kick and 808 tuning</h3><p>Notes to frequencies, and the low fundamentals that fit your key.</p></span><span class="tool-row__go">Open</span></a>
+      
+    </div>
+  </div>
+</section>
+<script type="application/json" id="tool-i18n">{"decoding": "Decoding…", "busy": "Analyzing… {p}%", "done": "Measured: {name}", "error": "That file could not be read. Try WAV, AIFF, FLAC or MP3.", "notAudio": "That is not an audio file.", "copied": "Copied", "play": "Play", "pause": "Pause", "none": "None", "no": "No", "waiting": "Waiting for a track", "drop": "Drop a WAV, AIFF, FLAC or MP3 here, or choose a file. Analysis runs on your computer; nothing is uploaded.", "choose": "Choose a file", "privacy": "Runs locally. Nothing is uploaded.", "pClub": "No normalization: plays as mastered", "pLimiter": "Raised into Spotify’s limiter", "pNoUp": "Quieter than the reference, not raised", "pCapped": "Raised only as far as the peaks allow", "pDown": "Turned down", "pOn": "At the reference", "a": "A, your track", "b": "B, reference", "empty": "No track loaded", "applied": "matched by {g}", "hidden": "Hidden for blind listening", "ready": "Ready. Press play, then switch with A, B or X.", "addOther": "Loaded. Add the other track.", "match": "Match loudness", "blind": "Blind mode", "reveal": "Reveal", "revealed": "1 was {one}, 2 was {two}.", "keys": "Keys: space plays and pauses, A and B select, X switches."}</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <b>Angelo Pillon</b>
+        <p>Mixing and mastering engineer. Hybrid analog and digital studio in Milan, Apple Digital Masters certified.</p>
+      </div>
+      <div class="ft-col">
+        <h2>Services</h2>
+        <ul><li><a href="/#services">Mastering</a></li><li><a href="/#services">Mix and master</a></li><li><a href="/#services">Stem mastering</a></li><li><a href="/#services">Vocal editing</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Site</h2>
+        <ul><li><a href="/tools/">Free tools</a></li><li><a href="/articles">Articles</a></li><li><a href="/it/articoli/">Articoli in italiano</a></li><li><a href="/feed.xml">RSS feed</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Elsewhere</h2>
+        <ul><li><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Fiverr</a></li><li><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank">SoundBetter</a></li></ul>
+      </div>
+      
+    </div>
+    <div class="ft-bottom">
+      <span>© <span data-year>2026</span> Angelo Pillon, Milan, Italy</span>
+      <nav aria-label="Legal"><a href="/privacy-policy">Privacy policy</a><button type="button" data-consent-open>Cookie settings</button></nav>
+    </div>
+  </div>
+</footer>
+<aside class="consent" id="consent" hidden aria-label="Cookies">
+  <p>I use cookies for anonymous traffic statistics, and only if you accept. The tools and the site work either way. Details in the <a href="/privacy-policy">Privacy policy</a>.</p>
+  <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Accept</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Decline</button></div>
+</aside>
+
+<script src="/assets/js/site.js?v=202611051235" defer></script>
+<script src="/assets/js/tools/common.js?v=202611051235" defer></script>
+<script src="/assets/js/dsp.js?v=202611051235" defer></script>
+<script src="/assets/js/tools/ab.js?v=202611051235" defer></script>
+
+</body>
+</html>

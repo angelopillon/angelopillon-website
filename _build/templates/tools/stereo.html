@@ -1,0 +1,34 @@
+<div class="glass panel" id="stereo">
+  <div class="panel__head"><span class="state" data-state-text><i></i> {{ L.waiting }}</span><span>{{ L.privacy }}</span></div>
+  <div class="drop" data-drop style="margin-top:0">
+    <p>{{ L.drop }}</p>
+    <input type="file" accept="audio/*,.wav,.aif,.aiff,.flac,.mp3,.m4a,.ogg" aria-label="{{ L.choose }}">
+    <button class="btn btn--glass" type="button" data-pick>{{ L.choose }}</button>
+  </div>
+  <div data-results hidden>
+    <dl class="grid-readouts" style="margin-top:28px">
+      <div class="readout"><dt>{{ L.r_corr }}</dt><dd><b data-ro="CORR">—</b></dd></div>
+      <div class="readout"><dt>{{ L.r_cmin }}</dt><dd><b data-ro="CMIN">—</b></dd></div>
+      <div class="readout"><dt>{{ L.r_neg }}</dt><dd><b data-ro="NEG">—</b></dd></div>
+      <div class="readout"><dt>{{ L.r_bal }}</dt><dd><b data-ro="BAL">—</b><small>dB</small></dd></div>
+      <div class="readout"><dt>{{ L.r_width }}</dt><dd><b data-ro="WIDTH">—</b><small>dB</small></dd></div>
+      <div class="readout"><dt>{{ L.r_mono }}</dt><dd><b data-ro="MONO">—</b><small>LU</small></dd></div>
+    </dl>
+    <h2 style="margin-top:28px">{{ L.h_notes }}</h2>
+    <ul class="note" data-notes style="margin-top:10px;padding-left:1.1em;display:grid;gap:6px"></ul>
+    <h2 style="margin-top:28px">{{ L.h_bands }}</h2>
+    <div class="table-scroll" style="margin-top:12px"><table class="vtable" data-bands><thead><tr><th>{{ L.th_band }}</th><th class="r">{{ L.th_corr }}</th><th class="r">{{ L.th_width }}</th><th class="r">{{ L.th_share }}</th><th></th></tr></thead><tbody></tbody></table></div>
+    <h2 style="margin-top:28px">{{ L.h_tl }}</h2>
+    <div class="canvas-box" style="margin-top:12px"><canvas data-corrtl role="img" aria-label="{{ L.h_tl }}"></canvas></div>
+  </div>
+</div>
+<div class="two-col" style="margin-top:16px" data-player hidden>
+  <div class="glass panel"><h2>{{ L.h_scope }}</h2><div class="canvas-box canvas-box--square" style="margin:12px auto 0"><canvas data-scope role="img" aria-label="{{ L.h_scope }}"></canvas></div></div>
+  <div class="glass panel"><h2>{{ L.h_live }}</h2>
+    <div class="transport" style="margin-top:12px"><button class="btn btn--glass" type="button" data-play>{{ L.play }}</button><span class="time" data-time>0:00 / 0:00</span><input type="range" min="0" max="1000" value="0" data-seek aria-label="Position"></div>
+    <div class="seg" role="group" aria-label="Monitoring" style="margin-top:16px"><button type="button" data-mode="stereo" aria-pressed="true">{{ L.m_stereo }}</button><button type="button" data-mode="mono" aria-pressed="false">{{ L.m_mono }}</button><button type="button" data-mode="side" aria-pressed="false">{{ L.m_side }}</button></div>
+    <p class="note" style="margin-top:16px">{{ L.live_corr }} <b data-live-corr-val>—</b></p>
+    <div class="corr-bar" style="margin-top:8px"><i data-live-corr></i></div><div class="corr-scale"><span>−1</span><span>0</span><span>+1</span></div>
+    <div class="canvas-box canvas-box--square" style="margin:16px auto 0;max-width:260px"><canvas data-live-scope aria-hidden="true"></canvas></div>
+  </div>
+</div>

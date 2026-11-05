@@ -1,0 +1,16 @@
+<div class="glass panel" id="streaming">
+  <div class="controls">
+    <label class="gfield"><span>{{ L.i }}</span><input type="number" step="0.1" min="-40" max="0" value="-9" data-i></label>
+    <label class="gfield"><span>{{ L.tp }}</span><input type="number" step="0.1" min="-20" max="3" value="-0.3" data-tp></label>
+  </div>
+  <p class="bridge__verdict" data-summary aria-live="polite" style="margin-top:20px"></p>
+  <p class="note" data-tpnote></p>
+  <div class="table-scroll" style="margin-top:16px"><table class="vtable"><thead><tr><th>{{ L.th_platform }}</th><th class="r">{{ L.th_ref }}</th><th class="r">{{ L.th_gain }}</th><th class="r">{{ L.th_out }}</th><th class="r">{{ L.th_peak }}</th><th>{{ L.th_note }}</th></tr></thead><tbody data-rows></tbody></table></div>
+  <h2 style="margin-top:28px">{{ L.measure }}</h2>
+  <div class="panel__head" style="margin:10px 0 0"><span class="state" data-state-text><i></i> {{ L.privacy }}</span></div>
+  <div class="drop" data-drop style="margin-top:10px">
+    <p>{{ L.drop }}</p>
+    <input type="file" accept="audio/*,.wav,.aif,.aiff,.flac,.mp3,.m4a,.ogg" aria-label="{{ L.choose }}">
+    <button class="btn btn--glass" type="button" data-pick>{{ L.choose }}</button>
+  </div>
+</div>

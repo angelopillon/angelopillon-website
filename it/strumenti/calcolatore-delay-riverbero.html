@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="it" data-ga="G-Y0FEM4JQLD" data-sw="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calcolatore BPM in ms per delay e riverbero, con tap tempo | Angelo Pillon</title>
+<meta name="description" content="Converti i BPM in tempi di delay in millisecondi per note normali, puntate e terzinate, con pre-delay e decadimento del riverbero, release del compressore e tap tempo.">
+<link rel="canonical" href="https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero">
+<link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/delay-reverb-calculator">
+<link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero">
+<link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/delay-reverb-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Angelo Pillon">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Calcolatore dei tempi di delay e riverbero">
+<meta property="og:description" content="Converti i BPM in tempi di delay in millisecondi per note normali, puntate e terzinate, con pre-delay e decadimento del riverbero, release del compressore e tap tempo.">
+<meta property="og:url" content="https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero">
+<meta property="og:image" content="https://angelopillon.com/assets/og/it-tool-delay.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Calcolatore dei tempi di delay e riverbero">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/assets/og/it-tool-delay.png">
+<meta name="theme-color" content="#DCDDD8">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Angelo Pillon, articoli in italiano" href="/it/feed.xml">
+<link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611051235">
+<script>(function(){try{var f=localStorage.getItem('ap_finish');if(!f&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)f='black';if(f==='black'){document.documentElement.setAttribute('data-finish','black');}}catch(e){}})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calcolatore dei tempi di delay e riverbero","description":"Converti i BPM in tempi di delay in millisecondi per note normali, puntate e terzinate, con pre-delay e decadimento del riverbero, release del compressore e tap tempo.","url":"https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero","inLanguage":"it","applicationCategory":"MultimediaApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-160.jpg"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://angelopillon.com/it/"},{"@type":"ListItem","position":2,"name":"Strumenti","item":"https://angelopillon.com/it/strumenti/"},{"@type":"ListItem","position":3,"name":"Calcolatore delay e riverbero","item":"https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero"}]}</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="/it/">Angelo Pillon</a>
+    <nav class="nav" aria-label="Principale">
+      <a href="/it/#services">Servizi</a>
+      <a href="/it/strumenti/" aria-current="page">Strumenti</a>
+      <a href="/it/articoli/">Articoli</a>
+      <a href="/it/#contact">Contatti</a>
+      
+    </nav>
+    <div class="hdr-actions">
+      <details class="lang">
+        <summary aria-label="Lingua">IT <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <ul>
+          <li><a href="/tools/delay-reverb-calculator" hreflang="en" lang="en">English <span>EN</span></a></li>
+          <li><a href="/it/strumenti/calcolatore-delay-riverbero" hreflang="it" lang="it" aria-current="true">Italiano <span>IT</span></a></li>
+          <li><a href="/de/" hreflang="de" lang="de">Deutsch <span>DE</span></a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a></li>
+          
+        </ul>
+      </details>
+      <div class="finish" role="group" aria-label="Finitura del pannello">
+        <button type="button" data-finish-set="silver" aria-pressed="true">Argento</button>
+        <button type="button" data-finish-set="black" aria-pressed="false">Nero</button>
+      </div>
+      <a class="btn btn--small" href="/it/#contact">Inizia un progetto</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<header class="page-head wrap">
+  <ol class="crumbs" aria-label="Percorso"><li><a href="/it/">Home</a></li><li><a href="/it/strumenti/">Strumenti</a></li><li><span aria-current="page">Calcolatore delay e riverbero</span></li></ol>
+  <h1 class="t-h1">Calcolatore dei tempi di delay e riverbero</h1>
+  <p class="t-lead">Scrivi il tempo o battilo. Ogni valore è in millisecondi e si copia con un clic.</p>
+</header>
+<section class="wrap tool-wrap">
+  <div class="glass panel" id="delay">
+  <div class="two-col">
+    <div class="gfield"><span>Tempo (BPM)</span>
+      <div class="controls"><input type="number" min="20" max="400" step="0.1" value="124" data-bpm aria-label="Tempo (BPM)" style="width:140px;font-size:1.5rem"><button class="btn btn--glass btn--small" type="button" data-half>Metà</button><button class="btn btn--glass btn--small" type="button" data-double>Doppio</button></div>
+      <p class="note">Fai clic su un valore per copiarlo.</p>
+    </div>
+    <button class="tap" type="button" data-tap><b data-bpm-read>124</b><span>Tap tempo</span><span class="note" data-tap-n>Anche la barra spaziatrice batte il tempo.</span></button>
+  </div>
+  <h2 style="margin-top:28px">Tempi di delay</h2>
+  <div class="table-scroll" style="margin-top:12px"><table class="vtable"><thead><tr><th>Nota</th><th class="r">Normale</th><th class="r">Puntata</th><th class="r">Terzina</th><th class="r">Velocità LFO</th></tr></thead><tbody data-tbody></tbody></table></div>
+  <div class="two-col" style="margin-top:24px">
+    <div><h2>Riverbero</h2><table class="vtable" style="margin-top:12px"><thead><tr><th></th><th class="r">Pre-delay</th><th class="r">Decadimento</th><th class="r">Totale</th></tr></thead><tbody data-reverb></tbody></table></div>
+    <div><h2>Dinamica</h2><table class="vtable" style="margin-top:12px"><thead><tr><th></th><th class="r">Da</th><th class="r">A</th></tr></thead><tbody data-dyn></tbody></table></div>
+  </div>
+</div>
+  <div class="explain prose">
+    <h2>La tabella dei delay</h2>
+<p>Ogni riga è una figura musicale al tuo tempo, in millisecondi, in tre versioni: normale, puntata (una volta e mezza più lunga) e terzinata (due terzi). L’ultima colonna dà lo stesso valore come frequenza in hertz, per LFO, tremolo e auto-pan. Fai clic su un valore per copiarlo.</p>
+<p>I delay da un quarto stanno nel groove. L’ottavo puntato crea il movimento «rotolante» di tanti dischi pop e dance. Le terzine fanno swingare il delay contro una batteria dritta. Su una voce, un ottavo o un quarto, filtrato in modo che si ripetano solo i medi, non copre la frase successiva.</p>
+<h2>Riverbero e dinamica</h2>
+<p>La tabella del riverbero propone pre-delay e decay per quattro dimensioni di stanza, in modo che la coda finisca a tempo invece di sporcare il colpo successivo. Un pre-delay più lungo tiene la sorgente vicina e le dà spazio intorno. Ne parlo nell’articolo sulla <a href="/it/articoli/profondita-mix">profondità nel mix</a>.</p>
+<p>La tabella della dinamica suggerisce i rilasci per compressori, sidechain e gate, legati al tempo. Un rilascio che si chiude poco prima del colpo successivo fa respirare il compressore con il groove invece che contro.</p>
+<h2>Tap tempo</h2>
+<p>Se non conosci il BPM, batti il tempo sul pulsante grande, o con la barra spaziatrice, insieme al brano. Bastano pochi colpi per una lettura stabile. Usa Metà e Doppio per passare tra half-time e double-time.</p>
+<p>Sono punti di partenza: un arrangiamento pieno chiede spesso code più corte di quelle che suggerisce il calcolo.</p>
+    <aside class="callout"><p>Numeri fuori target, o non sai cosa significano per il tuo brano? È il lavoro che faccio ogni giorno.</p><a class="cta" href="/it/#contact">Fai mixare o masterizzare il brano</a></aside>
+  </div>
+  <div class="related" style="max-width:var(--measure)">
+    <h2>Altri strumenti gratuiti</h2>
+    <div class="rule-list">
+      <a class="tool-row" href="/it/strumenti/misuratore-lufs"><span class="mini" aria-hidden="true">−14,0 LUFS</span><span><h3>Misuratore LUFS</h3><p>Loudness integrata, short-term e momentary, true peak, range, tonalità e BPM.</p></span><span class="tool-row__go">Apri</span></a>
+      <a class="tool-row" href="/it/strumenti/analizzatore-fase-stereo"><span class="mini" aria-hidden="true">+0,82 corr</span><span><h3>Analizzatore di fase e stereo</h3><p>Correlazione, bilanciamento mid e side e compatibilità mono, in totale e per banda.</p></span><span class="tool-row__go">Apri</span></a>
+      <a class="tool-row" href="/it/strumenti/confronto-ab-reference"><span class="mini" aria-hidden="true">B −1,6 dB</span><span><h3>Confronto A/B con reference</h3><p>Il tuo brano contro una reference, a pari loudness, senza pause nel cambio.</p></span><span class="tool-row__go">Apri</span></a>
+      <a class="tool-row" href="/it/strumenti/accordatura-kick-808"><span class="mini" aria-hidden="true">Fa1 43,7 Hz</span><span><h3>Accordatura di kick e 808</h3><p>Note in frequenze, e le fondamentali basse adatte alla tua tonalità.</p></span><span class="tool-row__go">Apri</span></a>
+      
+    </div>
+  </div>
+</section>
+<script type="application/json" id="tool-i18n">{"decoding": "Decodifico…", "busy": "Analizzo… {p}%", "done": "Misurato: {name}", "error": "Il file non si legge. Prova con WAV, AIFF, FLAC o MP3.", "notAudio": "Questo non è un file audio.", "copied": "Copiato", "play": "Play", "pause": "Pausa", "none": "Nessuno", "no": "No", "waiting": "In attesa di un brano", "drop": "Trascina qui un WAV, AIFF, FLAC o MP3, oppure scegli un file. L’analisi avviene sul tuo computer: non viene caricato nulla.", "choose": "Scegli un file", "privacy": "Gira in locale. Non viene caricato nulla.", "pClub": "Nessuna normalizzazione: suona come masterizzato", "pLimiter": "Alzato fino al limiter di Spotify", "pNoUp": "Più basso del riferimento, non viene alzato", "pCapped": "Alzato solo quanto permettono i picchi", "pDown": "Abbassato", "pOn": "Al riferimento", "bpm": "Tempo (BPM)", "tap": "Tap tempo", "tapMore": "Continua a battere", "taps": "{n} battute", "half": "Metà", "double": "Doppio", "note": "Nota", "straight": "Normale", "dotted": "Puntata", "triplet": "Terzina", "rate": "Velocità LFO", "h_delay": "Tempi di delay", "h_reverb": "Riverbero", "h_dyn": "Dinamica", "pre": "Pre-delay", "decay": "Decadimento", "total": "Totale", "range_from": "Da", "range_to": "A", "rvTight": "Stretto", "rvSmall": "Stanza piccola", "rvMedium": "Sala media", "rvLarge": "Sala grande", "dynComp": "Release del compressore", "dynSide": "Ducking del sidechain", "dynGate": "Hold del gate", "copiedMs": "Copiato {v}", "click_copy": "Fai clic su un valore per copiarlo.", "space_tap": "Anche la barra spaziatrice batte il tempo."}</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <b>Angelo Pillon</b>
+        <p>Fonico di mix e mastering. Studio ibrido analogico e digitale a Milano, certificato Apple Digital Masters.</p>
+      </div>
+      <div class="ft-col">
+        <h2>Servizi</h2>
+        <ul><li><a href="/it/#services">Mastering</a></li><li><a href="/it/#services">Mix e master</a></li><li><a href="/it/#services">Stem mastering</a></li><li><a href="/it/#services">Editing vocale</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Sito</h2>
+        <ul><li><a href="/it/strumenti/">Strumenti gratuiti</a></li><li><a href="/it/articoli/">Articoli</a></li><li><a href="/articles">Articles in English</a></li><li><a href="/it/feed.xml">Feed RSS</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Altrove</h2>
+        <ul><li><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Fiverr</a></li><li><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank">SoundBetter</a></li></ul>
+      </div>
+      
+    </div>
+    <div class="ft-bottom">
+      <span>© <span data-year>2026</span> Angelo Pillon, Milano</span>
+      <nav aria-label="Note legali"><a href="/it/privacy">Privacy policy</a><button type="button" data-consent-open>Impostazioni cookie</button></nav>
+    </div>
+  </div>
+</footer>
+<aside class="consent" id="consent" hidden aria-label="Cookie">
+  <p>Uso cookie per statistiche anonime sul traffico, e solo se accetti. Il sito e gli strumenti funzionano comunque. Dettagli nella <a href="/it/privacy">Privacy policy</a>.</p>
+  <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Accetta</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Rifiuta</button></div>
+</aside>
+
+<script src="/assets/js/site.js?v=202611051235" defer></script>
+<script src="/assets/js/tools/common.js?v=202611051235" defer></script>
+<script src="/assets/js/tools/delay.js?v=202611051235" defer></script>
+
+</body>
+</html>

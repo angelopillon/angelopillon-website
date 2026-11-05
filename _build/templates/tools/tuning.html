@@ -1,0 +1,14 @@
+<div class="glass panel" id="tuning">
+  <div class="controls">
+    <label class="gfield"><span>{{ L.root_l }}</span><select data-root>{% for n in ["C","C♯/D♭","D","D♯/E♭","E","F","F♯/G♭","G","G♯/A♭","A","A♯/B♭","B"] %}<option value="{{ loop.index0 }}"{% if loop.index0 == 9 %} selected{% endif %}>{{ n }}</option>{% endfor %}</select></label>
+    <label class="gfield"><span>{{ L.mode_l }}</span><select data-mode><option value="minor" selected>{{ L.minor }}</option><option value="major">{{ L.major }}</option></select></label>
+    <label class="gfield"><span>{{ L.a4 }}</span><input type="number" min="400" max="480" step="0.1" value="440" data-a4></label>
+    <div class="gfield"><span>&nbsp;</span><div class="seg"><button type="button" data-a4-set="440">440</button><button type="button" data-a4-set="432">432</button><button type="button" data-a4-set="442">442</button></div></div>
+    <label class="gfield" style="min-width:160px"><span>{{ L.vol }}</span><input type="range" min="0.05" max="0.8" step="0.05" value="0.25" data-vol></label>
+  </div>
+  <p class="note" style="margin-top:12px">{{ L.warn }}</p>
+  <h2 style="margin-top:24px">{{ L.h_chart }}: <span data-key-name></span></h2>
+  <div class="table-scroll" style="margin-top:12px"><table class="vtable"><thead><tr><th>{{ L.note }}</th><th class="r">{{ L.freq }}</th><th>{{ L.role }}</th><th></th></tr></thead><tbody data-notes></tbody></table></div>
+  <h2 style="margin-top:28px">{{ L.h_conv }}</h2>
+  <div class="controls" style="margin-top:12px"><label class="gfield"><span>{{ L.hz }}</span><input type="number" min="1" step="0.1" value="55" data-hz></label><b class="readout" style="font-size:1.5rem;font-weight:560" data-hz-out>—</b></div>
+</div>

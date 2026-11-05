@@ -1,0 +1,43 @@
+{
+ "name": "Angelo Pillon, mixing and mastering",
+ "short_name": "A. Pillon",
+ "description": "Mixing and mastering in Milan, with free audio tools that work offline.",
+ "start_url": "/?source=pwa",
+ "scope": "/",
+ "display": "standalone",
+ "background_color": "#DCDDD8",
+ "theme_color": "#DCDDD8",
+ "lang": "en",
+ "icons": [
+  {
+   "src": "/assets/img/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/assets/img/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "/assets/img/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "LUFS meter",
+   "url": "/loudness-meter"
+  },
+  {
+   "name": "Misuratore LUFS",
+   "url": "/it/strumenti/misuratore-lufs"
+  },
+  {
+   "name": "Tools",
+   "url": "/tools/"
+  }
+ ]
+}

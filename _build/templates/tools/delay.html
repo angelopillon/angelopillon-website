@@ -1,0 +1,15 @@
+<div class="glass panel" id="delay">
+  <div class="two-col">
+    <div class="gfield"><span>{{ L.bpm }}</span>
+      <div class="controls"><input type="number" min="20" max="400" step="0.1" value="124" data-bpm aria-label="{{ L.bpm }}" style="width:140px;font-size:1.5rem"><button class="btn btn--glass btn--small" type="button" data-half>{{ L.half }}</button><button class="btn btn--glass btn--small" type="button" data-double>{{ L.double }}</button></div>
+      <p class="note">{{ L.click_copy }}</p>
+    </div>
+    <button class="tap" type="button" data-tap><b data-bpm-read>124</b><span>{{ L.tap }}</span><span class="note" data-tap-n>{{ L.space_tap }}</span></button>
+  </div>
+  <h2 style="margin-top:28px">{{ L.h_delay }}</h2>
+  <div class="table-scroll" style="margin-top:12px"><table class="vtable"><thead><tr><th>{{ L.note }}</th><th class="r">{{ L.straight }}</th><th class="r">{{ L.dotted }}</th><th class="r">{{ L.triplet }}</th><th class="r">{{ L.rate }}</th></tr></thead><tbody data-tbody></tbody></table></div>
+  <div class="two-col" style="margin-top:24px">
+    <div><h2>{{ L.h_reverb }}</h2><table class="vtable" style="margin-top:12px"><thead><tr><th></th><th class="r">{{ L.pre }}</th><th class="r">{{ L.decay }}</th><th class="r">{{ L.total }}</th></tr></thead><tbody data-reverb></tbody></table></div>
+    <div><h2>{{ L.h_dyn }}</h2><table class="vtable" style="margin-top:12px"><thead><tr><th></th><th class="r">{{ L.range_from }}</th><th class="r">{{ L.range_to }}</th></tr></thead><tbody data-dyn></tbody></table></div>
+  </div>
+</div>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" data-ga="G-Y0FEM4JQLD" data-sw="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BPM to ms delay and reverb calculator with tap tempo | Angelo Pillon</title>
+<meta name="description" content="Convert BPM to delay times in milliseconds for straight, dotted and triplet notes, with reverb pre-delay and decay, compressor release and a tap tempo.">
+<link rel="canonical" href="https://angelopillon.com/tools/delay-reverb-calculator">
+<link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/delay-reverb-calculator">
+<link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero">
+<link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/delay-reverb-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Angelo Pillon">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Delay and reverb time calculator">
+<meta property="og:description" content="Convert BPM to delay times in milliseconds for straight, dotted and triplet notes, with reverb pre-delay and decay, compressor release and a tap tempo.">
+<meta property="og:url" content="https://angelopillon.com/tools/delay-reverb-calculator">
+<meta property="og:image" content="https://angelopillon.com/assets/og/en-tool-delay.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Delay and reverb time calculator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/assets/og/en-tool-delay.png">
+<meta name="theme-color" content="#DCDDD8">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Angelo Pillon, studio journal" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611051235">
+<script>(function(){try{var f=localStorage.getItem('ap_finish');if(!f&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)f='black';if(f==='black'){document.documentElement.setAttribute('data-finish','black');}}catch(e){}})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Delay and reverb time calculator","description":"Convert BPM to delay times in milliseconds for straight, dotted and triplet notes, with reverb pre-delay and decay, compressor release and a tap tempo.","url":"https://angelopillon.com/tools/delay-reverb-calculator","inLanguage":"en","applicationCategory":"MultimediaApplication","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-160.jpg"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://angelopillon.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://angelopillon.com/tools/"},{"@type":"ListItem","position":3,"name":"Delay and reverb calculator","item":"https://angelopillon.com/tools/delay-reverb-calculator"}]}</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="/">Angelo Pillon</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#services">Services</a>
+      <a href="/tools/" aria-current="page">Tools</a>
+      <a href="/articles">Articles</a>
+      <a href="/#contact">Contact</a>
+      
+    </nav>
+    <div class="hdr-actions">
+      <details class="lang">
+        <summary aria-label="Language">EN <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <ul>
+          <li><a href="/tools/delay-reverb-calculator" hreflang="en" lang="en" aria-current="true">English <span>EN</span></a></li>
+          <li><a href="/it/strumenti/calcolatore-delay-riverbero" hreflang="it" lang="it">Italiano <span>IT</span></a></li>
+          <li><a href="/de/" hreflang="de" lang="de">Deutsch <span>DE</span></a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a></li>
+          
+        </ul>
+      </details>
+      <div class="finish" role="group" aria-label="Panel finish">
+        <button type="button" data-finish-set="silver" aria-pressed="true">Silver</button>
+        <button type="button" data-finish-set="black" aria-pressed="false">Black</button>
+      </div>
+      <a class="btn btn--small" href="/#contact">Start a project</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<header class="page-head wrap">
+  <ol class="crumbs" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li><a href="/tools/">Tools</a></li><li><span aria-current="page">Delay and reverb calculator</span></li></ol>
+  <h1 class="t-h1">Delay and reverb time calculator</h1>
+  <p class="t-lead">Type the tempo or tap it. Every value is in milliseconds and copies with one click.</p>
+</header>
+<section class="wrap tool-wrap">
+  <div class="glass panel" id="delay">
+  <div class="two-col">
+    <div class="gfield"><span>Tempo (BPM)</span>
+      <div class="controls"><input type="number" min="20" max="400" step="0.1" value="124" data-bpm aria-label="Tempo (BPM)" style="width:140px;font-size:1.5rem"><button class="btn btn--glass btn--small" type="button" data-half>Half</button><button class="btn btn--glass btn--small" type="button" data-double>Double</button></div>
+      <p class="note">Click a value to copy it.</p>
+    </div>
+    <button class="tap" type="button" data-tap><b data-bpm-read>124</b><span>Tap tempo</span><span class="note" data-tap-n>Space bar also taps.</span></button>
+  </div>
+  <h2 style="margin-top:28px">Delay times</h2>
+  <div class="table-scroll" style="margin-top:12px"><table class="vtable"><thead><tr><th>Note</th><th class="r">Straight</th><th class="r">Dotted</th><th class="r">Triplet</th><th class="r">LFO rate</th></tr></thead><tbody data-tbody></tbody></table></div>
+  <div class="two-col" style="margin-top:24px">
+    <div><h2>Reverb</h2><table class="vtable" style="margin-top:12px"><thead><tr><th></th><th class="r">Pre-delay</th><th class="r">Decay</th><th class="r">Total</th></tr></thead><tbody data-reverb></tbody></table></div>
+    <div><h2>Dynamics</h2><table class="vtable" style="margin-top:12px"><thead><tr><th></th><th class="r">From</th><th class="r">To</th></tr></thead><tbody data-dyn></tbody></table></div>
+  </div>
+</div>
+  <div class="explain prose">
+    <h2>The delay table</h2>
+<p>Each row is a note value at your tempo, in milliseconds, in three versions: straight, dotted (one and a half times longer) and triplet (two thirds). The last column gives the same value as a rate in hertz, for LFOs, tremolo and auto-pan. Click any value to copy it.</p>
+<p>Quarter-note delays sit with the groove. Dotted eighths create the rolling pattern of so many pop and dance records. Triplets swing against straight drums. On a vocal, an eighth or a quarter, filtered so that only the mids repeat, stays out of the way of the next phrase.</p>
+<h2>Reverb and dynamics</h2>
+<p>The reverb table gives a pre-delay and a decay for four room sizes, so that the tail ends on the beat instead of smearing the next hit. A longer pre-delay keeps the source close while giving it space.</p>
+<p>The dynamics table suggests release ranges for compressors, sidechain ducking and gates, locked to the tempo. A release that recovers just before the next beat makes a compressor breathe with the groove instead of against it.</p>
+<h2>Tap tempo</h2>
+<p>If you don’t know the BPM, tap the big button, or the space bar, along with the track. A few taps give a stable reading. Use half and double to move between half-time and double-time feels.</p>
+<p>These values are starting points: a busy arrangement often wants shorter tails than the arithmetic suggests.</p>
+    <aside class="callout"><p>Numbers off target, or not sure what they mean for your track? That is the job I do every day.</p><a class="cta" href="/#contact">Get it mixed or mastered</a></aside>
+  </div>
+  <div class="related" style="max-width:var(--measure)">
+    <h2>Other free tools</h2>
+    <div class="rule-list">
+      <a class="tool-row" href="/loudness-meter"><span class="mini" aria-hidden="true">−14.0 LUFS</span><span><h3>LUFS meter</h3><p>Integrated, short-term and momentary loudness, true peak, range, key and tempo.</p></span><span class="tool-row__go">Open</span></a>
+      <a class="tool-row" href="/tools/stereo-phase-analyzer"><span class="mini" aria-hidden="true">+0.82 corr</span><span><h3>Stereo and phase analyzer</h3><p>Correlation, mid and side balance, and mono compatibility, overall and per band.</p></span><span class="tool-row__go">Open</span></a>
+      <a class="tool-row" href="/tools/ab-reference-player"><span class="mini" aria-hidden="true">B −1.6 dB</span><span><h3>A/B reference player</h3><p>Your track against a reference, loudness-matched, switched without a gap.</p></span><span class="tool-row__go">Open</span></a>
+      <a class="tool-row" href="/tools/kick-808-tuning"><span class="mini" aria-hidden="true">F1 43.7 Hz</span><span><h3>Kick and 808 tuning</h3><p>Notes to frequencies, and the low fundamentals that fit your key.</p></span><span class="tool-row__go">Open</span></a>
+      
+    </div>
+  </div>
+</section>
+<script type="application/json" id="tool-i18n">{"decoding": "Decoding…", "busy": "Analyzing… {p}%", "done": "Measured: {name}", "error": "That file could not be read. Try WAV, AIFF, FLAC or MP3.", "notAudio": "That is not an audio file.", "copied": "Copied", "play": "Play", "pause": "Pause", "none": "None", "no": "No", "waiting": "Waiting for a track", "drop": "Drop a WAV, AIFF, FLAC or MP3 here, or choose a file. Analysis runs on your computer; nothing is uploaded.", "choose": "Choose a file", "privacy": "Runs locally. Nothing is uploaded.", "pClub": "No normalization: plays as mastered", "pLimiter": "Raised into Spotify’s limiter", "pNoUp": "Quieter than the reference, not raised", "pCapped": "Raised only as far as the peaks allow", "pDown": "Turned down", "pOn": "At the reference", "bpm": "Tempo (BPM)", "tap": "Tap tempo", "tapMore": "Keep tapping", "taps": "{n} taps", "half": "Half", "double": "Double", "note": "Note", "straight": "Straight", "dotted": "Dotted", "triplet": "Triplet", "rate": "LFO rate", "h_delay": "Delay times", "h_reverb": "Reverb", "h_dyn": "Dynamics", "pre": "Pre-delay", "decay": "Decay", "total": "Total", "range_from": "From", "range_to": "To", "rvTight": "Tight", "rvSmall": "Small room", "rvMedium": "Medium hall", "rvLarge": "Large hall", "dynComp": "Compressor release", "dynSide": "Sidechain duck", "dynGate": "Gate hold", "copiedMs": "Copied {v}", "click_copy": "Click a value to copy it.", "space_tap": "Space bar also taps."}</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <b>Angelo Pillon</b>
+        <p>Mixing and mastering engineer. Hybrid analog and digital studio in Milan, Apple Digital Masters certified.</p>
+      </div>
+      <div class="ft-col">
+        <h2>Services</h2>
+        <ul><li><a href="/#services">Mastering</a></li><li><a href="/#services">Mix and master</a></li><li><a href="/#services">Stem mastering</a></li><li><a href="/#services">Vocal editing</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Site</h2>
+        <ul><li><a href="/tools/">Free tools</a></li><li><a href="/articles">Articles</a></li><li><a href="/it/articoli/">Articoli in italiano</a></li><li><a href="/feed.xml">RSS feed</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Elsewhere</h2>
+        <ul><li><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Fiverr</a></li><li><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank">SoundBetter</a></li></ul>
+      </div>
+      
+    </div>
+    <div class="ft-bottom">
+      <span>© <span data-year>2026</span> Angelo Pillon, Milan, Italy</span>
+      <nav aria-label="Legal"><a href="/privacy-policy">Privacy policy</a><button type="button" data-consent-open>Cookie settings</button></nav>
+    </div>
+  </div>
+</footer>
+<aside class="consent" id="consent" hidden aria-label="Cookies">
+  <p>I use cookies for anonymous traffic statistics, and only if you accept. The tools and the site work either way. Details in the <a href="/privacy-policy">Privacy policy</a>.</p>
+  <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Accept</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Decline</button></div>
+</aside>
+
+<script src="/assets/js/site.js?v=202611051235" defer></script>
+<script src="/assets/js/tools/common.js?v=202611051235" defer></script>
+<script src="/assets/js/tools/delay.js?v=202611051235" defer></script>
+
+</body>
+</html>

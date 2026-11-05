@@ -1,0 +1,59 @@
+# Netlify configuration for angelopillon.com (static, no build step)
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+[[redirects]]
+  from = "/_build/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/articles/"
+  to = "/articles"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/articoli"
+  to = "/it/articoli/"
+  status = 301
+
+[[redirects]]
+  from = "/it/strumenti"
+  to = "/it/strumenti/"
+  status = 301
+
+[[redirects]]
+  from = "/tools"
+  to = "/tools/"
+  status = 301

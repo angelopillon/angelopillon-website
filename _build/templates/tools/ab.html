@@ -1,0 +1,23 @@
+<div class="glass panel" id="ab">
+  <div class="panel__head"><span class="state" data-state-text><i></i> {{ L.waiting }}</span><span>{{ L.privacy }}</span></div>
+  <div class="two-col">
+    <div class="drop" data-drop-a style="margin:0;display:grid;gap:10px">
+      <b data-side-label="a" style="font-size:1.75rem;font-weight:620">A</b><span class="note">{{ L.a }}</span><span class="note" data-info-a>{{ L.empty }}</span>
+      <input type="file" accept="audio/*,.wav,.aif,.aiff,.flac,.mp3,.m4a,.ogg" aria-label="{{ L.a }}"><button class="btn btn--glass" type="button" data-pick>{{ L.choose }}</button>
+    </div>
+    <div class="drop" data-drop-b style="margin:0;display:grid;gap:10px">
+      <b data-side-label="b" style="font-size:1.75rem;font-weight:620">B</b><span class="note">{{ L.b }}</span><span class="note" data-info-b>{{ L.empty }}</span>
+      <input type="file" accept="audio/*,.wav,.aif,.aiff,.flac,.mp3,.m4a,.ogg" aria-label="{{ L.b }}"><button class="btn btn--glass" type="button" data-pick>{{ L.choose }}</button>
+    </div>
+  </div>
+  <div data-player hidden style="margin-top:20px">
+    <div class="ab-switch"><button type="button" data-pick-side="a" aria-pressed="true"><b data-side-label="a">A</b></button><button type="button" data-pick-side="b" aria-pressed="false"><b data-side-label="b">B</b></button></div>
+    <div class="transport" style="margin-top:16px"><button class="btn btn--glass" type="button" data-play>{{ L.play }}</button><span class="time" data-time>0:00 / 0:00</span><input type="range" min="0" max="1000" value="0" data-seek aria-label="Position"></div>
+    <div class="controls" style="margin-top:16px">
+      <label class="note" style="display:flex;gap:8px;align-items:center"><input type="checkbox" data-match checked> {{ L.match }}</label>
+      <label class="note" style="display:flex;gap:8px;align-items:center"><input type="checkbox" data-blind> {{ L.blind }}</label>
+      <button class="btn btn--glass btn--small" type="button" data-reveal hidden>{{ L.reveal }}</button><span class="note" data-reveal-out></span>
+    </div>
+    <p class="note" style="margin-top:14px">{{ L.keys }}</p>
+  </div>
+</div>
