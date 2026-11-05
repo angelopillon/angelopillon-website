@@ -43,6 +43,8 @@ Il segreto non è il compressore giusto, ma la divisione del lavoro: prima si li
 | De-esser | — | rapido | rapido | 2 – 4 dB sulle sibilanti |
 | Bus parallelo | 4:1 o più | rapido | medio | 10 dB o più, miscelato basso |
 
+Puoi anche invertire i primi due stadi, prima l’ottico e poi il veloce: è l’ordine che uso spesso nel pop e nell’R&B, dove voglio che il compressore lento modelli la voce e quello veloce prenda solo gli ultimi picchi. Funzionano entrambi: conta che ognuno lavori poco.
+
 Sono punti di partenza, non ricette. Una voce soul con grandi salti dinamici chiede un primo stadio più deciso; un parlato rap già regolare a volte non ha bisogno del secondo.
 
 <blockquote class="pull">Due compressori che lavorano poco suonano meglio di uno che lavora tanto. E l’ultimo dB lo danno sempre le automazioni.</blockquote>
