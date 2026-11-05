@@ -2,3 +2,4 @@ _build/.cache/
 __pycache__/
 *.pyc
 .DS_Store
+_build/js/node_modules/

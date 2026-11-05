@@ -23,16 +23,15 @@
 <meta property="og:image:alt" content="Angelo Pillon, Mixing- und Mastering-Engineer in Mailand">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://angelopillon.com/assets/og/de-home.png">
-<meta name="theme-color" content="#DCDDD8">
-<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Angelo Pillon, Studio-Journal" href="/feed.xml">
 <link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=202611051236">
-<script>(function(){try{var f=localStorage.getItem('ap_finish');if(!f&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)f='black';if(f==='black'){document.documentElement.setAttribute('data-finish','black');}}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611051318">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://angelopillon.com/#service","name":"Angelo Pillon, mixing and mastering","description":"Mixing und Mastering aus einem hybriden analogen und digitalen Studio in Mailand. Apple Digital Masters zertifiziert, 4,9/5 aus über 700 Bewertungen. Kostenlose Audio-Tools.","url":"https://angelopillon.com/de/","image":"https://angelopillon.com/assets/img/studio-1-1400.jpg","logo":"https://angelopillon.com/assets/img/icon-512.png","address":{"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"},"areaServed":"Worldwide","knowsLanguage":["en","it","de","es"],"founder":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-160.jpg"},"sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","bestRating":"5","ratingCount":"700"},"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mastering"},"priceSpecification":{"@type":"PriceSpecification","minPrice":60,"priceCurrency":"EUR"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mix und Master"},"priceSpecification":{"@type":"PriceSpecification","minPrice":90,"priceCurrency":"EUR"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Stem-Mastering"},"priceSpecification":{"@type":"PriceSpecification","minPrice":100,"priceCurrency":"EUR"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Vocal-Editing"},"priceSpecification":{"@type":"PriceSpecification","minPrice":60,"priceCurrency":"EUR"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"de","mainEntity":[{"@type":"Question","name":"Wie schicke ich meine Dateien?","acceptedAnswer":{"@type":"Answer","text":"Lade Stems oder Mix bei WeTransfer, Google Drive oder Dropbox hoch und füge den Link ins Formular ein, oder schick sie über Fiverr. WAV in Samplerate und Bittiefe der Session, ohne Bearbeitung auf dem Master-Bus."}},{"@type":"Question","name":"Wie lange dauert es?","acceptedAnswer":{"@type":"Answer","text":"Mastering etwa 48 Stunden, Mix und Master 3 bis 5 Tage. Für Alben und EPs gibt es vorab einen Zeitplan."}},{"@type":"Question","name":"Wie viele Änderungen sind dabei?","acceptedAnswer":{"@type":"Answer","text":"Änderungen gibt es, bis der Track stimmt. Die meisten Projekte brauchen ein oder zwei Runden."}},{"@type":"Question","name":"Wie laut wird mein Master?","acceptedAnswer":{"@type":"Answer","text":"So laut, wie die Musik es ohne Schaden erlaubt. Für Streaming halte ich den True Peak bei −0,3 oder −0,2 dBTP und wähle die Lautheit nach Genre; Club-Master sind meist lauter."}},{"@type":"Question","name":"Produzierst oder arrangierst du auch?","acceptedAnswer":{"@type":"Answer","text":"Nein. Ich mische, mastere und editiere Vocals. Arrangement, Produktion und Edits wie Radio-Versionen kommen von dir, fertig zum Mischen."}},{"@type":"Question","name":"Kann ich über Fiverr oder SoundBetter buchen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Beide Profile findest du unten: derselbe Engineer, dieselbe Kette."}},{"@type":"Question","name":"Arbeitest du auch auf Deutsch?","acceptedAnswer":{"@type":"Answer","text":"Ja. Deutsch, Englisch, Italienisch und Spanisch."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Angelo Pillon","url":"https://angelopillon.com/","inLanguage":"de"}</script>
@@ -61,27 +60,293 @@
           
         </ul>
       </details>
-      <div class="finish" role="group" aria-label="Frontplatte">
-        <button type="button" data-finish-set="silver" aria-pressed="true">Silber</button>
-        <button type="button" data-finish-set="black" aria-pressed="false">Schwarz</button>
-      </div>
       <a class="btn btn--small" href="/de/#contact">Projekt starten</a>
     </div>
     <button class="menu-btn" type="button" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
 <main id="main">
-<section class="opening" id="measure">
+<canvas id="cosmos" class="cosmos" aria-hidden="true"></canvas>
+<div class="cosmos-fallback" aria-hidden="true"></div>
+
+<section class="hero" id="top">
+  <div class="wrap hero__inner">
+    <h1 class="hero__title"><span class="hero__kicker" data-hero-k>Mixing und Mastering · Mailand</span><span class="hero__line">Deine Musik, perfektioniert.</span></h1>
+    <p class="hero__lead" data-hero-l>Ein hybrides Studio in Mailand für Artists, Produzenten und Labels in 66 Ländern. Ausgewogen, so laut wie nötig, sicher auf jeder Plattform.</p>
+    <div class="hero__cta" data-hero-c>
+      <a class="btn btn--glow" href="#contact" data-magnetic>Projekt starten</a>
+      <a class="btn btn--ghost" href="#listen" data-magnetic>Arbeiten anhören</a>
+    </div>
+  </div>
+  <a class="hero__scroll" href="#story"><span>Scrollen</span><i></i></a>
+</section>
+
+<section class="story" id="story" aria-label="Vom Rauschen zum Master">
+  <div class="story__sticky">
+    <div class="wrap story__lines">
+      <p class="story__line">Am Anfang ist es nur Rauschen.</p>
+      <p class="story__line">Dann wird es Klang.</p>
+      <p class="story__line">Der Mix gibt ihm Form.</p>
+      <p class="story__line">Das Mastering macht es zeitlos.</p>
+      
+    </div>
+    <div class="story__bar" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<section class="worldwide" id="worldwide" aria-labelledby="h-world">
+  <div class="wrap worldwide__grid">
+    <div class="worldwide__text">
+      <p class="worldwide__num grad-text"><span data-count="66">66</span></p>
+      <h2 class="t-display" id="h-world" data-split>Länder. Ein Standard.</h2>
+      <p class="t-lead" data-reveal>Artists, Produzenten, Labels und Studios auf fünf Kontinenten schicken mir ihre Platten. Jeder Master verlässt Mailand geprüft für jede Plattform, auf der er erscheint.</p>
+      <p class="ticker" data-reveal><span>Gerade unterwegs nach</span><b data-ticker data-codes="AL,AR,AU,AT,BD,BE,BA,BR,BG,KH,CA,CL,CO,CR,HR,CU,CZ,DK,DO,EE,FI,FR,GE,DE,GR,GT,HU,IS,IN,ID,IE,IL,IT,LV,LT,LU,MK,MY,ME,MM,NL,NZ,OM,PG,PL,PT,RS,RO,SA,SK,SI,ZA,KR,ES,SE,CH,TW,TH,TR,AE,GB,US,UY,VE,VN">&nbsp;</b></p>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Mixing und Mastering · Mailand">
+  <div class="wrap stats__grid" data-reveal data-reveal-kids>
+    <div class="stat"><b><span data-count="1200">1,200</span>+</b><span>Gelieferte Tracks</span></div>
+    <div class="stat"><b><span data-count="15">15</span>+</b><span>Jahre in Vollzeit</span></div>
+    <div class="stat"><b><span data-count="4.9" data-dec="1">4.9</span></b><span>Bewertung aus über 700 Reviews</span></div>
+    <div class="stat"><b><span data-count="48">48</span>h</b><span>Übliche Mastering-Lieferzeit</span></div>
+  </div>
+</section>
+
+<section class="engineer" id="engineer" aria-labelledby="h-eng">
+  <div class="wrap engineer__grid">
+    <figure class="engineer__photo" data-clip>
+      <picture>
+        <source type="image/webp" srcset="/assets/img/studio-1-900.webp 900w, /assets/img/studio-1-1400.webp 1400w" sizes="(max-width:900px) 100vw, 600px">
+        <img src="/assets/img/studio-1-1400.jpg" alt="Angelo Pillon am Mischpult in seinem Studio in Mailand" width="1400" height="839" loading="lazy" decoding="async" data-parallax="6">
+      </picture>
+    </figure>
+    <div class="engineer__text">
+      <h2 class="t-h2" id="h-eng" data-split>Fünfzehn Jahre am Pult.</h2>
+      <p data-reveal>Ich bin Angelo, ein italienischer Engineer. Ich habe in einigen der größten Aufnahmestudios gearbeitet und mit Künstlern, die es bis nach Sanremo geschafft haben. Heute mische und mastere ich für Künstler, Produzenten und Labels in mehr als 66 Ländern.</p>
+      <p data-reveal>Jedes Genre hat seine eigene Physik. Techno lebt vom Bass und dem Raum darum, R&amp;B von Luft in der Stimme und Groove, Pop von einer Lead-Stimme, die nie gegen den Track kämpft. Ich richte jede Session auf die Platte vor mir aus, nicht auf ein Preset.</p>
+      <dl class="spec" data-reveal data-reveal-kids>
+        <div><dt>Erfahrung</dt><dd>Über 15 Jahre, hauptberuflich</dd></div>
+        <div><dt>Bewertungen</dt><dd>4,9 von 5 aus über 700 Bewertungen</dd></div>
+        <div><dt>Tracks</dt><dd>Über 1.200 geliefert</dd></div>
+        <div><dt>Zertifizierung</dt><dd>Apple Digital Masters</dd></div>
+        <div><dt>Sprachen</dt><dd>Deutsch, Englisch, Italienisch, Spanisch</dd></div>
+        
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="h-svc">
   <div class="wrap">
-    <h1 class="t-display">Mixing und Mastering aus einem hybriden Studio in Mailand.</h1>
-    <div class="opening__row">
-      <p class="t-lead">Schick mir deine Stems oder deinen Mix. Zurück kommt eine Platte, die ausgewogen ist, so laut wie sie sein sollte und sicher auf jeder Plattform, auf der sie erscheint.</p>
-      <div class="btn-row">
-        <a class="btn" href="#contact">Projekt starten</a>
-        <a class="btn btn--ghost" href="/loudness-meter" data-open-bridge>Track messen</a>
+    <div class="sec-head">
+      <h2 class="t-display" id="h-svc" data-split>Was ich mache</h2>
+      <p class="t-lead" data-reveal>Listenpreise. Alben, EPs und Projekte mit mehreren Tracks bekommen ein eigenes Angebot.</p>
+    </div>
+    <div class="svc-grid" data-reveal data-reveal-kids>
+      <article class="svc spot" data-tilt>
+        <h3>Mastering</h3>
+        <p>Dein Stereo-Mix, fertig für Streaming, Club und Download: Lautheit, Dynamik, Breite und True Peak für jede Plattform.</p>
+        <div class="svc__price"><b>Ab 60 EUR</b><span>48 Stunden</span></div>
+      </article>
+      <article class="svc spot svc--hero" data-tilt>
+        <h3>Mix und Master</h3>
+        <p>Von deinen Stems zum fertigen Master. Balance, Tiefe und Vocal-Bearbeitung durch die hybride Kette, überarbeitet bis es stimmt.</p>
+        <div class="svc__price"><b>Ab 90 EUR</b><span>3 bis 5 Tage</span></div>
+      </article>
+      <article class="svc spot" data-tilt>
+        <h3>Stem-Mastering</h3>
+        <p>Bis zu acht Stems. Mehr Kontrolle als Stereo-Mastering, mit dem Fokus eines Masters statt eines kompletten Mixes.</p>
+        <div class="svc__price"><b>Ab 100 EUR</b><span>48 bis 72 Stunden</span></div>
+      </article>
+      <article class="svc spot" data-tilt>
+        <h3>Vocal-Editing</h3>
+        <p>Tuning, Timing, Comping, De-Essing und Effekte, damit die Stimme im Track sitzt, ohne ihren Charakter zu verlieren.</p>
+        <div class="svc__price"><b>Ab 60 EUR</b><span>24 bis 48 Stunden</span></div>
+      </article>
+      
+    </div>
+    <div class="estimate" data-estimate data-fmt="ab {p} EUR" data-msg="Anfrage: {s}, {n} Track(s)" data-reveal>
+      <span class="estimate__title">Schnelle Schätzung</span>
+      <div class="estimate__row">
+        <label class="field"><span class="sr-only">Leistung</span>
+          <select aria-label="Leistung"><option value="Mastering" data-price="60">Mastering</option><option value="Mix und Master" data-price="90">Mix und Master</option><option value="Stem-Mastering" data-price="100">Stem-Mastering</option><option value="Vocal-Editing" data-price="60">Vocal-Editing</option></select>
+        </label>
+        <div class="stepper" role="group" aria-label="Tracks"><button type="button" data-minus aria-label="−">−</button><span data-n>1</span><button type="button" data-plus aria-label="+">+</button></div>
+        <span class="estimate__unit">Tracks</span>
+        <output aria-live="polite"></output>
+        <button class="btn btn--small" type="button" data-estimate-go>In meine Nachricht übernehmen</button>
+      </div>
+      <p class="estimate__note">Listenpreise; bei mehreren Tracks gibt es meist ein besseres Angebot.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chain" id="chain" aria-labelledby="h-chain">
+  <div class="chain__inner">
+    <div class="chain__intro">
+      <h2 class="t-display" id="h-chain" data-split>Die hybride Kette</h2>
+      <p class="t-lead chain__lead" data-reveal>Plugins erledigen die präzise Arbeit. Einige analoge Stufen leisten, was Plugins nur annähern: Zusammenhalt, Gewicht und wie ein Mix zusammenbleibt, wenn er laut wird.</p>
+    </div>
+    <div class="chain__track">
+      <article class="unit" data-unit="0">
+        <div class="unit__face" aria-hidden="true">
+          <svg viewBox="0 0 420 150" role="presentation">
+            <rect x="1" y="1" width="418" height="148" rx="10" class="u-plate"/>
+            <circle cx="16" cy="16" r="4" class="u-screw"/><circle cx="404" cy="16" r="4" class="u-screw"/><circle cx="16" cy="134" r="4" class="u-screw"/><circle cx="404" cy="134" r="4" class="u-screw"/>
+            <text x="36" y="30" class="u-label">SSL Fusion</text>
+            
+            <g transform="translate(60 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(135 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(210 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(285 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(360 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g>
+            <circle cx="392" cy="30" r="5" class="u-led"/>
+          </svg>
+        </div>
+        <h3>SSL Fusion</h3>
+        <p>Zusammenhalt und Tiefe</p>
+      </article>
+      <article class="unit" data-unit="1">
+        <div class="unit__face" aria-hidden="true">
+          <svg viewBox="0 0 420 150" role="presentation">
+            <rect x="1" y="1" width="418" height="148" rx="10" class="u-plate"/>
+            <circle cx="16" cy="16" r="4" class="u-screw"/><circle cx="404" cy="16" r="4" class="u-screw"/><circle cx="16" cy="134" r="4" class="u-screw"/><circle cx="404" cy="134" r="4" class="u-screw"/>
+            <text x="36" y="30" class="u-label">API 2500</text>
+            <g transform="translate(36 46)"><rect width="128" height="82" rx="6" class="u-vu"/><path d="M14 66 A54 54 0 0 1 114 66" class="u-arc"/><path d="M92 30 A54 54 0 0 1 114 66" class="u-arc u-arc--red"/><line x1="64" y1="72" x2="64" y2="18" class="u-needle"/><circle cx="64" cy="72" r="4" class="u-pivot"/></g>
+            
+            <g transform="translate(216 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(276 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(336 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g>
+            <circle cx="392" cy="30" r="5" class="u-led"/>
+          </svg>
+        </div>
+        <h3>API 2500</h3>
+        <p>Bus-Kompression und Punch</p>
+      </article>
+      <article class="unit" data-unit="2">
+        <div class="unit__face" aria-hidden="true">
+          <svg viewBox="0 0 420 150" role="presentation">
+            <rect x="1" y="1" width="418" height="148" rx="10" class="u-plate"/>
+            <circle cx="16" cy="16" r="4" class="u-screw"/><circle cx="404" cy="16" r="4" class="u-screw"/><circle cx="16" cy="134" r="4" class="u-screw"/><circle cx="404" cy="134" r="4" class="u-screw"/>
+            <text x="36" y="30" class="u-label">Bandmaschine</text>
+            <g transform="translate(36 46)"><rect width="128" height="82" rx="6" class="u-vu"/><path d="M14 66 A54 54 0 0 1 114 66" class="u-arc"/><path d="M92 30 A54 54 0 0 1 114 66" class="u-arc u-arc--red"/><line x1="64" y1="72" x2="64" y2="18" class="u-needle"/><circle cx="64" cy="72" r="4" class="u-pivot"/></g>
+            
+            <g transform="translate(216 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(276 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(336 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g>
+            <circle cx="392" cy="30" r="5" class="u-led"/>
+          </svg>
+        </div>
+        <h3>Bandmaschine</h3>
+        <p>Obertöne und Dichte im Bass</p>
+      </article>
+      <article class="unit" data-unit="3">
+        <div class="unit__face" aria-hidden="true">
+          <svg viewBox="0 0 420 150" role="presentation">
+            <rect x="1" y="1" width="418" height="148" rx="10" class="u-plate"/>
+            <circle cx="16" cy="16" r="4" class="u-screw"/><circle cx="404" cy="16" r="4" class="u-screw"/><circle cx="16" cy="134" r="4" class="u-screw"/><circle cx="404" cy="134" r="4" class="u-screw"/>
+            <text x="36" y="30" class="u-label">EQ im Pultec-Stil</text>
+            
+            <g transform="translate(60 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(135 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(210 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(285 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g><g transform="translate(360 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g>
+            <circle cx="392" cy="30" r="5" class="u-led"/>
+          </svg>
+        </div>
+        <h3>EQ im Pultec-Stil</h3>
+        <p>Musikalische Klangformung</p>
+      </article>
+      
+      <article class="unit unit--text">
+        <p>Zuerst digital. Korrektur-EQ, Dynamik, Automation und Raum entstehen in der DAW mit UAD, FabFilter und Waves, wo jeder Schritt abrufbar ist.</p>
+        <p>Die analogen Stufen wähle ich pro Track, nicht aus Gewohnheit. Dann die letzte Stufe: True-Peak-Limiting auf −0,3 oder −0,2 dBTP, Lautheit passend zum Ziel der Platte und alle Lieferformate, die du brauchst.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="listen" id="listen" aria-labelledby="h-listen">
+  <div class="wrap listen__grid">
+    <div class="listen__text">
+      <div class="eq" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i></div>
+      <h2 class="t-display" id="h-listen" data-split>Hör dir die Arbeit an.</h2>
+      <p class="t-lead" data-reveal>159 Tracks, die ich gemischt und gemastert habe, in einer Playlist: Techno, House, Pop, R&amp;B, Rap und Rock. Drück auf Play und urteile mit deinen Ohren.</p>
+      <p data-reveal><a class="btn btn--ghost" href="https://open.spotify.com/playlist/6ILH2EWbFZyvDN2NTLtP4N" rel="noopener" target="_blank">In Spotify öffnen</a></p>
+    </div>
+    <div class="listen__player" data-spotify="https://open.spotify.com/embed/playlist/6ILH2EWbFZyvDN2NTLtP4N?utm_source=generator&amp;theme=0" data-title="Mixed and Mastered" data-reveal>
+      <div class="listen__ph">
+        <div class="vinyl" aria-hidden="true"><i></i></div>
+        <b>Mixed and Mastered</b>
+        <span>159 Tracks · Spotify</span>
+        <button class="btn btn--glow" type="button" data-spotify-load>Player laden</button>
+        <small>Der Spotify-Player lädt erst, wenn du es willst: ab dann kann Spotify eigene Cookies setzen.</small>
       </div>
     </div>
-    <div class="glass bridge" id="bridge" data-boot data-meter="/loudness-meter">
+  </div>
+</section>
+
+<section class="reviews" id="reviews" aria-labelledby="h-rev">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <div>
+        <h2 class="t-display" id="h-rev" data-split>Was Kunden sagen</h2>
+        <p class="t-lead" data-reveal>Aus über 700 Bewertungen auf Fiverr und SoundBetter, von Künstlern, Produzenten, Labels und Studios in mehr als 66 Ländern.</p>
+      </div>
+      <div class="rating" data-reveal><b class="grad-text"><span data-count="4.9" data-dec="1">4.9</span></b><span>von 5</span><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Bewertungen auf Fiverr lesen</a></div>
+    </div>
+  </div>
+  <div class="marquee" aria-label="Was Kunden sagen">
+    <div class="marquee__track">
+      <figure class="quote">
+        <blockquote><p>“All I can say is WOW. The song turned out even better than I expected. Angelo is someone you work with once and never want to leave.”</p></blockquote>
+        <figcaption><b>michaelakuti</b><span>Deutschland · Stammkunde</span></figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote><p>“Working with Angelo struck new inspiration in me as a producer. His ability to bring a song together and make the vision come to life is next level.”</p></blockquote>
+        <figcaption><b>crucialvalor</b><span>USA · Stammkunde</span></figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote><p>“Four masters delivered in under a week. Patient, revision-ready, obsessed with the best result. Always impressed by Angelo’s work, every single time.”</p></blockquote>
+        <figcaption><b>lj_galaxy</b><span>Australien · Stammkunde</span></figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote><p>“Third time working with Angelo and it keeps getting better. He brought my track to life — clean, powerful, professional. The gold standard.”</p></blockquote>
+        <figcaption><b>dassiomusic</b><span>Schweiz · Drittes Projekt</span></figcaption>
+      </figure>
+      <figure class="quote" aria-hidden="true">
+        <blockquote><p>“All I can say is WOW. The song turned out even better than I expected. Angelo is someone you work with once and never want to leave.”</p></blockquote>
+        <figcaption><b>michaelakuti</b><span>Deutschland · Stammkunde</span></figcaption>
+      </figure>
+      <figure class="quote" aria-hidden="true">
+        <blockquote><p>“Working with Angelo struck new inspiration in me as a producer. His ability to bring a song together and make the vision come to life is next level.”</p></blockquote>
+        <figcaption><b>crucialvalor</b><span>USA · Stammkunde</span></figcaption>
+      </figure>
+      <figure class="quote" aria-hidden="true">
+        <blockquote><p>“Four masters delivered in under a week. Patient, revision-ready, obsessed with the best result. Always impressed by Angelo’s work, every single time.”</p></blockquote>
+        <figcaption><b>lj_galaxy</b><span>Australien · Stammkunde</span></figcaption>
+      </figure>
+      <figure class="quote" aria-hidden="true">
+        <blockquote><p>“Third time working with Angelo and it keeps getting better. He brought my track to life — clean, powerful, professional. The gold standard.”</p></blockquote>
+        <figcaption><b>dassiomusic</b><span>Schweiz · Drittes Projekt</span></figcaption>
+      </figure>
+      
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process" aria-labelledby="h-proc">
+  <div class="wrap">
+    <h2 class="t-display" id="h-proc" data-split>So läuft ein Projekt</h2>
+    <div class="process__line" aria-hidden="true"><i></i></div>
+    <ol class="steps" data-reveal data-reveal-kids>
+      <li><h3>Dateien schicken</h3><p>Stems oder Stereo-Mix als WAV, mit Tempo und einer kurzen Notiz zum Track. Ich prüfe alles, bevor ich anfange.</p></li>
+      <li><h3>Briefing und Referenzen</h3><p>Sag mir, wie es sich anfühlen soll und wo es erscheint: Referenztracks, Plattformen, Club oder Streaming.</p></li>
+      <li><h3>Mix und Master</h3><p>Die Session läuft durch die hybride Kette. Du bekommst eine erste Version mit Notizen, was ich geändert habe und warum.</p></li>
+      <li><h3>Änderungen und Lieferung</h3><p>Wünsch dir jede Änderung. Wenn es stimmt, bekommst du die finalen Dateien für Streaming, Club und Download.</p></li>
+      
+    </ol>
+  </div>
+</section>
+
+<section class="tools-home" id="tools" aria-labelledby="h-tools">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="t-display" id="h-tools" data-split>Kostenlose Tools</h2>
+      <p class="t-lead" data-reveal>Sieben Tools, die im Browser laufen. Dein Audio verlässt nie deinen Computer.</p>
+    </div>
+    <div class="glass bridge" id="bridge" data-boot data-meter="/loudness-meter" data-reveal>
       <div class="bridge__head"><span class="state" data-state-text><i></i> Demo-Messung. Zieh einen Track hierher, um deinen eigenen zu messen.</span><span>ITU-R BS.1770-4, gemessen in deinem Browser</span></div>
       <div class="bridge__body">
         <dl class="readouts">
@@ -100,232 +365,87 @@
         <button class="btn btn--glass" type="button" data-pick>Datei wählen</button>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="sec" id="engineer" aria-labelledby="h-eng">
-  <div class="wrap engineer">
-    <figure>
-      <picture>
-        <source type="image/webp" srcset="/assets/img/studio-2-900.webp 900w, /assets/img/studio-2-1400.webp 1400w" sizes="(max-width:900px) 100vw, 560px">
-        <img src="/assets/img/studio-2-1400.jpg" alt="Angelo Pillon am Mischpult in seinem Studio in Mailand" width="1400" height="840" loading="lazy" decoding="async">
-      </picture>
-    </figure>
-    <div class="engineer__text">
-      <h2 class="t-h2" id="h-eng">Fünfzehn Jahre am Pult.</h2>
-      <p>Ich bin Angelo, ein italienischer Engineer. Ich habe in einigen der größten Aufnahmestudios gearbeitet und mit Künstlern, die es bis nach Sanremo geschafft haben. Heute mische und mastere ich für Künstler, Produzenten und Labels in mehr als 66 Ländern.</p>
-      <p>Jedes Genre hat seine eigene Physik. Techno lebt vom Bass und dem Raum darum, R&amp;B von Luft in der Stimme und Groove, Pop von einer Lead-Stimme, die nie gegen den Track kämpft. Ich richte jede Session auf die Platte vor mir aus, nicht auf ein Preset.</p>
-      <dl class="spec">
-        <div><dt>Erfahrung</dt><dd>Über 15 Jahre, hauptberuflich</dd></div>
-        <div><dt>Bewertungen</dt><dd>4,9 von 5 aus über 700 Bewertungen</dd></div>
-        <div><dt>Tracks</dt><dd>Über 1.200 geliefert</dd></div>
-        <div><dt>Zertifizierung</dt><dd>Apple Digital Masters</dd></div>
-        <div><dt>Sprachen</dt><dd>Deutsch, Englisch, Italienisch, Spanisch</dd></div>
-        
-      </dl>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--plate" id="services" aria-labelledby="h-svc">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-svc">Was ich mache</h2>
-      <p>Listenpreise. Alben, EPs und Projekte mit mehreren Tracks bekommen ein eigenes Angebot.</p>
-    </div>
-    <div>
-      <div class="rule-list">
-        <article class="svc">
-          <h3>Mastering</h3>
-          <p>Dein Stereo-Mix, fertig für Streaming, Club und Download: Lautheit, Dynamik, Breite und True Peak für jede Plattform.</p>
-          <div class="svc__price"><b>Ab 60 EUR</b><span>48 Stunden</span></div>
-        </article>
-        <article class="svc">
-          <h3>Mix und Master</h3>
-          <p>Von deinen Stems zum fertigen Master. Balance, Tiefe und Vocal-Bearbeitung durch die hybride Kette, überarbeitet bis es stimmt.</p>
-          <div class="svc__price"><b>Ab 90 EUR</b><span>3 bis 5 Tage</span></div>
-        </article>
-        <article class="svc">
-          <h3>Stem-Mastering</h3>
-          <p>Bis zu acht Stems. Mehr Kontrolle als Stereo-Mastering, mit dem Fokus eines Masters statt eines kompletten Mixes.</p>
-          <div class="svc__price"><b>Ab 100 EUR</b><span>48 bis 72 Stunden</span></div>
-        </article>
-        <article class="svc">
-          <h3>Vocal-Editing</h3>
-          <p>Tuning, Timing, Comping, De-Essing und Effekte, damit die Stimme im Track sitzt, ohne ihren Charakter zu verlieren.</p>
-          <div class="svc__price"><b>Ab 60 EUR</b><span>24 bis 48 Stunden</span></div>
-        </article>
-        
-      </div>
-      <div class="estimate" data-estimate data-fmt="ab {p} EUR" data-msg="Anfrage: {s}, {n} Track(s)">
-        <span class="t-label">Schnelle Schätzung</span>
-        <div class="estimate__row">
-          <label class="field" style="flex:1 1 220px"><span class="sr-only">Leistung</span>
-            <select aria-label="Leistung"><option value="Mastering" data-price="60">Mastering</option><option value="Mix und Master" data-price="90">Mix und Master</option><option value="Stem-Mastering" data-price="100">Stem-Mastering</option><option value="Vocal-Editing" data-price="60">Vocal-Editing</option></select>
-          </label>
-          <div class="stepper" role="group" aria-label="Tracks"><button type="button" data-minus aria-label="−">−</button><span data-n>1</span><button type="button" data-plus aria-label="+">+</button></div>
-          <span class="t-small">Tracks</span>
-          <output aria-live="polite"></output>
-        </div>
-        <div class="btn-row"><button class="btn btn--ghost btn--small" type="button" data-estimate-go>In meine Nachricht übernehmen</button><span class="t-small">Listenpreise; bei mehreren Tracks gibt es meist ein besseres Angebot.</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="chain" aria-labelledby="h-chain">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-chain">Die hybride Kette</h2>
-      <p>Plugins erledigen die präzise Arbeit. Einige analoge Stufen leisten, was Plugins nur annähern: Zusammenhalt, Gewicht und wie ein Mix zusammenbleibt, wenn er laut wird.</p>
-    </div>
-    <div class="chain-copy">
-      <p>Zuerst digital. Korrektur-EQ, Dynamik, Automation und Raum entstehen in der DAW mit UAD, FabFilter und Waves, wo jeder Schritt abrufbar ist.</p>
-      <div class="rack" role="list">
-        <div class="unit" role="listitem"><b>SSL Fusion</b><span>Zusammenhalt und Tiefe</span></div>
-        <div class="unit" role="listitem"><b>API 2500</b><span>Bus-Kompression und Punch</span></div>
-        <div class="unit" role="listitem"><b>Bandmaschine</b><span>Obertöne und Dichte im Bass</span></div>
-        <div class="unit" role="listitem"><b>EQ im Pultec-Stil</b><span>Musikalische Klangformung</span></div>
-        
-      </div>
-      <p>Die analogen Stufen wähle ich pro Track, nicht aus Gewohnheit. Dann die letzte Stufe: True-Peak-Limiting auf −0,3 oder −0,2 dBTP, Lautheit passend zum Ziel der Platte und alle Lieferformate, die du brauchst.</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--tight" id="process" aria-labelledby="h-proc">
-  <div class="wrap">
-    <h2 class="t-h2" id="h-proc">So läuft ein Projekt</h2>
-    <ol class="steps">
-      <li><h3>Dateien schicken</h3><p>Stems oder Stereo-Mix als WAV, mit Tempo und einer kurzen Notiz zum Track. Ich prüfe alles, bevor ich anfange.</p></li>
-      <li><h3>Briefing und Referenzen</h3><p>Sag mir, wie es sich anfühlen soll und wo es erscheint: Referenztracks, Plattformen, Club oder Streaming.</p></li>
-      <li><h3>Mix und Master</h3><p>Die Session läuft durch die hybride Kette. Du bekommst eine erste Version mit Notizen, was ich geändert habe und warum.</p></li>
-      <li><h3>Änderungen und Lieferung</h3><p>Wünsch dir jede Änderung. Wenn es stimmt, bekommst du die finalen Dateien für Streaming, Club und Download.</p></li>
-      
-    </ol>
-  </div>
-</section>
-
-<section class="sec sec--plate" id="reviews" aria-labelledby="h-rev">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-rev">Was Kunden sagen</h2>
-      <div class="rating"><b>4.9</b><span class="t-small">von 5</span></div>
-      <p>Aus über 700 Bewertungen auf Fiverr und SoundBetter, von Künstlern, Produzenten, Labels und Studios in mehr als 66 Ländern.</p>
-      <p><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Bewertungen auf Fiverr lesen</a></p>
-    </div>
-    <div class="quotes">
-      <figure class="quote">
-        <blockquote><p>“All I can say is WOW. The song turned out even better than I expected. Angelo is someone you work with once and never want to leave.”</p></blockquote>
-        <figcaption><b>michaelakuti, Deutschland</b><span>Stammkunde</span></figcaption>
-      </figure>
-      <figure class="quote">
-        <blockquote><p>“Working with Angelo struck new inspiration in me as a producer. His ability to bring a song together and make the vision come to life is next level.”</p></blockquote>
-        <figcaption><b>crucialvalor, USA</b><span>Stammkunde</span></figcaption>
-      </figure>
-      <figure class="quote">
-        <blockquote><p>“Four masters delivered in under a week. Patient, revision-ready, obsessed with the best result. Always impressed by Angelo’s work, every single time.”</p></blockquote>
-        <figcaption><b>lj_galaxy, Australien</b><span>Stammkunde</span></figcaption>
-      </figure>
-      <figure class="quote">
-        <blockquote><p>“Third time working with Angelo and it keeps getting better. He brought my track to life — clean, powerful, professional. The gold standard.”</p></blockquote>
-        <figcaption><b>dassiomusic, Schweiz</b><span>Drittes Projekt</span></figcaption>
-      </figure>
-      
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="tools" aria-labelledby="h-tools">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-tools">Kostenlose Tools</h2>
-      <p>Sieben Tools, die im Browser laufen. Dein Audio verlässt nie deinen Computer.</p>
-      <p><a class="link" href="/tools/">Alle Tools (Englisch)</a></p>
-    </div>
-    <div class="rule-list">
-      <a class="tool-row" href="/loudness-meter">
+    <div class="tool-grid" data-reveal data-reveal-kids>
+      <a class="tool-card spot" href="/loudness-meter">
         <span class="mini" aria-hidden="true">−14.0 LUFS</span>
-        <span><h3>LUFS meter</h3><p>Integrated, short-term and momentary loudness, true peak, range, key and tempo.</p></span>
-        <span class="tool-row__go">Öffnen</span>
+        <h3>LUFS meter</h3>
+        <p>Integrated, short-term and momentary loudness, true peak, range, key and tempo.</p>
       </a>
-      <a class="tool-row" href="/tools/stereo-phase-analyzer">
+      <a class="tool-card spot" href="/tools/stereo-phase-analyzer">
         <span class="mini" aria-hidden="true">+0.82 corr</span>
-        <span><h3>Stereo and phase analyzer</h3><p>Correlation, mid and side balance, and mono compatibility, overall and per band.</p></span>
-        <span class="tool-row__go">Öffnen</span>
+        <h3>Stereo and phase analyzer</h3>
+        <p>Correlation, mid and side balance, and mono compatibility, overall and per band.</p>
       </a>
-      <a class="tool-row" href="/tools/ab-reference-player">
+      <a class="tool-card spot" href="/tools/ab-reference-player">
         <span class="mini" aria-hidden="true">B −1.6 dB</span>
-        <span><h3>A/B reference player</h3><p>Your track against a reference, loudness-matched, switched without a gap.</p></span>
-        <span class="tool-row__go">Öffnen</span>
+        <h3>A/B reference player</h3>
+        <p>Your track against a reference, loudness-matched, switched without a gap.</p>
       </a>
-      <a class="tool-row" href="/tools/delay-reverb-calculator">
+      <a class="tool-card spot" href="/tools/delay-reverb-calculator">
         <span class="mini" aria-hidden="true">124 BPM 484 ms</span>
-        <span><h3>Delay and reverb calculator</h3><p>Tap the tempo and get delay times, pre-delay and decay in milliseconds.</p></span>
-        <span class="tool-row__go">Öffnen</span>
+        <h3>Delay and reverb calculator</h3>
+        <p>Tap the tempo and get delay times, pre-delay and decay in milliseconds.</p>
       </a>
-      <a class="tool-row" href="/tools/kick-808-tuning">
+      <a class="tool-card spot" href="/tools/kick-808-tuning">
         <span class="mini" aria-hidden="true">F1 43.7 Hz</span>
-        <span><h3>Kick and 808 tuning</h3><p>Notes to frequencies, and the low fundamentals that fit your key.</p></span>
-        <span class="tool-row__go">Öffnen</span>
+        <h3>Kick and 808 tuning</h3>
+        <p>Notes to frequencies, and the low fundamentals that fit your key.</p>
       </a>
-      <a class="tool-row" href="/tools/streaming-loudness-calculator">
+      <a class="tool-card spot" href="/tools/streaming-loudness-calculator">
         <span class="mini" aria-hidden="true">Spotify −4.9 dB</span>
-        <span><h3>Streaming loudness preview</h3><p>How much each platform turns your master down, and what happens to the peaks.</p></span>
-        <span class="tool-row__go">Öffnen</span>
+        <h3>Streaming loudness preview</h3>
+        <p>How much each platform turns your master down, and what happens to the peaks.</p>
       </a>
-      <a class="tool-row" href="/tools/camelot-wheel">
+      <a class="tool-card spot" href="/tools/camelot-wheel">
         <span class="mini" aria-hidden="true">8A 7A 9A 8B</span>
-        <span><h3>Camelot wheel</h3><p>Compatible keys for harmonic mixing, from any key or Camelot code.</p></span>
-        <span class="tool-row__go">Öffnen</span>
+        <h3>Camelot wheel</h3>
+        <p>Compatible keys for harmonic mixing, from any key or Camelot code.</p>
+      </a>
+      
+    </div>
+    <p class="more"><a class="link" href="/tools/">Alle kostenlosen Tools</a></p>
+  </div>
+</section>
+
+<section class="articles-home" id="articles" aria-labelledby="h-art">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <h2 class="t-display" id="h-art" data-split>Aus dem Studio-Journal</h2>
+      <div class="list-links" data-reveal><a class="link" href="/articles">Alle Artikel (Englisch)</a><a class="link" href="/it/articoli/">Articoli in italiano</a></div>
+    </div>
+    <div class="post-grid" data-reveal data-reveal-kids>
+      <a class="post-card spot" href="/lufs-explained" style="--cap:var(--cap-loudness)">
+        <span class="cap" data-cat="loudness">Lautheit</span>
+        <h3>LUFS Explained: The Only Loudness Guide Producers Need</h3>
+        <time datetime="2026-07-02">2. Juli 2026</time>
+      </a>
+      <a class="post-card spot" href="/how-loud-should-your-master-be" style="--cap:var(--cap-loudness)">
+        <span class="cap" data-cat="loudness">Lautheit</span>
+        <h3>How Loud Should Your Master Be in 2026? Streaming vs Club</h3>
+        <time datetime="2026-06-30">30. Juni 2026</time>
+      </a>
+      <a class="post-card spot" href="/hybrid-vs-itb-mastering" style="--cap:var(--cap-mastering)">
+        <span class="cap" data-cat="mastering">Mastering</span>
+        <h3>Hybrid vs Full ITB: What Actually Matters for Your Master</h3>
+        <time datetime="2026-06-18">18. Juni 2026</time>
+      </a>
+      <a class="post-card spot" href="/low-end-melodic-techno-mixing" style="--cap:var(--cap-electronic)">
+        <span class="cap" data-cat="electronic">Elektronik</span>
+        <h3>Low-End in Melodic Techno: The Techniques That Actually Work</h3>
+        <time datetime="2026-05-27">27. Mai 2026</time>
       </a>
       
     </div>
   </div>
 </section>
 
-<section class="sec sec--tight" id="articles" aria-labelledby="h-art">
+<section class="faq-home" id="faq" aria-labelledby="h-faq">
   <div class="wrap split">
     <div class="split__head">
-      <h2 class="t-h2" id="h-art">Aus dem Studio-Journal</h2>
-      <p>Praktische Notizen zu Lautheit, Mixing und Mastering, auf Englisch und Italienisch.</p>
+      <h2 class="t-display" id="h-faq" data-split>Fragen</h2>
+      <p class="t-lead" data-reveal>Alles andere einfach über das Formular unten.</p>
     </div>
-    <div>
-      <div class="rule-list">
-        <a class="post-row" href="/lufs-explained">
-          <span class="cap" data-cat="loudness">Lautheit</span>
-          <h3>LUFS Explained: The Only Loudness Guide Producers Need</h3>
-          <time datetime="2026-07-02">2. Juli 2026</time>
-        </a>
-        <a class="post-row" href="/how-loud-should-your-master-be">
-          <span class="cap" data-cat="loudness">Lautheit</span>
-          <h3>How Loud Should Your Master Be in 2026? Streaming vs Club</h3>
-          <time datetime="2026-06-30">30. Juni 2026</time>
-        </a>
-        <a class="post-row" href="/hybrid-vs-itb-mastering">
-          <span class="cap" data-cat="mastering">Mastering</span>
-          <h3>Hybrid vs Full ITB: What Actually Matters for Your Master</h3>
-          <time datetime="2026-06-18">18. Juni 2026</time>
-        </a>
-        <a class="post-row" href="/low-end-melodic-techno-mixing">
-          <span class="cap" data-cat="electronic">Elektronik</span>
-          <h3>Low-End in Melodic Techno: The Techniques That Actually Work</h3>
-          <time datetime="2026-05-27">27. Mai 2026</time>
-        </a>
-        
-      </div>
-      <div class="list-links"><a class="link" href="/articles">Alle Artikel (Englisch)</a><a class="link" href="/it/articoli/">Articoli in italiano</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--plate" id="faq" aria-labelledby="h-faq">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-faq">Fragen</h2>
-      <p>Alles andere einfach über das Formular unten.</p>
-    </div>
-    <div class="faq rule-list">
+    <div class="faq" data-reveal>
       <details open><summary>Wie schicke ich meine Dateien?</summary><div><p>Lade Stems oder Mix bei WeTransfer, Google Drive oder Dropbox hoch und füge den Link ins Formular ein, oder schick sie über Fiverr. WAV in Samplerate und Bittiefe der Session, ohne Bearbeitung auf dem Master-Bus.</p></div></details>
       <details><summary>Wie lange dauert es?</summary><div><p>Mastering etwa 48 Stunden, Mix und Master 3 bis 5 Tage. Für Alben und EPs gibt es vorab einen Zeitplan.</p></div></details>
       <details><summary>Wie viele Änderungen sind dabei?</summary><div><p>Änderungen gibt es, bis der Track stimmt. Die meisten Projekte brauchen ein oder zwei Runden.</p></div></details>
@@ -338,14 +458,15 @@
   </div>
 </section>
 
-<section class="sec" id="contact" aria-labelledby="h-ct">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-ct">Projekt starten</h2>
-      <p>Erzähl mir vom Track und wo er erscheinen soll. Ich antworte meist innerhalb weniger Stunden.</p>
-      <div class="channels"><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.5 8.2h-1.1c-.9 0-1.4.5-1.4 1.4v.6H9.6v1.6H11V17h1.8v-5.2h2.1V17h1.8v-6.8h-3.9v-.4c0-.3.2-.5.5-.5h.2z" fill="currentColor"/></svg><span>Auch auf Fiverr</span></a><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 13v-2M10 16V8M13 14v-4M16 17V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Auch auf SoundBetter</span></a></div>
+<section class="contact" id="contact" aria-labelledby="h-ct">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="wrap contact__grid">
+    <div class="contact__text">
+      <h2 class="t-mega" id="h-ct" data-split>Lass uns etwas Großes machen.</h2>
+      <p class="t-lead" data-reveal>Erzähl mir vom Track und wo er erscheinen soll. Ich antworte meist innerhalb weniger Stunden.</p>
+      <div class="channels" data-reveal><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.5 8.2h-1.1c-.9 0-1.4.5-1.4 1.4v.6H9.6v1.6H11V17h1.8v-5.2h2.1V17h1.8v-6.8h-3.9v-.4c0-.3.2-.5.5-.5h.2z" fill="currentColor"/></svg><span>Auch auf Fiverr</span></a><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 13v-2M10 16V8M13 14v-4M16 17V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Auch auf SoundBetter</span></a></div>
     </div>
-    <form class="form" id="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-ok="Nachricht gesendet. Ich melde mich bald, meist innerhalb weniger Stunden." data-err="Nicht gesendet. Versuch es noch einmal oder schreib an &lt;a href=&#34;mailto:angelopillon@gmail.com&#34;&gt;angelopillon@gmail.com&lt;/a&gt;." data-busy="Wird gesendet…">
+    <form class="form contact__form" id="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-ok="Nachricht gesendet. Ich melde mich bald, meist innerhalb weniger Stunden." data-err="Nicht gesendet. Versuch es noch einmal oder schreib an &lt;a href=&#34;mailto:angelopillon@gmail.com&#34;&gt;angelopillon@gmail.com&lt;/a&gt;." data-busy="Wird gesendet…" data-reveal>
       <input type="hidden" name="form-name" value="contact">
       <input type="hidden" name="language" value="de">
       <p class="hp"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -358,7 +479,7 @@
       </label>
       <label class="field"><span>Link zu deinen Dateien (optional)</span><input name="files" type="url" inputmode="url" placeholder="https://"></label>
       <label class="field"><span>Zum Track</span><textarea name="message" required placeholder="Genre, Referenzen, Release-Datum, alles was hilft"></textarea></label>
-      <div class="btn-row"><button class="btn" type="submit">Nachricht senden</button><span class="form-note">Wird nur für die Antwort verwendet. <a class="link" href="/privacy-policy">Datenschutz</a>.</span></div>
+      <div class="btn-row"><button class="btn btn--glow" type="submit" data-magnetic>Nachricht senden</button><span class="form-note">Wird nur für die Antwort verwendet. <a class="link" href="/privacy-policy">Datenschutz</a>.</span></div>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
@@ -396,9 +517,11 @@
   <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Akzeptieren</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Ablehnen</button></div>
 </aside>
 
-<script src="/assets/js/site.js?v=202611051236" defer></script>
-<script src="/assets/js/tools/common.js?v=202611051236" defer></script>
-<script src="/assets/js/tools/bridge.js?v=202611051236" defer></script>
+<script src="/assets/js/site.js?v=202611051318" defer></script>
+<script src="/assets/js/motion.js?v=202611051318" defer></script>
+<script src="/assets/js/tools/common.js?v=202611051318" defer></script>
+<script src="/assets/js/tools/bridge.js?v=202611051318" defer></script>
+<script src="/assets/js/cosmos.js?v=202611051318" defer></script>
 
 </body>
 </html>

@@ -1,14 +1,188 @@
-<section class="opening" id="measure">
+<canvas id="cosmos" class="cosmos" aria-hidden="true"></canvas>
+<div class="cosmos-fallback" aria-hidden="true"></div>
+
+<section class="hero" id="top">
+  <div class="wrap hero__inner">
+    <h1 class="hero__title"><span class="hero__kicker" data-hero-k>{{ c.kicker }}</span><span class="hero__line">{{ c.h1 }}</span></h1>
+    <p class="hero__lead" data-hero-l>{{ c.lead }}</p>
+    <div class="hero__cta" data-hero-c>
+      <a class="btn btn--glow" href="#contact" data-magnetic>{{ s.cta1 }}</a>
+      <a class="btn btn--ghost" href="#listen" data-magnetic>{{ c.listen_cta }}</a>
+    </div>
+  </div>
+  <a class="hero__scroll" href="#story"><span>{{ c.scroll }}</span><i></i></a>
+</section>
+
+<section class="story" id="story" aria-label="{{ c.story_label }}">
+  <div class="story__sticky">
+    <div class="wrap story__lines">
+      {% for line in c.story %}<p class="story__line">{{ line }}</p>
+      {% endfor %}
+    </div>
+    <div class="story__bar" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<section class="worldwide" id="worldwide" aria-labelledby="h-world">
+  <div class="wrap worldwide__grid">
+    <div class="worldwide__text">
+      <p class="worldwide__num grad-text"><span data-count="66">66</span></p>
+      <h2 class="t-display" id="h-world" data-split>{{ c.gl_h2 }}</h2>
+      <p class="t-lead" data-reveal>{{ c.gl_p }}</p>
+      <p class="ticker" data-reveal><span>{{ c.gl_dest }}</span><b data-ticker data-codes="{{ codes }}">&nbsp;</b></p>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="{{ c.kicker }}">
+  <div class="wrap stats__grid" data-reveal data-reveal-kids>
+    <div class="stat"><b><span data-count="1200">1,200</span>+</b><span>{{ c.st_tracks }}</span></div>
+    <div class="stat"><b><span data-count="15">15</span>+</b><span>{{ c.st_years }}</span></div>
+    <div class="stat"><b><span data-count="4.9" data-dec="1">4.9</span></b><span>{{ c.st_rating }}</span></div>
+    <div class="stat"><b><span data-count="48">48</span>h</b><span>{{ c.st_turn }}</span></div>
+  </div>
+</section>
+
+<section class="engineer" id="engineer" aria-labelledby="h-eng">
+  <div class="wrap engineer__grid">
+    <figure class="engineer__photo" data-clip>
+      <picture>
+        <source type="image/webp" srcset="/assets/img/studio-1-900.webp 900w, /assets/img/studio-1-1400.webp 1400w" sizes="(max-width:900px) 100vw, 600px">
+        <img src="/assets/img/studio-1-1400.jpg" alt="{{ s.e_alt }}" width="1400" height="839" loading="lazy" decoding="async" data-parallax="6">
+      </picture>
+    </figure>
+    <div class="engineer__text">
+      <h2 class="t-h2" id="h-eng" data-split>{{ s.e_h2 }}</h2>
+      <p data-reveal>{{ s.e_p1 }}</p>
+      <p data-reveal>{{ s.e_p2 }}</p>
+      <dl class="spec" data-reveal data-reveal-kids>
+        {% for k, val in s.spec %}<div><dt>{{ k }}</dt><dd>{{ val }}</dd></div>
+        {% endfor %}
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="h-svc">
   <div class="wrap">
-    <h1 class="t-display">{{ s.h1 }}</h1>
-    <div class="opening__row">
-      <p class="t-lead">{{ s.lead }}</p>
-      <div class="btn-row">
-        <a class="btn" href="#contact">{{ s.cta1 }}</a>
-        <a class="btn btn--ghost" href="{{ meter_href }}" data-open-bridge>{{ s.cta2 }}</a>
+    <div class="sec-head">
+      <h2 class="t-display" id="h-svc" data-split>{{ s.sv_h2 }}</h2>
+      <p class="t-lead" data-reveal>{{ s.sv_intro }}</p>
+    </div>
+    <div class="svc-grid" data-reveal data-reveal-kids>
+      {% for it in s.services %}<article class="svc spot{% if loop.index == 2 %} svc--hero{% endif %}" data-tilt>
+        <h3>{{ it.name }}</h3>
+        <p>{{ it.desc }}</p>
+        <div class="svc__price"><b>{{ it.price }}</b><span>{{ it.time }}</span></div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="estimate" data-estimate data-fmt="{{ s.est_fmt }}" data-msg="{{ s.est_msg }}" data-reveal>
+      <span class="estimate__title">{{ s.est_title }}</span>
+      <div class="estimate__row">
+        <label class="field"><span class="sr-only">{{ s.est_service }}</span>
+          <select aria-label="{{ s.est_service }}">{% for it in s.services %}<option value="{{ it.name }}" data-price="{{ it.p }}">{{ it.name }}</option>{% endfor %}</select>
+        </label>
+        <div class="stepper" role="group" aria-label="{{ s.est_tracks }}"><button type="button" data-minus aria-label="−">−</button><span data-n>1</span><button type="button" data-plus aria-label="+">+</button></div>
+        <span class="estimate__unit">{{ s.est_tracks }}</span>
+        <output aria-live="polite"></output>
+        <button class="btn btn--small" type="button" data-estimate-go>{{ s.est_go }}</button>
+      </div>
+      <p class="estimate__note">{{ s.est_note }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="chain" id="chain" aria-labelledby="h-chain">
+  <div class="chain__inner">
+    <div class="chain__intro">
+      <h2 class="t-display" id="h-chain" data-split>{{ s.ch_h2 }}</h2>
+      <p class="t-lead chain__lead" data-reveal>{{ s.ch_intro }}</p>
+    </div>
+    <div class="chain__track">
+      {% for name, role in s.units %}<article class="unit" data-unit="{{ loop.index0 }}">
+        <div class="unit__face" aria-hidden="true">
+          <svg viewBox="0 0 420 150" role="presentation">
+            <rect x="1" y="1" width="418" height="148" rx="10" class="u-plate"/>
+            <circle cx="16" cy="16" r="4" class="u-screw"/><circle cx="404" cy="16" r="4" class="u-screw"/><circle cx="16" cy="134" r="4" class="u-screw"/><circle cx="404" cy="134" r="4" class="u-screw"/>
+            <text x="36" y="30" class="u-label">{{ name }}</text>
+            {% if loop.index0 in (1, 2) %}<g transform="translate(36 46)"><rect width="128" height="82" rx="6" class="u-vu"/><path d="M14 66 A54 54 0 0 1 114 66" class="u-arc"/><path d="M92 30 A54 54 0 0 1 114 66" class="u-arc u-arc--red"/><line x1="64" y1="72" x2="64" y2="18" class="u-needle"/><circle cx="64" cy="72" r="4" class="u-pivot"/></g>
+            {% set kx = [216, 276, 336] %}{% else %}{% set kx = [60, 135, 210, 285, 360] %}{% endif %}
+            {% for x in kx %}<g transform="translate({{ x }} 94)"><circle r="23" class="u-knob-ring"/><g class="knob"><circle r="17" class="u-knob"/><line x1="0" y1="-4" x2="0" y2="-15" class="u-tick"/></g></g>{% endfor %}
+            <circle cx="392" cy="30" r="5" class="u-led"/>
+          </svg>
+        </div>
+        <h3>{{ name }}</h3>
+        <p>{{ role }}</p>
+      </article>
+      {% endfor %}
+      <article class="unit unit--text">
+        <p>{{ s.ch_p1 }}</p>
+        <p>{{ s.ch_p2 }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="listen" id="listen" aria-labelledby="h-listen">
+  <div class="wrap listen__grid">
+    <div class="listen__text">
+      <div class="eq" aria-hidden="true">{% for i in range(14) %}<i style="--i:{{ i }}"></i>{% endfor %}</div>
+      <h2 class="t-display" id="h-listen" data-split>{{ c.ls_h2 }}</h2>
+      <p class="t-lead" data-reveal>{{ c.ls_p }}</p>
+      <p data-reveal><a class="btn btn--ghost" href="https://open.spotify.com/playlist/{{ playlist }}" rel="noopener" target="_blank">{{ c.ls_open }}</a></p>
+    </div>
+    <div class="listen__player" data-spotify="https://open.spotify.com/embed/playlist/{{ playlist }}?utm_source=generator&amp;theme=0" data-title="Mixed and Mastered" data-reveal>
+      <div class="listen__ph">
+        <div class="vinyl" aria-hidden="true"><i></i></div>
+        <b>Mixed and Mastered</b>
+        <span>{{ c.ls_count }}</span>
+        <button class="btn btn--glow" type="button" data-spotify-load>{{ c.ls_load }}</button>
+        <small>{{ c.ls_note }}</small>
       </div>
     </div>
-    <div class="glass bridge" id="bridge" data-boot data-meter="{{ meter_href }}">
+  </div>
+</section>
+
+<section class="reviews" id="reviews" aria-labelledby="h-rev">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <div>
+        <h2 class="t-display" id="h-rev" data-split>{{ s.rv_h2 }}</h2>
+        <p class="t-lead" data-reveal>{{ s.rv_intro }}</p>
+      </div>
+      <div class="rating" data-reveal><b class="grad-text"><span data-count="4.9" data-dec="1">4.9</span></b><span>{{ s.rv_scale }}</span><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">{{ s.rv_link }}</a></div>
+    </div>
+  </div>
+  <div class="marquee" aria-label="{{ s.rv_h2 }}">
+    <div class="marquee__track">
+      {% for pass in (0, 1) %}{% for q in reviews %}<figure class="quote"{% if pass %} aria-hidden="true"{% endif %}>
+        <blockquote><p>“{{ q.text }}”</p></blockquote>
+        <figcaption><b>{{ q.who }}</b><span>{{ q.where[lang] }} · {{ q.badge[lang] }}</span></figcaption>
+      </figure>
+      {% endfor %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process" aria-labelledby="h-proc">
+  <div class="wrap">
+    <h2 class="t-display" id="h-proc" data-split>{{ s.pr_h2 }}</h2>
+    <div class="process__line" aria-hidden="true"><i></i></div>
+    <ol class="steps" data-reveal data-reveal-kids>
+      {% for t, dsc in s.steps %}<li><h3>{{ t }}</h3><p>{{ dsc }}</p></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="tools-home" id="tools" aria-labelledby="h-tools">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="t-display" id="h-tools" data-split>{{ s.tl_h2 }}</h2>
+      <p class="t-lead" data-reveal>{{ s.tl_intro }}</p>
+    </div>
+    <div class="glass bridge" id="bridge" data-boot data-meter="{{ meter_href }}" data-reveal>
       <div class="bridge__head"><span class="state" data-state-text><i></i> {{ s.b_demo }}</span><span>{{ s.b_std }}</span></div>
       <div class="bridge__body">
         <dl class="readouts">
@@ -27,164 +201,57 @@
         <button class="btn btn--glass" type="button" data-pick>{{ s.b_choose }}</button>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="sec" id="engineer" aria-labelledby="h-eng">
-  <div class="wrap engineer">
-    <figure>
-      <picture>
-        <source type="image/webp" srcset="/assets/img/studio-2-900.webp 900w, /assets/img/studio-2-1400.webp 1400w" sizes="(max-width:900px) 100vw, 560px">
-        <img src="/assets/img/studio-2-1400.jpg" alt="{{ s.e_alt }}" width="1400" height="840" loading="lazy" decoding="async">
-      </picture>
-    </figure>
-    <div class="engineer__text">
-      <h2 class="t-h2" id="h-eng">{{ s.e_h2 }}</h2>
-      <p>{{ s.e_p1 }}</p>
-      <p>{{ s.e_p2 }}</p>
-      <dl class="spec">
-        {% for k, val in s.spec %}<div><dt>{{ k }}</dt><dd>{{ val }}</dd></div>
-        {% endfor %}
-      </dl>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--plate" id="services" aria-labelledby="h-svc">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-svc">{{ s.sv_h2 }}</h2>
-      <p>{{ s.sv_intro }}</p>
-    </div>
-    <div>
-      <div class="rule-list">
-        {% for it in s.services %}<article class="svc">
-          <h3>{{ it.name }}</h3>
-          <p>{{ it.desc }}</p>
-          <div class="svc__price"><b>{{ it.price }}</b><span>{{ it.time }}</span></div>
-        </article>
-        {% endfor %}
-      </div>
-      <div class="estimate" data-estimate data-fmt="{{ s.est_fmt }}" data-msg="{{ s.est_msg }}">
-        <span class="t-label">{{ s.est_title }}</span>
-        <div class="estimate__row">
-          <label class="field" style="flex:1 1 220px"><span class="sr-only">{{ s.est_service }}</span>
-            <select aria-label="{{ s.est_service }}">{% for it in s.services %}<option value="{{ it.name }}" data-price="{{ it.p }}">{{ it.name }}</option>{% endfor %}</select>
-          </label>
-          <div class="stepper" role="group" aria-label="{{ s.est_tracks }}"><button type="button" data-minus aria-label="−">−</button><span data-n>1</span><button type="button" data-plus aria-label="+">+</button></div>
-          <span class="t-small">{{ s.est_tracks }}</span>
-          <output aria-live="polite"></output>
-        </div>
-        <div class="btn-row"><button class="btn btn--ghost btn--small" type="button" data-estimate-go>{{ s.est_go }}</button><span class="t-small">{{ s.est_note }}</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="chain" aria-labelledby="h-chain">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-chain">{{ s.ch_h2 }}</h2>
-      <p>{{ s.ch_intro }}</p>
-    </div>
-    <div class="chain-copy">
-      <p>{{ s.ch_p1 }}</p>
-      <div class="rack" role="list">
-        {% for name, role in s.units %}<div class="unit" role="listitem"><b>{{ name }}</b><span>{{ role }}</span></div>
-        {% endfor %}
-      </div>
-      <p>{{ s.ch_p2 }}</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--tight" id="process" aria-labelledby="h-proc">
-  <div class="wrap">
-    <h2 class="t-h2" id="h-proc">{{ s.pr_h2 }}</h2>
-    <ol class="steps">
-      {% for t, dsc in s.steps %}<li><h3>{{ t }}</h3><p>{{ dsc }}</p></li>
-      {% endfor %}
-    </ol>
-  </div>
-</section>
-
-<section class="sec sec--plate" id="reviews" aria-labelledby="h-rev">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-rev">{{ s.rv_h2 }}</h2>
-      <div class="rating"><b>4.9</b><span class="t-small">{{ s.rv_scale }}</span></div>
-      <p>{{ s.rv_intro }}</p>
-      <p><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">{{ s.rv_link }}</a></p>
-    </div>
-    <div class="quotes">
-      {% for q in reviews %}<figure class="quote">
-        <blockquote><p>“{{ q.text }}”</p></blockquote>
-        <figcaption><b>{{ q.who }}, {{ q.where[lang] }}</b><span>{{ q.badge[lang] }}</span></figcaption>
-      </figure>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="tools" aria-labelledby="h-tools">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-tools">{{ s.tl_h2 }}</h2>
-      <p>{{ s.tl_intro }}</p>
-      <p><a class="link" href="{{ tools_href }}">{{ s.tl_all }}</a></p>
-    </div>
-    <div class="rule-list">
-      {% for t in tools %}<a class="tool-row" href="{{ t.href }}">
+    <div class="tool-grid" data-reveal data-reveal-kids>
+      {% for t in tools %}<a class="tool-card spot" href="{{ t.href }}">
         <span class="mini" aria-hidden="true">{{ t.mini }}</span>
-        <span><h3>{{ t.name }}</h3><p>{{ t.short }}</p></span>
-        <span class="tool-row__go">{{ s.open }}</span>
+        <h3>{{ t.name }}</h3>
+        <p>{{ t.short }}</p>
+      </a>
+      {% endfor %}
+    </div>
+    <p class="more"><a class="link" href="{{ tools_href }}">{{ c.tools_more }}</a></p>
+  </div>
+</section>
+
+<section class="articles-home" id="articles" aria-labelledby="h-art">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <h2 class="t-display" id="h-art" data-split>{{ s.ar_h2 }}</h2>
+      <div class="list-links" data-reveal>{% for l in s.ar_links %}<a class="link" href="{{ l.href }}">{{ l.label }}</a>{% endfor %}</div>
+    </div>
+    <div class="post-grid" data-reveal data-reveal-kids>
+      {% for p in posts %}<a class="post-card spot" href="{{ p.href }}" style="--cap:var(--cap-{{ p.cat }})">
+        <span class="cap" data-cat="{{ p.cat }}">{{ p.cat_label }}</span>
+        <h3>{{ p.title }}</h3>
+        <time datetime="{{ p.date }}">{{ p.date_label }}</time>
       </a>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="sec sec--tight" id="articles" aria-labelledby="h-art">
+<section class="faq-home" id="faq" aria-labelledby="h-faq">
   <div class="wrap split">
     <div class="split__head">
-      <h2 class="t-h2" id="h-art">{{ s.ar_h2 }}</h2>
-      <p>{{ s.ar_intro }}</p>
+      <h2 class="t-display" id="h-faq" data-split>{{ s.fq_h2 }}</h2>
+      <p class="t-lead" data-reveal>{{ s.fq_intro }}</p>
     </div>
-    <div>
-      <div class="rule-list">
-        {% for p in posts %}<a class="post-row" href="{{ p.href }}">
-          <span class="cap" data-cat="{{ p.cat }}">{{ p.cat_label }}</span>
-          <h3>{{ p.title }}</h3>
-          <time datetime="{{ p.date }}">{{ p.date_label }}</time>
-        </a>
-        {% endfor %}
-      </div>
-      <div class="list-links">{% for l in s.ar_links %}<a class="link" href="{{ l.href }}">{{ l.label }}</a>{% endfor %}</div>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--plate" id="faq" aria-labelledby="h-faq">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-faq">{{ s.fq_h2 }}</h2>
-      <p>{{ s.fq_intro }}</p>
-    </div>
-    <div class="faq rule-list">
+    <div class="faq" data-reveal>
       {% for q, a in s.faqs %}<details{% if loop.first %} open{% endif %}><summary>{{ q }}</summary><div><p>{{ a }}</p></div></details>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="sec" id="contact" aria-labelledby="h-ct">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-ct">{{ s.ct_h2 }}</h2>
-      <p>{{ s.ct_intro }}</p>
-      <div class="channels">{{ channels }}</div>
+<section class="contact" id="contact" aria-labelledby="h-ct">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="wrap contact__grid">
+    <div class="contact__text">
+      <h2 class="t-mega" id="h-ct" data-split>{{ c.ct_big }}</h2>
+      <p class="t-lead" data-reveal>{{ s.ct_intro }}</p>
+      <div class="channels" data-reveal>{{ channels }}</div>
     </div>
-    <form class="form" id="contact-form" name="contact" method="POST" action="{{ form_action }}" data-netlify="true" netlify-honeypot="bot-field" data-ok="{{ s.f_ok }}" data-err="{{ s.f_err }}" data-busy="{{ s.f_busy }}">
+    <form class="form contact__form" id="contact-form" name="contact" method="POST" action="{{ form_action }}" data-netlify="true" netlify-honeypot="bot-field" data-ok="{{ s.f_ok }}" data-err="{{ s.f_err }}" data-busy="{{ s.f_busy }}" data-reveal>
       <input type="hidden" name="form-name" value="contact">
       <input type="hidden" name="language" value="{{ lang }}">
       <p class="hp"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -197,7 +264,7 @@
       </label>
       <label class="field"><span>{{ s.f_files }}</span><input name="files" type="url" inputmode="url" placeholder="https://"></label>
       <label class="field"><span>{{ s.f_msg }}</span><textarea name="message" required placeholder="{{ s.f_msg_ph }}"></textarea></label>
-      <div class="btn-row"><button class="btn" type="submit">{{ s.f_send }}</button><span class="form-note">{{ s.f_note }} <a class="link" href="{{ privacy_href }}">{{ s.f_privacy }}</a>.</span></div>
+      <div class="btn-row"><button class="btn btn--glow" type="submit" data-magnetic>{{ s.f_send }}</button><span class="form-note">{{ s.f_note }} <a class="link" href="{{ privacy_href }}">{{ s.f_privacy }}</a>.</span></div>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>

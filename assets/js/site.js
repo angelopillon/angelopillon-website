@@ -16,25 +16,13 @@
   }
   window.APtoast = toast;
 
-  /* ---------- finish (Silver / Black) ---------- */
-  var themeMeta = $('meta[name="theme-color"]');
-  function setFinish(f, save) {
-    if (f === "black") root.setAttribute("data-finish", "black"); else root.removeAttribute("data-finish");
-    $$("[data-finish-set]").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-finish-set") === f ? "true" : "false"); });
-    if (themeMeta) themeMeta.setAttribute("content", f === "black" ? "#1B1C1F" : "#DCDDD8");
-    if (save) store("ap_finish", f);
-  }
-  setFinish(root.getAttribute("data-finish") === "black" ? "black" : "silver", false);
-  $$("[data-finish-set]").forEach(function (b) {
-    b.addEventListener("click", function () { setFinish(b.getAttribute("data-finish-set"), true); });
-  });
-
   /* ---------- mobile menu ---------- */
   var menuBtn = $(".menu-btn");
-  function closeMenu() { body.classList.remove("menu-open"); if (menuBtn) menuBtn.setAttribute("aria-expanded", "false"); }
+  function closeMenu() { body.classList.remove("menu-open"); if (menuBtn) menuBtn.setAttribute("aria-expanded", "false"); if (window.APLenis) window.APLenis.start(); }
   if (menuBtn) {
     menuBtn.addEventListener("click", function () {
       var open = body.classList.toggle("menu-open");
+      if (window.APLenis) { if (open) window.APLenis.stop(); else window.APLenis.start(); }
       menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
     });
     $$(".nav a").forEach(function (a) { a.addEventListener("click", closeMenu); });

@@ -21,16 +21,15 @@
 <meta property="og:image:alt" content="Privacy and cookie policy">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://angelopillon.com/assets/og/en-home.png">
-<meta name="theme-color" content="#DCDDD8">
-<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Angelo Pillon, studio journal" href="/feed.xml">
 <link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=202611051236">
-<script>(function(){try{var f=localStorage.getItem('ap_finish');if(!f&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)f='black';if(f==='black'){document.documentElement.setAttribute('data-finish','black');}}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611051318">
 </head>
 <body class="">
 <a class="skip" href="#main">Skip to content</a>
@@ -56,10 +55,6 @@
           
         </ul>
       </details>
-      <div class="finish" role="group" aria-label="Panel finish">
-        <button type="button" data-finish-set="silver" aria-pressed="true">Silver</button>
-        <button type="button" data-finish-set="black" aria-pressed="false">Black</button>
-      </div>
       <a class="btn btn--small" href="/#contact">Start a project</a>
     </div>
     <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
@@ -114,10 +109,10 @@
 <td>Until you change it or clear your browser data</td>
 </tr>
 <tr>
-<td><code>ap_finish</code></td>
+<td><code>ap_spotify</code></td>
 <td>Local storage</td>
-<td>Remembers the Silver or Black finish you chose</td>
-<td>Until you change it or clear your browser data</td>
+<td>Remembers that you chose to load the Spotify player, so it loads directly next time</td>
+<td>Until you clear your browser data</td>
 </tr>
 <tr>
 <td>Service worker cache</td>
@@ -136,16 +131,18 @@
 <p>The first three are technically necessary for features you use and contain no personal data. They are never sent to third parties.</p>
 <h2>6. Hosting and server logs</h2>
 <p>The site is hosted by Netlify, Inc. To deliver the pages and protect the service, Netlify processes technical data such as your IP address, the page requested and your browser type in its server logs. This happens on the basis of my legitimate interest in running a secure website (Art. 6(1)(f)). Netlify is based in the United States; transfers take place under the safeguards provided by the GDPR.</p>
-<h2>7. Fonts, links and sharing</h2>
-<p>The fonts are served from this site: no request is made to Google Fonts or other font services. The site loads no social media plugins. Links to Fiverr, SoundBetter, WhatsApp, Telegram or LinkedIn, including the share buttons on articles, only take you to those services when you click them; from that moment, their privacy policies apply.</p>
-<h2>8. Who receives your data</h2>
-<p>Your data is never sold. It is processed only by the providers named on this page, acting as processors: Netlify, Inc. for hosting and the contact form, and Google for analytics if you accept them.</p>
-<h2>9. Your rights</h2>
+<h2>7. Spotify player</h2>
+<p>The home page includes a Spotify player with a playlist of tracks I mixed and mastered. It is not loaded when you open the page: it loads only when you press the button that loads it. From that moment Spotify AB processes data about your visit and may set its own cookies, under <a href="https://www.spotify.com/legal/privacy-policy/">Spotify’s privacy policy</a>. The site remembers your choice with <code>ap_spotify</code> (see above); to undo it, clear the site data in your browser.</p>
+<h2>8. Fonts, scripts, links and sharing</h2>
+<p>Fonts, scripts and animation libraries are served from this site: no request is made to Google Fonts or to other external services when the pages load. The site loads no social media plugins. Links to Fiverr, SoundBetter, WhatsApp, Telegram or LinkedIn, including the share buttons on articles, only take you to those services when you click them; from that moment, their privacy policies apply.</p>
+<h2>9. Who receives your data</h2>
+<p>Your data is never sold. It is processed only by the providers named on this page, acting as processors: Netlify, Inc. for hosting and the contact form, Google for analytics if you accept them, and Spotify if you load the player.</p>
+<h2>10. Your rights</h2>
 <p>You have the right to access your personal data, have it corrected or erased, restrict or object to its processing, receive it in a portable format and withdraw your consent at any time, without affecting the lawfulness of processing carried out before. To exercise these rights, write to <a href="mailto:angelopillon@gmail.com">angelopillon@gmail.com</a>.</p>
 <p>You also have the right to lodge a complaint with the Italian data protection authority, the <a href="https://www.garanteprivacy.it">Garante per la protezione dei dati personali</a>.</p>
-<h2>10. Security</h2>
+<h2>11. Security</h2>
 <p>The site is served only over HTTPS. Form submissions are encrypted in transit.</p>
-<h2>11. Changes</h2>
+<h2>12. Changes</h2>
 <p>If this policy changes, the date at the top of this page changes with it. The Italian version of this policy is available at <a href="/it/privacy">/it/privacy</a>.</p></div>
 </section>
 </main>
@@ -181,7 +178,8 @@
   <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Accept</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Decline</button></div>
 </aside>
 
-<script src="/assets/js/site.js?v=202611051236" defer></script>
+<script src="/assets/js/site.js?v=202611051318" defer></script>
+<script src="/assets/js/motion.js?v=202611051318" defer></script>
 
 </body>
 </html>

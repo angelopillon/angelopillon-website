@@ -38,7 +38,7 @@ Se fai clic su **Rifiuta**, o non scegli, Google Analytics non viene caricato e 
 | Nome | Cos’è | A cosa serve | Durata |
 |---|---|---|---|
 | `ap_consent` | Archiviazione locale | Ricorda se hai accettato o rifiutato le statistiche | Finché non la cambi o cancelli i dati del browser |
-| `ap_finish` | Archiviazione locale | Ricorda la finitura Argento o Nero che hai scelto | Finché non la cambi o cancelli i dati del browser |
+| `ap_spotify` | Archiviazione locale | Ricorda che hai scelto di caricare il player di Spotify, così la volta successiva si carica direttamente | Finché non cancelli i dati del browser |
 | Cache del service worker | Cache del browser | Conserva una copia dei file del sito perché gli strumenti funzionino offline | Fino al successivo aggiornamento del sito o finché non la cancelli |
 | `_ga`, `_ga_<ID>` | Cookie, solo con consenso | Statistiche di Google Analytics | Fino a 2 anni |
 
@@ -48,24 +48,28 @@ I primi tre sono tecnicamente necessari per funzioni che usi e non contengono da
 
 Il sito è ospitato da Netlify, Inc. Per consegnare le pagine e proteggere il servizio, Netlify tratta nei log del server dati tecnici come il tuo indirizzo IP, la pagina richiesta e il tipo di browser. Avviene sulla base del mio legittimo interesse a gestire un sito sicuro (art. 6, par. 1, lett. f). Netlify ha sede negli Stati Uniti; i trasferimenti avvengono con le garanzie previste dal GDPR.
 
-## 7. Font, link e condivisione
+## 7. Player di Spotify
 
-I font sono serviti da questo sito: non viene fatta alcuna richiesta a Google Fonts o ad altri servizi di font. Il sito non carica plugin dei social network. I link a Fiverr, SoundBetter, WhatsApp, Telegram o LinkedIn, compresi i pulsanti di condivisione degli articoli, ti portano a quei servizi solo quando li usi; da quel momento si applicano le loro informative.
+La home contiene un player di Spotify con una playlist di brani che ho mixato e masterizzato. Non viene caricato quando apri la pagina: si carica solo quando premi il pulsante che lo carica. Da quel momento Spotify AB tratta dati sulla tua visita e può impostare i suoi cookie, secondo l’[informativa di Spotify](https://www.spotify.com/it/legal/privacy-policy/). Il sito ricorda la tua scelta con `ap_spotify` (vedi sopra); per annullarla, cancella i dati del sito nel browser.
 
-## 8. Chi riceve i tuoi dati
+## 8. Font, script, link e condivisione
 
-I tuoi dati non vengono mai venduti. Sono trattati solo dai fornitori indicati in questa pagina, come responsabili del trattamento: Netlify, Inc. per l’hosting e il modulo di contatto, e Google per le statistiche, se le accetti.
+Font, script e librerie di animazione sono serviti da questo sito: quando le pagine si caricano non viene fatta alcuna richiesta a Google Fonts o ad altri servizi esterni. Il sito non carica plugin dei social network. I link a Fiverr, SoundBetter, WhatsApp, Telegram o LinkedIn, compresi i pulsanti di condivisione degli articoli, ti portano a quei servizi solo quando li usi; da quel momento si applicano le loro informative.
 
-## 9. I tuoi diritti
+## 9. Chi riceve i tuoi dati
+
+I tuoi dati non vengono mai venduti. Sono trattati solo dai fornitori indicati in questa pagina, come responsabili del trattamento: Netlify, Inc. per l’hosting e il modulo di contatto, Google per le statistiche se le accetti, e Spotify se carichi il player.
+
+## 10. I tuoi diritti
 
 Hai il diritto di accedere ai tuoi dati personali, chiederne la rettifica o la cancellazione, limitarne il trattamento od opporti, riceverli in un formato portabile e revocare il consenso in qualsiasi momento, senza effetti sulla liceità del trattamento svolto prima. Per esercitarli, scrivi a [angelopillon@gmail.com](mailto:angelopillon@gmail.com).
 
 Hai anche il diritto di proporre reclamo al [Garante per la protezione dei dati personali](https://www.garanteprivacy.it).
 
-## 10. Sicurezza
+## 11. Sicurezza
 
 Il sito è servito solo tramite HTTPS. I dati del modulo sono cifrati durante la trasmissione.
 
-## 11. Modifiche
+## 12. Modifiche
 
 Se questa informativa cambia, cambia anche la data in cima alla pagina. La versione inglese è disponibile alla pagina [/privacy-policy](/privacy-policy).

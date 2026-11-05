@@ -323,8 +323,9 @@ def home_pages(arts):
         cl = S.CONTENT_LANG[lang]
         posts = sorted([a for a in arts if a["lang"] == cl], key=lambda a: (a["date"], -a["order"]), reverse=True)[:4]
         posts = [dict(href=a["path"], title=a["title"], cat=a["cat"], cat_label=S.CATS[a["cat"]][lang] if lang in S.CATS[a["cat"]] else a["cat_label"], date=a["date"], date_label=S.date_label(a["date"], lang)) for a in posts]
-        main = env.get_template("home.html").render(s=s, lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
-                                                     meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/")
+        main = env.get_template("home.html").render(s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
+                                                     meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
+                                                     codes=S.CLIENT_CODES, playlist=S.SPOTIFY_PLAYLIST)
         main = Markup(main) + Markup('<script type="application/json" id="tool-i18n">' + json.dumps(S.BRIDGE[lang], ensure_ascii=False).replace("</", "<\\/") + "</script>")
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",
                "description": s["description"], "url": SITE + S.HOMES[lang], "image": SITE + "/assets/img/studio-1-1400.jpg", "logo": SITE + "/assets/img/icon-512.png",
@@ -335,7 +336,7 @@ def home_pages(arts):
         faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["faqs"]]}
         site = {"@context": "https://schema.org", "@type": "WebSite", "name": "Angelo Pillon", "url": SITE + "/", "inLanguage": lang}
         add_page(path=S.HOMES[lang], lang=lang, title=s["title"], description=s["description"], main=Markup(main), alt_key="home", jsonld=[org, faq, site],
-                 scripts=["/assets/js/tools/common.js", "/assets/js/tools/bridge.js"], og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
+                 scripts=["/assets/js/tools/common.js", "/assets/js/tools/bridge.js", "/assets/js/cosmos.js"], og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
                  og_args=dict(title=s["h1"], kicker={"en": "Mixing and mastering", "it": "Mix e mastering", "de": "Mixing und Mastering", "es": "Mezcla y mastering"}[lang], readout="−8.9 LUFS  −0.3 dBTP"),
                  body_class="is-home")
 
@@ -467,13 +468,13 @@ def write_sitemap():
 
 def write_manifest_sw():
     man = {"name": "Angelo Pillon, mixing and mastering", "short_name": "A. Pillon", "description": "Mixing and mastering in Milan, with free audio tools that work offline.",
-           "start_url": "/?source=pwa", "scope": "/", "display": "standalone", "background_color": "#DCDDD8", "theme_color": "#DCDDD8", "lang": "en",
+           "start_url": "/?source=pwa", "scope": "/", "display": "standalone", "background_color": "#000000", "theme_color": "#000000", "lang": "en",
            "icons": [{"src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png"},
                      {"src": "/assets/img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}],
            "shortcuts": [{"name": "LUFS meter", "url": "/loudness-meter"}, {"name": "Misuratore LUFS", "url": "/it/strumenti/misuratore-lufs"}, {"name": "Tools", "url": "/tools/"}]}
     (OUT / "manifest.webmanifest").write_text(json.dumps(man, ensure_ascii=False, indent=1))
     tool_urls = sorted({p["path"] for p in PAGES if p["nav_current"] == "tools"})
-    precache = ["/", "/it/", "/offline.html", "/assets/css/site.css", "/assets/js/site.js", "/assets/js/dsp.js", "/assets/js/tools/common.js",
+    precache = ["/", "/it/", "/offline.html", "/assets/css/site.css", "/assets/js/site.js", "/assets/js/motion.js", "/assets/js/cosmos.js", "/assets/js/dsp.js", "/assets/js/tools/common.js",
                 "/assets/fonts/mona-sans-vf.woff2", "/assets/fonts/hubot-sans-vf.woff2"] + [f"/assets/js/tools/{t['js']}" for t in TL.TOOLS] + tool_urls
     sw = f"""/* angelopillon.com service worker: tools work offline, pages are network first */
 const V = "ap-{V}";
@@ -612,11 +613,19 @@ def copy_assets():
 
 
 def favicon_svg():
-    svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#DCDDD8"/><text x="29" y="43" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="28" fill="#141518" letter-spacing="-1">AP</text><circle cx="53" cy="24" r="3.2" fill="#7CF2DC"/></svg>'
+    svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#000"/><text x="29" y="43" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="28" fill="#F5F5F7" letter-spacing="-1">AP</text><circle cx="53" cy="24" r="3.4" fill="#FF3DA5"/></svg>'
     (ROOT / "favicon.svg").write_text(svg)
 
 
+def bundle_js():
+    """Rebuilds assets/js/motion.js and cosmos.js with esbuild when the node toolchain is installed."""
+    import subprocess
+    if (B / "js/node_modules").exists() and "--no-js" not in sys.argv:
+        subprocess.run(["node", "bundle.mjs"], cwd=str(B / "js"), check=True, capture_output=True)
+
+
 def main():
+    bundle_js()
     arts = load_articles()
     home_pages(arts)
     article_pages(arts)

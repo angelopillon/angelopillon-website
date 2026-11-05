@@ -38,7 +38,7 @@ If you click **Decline**, or don’t choose, Google Analytics is not loaded and 
 | Name | What it is | Why | Duration |
 |---|---|---|---|
 | `ap_consent` | Local storage | Remembers whether you accepted or declined statistics | Until you change it or clear your browser data |
-| `ap_finish` | Local storage | Remembers the Silver or Black finish you chose | Until you change it or clear your browser data |
+| `ap_spotify` | Local storage | Remembers that you chose to load the Spotify player, so it loads directly next time | Until you clear your browser data |
 | Service worker cache | Browser cache | Keeps a copy of the site’s files so the tools work offline | Until the next update of the site or until you clear it |
 | `_ga`, `_ga_<ID>` | Cookies, only with consent | Google Analytics statistics | Up to 2 years |
 
@@ -48,24 +48,28 @@ The first three are technically necessary for features you use and contain no pe
 
 The site is hosted by Netlify, Inc. To deliver the pages and protect the service, Netlify processes technical data such as your IP address, the page requested and your browser type in its server logs. This happens on the basis of my legitimate interest in running a secure website (Art. 6(1)(f)). Netlify is based in the United States; transfers take place under the safeguards provided by the GDPR.
 
-## 7. Fonts, links and sharing
+## 7. Spotify player
 
-The fonts are served from this site: no request is made to Google Fonts or other font services. The site loads no social media plugins. Links to Fiverr, SoundBetter, WhatsApp, Telegram or LinkedIn, including the share buttons on articles, only take you to those services when you click them; from that moment, their privacy policies apply.
+The home page includes a Spotify player with a playlist of tracks I mixed and mastered. It is not loaded when you open the page: it loads only when you press the button that loads it. From that moment Spotify AB processes data about your visit and may set its own cookies, under [Spotify’s privacy policy](https://www.spotify.com/legal/privacy-policy/). The site remembers your choice with `ap_spotify` (see above); to undo it, clear the site data in your browser.
 
-## 8. Who receives your data
+## 8. Fonts, scripts, links and sharing
 
-Your data is never sold. It is processed only by the providers named on this page, acting as processors: Netlify, Inc. for hosting and the contact form, and Google for analytics if you accept them.
+Fonts, scripts and animation libraries are served from this site: no request is made to Google Fonts or to other external services when the pages load. The site loads no social media plugins. Links to Fiverr, SoundBetter, WhatsApp, Telegram or LinkedIn, including the share buttons on articles, only take you to those services when you click them; from that moment, their privacy policies apply.
 
-## 9. Your rights
+## 9. Who receives your data
+
+Your data is never sold. It is processed only by the providers named on this page, acting as processors: Netlify, Inc. for hosting and the contact form, Google for analytics if you accept them, and Spotify if you load the player.
+
+## 10. Your rights
 
 You have the right to access your personal data, have it corrected or erased, restrict or object to its processing, receive it in a portable format and withdraw your consent at any time, without affecting the lawfulness of processing carried out before. To exercise these rights, write to [angelopillon@gmail.com](mailto:angelopillon@gmail.com).
 
 You also have the right to lodge a complaint with the Italian data protection authority, the [Garante per la protezione dei dati personali](https://www.garanteprivacy.it).
 
-## 10. Security
+## 11. Security
 
 The site is served only over HTTPS. Form submissions are encrypted in transit.
 
-## 11. Changes
+## 12. Changes
 
 If this policy changes, the date at the top of this page changes with it. The Italian version of this policy is available at [/it/privacy](/it/privacy).

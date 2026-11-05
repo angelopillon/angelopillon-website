@@ -349,3 +349,58 @@ BRIDGE["es"] = dict(BRIDGE["en"], ref14="−14 LUFS, referencia de streaming", b
                     vQuiet="Demasiado bajo para medir una sonoridad integrada.", vDown="Spotify lo reproducirá {g} dB más bajo de como lo masterizaste.", vUp="Spotify puede subirlo unos {g} dB, hasta donde lo permitan los picos.", vOn="Está justo en el nivel de referencia de Spotify.",
                     vTpOver="True peak {tp} dBTP: espera clipping al codificarlo para streaming.", vTpEdge="True peak {tp} dBTP: al límite; un limitador true peak a −0,3 o −0,2 es el techo seguro.", vTpOk="True peak {tp} dBTP: seguro para la codificación.",
                     vCorr="Correlación {c}: la imagen estéreo es muy ancha o está parcialmente fuera de fase; compruébala en mono.", openMeter="Informe completo", getMastered="Masterizarlo")
+
+
+# ---------------------------------------------------------------- home 2026: cosmos, story, globe, listen
+COSMOS = {
+    "en": dict(
+        kicker="Mixing and mastering · Milan", h1="Your music, perfected.",
+        lead="A hybrid studio in Milan for artists, producers and labels in 66 countries. Balanced, loud as it should be, safe on every platform.",
+        listen_cta="Hear the work", scroll="Scroll", story_label="From noise to master",
+        story=["At first, it’s only noise.", "Then it becomes sound.", "The mix gives it shape.", "The master makes it timeless."],
+        gl_h2="Countries. One standard.", gl_p="Artists, producers, labels and studios on five continents send me their records. Every master leaves from Milan, checked for every platform it is going to.",
+        gl_dest="Now sending to", st_tracks="Tracks delivered", st_years="Years full time", st_rating="Rating from 700+ reviews", st_turn="Typical mastering turnaround",
+        ls_h2="Hear the work.", ls_p="159 tracks I mixed and mastered, in one playlist: techno, house, pop, R&B, rap and rock. Press play and judge with your ears.",
+        ls_count="159 tracks · Spotify", ls_load="Load the player", ls_note="The Spotify player loads only when you ask: from then on Spotify can set its own cookies.", ls_open="Open in Spotify",
+        sv_cta="Get a quote", ch_kicker="Hybrid chain", tools_more="All free tools",
+        ct_big="Let’s make something great.",
+    ),
+    "it": dict(
+        kicker="Mix e mastering · Milano", h1="La tua musica, alla perfezione.",
+        lead="Uno studio ibrido a Milano per artisti, produttori ed etichette in 66 paesi. Bilanciata, forte quanto deve esserlo, sicura su ogni piattaforma.",
+        listen_cta="Ascolta il lavoro", scroll="Scorri", story_label="Dal rumore al master",
+        story=["All’inizio è solo rumore.", "Poi diventa suono.", "Il mix gli dà forma.", "Il master lo rende senza tempo."],
+        gl_h2="Paesi. Un solo standard.", gl_p="Artisti, produttori, etichette e studi di cinque continenti mi mandano i loro dischi. Ogni master parte da Milano, controllato per ogni piattaforma su cui uscirà.",
+        gl_dest="In consegna verso", st_tracks="Brani consegnati", st_years="Anni a tempo pieno", st_rating="Voto medio su oltre 700 recensioni", st_turn="Consegna tipica del mastering",
+        ls_h2="Ascolta il lavoro.", ls_p="159 brani che ho mixato e masterizzato, in una playlist: techno, house, pop, R&B, rap e rock. Premi play e giudica con le tue orecchie.",
+        ls_count="159 brani · Spotify", ls_load="Carica il player", ls_note="Il player di Spotify si carica solo se lo chiedi: da quel momento Spotify può impostare i suoi cookie.", ls_open="Apri su Spotify",
+        sv_cta="Chiedi un preventivo", ch_kicker="Catena ibrida", tools_more="Tutti gli strumenti gratuiti",
+        ct_big="Facciamo qualcosa di grande.",
+    ),
+    "de": dict(
+        kicker="Mixing und Mastering · Mailand", h1="Deine Musik, perfektioniert.",
+        lead="Ein hybrides Studio in Mailand für Artists, Produzenten und Labels in 66 Ländern. Ausgewogen, so laut wie nötig, sicher auf jeder Plattform.",
+        listen_cta="Arbeiten anhören", scroll="Scrollen", story_label="Vom Rauschen zum Master",
+        story=["Am Anfang ist es nur Rauschen.", "Dann wird es Klang.", "Der Mix gibt ihm Form.", "Das Mastering macht es zeitlos."],
+        gl_h2="Länder. Ein Standard.", gl_p="Artists, Produzenten, Labels und Studios auf fünf Kontinenten schicken mir ihre Platten. Jeder Master verlässt Mailand geprüft für jede Plattform, auf der er erscheint.",
+        gl_dest="Gerade unterwegs nach", st_tracks="Gelieferte Tracks", st_years="Jahre in Vollzeit", st_rating="Bewertung aus über 700 Reviews", st_turn="Übliche Mastering-Lieferzeit",
+        ls_h2="Hör dir die Arbeit an.", ls_p="159 Tracks, die ich gemischt und gemastert habe, in einer Playlist: Techno, House, Pop, R&B, Rap und Rock. Drück auf Play und urteile mit deinen Ohren.",
+        ls_count="159 Tracks · Spotify", ls_load="Player laden", ls_note="Der Spotify-Player lädt erst, wenn du es willst: ab dann kann Spotify eigene Cookies setzen.", ls_open="In Spotify öffnen",
+        sv_cta="Angebot anfragen", ch_kicker="Hybride Kette", tools_more="Alle kostenlosen Tools",
+        ct_big="Lass uns etwas Großes machen.",
+    ),
+    "es": dict(
+        kicker="Mezcla y mastering · Milán", h1="Tu música, perfeccionada.",
+        lead="Un estudio híbrido en Milán para artistas, productores y sellos de 66 países. Equilibrada, tan fuerte como debe ser, segura en cada plataforma.",
+        listen_cta="Escucha el trabajo", scroll="Desliza", story_label="Del ruido al máster",
+        story=["Al principio, solo es ruido.", "Después se convierte en sonido.", "La mezcla le da forma.", "El máster lo hace eterno."],
+        gl_h2="Países. Un solo estándar.", gl_p="Artistas, productores, sellos y estudios de cinco continentes me envían sus discos. Cada máster sale de Milán, revisado para cada plataforma donde se publique.",
+        gl_dest="Enviando a", st_tracks="Tracks entregados", st_years="Años a tiempo completo", st_rating="Valoración de más de 700 reseñas", st_turn="Entrega habitual del mastering",
+        ls_h2="Escucha el trabajo.", ls_p="159 tracks que mezclé y masterizé, en una playlist: techno, house, pop, R&B, rap y rock. Dale al play y juzga con tus oídos.",
+        ls_count="159 tracks · Spotify", ls_load="Cargar el reproductor", ls_note="El reproductor de Spotify solo se carga si lo pides: desde ese momento Spotify puede usar sus propias cookies.", ls_open="Abrir en Spotify",
+        sv_cta="Pedir presupuesto", ch_kicker="Cadena híbrida", tools_more="Todas las herramientas gratis",
+        ct_big="Hagamos algo grande.",
+    ),
+}
+SPOTIFY_PLAYLIST = "6ILH2EWbFZyvDN2NTLtP4N"
+CLIENT_CODES = "AL,AR,AU,AT,BD,BE,BA,BR,BG,KH,CA,CL,CO,CR,HR,CU,CZ,DK,DO,EE,FI,FR,GE,DE,GR,GT,HU,IS,IN,ID,IE,IL,IT,LV,LT,LU,MK,MY,ME,MM,NL,NZ,OM,PG,PL,PT,RS,RO,SA,SK,SI,ZA,KR,ES,SE,CH,TW,TH,TR,AE,GB,US,UY,VE,VN"
