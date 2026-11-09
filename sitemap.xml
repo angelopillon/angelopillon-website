@@ -37,6 +37,86 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/"/>
   </url>
   <url>
+    <loc>https://angelopillon.com/it/articoli/eq-sottrattiva</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/eq-sottrattiva"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/subtractive-eq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/subtraktiver-eq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/subtractive-eq"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/riverbero-delay-spazio-mix</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/riverbero-delay-spazio-mix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/reverb-and-delay-in-the-mix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/hall-und-delay-im-mix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/reverb-and-delay-in-the-mix"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/saturazione-mix-master</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/saturazione-mix-master"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/saturation-in-mix-and-master"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/saettigung-im-mix-und-master"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/saturation-in-mix-and-master"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/compressione-bus-mix</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-bus-mix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mix-bus-compression"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mixbus-kompression"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mix-bus-compression"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/de-esser-sibilanti</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/de-esser-sibilanti"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/de-essing-vocals"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/de-esser-zischlaute"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/de-essing-vocals"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/limiter-mastering</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/limiter-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mastering-limiter-settings"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/limiter-im-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mastering-limiter-settings"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/eq-mid-side-mastering</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/eq-mid-side-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mid-side-eq-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mid-side-eq-im-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mid-side-eq-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/tracce-di-riferimento</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/tracce-di-riferimento"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/reference-tracks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/referenztracks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/reference-tracks"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/mastering-afro-house</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-afro-house"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/afro-house-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/afro-house-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/afro-house-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/formati-consegna-master</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/formati-consegna-master"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/master-delivery-formats"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/master-lieferformate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/master-delivery-formats"/>
+  </url>
+  <url>
     <loc>https://angelopillon.com/it/articoli/lufs-streaming-2026</loc>
     <lastmod>2026-11-05</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-streaming-2026"/>
@@ -245,6 +325,86 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/articles"/>
   </url>
   <url>
+    <loc>https://angelopillon.com/subtractive-eq</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/eq-sottrattiva"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/subtractive-eq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/subtraktiver-eq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/subtractive-eq"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/reverb-and-delay-in-the-mix</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/riverbero-delay-spazio-mix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/reverb-and-delay-in-the-mix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/hall-und-delay-im-mix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/reverb-and-delay-in-the-mix"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/saturation-in-mix-and-master</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/saturazione-mix-master"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/saturation-in-mix-and-master"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/saettigung-im-mix-und-master"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/saturation-in-mix-and-master"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/mix-bus-compression</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-bus-mix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mix-bus-compression"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mixbus-kompression"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mix-bus-compression"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de-essing-vocals</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/de-esser-sibilanti"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/de-essing-vocals"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/de-esser-zischlaute"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/de-essing-vocals"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/mastering-limiter-settings</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/limiter-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mastering-limiter-settings"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/limiter-im-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mastering-limiter-settings"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/mid-side-eq-mastering</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/eq-mid-side-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mid-side-eq-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mid-side-eq-im-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mid-side-eq-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/reference-tracks</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/tracce-di-riferimento"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/reference-tracks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/referenztracks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/reference-tracks"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/afro-house-mastering</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-afro-house"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/afro-house-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/afro-house-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/afro-house-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/master-delivery-formats</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/formati-consegna-master"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/master-delivery-formats"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/master-lieferformate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/master-delivery-formats"/>
+  </url>
+  <url>
     <loc>https://angelopillon.com/lufs-streaming-targets-2026</loc>
     <lastmod>2026-11-05</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-streaming-2026"/>
@@ -451,6 +611,86 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/articles"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/subtraktiver-eq</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/eq-sottrattiva"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/subtractive-eq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/subtraktiver-eq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/subtractive-eq"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/hall-und-delay-im-mix</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/riverbero-delay-spazio-mix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/reverb-and-delay-in-the-mix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/hall-und-delay-im-mix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/reverb-and-delay-in-the-mix"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/saettigung-im-mix-und-master</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/saturazione-mix-master"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/saturation-in-mix-and-master"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/saettigung-im-mix-und-master"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/saturation-in-mix-and-master"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/mixbus-kompression</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-bus-mix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mix-bus-compression"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mixbus-kompression"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mix-bus-compression"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/de-esser-zischlaute</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/de-esser-sibilanti"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/de-essing-vocals"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/de-esser-zischlaute"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/de-essing-vocals"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/limiter-im-mastering</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/limiter-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mastering-limiter-settings"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/limiter-im-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mastering-limiter-settings"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/mid-side-eq-im-mastering</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/eq-mid-side-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mid-side-eq-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mid-side-eq-im-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mid-side-eq-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/referenztracks</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/tracce-di-riferimento"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/reference-tracks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/referenztracks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/reference-tracks"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/afro-house-mastering</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-afro-house"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/afro-house-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/afro-house-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/afro-house-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/master-lieferformate</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/formati-consegna-master"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/master-delivery-formats"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/master-lieferformate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/master-delivery-formats"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/lufs-streaming-2026</loc>

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" data-ga="G-Y0FEM4JQLD" data-sw="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mix bus compression: step-by-step tutorial | Angelo Pillon</title>
+<meta name="description" content="How to set up a mix bus compressor: ratio, attack, release, sidechain filter and how much gain reduction it takes to glue a track without squashing it.">
+<link rel="canonical" href="https://angelopillon.com/mix-bus-compression">
+<link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-bus-mix">
+<link rel="alternate" hreflang="en" href="https://angelopillon.com/mix-bus-compression">
+<link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mixbus-kompression">
+<link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mix-bus-compression">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Angelo Pillon">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Mix bus compression: a tutorial for gluing the track together">
+<meta property="og:description" content="How to set up a mix bus compressor: ratio, attack, release, sidechain filter and how much gain reduction it takes to glue a track without squashing it.">
+<meta property="og:url" content="https://angelopillon.com/mix-bus-compression">
+<meta property="og:image" content="https://angelopillon.com/assets/og/en-mix-bus-compression.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mix bus compression: a tutorial for gluing the track together">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/assets/og/en-mix-bus-compression.png">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Angelo Pillon, studio journal" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611091644">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Mix bus compression: a tutorial for gluing the track together","description":"How to set up a mix bus compressor: ratio, attack, release, sidechain filter and how much gain reduction it takes to glue a track without squashing it.","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-09","author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg"},"publisher":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg"},"mainEntityOfPage":"https://angelopillon.com/mix-bus-compression","image":"https://angelopillon.com/assets/og/en-mix-bus-compression.png","articleSection":"Tutorial","wordCount":437}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://angelopillon.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://angelopillon.com/articles"},{"@type":"ListItem","position":3,"name":"Mix bus compression: a tutorial for gluing the track together","item":"https://angelopillon.com/mix-bus-compression"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Mix bus compression, step by step","description":"How to set up a mix bus compressor: ratio, attack, release, sidechain filter and how much gain reduction it takes to glue a track without squashing it.","inLanguage":"en","step":[{"@type":"HowToStep","name":"Put it on early, not at the end","text":"Put it on early, not at the end Insert the compressor once the rough balance is in place. If you add it to a finished mix, it shifts every balance you built and you will redo half the work."},{"@type":"HowToStep","name":"Low ratio","text":"Low ratio Start at 2:1. At 4:1 the compression is more audible and useful in aggressive music, but 2:1 is almost always enough to glue."},{"@type":"HowToStep","name":"Slow attack to let transients through","text":"Slow attack to let transients through Between 10 and 30 ms. With an attack that is too fast, kick and snare lose their snap and the mix flattens."},{"@type":"HowToStep","name":"Timed or auto release","text":"Timed or auto release Between 100 and 300 ms, or auto. The needle should return to zero between hits, in time with the song: if it stays down all the time, the release is too long."},{"@type":"HowToStep","name":"Filter the sidechain","text":"Filter the sidechain If the compressor allows it, high-pass the sidechain at 80 to 100 Hz. The low end then stops driving the whole compression and the mix does not pump on every kick."},{"@type":"HowToStep","name":"Threshold for 1 to 2 dB of gain reduction","text":"Threshold for 1 to 2 dB of gain reduction Lower the threshold until the needle moves 1 to 2 dB on the loudest parts. Dense electronic music can take 3 dB, rarely more."},{"@type":"HowToStep","name":"Compare at matched loudness","text":"Compare at matched loudness Compensate the output gain and bypass. Without the compressor the mix should feel a little looser, not louder. If it sounds better in bypass, reduce the gain reduction."}],"totalTime":"PT20M","tool":[{"@type":"HowToTool","name":"DAW"},{"@type":"HowToTool","name":"VCA-style bus compressor"},{"@type":"HowToTool","name":"Loudness meter"}]}</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="/">Angelo Pillon</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#services">Services</a>
+      <a href="/tools/">Tools</a>
+      <a href="/articles" aria-current="page">Articles</a>
+      <a href="/#contact">Contact</a>
+      
+    </nav>
+    <div class="hdr-actions">
+      <details class="lang">
+        <summary><span class="sr-only">Language: </span>EN <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <ul>
+          <li><a href="/mix-bus-compression" hreflang="en" lang="en" aria-current="true">English <span>EN</span></a></li>
+          <li><a href="/it/articoli/compressione-bus-mix" hreflang="it" lang="it">Italiano <span>IT</span></a></li>
+          <li><a href="/de/artikel/mixbus-kompression" hreflang="de" lang="de">Deutsch <span>DE</span></a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a></li>
+          
+        </ul>
+      </details>
+      <a class="btn btn--small" href="/#contact">Start a project</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<article>
+  <header class="article-head wrap">
+    <ol class="crumbs" aria-label="Breadcrumb">
+      <li><a href="/">Home</a></li><li><a href="/articles">Articles</a></li><li><span aria-current="page">Tutorial</span></li>
+    </ol>
+    <span class="cap" data-cat="tutorial">Tutorial</span>
+    <h1 class="t-h1">Mix bus compression, step by step</h1>
+    <nav class="lang-seg lang-seg--small" aria-label="Read in"><span>Read in</span><a href="/it/articoli/compressione-bus-mix" hreflang="it" lang="it">Italiano</a><a href="/mix-bus-compression" hreflang="en" lang="en" aria-current="page">English</a><a href="/de/artikel/mixbus-kompression" hreflang="de" lang="de">Deutsch</a></nav>
+    <p class="t-lead dek">One compressor on the mix bus doing 1 to 2 dB is what makes separate tracks sound like one song. The trick is to put it on early and let it work gently.</p>
+    <div class="meta">
+      <span>By Angelo Pillon</span>
+      <time datetime="2026-11-09">9 November 2026</time>
+      <span>3 min read</span>
+      
+      <span class="share">
+        <button type="button" data-share="copy" data-done="Link copied" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1 1"/><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1-1"/></svg></button>
+        <a href="https://wa.me/?text=Mix%20bus%20compression%3A%20a%20tutorial%20for%20gluing%20the%20track%20together%20https%3A%2F%2Fangelopillon.com%2Fmix-bus-compression" rel="noopener" target="_blank" aria-label="Share on WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+        <a href="https://t.me/share/url?url=https%3A%2F%2Fangelopillon.com%2Fmix-bus-compression&amp;text=Mix%20bus%20compression%3A%20a%20tutorial%20for%20gluing%20the%20track%20together" rel="noopener" target="_blank" aria-label="Share on Telegram" title="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 9-8.1c.4-.3-.1-.5-.6-.2L6.4 13.2l-4.7-1.5c-1-.3-1-1 .2-1.5l18.4-7.1c.9-.3 1.6.2 1.6 1.2z"/></svg></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fangelopillon.com%2Fmix-bus-compression" rel="noopener" target="_blank" aria-label="Share on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
+        <button type="button" data-share="native" aria-label="Share" title="Share"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v13M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button>
+      </span>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="article-grid">
+      <nav class="toc" aria-label="On this page">
+        <details open><summary>On this page</summary>
+        <h2 aria-hidden="true">On this page</h2>
+        <ol><li><a href="#the-procedure">The procedure</a></li><li><a href="#starting-values">Starting values</a></li><li><a href="#mixing-for-mastering">Mixing for mastering</a></li></ol>
+        </details>
+      </nav>
+      <div class="prose">
+        <div class="howto-meta"><span><b>Time</b>20 minutes</span><span><b>Level</b>Intermediate</span><span><b>You need</b>A bus compressor and a loudness meter</span></div>
+<p>Mix bus compression is not about loudness: that is mastering’s job. It is about making the tracks move together, as if they were playing in the same room. In my studio the bus goes through an SSL-style VCA compressor; in the DAW any well-designed bus compressor works.</p>
+<h2 id="the-procedure">The procedure</h2>
+<ol class="steps-list">
+<li><div><h3 id="put-it-on-early-not-at-the-end">Put it on early, not at the end</h3><p>Insert the compressor once the rough balance is in place. If you add it to a finished mix, it shifts every balance you built and you will redo half the work.</p></div></li>
+<li><div><h3 id="low-ratio">Low ratio</h3><p>Start at 2:1. At 4:1 the compression is more audible and useful in aggressive music, but 2:1 is almost always enough to glue.</p></div></li>
+<li><div><h3 id="slow-attack-to-let-transients-through">Slow attack to let transients through</h3><p>Between 10 and 30 ms. With an attack that is too fast, kick and snare lose their snap and the mix flattens.</p></div></li>
+<li><div><h3 id="timed-or-auto-release">Timed or auto release</h3><p>Between 100 and 300 ms, or auto. The needle should return to zero between hits, in time with the song: if it stays down all the time, the release is too long.</p></div></li>
+<li><div><h3 id="filter-the-sidechain">Filter the sidechain</h3><p>If the compressor allows it, high-pass the sidechain at 80 to 100 Hz. The low end then stops driving the whole compression and the mix does not pump on every kick.</p></div></li>
+<li><div><h3 id="threshold-for-1-to-2-db-of-gain-reduction">Threshold for 1 to 2 dB of gain reduction</h3><p>Lower the threshold until the needle moves 1 to 2 dB on the loudest parts. Dense electronic music can take 3 dB, rarely more.</p></div></li>
+<li><div><h3 id="compare-at-matched-loudness">Compare at matched loudness</h3><p>Compensate the output gain and bypass. Without the compressor the mix should feel a little looser, not louder. If it sounds better in bypass, reduce the gain reduction.</p></div></li>
+</ol>
+<h2 id="starting-values">Starting values</h2>
+<table tabindex="0">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ratio</td>
+<td>2:1, up to 4:1 for aggressive music</td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>10 to 30 ms</td>
+</tr>
+<tr>
+<td>Release</td>
+<td>100 to 300 ms or auto</td>
+</tr>
+<tr>
+<td>Sidechain filter</td>
+<td>high-pass at 80 to 100 Hz</td>
+</tr>
+<tr>
+<td>Gain reduction</td>
+<td>1 to 2 dB, 3 at most</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="pull">A bus compressor should move with the song, not against it. If it sits at −4 dB all the time, it is just turning the mix down.</blockquote>
+<h2 id="mixing-for-mastering">Mixing for mastering</h2>
+<p>If the track is going to a mastering engineer, keep the bus compressor only if it is part of the sound you want. What should not stay is a limiter pushing the mix to 0 dBFS: it takes away the room mastering needs. You will find the full list in <a href="/premaster-mistakes">premaster mistakes</a>.</p>
+<div class="callout"><p><strong>Does your mix sound like separate tracks?</strong> Mix and master from $110, with the bus running through the analog chain.</p><a class="cta" href="/#contact">Start a project</a></div>
+        <aside class="author-box" aria-label="About the author">
+          <img src="/assets/img/angelo-240.jpg" alt="Angelo Pillon" width="88" height="88" loading="lazy">
+          <div>
+            <b>Angelo Pillon</b>
+            <p>Mixing and mastering engineer in Milan. 15+ years behind the console, a hybrid analog and digital chain, Apple Digital Masters certification and a 4.9/5 rating from more than 700 reviews.</p>
+            <div class="btn-row"><a class="btn btn--small" href="/#contact">Work with Angelo</a><a class="btn btn--ghost btn--small" href="/loudness-meter">Try the free LUFS meter</a></div>
+          </div>
+        </aside>
+        <section class="related" aria-labelledby="h-rel">
+          <h2 id="h-rel">Keep reading</h2>
+          <div class="rule-list">
+            <a class="post-row" href="/de-essing-vocals"><span class="cap" data-cat="tutorial">Tutorial</span><h3>De-essing vocals: a tutorial for clear vocals without harsh esses</h3><span class="post-row__meta">3 min</span></a>
+            <a class="post-row" href="/mastering-limiter-settings"><span class="cap" data-cat="tutorial">Tutorial</span><h3>The mastering limiter: a tutorial for loudness without distortion</h3><span class="post-row__meta">3 min</span></a>
+            <a class="post-row" href="/gain-staging-in-your-daw"><span class="cap" data-cat="tutorial">Tutorial</span><h3>Gain staging in your DAW: a step-by-step tutorial for a clean mix</h3><span class="post-row__meta">5 min</span></a>
+            
+          </div>
+        </section>
+        <nav class="prevnext" aria-label="More articles">
+          <a href="/saturation-in-mix-and-master"><span>Newer</span><b>Saturation in mixing and mastering: warmth, density and when to stop</b></a>
+          <a href="/de-essing-vocals"><span>Older</span><b>De-essing vocals: a tutorial for clear vocals without harsh esses</b></a>
+        </nav>
+        
+      </div>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <b>Angelo Pillon</b>
+        <p>Mixing and mastering engineer. Hybrid analog and digital studio in Milan, Apple Digital Masters certified.</p>
+      </div>
+      <div class="ft-col">
+        <h2>Services</h2>
+        <ul><li><a href="/#services">Mastering</a></li><li><a href="/#services">Mix and master</a></li><li><a href="/#services">Stem mastering</a></li><li><a href="/#services">Mix feedback</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Site</h2>
+        <ul><li><a href="/tools/">Free tools</a></li><li><a href="/articles">Articles</a></li><li><a href="/it/articoli/">Articoli in italiano</a></li><li><a href="/de/artikel/">Artikel auf Deutsch</a></li><li><a href="/feed.xml">RSS feed</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Elsewhere</h2>
+        <ul><li><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Fiverr</a></li><li><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank">SoundBetter</a></li></ul>
+      </div>
+      
+    </div>
+    <div class="ft-bottom">
+      <span>© <span data-year>2026</span> Angelo Pillon, Milan, Italy · P.IVA 01981550930</span>
+      <nav aria-label="Legal"><a href="/privacy-policy">Privacy policy</a><button type="button" data-consent-open>Cookie settings</button></nav>
+    </div>
+  </div>
+</footer>
+<aside class="consent" id="consent" hidden aria-label="Cookies">
+  <p>I use cookies for anonymous traffic statistics, and only if you accept. The tools and the site work either way. Details in the <a href="/privacy-policy">Privacy policy</a>.</p>
+  <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Accept</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Decline</button></div>
+</aside>
+
+<script src="/assets/js/site.js?v=202611091644" defer></script>
+<script src="/assets/js/motion.js?v=202611091644" defer></script>
+
+</body>
+</html>
