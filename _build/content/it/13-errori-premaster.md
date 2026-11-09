@@ -73,4 +73,4 @@ Ogni settimana ricevo premaster di ogni tipo. La maggior parte va benissimo. Una
 
 Per la procedura completa nel tuo DAW, segui il [tutorial sull’esportazione delle tracce](/it/articoli/esportare-tracce-mix-mastering).
 
-<div class="callout"><p><strong>Premaster pronto?</strong> Mastering da 60 euro, consegna in 48 ore. Se qualcosa nel file non va, te lo dico prima di cominciare.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Premaster pronto?</strong> Mastering da $60, consegna in 48 ore. Se qualcosa nel file non va, te lo dico prima di cominciare.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

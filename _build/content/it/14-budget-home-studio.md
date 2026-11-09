@@ -62,4 +62,4 @@ Qui non si parla più di «migliorare» l’home studio, ma di trasformarlo in u
 
 Nel frattempo, gli strumenti per misurare il tuo lavoro sono gratuiti: il [misuratore LUFS](/it/strumenti/misuratore-lufs), il [confronto A/B con i riferimenti](/it/strumenti/confronto-ab-reference) e l’[analizzatore di fase stereo](/it/strumenti/analizzatore-fase-stereo) funzionano nel browser. E se mixi soprattutto in cuffia, leggi [come farlo bene](/it/articoli/mixare-in-cuffia).
 
-<div class="callout"><p><strong>Investi nello studio dove conta, e lascia il master a chi lo fa ogni giorno.</strong> Mastering da 60 euro, mix e master da 90.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Investi nello studio dove conta, e lascia il master a chi lo fa ogni giorno.</strong> Mastering da $60, mix e master da $110.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

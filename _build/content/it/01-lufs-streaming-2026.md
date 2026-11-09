@@ -81,4 +81,4 @@ Il true peak misura i picchi che si formano tra un campione e l’altro quando i
 2. Se conosci già i numeri, il [calcolatore di loudness per lo streaming](/it/strumenti/calcolatore-loudness-streaming) mostra quanto ogni servizio alza o abbassa il brano e dove finiscono i picchi.
 3. Confronta con un brano di riferimento del tuo genere a pari loudness, con il [confronto A/B](/it/strumenti/confronto-ab-reference). È il test che ti dice davvero se il master regge.
 
-<div class="callout"><p><strong>Vuoi un master che regga su ogni piattaforma?</strong> Mastering da 60 euro, consegna in 48 ore, con una versione club se il brano ne ha bisogno.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Vuoi un master che regga su ogni piattaforma?</strong> Mastering da $60, consegna in 48 ore, con una versione club se il brano ne ha bisogno.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

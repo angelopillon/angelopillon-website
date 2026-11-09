@@ -6,7 +6,7 @@ In breve: gli strumenti audio funzionano interamente sul tuo computer, il modulo
 
 ## 1. Titolare del trattamento
 
-Angelo Pillon, Milano. Email: [angelopillon@gmail.com](mailto:angelopillon@gmail.com)
+Angelo Pillon (ditta individuale Pillon Angelo Alberto, P.IVA 01981550930), Milano. Email: [angelopillon@gmail.com](mailto:angelopillon@gmail.com)
 
 ## 2. Modulo di contatto
 
@@ -38,11 +38,10 @@ Se fai clic su **Rifiuta**, o non scegli, Google Analytics non viene caricato e 
 | Nome | Cos’è | A cosa serve | Durata |
 |---|---|---|---|
 | `ap_consent` | Archiviazione locale | Ricorda se hai accettato o rifiutato le statistiche | Finché non la cambi o cancelli i dati del browser |
-| `ap_spotify` | Archiviazione locale | Ricorda che hai scelto di caricare il player di Spotify, così la volta successiva si carica direttamente | Finché non cancelli i dati del browser |
 | Cache del service worker | Cache del browser | Conserva una copia dei file del sito perché gli strumenti funzionino offline | Fino al successivo aggiornamento del sito o finché non la cancelli |
 | `_ga`, `_ga_<ID>` | Cookie, solo con consenso | Statistiche di Google Analytics | Fino a 2 anni |
 
-I primi tre sono tecnicamente necessari per funzioni che usi e non contengono dati personali. Non vengono mai inviati a terzi.
+I primi due sono tecnicamente necessari per funzioni che usi e non contengono dati personali. Non vengono mai inviati a terzi.
 
 ## 6. Hosting e log del server
 
@@ -50,7 +49,7 @@ Il sito è ospitato da Netlify, Inc. Per consegnare le pagine e proteggere il se
 
 ## 7. Player di Spotify
 
-La home contiene un player di Spotify con una playlist di brani che ho mixato e masterizzato. Non viene caricato quando apri la pagina: si carica solo quando premi il pulsante che lo carica. Da quel momento Spotify AB tratta dati sulla tua visita e può impostare i suoi cookie, secondo l’[informativa di Spotify](https://www.spotify.com/it/legal/privacy-policy/). Il sito ricorda la tua scelta con `ap_spotify` (vedi sopra); per annullarla, cancella i dati del sito nel browser.
+La home contiene un player di Spotify con una selezione di brani che ho mixato e masterizzato. Il player si carica quando arrivi a quella sezione della pagina: da quel momento Spotify AB tratta dati sulla tua visita e può impostare i suoi cookie, secondo l’[informativa di Spotify](https://www.spotify.com/it/legal/privacy-policy/).
 
 ## 8. Font, script, link e condivisione
 

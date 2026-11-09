@@ -38,6 +38,7 @@ V = datetime.datetime.now().strftime("%Y%m%d%H%M")
 SKIP_OG = "--no-og" in sys.argv
 
 env = Environment(loader=FileSystemLoader(str(B / "templates")), autoescape=True, trim_blocks=False, lstrip_blocks=False)
+env.globals["preview"] = PREVIEW
 PAGES = []
 
 
@@ -97,7 +98,7 @@ def crumbs_ld(items):
 
 
 PERSON = {"@type": "Person", "@id": SITE + "/#angelo", "name": "Angelo Pillon", "jobTitle": "Mixing and mastering engineer", "url": SITE + "/",
-          "sameAs": [CFG["fiverr"], CFG["soundbetter"]], "image": SITE + "/assets/img/angelo-160.jpg"}
+          "sameAs": [CFG["fiverr"], CFG["soundbetter"]], "image": SITE + "/assets/img/angelo-240.jpg"}
 
 
 # ---------------------------------------------------------------- articles
@@ -330,9 +331,9 @@ def home_pages(arts):
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",
                "description": s["description"], "url": SITE + S.HOMES[lang], "image": SITE + "/assets/img/studio-1-1400.jpg", "logo": SITE + "/assets/img/icon-512.png",
                "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}, "areaServed": "Worldwide", "knowsLanguage": ["en", "it", "de", "es"],
-               "founder": PERSON, "sameAs": [CFG["fiverr"], CFG["soundbetter"]],
-               "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "ratingCount": "700"},
-               "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": sv["name"]}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": sv["p"], "priceCurrency": "EUR"}} for sv in s["services"]]}
+               "founder": PERSON, "sameAs": [CFG["fiverr"], CFG["soundbetter"]], **({"vatID": "IT" + CFG["piva"]} if CFG.get("piva") else {}),
+               "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "ratingCount": "789"},
+               "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": sv["name"]}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": sv["p"], "priceCurrency": "USD"}} for sv in s["services"]]}
         faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["faqs"]]}
         site = {"@context": "https://schema.org", "@type": "WebSite", "name": "Angelo Pillon", "url": SITE + "/", "inLanguage": lang}
         add_page(path=S.HOMES[lang], lang=lang, title=s["title"], description=s["description"], main=Markup(main), alt_key="home", jsonld=[org, faq, site],
@@ -576,17 +577,23 @@ def images():
         if not src.exists():
             src = ROOT / f"assets/img/{name}-1400.jpg"
         im = Image.open(src).convert("RGB")
-        for w in (900, 1400):
+        for w in (900, 1400, im.width):
             h = round(im.height * w / im.width)
-            r = im.resize((w, h), Image.LANCZOS)
-            r.save(img / f"{name}-{w}.webp", "WEBP", quality=80, method=6)
+            r = im if w == im.width else im.resize((w, h), Image.LANCZOS)
+            tag = "full" if w == im.width else str(w)
+            r.save(img / f"{name}-{tag}.webp", "WEBP", quality=82, method=6)
             if w == 1400:
                 r.save(img / f"{name}-1400.jpg", "JPEG", quality=82, optimize=True, progressive=True)
-    im = Image.open(ROOT / "studio-2.jpg" if (ROOT / "studio-2.jpg").exists() else img / "studio-2-1400.jpg").convert("RGB")
+    # author portrait: the whole head with some shoulders, from the photo where the face is most visible
+    im = Image.open(ROOT / "studio-1.jpg" if (ROOT / "studio-1.jpg").exists() else img / "studio-1-1400.jpg").convert("RGB")
     W, Hh = im.size
-    side = int(Hh * 0.42)
-    box = (int(W * 0.485), int(Hh * 0.04), int(W * 0.485) + side, int(Hh * 0.04) + side)
-    im.crop(box).resize((160, 160), Image.LANCZOS).save(img / "angelo-160.jpg", "JPEG", quality=84, optimize=True)
+    side = int(Hh * 0.6)
+    cx = int(W * 0.64)
+    box = (cx - side // 2, 0, cx - side // 2 + side, side)
+    im.crop(box).resize((240, 240), Image.LANCZOS).save(img / "angelo-240.jpg", "JPEG", quality=86, optimize=True, progressive=True)
+    old = img / "angelo-160.jpg"
+    if old.exists():
+        old.unlink()
 
 
 def og_images():

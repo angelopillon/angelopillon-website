@@ -6,7 +6,7 @@ The short version: the audio tools work entirely on your computer, the contact f
 
 ## 1. Data controller
 
-Angelo Pillon, Milan, Italy. Email: [angelopillon@gmail.com](mailto:angelopillon@gmail.com)
+Angelo Pillon (sole proprietorship Pillon Angelo Alberto, VAT number IT01981550930), Milan, Italy. Email: [angelopillon@gmail.com](mailto:angelopillon@gmail.com)
 
 ## 2. Contact form
 
@@ -38,11 +38,10 @@ If you click **Decline**, or don’t choose, Google Analytics is not loaded and 
 | Name | What it is | Why | Duration |
 |---|---|---|---|
 | `ap_consent` | Local storage | Remembers whether you accepted or declined statistics | Until you change it or clear your browser data |
-| `ap_spotify` | Local storage | Remembers that you chose to load the Spotify player, so it loads directly next time | Until you clear your browser data |
 | Service worker cache | Browser cache | Keeps a copy of the site’s files so the tools work offline | Until the next update of the site or until you clear it |
 | `_ga`, `_ga_<ID>` | Cookies, only with consent | Google Analytics statistics | Up to 2 years |
 
-The first three are technically necessary for features you use and contain no personal data. They are never sent to third parties.
+The first two are technically necessary for features you use and contain no personal data. They are never sent to third parties.
 
 ## 6. Hosting and server logs
 
@@ -50,7 +49,7 @@ The site is hosted by Netlify, Inc. To deliver the pages and protect the service
 
 ## 7. Spotify player
 
-The home page includes a Spotify player with a playlist of tracks I mixed and mastered. It is not loaded when you open the page: it loads only when you press the button that loads it. From that moment Spotify AB processes data about your visit and may set its own cookies, under [Spotify’s privacy policy](https://www.spotify.com/legal/privacy-policy/). The site remembers your choice with `ap_spotify` (see above); to undo it, clear the site data in your browser.
+The home page includes a Spotify player with a selection of tracks I mixed and mastered. The player loads when you reach that section of the page: from that moment Spotify AB processes data about your visit and may set its own cookies, under [Spotify’s privacy policy](https://www.spotify.com/legal/privacy-policy/).
 
 ## 8. Fonts, scripts, links and sharing
 

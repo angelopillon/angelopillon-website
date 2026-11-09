@@ -60,4 +60,4 @@ E se il tuo master sta già a −1 dBTP e suona come vuoi, non c’è niente da 
 
 Trascina il file nel [misuratore LUFS](/it/strumenti/misuratore-lufs) e guarda il true peak insieme al loudness integrato. Poi apri il [calcolatore di loudness per lo streaming](/it/strumenti/calcolatore-loudness-streaming): ti mostra dove finiscono i picchi dopo la normalizzazione di ogni piattaforma. Se vuoi il quadro completo sui livelli, l’articolo su [LUFS e streaming nel 2026](/it/articoli/lufs-streaming-2026) parte da qui.
 
-<div class="callout"><p><strong>Master forte, pulito anche dopo la codifica.</strong> Mastering da 60 euro, con la verifica dei file codificati inclusa.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Master forte, pulito anche dopo la codifica.</strong> Mastering da $60, con la verifica dei file codificati inclusa.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

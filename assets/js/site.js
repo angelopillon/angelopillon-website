@@ -146,7 +146,9 @@
     var fmt = est.getAttribute("data-fmt") || "from EUR {p}";
     var refresh = function () {
       var opt = sel.options[sel.selectedIndex], p = parseInt(opt.getAttribute("data-price"), 10) || 0;
-      nEl.textContent = n; out.textContent = fmt.replace("{p}", (p * n).toLocaleString());
+      var total = p * n, pack = (opt.getAttribute("data-pack") || "").split(":");
+      if (pack.length === 2) { var size = parseInt(pack[0], 10), price = parseInt(pack[1], 10); if (size > 1 && price > 0) total = Math.floor(n / size) * price + (n % size) * p; }
+      nEl.textContent = n; out.textContent = fmt.replace("{p}", total.toLocaleString());
     };
     $("[data-minus]", est).addEventListener("click", function () { n = Math.max(1, n - 1); refresh(); });
     $("[data-plus]", est).addEventListener("click", function () { n = Math.min(30, n + 1); refresh(); });

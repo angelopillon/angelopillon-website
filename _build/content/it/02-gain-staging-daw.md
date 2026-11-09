@@ -60,4 +60,4 @@ Un equalizzatore digitale pulito o un compressore senza modellazione analogica n
 
 Quando il mix è pronto, prepara le tracce o il premaster seguendo [il tutorial sull’esportazione per mix e mastering](/it/articoli/esportare-tracce-mix-mastering), e dai un’occhiata agli [errori più comuni nel premaster](/it/articoli/errori-premaster).
 
-<div class="callout"><p><strong>Preferisci che i livelli li sistemi io?</strong> Mix e master da 90 euro: mi mandi le tracce, ti restituisco un master pronto per ogni piattaforma.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Preferisci che i livelli li sistemi io?</strong> Mix e master da $110: mi mandi le tracce, ti restituisco un master pronto per ogni piattaforma.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

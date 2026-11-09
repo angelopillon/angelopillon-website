@@ -74,4 +74,4 @@ Con lo stem mastering mi mandi pochi gruppi di tracce, di solito da quattro a ot
 
 Se non sei sicuro, mandami il brano con due righe su cosa non ti convince: te lo dico io, senza impegno. E prima di inviare qualsiasi cosa, dai un’occhiata alla [guida all’esportazione delle tracce](/it/articoli/esportare-tracce-mix-mastering).
 
-<div class="callout"><p><strong>Mastering da 60 euro, stem mastering da 100, mix e master da 90.</strong> Prezzi chiari, revisioni finché il brano è giusto.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Mastering da $60, stem mastering $100, mix e master da $110.</strong> Gli stessi prezzi del mio profilo Fiverr, e il feedback sul mix costa $45.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

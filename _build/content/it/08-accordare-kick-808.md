@@ -62,4 +62,4 @@ La fondamentale è la scelta più sicura: rinforza la tonalità. La quinta funzi
 
 Se l’808 segue la progressione, la cassa resta accordata sulla tonalità principale. Se il cambio è lungo e la cassa si scontra con la nuova armonia, puoi usare due versioni della cassa, una per sezione. Succede più spesso di quanto si pensi nelle produzioni curate.
 
-<div class="callout"><p><strong>Basse che non tornano?</strong> Nel mix sistemo accordatura, fase e convivenza tra cassa e 808. Mix e master da 90 euro.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Basse che non tornano?</strong> Nel mix sistemo accordatura, fase e convivenza tra cassa e 808. Mix e master da $110.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

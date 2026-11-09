@@ -442,7 +442,7 @@ function start() {
     if (!S.active || document.hidden) return;
     time += reduced ? 0 : dt;
     introT += dt;
-    const k = 1 - Math.exp(-dt * 5.5);
+    const k = 1 - Math.exp(-dt * 9);
     cur.p += (S.p - cur.p) * k;
     cur.shift += (S.shift - cur.shift) * k;
     cur.arcs += (S.arcs - cur.arcs) * k;
@@ -459,7 +459,7 @@ function start() {
     const desk = W > 900;
     U.uGRot.value = gr;
     U.uGTilt.value = 0.42 + mouse.y * 0.2;
-    const gx = desk ? cur.shift * 2.35 : 0, gy = desk ? 0 : cur.shift * 2.9;
+    const gx = desk ? cur.shift * 2.6 : 0, gy = desk ? 0 : cur.shift * 2.9;
     U.uGOff.value.set(gx, gy, 0);
     U.uGR.value = desk ? 2.7 : 2.25;
     globe.rotation.set(U.uGTilt.value, gr, 0);

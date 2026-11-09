@@ -70,4 +70,4 @@ No. Alcuni effetti la producono per un istante, e certi riverberi la sfiorano ne
 
 Solo in parte. In mastering posso portare in mono le basse o ridurre l’ampiezza di una banda, ma non posso riallineare due microfoni o due campioni sommati nel mix. Quei problemi si risolvono alla fonte, oppure con lo [stem mastering](/it/articoli/differenza-mix-mastering).
 
-<div class="callout"><p><strong>Il mix si sfalda in mono?</strong> Lo sistemo nel mix o, se le tracce non ci sono più, con lo stem mastering. Mix e master da 90 euro.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Il mix si sfalda in mono?</strong> Lo sistemo nel mix o, se le tracce non ci sono più, con lo stem mastering. Mix e master da $110.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

@@ -68,4 +68,4 @@ E c’è un aspetto pratico: una catena analogica va documentata con cura, perch
 
 Si possono fare master eccellenti interamente in digitale, e alcuni brani li finisco così. La catena ibrida non è una garanzia di qualità: è un insieme di opzioni in più. Conta saperle scegliere. Se ti interessa il confronto nel dettaglio, ne ho scritto in inglese in [Hybrid vs full ITB mastering](/hybrid-vs-itb-mastering).
 
-<div class="callout"><p><strong>Vuoi sentire il tuo brano nella catena ibrida?</strong> Mastering da 60 euro, in 48 ore, con gli stadi analogici scelti per il tuo brano.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Vuoi sentire il tuo brano nella catena ibrida?</strong> Mastering da $60, in 48 ore, con gli stadi analogici scelti per il tuo brano.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

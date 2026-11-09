@@ -59,4 +59,4 @@ Voce e 808 condividono meno frequenze di quanto si pensi: la fondamentale dellâ€
 - Troppa aria e presenza: la voce sembra chiara in studio e taglia sugli auricolari.
 - Ad-lib allo stesso livello della voce principale.
 
-<div class="callout"><p><strong>Hai una voce da sistemare prima del mix?</strong> Editing vocale da 60 euro: intonazione, timing, comping e de-essing. Mix e master da 90.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Hai una voce da sistemare prima del mix?</strong> Intonazione, timing e de-essing della voce sono compresi nel mix e master, da $110.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

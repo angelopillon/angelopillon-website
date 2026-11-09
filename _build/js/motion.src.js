@@ -1,5 +1,5 @@
 /* angelopillon.com — motion layer: smooth scroll, reveals, counters, the scroll story that drives the cosmos,
-   horizontal chain, magnetic buttons, card spotlights, the Spotify player and the country ticker. */
+   horizontal chain, magnetic buttons, card spotlights and the country ticker. */
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
@@ -15,10 +15,16 @@ const S = (window.__cosmos = window.__cosmos || { p: 0, shift: 0, arcs: 0, activ
 root.classList.add("js-motion");
 if (reduced) root.classList.add("reduced");
 
-/* ---------------- smooth scroll ---------------- */
+/* ---------------- a new page always starts at the top (back/forward and reload keep their position) ---------------- */
+try {
+  const nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+  if (!location.hash && (!nav || nav.type === "navigate")) window.scrollTo(0, 0);
+} catch (e) {}
+
+/* ---------------- smooth scroll: responsive, short glide ---------------- */
 let lenis = null;
 if (!reduced) {
-  lenis = new Lenis({ lerp: 0.095, smoothWheel: true, anchors: { offset: -72 }, autoRaf: false });
+  lenis = new Lenis({ lerp: 0.16, wheelMultiplier: 1.15, smoothWheel: true, anchors: { offset: -72 }, autoRaf: false });
   lenis.on("scroll", ScrollTrigger.update);
   gsap.ticker.add((t) => lenis.raf(t * 1000));
   gsap.ticker.lagSmoothing(0);
@@ -92,6 +98,9 @@ if (!reduced) {
   $$("[data-parallax]").forEach((el) => {
     const amt = parseFloat(el.getAttribute("data-parallax")) || 12;
     gsap.fromTo(el, { yPercent: -amt }, { yPercent: amt, ease: "none", scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: true } });
+  });
+  $$("[data-zoom]").forEach((el) => {
+    gsap.fromTo(el, { scale: 1.12 }, { scale: 1, ease: "none", scrollTrigger: { trigger: el.closest("figure") || el, start: "top bottom", end: "bottom 35%", scrub: true } });
   });
   $$("[data-clip]").forEach((el) => {
     gsap.fromTo(el, { clipPath: "inset(12% 12% 12% 12% round 40px)" }, { clipPath: "inset(0% 0% 0% 0% round 28px)", ease: "none", scrollTrigger: { trigger: el, start: "top 95%", end: "top 35%", scrub: true } });
@@ -180,7 +189,7 @@ if (chain && !reduced) {
     const dist = () => Math.max(0, track.scrollWidth - window.innerWidth + 80);
     const tw = gsap.to(track, {
       x: () => -dist(), ease: "none",
-      scrollTrigger: { trigger: chain, start: "top top", end: () => "+=" + dist(), pin: true, scrub: 0.6, invalidateOnRefresh: true, anticipatePin: 1 }
+      scrollTrigger: { trigger: chain, start: "top top", end: () => "+=" + dist(), pin: true, scrub: 0.25, invalidateOnRefresh: true, anticipatePin: 1 }
     });
     $$(".unit", chain).forEach((u) => {
       const knobs = $$(".knob", u);
@@ -217,25 +226,6 @@ if (fine && !reduced) {
     c.addEventListener("pointerleave", () => { rx(0); ry(0); });
   });
 }
-
-/* ---------------- Spotify: loads only when asked, then remembered ---------------- */
-$$("[data-spotify]").forEach((box) => {
-  const src = box.getAttribute("data-spotify");
-  const load = () => {
-    if (box.querySelector("iframe")) return;
-    const f = d.createElement("iframe");
-    f.src = src; f.loading = "lazy"; f.title = box.getAttribute("data-title") || "Spotify";
-    f.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
-    f.setAttribute("allowfullscreen", "");
-    box.classList.add("is-loaded");
-    box.appendChild(f);
-    try { localStorage.setItem("ap_spotify", "1"); } catch (e) {}
-  };
-  const btn = $("[data-spotify-load]", box);
-  if (btn) btn.addEventListener("click", load);
-  let ok = null; try { ok = localStorage.getItem("ap_spotify"); } catch (e) {}
-  if (ok === "1") load();
-});
 
 /* ---------------- FAQ: one open at a time, animated ---------------- */
 $$(".faq details").forEach((dt, i, all) => {

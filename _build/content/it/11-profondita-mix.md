@@ -62,4 +62,4 @@ Attenzione però a quello che succede in mono: molti riverberi stereo sono poco 
 - **R&B e soul:** una voce intima, molto vicina, spesso con riverberi corti e delay morbidi, in un mix che lascia molto spazio tra gli elementi.
 - **Rap e trap:** voce davanti e asciutta, profondità costruita più con i delay a tempo che con i riverberi. Ne parlo nell’articolo sulla [voce rap e trap](/it/articoli/voce-rap-trap-autotune).
 
-<div class="callout"><p><strong>Il tuo mix suona piatto?</strong> Profondità e spazio sono una delle cose su cui lavoro di più. Mix e master da 90 euro.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Il tuo mix suona piatto?</strong> Profondità e spazio sono una delle cose su cui lavoro di più. Mix e master da $110.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

@@ -62,4 +62,4 @@ Nel rap la voce è il ritmo del brano: deve stare sempre allo stesso livello sop
 
 Se succede, torna indietro di uno stadio e riduci la soglia, oppure fai lavorare di più il clip gain.
 
-<div class="callout"><p><strong>La voce è il centro del brano.</strong> Editing vocale da 60 euro, mix e master da 90: intonazione, timing, dinamica ed effetti, rivisti finché è giusto.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>La voce è il centro del brano.</strong> Mix e master da $110, con l’intonazione compresa: timing, dinamica ed effetti curati sulla tua voce.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

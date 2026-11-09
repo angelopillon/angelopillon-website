@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://angelopillon.com/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://angelopillon.com/it/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://angelopillon.com/de/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://angelopillon.com/es/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://angelopillon.com/articles</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
   </url>
@@ -140,115 +140,115 @@
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/loudness-meter</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/loudness-meter"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/misuratore-lufs"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/stereo-phase-analyzer</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/stereo-phase-analyzer"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/analizzatore-fase-stereo"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/ab-reference-player</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/ab-reference-player"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/confronto-ab-reference"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/delay-reverb-calculator</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/delay-reverb-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/kick-808-tuning</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/kick-808-tuning"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/accordatura-kick-808"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/streaming-loudness-calculator</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/streaming-loudness-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-loudness-streaming"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/camelot-wheel</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/camelot-wheel"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/ruota-camelot"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/misuratore-lufs</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/loudness-meter"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/misuratore-lufs"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/analizzatore-fase-stereo</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/stereo-phase-analyzer"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/analizzatore-fase-stereo"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/confronto-ab-reference</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/ab-reference-player"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/confronto-ab-reference"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/delay-reverb-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/accordatura-kick-808</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/kick-808-tuning"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/accordatura-kick-808"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/calcolatore-loudness-streaming</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/streaming-loudness-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-loudness-streaming"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/ruota-camelot</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/camelot-wheel"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/ruota-camelot"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/privacy-policy</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/privacy"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/privacy</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/privacy"/>
   </url>
