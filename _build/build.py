@@ -564,12 +564,6 @@ def write_netlify():
   force = true
 
 [[redirects]]
-  from = "/articles/"
-  to = "/articles"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/it/articoli"
   to = "/it/articoli/"
   status = 301
