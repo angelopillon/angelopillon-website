@@ -24,7 +24,7 @@
   --vfd:#7CF2DC; --vfd-mid:rgba(124,242,220,.66); --vfd-dim:rgba(124,242,220,.16); --vfd-ghost:rgba(124,242,220,.07);
   --over:#FF5A40; --over-glass:#FF5A40; --ok:#4ADE80;
 
-  --cap-loudness:#FF6A2B; --cap-mastering:#FFC24B; --cap-electronic:#22D3EE; --cap-mixing:#8B4DFF; --cap-tutorial:#FF3DA5;
+  --cap-loudness:#FF6A2B; --cap-mastering:#FFC24B; --cap-electronic:#22D3EE; --cap-mixing:#8B4DFF; --cap-tutorial:#FF3DA5; --cap-news:#A3E635;
 
   /* legacy names still used by templates and tools */
   --chassis:var(--bg); --plate:var(--card-2); --inset:var(--bg-2); --legend:var(--ink); --legend-2:var(--ink-2); --btn-ink:#000;
@@ -477,6 +477,7 @@ body:not(.is-home) main{ padding-top:64px; }
 .cap[data-cat="mastering"], .chip[data-cat="mastering"]{ --cap:var(--cap-mastering); }
 .cap[data-cat="electronic"], .chip[data-cat="electronic"]{ --cap:var(--cap-electronic); }
 .cap[data-cat="mixing"], .chip[data-cat="mixing"]{ --cap:var(--cap-mixing); }
+.cap[data-cat="news"], .chip[data-cat="news"]{ --cap:var(--cap-news); }
 .cap[data-cat="tutorial"], .chip[data-cat="tutorial"]{ --cap:var(--cap-tutorial); }
 .post-row{ display:grid; grid-template-columns:140px minmax(0,1fr) auto; gap:8px 24px; align-items:baseline; padding:24px 0; text-decoration:none; }
 .post-row h2, .post-row h3{ font-size:1.375rem; font-weight:720; line-height:1.22; letter-spacing:-.02em; }
@@ -569,6 +570,7 @@ body:not(.is-home) main{ padding-top:64px; }
 .article-head:has(.cap[data-cat="mastering"]){ --glow:var(--cap-mastering); --glow2:#FF6A2B; }
 .article-head:has(.cap[data-cat="electronic"]){ --glow:var(--cap-electronic); --glow2:#3D5BFF; }
 .article-head:has(.cap[data-cat="mixing"]){ --glow:var(--cap-mixing); --glow2:#3D5BFF; }
+.article-head:has(.cap[data-cat="news"]){ --glow:var(--cap-news); --glow2:#22D3EE; }
 .article-head:has(.cap[data-cat="tutorial"]){ --glow:var(--cap-tutorial); --glow2:#8B4DFF; }
 .article-head h1{ max-width:20ch; margin-top:18px; }
 .article-head .dek{ margin-top:22px; max-width:60ch; }
@@ -628,6 +630,8 @@ body:not(.is-home) main{ padding-top:64px; }
 .prose th{ font-weight:650; color:var(--ink-3); font-size:.8125rem; }
 .prose td{ color:#D9D9E0; }
 .prose figure{ margin:2em 0; }
+.prose figure img{ display:block; width:100%; height:auto; border-radius:14px; }
+.prose .sources{ font-size:.875rem; color:var(--ink-2); }
 .prose figure figcaption{ font-size:.875rem; color:var(--ink-3); margin-top:10px; }
 .prose figure.glass{ padding:20px; }
 .prose figure.glass figcaption{ color:var(--vfd-mid); }

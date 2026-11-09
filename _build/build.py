@@ -210,22 +210,22 @@ def article_pages(arts):
                      feed=dict(lang=lang, title=a["title"], description=a["description"], date=a["date"], path=a["path"]))
         # hub
         h = dict(
-            en=dict(crumb="Articles", h1="Studio journal", lead="Practical, opinionated articles on mixing, mastering and loudness: the same principles I apply to every track that comes through the studio. Eight are step-by-step tutorials.",
+            en=dict(crumb="Articles", h1="Studio journal", lead="Practical, opinionated articles on mixing, mastering and loudness: the same principles I apply to every track that comes through the studio. Eight are step-by-step tutorials, ten are news from the audio world.",
                     search="Search articles", count_tpl="{n} articles", filter="Filter by topic", all="All", empty="No article matches. Try another word.",
                     other="Leggi anche in italiano:", other_label="articoli in italiano", other_href="/it/articoli/", other_lang="it",
                     title="Mixing and mastering articles | Angelo Pillon", description="Articles on mixing, mastering and loudness: LUFS, true peak, low end, vocals, stems and streaming, from a working mixing and mastering engineer."),
-            it=dict(crumb="Articoli", h1="Diario di studio", lead="Articoli pratici, con un punto di vista, su mix, mastering e loudness: gli stessi principi che applico a ogni brano che passa dallo studio. Otto sono tutorial passo passo.",
+            it=dict(crumb="Articoli", h1="Diario di studio", lead="Articoli pratici, con un punto di vista, su mix, mastering e loudness: gli stessi principi che applico a ogni brano che passa dallo studio. Otto sono tutorial passo passo, dieci sono notizie dal mondo dell’audio.",
                     search="Cerca negli articoli", count_tpl="{n} articoli", filter="Filtra per argomento", all="Tutti", empty="Nessun articolo corrisponde. Prova un’altra parola.",
                     other="Also in English:", other_label="articles in English", other_href="/articles", other_lang="en",
                     title="Articoli su mix, mastering e loudness | Angelo Pillon", description="Articoli e tutorial in italiano su mix, mastering e loudness: LUFS, true peak, gain staging, voce, stem, fase e streaming, da un fonico di mix e mastering."),
-            de=dict(crumb="Artikel", h1="Studio-Journal", lead="Praxisnahe Artikel mit klarer Haltung zu Mixing, Mastering und Lautheit: dieselben Prinzipien, die ich bei jedem Track im Studio anwende. Acht davon sind Schritt-für-Schritt-Tutorials.",
+            de=dict(crumb="Artikel", h1="Studio-Journal", lead="Praxisnahe Artikel mit klarer Haltung zu Mixing, Mastering und Lautheit: dieselben Prinzipien, die ich bei jedem Track im Studio anwende. Acht davon sind Schritt-für-Schritt-Tutorials, zehn sind Neuigkeiten aus der Audiowelt.",
                     search="Artikel durchsuchen", count_tpl="{n} Artikel", filter="Nach Thema filtern", all="Alle", empty="Kein Artikel passt. Versuch es mit einem anderen Wort.",
                     title="Artikel über Mixing, Mastering und Lautheit | Angelo Pillon", description="Artikel und Tutorials auf Deutsch über Mixing, Mastering und Lautheit: LUFS, True Peak, Gain Staging, Vocals, Stems, Phase und Streaming, von einem Mixing- und Mastering-Engineer."),
         )[lang]
         h["lang_label"] = {"en": "Article language", "it": "Lingua degli articoli", "de": "Sprache der Artikel"}[lang]
         hub_langs = [dict(code=l, name=S.LANG_NAMES[l], href=HUBS[l][0], current=(l == lang), count=sum(1 for x in arts if x["lang"] == l)) for l in ART_LANGS]
         cats_present = []
-        for c in ["loudness", "mastering", "mixing", "electronic", "tutorial"]:
+        for c in ["news", "loudness", "mastering", "mixing", "electronic", "tutorial"]:
             if any(x["cat"] == c or (c == "tutorial" and x["tutorial"]) for x in L):
                 cats_present.append(dict(id=c, label=S.CATS[c][lang]))
         posts = [dict(href=x["path"], title=x["title"], dek=x["dek"], cat=x["cat"], cat_label=x["cat_label"], date=x["date"], date_label=x["date_label"],

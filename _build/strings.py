@@ -29,6 +29,7 @@ CATS = {
     "mixing": {"en": "Mixing", "it": "Mix", "de": "Mixing", "es": "Mezcla"},
     "electronic": {"en": "Electronic", "it": "Elettronica", "de": "Elektronik", "es": "Electrónica"},
     "tutorial": {"en": "Tutorial", "it": "Tutorial", "de": "Tutorial", "es": "Tutorial"},
+    "news": {"en": "News", "it": "News", "de": "News", "es": "Noticias"},
 }
 
 # Language that each home links to for tools and articles

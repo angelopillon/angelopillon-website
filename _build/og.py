@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / "_build" / ".cache"
 BG, INK, INK2, VFD = (0, 0, 0), (245, 245, 247), (161, 161, 170), (124, 242, 220)
 SPEC = [(77, 107, 255), (139, 77, 255), (255, 61, 165), (255, 106, 43), (255, 194, 75)]
-CAPS = {"loudness": (255, 106, 43), "mastering": (255, 194, 75), "mixing": (139, 77, 255), "electronic": (34, 211, 238), "tutorial": (255, 61, 165)}
+CAPS = {"loudness": (255, 106, 43), "mastering": (255, 194, 75), "mixing": (139, 77, 255), "electronic": (34, 211, 238), "tutorial": (255, 61, 165), "news": (163, 230, 53)}
 
 
 def spec(t):
