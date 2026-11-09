@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" data-ga="G-Y0FEM4JQLD" data-sw="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gain staging in your DAW: step-by-step tutorial | Angelo Pillon</title>
+<meta name="description" content="How to set levels in your DAW from recording to the master bus: clip gain, plugins calibrated to −18 dBFS, headroom for mastering. A tutorial with practical values.">
+<link rel="canonical" href="https://angelopillon.com/gain-staging-in-your-daw">
+<link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/gain-staging-daw">
+<link rel="alternate" hreflang="en" href="https://angelopillon.com/gain-staging-in-your-daw">
+<link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/gain-staging-im-daw">
+<link rel="alternate" hreflang="x-default" href="https://angelopillon.com/gain-staging-in-your-daw">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Angelo Pillon">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Gain staging in your DAW: a step-by-step tutorial for a clean mix">
+<meta property="og:description" content="How to set levels in your DAW from recording to the master bus: clip gain, plugins calibrated to −18 dBFS, headroom for mastering. A tutorial with practical values.">
+<meta property="og:url" content="https://angelopillon.com/gain-staging-in-your-daw">
+<meta property="og:image" content="https://angelopillon.com/assets/og/en-gain-staging-in-your-daw.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gain staging in your DAW: a step-by-step tutorial for a clean mix">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/assets/og/en-gain-staging-in-your-daw.png">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Angelo Pillon, studio journal" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611091131">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Gain staging in your DAW: a step-by-step tutorial for a clean mix","description":"How to set levels in your DAW from recording to the master bus: clip gain, plugins calibrated to −18 dBFS, headroom for mastering. A tutorial with practical values.","inLanguage":"en","datePublished":"2026-11-05","dateModified":"2026-11-05","author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg"},"publisher":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg"},"mainEntityOfPage":"https://angelopillon.com/gain-staging-in-your-daw","image":"https://angelopillon.com/assets/og/en-gain-staging-in-your-daw.png","articleSection":"Tutorial","wordCount":1077}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://angelopillon.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://angelopillon.com/articles"},{"@type":"ListItem","position":3,"name":"Gain staging in your DAW: a step-by-step tutorial for a clean mix","item":"https://angelopillon.com/gain-staging-in-your-daw"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Gain staging in your DAW, step by step","description":"How to set levels in your DAW from recording to the master bus: clip gain, plugins calibrated to −18 dBFS, headroom for mastering. A tutorial with practical values.","inLanguage":"en","step":[{"@type":"HowToStep","name":"Set up the session and record with headroom","text":"Set up the session and record with headroom Work at 24 bit or 32-bit float, at the project sample rate, with no limiter on the master. When recording, aim for peaks between −12 and −6 dBFS and an average level around −18 dBFS. At 24 bit the converter noise is far lower than the noise of the microphone and the room: recording “hot” improves nothing and risks clipping."},{"@type":"HowToStep","name":"Bring every source to a similar level with clip gain","text":"Bring every source to a similar level with clip gain Before inserting any plugin, use clip gain (or region gain) to bring each audio track to an average level of about −18 dBFS RMS, with the faders at 0. Drum samples often arrive peaking at 0 dBFS: turn them down here, not with the fader."},{"@type":"HowToStep","name":"Put a trim at the top of virtual instruments","text":"Put a trim at the top of virtual instruments Synths and samplers have no clip gain. Lower the instrument’s output volume or insert a gain utility as the first plugin, and bring these tracks to around −18 dBFS average as well. Many presets are designed to impress in the store, not to sit in a mix."},{"@type":"HowToStep","name":"Respect the calibration of analog-modelled plugins","text":"Respect the calibration of analog-modelled plugins Check the manual for the level that corresponds to 0 VU: usually −18 dBFS, sometimes −20 or −14. Insert a VU meter before the plugin and set the input so the needle swings around 0 VU in the loudest parts. If you want more saturation, push the input knowing what you are doing."},{"@type":"HowToStep","name":"Match the input and output of every plugin","text":"Match the input and output of every plugin After each processor, set the output so the perceived level is the same with the plugin active and bypassed. Many plugins have an auto gain or gain match function: use it. Only then does bypass tell you whether the processor improves the sound or just makes it louder."},{"@type":"HowToStep","name":"Balance with the faders, starting from a lead element","text":"Balance with the faders, starting from a lead element Pick the element that carries the track (often the kick in electronic music, the vocal in pop and rap) and set it around −18 dBFS average. Build everything else around it. If a fader ends up below −20 dB, go back to clip gain: in that range the fader travel is too sensitive for fine adjustments."},{"@type":"HowToStep","name":"Check the buses and the master","text":"Check the buses and the master No bus should clip, especially if you use fixed-ceiling plugins. On the master, before any processor, the mix peaks should sit around −6 dBFS. If you are too hot, lower all the channels together (with a VCA or by selecting them all), not the master fader: in Ableton, Logic and FL Studio the master inserts are pre-fader, so lowering the master does not change the level going into the plugins. Pro Tools is the exception: on the Master Fader the inserts are post-fader"},{"@type":"HowToStep","name":"Export for mastering and check","text":"Export for mastering and check Remove limiters and maximizers from the master and export a 24-bit or 32-bit float WAV at the project sample rate, without normalization. Peaks between −6 and −3 dBFS are comfortable, but what really matters is that there is no clipping. Drop the file into the LUFS meter to check peaks and true peak."}],"totalTime":"PT30M","tool":[{"@type":"HowToTool","name":"DAW"},{"@type":"HowToTool","name":"Peak meter"},{"@type":"HowToTool","name":"VU or RMS meter"},{"@type":"HowToTool","name":"LUFS meter"}]}</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="/">Angelo Pillon</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#services">Services</a>
+      <a href="/tools/">Tools</a>
+      <a href="/articles" aria-current="page">Articles</a>
+      <a href="/#contact">Contact</a>
+      
+    </nav>
+    <div class="hdr-actions">
+      <details class="lang">
+        <summary aria-label="Language">EN <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <ul>
+          <li><a href="/gain-staging-in-your-daw" hreflang="en" lang="en" aria-current="true">English <span>EN</span></a></li>
+          <li><a href="/it/articoli/gain-staging-daw" hreflang="it" lang="it">Italiano <span>IT</span></a></li>
+          <li><a href="/de/artikel/gain-staging-im-daw" hreflang="de" lang="de">Deutsch <span>DE</span></a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a></li>
+          
+        </ul>
+      </details>
+      <a class="btn btn--small" href="/#contact">Start a project</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<article>
+  <header class="article-head wrap">
+    <ol class="crumbs" aria-label="Breadcrumb">
+      <li><a href="/">Home</a></li><li><a href="/articles">Articles</a></li><li><span aria-current="page">Tutorial</span></li>
+    </ol>
+    <span class="cap" data-cat="tutorial">Tutorial</span>
+    <h1 class="t-h1">Gain staging in your DAW, step by step</h1>
+    <nav class="lang-seg lang-seg--small" aria-label="Read in"><span>Read in</span><a href="/it/articoli/gain-staging-daw" hreflang="it" lang="it">Italiano</a><a href="/gain-staging-in-your-daw" hreflang="en" lang="en" aria-current="page">English</a><a href="/de/artikel/gain-staging-im-daw" hreflang="de" lang="de">Deutsch</a></nav>
+    <p class="t-lead dek">A 32-bit float DAW does not clip internally, but plugins and your ears react to level. Here is the method I use, in eight steps.</p>
+    <div class="meta">
+      <span>By Angelo Pillon</span>
+      <time datetime="2026-11-05">5 November 2026</time>
+      <span>5 min read</span>
+      
+      <span class="share">
+        <button type="button" data-share="copy" data-done="Link copied" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1 1"/><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1-1"/></svg></button>
+        <a href="https://wa.me/?text=Gain%20staging%20in%20your%20DAW%3A%20a%20step-by-step%20tutorial%20for%20a%20clean%20mix%20https%3A%2F%2Fangelopillon.com%2Fgain-staging-in-your-daw" rel="noopener" target="_blank" aria-label="Share on WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+        <a href="https://t.me/share/url?url=https%3A%2F%2Fangelopillon.com%2Fgain-staging-in-your-daw&amp;text=Gain%20staging%20in%20your%20DAW%3A%20a%20step-by-step%20tutorial%20for%20a%20clean%20mix" rel="noopener" target="_blank" aria-label="Share on Telegram" title="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 9-8.1c.4-.3-.1-.5-.6-.2L6.4 13.2l-4.7-1.5c-1-.3-1-1 .2-1.5l18.4-7.1c.9-.3 1.6.2 1.6 1.2z"/></svg></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fangelopillon.com%2Fgain-staging-in-your-daw" rel="noopener" target="_blank" aria-label="Share on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
+        <button type="button" data-share="native" aria-label="Share" title="Share"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v13M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button>
+      </span>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="article-grid">
+      <nav class="toc" aria-label="On this page">
+        <details open><summary>On this page</summary>
+        <h2 aria-hidden="true">On this page</h2>
+        <ol><li><a href="#why-it-still-matters-even-at-32-bit-float">Why it still matters, even at 32-bit float</a></li><li><a href="#the-method-in-eight-steps">The method in eight steps</a></li><li><a href="#the-mistakes-i-see-most-often">The mistakes I see most often</a></li><li><a href="#what-about-purely-digital-plugins">What about purely digital plugins?</a></li></ol>
+        </details>
+      </nav>
+      <div class="prose">
+        <div class="howto-meta"><span><b>Time</b>30 minutes on one session</span><span><b>Level</b>Beginner</span><span><b>You need</b>Your DAW, a peak meter and a VU or RMS meter</span></div>
+<p>Gain staging means controlling level at every point in the chain: from the recording to the first plugin, from one plugin to the next, from the channels to the buses and on to the master. The goal is simple. Every processor should work in the range it was designed for, the faders should sit in a comfortable position and the mix should reach mastering with headroom.</p>
+<p>When I receive a session with tidy levels, the mix starts faster and sounds better. When I receive tracks hitting the plugins 15 dB hotter than expected, I spend the first hour working out which distortion is intended and which is not.</p>
+<h2 id="why-it-still-matters-even-at-32-bit-float">Why it still matters, even at 32-bit float</h2>
+<p>The mix engine of a modern DAW works in floating point: a channel can go above 0 dBFS without clipping internally. That is true, but it does not settle the matter, for four reasons.</p>
+<ul>
+<li><strong>Plugins that emulate hardware react to level.</strong> Compressors, saturators and EQs modelled on analog gear are calibrated to a reference level, often 0 VU = −18 dBFS. Hit them 12 dB harder and you get compression and distortion you did not choose.</li>
+<li><strong>Some plugins clip anyway.</strong> Not all of them run in floating point internally, and many limiters and clippers have a fixed ceiling.</li>
+<li><strong>The final file clips.</strong> A 24-bit WAV stops at 0 dBFS: everything above it is cut off on export.</li>
+<li><strong>Loudness fools the ear.</strong> Louder always seems better. If a plugin raises the level by 3 dB, it will seem to improve the sound even when it makes it worse.</li>
+</ul>
+<h2 id="the-method-in-eight-steps">The method in eight steps</h2>
+<ol class="steps-list">
+<li><div><h3 id="set-up-the-session-and-record-with-headroom">Set up the session and record with headroom</h3><p>Work at 24 bit or 32-bit float, at the project sample rate, with no limiter on the master. When recording, aim for peaks between −12 and −6 dBFS and an average level around −18 dBFS. At 24 bit the converter noise is far lower than the noise of the microphone and the room: recording “hot” improves nothing and risks clipping.</p></div></li>
+<li><div><h3 id="bring-every-source-to-a-similar-level-with-clip-gain">Bring every source to a similar level with clip gain</h3><p>Before inserting any plugin, use clip gain (or region gain) to bring each audio track to an average level of about −18 dBFS RMS, with the faders at 0. Drum samples often arrive peaking at 0 dBFS: turn them down here, not with the fader.</p></div></li>
+<li><div><h3 id="put-a-trim-at-the-top-of-virtual-instruments">Put a trim at the top of virtual instruments</h3><p>Synths and samplers have no clip gain. Lower the instrument’s output volume or insert a gain utility as the first plugin, and bring these tracks to around −18 dBFS average as well. Many presets are designed to impress in the store, not to sit in a mix.</p></div></li>
+<li><div><h3 id="respect-the-calibration-of-analog-modelled-plugins">Respect the calibration of analog-modelled plugins</h3><p>Check the manual for the level that corresponds to 0 VU: usually −18 dBFS, sometimes −20 or −14. Insert a VU meter before the plugin and set the input so the needle swings around 0 VU in the loudest parts. If you want more saturation, push the input knowing what you are doing.</p></div></li>
+<li><div><h3 id="match-the-input-and-output-of-every-plugin">Match the input and output of every plugin</h3><p>After each processor, set the output so the perceived level is the same with the plugin active and bypassed. Many plugins have an auto gain or gain match function: use it. Only then does bypass tell you whether the processor improves the sound or just makes it louder.</p></div></li>
+<li><div><h3 id="balance-with-the-faders-starting-from-a-lead-element">Balance with the faders, starting from a lead element</h3><p>Pick the element that carries the track (often the kick in electronic music, the vocal in pop and rap) and set it around −18 dBFS average. Build everything else around it. If a fader ends up below −20 dB, go back to clip gain: in that range the fader travel is too sensitive for fine adjustments.</p></div></li>
+<li><div><h3 id="check-the-buses-and-the-master">Check the buses and the master</h3><p>No bus should clip, especially if you use fixed-ceiling plugins. On the master, before any processor, the mix peaks should sit around −6 dBFS. If you are too hot, lower all the channels together (with a VCA or by selecting them all), not the master fader: in Ableton, Logic and FL Studio the master inserts are pre-fader, so lowering the master does not change the level going into the plugins. Pro Tools is the exception: on the Master Fader the inserts are post-fader.</p></div></li>
+<li><div><h3 id="export-for-mastering-and-check">Export for mastering and check</h3><p>Remove limiters and maximizers from the master and export a 24-bit or 32-bit float WAV at the project sample rate, without normalization. Peaks between −6 and −3 dBFS are comfortable, but what really matters is that there is no clipping. Drop the file into the <a href="/loudness-meter">LUFS meter</a> to check peaks and true peak.</p></div></li>
+</ol>
+<h2 id="the-mistakes-i-see-most-often">The mistakes I see most often</h2>
+<p><strong>A limiter on the master “to hear how it will sound”.</strong> It is understandable, but if the balance depends on the limiter, the mix changes when you remove it. If you want to work into it, fine: send me two versions, with and without.</p>
+<p><strong>Pulling the master fader down to avoid clipping.</strong> In most DAWs it lowers the output but not the level reaching the inserts: the compressor on the mix bus keeps working too hard.</p>
+<p><strong>Comparing plugins at different volumes.</strong> It is the reason so many mixes end up with too much top end and too much compression: every choice seemed better because it was a little louder.</p>
+<p><strong>Normalizing on export.</strong> It raises the file to 0 dBFS and removes the headroom you left. Always keep it off for files meant for mixing or mastering.</p>
+<blockquote class="pull">Gain staging is not a level rule. It is how you make every plugin work the way it was designed and judge with your ears, not with volume.</blockquote>
+<h2 id="what-about-purely-digital-plugins">What about purely digital plugins?</h2>
+<p>A clean digital EQ or a compressor without analog modelling does not change character with input level: there, gain staging is mostly about keeping the faders comfortable and comparing at equal volume. The method stays the same; only how strict you are with input levels changes.</p>
+<p>When the mix is ready, prepare the tracks or the premaster following <a href="/export-tracks-for-mixing-and-mastering">the tutorial on exporting for mixing and mastering</a>, and have a look at the <a href="/premaster-mistakes">most common premaster mistakes</a>.</p>
+<div class="callout"><p><strong>Rather have me sort out the levels?</strong> Mix and master from $110: you send me the tracks, I send back a master ready for every platform.</p><a class="cta" href="/#contact">Start a project</a></div>
+        <aside class="author-box" aria-label="About the author">
+          <img src="/assets/img/angelo-240.jpg" alt="Angelo Pillon" width="88" height="88" loading="lazy">
+          <div>
+            <b>Angelo Pillon</b>
+            <p>Mixing and mastering engineer in Milan. 15+ years behind the console, a hybrid analog and digital chain, Apple Digital Masters certification and a 4.9/5 rating from more than 700 reviews.</p>
+            <div class="btn-row"><a class="btn btn--small" href="/#contact">Work with Angelo</a><a class="btn btn--ghost btn--small" href="/loudness-meter">Try the free LUFS meter</a></div>
+          </div>
+        </aside>
+        <section class="related" aria-labelledby="h-rel">
+          <h2 id="h-rel">Keep reading</h2>
+          <div class="rule-list">
+            <a class="post-row" href="/vocal-compression"><span class="cap" data-cat="tutorial">Tutorial</span><h3>Vocal compression: a tutorial with two compressors in series</h3><span class="post-row__meta">5 min</span></a>
+            <a class="post-row" href="/export-tracks-for-mixing-and-mastering"><span class="cap" data-cat="tutorial">Tutorial</span><h3>How to export tracks for mixing and mastering: Ableton, FL Studio, Logic, Pro Tools and Cubase</h3><span class="post-row__meta">5 min</span></a>
+            <a class="post-row" href="/tuning-kick-and-808"><span class="cap" data-cat="tutorial">Tutorial</span><h3>Tuning the kick and 808 to the key of the track: step-by-step tutorial</h3><span class="post-row__meta">5 min</span></a>
+            
+          </div>
+        </section>
+        <nav class="prevnext" aria-label="More articles">
+          <a href="/lufs-streaming-targets-2026"><span>Newer</span><b>LUFS and streaming in 2026: what platforms do to your master</b></a>
+          <a href="/mixing-vs-mastering"><span>Older</span><b>Mixing vs mastering: who does what, and when you need each</b></a>
+        </nav>
+        
+      </div>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <b>Angelo Pillon</b>
+        <p>Mixing and mastering engineer. Hybrid analog and digital studio in Milan, Apple Digital Masters certified.</p>
+      </div>
+      <div class="ft-col">
+        <h2>Services</h2>
+        <ul><li><a href="/#services">Mastering</a></li><li><a href="/#services">Mix and master</a></li><li><a href="/#services">Stem mastering</a></li><li><a href="/#services">Mix feedback</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Site</h2>
+        <ul><li><a href="/tools/">Free tools</a></li><li><a href="/articles">Articles</a></li><li><a href="/it/articoli/">Articoli in italiano</a></li><li><a href="/de/artikel/">Artikel auf Deutsch</a></li><li><a href="/feed.xml">RSS feed</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Elsewhere</h2>
+        <ul><li><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Fiverr</a></li><li><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank">SoundBetter</a></li></ul>
+      </div>
+      
+    </div>
+    <div class="ft-bottom">
+      <span>© <span data-year>2026</span> Angelo Pillon, Milan, Italy · P.IVA 01981550930</span>
+      <nav aria-label="Legal"><a href="/privacy-policy">Privacy policy</a><button type="button" data-consent-open>Cookie settings</button></nav>
+    </div>
+  </div>
+</footer>
+<aside class="consent" id="consent" hidden aria-label="Cookies">
+  <p>I use cookies for anonymous traffic statistics, and only if you accept. The tools and the site work either way. Details in the <a href="/privacy-policy">Privacy policy</a>.</p>
+  <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Accept</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Decline</button></div>
+</aside>
+
+<script src="/assets/js/site.js?v=202611091131" defer></script>
+<script src="/assets/js/motion.js?v=202611091131" defer></script>
+
+</body>
+</html>

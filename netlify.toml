@@ -49,6 +49,11 @@
   status = 301
 
 [[redirects]]
+  from = "/de/artikel"
+  to = "/de/artikel/"
+  status = 301
+
+[[redirects]]
   from = "/it/strumenti"
   to = "/it/strumenti/"
   status = 301

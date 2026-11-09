@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="de" data-ga="G-Y0FEM4JQLD" data-sw="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>True Peak: warum −1 dBTP keine Regel ist | Angelo Pillon</title>
+<meta name="description" content="Was True Peak ist, woher der Rat zu −1 dBTP kommt, warum ich mit einem True-Peak-Limiter bei −0,3/−0,2 dBTP liefere und wie du die Datei nach der Codierung prüfst.">
+<link rel="canonical" href="https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp">
+<link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/true-peak-1-dbtp">
+<link rel="alternate" hreflang="en" href="https://angelopillon.com/true-peak-minus-1-dbtp">
+<link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp">
+<link rel="alternate" hreflang="x-default" href="https://angelopillon.com/true-peak-minus-1-dbtp">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Angelo Pillon">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="True Peak: warum −1 dBTP keine Regel ist und was ich stattdessen prüfe">
+<meta property="og:description" content="Was True Peak ist, woher der Rat zu −1 dBTP kommt, warum ich mit einem True-Peak-Limiter bei −0,3/−0,2 dBTP liefere und wie du die Datei nach der Codierung prüfst.">
+<meta property="og:url" content="https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp">
+<meta property="og:image" content="https://angelopillon.com/assets/og/de-true-peak-minus-1-dbtp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="True Peak: warum −1 dBTP keine Regel ist und was ich stattdessen prüfe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/assets/og/de-true-peak-minus-1-dbtp.png">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Angelo Pillon, Studio-Journal" href="/de/feed.xml">
+<link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611091131">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"True Peak: warum −1 dBTP keine Regel ist und was ich stattdessen prüfe","description":"Was True Peak ist, woher der Rat zu −1 dBTP kommt, warum ich mit einem True-Peak-Limiter bei −0,3/−0,2 dBTP liefere und wie du die Datei nach der Codierung prüfst.","inLanguage":"de","datePublished":"2026-11-05","dateModified":"2026-11-05","author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg"},"publisher":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg"},"mainEntityOfPage":"https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp","image":"https://angelopillon.com/assets/og/de-true-peak-minus-1-dbtp.png","articleSection":"Lautheit","wordCount":884}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://angelopillon.com/de/"},{"@type":"ListItem","position":2,"name":"Artikel","item":"https://angelopillon.com/de/artikel/"},{"@type":"ListItem","position":3,"name":"True Peak: warum −1 dBTP keine Regel ist und was ich stattdessen prüfe","item":"https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp"}]}</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="/de/">Angelo Pillon</a>
+    <nav class="nav" aria-label="Hauptmenü">
+      <a href="/de/#services">Leistungen</a>
+      <a href="/tools/">Tools</a>
+      <a href="/de/artikel/" aria-current="page">Artikel</a>
+      <a href="/de/#contact">Kontakt</a>
+      
+    </nav>
+    <div class="hdr-actions">
+      <details class="lang">
+        <summary aria-label="Sprache">DE <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <ul>
+          <li><a href="/true-peak-minus-1-dbtp" hreflang="en" lang="en">English <span>EN</span></a></li>
+          <li><a href="/it/articoli/true-peak-1-dbtp" hreflang="it" lang="it">Italiano <span>IT</span></a></li>
+          <li><a href="/de/artikel/true-peak-minus-1-dbtp" hreflang="de" lang="de" aria-current="true">Deutsch <span>DE</span></a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a></li>
+          
+        </ul>
+      </details>
+      <a class="btn btn--small" href="/de/#contact">Projekt starten</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<article>
+  <header class="article-head wrap">
+    <ol class="crumbs" aria-label="Brotkrümel">
+      <li><a href="/de/">Start</a></li><li><a href="/de/artikel/">Artikel</a></li><li><span aria-current="page">Lautheit</span></li>
+    </ol>
+    <span class="cap" data-cat="loudness">Lautheit</span>
+    <h1 class="t-h1">True Peak: warum −1 dBTP keine Regel ist und was ich stattdessen prüfe</h1>
+    <nav class="lang-seg lang-seg--small" aria-label="Lesen auf"><span>Lesen auf</span><a href="/it/articoli/true-peak-1-dbtp" hreflang="it" lang="it">Italiano</a><a href="/true-peak-minus-1-dbtp" hreflang="en" lang="en">English</a><a href="/de/artikel/true-peak-minus-1-dbtp" hreflang="de" lang="de" aria-current="page">Deutsch</a></nav>
+    <p class="t-lead dek">Die Reserve von −1 dB soll den Track vor verlustbehafteter Codierung schützen. Ein vorsichtiger Rat, kein Gesetz: Mit dem richtigen Limiter und einer Prüfung nach der Codierung verschenkt sie oft nur Lautheit und Punch.</p>
+    <div class="meta">
+      <span>Von Angelo Pillon</span>
+      <time datetime="2026-11-05">5. November 2026</time>
+      <span>4 Min. Lesezeit</span>
+      
+      <span class="share">
+        <button type="button" data-share="copy" data-done="Link kopiert" aria-label="Link kopieren" title="Link kopieren"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1 1"/><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1-1"/></svg></button>
+        <a href="https://wa.me/?text=True%20Peak%3A%20warum%20%E2%88%921%20dBTP%20keine%20Regel%20ist%20und%20was%20ich%20stattdessen%20pr%C3%BCfe%20https%3A%2F%2Fangelopillon.com%2Fde%2Fartikel%2Ftrue-peak-minus-1-dbtp" rel="noopener" target="_blank" aria-label="Teilen auf WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+        <a href="https://t.me/share/url?url=https%3A%2F%2Fangelopillon.com%2Fde%2Fartikel%2Ftrue-peak-minus-1-dbtp&amp;text=True%20Peak%3A%20warum%20%E2%88%921%20dBTP%20keine%20Regel%20ist%20und%20was%20ich%20stattdessen%20pr%C3%BCfe" rel="noopener" target="_blank" aria-label="Teilen auf Telegram" title="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 9-8.1c.4-.3-.1-.5-.6-.2L6.4 13.2l-4.7-1.5c-1-.3-1-1 .2-1.5l18.4-7.1c.9-.3 1.6.2 1.6 1.2z"/></svg></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fangelopillon.com%2Fde%2Fartikel%2Ftrue-peak-minus-1-dbtp" rel="noopener" target="_blank" aria-label="Teilen auf LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
+        <button type="button" data-share="native" aria-label="Teilen" title="Teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v13M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button>
+      </span>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="article-grid">
+      <nav class="toc" aria-label="Auf dieser Seite">
+        <details open><summary>Auf dieser Seite</summary>
+        <h2 aria-hidden="true">Auf dieser Seite</h2>
+        <ol><li><a href="#samples-und-die-echte-wellenform">Samples und die echte Wellenform</a></li><li><a href="#woher-1-dbtp-kommt">Woher −1 dBTP kommt</a></li><li><a href="#warum-ich-sie-nicht-blind-anwende">Warum ich sie nicht blind anwende</a></li><li><a href="#was-ich-stattdessen-prufe">Was ich stattdessen prüfe</a></li><li><a href="#die-ausnahmen-die-ich-respektiere">Die Ausnahmen, die ich respektiere</a></li><li><a href="#so-prufst-du-deinen-master">So prüfst du deinen Master</a></li></ol>
+        </details>
+      </nav>
+      <div class="prose">
+        <div class="tldr"><span class="box__title">Kurz gesagt</span>
+<ul>
+<li>Der True Peak ist die Spitze der rekonstruierten Wellenform zwischen zwei Samples. Eine Datei kann in jedem Sample unter 0 dBFS bleiben und diesen Wert nach der Wandlung ins Analoge überschreiten.</li>
+<li>Spotify empfiehlt −1 dBTP und −2 dBTP für Master, die lauter als −14 LUFS sind, um Verzerrungen in verlustbehafteten Formaten vorzubeugen.</li>
+<li>Ich liefere mit einer Obergrenze von −0,3/−0,2 dBTP, mit einem True-Peak-Limiter mit Oversampling, und prüfe die codierte Datei. Entscheidend ist, dass die codierte Version nicht verzerrt, nicht die Zahl auf dem Meter.</li>
+</ul></div>
+<p>Wenige Zahlen im Mastering werden mit so viel Überzeugung wiederholt wie „−1 dBTP“. Du findest sie in den Leitfäden der Plattformen, in Foren, in Limiter-Presets. Die Zahl ist nicht falsch: Sie ist eine Sicherheitsreserve für ein bestimmtes Problem. Es geht darum zu verstehen, welches Problem, und ob es in deinem Fall wirklich existiert.</p>
+<h2 id="samples-und-die-echte-wellenform">Samples und die echte Wellenform</h2>
+<p>Digitales Audio ist eine Folge von Samples. Bei der Wiedergabe verbindet der Wandler die Punkte nicht mit geraden Linien: Er rekonstruiert eine durchgehende Wellenform, die durch alle Samples läuft. Zwischen zwei Samples kann diese Wellenform höher steigen als die Samples selbst.</p>
+<p>Das klassische Beispiel ist eine Sinuswelle bei einem Viertel der Samplerate, die genau zwischen Nulldurchgang und Spitze abgetastet wird: Alle Samples liegen bei etwa −3 dBFS, aber die rekonstruierte Welle erreicht 0 dBFS. Ein Sample-Peak-Meter zeigt −3. Ein True-Peak-Meter, das das Signal überabtastet (vierfach, nach ITU-R BS.1770), zeigt 0.</p>
+<p>Bei echter Musik passiert das ständig, vor allem bei stark limitierten Mastern: Die Samples sind an die Obergrenze gepresst, und die Wellenform dazwischen überschreitet sie.</p>
+<h2 id="woher-1-dbtp-kommt">Woher −1 dBTP kommt</h2>
+<p>Verlustbehaftete Formate wie AAC, Ogg Vorbis und MP3 werfen Informationen weg, um die Datei kleiner zu machen. Das decodierte Signal ist nicht identisch mit dem Original, und die Peaks können etwas wachsen. Überschreitet die decodierte Version die Vollaussteuerung und hat die Wiedergabekette keine Reserve, entsteht Verzerrung.</p>
+<p>Die Reserve von 1 dB soll dieses Wachstum in fast jeder Situation abdecken: sehr helles Material, niedrige Bitraten, verschiedene Codecs. Spotify empfiehlt sie in seiner Dokumentation und verlangt 2 dB Reserve für Master, die lauter als −14 LUFS sind, weil ein Master bei der Codierung umso mehr wächst, je dichter er ist. Derselbe Wert steht in den technischen Empfehlungen der AES für Streaming.</p>
+<h2 id="warum-ich-sie-nicht-blind-anwende">Warum ich sie nicht blind anwende</h2>
+<p><strong>Wie stark der Peak wächst, hängt vom Material ab.</strong> Bei einem Master, der gut mit einem True-Peak-Limiter mit Oversampling limitiert und mit den Bitraten bezahlter Abos codiert wurde, beträgt das Wachstum oft wenige Zehntel dB, kein ganzes dB. Bei einem Master mit harten Höhen und aggressivem Clipping kann es viel mehr sein. Eine feste Regel behandelt zwei gegensätzliche Fälle gleich.</p>
+<p><strong>Das dB, das du freilässt, hat einen Preis.</strong> Bei gleicher integrierter Lautheit bedeutet eine um 0,7 dB niedrigere Obergrenze, dass der Limiter 0,7 dB mehr Reduktion auf den Peaks leisten muss. Bei einem Dance- oder Rap-Track heißt das etwas weichere Transienten, eine Kick, die etwas weniger schlägt. Wo es keine Normalisierung gibt, etwa auf Beatport, im Club oder bei DJ-Dateien, ist es auch weniger Lautstärke.</p>
+<p><strong>Ein Teil des Hörens ist nicht mehr verlustbehaftet.</strong> Seit 2025 bietet Spotify Premium-Abonnenten Lossless an, Apple Music, Tidal und Amazon Music tun das seit Jahren. Wer in FLAC oder ALAC hört, bekommt den Master ohne verlustbehaftete Codierung, und dort gibt es das Problem wachsender Peaks nicht.</p>
+<blockquote class="pull">Die Reserve soll die codierte Version schützen. Also ist es richtig, die codierte Version zu prüfen, statt die Reserve nach Augenmaß zu wählen.</blockquote>
+<h2 id="was-ich-stattdessen-prufe">Was ich stattdessen prüfe</h2>
+<ol>
+<li><strong>True-Peak-Limiter mit Oversampling, Obergrenze bei −0,3/−0,2 dBTP.</strong> Der Limiter muss die Peaks zwischen den Samples erkennen, nicht nur die Samples.</li>
+<li><strong>Messung des Masters mit einem True-Peak-Meter.</strong> Der <a href="/loudness-meter">LUFS-Meter</a> tastet vierfach über, wie es die BS.1770 vorsieht, und markiert Peaks über der Schwelle.</li>
+<li><strong>Testcodierung.</strong> Ich codiere den Master in AAC mit 256 kbps, dem Format von Apple Music, und in ein hochwertiges verlustbehaftetes Format und messe dann die Peaks der decodierten Version. Die Werkzeuge, die Apple für Apple Digital Masters bereitstellt, dienen genau dazu, Clipping nach der AAC-Codierung zu prüfen.</li>
+<li><strong>Clippt die codierte Version, behebe ich die Ursache.</strong> Oft sind es zu aggressive Höhen oder eine zu hart gefahrene Clipping-Stufe. Ich korrigiere das oder senke die Obergrenze um ein paar Zehntel, bis die codierte Version sauber ist.</li>
+<li><strong>Ich höre die codierte Version gegen den Master.</strong> Das ist das letzte Wort: Höre ich keinen Unterschied in der Verzerrung, ist der Master fertig.</li>
+</ol>
+<h2 id="die-ausnahmen-die-ich-respektiere">Die Ausnahmen, die ich respektiere</h2>
+<p>Gibt ein Label oder ein Vertrieb in seinen Lieferspezifikationen eine genaue Obergrenze vor, wird diese geliefert: Das ist eine Anforderung des Kunden, keine Mastering-Entscheidung. Dasselbe gilt für Bereiche mit eigenen Normen, etwa Lieferungen fürs Fernsehen.</p>
+<p>Und wenn dein Master schon bei −1 dBTP liegt und so klingt, wie du willst, gibt es nichts zu korrigieren: Der Punkt dieses Artikels ist nicht, dass −1 dBTP ein Fehler ist, sondern dass es nicht die einzige richtige Antwort ist.</p>
+<h2 id="so-prufst-du-deinen-master">So prüfst du deinen Master</h2>
+<p>Zieh die Datei in den <a href="/loudness-meter">LUFS-Meter</a> und schau dir den True Peak zusammen mit der integrierten Lautheit an. Öffne dann den <a href="/tools/streaming-loudness-calculator">Streaming-Lautheitsrechner</a>: Er zeigt dir, wo die Peaks nach der Normalisierung jeder Plattform landen. Für das ganze Bild zu den Pegeln setzt der Artikel über <a href="/de/artikel/lufs-streaming-2026">LUFS und Streaming 2026</a> hier an.</p>
+<div class="callout"><p><strong>Ein lauter Master, der auch nach der Codierung sauber bleibt.</strong> Mastering ab $60, Prüfung der codierten Dateien inklusive.</p><a class="cta" href="/de/#contact">Projekt starten</a></div>
+        <aside class="author-box" aria-label="Über den Autor">
+          <img src="/assets/img/angelo-240.jpg" alt="Angelo Pillon" width="88" height="88" loading="lazy">
+          <div>
+            <b>Angelo Pillon</b>
+            <p>Mixing- und Mastering-Engineer in Mailand. Über 15 Jahre am Pult, eine hybride analoge und digitale Kette, Apple-Digital-Masters-Zertifizierung und 4,9/5 aus mehr als 700 Bewertungen.</p>
+            <div class="btn-row"><a class="btn btn--small" href="/de/#contact">Mit Angelo arbeiten</a><a class="btn btn--ghost btn--small" href="/loudness-meter">Kostenloses LUFS-Meter testen</a></div>
+          </div>
+        </aside>
+        <section class="related" aria-labelledby="h-rel">
+          <h2 id="h-rel">Weiterlesen</h2>
+          <div class="rule-list">
+            <a class="post-row" href="/de/artikel/lufs-streaming-2026"><span class="cap" data-cat="loudness">Lautheit</span><h3>LUFS und Streaming 2026: was die Plattformen mit deinem Master machen</h3><span class="post-row__meta">5 Min.</span></a>
+            <a class="post-row" href="/de/artikel/lufs-erklaert"><span class="cap" data-cat="loudness">Lautheit</span><h3>LUFS erklärt: der einzige Lautheits-Leitfaden, den Produzenten brauchen</h3><span class="post-row__meta">3 Min.</span></a>
+            <a class="post-row" href="/de/artikel/wie-laut-sollte-ein-master-sein"><span class="cap" data-cat="loudness">Lautheit</span><h3>Wie laut sollte dein Master 2026 sein? Streaming oder Club</h3><span class="post-row__meta">3 Min.</span></a>
+            
+          </div>
+        </section>
+        <nav class="prevnext" aria-label="Weitere Artikel">
+          <a href="/de/artikel/vocal-kompression"><span>Neuer</span><b>Vocal-Kompression: Tutorial mit zwei Kompressoren in Serie</b></a>
+          <a href="/de/artikel/spuren-exportieren-fuer-mixing-und-mastering"><span>Älter</span><b>Spuren für Mixing und Mastering exportieren: Ableton, FL Studio, Logic, Pro Tools und Cubase</b></a>
+        </nav>
+        
+      </div>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <b>Angelo Pillon</b>
+        <p>Mixing- und Mastering-Engineer. Hybrides analoges und digitales Studio in Mailand, Apple Digital Masters zertifiziert.</p>
+      </div>
+      <div class="ft-col">
+        <h2>Leistungen</h2>
+        <ul><li><a href="/de/#services">Mastering</a></li><li><a href="/de/#services">Mix und Master</a></li><li><a href="/de/#services">Stem-Mastering</a></li><li><a href="/de/#services">Mix-Feedback</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Seite</h2>
+        <ul><li><a href="/tools/">Kostenlose Tools</a></li><li><a href="/de/artikel/">Artikel</a></li><li><a href="/articles">Articles in English</a></li><li><a href="/it/articoli/">Articoli in italiano</a></li><li><a href="/de/feed.xml">RSS-Feed</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Anderswo</h2>
+        <ul><li><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Fiverr</a></li><li><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank">SoundBetter</a></li></ul>
+      </div>
+      
+    </div>
+    <div class="ft-bottom">
+      <span>© <span data-year>2026</span> Angelo Pillon, Mailand, Italien · P.IVA 01981550930</span>
+      <nav aria-label="Rechtliches"><a href="/privacy-policy">Datenschutz</a><button type="button" data-consent-open>Cookie-Einstellungen</button></nav>
+    </div>
+  </div>
+</footer>
+<aside class="consent" id="consent" hidden aria-label="Cookies">
+  <p>Ich nutze Cookies für anonyme Besucherstatistiken, und nur mit deiner Zustimmung. Seite und Tools funktionieren auch ohne. Details in der <a href="/privacy-policy">Datenschutz</a>.</p>
+  <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Akzeptieren</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Ablehnen</button></div>
+</aside>
+
+<script src="/assets/js/site.js?v=202611091131" defer></script>
+<script src="/assets/js/motion.js?v=202611091131" defer></script>
+
+</body>
+</html>

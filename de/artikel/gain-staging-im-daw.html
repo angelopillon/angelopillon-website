@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="de" data-ga="G-Y0FEM4JQLD" data-sw="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gain Staging in der DAW: Tutorial Schritt für Schritt | Angelo Pillon</title>
+<meta name="description" content="So stellst du die Pegel in der DAW von der Aufnahme bis zum Master-Bus ein: Clip Gain, auf −18 dBFS kalibrierte Plugins, Headroom fürs Mastering. Tutorial mit praktischen Werten.">
+<link rel="canonical" href="https://angelopillon.com/de/artikel/gain-staging-im-daw">
+<link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/gain-staging-daw">
+<link rel="alternate" hreflang="en" href="https://angelopillon.com/gain-staging-in-your-daw">
+<link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/gain-staging-im-daw">
+<link rel="alternate" hreflang="x-default" href="https://angelopillon.com/gain-staging-in-your-daw">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Angelo Pillon">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Gain Staging in der DAW: Schritt-für-Schritt-Tutorial für einen sauberen Mix">
+<meta property="og:description" content="So stellst du die Pegel in der DAW von der Aufnahme bis zum Master-Bus ein: Clip Gain, auf −18 dBFS kalibrierte Plugins, Headroom fürs Mastering. Tutorial mit praktischen Werten.">
+<meta property="og:url" content="https://angelopillon.com/de/artikel/gain-staging-im-daw">
+<meta property="og:image" content="https://angelopillon.com/assets/og/de-gain-staging-im-daw.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gain Staging in der DAW: Schritt-für-Schritt-Tutorial für einen sauberen Mix">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/assets/og/de-gain-staging-im-daw.png">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Angelo Pillon, Studio-Journal" href="/de/feed.xml">
+<link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611091131">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Gain Staging in der DAW: Schritt-für-Schritt-Tutorial für einen sauberen Mix","description":"So stellst du die Pegel in der DAW von der Aufnahme bis zum Master-Bus ein: Clip Gain, auf −18 dBFS kalibrierte Plugins, Headroom fürs Mastering. Tutorial mit praktischen Werten.","inLanguage":"de","datePublished":"2026-11-05","dateModified":"2026-11-05","author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg"},"publisher":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg"},"mainEntityOfPage":"https://angelopillon.com/de/artikel/gain-staging-im-daw","image":"https://angelopillon.com/assets/og/de-gain-staging-im-daw.png","articleSection":"Tutorial","wordCount":1072}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://angelopillon.com/de/"},{"@type":"ListItem","position":2,"name":"Artikel","item":"https://angelopillon.com/de/artikel/"},{"@type":"ListItem","position":3,"name":"Gain Staging in der DAW: Schritt-für-Schritt-Tutorial für einen sauberen Mix","item":"https://angelopillon.com/de/artikel/gain-staging-im-daw"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Gain Staging in der DAW, Schritt für Schritt","description":"So stellst du die Pegel in der DAW von der Aufnahme bis zum Master-Bus ein: Clip Gain, auf −18 dBFS kalibrierte Plugins, Headroom fürs Mastering. Tutorial mit praktischen Werten.","inLanguage":"de","step":[{"@type":"HowToStep","name":"Session einrichten und mit Headroom aufnehmen","text":"Session einrichten und mit Headroom aufnehmen Arbeite mit 24 Bit oder 32 Bit Float in der Samplerate des Projekts, ohne Limiter auf dem Master. Bei der Aufnahme peilst du Peaks zwischen −12 und −6 dBFS und einen mittleren Pegel um −18 dBFS an. Bei 24 Bit ist das Rauschen des Wandlers viel geringer als das von Mikrofon und Raum: „Heiß“ aufzunehmen verbessert nichts und riskiert Clipping."},{"@type":"HowToStep","name":"Jede Quelle mit Clip Gain auf einen ähnlichen Pegel bringen","text":"Jede Quelle mit Clip Gain auf einen ähnlichen Pegel bringen Bevor du ein Plugin einsetzt, bringst du jede Audiospur mit Clip Gain (oder Region Gain) auf einen mittleren Pegel von etwa −18 dBFS RMS, mit den Fadern auf 0. Drum-Samples kommen oft mit Peaks bei 0 dBFS: Senk sie hier ab, nicht mit dem Fader."},{"@type":"HowToStep","name":"Einen Trim an den Anfang virtueller Instrumente setzen","text":"Einen Trim an den Anfang virtueller Instrumente setzen Synths und Sampler haben kein Clip Gain. Senk die Ausgangslautstärke des Instruments oder setz als erstes Plugin ein Gain-Utility ein, und bring auch diese Spuren auf etwa −18 dBFS im Mittel. Viele Presets sind dafür gemacht, im Laden zu beeindrucken, nicht dafür, in einem Mix zu sitzen."},{"@type":"HowToStep","name":"Die Kalibrierung analog modellierter Plugins respektieren","text":"Die Kalibrierung analog modellierter Plugins respektieren Schau im Handbuch nach, welchem Pegel 0 VU entspricht: meistens −18 dBFS, manchmal −20 oder −14. Setz ein VU-Meter vor das Plugin und stell den Eingang so ein, dass die Nadel in den lautesten Stellen um 0 VU pendelt. Wenn du mehr Sättigung willst, fahr den Eingang höher und wisse, was du tust."},{"@type":"HowToStep","name":"Ein- und Ausgang jedes Plugins angleichen","text":"Ein- und Ausgang jedes Plugins angleichen Stell nach jedem Prozessor den Ausgang so ein, dass der wahrgenommene Pegel mit aktivem und umgangenem Plugin gleich ist. Viele Plugins haben eine Auto-Gain- oder Gain-Match-Funktion: Nutz sie. Nur dann sagt dir der Bypass, ob der Prozessor den Klang verbessert oder ihn nur lauter macht."},{"@type":"HowToStep","name":"Mit den Fadern ausbalancieren, ausgehend von einem Leitelement","text":"Mit den Fadern ausbalancieren, ausgehend von einem Leitelement Wähl das Element, das den Track trägt (in der Elektronik oft die Kick, in Pop und Rap die Stimme), und setz es auf etwa −18 dBFS im Mittel. Bau alles andere darum herum. Landet ein Fader unter −20 dB, geh zurück zum Clip Gain: In diesem Bereich ist der Faderweg zu empfindlich für feine Korrekturen."},{"@type":"HowToStep","name":"Busse und Master prüfen","text":"Busse und Master prüfen Kein Bus darf clippen, vor allem nicht mit Plugins mit fester Obergrenze. Auf dem Master sollten die Peaks des Mixes vor jedem Prozessor bei etwa −6 dBFS liegen. Bist du zu heiß, senk alle Kanäle gemeinsam ab (mit einem VCA oder indem du alle auswählst), nicht den Master-Fader: In Ableton, Logic und FL Studio liegen die Inserts des Masters vor dem Fader, also ändert das Absenken des Masters nicht den Pegel, der in die Plugins geht. Pro Tools ist die Ausnahme: Beim Master "},{"@type":"HowToStep","name":"Fürs Mastering exportieren und prüfen","text":"Fürs Mastering exportieren und prüfen Nimm Limiter und Maximizer vom Master und exportiere ein WAV mit 24 Bit oder 32 Bit Float in der Samplerate des Projekts, ohne Normalisierung. Peaks zwischen −6 und −3 dBFS sind bequem, aber was wirklich zählt, ist, dass nichts clippt. Zieh die Datei in den LUFS-Meter , um Peaks und True Peak zu prüfen."}],"totalTime":"PT30M","tool":[{"@type":"HowToTool","name":"DAW"},{"@type":"HowToTool","name":"Peak-Meter"},{"@type":"HowToTool","name":"VU- oder RMS-Meter"},{"@type":"HowToTool","name":"LUFS-Meter"}]}</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="/de/">Angelo Pillon</a>
+    <nav class="nav" aria-label="Hauptmenü">
+      <a href="/de/#services">Leistungen</a>
+      <a href="/tools/">Tools</a>
+      <a href="/de/artikel/" aria-current="page">Artikel</a>
+      <a href="/de/#contact">Kontakt</a>
+      
+    </nav>
+    <div class="hdr-actions">
+      <details class="lang">
+        <summary aria-label="Sprache">DE <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <ul>
+          <li><a href="/gain-staging-in-your-daw" hreflang="en" lang="en">English <span>EN</span></a></li>
+          <li><a href="/it/articoli/gain-staging-daw" hreflang="it" lang="it">Italiano <span>IT</span></a></li>
+          <li><a href="/de/artikel/gain-staging-im-daw" hreflang="de" lang="de" aria-current="true">Deutsch <span>DE</span></a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a></li>
+          
+        </ul>
+      </details>
+      <a class="btn btn--small" href="/de/#contact">Projekt starten</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<article>
+  <header class="article-head wrap">
+    <ol class="crumbs" aria-label="Brotkrümel">
+      <li><a href="/de/">Start</a></li><li><a href="/de/artikel/">Artikel</a></li><li><span aria-current="page">Tutorial</span></li>
+    </ol>
+    <span class="cap" data-cat="tutorial">Tutorial</span>
+    <h1 class="t-h1">Gain Staging in der DAW, Schritt für Schritt</h1>
+    <nav class="lang-seg lang-seg--small" aria-label="Lesen auf"><span>Lesen auf</span><a href="/it/articoli/gain-staging-daw" hreflang="it" lang="it">Italiano</a><a href="/gain-staging-in-your-daw" hreflang="en" lang="en">English</a><a href="/de/artikel/gain-staging-im-daw" hreflang="de" lang="de" aria-current="page">Deutsch</a></nav>
+    <p class="t-lead dek">Eine DAW mit 32 Bit Float clippt intern nicht, aber Plugins und deine Ohren reagieren auf den Pegel. Hier ist meine Methode in acht Schritten.</p>
+    <div class="meta">
+      <span>Von Angelo Pillon</span>
+      <time datetime="2026-11-05">5. November 2026</time>
+      <span>5 Min. Lesezeit</span>
+      
+      <span class="share">
+        <button type="button" data-share="copy" data-done="Link kopiert" aria-label="Link kopieren" title="Link kopieren"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1 1"/><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1-1"/></svg></button>
+        <a href="https://wa.me/?text=Gain%20Staging%20in%20der%20DAW%3A%20Schritt-f%C3%BCr-Schritt-Tutorial%20f%C3%BCr%20einen%20sauberen%20Mix%20https%3A%2F%2Fangelopillon.com%2Fde%2Fartikel%2Fgain-staging-im-daw" rel="noopener" target="_blank" aria-label="Teilen auf WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+        <a href="https://t.me/share/url?url=https%3A%2F%2Fangelopillon.com%2Fde%2Fartikel%2Fgain-staging-im-daw&amp;text=Gain%20Staging%20in%20der%20DAW%3A%20Schritt-f%C3%BCr-Schritt-Tutorial%20f%C3%BCr%20einen%20sauberen%20Mix" rel="noopener" target="_blank" aria-label="Teilen auf Telegram" title="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 9-8.1c.4-.3-.1-.5-.6-.2L6.4 13.2l-4.7-1.5c-1-.3-1-1 .2-1.5l18.4-7.1c.9-.3 1.6.2 1.6 1.2z"/></svg></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fangelopillon.com%2Fde%2Fartikel%2Fgain-staging-im-daw" rel="noopener" target="_blank" aria-label="Teilen auf LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
+        <button type="button" data-share="native" aria-label="Teilen" title="Teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v13M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button>
+      </span>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="article-grid">
+      <nav class="toc" aria-label="Auf dieser Seite">
+        <details open><summary>Auf dieser Seite</summary>
+        <h2 aria-hidden="true">Auf dieser Seite</h2>
+        <ol><li><a href="#warum-es-auch-mit-32-bit-float-noch-zahlt">Warum es auch mit 32 Bit Float noch zählt</a></li><li><a href="#die-methode-in-acht-schritten">Die Methode in acht Schritten</a></li><li><a href="#die-fehler-die-ich-am-haufigsten-sehe">Die Fehler, die ich am häufigsten sehe</a></li><li><a href="#und-bei-rein-digitalen-plugins">Und bei rein digitalen Plugins?</a></li></ol>
+        </details>
+      </nav>
+      <div class="prose">
+        <div class="howto-meta"><span><b>Zeit</b>30 Minuten pro Session</span><span><b>Niveau</b>Einsteiger</span><span><b>Du brauchst</b>Deine DAW, ein Peak-Meter und ein VU- oder RMS-Meter</span></div>
+<p>Gain Staging heißt, den Pegel an jeder Stelle der Kette zu kontrollieren: von der Aufnahme zum ersten Plugin, von einem Plugin zum nächsten, von den Kanälen über die Busse bis zum Master. Das Ziel ist einfach. Jeder Prozessor soll in dem Bereich arbeiten, für den er gebaut wurde, die Fader sollen in einer bequemen Position stehen und der Mix soll mit Headroom ins Mastering gehen.</p>
+<p>Wenn ich eine Session mit ordentlichen Pegeln bekomme, startet der Mix schneller und klingt besser. Wenn ich Spuren bekomme, die die Plugins 15 dB heißer treffen als vorgesehen, verbringe ich die erste Stunde damit herauszufinden, welche Verzerrung gewollt ist und welche nicht.</p>
+<h2 id="warum-es-auch-mit-32-bit-float-noch-zahlt">Warum es auch mit 32 Bit Float noch zählt</h2>
+<p>Die Mix-Engine einer modernen DAW rechnet mit Gleitkomma: Ein Kanal kann über 0 dBFS gehen, ohne intern zu clippen. Das stimmt, erledigt das Thema aber nicht, aus vier Gründen.</p>
+<ul>
+<li><strong>Plugins, die Hardware emulieren, reagieren auf den Pegel.</strong> Kompressoren, Sättiger und EQs nach analogem Vorbild sind auf einen Referenzpegel kalibriert, oft 0 VU = −18 dBFS. Triffst du sie 12 dB heißer, bekommst du Kompression und Verzerrung, die du nicht gewählt hast.</li>
+<li><strong>Manche Plugins clippen trotzdem.</strong> Nicht alle rechnen intern mit Gleitkomma, und viele Limiter und Clipper haben eine feste Obergrenze.</li>
+<li><strong>Die finale Datei clippt.</strong> Ein WAV mit 24 Bit endet bei 0 dBFS: Alles darüber wird beim Export abgeschnitten.</li>
+<li><strong>Lautstärke täuscht das Ohr.</strong> Lauter wirkt immer besser. Hebt ein Plugin den Pegel um 3 dB an, scheint es den Klang zu verbessern, auch wenn es ihn verschlechtert.</li>
+</ul>
+<h2 id="die-methode-in-acht-schritten">Die Methode in acht Schritten</h2>
+<ol class="steps-list">
+<li><div><h3 id="session-einrichten-und-mit-headroom-aufnehmen">Session einrichten und mit Headroom aufnehmen</h3><p>Arbeite mit 24 Bit oder 32 Bit Float in der Samplerate des Projekts, ohne Limiter auf dem Master. Bei der Aufnahme peilst du Peaks zwischen −12 und −6 dBFS und einen mittleren Pegel um −18 dBFS an. Bei 24 Bit ist das Rauschen des Wandlers viel geringer als das von Mikrofon und Raum: „Heiß“ aufzunehmen verbessert nichts und riskiert Clipping.</p></div></li>
+<li><div><h3 id="jede-quelle-mit-clip-gain-auf-einen-ahnlichen-pegel-bringen">Jede Quelle mit Clip Gain auf einen ähnlichen Pegel bringen</h3><p>Bevor du ein Plugin einsetzt, bringst du jede Audiospur mit Clip Gain (oder Region Gain) auf einen mittleren Pegel von etwa −18 dBFS RMS, mit den Fadern auf 0. Drum-Samples kommen oft mit Peaks bei 0 dBFS: Senk sie hier ab, nicht mit dem Fader.</p></div></li>
+<li><div><h3 id="einen-trim-an-den-anfang-virtueller-instrumente-setzen">Einen Trim an den Anfang virtueller Instrumente setzen</h3><p>Synths und Sampler haben kein Clip Gain. Senk die Ausgangslautstärke des Instruments oder setz als erstes Plugin ein Gain-Utility ein, und bring auch diese Spuren auf etwa −18 dBFS im Mittel. Viele Presets sind dafür gemacht, im Laden zu beeindrucken, nicht dafür, in einem Mix zu sitzen.</p></div></li>
+<li><div><h3 id="die-kalibrierung-analog-modellierter-plugins-respektieren">Die Kalibrierung analog modellierter Plugins respektieren</h3><p>Schau im Handbuch nach, welchem Pegel 0 VU entspricht: meistens −18 dBFS, manchmal −20 oder −14. Setz ein VU-Meter vor das Plugin und stell den Eingang so ein, dass die Nadel in den lautesten Stellen um 0 VU pendelt. Wenn du mehr Sättigung willst, fahr den Eingang höher und wisse, was du tust.</p></div></li>
+<li><div><h3 id="ein-und-ausgang-jedes-plugins-angleichen">Ein- und Ausgang jedes Plugins angleichen</h3><p>Stell nach jedem Prozessor den Ausgang so ein, dass der wahrgenommene Pegel mit aktivem und umgangenem Plugin gleich ist. Viele Plugins haben eine Auto-Gain- oder Gain-Match-Funktion: Nutz sie. Nur dann sagt dir der Bypass, ob der Prozessor den Klang verbessert oder ihn nur lauter macht.</p></div></li>
+<li><div><h3 id="mit-den-fadern-ausbalancieren-ausgehend-von-einem-leitelement">Mit den Fadern ausbalancieren, ausgehend von einem Leitelement</h3><p>Wähl das Element, das den Track trägt (in der Elektronik oft die Kick, in Pop und Rap die Stimme), und setz es auf etwa −18 dBFS im Mittel. Bau alles andere darum herum. Landet ein Fader unter −20 dB, geh zurück zum Clip Gain: In diesem Bereich ist der Faderweg zu empfindlich für feine Korrekturen.</p></div></li>
+<li><div><h3 id="busse-und-master-prufen">Busse und Master prüfen</h3><p>Kein Bus darf clippen, vor allem nicht mit Plugins mit fester Obergrenze. Auf dem Master sollten die Peaks des Mixes vor jedem Prozessor bei etwa −6 dBFS liegen. Bist du zu heiß, senk alle Kanäle gemeinsam ab (mit einem VCA oder indem du alle auswählst), nicht den Master-Fader: In Ableton, Logic und FL Studio liegen die Inserts des Masters vor dem Fader, also ändert das Absenken des Masters nicht den Pegel, der in die Plugins geht. Pro Tools ist die Ausnahme: Beim Master Fader liegen die Inserts nach dem Fader.</p></div></li>
+<li><div><h3 id="furs-mastering-exportieren-und-prufen">Fürs Mastering exportieren und prüfen</h3><p>Nimm Limiter und Maximizer vom Master und exportiere ein WAV mit 24 Bit oder 32 Bit Float in der Samplerate des Projekts, ohne Normalisierung. Peaks zwischen −6 und −3 dBFS sind bequem, aber was wirklich zählt, ist, dass nichts clippt. Zieh die Datei in den <a href="/loudness-meter">LUFS-Meter</a>, um Peaks und True Peak zu prüfen.</p></div></li>
+</ol>
+<h2 id="die-fehler-die-ich-am-haufigsten-sehe">Die Fehler, die ich am häufigsten sehe</h2>
+<p><strong>Der Limiter auf dem Master, „um zu hören, wie es klingen wird“.</strong> Das ist verständlich, aber wenn die Balance vom Limiter abhängt, ändert sich der Mix, sobald du ihn entfernst. Wenn du darauf hin mischen willst, ist das in Ordnung: Schick mir zwei Versionen, mit und ohne.</p>
+<p><strong>Den Master-Fader absenken, um Clipping zu vermeiden.</strong> In den meisten DAWs senkt das den Ausgang, aber nicht den Pegel, der an den Inserts ankommt: Der Kompressor auf dem Mix-Bus arbeitet weiter zu viel.</p>
+<p><strong>Plugins bei unterschiedlicher Lautstärke vergleichen.</strong> Das ist der Grund, warum so viele Mixe mit zu viel Höhen und zu viel Kompression enden: Jede Entscheidung schien besser, weil sie ein bisschen lauter war.</p>
+<p><strong>Normalisieren beim Export.</strong> Das hebt die Datei bis 0 dBFS an und nimmt dir den Headroom, den du dir gelassen hast. Lass es bei Dateien für Mix oder Mastering immer ausgeschaltet.</p>
+<blockquote class="pull">Gain Staging ist keine Pegelregel. Es sorgt dafür, dass jedes Plugin so arbeitet, wie es gebaut wurde, und dass du mit den Ohren urteilst, nicht mit der Lautstärke.</blockquote>
+<h2 id="und-bei-rein-digitalen-plugins">Und bei rein digitalen Plugins?</h2>
+<p>Ein sauberer digitaler EQ oder ein Kompressor ohne analoge Modellierung ändert seinen Charakter nicht mit dem Eingangspegel: Dort dient Gain Staging vor allem dazu, die Fader bequem zu halten und bei gleicher Lautstärke zu vergleichen. Die Methode bleibt gleich, nur wie streng du mit den Eingangspegeln bist, ändert sich.</p>
+<p>Wenn der Mix fertig ist, bereite die Spuren oder das Premaster nach <a href="/de/artikel/spuren-exportieren-fuer-mixing-und-mastering">dem Tutorial zum Export für Mixing und Mastering</a> vor und wirf einen Blick auf die <a href="/de/artikel/fehler-im-premaster">häufigsten Fehler im Premaster</a>.</p>
+<div class="callout"><p><strong>Soll ich die Pegel für dich ordnen?</strong> Mix und Master ab $110: Du schickst mir die Spuren, ich schicke dir einen Master, der für jede Plattform bereit ist.</p><a class="cta" href="/de/#contact">Projekt starten</a></div>
+        <aside class="author-box" aria-label="Über den Autor">
+          <img src="/assets/img/angelo-240.jpg" alt="Angelo Pillon" width="88" height="88" loading="lazy">
+          <div>
+            <b>Angelo Pillon</b>
+            <p>Mixing- und Mastering-Engineer in Mailand. Über 15 Jahre am Pult, eine hybride analoge und digitale Kette, Apple-Digital-Masters-Zertifizierung und 4,9/5 aus mehr als 700 Bewertungen.</p>
+            <div class="btn-row"><a class="btn btn--small" href="/de/#contact">Mit Angelo arbeiten</a><a class="btn btn--ghost btn--small" href="/loudness-meter">Kostenloses LUFS-Meter testen</a></div>
+          </div>
+        </aside>
+        <section class="related" aria-labelledby="h-rel">
+          <h2 id="h-rel">Weiterlesen</h2>
+          <div class="rule-list">
+            <a class="post-row" href="/de/artikel/vocal-kompression"><span class="cap" data-cat="tutorial">Tutorial</span><h3>Vocal-Kompression: Tutorial mit zwei Kompressoren in Serie</h3><span class="post-row__meta">4 Min.</span></a>
+            <a class="post-row" href="/de/artikel/spuren-exportieren-fuer-mixing-und-mastering"><span class="cap" data-cat="tutorial">Tutorial</span><h3>Spuren für Mixing und Mastering exportieren: Ableton, FL Studio, Logic, Pro Tools und Cubase</h3><span class="post-row__meta">5 Min.</span></a>
+            <a class="post-row" href="/de/artikel/kick-und-808-stimmen"><span class="cap" data-cat="tutorial">Tutorial</span><h3>Kick und 808 auf die Tonart des Tracks stimmen: Schritt-für-Schritt-Tutorial</h3><span class="post-row__meta">4 Min.</span></a>
+            
+          </div>
+        </section>
+        <nav class="prevnext" aria-label="Weitere Artikel">
+          <a href="/de/artikel/lufs-streaming-2026"><span>Neuer</span><b>LUFS und Streaming 2026: was die Plattformen mit deinem Master machen</b></a>
+          <a href="/de/artikel/unterschied-mixing-mastering"><span>Älter</span><b>Unterschied zwischen Mixing und Mastering: wer was macht und wann du was brauchst</b></a>
+        </nav>
+        
+      </div>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <b>Angelo Pillon</b>
+        <p>Mixing- und Mastering-Engineer. Hybrides analoges und digitales Studio in Mailand, Apple Digital Masters zertifiziert.</p>
+      </div>
+      <div class="ft-col">
+        <h2>Leistungen</h2>
+        <ul><li><a href="/de/#services">Mastering</a></li><li><a href="/de/#services">Mix und Master</a></li><li><a href="/de/#services">Stem-Mastering</a></li><li><a href="/de/#services">Mix-Feedback</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Seite</h2>
+        <ul><li><a href="/tools/">Kostenlose Tools</a></li><li><a href="/de/artikel/">Artikel</a></li><li><a href="/articles">Articles in English</a></li><li><a href="/it/articoli/">Articoli in italiano</a></li><li><a href="/de/feed.xml">RSS-Feed</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Anderswo</h2>
+        <ul><li><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Fiverr</a></li><li><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank">SoundBetter</a></li></ul>
+      </div>
+      
+    </div>
+    <div class="ft-bottom">
+      <span>© <span data-year>2026</span> Angelo Pillon, Mailand, Italien · P.IVA 01981550930</span>
+      <nav aria-label="Rechtliches"><a href="/privacy-policy">Datenschutz</a><button type="button" data-consent-open>Cookie-Einstellungen</button></nav>
+    </div>
+  </div>
+</footer>
+<aside class="consent" id="consent" hidden aria-label="Cookies">
+  <p>Ich nutze Cookies für anonyme Besucherstatistiken, und nur mit deiner Zustimmung. Seite und Tools funktionieren auch ohne. Details in der <a href="/privacy-policy">Datenschutz</a>.</p>
+  <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Akzeptieren</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Ablehnen</button></div>
+</aside>
+
+<script src="/assets/js/site.js?v=202611091131" defer></script>
+<script src="/assets/js/motion.js?v=202611091131" defer></script>
+
+</body>
+</html>

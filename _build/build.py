@@ -222,7 +222,7 @@ def article_pages(arts):
                     search="Artikel durchsuchen", count_tpl="{n} Artikel", filter="Nach Thema filtern", all="Alle", empty="Kein Artikel passt. Versuch es mit einem anderen Wort.",
                     title="Artikel über Mixing, Mastering und Lautheit | Angelo Pillon", description="Artikel und Tutorials auf Deutsch über Mixing, Mastering und Lautheit: LUFS, True Peak, Gain Staging, Vocals, Stems, Phase und Streaming, von einem Mixing- und Mastering-Engineer."),
         )[lang]
-        h["lang_label"] = S.ART_TR_LABEL[lang]
+        h["lang_label"] = {"en": "Article language", "it": "Lingua degli articoli", "de": "Sprache der Artikel"}[lang]
         hub_langs = [dict(code=l, name=S.LANG_NAMES[l], href=HUBS[l][0], current=(l == lang), count=sum(1 for x in arts if x["lang"] == l)) for l in ART_LANGS]
         cats_present = []
         for c in ["loudness", "mastering", "mixing", "electronic", "tutorial"]:

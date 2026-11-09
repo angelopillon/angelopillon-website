@@ -33,116 +33,550 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/"/>
   </url>
   <url>
-    <loc>https://angelopillon.com/lufs-explained</loc>
-    <lastmod>2026-07-02</lastmod>
-  </url>
-  <url>
-    <loc>https://angelopillon.com/how-loud-should-your-master-be</loc>
-    <lastmod>2026-06-30</lastmod>
-  </url>
-  <url>
-    <loc>https://angelopillon.com/hybrid-vs-itb-mastering</loc>
-    <lastmod>2026-06-18</lastmod>
-  </url>
-  <url>
-    <loc>https://angelopillon.com/low-end-melodic-techno-mixing</loc>
-    <lastmod>2026-05-27</lastmod>
-  </url>
-  <url>
-    <loc>https://angelopillon.com/mixing-vocals-pop-rnb</loc>
-    <lastmod>2026-05-08</lastmod>
-  </url>
-  <url>
-    <loc>https://angelopillon.com/camelot-wheel-harmonic-mixing</loc>
-    <lastmod>2026-04-29</lastmod>
-  </url>
-  <url>
-    <loc>https://angelopillon.com/stem-preparation-guide</loc>
-    <lastmod>2026-04-15</lastmod>
-  </url>
-  <url>
-    <loc>https://angelopillon.com/apple-digital-masters-explained</loc>
-    <lastmod>2026-03-22</lastmod>
-  </url>
-  <url>
-    <loc>https://angelopillon.com/sidechain-compression-edm</loc>
-    <lastmod>2026-03-05</lastmod>
-  </url>
-  <url>
-    <loc>https://angelopillon.com/beatport-vs-spotify-mastering</loc>
-    <lastmod>2026-02-12</lastmod>
-  </url>
-  <url>
-    <loc>https://angelopillon.com/articles</loc>
-    <lastmod>2026-11-09</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
-  </url>
-  <url>
     <loc>https://angelopillon.com/it/articoli/lufs-streaming-2026</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-streaming-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-streaming-targets-2026"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-streaming-2026"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/gain-staging-daw</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/gain-staging-daw"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/gain-staging-in-your-daw"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/gain-staging-im-daw"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/differenza-mix-mastering</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/differenza-mix-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vs-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/unterschied-mixing-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/compressione-voce</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-voce"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/vocal-compression"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocal-kompression"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/true-peak-1-dbtp</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/true-peak-1-dbtp"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/true-peak-minus-1-dbtp"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/esportare-tracce-mix-mastering</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/esportare-tracce-mix-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/export-tracks-for-mixing-and-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/spuren-exportieren-fuer-mixing-und-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/voce-rap-trap-autotune</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/voce-rap-trap-autotune"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/rap-trap-vocals-autotune"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/rap-trap-vocals-autotune"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/accordare-kick-808</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/accordare-kick-808"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tuning-kick-and-808"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/kick-und-808-stimmen"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/mastering-analogico</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-analogico"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/analog-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/analoges-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/fase-compatibilita-mono</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/fase-compatibilita-mono"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/phase-and-mono-compatibility"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/phase-und-mono-kompatibilitaet"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/profondita-mix</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/profondita-mix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/depth-in-the-mix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/tiefe-im-mix"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/mixare-in-cuffia</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-in-cuffia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-on-headphones"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mischen-mit-kopfhoerern"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/errori-premaster</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/errori-premaster"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/premaster-mistakes"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/fehler-im-premaster"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/budget-home-studio</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/budget-home-studio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/home-studio-budget"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/homestudio-budget"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/scegliere-fonico-mix-mastering</loc>
     <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/scegliere-fonico-mix-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/choosing-a-mixing-and-mastering-engineer"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mixing-und-mastering-engineer-finden"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/lufs-spiegati</loc>
+    <lastmod>2026-07-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-spiegati"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-erklaert"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/quanto-forte-deve-essere-il-master</loc>
+    <lastmod>2026-06-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/quanto-forte-deve-essere-il-master"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/how-loud-should-your-master-be"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/wie-laut-sollte-ein-master-sein"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/mastering-ibrido-vs-itb</loc>
+    <lastmod>2026-06-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-ibrido-vs-itb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/hybrid-vs-itb-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/hybrid-vs-itb-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/basse-melodic-techno</loc>
+    <lastmod>2026-05-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/basse-melodic-techno"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/low-end-melodic-techno-mixing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/low-end-melodic-techno"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/mixare-la-voce-pop-rnb</loc>
+    <lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-la-voce-pop-rnb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vocals-pop-rnb"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocals-mischen-pop-rnb"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/ruota-camelot-mix-armonico</loc>
+    <lastmod>2026-04-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/ruota-camelot-mix-armonico"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/camelot-wheel-harmonic-mixing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/camelot-rad-harmonisches-mixen"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/preparare-gli-stem</loc>
+    <lastmod>2026-04-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/preparare-gli-stem"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/stem-preparation-guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/stems-vorbereiten"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/apple-digital-masters-spiegato</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/apple-digital-masters-spiegato"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/apple-digital-masters-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/apple-digital-masters-erklaert"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/compressione-sidechain-edm</loc>
+    <lastmod>2026-03-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-sidechain-edm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/sidechain-compression-edm"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/sidechain-kompression-edm"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/articoli/mastering-beatport-vs-spotify</loc>
+    <lastmod>2026-02-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-beatport-vs-spotify"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/beatport-vs-spotify-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mastering-beatport-vs-spotify"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/</loc>
     <lastmod>2026-11-09</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/lufs-streaming-targets-2026</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-streaming-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-streaming-targets-2026"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-streaming-2026"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/gain-staging-in-your-daw</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/gain-staging-daw"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/gain-staging-in-your-daw"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/gain-staging-im-daw"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/mixing-vs-mastering</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/differenza-mix-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vs-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/unterschied-mixing-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/vocal-compression</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-voce"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/vocal-compression"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocal-kompression"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/true-peak-minus-1-dbtp</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/true-peak-1-dbtp"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/true-peak-minus-1-dbtp"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/export-tracks-for-mixing-and-mastering</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/esportare-tracce-mix-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/export-tracks-for-mixing-and-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/spuren-exportieren-fuer-mixing-und-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/rap-trap-vocals-autotune</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/voce-rap-trap-autotune"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/rap-trap-vocals-autotune"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/rap-trap-vocals-autotune"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/tuning-kick-and-808</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/accordare-kick-808"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tuning-kick-and-808"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/kick-und-808-stimmen"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/analog-mastering</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-analogico"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/analog-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/analoges-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/phase-and-mono-compatibility</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/fase-compatibilita-mono"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/phase-and-mono-compatibility"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/phase-und-mono-kompatibilitaet"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/depth-in-the-mix</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/profondita-mix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/depth-in-the-mix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/tiefe-im-mix"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/mixing-on-headphones</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-in-cuffia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-on-headphones"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mischen-mit-kopfhoerern"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/premaster-mistakes</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/errori-premaster"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/premaster-mistakes"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/fehler-im-premaster"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/home-studio-budget</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/budget-home-studio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/home-studio-budget"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/homestudio-budget"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/choosing-a-mixing-and-mastering-engineer</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/scegliere-fonico-mix-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/choosing-a-mixing-and-mastering-engineer"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mixing-und-mastering-engineer-finden"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/lufs-explained</loc>
+    <lastmod>2026-07-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-spiegati"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-erklaert"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/how-loud-should-your-master-be</loc>
+    <lastmod>2026-06-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/quanto-forte-deve-essere-il-master"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/how-loud-should-your-master-be"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/wie-laut-sollte-ein-master-sein"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/hybrid-vs-itb-mastering</loc>
+    <lastmod>2026-06-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-ibrido-vs-itb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/hybrid-vs-itb-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/hybrid-vs-itb-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/low-end-melodic-techno-mixing</loc>
+    <lastmod>2026-05-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/basse-melodic-techno"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/low-end-melodic-techno-mixing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/low-end-melodic-techno"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/mixing-vocals-pop-rnb</loc>
+    <lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-la-voce-pop-rnb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vocals-pop-rnb"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocals-mischen-pop-rnb"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/camelot-wheel-harmonic-mixing</loc>
+    <lastmod>2026-04-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/ruota-camelot-mix-armonico"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/camelot-wheel-harmonic-mixing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/camelot-rad-harmonisches-mixen"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/stem-preparation-guide</loc>
+    <lastmod>2026-04-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/preparare-gli-stem"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/stem-preparation-guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/stems-vorbereiten"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/apple-digital-masters-explained</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/apple-digital-masters-spiegato"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/apple-digital-masters-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/apple-digital-masters-erklaert"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/sidechain-compression-edm</loc>
+    <lastmod>2026-03-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-sidechain-edm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/sidechain-compression-edm"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/sidechain-kompression-edm"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/beatport-vs-spotify-mastering</loc>
+    <lastmod>2026-02-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-beatport-vs-spotify"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/beatport-vs-spotify-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mastering-beatport-vs-spotify"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/articles</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/lufs-streaming-2026</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-streaming-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-streaming-targets-2026"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-streaming-2026"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/gain-staging-im-daw</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/gain-staging-daw"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/gain-staging-in-your-daw"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/gain-staging-im-daw"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/unterschied-mixing-mastering</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/differenza-mix-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vs-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/unterschied-mixing-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/vocal-kompression</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-voce"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/vocal-compression"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocal-kompression"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/true-peak-1-dbtp"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/true-peak-minus-1-dbtp"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/spuren-exportieren-fuer-mixing-und-mastering</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/esportare-tracce-mix-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/export-tracks-for-mixing-and-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/spuren-exportieren-fuer-mixing-und-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/rap-trap-vocals-autotune</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/voce-rap-trap-autotune"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/rap-trap-vocals-autotune"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/rap-trap-vocals-autotune"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/kick-und-808-stimmen</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/accordare-kick-808"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tuning-kick-and-808"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/kick-und-808-stimmen"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/analoges-mastering</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-analogico"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/analog-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/analoges-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/phase-und-mono-kompatibilitaet</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/fase-compatibilita-mono"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/phase-and-mono-compatibility"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/phase-und-mono-kompatibilitaet"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/tiefe-im-mix</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/profondita-mix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/depth-in-the-mix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/tiefe-im-mix"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/mischen-mit-kopfhoerern</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-in-cuffia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-on-headphones"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mischen-mit-kopfhoerern"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/fehler-im-premaster</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/errori-premaster"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/premaster-mistakes"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/fehler-im-premaster"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/homestudio-budget</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/budget-home-studio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/home-studio-budget"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/homestudio-budget"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/mixing-und-mastering-engineer-finden</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/scegliere-fonico-mix-mastering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/choosing-a-mixing-and-mastering-engineer"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mixing-und-mastering-engineer-finden"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/lufs-erklaert</loc>
+    <lastmod>2026-07-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-spiegati"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-erklaert"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/wie-laut-sollte-ein-master-sein</loc>
+    <lastmod>2026-06-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/quanto-forte-deve-essere-il-master"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/how-loud-should-your-master-be"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/wie-laut-sollte-ein-master-sein"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/hybrid-vs-itb-mastering</loc>
+    <lastmod>2026-06-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-ibrido-vs-itb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/hybrid-vs-itb-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/hybrid-vs-itb-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/low-end-melodic-techno</loc>
+    <lastmod>2026-05-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/basse-melodic-techno"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/low-end-melodic-techno-mixing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/low-end-melodic-techno"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/vocals-mischen-pop-rnb</loc>
+    <lastmod>2026-05-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-la-voce-pop-rnb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vocals-pop-rnb"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocals-mischen-pop-rnb"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/camelot-rad-harmonisches-mixen</loc>
+    <lastmod>2026-04-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/ruota-camelot-mix-armonico"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/camelot-wheel-harmonic-mixing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/camelot-rad-harmonisches-mixen"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/stems-vorbereiten</loc>
+    <lastmod>2026-04-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/preparare-gli-stem"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/stem-preparation-guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/stems-vorbereiten"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/apple-digital-masters-erklaert</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/apple-digital-masters-spiegato"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/apple-digital-masters-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/apple-digital-masters-erklaert"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/sidechain-kompression-edm</loc>
+    <lastmod>2026-03-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-sidechain-edm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/sidechain-compression-edm"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/sidechain-kompression-edm"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/mastering-beatport-vs-spotify</loc>
+    <lastmod>2026-02-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-beatport-vs-spotify"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/beatport-vs-spotify-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mastering-beatport-vs-spotify"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/loudness-meter</loc>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" data-ga="G-Y0FEM4JQLD" data-sw="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>True peak: why −1 dBTP is not a rule | Angelo Pillon</title>
+<meta name="description" content="What true peak is, where the −1 dBTP advice comes from, why I deliver at −0.3/−0.2 dBTP with a true peak limiter and how to check the file after encoding.">
+<link rel="canonical" href="https://angelopillon.com/true-peak-minus-1-dbtp">
+<link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/true-peak-1-dbtp">
+<link rel="alternate" hreflang="en" href="https://angelopillon.com/true-peak-minus-1-dbtp">
+<link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp">
+<link rel="alternate" hreflang="x-default" href="https://angelopillon.com/true-peak-minus-1-dbtp">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Angelo Pillon">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="True peak: why −1 dBTP is not a rule, and what I check instead">
+<meta property="og:description" content="What true peak is, where the −1 dBTP advice comes from, why I deliver at −0.3/−0.2 dBTP with a true peak limiter and how to check the file after encoding.">
+<meta property="og:url" content="https://angelopillon.com/true-peak-minus-1-dbtp">
+<meta property="og:image" content="https://angelopillon.com/assets/og/en-true-peak-minus-1-dbtp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="True peak: why −1 dBTP is not a rule, and what I check instead">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://angelopillon.com/assets/og/en-true-peak-minus-1-dbtp.png">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Angelo Pillon, studio journal" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611091131">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"True peak: why −1 dBTP is not a rule, and what I check instead","description":"What true peak is, where the −1 dBTP advice comes from, why I deliver at −0.3/−0.2 dBTP with a true peak limiter and how to check the file after encoding.","inLanguage":"en","datePublished":"2026-11-05","dateModified":"2026-11-05","author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg"},"publisher":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg"},"mainEntityOfPage":"https://angelopillon.com/true-peak-minus-1-dbtp","image":"https://angelopillon.com/assets/og/en-true-peak-minus-1-dbtp.png","articleSection":"Loudness","wordCount":935}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://angelopillon.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://angelopillon.com/articles"},{"@type":"ListItem","position":3,"name":"True peak: why −1 dBTP is not a rule, and what I check instead","item":"https://angelopillon.com/true-peak-minus-1-dbtp"}]}</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="/">Angelo Pillon</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#services">Services</a>
+      <a href="/tools/">Tools</a>
+      <a href="/articles" aria-current="page">Articles</a>
+      <a href="/#contact">Contact</a>
+      
+    </nav>
+    <div class="hdr-actions">
+      <details class="lang">
+        <summary aria-label="Language">EN <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <ul>
+          <li><a href="/true-peak-minus-1-dbtp" hreflang="en" lang="en" aria-current="true">English <span>EN</span></a></li>
+          <li><a href="/it/articoli/true-peak-1-dbtp" hreflang="it" lang="it">Italiano <span>IT</span></a></li>
+          <li><a href="/de/artikel/true-peak-minus-1-dbtp" hreflang="de" lang="de">Deutsch <span>DE</span></a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a></li>
+          
+        </ul>
+      </details>
+      <a class="btn btn--small" href="/#contact">Start a project</a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<article>
+  <header class="article-head wrap">
+    <ol class="crumbs" aria-label="Breadcrumb">
+      <li><a href="/">Home</a></li><li><a href="/articles">Articles</a></li><li><span aria-current="page">Loudness</span></li>
+    </ol>
+    <span class="cap" data-cat="loudness">Loudness</span>
+    <h1 class="t-h1">True peak: why −1 dBTP is not a rule, and what I check instead</h1>
+    <nav class="lang-seg lang-seg--small" aria-label="Read in"><span>Read in</span><a href="/it/articoli/true-peak-1-dbtp" hreflang="it" lang="it">Italiano</a><a href="/true-peak-minus-1-dbtp" hreflang="en" lang="en" aria-current="page">English</a><a href="/de/artikel/true-peak-minus-1-dbtp" hreflang="de" lang="de">Deutsch</a></nav>
+    <p class="t-lead dek">The −1 dB margin exists to protect the track from lossy encoding. It is cautious advice, not a law: with the right limiter and a check after encoding, it often just gives away loudness and punch.</p>
+    <div class="meta">
+      <span>By Angelo Pillon</span>
+      <time datetime="2026-11-05">5 November 2026</time>
+      <span>4 min read</span>
+      
+      <span class="share">
+        <button type="button" data-share="copy" data-done="Link copied" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1 1"/><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1-1"/></svg></button>
+        <a href="https://wa.me/?text=True%20peak%3A%20why%20%E2%88%921%20dBTP%20is%20not%20a%20rule%2C%20and%20what%20I%20check%20instead%20https%3A%2F%2Fangelopillon.com%2Ftrue-peak-minus-1-dbtp" rel="noopener" target="_blank" aria-label="Share on WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+        <a href="https://t.me/share/url?url=https%3A%2F%2Fangelopillon.com%2Ftrue-peak-minus-1-dbtp&amp;text=True%20peak%3A%20why%20%E2%88%921%20dBTP%20is%20not%20a%20rule%2C%20and%20what%20I%20check%20instead" rel="noopener" target="_blank" aria-label="Share on Telegram" title="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 9-8.1c.4-.3-.1-.5-.6-.2L6.4 13.2l-4.7-1.5c-1-.3-1-1 .2-1.5l18.4-7.1c.9-.3 1.6.2 1.6 1.2z"/></svg></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fangelopillon.com%2Ftrue-peak-minus-1-dbtp" rel="noopener" target="_blank" aria-label="Share on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
+        <button type="button" data-share="native" aria-label="Share" title="Share"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v13M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button>
+      </span>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="article-grid">
+      <nav class="toc" aria-label="On this page">
+        <details open><summary>On this page</summary>
+        <h2 aria-hidden="true">On this page</h2>
+        <ol><li><a href="#samples-and-the-real-waveform">Samples and the real waveform</a></li><li><a href="#where-1-dbtp-comes-from">Where −1 dBTP comes from</a></li><li><a href="#why-i-do-not-apply-it-blindly">Why I do not apply it blindly</a></li><li><a href="#what-i-check-instead">What I check instead</a></li><li><a href="#the-exceptions-i-respect">The exceptions I respect</a></li><li><a href="#how-to-check-your-master">How to check your master</a></li></ol>
+        </details>
+      </nav>
+      <div class="prose">
+        <div class="tldr"><span class="box__title">In short</span>
+<ul>
+<li>True peak is the peak of the reconstructed waveform, between one sample and the next. A file can stay below 0 dBFS on every sample and exceed it once converted to analog.</li>
+<li>Spotify recommends −1 dBTP, and −2 dBTP for masters louder than −14 LUFS, to guard against distortion in lossy formats.</li>
+<li>I deliver with the ceiling at −0.3/−0.2 dBTP, using an oversampled true peak limiter, and I check the encoded file. What matters is that the encoded version does not distort, not the number on the meter.</li>
+</ul></div>
+<p>Few numbers in mastering are repeated with as much conviction as “−1 dBTP”. You find it in platform guides, on forums, in limiter presets. It is not a wrong number: it is a safety margin designed for a specific problem. The point is to understand which problem, and whether it really exists in your case.</p>
+<h2 id="samples-and-the-real-waveform">Samples and the real waveform</h2>
+<p>Digital audio is a sequence of samples. On playback, the converter does not join the dots with straight lines: it reconstructs a continuous waveform that passes through every sample. Between one sample and the next, that waveform can rise higher than the samples themselves.</p>
+<p>The classic example is a sine wave at a quarter of the sample rate, sampled halfway between zero and the peak: every sample reads about −3 dBFS, but the reconstructed wave reaches 0 dBFS. A sample peak meter reads −3. A true peak meter, which oversamples the signal (four times, per ITU-R BS.1770), reads 0.</p>
+<p>With real music it happens all the time, especially on heavily limited masters: the samples are pressed against the ceiling and the waveform between them goes over it.</p>
+<h2 id="where-1-dbtp-comes-from">Where −1 dBTP comes from</h2>
+<p>Lossy formats such as AAC, Ogg Vorbis and MP3 throw information away to make the file smaller. The decoded signal is not identical to the original and the peaks can grow a little. If the decoded version goes over full scale and the playback chain has no headroom, the result is distortion.</p>
+<p>The 1 dB margin is there to cover that growth in almost every situation: very bright material, low bitrates, different codecs. Spotify recommends it in its documentation, and asks for 2 dB of margin on masters louder than −14 LUFS, because the denser a master is, the more it tends to grow when encoded. The same value appears in the AES technical recommendations for streaming.</p>
+<h2 id="why-i-do-not-apply-it-blindly">Why I do not apply it blindly</h2>
+<p><strong>How much the peak grows depends on the material.</strong> On a master limited well with an oversampled true peak limiter, encoded at the bitrates of paid subscriptions, the growth is often a few tenths of a dB, not a full dB. On a master with harsh highs and aggressive clipping it can be much more. A fixed rule treats two opposite cases the same way.</p>
+<p><strong>The dB you leave has a cost.</strong> At the same integrated loudness, lowering the ceiling by 0.7 dB means asking the limiter for 0.7 dB more reduction on the peaks. On a dance or rap track that means slightly softer transients, a kick that hits a little less. Where there is no normalization, as on Beatport, in clubs or in DJ files, it is also less volume.</p>
+<p><strong>Part of the listening is no longer lossy.</strong> Since 2025 Spotify offers lossless to Premium subscribers, and Apple Music, Tidal and Amazon Music have offered it for years. Anyone listening in FLAC or ALAC receives the master without lossy encoding, and there the problem of growing peaks does not exist.</p>
+<blockquote class="pull">The margin is there to protect the encoded version. So the right thing is to check the encoded version, not to pick the margin by eye.</blockquote>
+<h2 id="what-i-check-instead">What I check instead</h2>
+<ol>
+<li><strong>Oversampled true peak limiter, ceiling at −0.3/−0.2 dBTP.</strong> The limiter has to detect the peaks between samples, not just the samples.</li>
+<li><strong>Measure the master with a true peak meter.</strong> The <a href="/loudness-meter">LUFS meter</a> oversamples four times, as BS.1770 requires, and flags peaks above the threshold.</li>
+<li><strong>Test encode.</strong> I encode the master to AAC at 256 kbps, the Apple Music format, and to a high-quality lossy format, then measure the peaks of the decoded version. The tools Apple provides for Apple Digital Masters exist precisely to check clipping after AAC encoding.</li>
+<li><strong>If the encoded version clips, I fix the cause.</strong> Often it is overly aggressive highs or a clipping stage pushed too hard. I correct that, or lower the ceiling by a few tenths, until the encoded version is clean.</li>
+<li><strong>I listen to the encoded version against the master.</strong> That is the final word: if I hear no difference in distortion, the master is ready.</li>
+</ol>
+<h2 id="the-exceptions-i-respect">The exceptions I respect</h2>
+<p>If a label or distributor specifies an exact ceiling in its delivery specs, that is what gets delivered: it is a client requirement, not a mastering choice. The same goes for contexts with their own standards, such as broadcast deliveries.</p>
+<p>And if your master already sits at −1 dBTP and sounds the way you want, there is nothing to fix: the point of this article is not that −1 dBTP is a mistake, but that it is not the only right answer.</p>
+<h2 id="how-to-check-your-master">How to check your master</h2>
+<p>Drop the file into the <a href="/loudness-meter">LUFS meter</a> and look at the true peak together with the integrated loudness. Then open the <a href="/tools/streaming-loudness-calculator">streaming loudness calculator</a>: it shows you where the peaks end up after each platform’s normalization. For the full picture on levels, the article on <a href="/lufs-streaming-targets-2026">LUFS and streaming in 2026</a> starts from here.</p>
+<div class="callout"><p><strong>A loud master that stays clean after encoding.</strong> Mastering from $60, with the encoded-file check included.</p><a class="cta" href="/#contact">Start a project</a></div>
+        <aside class="author-box" aria-label="About the author">
+          <img src="/assets/img/angelo-240.jpg" alt="Angelo Pillon" width="88" height="88" loading="lazy">
+          <div>
+            <b>Angelo Pillon</b>
+            <p>Mixing and mastering engineer in Milan. 15+ years behind the console, a hybrid analog and digital chain, Apple Digital Masters certification and a 4.9/5 rating from more than 700 reviews.</p>
+            <div class="btn-row"><a class="btn btn--small" href="/#contact">Work with Angelo</a><a class="btn btn--ghost btn--small" href="/loudness-meter">Try the free LUFS meter</a></div>
+          </div>
+        </aside>
+        <section class="related" aria-labelledby="h-rel">
+          <h2 id="h-rel">Keep reading</h2>
+          <div class="rule-list">
+            <a class="post-row" href="/lufs-streaming-targets-2026"><span class="cap" data-cat="loudness">Loudness</span><h3>LUFS and streaming in 2026: what platforms do to your master</h3><span class="post-row__meta">5 min</span></a>
+            <a class="post-row" href="/lufs-explained"><span class="cap" data-cat="loudness">Loudness</span><h3>LUFS Explained: The Only Loudness Guide Producers Need</h3><span class="post-row__meta">8 min</span></a>
+            <a class="post-row" href="/how-loud-should-your-master-be"><span class="cap" data-cat="loudness">Loudness</span><h3>How Loud Should Your Master Be in 2026? Streaming vs Club</h3><span class="post-row__meta">6 min</span></a>
+            
+          </div>
+        </section>
+        <nav class="prevnext" aria-label="More articles">
+          <a href="/vocal-compression"><span>Newer</span><b>Vocal compression: a tutorial with two compressors in series</b></a>
+          <a href="/export-tracks-for-mixing-and-mastering"><span>Older</span><b>How to export tracks for mixing and mastering: Ableton, FL Studio, Logic, Pro Tools and Cubase</b></a>
+        </nav>
+        
+      </div>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <b>Angelo Pillon</b>
+        <p>Mixing and mastering engineer. Hybrid analog and digital studio in Milan, Apple Digital Masters certified.</p>
+      </div>
+      <div class="ft-col">
+        <h2>Services</h2>
+        <ul><li><a href="/#services">Mastering</a></li><li><a href="/#services">Mix and master</a></li><li><a href="/#services">Stem mastering</a></li><li><a href="/#services">Mix feedback</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Site</h2>
+        <ul><li><a href="/tools/">Free tools</a></li><li><a href="/articles">Articles</a></li><li><a href="/it/articoli/">Articoli in italiano</a></li><li><a href="/de/artikel/">Artikel auf Deutsch</a></li><li><a href="/feed.xml">RSS feed</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h2>Elsewhere</h2>
+        <ul><li><a href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Fiverr</a></li><li><a href="https://soundbetter.com/profiles/618271-angelo-pillon" rel="noopener" target="_blank">SoundBetter</a></li></ul>
+      </div>
+      
+    </div>
+    <div class="ft-bottom">
+      <span>© <span data-year>2026</span> Angelo Pillon, Milan, Italy · P.IVA 01981550930</span>
+      <nav aria-label="Legal"><a href="/privacy-policy">Privacy policy</a><button type="button" data-consent-open>Cookie settings</button></nav>
+    </div>
+  </div>
+</footer>
+<aside class="consent" id="consent" hidden aria-label="Cookies">
+  <p>I use cookies for anonymous traffic statistics, and only if you accept. The tools and the site work either way. Details in the <a href="/privacy-policy">Privacy policy</a>.</p>
+  <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Accept</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Decline</button></div>
+</aside>
+
+<script src="/assets/js/site.js?v=202611091131" defer></script>
+<script src="/assets/js/motion.js?v=202611091131" defer></script>
+
+</body>
+</html>
