@@ -63,14 +63,14 @@ In questi casi conviene correggere il mix, oppure passare allo stem mastering.
 
 ## Lo stem mastering, la via di mezzo
 
-Con lo stem mastering mi mandi pochi gruppi di tracce, di solito da quattro a otto: batteria, basso, voce, musica, effetti. Lavoro come in mastering, ma posso intervenire su un gruppo senza toccare gli altri. È la soluzione giusta quando il mix ti convince quasi del tutto e solo un paio di elementi vanno sistemati: la voce va avanti di un dB, il basso è troppo largo, i piatti sono aggressivi.
+Con lo stem mastering mi mandi gruppi di tracce, di solito da quattro a otto (ne accetto fino a 40): batteria, basso, voce, musica, effetti. Lavoro come in mastering, ma posso intervenire su un gruppo senza toccare gli altri. È la soluzione giusta quando il mix ti convince quasi del tutto e solo un paio di elementi vanno sistemati: la voce va avanti di un dB, il basso è troppo largo, i piatti sono aggressivi.
 
 ## Di cosa hai bisogno?
 
 - **Il mix ti convince e vuoi solo finirlo:** mastering.
 - **Il mix funziona ma uno o due elementi non stanno al loro posto:** stem mastering.
 - **Il bilanciamento non ti convince, o hai solo le tracce:** mix e master.
-- **La voce va intonata, sincronizzata o ripulita prima di tutto:** editing vocale, poi mix.
+- **La voce va intonata, sincronizzata o ripulita:** mix e master, perché l’intonazione fa già parte del mix.
 
 Se non sei sicuro, mandami il brano con due righe su cosa non ti convince: te lo dico io, senza impegno. E prima di inviare qualsiasi cosa, dai un’occhiata alla [guida all’esportazione delle tracce](/it/articoli/esportare-tracce-mix-mastering).
 

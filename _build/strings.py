@@ -33,6 +33,8 @@ CATS = {
 
 # Language that each home links to for tools and articles
 CONTENT_LANG = {"en": "en", "it": "it", "de": "en", "es": "en"}
+ARTICLE_LANG = {"en": "en", "it": "it", "de": "de", "es": "en"}
+ART_TR_LABEL = {"en": "Read in", "it": "Leggi in", "de": "Lesen auf", "es": "Leer en"}
 
 UI = {
     "en": dict(
@@ -100,19 +102,19 @@ UI = {
 NAV = {
     "en": [("services", "Services", "/#services"), ("tools", "Tools", "/tools/"), ("articles", "Articles", "/articles"), ("contact", "Contact", "/#contact")],
     "it": [("services", "Servizi", "/it/#services"), ("tools", "Strumenti", "/it/strumenti/"), ("articles", "Articoli", "/it/articoli/"), ("contact", "Contatti", "/it/#contact")],
-    "de": [("services", "Leistungen", "/de/#services"), ("tools", "Tools", "/tools/"), ("articles", "Artikel", "/articles"), ("contact", "Kontakt", "/de/#contact")],
+    "de": [("services", "Leistungen", "/de/#services"), ("tools", "Tools", "/tools/"), ("articles", "Artikel", "/de/artikel/"), ("contact", "Kontakt", "/de/#contact")],
     "es": [("services", "Servicios", "/es/#services"), ("tools", "Herramientas", "/tools/"), ("articles", "Artículos", "/articles"), ("contact", "Contacto", "/es/#contact")],
 }
 
 FOOTER = {
     "en": [("Services", [("Mastering", "/#services"), ("Mix and master", "/#services"), ("Stem mastering", "/#services"), ("Mix feedback", "/#services")]),
-           ("Site", [("Free tools", "/tools/"), ("Articles", "/articles"), ("Articoli in italiano", "/it/articoli/"), ("RSS feed", "/feed.xml")]),
+           ("Site", [("Free tools", "/tools/"), ("Articles", "/articles"), ("Articoli in italiano", "/it/articoli/"), ("Artikel auf Deutsch", "/de/artikel/"), ("RSS feed", "/feed.xml")]),
            ("Elsewhere", [("Fiverr", "https://www.fiverr.com/angelopillon"), ("SoundBetter", "https://soundbetter.com/profiles/618271-angelo-pillon")])],
     "it": [("Servizi", [("Mastering", "/it/#services"), ("Mix e master", "/it/#services"), ("Stem mastering", "/it/#services"), ("Feedback sul mix", "/it/#services")]),
-           ("Sito", [("Strumenti gratuiti", "/it/strumenti/"), ("Articoli", "/it/articoli/"), ("Articles in English", "/articles"), ("Feed RSS", "/it/feed.xml")]),
+           ("Sito", [("Strumenti gratuiti", "/it/strumenti/"), ("Articoli", "/it/articoli/"), ("Articles in English", "/articles"), ("Artikel auf Deutsch", "/de/artikel/"), ("Feed RSS", "/it/feed.xml")]),
            ("Altrove", [("Fiverr", "https://www.fiverr.com/angelopillon"), ("SoundBetter", "https://soundbetter.com/profiles/618271-angelo-pillon")])],
     "de": [("Leistungen", [("Mastering", "/de/#services"), ("Mix und Master", "/de/#services"), ("Stem-Mastering", "/de/#services"), ("Mix-Feedback", "/de/#services")]),
-           ("Seite", [("Kostenlose Tools", "/tools/"), ("Artikel (Englisch)", "/articles"), ("Articoli in italiano", "/it/articoli/")]),
+           ("Seite", [("Kostenlose Tools", "/tools/"), ("Artikel", "/de/artikel/"), ("Articles in English", "/articles"), ("Articoli in italiano", "/it/articoli/"), ("RSS-Feed", "/de/feed.xml")]),
            ("Anderswo", [("Fiverr", "https://www.fiverr.com/angelopillon"), ("SoundBetter", "https://soundbetter.com/profiles/618271-angelo-pillon")])],
     "es": [("Servicios", [("Mastering", "/es/#services"), ("Mezcla y master", "/es/#services"), ("Stem mastering", "/es/#services"), ("Feedback de mezcla", "/es/#services")]),
            ("Sitio", [("Herramientas gratuitas", "/tools/"), ("Artículos (inglés)", "/articles"), ("Articoli in italiano", "/it/articoli/")]),
@@ -120,7 +122,7 @@ FOOTER = {
 }
 
 PRIVACY_HREF = {"en": "/privacy-policy", "it": "/it/privacy", "de": "/privacy-policy", "es": "/privacy-policy"}
-FEEDS = {"en": "/feed.xml", "it": "/it/feed.xml", "de": "/feed.xml", "es": "/feed.xml"}
+FEEDS = {"en": "/feed.xml", "it": "/it/feed.xml", "de": "/de/feed.xml", "es": "/feed.xml"}
 
 REVIEWS = [
     dict(text="All I can say is WOW. The song turned out even better than I expected. Angelo is someone you work with once and never want to leave.", who="michaelakuti",
@@ -178,7 +180,7 @@ HOME["en"] = dict(
     rv_h2="What clients say", rv_scale="out of 5", rv_intro="From more than 700 reviews on Fiverr and SoundBetter, by artists, producers, labels and studios in 66+ countries.", rv_link="Read the reviews on Fiverr",
     tl_h2="Free tools", tl_intro="Seven tools that run in your browser. Your audio never leaves your computer.", tl_all="All tools", open="Open",
     ar_h2="From the studio journal", ar_intro="Practical notes on loudness, mixing and mastering, in English and Italian.",
-    ar_links=[dict(label="All articles", href="/articles"), dict(label="Articoli in italiano", href="/it/articoli/")],
+    ar_links=[dict(label="All articles", href="/articles"), dict(label="Articoli in italiano", href="/it/articoli/"), dict(label="Artikel auf Deutsch", href="/de/artikel/")],
     fq_h2="Questions", fq_intro="Anything else, ask in the form below.",
     faqs=[("How do I send my files?", "Upload your stems or mix to WeTransfer, Google Drive or Dropbox and paste the link in the form, or send them through Fiverr. WAV at the session’s sample rate and bit depth, with nothing on the master bus."),
           ("How long does it take?", "Mastering in about 48 hours, mix and master in 3 to 5 days, mix feedback within 48 hours. Albums and EPs get a schedule up front."),
@@ -227,7 +229,7 @@ HOME["it"] = dict(
     rv_h2="Cosa dicono i clienti", rv_scale="su 5", rv_intro="Da oltre 700 recensioni su Fiverr e SoundBetter, di artisti, produttori, etichette e studi in 66 paesi.", rv_link="Leggi le recensioni su Fiverr",
     tl_h2="Strumenti gratuiti", tl_intro="Sette strumenti che girano nel browser. Il tuo audio non lascia mai il computer.", tl_all="Tutti gli strumenti", open="Apri",
     ar_h2="Dal diario di studio", ar_intro="Note pratiche su loudness, mix e mastering, in italiano e in inglese.",
-    ar_links=[dict(label="Tutti gli articoli", href="/it/articoli/"), dict(label="Articles in English", href="/articles")],
+    ar_links=[dict(label="Tutti gli articoli", href="/it/articoli/"), dict(label="Articles in English", href="/articles"), dict(label="Artikel auf Deutsch", href="/de/artikel/")],
     fq_h2="Domande", fq_intro="Per tutto il resto, scrivimi dal modulo qui sotto.",
     faqs=[("Come ti mando i file?", "Carica tracce o mix su WeTransfer, Google Drive o Dropbox e incolla il link nel modulo, oppure mandali tramite Fiverr. WAV alla frequenza e alla risoluzione della sessione, senza nulla sul bus master."),
           ("Quanto tempo ci vuole?", "Il mastering in circa 48 ore, mix e master in 3-5 giorni, il feedback sul mix entro 48 ore. Per album ed EP concordiamo un calendario all’inizio."),
@@ -276,7 +278,7 @@ HOME["de"] = dict(
     rv_h2="Was Kunden sagen", rv_scale="von 5", rv_intro="Aus über 700 Bewertungen auf Fiverr und SoundBetter, von Künstlern, Produzenten, Labels und Studios in 66 Ländern.", rv_link="Bewertungen auf Fiverr lesen",
     tl_h2="Kostenlose Tools", tl_intro="Sieben Tools, die im Browser laufen. Dein Audio verlässt nie deinen Computer.", tl_all="Alle Tools (Englisch)", open="Öffnen",
     ar_h2="Aus dem Studio-Journal", ar_intro="Praktische Notizen zu Lautheit, Mixing und Mastering, auf Englisch und Italienisch.",
-    ar_links=[dict(label="Alle Artikel (Englisch)", href="/articles"), dict(label="Articoli in italiano", href="/it/articoli/")],
+    ar_links=[dict(label="Alle Artikel", href="/de/artikel/"), dict(label="Articles in English", href="/articles"), dict(label="Articoli in italiano", href="/it/articoli/")],
     fq_h2="Fragen", fq_intro="Alles andere einfach über das Formular unten.",
     faqs=[("Wie schicke ich meine Dateien?", "Lade Stems oder Mix bei WeTransfer, Google Drive oder Dropbox hoch und füge den Link ins Formular ein, oder schick sie über Fiverr. WAV in Samplerate und Bittiefe der Session, ohne Bearbeitung auf dem Master-Bus."),
           ("Wie lange dauert es?", "Mastering etwa 48 Stunden, Mix und Master 3 bis 5 Tage, Mix-Feedback innerhalb von 48 Stunden. Für Alben und EPs gibt es vorab einen Zeitplan."),
@@ -325,7 +327,7 @@ HOME["es"] = dict(
     rv_h2="Lo que dicen los clientes", rv_scale="de 5", rv_intro="De más de 700 reseñas en Fiverr y SoundBetter, de artistas, productores, sellos y estudios en 66 países.", rv_link="Leer las reseñas en Fiverr",
     tl_h2="Herramientas gratuitas", tl_intro="Siete herramientas que funcionan en el navegador. Tu audio nunca sale de tu ordenador.", tl_all="Todas las herramientas (inglés)", open="Abrir",
     ar_h2="Del diario del estudio", ar_intro="Notas prácticas sobre sonoridad, mezcla y mastering, en inglés e italiano.",
-    ar_links=[dict(label="Todos los artículos (inglés)", href="/articles"), dict(label="Articoli in italiano", href="/it/articoli/")],
+    ar_links=[dict(label="Todos los artículos (inglés)", href="/articles"), dict(label="Articoli in italiano", href="/it/articoli/"), dict(label="Artikel auf Deutsch", href="/de/artikel/")],
     fq_h2="Preguntas", fq_intro="Para cualquier otra cosa, escríbeme desde el formulario de abajo.",
     faqs=[("¿Cómo te envío los archivos?", "Sube tus stems o tu mezcla a WeTransfer, Google Drive o Dropbox y pega el enlace en el formulario, o envíalos por Fiverr. WAV a la frecuencia y resolución de la sesión, sin nada en el bus master."),
           ("¿Cuánto tarda?", "El mastering unas 48 horas, mezcla y master de 3 a 5 días, el feedback de mezcla en 48 horas. Para álbumes y EP acordamos un calendario al principio."),

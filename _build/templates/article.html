@@ -5,6 +5,7 @@
     </ol>
     <span class="cap" data-cat="{{ a.cat }}">{{ a.cat_label }}</span>
     <h1 class="t-h1">{{ a.h1 }}</h1>
+    {% if translations|length > 1 %}<nav class="lang-seg lang-seg--small" aria-label="{{ tr_label }}"><span>{{ tr_label }}</span>{% for t in translations %}<a href="{{ t.href }}" hreflang="{{ t.code }}" lang="{{ t.code }}"{% if t.current %} aria-current="page"{% endif %}>{{ t.name }}</a>{% endfor %}</nav>{% endif %}
     <p class="t-lead dek">{{ a.dek }}</p>
     <div class="meta">
       <span>{{ ui.by }} Angelo Pillon</span>

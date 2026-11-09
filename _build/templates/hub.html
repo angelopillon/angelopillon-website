@@ -2,6 +2,7 @@
   <ol class="crumbs" aria-label="{{ ui.crumbs_label }}"><li><a href="{{ ui.home }}">{{ ui.home_label }}</a></li><li><span aria-current="page">{{ h.crumb }}</span></li></ol>
   <h1 class="t-h1">{{ h.h1 }}</h1>
   <p class="t-lead">{{ h.lead }}</p>
+  <nav class="lang-seg" aria-label="{{ h.lang_label }}">{% for l in hub_langs %}<a href="{{ l.href }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.current %} aria-current="page"{% endif %}>{{ l.name }}<small>{{ l.count }}</small></a>{% endfor %}</nav>
 </header>
 <section class="wrap" data-hub style="padding-bottom:var(--sec)">
   <div class="hub-tools">
@@ -23,5 +24,4 @@
     {% endfor %}
   </div>
   <p class="hub-empty" hidden>{{ h.empty }}</p>
-  <p class="lang-note">{{ h.other }} <a class="link" href="{{ h.other_href }}" hreflang="{{ h.other_lang }}">{{ h.other_label }}</a></p>
 </section>

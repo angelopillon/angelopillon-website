@@ -67,4 +67,4 @@ Diffida dei prezzi che non dicono cosa includono, e delle offerte così basse da
 
 Prima di inviare qualsiasi file, prepara bene le tracce seguendo il [tutorial sull’esportazione](/it/articoli/esportare-tracce-mix-mastering) e controlla di non aver commesso uno degli [errori più comuni nel premaster](/it/articoli/errori-premaster).
 
-<div class="callout"><p><strong>Vuoi farle a me, queste domande?</strong> Rispondo di solito entro poche ore. Prezzi chiari, revisioni finché il brano è giusto, oltre 700 recensioni su Fiverr e SoundBetter.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Vuoi farle a me, queste domande?</strong> Rispondo di solito entro poche ore. Prezzi chiari, revisioni definite prima di cominciare, oltre 700 recensioni su Fiverr e SoundBetter.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>

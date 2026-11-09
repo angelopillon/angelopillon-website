@@ -118,6 +118,11 @@ def add_ids(soup):
     return toc
 
 
+ART_LANGS = ("it", "en", "de")
+ART_BASE = {"en": "/", "it": "/it/articoli/", "de": "/de/artikel/"}
+HUBS = {"en": ("/articles", "Articles"), "it": ("/it/articoli/", "Articoli"), "de": ("/de/artikel/", "Artikel")}
+
+
 def load_articles():
     arts = []
     meta = json.loads((B / "content/en/_articles.json").read_text())
@@ -130,10 +135,10 @@ def load_articles():
             sp["class"] = ["box__title"]
         for a in soup.select("a.cta"):
             a["class"] = ["cta"]
-        arts.append(dict(lang="en", slug=m["slug"], path="/" + m["slug"], title=m["title"], h1=m["h1"], description=m["description"], dek=m["dek"],
+        arts.append(dict(lang="en", slug=m["slug"], group=m["slug"], path="/" + m["slug"], title=m["title"], h1=m["h1"], description=m["description"], dek=m["dek"],
                          date=m["date"], updated=m.get("updated"), cat=m["category"].lower(), minutes=m["minutes"], soup=soup, tutorial=False, howto=None, order=0))
     md = markdown.Markdown(extensions=["extra", "sane_lists", "smarty"], extension_configs={"smarty": {"smart_angled_quotes": True}})
-    for f in sorted((B / "content/it").glob("*.md")):
+    for lang, f in [(lg, f) for lg in ("it", "en", "de") for f in sorted((B / f"content/{lg}").glob("*.md"))]:
         raw = f.read_text()
         fm, body = raw.split("\n---\n", 1) if raw.startswith("---") else ("", raw)
         meta = yaml.safe_load(fm.lstrip("-\n")) if fm else {}
@@ -142,7 +147,7 @@ def load_articles():
         html = html.replace("&laquo;", "«").replace("&raquo;", "»")
         soup = BeautifulSoup(html, "html.parser")
         words = len(soup.get_text(" ").split())
-        arts.append(dict(lang="it", slug=meta["slug"], path="/it/articoli/" + meta["slug"], title=meta["title"], seo_title=meta.get("seo_title"), h1=meta.get("h1", meta["title"]), description=meta["description"],
+        arts.append(dict(lang=lang, slug=meta["slug"], group=meta.get("group") or meta["slug"], path=ART_BASE[lang] + meta["slug"], title=meta["title"], seo_title=meta.get("seo_title"), h1=meta.get("h1", meta["title"]), description=meta["description"],
                          dek=meta["dek"], date=str(meta["date"]), updated=meta.get("updated"), cat=meta["category"], minutes=meta.get("minutes") or max(3, round(words / 210)),
                          soup=soup, tutorial=bool(meta.get("tutorial")), howto=meta.get("howto"), order=int(meta.get("order", 0))))
     for a in arts:
@@ -154,11 +159,13 @@ def load_articles():
 
 
 def article_pages(arts):
-    for lang in ("en", "it"):
+    by_group = {}
+    for x in arts:
+        by_group.setdefault(x["group"], {})[x["lang"]] = x
+    for lang in ART_LANGS:
         L = sorted([a for a in arts if a["lang"] == lang], key=lambda a: (a["date"], -a["order"]), reverse=True)
         ui = ui_for(lang)
-        hub_path = "/articles" if lang == "en" else "/it/articoli/"
-        hub_label = "Articles" if lang == "en" else "Articoli"
+        hub_path, hub_label = HUBS[lang]
         for i, a in enumerate(L):
             same = [x for x in L if x is not a and x["cat"] == a["cat"]]
             rest = [x for x in L if x is not a and x["cat"] != a["cat"]]
@@ -170,7 +177,9 @@ def article_pages(arts):
             crumbs = [dict(label=ui["home_label"], href=S.HOMES[lang]), dict(label=hub_label, href=hub_path), dict(label=a["cat_label"], href=None)]
             tpl = env.get_template("article.html")
             lang_note = None
-            main = tpl.render(a=dict(a, updated_label=S.date_label(a["updated"], lang) if a.get("updated") else None), ui=ui, crumbs=crumbs, toc=a["toc"], body=Markup(str(a["soup"])),
+            vers = by_group[a["group"]]
+            translations = [dict(code=l, name=S.LANG_NAMES[l], href=vers[l]["path"], current=(l == lang)) for l in ART_LANGS if l in vers]
+            main = tpl.render(translations=translations, tr_label=S.ART_TR_LABEL[lang], a=dict(a, updated_label=S.date_label(a["updated"], lang) if a.get("updated") else None), ui=ui, crumbs=crumbs, toc=a["toc"], body=Markup(str(a["soup"])),
                               related=[dict(href=r["path"], title=r["title"], cat=r["cat"], cat_label=r["cat_label"], minutes=r["minutes"]) for r in related],
                               prev=dict(href=prev["path"], title=prev["title"]) if prev else None, next=dict(href=nxt["path"], title=nxt["title"]) if nxt else None,
                               share_text=quote(a["title"] + " " + SITE + a["path"], safe=""), share_url=quote(SITE + a["path"], safe=""), share_title=quote(a["title"], safe=""),
@@ -195,13 +204,13 @@ def article_pages(arts):
                     jl.append(h)
             st = a.get("seo_title") or a["title"]
             page_title = st + " | Angelo Pillon" if len(st) <= 54 else st
-            add_page(path=a["path"], lang=lang, title=page_title, description=a["description"], main=main, og_type="article",
+            add_page(path=a["path"], lang=lang, title=page_title, description=a["description"], main=main, og_type="article", alt_key="art:" + a["group"],
                      og_image=f"/assets/og/{lang}-{a['slug']}.png", og_title=a["title"], jsonld=jl, nav_current="articles", progress=True, lastmod=a.get("updated") or a["date"],
                      og_args=dict(title=a["title"], kicker=a["cat_label"] + (" · Tutorial" if a["tutorial"] and a["cat"] != "tutorial" else ""), cat=a["cat"], readout="angelopillon.com" + (" · " + str(a["minutes"]) + " min")),
                      feed=dict(lang=lang, title=a["title"], description=a["description"], date=a["date"], path=a["path"]))
         # hub
         h = dict(
-            en=dict(crumb="Articles", h1="Studio journal", lead="Practical, opinionated articles on mixing, mastering and loudness: the same principles I apply to every track that comes through the studio.",
+            en=dict(crumb="Articles", h1="Studio journal", lead="Practical, opinionated articles on mixing, mastering and loudness: the same principles I apply to every track that comes through the studio. Five are step-by-step tutorials.",
                     search="Search articles", count_tpl="{n} articles", filter="Filter by topic", all="All", empty="No article matches. Try another word.",
                     other="Leggi anche in italiano:", other_label="articoli in italiano", other_href="/it/articoli/", other_lang="it",
                     title="Mixing and mastering articles | Angelo Pillon", description="Articles on mixing, mastering and loudness: LUFS, true peak, low end, vocals, stems and streaming, from a working mixing and mastering engineer."),
@@ -209,19 +218,24 @@ def article_pages(arts):
                     search="Cerca negli articoli", count_tpl="{n} articoli", filter="Filtra per argomento", all="Tutti", empty="Nessun articolo corrisponde. Prova un’altra parola.",
                     other="Also in English:", other_label="articles in English", other_href="/articles", other_lang="en",
                     title="Articoli su mix, mastering e loudness | Angelo Pillon", description="Articoli e tutorial in italiano su mix, mastering e loudness: LUFS, true peak, gain staging, voce, stem, fase e streaming, da un fonico di mix e mastering."),
+            de=dict(crumb="Artikel", h1="Studio-Journal", lead="Praxisnahe Artikel mit klarer Haltung zu Mixing, Mastering und Lautheit: dieselben Prinzipien, die ich bei jedem Track im Studio anwende. Fünf davon sind Schritt-für-Schritt-Tutorials.",
+                    search="Artikel durchsuchen", count_tpl="{n} Artikel", filter="Nach Thema filtern", all="Alle", empty="Kein Artikel passt. Versuch es mit einem anderen Wort.",
+                    title="Artikel über Mixing, Mastering und Lautheit | Angelo Pillon", description="Artikel und Tutorials auf Deutsch über Mixing, Mastering und Lautheit: LUFS, True Peak, Gain Staging, Vocals, Stems, Phase und Streaming, von einem Mixing- und Mastering-Engineer."),
         )[lang]
+        h["lang_label"] = S.ART_TR_LABEL[lang]
+        hub_langs = [dict(code=l, name=S.LANG_NAMES[l], href=HUBS[l][0], current=(l == lang), count=sum(1 for x in arts if x["lang"] == l)) for l in ART_LANGS]
         cats_present = []
         for c in ["loudness", "mastering", "mixing", "electronic", "tutorial"]:
             if any(x["cat"] == c or (c == "tutorial" and x["tutorial"]) for x in L):
                 cats_present.append(dict(id=c, label=S.CATS[c][lang]))
         posts = [dict(href=x["path"], title=x["title"], dek=x["dek"], cat=x["cat"], cat_label=x["cat_label"], date=x["date"], date_label=x["date_label"],
                       cats=" ".join(sorted({x["cat"]} | ({"tutorial"} if x["tutorial"] else set()))), search=(x["title"] + " " + x["dek"] + " " + x["description"] + " " + x["cat_label"]).lower()) for x in L]
-        main = env.get_template("hub.html").render(ui=ui, h=h, cats=cats_present, posts=posts)
+        main = env.get_template("hub.html").render(ui=ui, h=h, cats=cats_present, posts=posts, hub_langs=hub_langs)
         jl = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": h["h1"], "description": h["description"], "inLanguage": lang, "url": SITE + hub_path,
                "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": SITE + x["path"], "name": x["title"]} for i, x in enumerate(L)]}},
               crumbs_ld([(ui["home_label"], S.HOMES[lang]), (h["crumb"], hub_path)])]
         add_page(path=hub_path, lang=lang, title=h["title"], description=h["description"], main=main, alt_key="hub-articles", nav_current="articles",
-                 og_image=f"/assets/og/{lang}-articles.png", jsonld=jl, og_args=dict(title=h["h1"] + (": mixing, mastering, loudness" if lang == "en" else ": mix, mastering, loudness"), kicker=h["crumb"]))
+                 og_image=f"/assets/og/{lang}-articles.png", jsonld=jl, og_args=dict(title=h["h1"] + {"en": ": mixing, mastering, loudness", "it": ": mix, mastering, loudness", "de": ": Mixing, Mastering, Lautheit"}[lang], kicker=h["crumb"]))
 
 
 # ---------------------------------------------------------------- tools
@@ -322,7 +336,7 @@ def home_pages(arts):
         s = dict(S.HOME[lang]); s["units"] = S.UNITS[lang]
         ui = ui_for(lang)
         cl = S.CONTENT_LANG[lang]
-        posts = sorted([a for a in arts if a["lang"] == cl], key=lambda a: (a["date"], -a["order"]), reverse=True)[:4]
+        posts = sorted([a for a in arts if a["lang"] == S.ARTICLE_LANG[lang]], key=lambda a: (a["date"], -a["order"]), reverse=True)[:4]
         posts = [dict(href=a["path"], title=a["title"], cat=a["cat"], cat_label=S.CATS[a["cat"]][lang] if lang in S.CATS[a["cat"]] else a["cat_label"], date=a["date"], date_label=S.date_label(a["date"], lang)) for a in posts]
         main = env.get_template("home.html").render(s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
                                                      meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
@@ -432,7 +446,8 @@ def render_all():
 
 # ---------------------------------------------------------------- feeds, sitemap, misc
 def write_feeds():
-    for lang, path, title, home in (("en", "feed.xml", "Angelo Pillon, studio journal", "/articles"), ("it", "it/feed.xml", "Angelo Pillon, articoli in italiano", "/it/articoli/")):
+    for lang, path, title, home in (("en", "feed.xml", "Angelo Pillon, studio journal", "/articles"), ("it", "it/feed.xml", "Angelo Pillon, articoli in italiano", "/it/articoli/"),
+                                    ("de", "de/feed.xml", "Angelo Pillon, Studio-Journal", "/de/artikel/")):
         items = sorted([p for p in PAGES if p.get("feed") and p["feed"]["lang"] == lang], key=lambda p: p["feed"]["date"], reverse=True)
         out = ['<?xml version="1.0" encoding="UTF-8"?>', '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>',
                f"<title>{H.escape(title)}</title><link>{SITE}{home}</link><description>{H.escape(title)}</description><language>{lang}</language>",
@@ -554,6 +569,11 @@ def write_netlify():
 [[redirects]]
   from = "/it/articoli"
   to = "/it/articoli/"
+  status = 301
+
+[[redirects]]
+  from = "/de/artikel"
+  to = "/de/artikel/"
   status = 301
 
 [[redirects]]

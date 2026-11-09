@@ -59,7 +59,7 @@ Imposta i locatori dall’inizio del brano alla fine delle code, poi apri **File
 
 Per il mastering stereo mi basta un solo file: il tuo mix esportato come sopra, senza limiter sul master. Picchi tra −6 e −3 dBFS sono comodi; l’importante è che non ci sia clipping. Se vuoi che senta come lo immagini a volume pieno, aggiungi la versione con il tuo limiter, chiamandola «riferimento».
 
-Per lo **stem mastering** servono da quattro a otto gruppi, per esempio batteria, basso, voce, musica ed effetti, esportati con lo stesso metodo. Prima di inviarli fai una prova: se li sommi in un progetto vuoto devono suonare esattamente come il tuo mix. Se suonano diversi, probabilmente c’è un compressore sul bus master che lavorava sull’insieme.
+Per lo **stem mastering** servono di solito da quattro a otto gruppi (ne accetto fino a 40), per esempio batteria, basso, voce, musica ed effetti, esportati con lo stesso metodo. Prima di inviarli fai una prova: se li sommi in un progetto vuoto devono suonare esattamente come il tuo mix. Se suonano diversi, probabilmente c’è un compressore sul bus master che lavorava sull’insieme.
 
 <div class="box"><span class="box__title">Checklist prima dell’invio</span>
 <ul>

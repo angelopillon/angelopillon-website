@@ -66,4 +66,4 @@ Sono strumenti utili, soprattutto all’inizio. Usali come aiuto, non come verit
 
 Se conosci la tendenza della tua cuffia, puoi correggerla in anticipo. È il vantaggio di usare sempre la stessa.
 
-<div class="callout"><p><strong>Mixi in cuffia e vuoi un secondo ascolto?</strong> Mandami il mix per una revisione: ti dico cosa cambierei prima del mastering, punto per punto.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
+<div class="callout"><p><strong>Mixi in cuffia e vuoi un secondo ascolto?</strong> Con il feedback sul mix, a $45, ti mando un report con cosa cambierei prima del mastering, punto per punto.</p><a class="cta" href="/it/#contact">Inizia un progetto</a></div>
