@@ -17,7 +17,7 @@
   <div class="rule-list">
     {% for p in posts %}<a class="post-row" href="{{ p.href }}" data-row data-cat="{{ p.cats }}" data-text="{{ p.search }}">
       <span class="cap" data-cat="{{ p.cat }}">{{ p.cat_label }}</span>
-      <h3>{{ p.title }}</h3>
+      <h2>{{ p.title }}</h2>
       <time datetime="{{ p.date }}">{{ p.date_label }}</time>
       <p>{{ p.dek }}</p>
     </a>

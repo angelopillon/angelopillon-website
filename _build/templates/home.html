@@ -111,7 +111,7 @@
       <h2 class="t-display" id="h-chain" data-split>{{ s.ch_h2 }}</h2>
       <p class="t-lead chain__lead" data-reveal>{{ s.ch_intro }}</p>
     </div>
-    <div class="chain__track">
+    <div class="chain__track" tabindex="0">
       {% for name, role, kind in s.units %}<article class="unit" data-unit="{{ loop.index0 }}" data-kind="{{ kind }}">
         <div class="unit__face" aria-hidden="true">
           <svg viewBox="0 0 420 150" role="presentation">
@@ -167,7 +167,7 @@
     </div>
     <div class="listen__player" data-reveal>
       {% if preview %}<div class="listen__ph"><div class="eq" aria-hidden="true">{% for i in range(9) %}<i style="--i:{{ i }}"></i>{% endfor %}</div><b>Mixed and Mastered</b><small>{{ c.ls_preview }}</small></div>
-      {% else %}<iframe title="Spotify: Mixed and Mastered" src="https://open.spotify.com/embed/playlist/{{ playlist }}?utm_source=generator&amp;theme=0" width="100%" height="452" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>{% endif %}
+      {% else %}<iframe title="Spotify: Mixed and Mastered" src="https://open.spotify.com/embed/playlist/{{ playlist }}?utm_source=generator&amp;theme=0" width="100%" height="452" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>{% endif %}
     </div>
   </div>
 </section>

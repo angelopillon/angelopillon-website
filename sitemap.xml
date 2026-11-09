@@ -7,6 +7,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/</loc>
@@ -15,6 +16,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/</loc>
@@ -23,6 +25,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/es/</loc>
@@ -31,6 +34,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/lufs-streaming-2026</loc>
@@ -38,6 +42,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-streaming-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-streaming-targets-2026"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-streaming-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/lufs-streaming-targets-2026"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/gain-staging-daw</loc>
@@ -45,6 +50,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/gain-staging-daw"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/gain-staging-in-your-daw"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/gain-staging-im-daw"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/gain-staging-in-your-daw"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/differenza-mix-mastering</loc>
@@ -52,6 +58,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/differenza-mix-mastering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vs-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/unterschied-mixing-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-vs-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/compressione-voce</loc>
@@ -59,6 +66,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-voce"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/vocal-compression"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocal-kompression"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/vocal-compression"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/true-peak-1-dbtp</loc>
@@ -66,6 +74,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/true-peak-1-dbtp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/true-peak-minus-1-dbtp"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/true-peak-minus-1-dbtp"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/esportare-tracce-mix-mastering</loc>
@@ -73,6 +82,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/esportare-tracce-mix-mastering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/export-tracks-for-mixing-and-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/spuren-exportieren-fuer-mixing-und-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/export-tracks-for-mixing-and-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/voce-rap-trap-autotune</loc>
@@ -80,6 +90,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/voce-rap-trap-autotune"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/rap-trap-vocals-autotune"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/rap-trap-vocals-autotune"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/rap-trap-vocals-autotune"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/accordare-kick-808</loc>
@@ -87,6 +98,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/accordare-kick-808"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tuning-kick-and-808"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/kick-und-808-stimmen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tuning-kick-and-808"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/mastering-analogico</loc>
@@ -94,6 +106,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-analogico"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/analog-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/analoges-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/analog-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/fase-compatibilita-mono</loc>
@@ -101,6 +114,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/fase-compatibilita-mono"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/phase-and-mono-compatibility"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/phase-und-mono-kompatibilitaet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/phase-and-mono-compatibility"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/profondita-mix</loc>
@@ -108,6 +122,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/profondita-mix"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/depth-in-the-mix"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/tiefe-im-mix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/depth-in-the-mix"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/mixare-in-cuffia</loc>
@@ -115,6 +130,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-in-cuffia"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-on-headphones"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mischen-mit-kopfhoerern"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-on-headphones"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/errori-premaster</loc>
@@ -122,6 +138,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/errori-premaster"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/premaster-mistakes"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/fehler-im-premaster"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/premaster-mistakes"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/budget-home-studio</loc>
@@ -129,6 +146,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/budget-home-studio"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/home-studio-budget"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/homestudio-budget"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/home-studio-budget"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/scegliere-fonico-mix-mastering</loc>
@@ -136,6 +154,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/scegliere-fonico-mix-mastering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/choosing-a-mixing-and-mastering-engineer"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mixing-und-mastering-engineer-finden"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/choosing-a-mixing-and-mastering-engineer"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/lufs-spiegati</loc>
@@ -143,6 +162,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-spiegati"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-explained"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-erklaert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/lufs-explained"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/quanto-forte-deve-essere-il-master</loc>
@@ -150,6 +170,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/quanto-forte-deve-essere-il-master"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/how-loud-should-your-master-be"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/wie-laut-sollte-ein-master-sein"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/how-loud-should-your-master-be"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/mastering-ibrido-vs-itb</loc>
@@ -157,6 +178,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-ibrido-vs-itb"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/hybrid-vs-itb-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/hybrid-vs-itb-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/hybrid-vs-itb-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/basse-melodic-techno</loc>
@@ -164,6 +186,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/basse-melodic-techno"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/low-end-melodic-techno-mixing"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/low-end-melodic-techno"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/low-end-melodic-techno-mixing"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/mixare-la-voce-pop-rnb</loc>
@@ -171,6 +194,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-la-voce-pop-rnb"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vocals-pop-rnb"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocals-mischen-pop-rnb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-vocals-pop-rnb"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/ruota-camelot-mix-armonico</loc>
@@ -178,6 +202,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/ruota-camelot-mix-armonico"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/camelot-wheel-harmonic-mixing"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/camelot-rad-harmonisches-mixen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/camelot-wheel-harmonic-mixing"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/preparare-gli-stem</loc>
@@ -185,6 +210,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/preparare-gli-stem"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/stem-preparation-guide"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/stems-vorbereiten"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/stem-preparation-guide"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/apple-digital-masters-spiegato</loc>
@@ -192,6 +218,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/apple-digital-masters-spiegato"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/apple-digital-masters-explained"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/apple-digital-masters-erklaert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/apple-digital-masters-explained"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/compressione-sidechain-edm</loc>
@@ -199,6 +226,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-sidechain-edm"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/sidechain-compression-edm"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/sidechain-kompression-edm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/sidechain-compression-edm"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/mastering-beatport-vs-spotify</loc>
@@ -206,6 +234,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-beatport-vs-spotify"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/beatport-vs-spotify-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mastering-beatport-vs-spotify"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/beatport-vs-spotify-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/</loc>
@@ -213,6 +242,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/articles"/>
   </url>
   <url>
     <loc>https://angelopillon.com/lufs-streaming-targets-2026</loc>
@@ -220,6 +250,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-streaming-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-streaming-targets-2026"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-streaming-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/lufs-streaming-targets-2026"/>
   </url>
   <url>
     <loc>https://angelopillon.com/gain-staging-in-your-daw</loc>
@@ -227,6 +258,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/gain-staging-daw"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/gain-staging-in-your-daw"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/gain-staging-im-daw"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/gain-staging-in-your-daw"/>
   </url>
   <url>
     <loc>https://angelopillon.com/mixing-vs-mastering</loc>
@@ -234,6 +266,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/differenza-mix-mastering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vs-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/unterschied-mixing-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-vs-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/vocal-compression</loc>
@@ -241,6 +274,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-voce"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/vocal-compression"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocal-kompression"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/vocal-compression"/>
   </url>
   <url>
     <loc>https://angelopillon.com/true-peak-minus-1-dbtp</loc>
@@ -248,6 +282,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/true-peak-1-dbtp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/true-peak-minus-1-dbtp"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/true-peak-minus-1-dbtp"/>
   </url>
   <url>
     <loc>https://angelopillon.com/export-tracks-for-mixing-and-mastering</loc>
@@ -255,6 +290,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/esportare-tracce-mix-mastering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/export-tracks-for-mixing-and-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/spuren-exportieren-fuer-mixing-und-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/export-tracks-for-mixing-and-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/rap-trap-vocals-autotune</loc>
@@ -262,6 +298,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/voce-rap-trap-autotune"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/rap-trap-vocals-autotune"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/rap-trap-vocals-autotune"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/rap-trap-vocals-autotune"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tuning-kick-and-808</loc>
@@ -269,6 +306,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/accordare-kick-808"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tuning-kick-and-808"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/kick-und-808-stimmen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tuning-kick-and-808"/>
   </url>
   <url>
     <loc>https://angelopillon.com/analog-mastering</loc>
@@ -276,6 +314,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-analogico"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/analog-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/analoges-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/analog-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/phase-and-mono-compatibility</loc>
@@ -283,6 +322,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/fase-compatibilita-mono"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/phase-and-mono-compatibility"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/phase-und-mono-kompatibilitaet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/phase-and-mono-compatibility"/>
   </url>
   <url>
     <loc>https://angelopillon.com/depth-in-the-mix</loc>
@@ -290,6 +330,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/profondita-mix"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/depth-in-the-mix"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/tiefe-im-mix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/depth-in-the-mix"/>
   </url>
   <url>
     <loc>https://angelopillon.com/mixing-on-headphones</loc>
@@ -297,6 +338,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-in-cuffia"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-on-headphones"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mischen-mit-kopfhoerern"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-on-headphones"/>
   </url>
   <url>
     <loc>https://angelopillon.com/premaster-mistakes</loc>
@@ -304,6 +346,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/errori-premaster"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/premaster-mistakes"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/fehler-im-premaster"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/premaster-mistakes"/>
   </url>
   <url>
     <loc>https://angelopillon.com/home-studio-budget</loc>
@@ -311,6 +354,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/budget-home-studio"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/home-studio-budget"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/homestudio-budget"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/home-studio-budget"/>
   </url>
   <url>
     <loc>https://angelopillon.com/choosing-a-mixing-and-mastering-engineer</loc>
@@ -318,6 +362,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/scegliere-fonico-mix-mastering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/choosing-a-mixing-and-mastering-engineer"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mixing-und-mastering-engineer-finden"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/choosing-a-mixing-and-mastering-engineer"/>
   </url>
   <url>
     <loc>https://angelopillon.com/lufs-explained</loc>
@@ -325,6 +370,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-spiegati"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-explained"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-erklaert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/lufs-explained"/>
   </url>
   <url>
     <loc>https://angelopillon.com/how-loud-should-your-master-be</loc>
@@ -332,6 +378,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/quanto-forte-deve-essere-il-master"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/how-loud-should-your-master-be"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/wie-laut-sollte-ein-master-sein"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/how-loud-should-your-master-be"/>
   </url>
   <url>
     <loc>https://angelopillon.com/hybrid-vs-itb-mastering</loc>
@@ -339,6 +386,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-ibrido-vs-itb"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/hybrid-vs-itb-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/hybrid-vs-itb-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/hybrid-vs-itb-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/low-end-melodic-techno-mixing</loc>
@@ -346,6 +394,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/basse-melodic-techno"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/low-end-melodic-techno-mixing"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/low-end-melodic-techno"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/low-end-melodic-techno-mixing"/>
   </url>
   <url>
     <loc>https://angelopillon.com/mixing-vocals-pop-rnb</loc>
@@ -353,6 +402,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-la-voce-pop-rnb"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vocals-pop-rnb"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocals-mischen-pop-rnb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-vocals-pop-rnb"/>
   </url>
   <url>
     <loc>https://angelopillon.com/camelot-wheel-harmonic-mixing</loc>
@@ -360,6 +410,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/ruota-camelot-mix-armonico"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/camelot-wheel-harmonic-mixing"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/camelot-rad-harmonisches-mixen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/camelot-wheel-harmonic-mixing"/>
   </url>
   <url>
     <loc>https://angelopillon.com/stem-preparation-guide</loc>
@@ -367,6 +418,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/preparare-gli-stem"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/stem-preparation-guide"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/stems-vorbereiten"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/stem-preparation-guide"/>
   </url>
   <url>
     <loc>https://angelopillon.com/apple-digital-masters-explained</loc>
@@ -374,6 +426,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/apple-digital-masters-spiegato"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/apple-digital-masters-explained"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/apple-digital-masters-erklaert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/apple-digital-masters-explained"/>
   </url>
   <url>
     <loc>https://angelopillon.com/sidechain-compression-edm</loc>
@@ -381,6 +434,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-sidechain-edm"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/sidechain-compression-edm"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/sidechain-kompression-edm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/sidechain-compression-edm"/>
   </url>
   <url>
     <loc>https://angelopillon.com/beatport-vs-spotify-mastering</loc>
@@ -388,6 +442,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-beatport-vs-spotify"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/beatport-vs-spotify-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mastering-beatport-vs-spotify"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/beatport-vs-spotify-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/articles</loc>
@@ -395,6 +450,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/articles"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/lufs-streaming-2026</loc>
@@ -402,6 +458,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-streaming-2026"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-streaming-targets-2026"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-streaming-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/lufs-streaming-targets-2026"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/gain-staging-im-daw</loc>
@@ -409,6 +466,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/gain-staging-daw"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/gain-staging-in-your-daw"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/gain-staging-im-daw"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/gain-staging-in-your-daw"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/unterschied-mixing-mastering</loc>
@@ -416,6 +474,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/differenza-mix-mastering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vs-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/unterschied-mixing-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-vs-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/vocal-kompression</loc>
@@ -423,6 +482,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-voce"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/vocal-compression"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocal-kompression"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/vocal-compression"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp</loc>
@@ -430,6 +490,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/true-peak-1-dbtp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/true-peak-minus-1-dbtp"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/true-peak-minus-1-dbtp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/true-peak-minus-1-dbtp"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/spuren-exportieren-fuer-mixing-und-mastering</loc>
@@ -437,6 +498,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/esportare-tracce-mix-mastering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/export-tracks-for-mixing-and-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/spuren-exportieren-fuer-mixing-und-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/export-tracks-for-mixing-and-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/rap-trap-vocals-autotune</loc>
@@ -444,6 +506,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/voce-rap-trap-autotune"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/rap-trap-vocals-autotune"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/rap-trap-vocals-autotune"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/rap-trap-vocals-autotune"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/kick-und-808-stimmen</loc>
@@ -451,6 +514,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/accordare-kick-808"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tuning-kick-and-808"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/kick-und-808-stimmen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tuning-kick-and-808"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/analoges-mastering</loc>
@@ -458,6 +522,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-analogico"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/analog-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/analoges-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/analog-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/phase-und-mono-kompatibilitaet</loc>
@@ -465,6 +530,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/fase-compatibilita-mono"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/phase-and-mono-compatibility"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/phase-und-mono-kompatibilitaet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/phase-and-mono-compatibility"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/tiefe-im-mix</loc>
@@ -472,6 +538,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/profondita-mix"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/depth-in-the-mix"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/tiefe-im-mix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/depth-in-the-mix"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/mischen-mit-kopfhoerern</loc>
@@ -479,6 +546,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-in-cuffia"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-on-headphones"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mischen-mit-kopfhoerern"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-on-headphones"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/fehler-im-premaster</loc>
@@ -486,6 +554,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/errori-premaster"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/premaster-mistakes"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/fehler-im-premaster"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/premaster-mistakes"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/homestudio-budget</loc>
@@ -493,6 +562,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/budget-home-studio"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/home-studio-budget"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/homestudio-budget"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/home-studio-budget"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/mixing-und-mastering-engineer-finden</loc>
@@ -500,6 +570,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/scegliere-fonico-mix-mastering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/choosing-a-mixing-and-mastering-engineer"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mixing-und-mastering-engineer-finden"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/choosing-a-mixing-and-mastering-engineer"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/lufs-erklaert</loc>
@@ -507,6 +578,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/lufs-spiegati"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/lufs-explained"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/lufs-erklaert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/lufs-explained"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/wie-laut-sollte-ein-master-sein</loc>
@@ -514,6 +586,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/quanto-forte-deve-essere-il-master"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/how-loud-should-your-master-be"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/wie-laut-sollte-ein-master-sein"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/how-loud-should-your-master-be"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/hybrid-vs-itb-mastering</loc>
@@ -521,6 +594,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-ibrido-vs-itb"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/hybrid-vs-itb-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/hybrid-vs-itb-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/hybrid-vs-itb-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/low-end-melodic-techno</loc>
@@ -528,6 +602,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/basse-melodic-techno"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/low-end-melodic-techno-mixing"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/low-end-melodic-techno"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/low-end-melodic-techno-mixing"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/vocals-mischen-pop-rnb</loc>
@@ -535,6 +610,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mixare-la-voce-pop-rnb"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-vocals-pop-rnb"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/vocals-mischen-pop-rnb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-vocals-pop-rnb"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/camelot-rad-harmonisches-mixen</loc>
@@ -542,6 +618,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/ruota-camelot-mix-armonico"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/camelot-wheel-harmonic-mixing"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/camelot-rad-harmonisches-mixen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/camelot-wheel-harmonic-mixing"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/stems-vorbereiten</loc>
@@ -549,6 +626,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/preparare-gli-stem"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/stem-preparation-guide"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/stems-vorbereiten"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/stem-preparation-guide"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/apple-digital-masters-erklaert</loc>
@@ -556,6 +634,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/apple-digital-masters-spiegato"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/apple-digital-masters-explained"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/apple-digital-masters-erklaert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/apple-digital-masters-explained"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/sidechain-kompression-edm</loc>
@@ -563,6 +642,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/compressione-sidechain-edm"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/sidechain-compression-edm"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/sidechain-kompression-edm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/sidechain-compression-edm"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/mastering-beatport-vs-spotify</loc>
@@ -570,6 +650,7 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/mastering-beatport-vs-spotify"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/beatport-vs-spotify-mastering"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/mastering-beatport-vs-spotify"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/beatport-vs-spotify-mastering"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/</loc>
@@ -577,113 +658,132 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/articles"/>
   </url>
   <url>
     <loc>https://angelopillon.com/loudness-meter</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/loudness-meter"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/misuratore-lufs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/loudness-meter"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/stereo-phase-analyzer</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/stereo-phase-analyzer"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/analizzatore-fase-stereo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/stereo-phase-analyzer"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/ab-reference-player</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/ab-reference-player"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/confronto-ab-reference"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/ab-reference-player"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/delay-reverb-calculator</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/delay-reverb-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/delay-reverb-calculator"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/kick-808-tuning</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/kick-808-tuning"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/accordatura-kick-808"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/kick-808-tuning"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/streaming-loudness-calculator</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/streaming-loudness-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-loudness-streaming"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/streaming-loudness-calculator"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/camelot-wheel</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/camelot-wheel"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/ruota-camelot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/camelot-wheel"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/misuratore-lufs</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/loudness-meter"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/misuratore-lufs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/loudness-meter"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/analizzatore-fase-stereo</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/stereo-phase-analyzer"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/analizzatore-fase-stereo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/stereo-phase-analyzer"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/confronto-ab-reference</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/ab-reference-player"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/confronto-ab-reference"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/ab-reference-player"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/delay-reverb-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/delay-reverb-calculator"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/accordatura-kick-808</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/kick-808-tuning"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/accordatura-kick-808"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/kick-808-tuning"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/calcolatore-loudness-streaming</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/streaming-loudness-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-loudness-streaming"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/streaming-loudness-calculator"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/ruota-camelot</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/camelot-wheel"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/ruota-camelot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/camelot-wheel"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/privacy-policy</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/privacy-policy"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/privacy</loc>
     <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/privacy-policy"/>
   </url>
 </urlset>

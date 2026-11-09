@@ -143,7 +143,7 @@ def load_articles():
         fm, body = raw.split("\n---\n", 1) if raw.startswith("---") else ("", raw)
         meta = yaml.safe_load(fm.lstrip("-\n")) if fm else {}
         md.reset()
-        html = md.convert(body)
+        html = md.convert(body).replace("<table>", '<table tabindex="0">')
         html = html.replace("&laquo;", "«").replace("&raquo;", "»")
         soup = BeautifulSoup(html, "html.parser")
         words = len(soup.get_text(" ").split())
@@ -240,7 +240,7 @@ def article_pages(arts):
 
 # ---------------------------------------------------------------- tools
 def md_text(t):
-    return markdown.markdown(t, extensions=["extra", "sane_lists", "smarty"]).replace("&laquo;", "«").replace("&raquo;", "»")
+    return markdown.markdown(t, extensions=["extra", "sane_lists", "smarty"]).replace("<table>", '<table tabindex="0">').replace("&laquo;", "«").replace("&raquo;", "»")
 
 
 def md_file(p):
@@ -383,7 +383,7 @@ def lang_links(page, groups):
             for p in g:
                 if p["lang"] == code:
                     href = p["path"]
-        if code == page["lang"]:
+        if code == page["lang"] and page["path"] != "/404.html":
             href = page["path"]
         out.append(dict(code=code, name=S.LANG_NAMES[code], href=href or S.HOMES[code]))
     return out
@@ -476,6 +476,9 @@ def write_sitemap():
         if g and len(g) > 1:
             for q in g:
                 out.append(f'    <xhtml:link rel="alternate" hreflang="{q["lang"]}" href="{SITE}{q["path"]}"/>')
+            en = [q for q in g if q["lang"] == "en"]
+            if en:
+                out.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{en[0]["path"]}"/>')
         out.append("  </url>")
     out.append("</urlset>")
     (OUT / "sitemap.xml").write_text("\n".join(out) + "\n")
@@ -512,7 +515,7 @@ self.addEventListener("fetch", e => {{
     if PREVIEW:
         return
     (OUT / "sw.js").write_text(sw)
-    off = """<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Offline | Angelo Pillon</title><link rel="stylesheet" href="/assets/css/site.css"></head>
+    off = """<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Offline | Angelo Pillon</title><link rel="stylesheet" href="/assets/css/site.css"></head>
 <body><main class="wrap notfound"><h1 class="t-h1">You are offline.</h1><p class="t-lead">The tools you opened before still work offline. <span lang="it">Sei offline: gli strumenti già aperti funzionano anche senza rete.</span></p>
 <div class="btn-row"><a class="btn" href="/loudness-meter">LUFS meter</a><a class="btn btn--ghost" href="/tools/">Tools</a><a class="btn btn--ghost" href="/it/strumenti/">Strumenti</a></div></main></body></html>"""
     (OUT / "offline.html").write_text(off)
@@ -531,7 +534,7 @@ def write_netlify():
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 [[headers]]
   for = "/assets/fonts/*"

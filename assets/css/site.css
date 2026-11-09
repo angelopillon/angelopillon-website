@@ -12,7 +12,7 @@
 
 :root{
   --bg:#000; --bg-2:#07070B; --card:#0C0C12; --card-2:#121219;
-  --ink:#F5F5F7; --ink-2:#A1A1AA; --ink-3:#6E6E78;
+  --ink:#F5F5F7; --ink-2:#A1A1AA; --ink-3:#808089;
   --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.22);
   --s1:#3D5BFF; --s2:#8B4DFF; --s3:#FF3DA5; --s4:#FF6A2B; --s5:#FFC24B;
   --grad:linear-gradient(100deg, #4D6BFF 0%, #8B4DFF 26%, #FF3DA5 52%, #FF6A2B 78%, #FFC24B 100%);
@@ -465,7 +465,7 @@ body:not(.is-home) main{ padding-top:64px; }
 .rule-list > *{ border-bottom:1px solid var(--line); }
 .tool-row{ display:grid; grid-template-columns:176px minmax(0,1fr) auto; gap:24px; align-items:center; padding:20px 0; text-decoration:none; }
 .tool-row:hover h3{ background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.tool-row h3{ font-size:1.375rem; font-weight:720; letter-spacing:-.02em; }
+.tool-row h2, .tool-row h3{ font-size:1.375rem; font-weight:720; letter-spacing:-.02em; }
 .tool-row p{ color:var(--ink-2); margin-top:4px; }
 .tool-row__go{ font-size:.875rem; font-weight:620; padding:8px 14px; border-radius:999px; border:1px solid var(--line-strong); transition:all .2s ease; }
 .tool-row:hover .tool-row__go{ background:#fff; color:#000; border-color:#fff; }
@@ -479,7 +479,7 @@ body:not(.is-home) main{ padding-top:64px; }
 .cap[data-cat="mixing"], .chip[data-cat="mixing"]{ --cap:var(--cap-mixing); }
 .cap[data-cat="tutorial"], .chip[data-cat="tutorial"]{ --cap:var(--cap-tutorial); }
 .post-row{ display:grid; grid-template-columns:140px minmax(0,1fr) auto; gap:8px 24px; align-items:baseline; padding:24px 0; text-decoration:none; }
-.post-row h3{ font-size:1.375rem; font-weight:720; line-height:1.22; letter-spacing:-.02em; }
+.post-row h2, .post-row h3{ font-size:1.375rem; font-weight:720; line-height:1.22; letter-spacing:-.02em; }
 .post-row:hover h3{ background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
 .post-row p{ grid-column:2; color:var(--ink-2); font-size:1rem; }
 .post-row time, .post-row .post-row__meta{ font-size:.875rem; color:var(--ink-3); white-space:nowrap; }

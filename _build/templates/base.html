@@ -43,7 +43,7 @@
     </nav>
     <div class="hdr-actions">
       <details class="lang">
-        <summary aria-label="{{ ui.lang_label }}">{{ lang|upper }} <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+        <summary><span class="sr-only">{{ ui.lang_label }}: </span>{{ lang|upper }} <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
         <ul>
           {% for l in lang_links %}<li><a href="{{ l.href }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.code == lang %} aria-current="true"{% endif %}>{{ l.name }} <span>{{ l.code|upper }}</span></a></li>
           {% endfor %}

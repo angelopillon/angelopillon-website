@@ -5,7 +5,7 @@
 </header>
 <section class="wrap" style="padding-bottom:var(--sec)">
   <div class="rule-list">
-    {% for t in tools %}<a class="tool-row" href="{{ t.href }}"><span class="mini" aria-hidden="true">{{ t.mini }}</span><span><h3>{{ t.name }}</h3><p>{{ t.short }}</p></span><span class="tool-row__go">{{ ui.open }}</span></a>
+    {% for t in tools %}<a class="tool-row" href="{{ t.href }}"><span class="mini" aria-hidden="true">{{ t.mini }}</span><span><h2>{{ t.name }}</h2><p>{{ t.short }}</p></span><span class="tool-row__go">{{ ui.open }}</span></a>
     {% endfor %}
   </div>
   <div class="explain prose">{{ h.body }}</div>
