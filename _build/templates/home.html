@@ -156,10 +156,33 @@
       <p class="t-lead" data-reveal>{{ c.ls_p }}</p>
       <p data-reveal><a class="btn btn--ghost" href="https://open.spotify.com/playlist/{{ playlist }}" rel="noopener" target="_blank">{{ c.ls_open }}</a></p>
     </div>
-    <div class="listen__player" data-reveal>
+    {% if ab %}<div class="ab" data-ab data-reveal data-play="{{ abt.play }}" data-pause="{{ abt.pause }}" data-loading="{{ abt.loading }}" data-error="{{ abt.error }}">
+      <ol class="ab__list" aria-label="{{ abt.tracks }}">
+        {% for t in ab %}<li><button class="ab__track" type="button" data-before="{{ t.before }}" data-after="{{ t.after }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">
+          <span class="ab__n" aria-hidden="true">{{ loop.index }}</span>
+          <span class="ab__meta"><b>{{ t.title }}</b>{% if t.artist or t.genre %}<span>{{ t.artist }}{% if t.artist and t.genre %}, {% endif %}{{ t.genre }}</span>{% endif %}</span>
+          <span class="ab__svc">{{ abt.service[t.service] }}</span>
+        </button></li>
+        {% endfor %}
+      </ol>
+      <div class="ab__deck">
+        <button class="ab__play" type="button" aria-label="{{ abt.play }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="ab__ico-play" d="M8 5.2v13.6L19 12z"/><path class="ab__ico-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+        <div class="ab__switch" role="group" aria-label="{{ abt.version }}">
+          <button type="button" data-v="before" aria-pressed="true">{{ abt.before }}</button>
+          <button type="button" data-v="after" aria-pressed="false">{{ abt.after }}</button>
+        </div>
+        <label class="ab__match"><input type="checkbox" checked> <span>{{ abt.match }}</span></label>
+        <input class="ab__seek" type="range" min="0" max="1000" value="0" step="1" aria-label="{{ abt.seek }}">
+        <span class="ab__time" aria-hidden="true">0:00 / 0:00</span>
+      </div>
+      <p class="ab__note">{{ abt.note }}</p>
+      <p class="ab__status" role="status" aria-live="polite"></p>
+    </div>
+    {% else %}    <div class="listen__player" data-reveal>
       {% if preview %}<div class="listen__ph"><div class="eq" aria-hidden="true">{% for i in range(9) %}<i style="--i:{{ i }}"></i>{% endfor %}</div><b>Mixed and Mastered</b><small>{{ c.ls_preview }}</small></div>
       {% else %}<iframe title="Spotify: Mixed and Mastered" src="https://open.spotify.com/embed/playlist/{{ playlist }}?utm_source=generator&amp;theme=0" width="100%" height="452" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>{% endif %}
     </div>
+    {% endif %}
   </div>
 </section>
 

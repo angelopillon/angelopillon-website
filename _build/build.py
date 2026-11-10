@@ -361,7 +361,44 @@ HOME_PROOF = {
 }
 
 
+AB_DIR = "assets/audio/prima-dopo"
+AB_TEXT = {
+    "en": dict(before="Before", after="After", version="Version", play="Play", pause="Pause", seek="Position", match="Matched loudness", loading="Loading…", error="This track cannot be played right now.",
+               note="Same track, same spot: switch between before and after while it plays.", tracks="Before and after tracks",
+               service=dict(mix_master="Mix and master", mastering="Mastering", stem="Stem mastering")),
+    "it": dict(before="Prima", after="Dopo", version="Versione", play="Riproduci", pause="Pausa", seek="Posizione", match="Stesso volume", loading="Carico…", error="Questo brano ora non si può riprodurre.",
+               note="Stesso brano, stesso punto: passa da prima a dopo mentre suona.", tracks="Brani prima e dopo",
+               service=dict(mix_master="Mix e master", mastering="Mastering", stem="Stem mastering")),
+    "de": dict(before="Vorher", after="Nachher", version="Version", play="Abspielen", pause="Pause", seek="Position", match="Gleiche Lautstärke", loading="Lädt…", error="Dieser Track lässt sich gerade nicht abspielen.",
+               note="Derselbe Track, dieselbe Stelle: Wechsle beim Hören zwischen vorher und nachher.", tracks="Tracks vorher und nachher",
+               service=dict(mix_master="Mix und Master", mastering="Mastering", stem="Stem-Mastering")),
+    "es": dict(before="Antes", after="Después", version="Versión", play="Reproducir", pause="Pausa", seek="Posición", match="Mismo volumen", loading="Cargando…", error="Este tema no se puede reproducir ahora.",
+               note="El mismo tema, el mismo punto: cambia entre antes y después mientras suena.", tracks="Temas antes y después",
+               service=dict(mix_master="Mezcla y master", mastering="Mastering", stem="Stem mastering")),
+}
+
+
+def ab_tracks():
+    """Before/after pairs listed in _build/prima_dopo.yaml. An empty list keeps the Spotify playlist on the home."""
+    f = B / "prima_dopo.yaml"
+    items = (yaml.safe_load(f.read_text()) or {}).get("tracks") or [] if f.exists() else []
+    out = []
+    for t in items:
+        for k in ("title", "before", "after"):
+            if not t.get(k):
+                sys.exit(f"prima_dopo.yaml: manca '{k}' in {t}")
+        for k in ("before", "after"):
+            if not (ROOT / AB_DIR / t[k]).exists():
+                sys.exit(f"prima_dopo.yaml: file non trovato: {AB_DIR}/{t[k]}")
+        if t.get("service", "mix_master") not in AB_TEXT["en"]["service"]:
+            sys.exit(f"prima_dopo.yaml: service non valido in {t['title']}")
+        out.append(dict(title=t["title"], artist=t.get("artist", ""), genre=t.get("genre", ""), service=t.get("service", "mix_master"),
+                        before=f"/{AB_DIR}/{quote(t['before'])}", after=f"/{AB_DIR}/{quote(t['after'])}"))
+    return out
+
+
 def home_pages(arts):
+    ab = ab_tracks()
     for lang in S.LANGS:
         s = dict(S.HOME[lang]); s["units"] = S.UNITS[lang]
         ui = ui_for(lang)
@@ -372,7 +409,7 @@ def home_pages(arts):
         posts = [dict(href=a["path"], title=a["title"], cat=a["cat"], cover=post_cover(a), cat_label=S.CATS[a["cat"]][lang] if lang in S.CATS[a["cat"]] else a["cat_label"], date=a["date"], date_label=S.date_label(a["date"], lang)) for a in posts]
         main = env.get_template("home.html").render(s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
                                                      meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
-                                                     codes=S.CLIENT_CODES, playlist=S.SPOTIFY_PLAYLIST, proof=proof)
+                                                     codes=S.CLIENT_CODES, playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang])
         main = Markup(main) + Markup('<script type="application/json" id="tool-i18n">' + json.dumps(S.BRIDGE[lang], ensure_ascii=False).replace("</", "<\\/") + "</script>")
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",
                "description": s["description"], "url": SITE + S.HOMES[lang], "image": SITE + "/assets/img/studio-1-1400.jpg", "logo": SITE + "/assets/img/icon-512.png",
@@ -383,7 +420,7 @@ def home_pages(arts):
         faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["faqs"]]}
         site = {"@context": "https://schema.org", "@type": "WebSite", "name": "Angelo Pillon", "url": SITE + "/", "inLanguage": lang}
         add_page(path=S.HOMES[lang], lang=lang, title=s["title"], description=s["description"], main=Markup(main), alt_key="home", jsonld=[org, faq, site],
-                 scripts=["/assets/js/tools/common.js", "/assets/js/tools/bridge.js", "/assets/js/cosmos.js"], og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
+                 scripts=["/assets/js/tools/common.js", "/assets/js/tools/bridge.js", "/assets/js/cosmos.js"] + (["/assets/js/ab-home.js"] if ab else []), og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
                  og_args=dict(title=s["h1"], kicker={"en": "Mixing and mastering", "it": "Mix e mastering", "de": "Mixing und Mastering", "es": "Mezcla y mastering"}[lang], readout="−8.9 LUFS  −0.3 dBTP"),
                  body_class="is-home")
 

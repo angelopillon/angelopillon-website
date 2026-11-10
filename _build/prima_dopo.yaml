@@ -1,0 +1,21 @@
+# Brani "prima e dopo" della home (sezione "Ascolta il lavoro").
+#
+# Come aggiungere un brano:
+#   1. Metti i due file in assets/audio/prima-dopo/
+#      - mp3 a 320 kbps (oppure m4a), da 30 a 60 secondi
+#      - stesso punto del brano e stessa durata nei due file, così il passaggio è a tempo
+#      - "prima" = il mix ricevuto dal cliente (o le tracce senza mix), "dopo" = il tuo lavoro finito
+#   2. Aggiungi qui sotto una voce per brano e rilancia la build.
+#
+# Con la lista vuota il player non compare e nella home resta la playlist Spotify.
+#
+# Esempio:
+# tracks:
+#   - title: "Titolo del brano"
+#     artist: "Nome artista"
+#     genre: "Melodic techno"
+#     service: mix_master        # mix_master, mastering oppure stem
+#     before: titolo-prima.mp3
+#     after: titolo-dopo.mp3
+
+tracks: []
