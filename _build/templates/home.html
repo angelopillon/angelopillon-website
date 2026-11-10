@@ -9,6 +9,10 @@
       <a class="btn btn--glow" href="#contact" data-magnetic>{{ s.cta1 }}</a>
       <a class="btn btn--ghost" href="#listen" data-magnetic>{{ c.listen_cta }}</a>
     </div>
+    <dl class="hero__proof" data-hero-p>
+      {% for val, label in proof %}<div><dt>{{ label }}</dt><dd>{{ val }}</dd></div>
+      {% endfor %}
+    </dl>
   </div>
   <a class="hero__scroll" href="#story"><span>{{ c.scroll }}</span><i></i></a>
 </section>
@@ -26,21 +30,12 @@
 <section class="worldwide" id="worldwide" aria-labelledby="h-world">
   <div class="wrap worldwide__grid">
     <div class="worldwide__text">
-      <p class="worldwide__num grad-text"><span data-count="66">66</span></p>
+      <p class="worldwide__num"><span data-count="66">66</span></p>
       <h2 class="t-display" id="h-world" data-split>{{ c.gl_h2 }}</h2>
       <p class="t-lead" data-reveal>{{ c.gl_p }}</p>
       <p class="worldwide__proof" data-reveal><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">{{ c.gl_proof }}</a></p>
       <p class="ticker" data-reveal><span>{{ c.gl_dest }}</span><b data-ticker data-codes="{{ codes }}">&nbsp;</b></p>
     </div>
-  </div>
-</section>
-
-<section class="stats" aria-label="{{ c.kicker }}">
-  <div class="wrap stats__grid" data-reveal data-reveal-kids>
-    <div class="stat"><b><span data-count="1200">1,200</span>+</b><span>{{ c.st_tracks }}</span></div>
-    <div class="stat"><b><span data-count="15">15</span>+</b><span>{{ c.st_years }}</span></div>
-    <div class="stat"><b><span data-count="4.9" data-dec="1">4.9</span></b><span>{{ c.st_rating }}</span></div>
-    <div class="stat"><b><span data-count="48">48</span>h</b><span>{{ c.st_turn }}</span></div>
   </div>
 </section>
 
@@ -59,57 +54,26 @@
       <div class="engineer__text">
         <p data-reveal>{{ s.e_p1 }}</p>
         <p data-reveal>{{ s.e_p2 }}</p>
-        <dl class="spec" data-reveal data-reveal-kids>
-          {% for k, val in s.spec %}<div><dt>{{ k }}</dt><dd>{{ val }}</dd></div>
-          {% endfor %}
-        </dl>
       </div>
-      <figure class="engineer__photo engineer__photo--side" data-clip>
-        <picture>
-          <source type="image/webp" srcset="/assets/img/studio-2-900.webp 900w, /assets/img/studio-2-1400.webp 1400w, /assets/img/studio-2-full.webp 1473w" sizes="(max-width:900px) 100vw, 640px">
-          <img src="/assets/img/studio-2-1400.jpg" alt="{{ s.e_alt2 }}" width="1400" height="840" loading="lazy" decoding="async" data-zoom>
-        </picture>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="services" id="services" aria-labelledby="h-svc">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="t-display" id="h-svc" data-split>{{ s.sv_h2 }}</h2>
-      <p class="t-lead" data-reveal>{{ s.sv_intro }}</p>
-    </div>
-    <div class="svc-grid" data-reveal data-reveal-kids>
-      {% for it in s.services %}<article class="svc spot{% if loop.index == 2 %} svc--hero{% endif %}" data-tilt>
-        <h3>{{ it.name }}</h3>
-        <p>{{ it.desc }}</p>
-        {% if it.tiers %}<ul class="svc__tiers">{% for label, pr in it.tiers %}<li><span>{{ label }}</span><b>{{ pr }}</b></li>{% endfor %}</ul>{% endif %}
-        <div class="svc__price"><b>{{ it.price }}</b><span>{{ it.time }}</span></div>
-      </article>
-      {% endfor %}
-    </div>
-    <div class="estimate" data-estimate data-fmt="{{ s.est_fmt }}" data-msg="{{ s.est_msg }}" data-reveal>
-      <span class="estimate__title">{{ s.est_title }}</span>
-      <div class="estimate__row">
-        <label class="field"><span class="sr-only">{{ s.est_service }}</span>
-          <select aria-label="{{ s.est_service }}">{% for it in s.services %}<option value="{{ it.name }}" data-price="{{ it.p }}"{% if it.pack %} data-pack="{{ it.pack }}"{% endif %}>{{ it.name }}</option>{% endfor %}</select>
-        </label>
-        <div class="stepper" role="group" aria-label="{{ s.est_tracks }}"><button type="button" data-minus aria-label="−">−</button><span data-n>1</span><button type="button" data-plus aria-label="+">+</button></div>
-        <span class="estimate__unit">{{ s.est_tracks }}</span>
-        <output aria-live="polite"></output>
-        <button class="btn btn--small" type="button" data-estimate-go>{{ s.est_go }}</button>
-      </div>
-      <p class="estimate__note">{{ s.est_note }}</p>
+      <dl class="spec" data-reveal data-reveal-kids>
+        {% for k, val in s.spec %}<div><dt>{{ k }}</dt><dd>{{ val }}</dd></div>
+        {% endfor %}
+      </dl>
     </div>
   </div>
 </section>
 
 <section class="chain" id="chain" aria-labelledby="h-chain">
   <div class="chain__inner">
-    <div class="chain__intro">
-      <h2 class="t-display" id="h-chain" data-split>{{ s.ch_h2 }}</h2>
-      <p class="t-lead chain__lead" data-reveal>{{ s.ch_intro }}</p>
+    <div class="wrap chain__intro">
+      <div class="chain__head">
+        <h2 class="t-display" id="h-chain" data-split>{{ s.ch_h2 }}</h2>
+        <p class="t-lead chain__lead" data-reveal>{{ s.ch_intro }}</p>
+      </div>
+      <div class="chain__notes" data-reveal>
+        <p>{{ s.ch_p1 }}</p>
+        <p>{{ s.ch_p2 }}</p>
+      </div>
     </div>
     <div class="chain__track" tabindex="0">
       {% for name, role, kind in s.units %}<article class="unit" data-unit="{{ loop.index0 }}" data-kind="{{ kind }}">
@@ -149,10 +113,37 @@
         <p>{{ role }}</p>
       </article>
       {% endfor %}
-      <article class="unit unit--text">
-        <p>{{ s.ch_p1 }}</p>
-        <p>{{ s.ch_p2 }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="h-svc">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="t-display" id="h-svc" data-split>{{ s.sv_h2 }}</h2>
+      <p class="t-lead" data-reveal>{{ s.sv_intro }}</p>
+    </div>
+    <div class="svc-grid" tabindex="0" role="group" aria-label="{{ s.sv_h2 }}" data-reveal data-reveal-kids>
+      {% for it in s.services %}<article class="svc spot{% if loop.index == 2 %} svc--hero{% endif %}" data-tilt>
+        <h3>{{ it.name }}</h3>
+        <p>{{ it.desc }}</p>
+        {% if it.tiers %}<ul class="svc__tiers">{% for label, pr in it.tiers %}<li><span>{{ label }}</span><b>{{ pr }}</b></li>{% endfor %}</ul>{% endif %}
+        <div class="svc__price"><b>{{ it.price }}</b><span>{{ it.time }}</span></div>
       </article>
+      {% endfor %}
+    </div>
+    <div class="estimate" data-estimate data-fmt="{{ s.est_fmt }}" data-msg="{{ s.est_msg }}" data-reveal>
+      <span class="estimate__title">{{ s.est_title }}</span>
+      <div class="estimate__row">
+        <label class="field"><span class="sr-only">{{ s.est_service }}</span>
+          <select aria-label="{{ s.est_service }}">{% for it in s.services %}<option value="{{ it.name }}" data-price="{{ it.p }}"{% if it.pack %} data-pack="{{ it.pack }}"{% endif %}>{{ it.name }}</option>{% endfor %}</select>
+        </label>
+        <div class="stepper" role="group" aria-label="{{ s.est_tracks }}"><button type="button" data-minus aria-label="−">−</button><span data-n>1</span><button type="button" data-plus aria-label="+">+</button></div>
+        <span class="estimate__unit">{{ s.est_tracks }}</span>
+        <output aria-live="polite"></output>
+        <button class="btn btn--small" type="button" data-estimate-go>{{ s.est_go }}</button>
+      </div>
+      <p class="estimate__note">{{ s.est_note }}</p>
     </div>
   </div>
 </section>
@@ -160,7 +151,7 @@
 <section class="listen" id="listen" aria-labelledby="h-listen">
   <div class="wrap listen__grid">
     <div class="listen__text">
-      <div class="eq" aria-hidden="true">{% for i in range(14) %}<i style="--i:{{ i }}"></i>{% endfor %}</div>
+      <svg class="vu" viewBox="0 0 168 104" aria-hidden="true"><rect x="1" y="1" width="166" height="102" rx="10" class="vu__case"/><rect x="10" y="10" width="148" height="72" rx="6" class="u-vu"/><path d="M34 68 A50 50 0 0 1 134 68" class="u-arc"/><path d="M112 27 A50 50 0 0 1 134 68" class="u-arc u-arc--red"/><line x1="84" y1="74" x2="84" y2="22" class="u-needle"/><circle cx="84" cy="74" r="4" class="u-pivot"/><text x="84" y="96" text-anchor="middle" class="vu__lbl">VU</text></svg>
       <h2 class="t-display" id="h-listen" data-split>{{ c.ls_h2 }}</h2>
       <p class="t-lead" data-reveal>{{ c.ls_p }}</p>
       <p data-reveal><a class="btn btn--ghost" href="https://open.spotify.com/playlist/{{ playlist }}" rel="noopener" target="_blank">{{ c.ls_open }}</a></p>
@@ -179,7 +170,7 @@
         <h2 class="t-display" id="h-rev" data-split>{{ s.rv_h2 }}</h2>
         <p class="t-lead" data-reveal>{{ s.rv_intro }}</p>
       </div>
-      <div class="rating" data-reveal><b class="grad-text"><span data-count="4.9" data-dec="1">4.9</span></b><span>{{ s.rv_scale }}</span><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">{{ s.rv_link }}</a></div>
+      <div class="rating" data-reveal><b><span data-count="4.9" data-dec="1">4.9</span></b><span>{{ s.rv_scale }}</span><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">{{ s.rv_link }}</a></div>
     </div>
   </div>
   <div class="marquee" aria-label="{{ s.rv_h2 }}">
@@ -193,7 +184,7 @@
   </div>
 </section>
 
-<section class="process" id="process" aria-labelledby="h-proc">
+<section class="process how" id="process" aria-labelledby="h-proc">
   <div class="wrap">
     <h2 class="t-display" id="h-proc" data-split>{{ s.pr_h2 }}</h2>
     <div class="process__line" aria-hidden="true"><i></i></div>
@@ -201,6 +192,16 @@
       {% for t, dsc in s.steps %}<li><h3>{{ t }}</h3><p>{{ dsc }}</p></li>
       {% endfor %}
     </ol>
+    <div class="split how__faq" id="faq">
+    <div class="split__head">
+      <h2 class="t-h2" id="h-faq" data-split>{{ s.fq_h2 }}</h2>
+      <p class="t-lead" data-reveal>{{ s.fq_intro }}</p>
+    </div>
+    <div class="faq" data-reveal>
+      {% for q, a in s.faqs %}<details><summary>{{ q }}</summary><div><p>{{ a }}</p></div></details>
+      {% endfor %}
+    </div>
+  </div>
   </div>
 </section>
 
@@ -229,15 +230,10 @@
         <button class="btn btn--glass" type="button" data-pick>{{ s.b_choose }}</button>
       </div>
     </div>
-    <div class="tool-grid" data-reveal data-reveal-kids>
-      {% for t in tools %}<a class="tool-card spot" href="{{ t.href }}">
-        <span class="mini" aria-hidden="true">{{ t.mini }}</span>
-        <h3>{{ t.name }}</h3>
-        <p>{{ t.short }}</p>
-      </a>
-      {% endfor %}
-    </div>
-    <p class="more"><a class="link" href="{{ tools_href }}">{{ c.tools_more }}</a></p>
+    <nav class="tool-links" aria-label="{{ s.tl_h2 }}" data-reveal>
+      {% for t in tools %}<a href="{{ t.href }}">{{ t.name }}</a>
+      {% endfor %}<a class="tool-links__all" href="{{ tools_href }}">{{ c.tools_more }}</a>
+    </nav>
   </div>
 </section>
 
@@ -248,24 +244,12 @@
       <div class="list-links" data-reveal>{% for l in s.ar_links %}<a class="link" href="{{ l.href }}">{{ l.label }}</a>{% endfor %}</div>
     </div>
     <div class="post-grid" data-reveal data-reveal-kids>
-      {% for p in posts %}<a class="post-card spot" href="{{ p.href }}" style="--cap:var(--cap-{{ p.cat }})">
+      {% for p in posts %}<a class="post-card spot" href="{{ p.href }}">
+        <span class="post-card__cover" aria-hidden="true">{{ p.cover }}</span>
         <span class="cap" data-cat="{{ p.cat }}">{{ p.cat_label }}</span>
         <h3>{{ p.title }}</h3>
         <time datetime="{{ p.date }}">{{ p.date_label }}</time>
       </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="faq-home" id="faq" aria-labelledby="h-faq">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2 class="t-display" id="h-faq" data-split>{{ s.fq_h2 }}</h2>
-      <p class="t-lead" data-reveal>{{ s.fq_intro }}</p>
-    </div>
-    <div class="faq" data-reveal>
-      {% for q, a in s.faqs %}<details{% if loop.first %} open{% endif %}><summary>{{ q }}</summary><div><p>{{ a }}</p></div></details>
       {% endfor %}
     </div>
   </div>

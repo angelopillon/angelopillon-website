@@ -1,5 +1,5 @@
 /* angelopillon.com — motion layer: smooth scroll, reveals, counters, the scroll story that drives the cosmos,
-   horizontal chain, magnetic buttons, card spotlights and the country ticker. */
+   the analog chain, magnetic buttons, card spotlights and the country ticker. */
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
@@ -80,6 +80,7 @@ if (hero) {
       .from(words, { yPercent: 115, rotate: 4, duration: 1.25, ease: "expo.out", stagger: 0.07 }, "-=0.55")
       .from("[data-hero-l]", { y: 24, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.85")
       .from("[data-hero-c] > *", { y: 20, opacity: 0, duration: 0.9, ease: "power3.out", stagger: 0.08 }, "-=0.75")
+      .from("[data-hero-p] > *", { y: 16, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.06 }, "-=0.6")
       .from(".hero__scroll", { opacity: 0, duration: 1 }, "-=0.4");
   }
 }
@@ -180,29 +181,13 @@ if (ticker) {
   setInterval(() => { if (!d.hidden) next(); }, 1700);
 }
 
-/* ---------------- the analog chain: horizontal travel on desktop ---------------- */
+/* ---------------- the analog chain: knobs turn as each unit passes ---------------- */
 const chain = $(".chain");
 if (chain && !reduced) {
-  const track = $(".chain__track", chain);
-  const mm = gsap.matchMedia();
-  mm.add("(min-width: 1000px)", () => {
-    const dist = () => Math.max(0, track.scrollWidth - window.innerWidth + 80);
-    const tw = gsap.to(track, {
-      x: () => -dist(), ease: "none",
-      scrollTrigger: { trigger: chain, start: "top top", end: () => "+=" + dist(), pin: true, scrub: 0.25, invalidateOnRefresh: true, anticipatePin: 1 }
-    });
-    $$(".unit", chain).forEach((u) => {
-      const knobs = $$(".knob", u);
-      if (!knobs.length) return;
-      gsap.to(knobs, { rotate: (i) => 110 + i * 37, transformOrigin: "50% 50%", ease: "none", scrollTrigger: { trigger: u, containerAnimation: tw, start: "left right", end: "right left", scrub: true } });
-    });
-    return () => tw.scrollTrigger && tw.scrollTrigger.kill();
-  });
-  mm.add("(max-width: 999px)", () => {
-    $$(".unit", chain).forEach((u) => {
-      if (!$$(".knob", u).length) return;
-      gsap.to($$(".knob", u), { rotate: (i) => 110 + i * 37, transformOrigin: "50% 50%", ease: "none", scrollTrigger: { trigger: u, start: "top bottom", end: "bottom top", scrub: true } });
-    });
+  $$(".unit", chain).forEach((u) => {
+    const knobs = $$(".knob", u);
+    if (!knobs.length) return;
+    gsap.to(knobs, { rotate: (i) => 110 + i * 37, transformOrigin: "50% 50%", ease: "none", scrollTrigger: { trigger: u, start: "top bottom", end: "bottom top", scrub: true } });
   });
 }
 

@@ -331,16 +331,48 @@ def float_html():
     return Markup("".join(out)) if out else None
 
 
+def post_cover(a):
+    """Cover for an article card: an original level trace drawn from the article's slug, so every card has its own."""
+    import math
+    import random
+    rnd = random.Random(a["group"])
+    n, w, h = 46, 320, 180
+    bursts = [(rnd.uniform(.06, .94), rnd.uniform(.05, .2), rnd.uniform(.45, 1)) for _ in range(rnd.randint(2, 4))]
+    vals = []
+    for i in range(n):
+        x = i / (n - 1)
+        v = .1 + sum(a * math.exp(-((x - c) / wd) ** 2) for c, wd, a in bursts)
+        vals.append(v * rnd.uniform(.72, 1.12))
+    top = max(vals)
+    vals = [max(.05, v / top) for v in vals]
+    hot = set(sorted(range(n), key=lambda i: vals[i], reverse=True)[:4])
+    bars = []
+    for i, v in enumerate(vals):
+        bh = round(v * 118, 1)
+        bars.append(f'<rect x="{round(18 + i * (w - 36) / n, 1)}" y="{round(h / 2 - bh / 2, 1)}" width="3.4" height="{bh}" rx="1.7"{" class=\"is-hot\"" if i in hot else ""}/>')
+    return Markup(f'<svg viewBox="0 0 {w} {h}" preserveAspectRatio="xMidYMid slice" role="presentation"><line x1="0" y1="{h / 2 - 59}" x2="{w}" y2="{h / 2 - 59}"/>{"".join(bars)}</svg>')
+
+
+HOME_PROOF = {
+    "en": [("4.9", "st_rating"), ("66", "Countries served"), ("1,200+", "st_tracks"), ("15+", "st_years")],
+    "it": [("4,9", "st_rating"), ("66", "Paesi serviti"), ("1.200+", "st_tracks"), ("15+", "st_years")],
+    "de": [("4,9", "st_rating"), ("66", "Länder mit Kunden"), ("1.200+", "st_tracks"), ("15+", "st_years")],
+    "es": [("4,9", "st_rating"), ("66", "Países atendidos"), ("1.200+", "st_tracks"), ("15+", "st_years")],
+}
+
+
 def home_pages(arts):
     for lang in S.LANGS:
         s = dict(S.HOME[lang]); s["units"] = S.UNITS[lang]
         ui = ui_for(lang)
         cl = S.CONTENT_LANG[lang]
-        posts = sorted([a for a in arts if a["lang"] == S.ARTICLE_LANG[lang]], key=lambda a: (a["date"], -a["order"]), reverse=True)[:4]
-        posts = [dict(href=a["path"], title=a["title"], cat=a["cat"], cat_label=S.CATS[a["cat"]][lang] if lang in S.CATS[a["cat"]] else a["cat_label"], date=a["date"], date_label=S.date_label(a["date"], lang)) for a in posts]
+        pool = sorted([a for a in arts if a["lang"] == S.ARTICLE_LANG[lang]], key=lambda a: (a["date"], -a["order"]), reverse=True)
+        posts = [a for a in pool if a["cat"] == "news"][:2] + [a for a in pool if a["cat"] != "news"][:2]
+        proof = [(v, S.COSMOS[lang].get(k, k)) for v, k in HOME_PROOF[lang]]
+        posts = [dict(href=a["path"], title=a["title"], cat=a["cat"], cover=post_cover(a), cat_label=S.CATS[a["cat"]][lang] if lang in S.CATS[a["cat"]] else a["cat_label"], date=a["date"], date_label=S.date_label(a["date"], lang)) for a in posts]
         main = env.get_template("home.html").render(s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
                                                      meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
-                                                     codes=S.CLIENT_CODES, playlist=S.SPOTIFY_PLAYLIST)
+                                                     codes=S.CLIENT_CODES, playlist=S.SPOTIFY_PLAYLIST, proof=proof)
         main = Markup(main) + Markup('<script type="application/json" id="tool-i18n">' + json.dumps(S.BRIDGE[lang], ensure_ascii=False).replace("</", "<\\/") + "</script>")
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",
                "description": s["description"], "url": SITE + S.HOMES[lang], "image": SITE + "/assets/img/studio-1-1400.jpg", "logo": SITE + "/assets/img/icon-512.png",
