@@ -70,25 +70,42 @@ function split(el) {
   return $$(".w > span", el);
 }
 
-/* ---------------- hero entrance, after the big bang ---------------- */
-const hero = $(".hero");
+/* ---------------- hero entrance ---------------- */
+const hero = $(".hx-hero");
 if (hero) {
-  const words = split($(".hero__line", hero));
-  const tl = gsap.timeline({ delay: reduced ? 0 : 0.85 });
+  const words = split($(".hx-hero__line", hero));
   if (!reduced) {
-    tl.from("[data-hero-k]", { y: 18, opacity: 0, duration: 0.9, ease: "power3.out" })
-      .from(words, { yPercent: 115, rotate: 4, duration: 1.25, ease: "expo.out", stagger: 0.07 }, "-=0.55")
-      .from("[data-hero-l]", { y: 24, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.85")
-      .from("[data-hero-c] > *", { y: 20, opacity: 0, duration: 0.9, ease: "power3.out", stagger: 0.08 }, "-=0.75")
-      .from("[data-hero-p] > *", { y: 16, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.06 }, "-=0.6")
-      .from(".hero__scroll", { opacity: 0, duration: 1 }, "-=0.4");
+    gsap.timeline({ delay: 0.12 })
+      .from("[data-hero-k]", { y: 14, opacity: 0, duration: 0.7, ease: "power3.out" })
+      .from(words, { yPercent: 112, duration: 1.15, ease: "expo.out", stagger: 0.07 }, "-=0.5")
+      .from("[data-hero-l]", { y: 20, opacity: 0, duration: 0.9, ease: "power3.out" }, "-=0.8")
+      .from("[data-hero-c] > *", { y: 16, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.08 }, "-=0.7");
+    const photo = $("[data-hero-photo]", hero);
+    if (photo) {
+      gsap.from(photo, { opacity: 0, duration: 1.2, ease: "power2.out", delay: 0.45 });
+      gsap.fromTo(photo, { scale: 0.88 }, { scale: 1, ease: "none", transformOrigin: "50% 0%", scrollTrigger: { trigger: photo, start: "top bottom", end: "top 18%", scrub: true } });
+      gsap.fromTo($("img", photo), { scale: 1.16 }, { scale: 1, ease: "none", scrollTrigger: { trigger: photo, start: "top bottom", end: "bottom 40%", scrub: true } });
+    }
   }
 }
+
+/* ---------------- statement that lights up word by word ---------------- */
+$$("[data-lit]").forEach((el) => {
+  const parts = el.textContent.trim().split(/(\s+)/);
+  el.textContent = "";
+  const spans = [];
+  parts.forEach((t) => {
+    if (/^\s+$/.test(t)) { el.appendChild(d.createTextNode(" ")); return; }
+    const sp = d.createElement("span"); sp.textContent = t; el.appendChild(sp); spans.push(sp);
+  });
+  if (reduced) return;
+  gsap.fromTo(spans, { opacity: 0.14 }, { opacity: 1, ease: "none", stagger: 0.12, scrollTrigger: { trigger: el, start: "top 80%", end: "bottom 58%", scrub: true } });
+});
 
 /* ---------------- generic reveals ---------------- */
 if (!reduced) {
   $$("[data-split]").forEach((el) => {
-    if (el.closest(".hero")) return;
+    if (el.closest(".hx-hero")) return;
     const w = split(el);
     gsap.from(w, { yPercent: 112, duration: 1.1, ease: "expo.out", stagger: 0.045, scrollTrigger: { trigger: el, start: "top 86%" } });
   });

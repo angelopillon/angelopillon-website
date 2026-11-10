@@ -1,69 +1,86 @@
-<canvas id="cosmos" class="cosmos" aria-hidden="true"></canvas>
-<div class="cosmos-fallback" aria-hidden="true"></div>
-
-<section class="hero" id="top">
-  <div class="wrap hero__inner">
-    <h1 class="hero__title"><span class="hero__kicker" data-hero-k>{{ c.kicker }}</span><span class="hero__line">{{ c.h1 }}</span></h1>
-    <p class="hero__lead" data-hero-l>{{ c.lead }}</p>
-    <div class="hero__cta" data-hero-c>
-      <a class="btn btn--glow" href="#contact" data-magnetic>{{ s.cta1 }}</a>
-      <a class="btn btn--ghost" href="#listen" data-magnetic>{{ c.listen_cta }}</a>
+<section class="hx-hero" id="top">
+  <div class="wrap hx-hero__in">
+    <h1 class="hx-hero__title"><span class="hx-kicker" data-hero-k>{{ c.kicker }}</span><span class="hx-hero__line">{{ v.h1 }}</span></h1>
+    <p class="hx-hero__lead" data-hero-l>{{ v.lead }}</p>
+    <div class="hx-hero__cta" data-hero-c>
+      <a class="btn" href="#contact">{{ v.cta1 }}</a>
+      <a class="btn btn--ghost" href="#listen">{{ c.listen_cta }}</a>
     </div>
-    <dl class="hero__proof" data-hero-p>
+  </div>
+  <div class="hx-hero__stage">
+    <figure class="hx-hero__photo" data-hero-photo>
+      <picture>
+        <source type="image/webp" srcset="/assets/img/studio-1-900.webp 900w, /assets/img/studio-1-1400.webp 1400w, /assets/img/studio-1-full.webp 1536w" sizes="(max-width:1400px) 100vw, 1360px">
+        <img src="/assets/img/studio-1-1400.jpg" alt="{{ s.e_alt }}" width="1400" height="839" fetchpriority="high" decoding="async">
+      </picture>
+    </figure>
+  </div>
+  <div class="wrap">
+    <dl class="hx-proof" data-reveal data-reveal-kids>
       {% for val, label in proof %}<div><dt>{{ label }}</dt><dd>{{ val }}</dd></div>
-      {% endfor %}
+      {% endfor %}<div class="hx-proof__badge"><dt>{{ v.adm_label }}</dt><dd>Apple Digital Masters</dd></div>
     </dl>
   </div>
-  <a class="hero__scroll" href="#story"><span>{{ c.scroll }}</span><i></i></a>
 </section>
 
-<section class="story" id="story" aria-label="{{ c.story_label }}">
-  <div class="story__sticky">
-    <div class="wrap story__lines">
-      {% for line in c.story %}<p class="story__line">{{ line }}</p>
-      {% endfor %}
-    </div>
-    <div class="story__bar" aria-hidden="true"><i></i></div>
-  </div>
-</section>
-
-<section class="worldwide" id="worldwide" aria-labelledby="h-world">
-  <div class="wrap worldwide__grid">
-    <div class="worldwide__text">
-      <p class="worldwide__num"><span data-count="66">66</span></p>
-      <h2 class="t-display" id="h-world" data-split>{{ c.gl_h2 }}</h2>
-      <p class="t-lead" data-reveal>{{ c.gl_p }}</p>
-      <p class="worldwide__proof" data-reveal><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">{{ c.gl_proof }}</a></p>
-      <p class="ticker" data-reveal><span>{{ c.gl_dest }}</span><b data-ticker data-codes="{{ codes }}">&nbsp;</b></p>
-    </div>
-  </div>
-</section>
-
-<section class="engineer" id="engineer" aria-labelledby="h-eng">
+<section class="hx-sec hx-light hx-manifesto" aria-label="{{ v.manifesto_label }}">
   <div class="wrap">
-    <div class="engineer__hero" data-clip>
-      <figure class="engineer__photo engineer__photo--wide">
-        <picture>
-          <source type="image/webp" srcset="/assets/img/studio-1-900.webp 900w, /assets/img/studio-1-1400.webp 1400w, /assets/img/studio-1-full.webp 1536w" sizes="(max-width:1320px) 100vw, 1280px">
-          <img src="/assets/img/studio-1-1400.jpg" alt="{{ s.e_alt }}" width="1400" height="839" loading="lazy" decoding="async" data-zoom>
-        </picture>
-      </figure>
-      <h2 class="t-display engineer__title" id="h-eng" data-split>{{ s.e_h2 }}</h2>
-    </div>
-    <div class="engineer__grid">
-      <div class="engineer__text">
-        <p data-reveal>{{ s.e_p1 }}</p>
-        <p data-reveal>{{ s.e_p2 }}</p>
-      </div>
-      <dl class="spec" data-reveal data-reveal-kids>
-        {% for k, val in s.spec %}<div><dt>{{ k }}</dt><dd>{{ val }}</dd></div>
-        {% endfor %}
-      </dl>
-    </div>
+    <p class="hx-manifesto__text" data-lit>{{ v.manifesto }}</p>
   </div>
 </section>
 
-<section class="chain" id="chain" aria-labelledby="h-chain">
+<section class="hx-sec hx-mist hx-listen" id="listen" aria-labelledby="h-listen">
+  <div class="wrap hx-listen__grid">
+    <div class="hx-listen__text">
+      <h2 class="t-display" id="h-listen" data-split>{{ c.ls_h2 }}</h2>
+      <p class="t-lead" data-reveal>{{ c.ls_p }}</p>
+      <a class="btn btn--ghost" href="https://open.spotify.com/playlist/{{ playlist }}" rel="noopener" target="_blank" data-reveal>{{ c.ls_open }}</a>
+    </div>
+    {% if ab %}<div class="ab" data-ab data-reveal data-play="{{ abt.play }}" data-pause="{{ abt.pause }}" data-loading="{{ abt.loading }}" data-error="{{ abt.error }}">
+      <ol class="ab__list" aria-label="{{ abt.tracks }}">
+        {% for t in ab %}<li><button class="ab__track" type="button" data-before="{{ t.before }}" data-after="{{ t.after }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">
+          <span class="ab__n" aria-hidden="true">{{ loop.index }}</span>
+          <span class="ab__meta"><b>{{ t.title }}</b>{% if t.artist or t.genre %}<span>{{ t.artist }}{% if t.artist and t.genre %}, {% endif %}{{ t.genre }}</span>{% endif %}</span>
+          <span class="ab__svc">{{ abt.service[t.service] }}</span>
+        </button></li>
+        {% endfor %}
+      </ol>
+      <div class="ab__deck">
+        <button class="ab__play" type="button" aria-label="{{ abt.play }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="ab__ico-play" d="M8 5.2v13.6L19 12z"/><path class="ab__ico-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
+        <div class="ab__switch" role="group" aria-label="{{ abt.version }}">
+          <button type="button" data-v="before" aria-pressed="true">{{ abt.before }}</button>
+          <button type="button" data-v="after" aria-pressed="false">{{ abt.after }}</button>
+        </div>
+        <label class="ab__match"><input type="checkbox" checked> <span>{{ abt.match }}</span></label>
+        <input class="ab__seek" type="range" min="0" max="1000" value="0" step="1" aria-label="{{ abt.seek }}">
+        <span class="ab__time" aria-hidden="true">0:00 / 0:00</span>
+      </div>
+      <p class="ab__note">{{ abt.note }}</p>
+      <p class="ab__status" role="status" aria-live="polite"></p>
+    </div>
+    {% else %}    <div class="listen__player" data-reveal>
+      {% if preview %}<div class="listen__ph"><div class="eq" aria-hidden="true">{% for i in range(9) %}<i style="--i:{{ i }}"></i>{% endfor %}</div><b>Mixed and Mastered</b><small>{{ c.ls_preview }}</small></div>
+      {% else %}<iframe title="Spotify: Mixed and Mastered" src="https://open.spotify.com/embed/playlist/{{ playlist }}?utm_source=generator&amp;theme=0" width="100%" height="452" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>{% endif %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="hx-sec hx-light hx-labels" id="labels" aria-labelledby="h-labels">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="t-display" id="h-labels" data-split>{{ v.lb_h2 }}</h2>
+      <p class="t-lead" data-reveal>{{ v.lb_intro }}</p>
+    </div>
+    <dl class="hx-facts" data-reveal data-reveal-kids>
+      {% for big, label in v.lb_facts %}<div><dt>{{ label }}</dt><dd>{{ big }}</dd></div>
+      {% endfor %}
+    </dl>
+    <p class="hx-labels__cta" data-reveal><a class="btn" href="#contact">{{ v.lb_cta }}</a></p>
+  </div>
+</section>
+
+<section class="hx-sec hx-dark chain" id="chain" aria-labelledby="h-chain">
   <div class="chain__inner">
     <div class="wrap chain__intro">
       <div class="chain__head">
@@ -117,14 +134,34 @@
   </div>
 </section>
 
-<section class="services" id="services" aria-labelledby="h-svc">
+<section class="hx-sec hx-dark hx-about" id="engineer" aria-labelledby="h-eng">
+  <div class="wrap hx-about__grid">
+    <figure class="hx-about__photo" data-clip>
+      <picture>
+        <source type="image/webp" srcset="/assets/img/studio-2-900.webp 900w, /assets/img/studio-2-1400.webp 1400w" sizes="(max-width:900px) 100vw, 620px">
+        <img src="/assets/img/studio-2-1400.jpg" alt="{{ s.e_alt2 }}" width="1400" height="840" loading="lazy" decoding="async">
+      </picture>
+    </figure>
+    <div class="hx-about__text">
+      <h2 class="t-h1" id="h-eng" data-split>{{ s.e_h2 }}</h2>
+      <p data-reveal>{{ s.e_p1 }}</p>
+      <p data-reveal>{{ s.e_p2 }}</p>
+      <dl class="spec" data-reveal data-reveal-kids>
+        {% for k, val in s.spec %}<div><dt>{{ k }}</dt><dd>{{ val }}</dd></div>
+        {% endfor %}
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="hx-sec hx-mist services" id="services" aria-labelledby="h-svc">
   <div class="wrap">
     <div class="sec-head">
       <h2 class="t-display" id="h-svc" data-split>{{ s.sv_h2 }}</h2>
       <p class="t-lead" data-reveal>{{ s.sv_intro }}</p>
     </div>
     <div class="svc-grid" tabindex="0" role="group" aria-label="{{ s.sv_h2 }}" data-reveal data-reveal-kids>
-      {% for it in s.services %}<article class="svc spot{% if loop.index == 2 %} svc--hero{% endif %}" data-tilt>
+      {% for it in s.services %}<article class="svc spot{% if loop.index == 2 %} svc--hero{% endif %}">
         <h3>{{ it.name }}</h3>
         <p>{{ it.desc }}</p>
         {% if it.tiers %}<ul class="svc__tiers">{% for label, pr in it.tiers %}<li><span>{{ label }}</span><b>{{ pr }}</b></li>{% endfor %}</ul>{% endif %}
@@ -148,45 +185,7 @@
   </div>
 </section>
 
-<section class="listen" id="listen" aria-labelledby="h-listen">
-  <div class="wrap listen__grid">
-    <div class="listen__text">
-      <svg class="vu" viewBox="0 0 168 104" aria-hidden="true"><rect x="1" y="1" width="166" height="102" rx="10" class="vu__case"/><rect x="10" y="10" width="148" height="72" rx="6" class="u-vu"/><path d="M34 68 A50 50 0 0 1 134 68" class="u-arc"/><path d="M112 27 A50 50 0 0 1 134 68" class="u-arc u-arc--red"/><line x1="84" y1="74" x2="84" y2="22" class="u-needle"/><circle cx="84" cy="74" r="4" class="u-pivot"/><text x="84" y="96" text-anchor="middle" class="vu__lbl">VU</text></svg>
-      <h2 class="t-display" id="h-listen" data-split>{{ c.ls_h2 }}</h2>
-      <p class="t-lead" data-reveal>{{ c.ls_p }}</p>
-      <p data-reveal><a class="btn btn--ghost" href="https://open.spotify.com/playlist/{{ playlist }}" rel="noopener" target="_blank">{{ c.ls_open }}</a></p>
-    </div>
-    {% if ab %}<div class="ab" data-ab data-reveal data-play="{{ abt.play }}" data-pause="{{ abt.pause }}" data-loading="{{ abt.loading }}" data-error="{{ abt.error }}">
-      <ol class="ab__list" aria-label="{{ abt.tracks }}">
-        {% for t in ab %}<li><button class="ab__track" type="button" data-before="{{ t.before }}" data-after="{{ t.after }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">
-          <span class="ab__n" aria-hidden="true">{{ loop.index }}</span>
-          <span class="ab__meta"><b>{{ t.title }}</b>{% if t.artist or t.genre %}<span>{{ t.artist }}{% if t.artist and t.genre %}, {% endif %}{{ t.genre }}</span>{% endif %}</span>
-          <span class="ab__svc">{{ abt.service[t.service] }}</span>
-        </button></li>
-        {% endfor %}
-      </ol>
-      <div class="ab__deck">
-        <button class="ab__play" type="button" aria-label="{{ abt.play }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="ab__ico-play" d="M8 5.2v13.6L19 12z"/><path class="ab__ico-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
-        <div class="ab__switch" role="group" aria-label="{{ abt.version }}">
-          <button type="button" data-v="before" aria-pressed="true">{{ abt.before }}</button>
-          <button type="button" data-v="after" aria-pressed="false">{{ abt.after }}</button>
-        </div>
-        <label class="ab__match"><input type="checkbox" checked> <span>{{ abt.match }}</span></label>
-        <input class="ab__seek" type="range" min="0" max="1000" value="0" step="1" aria-label="{{ abt.seek }}">
-        <span class="ab__time" aria-hidden="true">0:00 / 0:00</span>
-      </div>
-      <p class="ab__note">{{ abt.note }}</p>
-      <p class="ab__status" role="status" aria-live="polite"></p>
-    </div>
-    {% else %}    <div class="listen__player" data-reveal>
-      {% if preview %}<div class="listen__ph"><div class="eq" aria-hidden="true">{% for i in range(9) %}<i style="--i:{{ i }}"></i>{% endfor %}</div><b>Mixed and Mastered</b><small>{{ c.ls_preview }}</small></div>
-      {% else %}<iframe title="Spotify: Mixed and Mastered" src="https://open.spotify.com/embed/playlist/{{ playlist }}?utm_source=generator&amp;theme=0" width="100%" height="452" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>{% endif %}
-    </div>
-    {% endif %}
-  </div>
-</section>
-
-<section class="reviews" id="reviews" aria-labelledby="h-rev">
+<section class="hx-sec hx-light reviews" id="reviews" aria-labelledby="h-rev">
   <div class="wrap">
     <div class="sec-head sec-head--row">
       <div>
@@ -195,6 +194,10 @@
       </div>
       <div class="rating" data-reveal><b><span data-count="4.9" data-dec="1">4.9</span></b><span>{{ s.rv_scale }}</span><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">{{ s.rv_link }}</a></div>
     </div>
+    <figure class="hx-bigquote" data-reveal>
+      <blockquote><p>“{{ reviews[0].text }}”</p></blockquote>
+      <figcaption><b>{{ reviews[0].who }}</b><span>{{ reviews[0].where[lang] }}, {{ reviews[0].badge[lang] }}</span></figcaption>
+    </figure>
   </div>
   <div class="marquee" aria-label="{{ s.rv_h2 }}">
     <div class="marquee__track">
@@ -207,7 +210,7 @@
   </div>
 </section>
 
-<section class="process how" id="process" aria-labelledby="h-proc">
+<section class="hx-sec hx-mist process how" id="process" aria-labelledby="h-proc">
   <div class="wrap">
     <h2 class="t-display" id="h-proc" data-split>{{ s.pr_h2 }}</h2>
     <div class="process__line" aria-hidden="true"><i></i></div>
@@ -216,51 +219,19 @@
       {% endfor %}
     </ol>
     <div class="split how__faq" id="faq">
-    <div class="split__head">
-      <h2 class="t-h2" id="h-faq" data-split>{{ s.fq_h2 }}</h2>
-      <p class="t-lead" data-reveal>{{ s.fq_intro }}</p>
+      <div class="split__head">
+        <h2 class="t-h2" id="h-faq" data-split>{{ s.fq_h2 }}</h2>
+        <p class="t-lead" data-reveal>{{ s.fq_intro }}</p>
+      </div>
+      <div class="faq" data-reveal>
+        {% for q, a in s.faqs %}<details><summary>{{ q }}</summary><div><p>{{ a }}</p></div></details>
+        {% endfor %}
+      </div>
     </div>
-    <div class="faq" data-reveal>
-      {% for q, a in s.faqs %}<details><summary>{{ q }}</summary><div><p>{{ a }}</p></div></details>
-      {% endfor %}
-    </div>
-  </div>
   </div>
 </section>
 
-<section class="tools-home" id="tools" aria-labelledby="h-tools">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="t-display" id="h-tools" data-split>{{ s.tl_h2 }}</h2>
-      <p class="t-lead" data-reveal>{{ s.tl_intro }}</p>
-    </div>
-    <div class="glass bridge" id="bridge" data-boot data-meter="{{ meter_href }}" data-reveal>
-      <div class="bridge__head"><span class="state" data-state-text><i></i> {{ s.b_demo }}</span><span>{{ s.b_std }}</span></div>
-      <div class="bridge__body">
-        <dl class="readouts">
-          <div class="readout"><dt>{{ s.r_i }}</dt><dd><b data-ro="I">−8.9</b><small>LUFS</small></dd></div>
-          <div class="readout"><dt>{{ s.r_st }}</dt><dd><b data-ro="ST">−6.7</b><small>LUFS</small></dd></div>
-          <div class="readout"><dt>{{ s.r_tp }}</dt><dd><b data-ro="TP">−0.3</b><small>dBTP</small></dd></div>
-          <div class="readout"><dt>{{ s.r_lra }}</dt><dd><b data-ro="LRA">5.4</b><small>LU</small></dd></div>
-          <div class="readout"><dt>{{ s.r_corr }}</dt><dd><b data-ro="CORR">+0.84</b></dd></div>
-        </dl>
-        <div class="bridge__graph"><canvas aria-label="{{ s.b_graph }}" role="img"></canvas></div>
-      </div>
-      <div class="bridge__verdict" aria-live="polite"></div>
-      <div class="drop" data-drop>
-        <p>{{ s.b_drop }}</p>
-        <input type="file" accept="audio/*,.wav,.aif,.aiff,.flac,.mp3,.m4a" aria-label="{{ s.b_choose }}">
-        <button class="btn btn--glass" type="button" data-pick>{{ s.b_choose }}</button>
-      </div>
-    </div>
-    <nav class="tool-links" aria-label="{{ s.tl_h2 }}" data-reveal>
-      {% for t in tools %}<a href="{{ t.href }}">{{ t.name }}</a>
-      {% endfor %}<a class="tool-links__all" href="{{ tools_href }}">{{ c.tools_more }}</a>
-    </nav>
-  </div>
-</section>
-
-<section class="articles-home" id="articles" aria-labelledby="h-art">
+<section class="hx-sec hx-light articles-home" id="articles" aria-labelledby="h-art">
   <div class="wrap">
     <div class="sec-head sec-head--row">
       <h2 class="t-display" id="h-art" data-split>{{ s.ar_h2 }}</h2>
@@ -275,11 +246,18 @@
       </a>
       {% endfor %}
     </div>
+    <div class="hx-tools" id="tools">
+      <h3 class="t-h3">{{ s.tl_h2 }}</h3>
+      <p>{{ s.tl_intro }}</p>
+      <nav class="tool-links" aria-label="{{ s.tl_h2 }}">
+        {% for t in tools %}<a href="{{ t.href }}">{{ t.name }}</a>
+        {% endfor %}
+      </nav>
+    </div>
   </div>
 </section>
 
-<section class="contact" id="contact" aria-labelledby="h-ct">
-  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<section class="hx-sec hx-dark contact" id="contact" aria-labelledby="h-ct">
   <div class="wrap contact__grid">
     <div class="contact__text">
       <h2 class="t-mega" id="h-ct" data-split>{{ c.ct_big }}</h2>
@@ -299,7 +277,7 @@
       </label>
       <label class="field"><span>{{ s.f_files }}</span><input name="files" type="url" inputmode="url" placeholder="https://"></label>
       <label class="field"><span>{{ s.f_msg }}</span><textarea name="message" required placeholder="{{ s.f_msg_ph }}"></textarea></label>
-      <div class="btn-row"><button class="btn btn--glow" type="submit" data-magnetic>{{ s.f_send }}</button><span class="form-note">{{ s.f_note }} <a class="link" href="{{ privacy_href }}">{{ s.f_privacy }}</a>.</span></div>
+      <div class="btn-row"><button class="btn" type="submit">{{ s.f_send }}</button><span class="form-note">{{ s.f_note }} <a class="link" href="{{ privacy_href }}">{{ s.f_privacy }}</a>.</span></div>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>

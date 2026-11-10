@@ -397,6 +397,42 @@ def ab_tracks():
     return out
 
 
+HOME_V3 = {
+    "en": dict(
+        h1="Release-ready.",
+        lead="Mixing and mastering through a hybrid analog chain, for labels, producers and artists. Mastering in 48 hours, from Milan to 66 countries.",
+        cta1="Send a track", adm_label="Certified engineer", manifesto_label="How I work",
+        manifesto="A track comes in as a mix and leaves as a record. Balanced, as loud as it should be, the same on headphones, in a club and in the car. I work on it myself from start to finish, with a real analog chain and fifteen years of listening.",
+        lb_h2="Built for labels.", lb_intro="One engineer for the whole catalogue. Clear timing and pricing before we start.",
+        lb_facts=[("48 hours", "to master a single"), ("3-5 days", "to mix and master from the stems"), ("Custom", "quote and schedule for EPs, albums and catalogues"), ("4 languages", "English, Italian, German and Spanish")],
+        lb_cta="Ask for a catalogue quote"),
+    "it": dict(
+        h1="Pronto per l’uscita.",
+        lead="Mix e mastering in catena ibrida analogica, per etichette, produttori e artisti. Mastering in 48 ore, da Milano a 66 paesi.",
+        cta1="Invia un brano", adm_label="Fonico certificato", manifesto_label="Come lavoro",
+        manifesto="Un brano entra come mix ed esce come disco. Bilanciato, forte quanto deve esserlo, uguale in cuffia, in club e in macchina. Lo lavoro io dall’inizio alla fine, con una catena analogica vera e quindici anni di ascolto.",
+        lb_h2="Fatto per le etichette.", lb_intro="Un solo fonico per tutto il catalogo. Tempi e prezzi chiari prima di iniziare.",
+        lb_facts=[("48 ore", "per il mastering di un singolo"), ("3-5 giorni", "per mix e master dalle tracce"), ("Su misura", "offerta e calendario per EP, album e cataloghi"), ("4 lingue", "italiano, inglese, tedesco e spagnolo")],
+        lb_cta="Chiedi un’offerta per il catalogo"),
+    "de": dict(
+        h1="Bereit für den Release.",
+        lead="Mixing und Mastering in einer hybriden Analogkette, für Labels, Produzenten und Artists. Mastering in 48 Stunden, von Mailand in 66 Länder.",
+        cta1="Track senden", adm_label="Zertifizierter Engineer", manifesto_label="So arbeite ich",
+        manifesto="Ein Track kommt als Mix und geht als Platte. Ausgewogen, so laut wie er sein soll, gleich auf Kopfhörern, im Club und im Auto. Ich bearbeite ihn selbst von Anfang bis Ende, mit einer echten Analogkette und fünfzehn Jahren Hörerfahrung.",
+        lb_h2="Gemacht für Labels.", lb_intro="Ein Engineer für den ganzen Katalog. Klare Zeiten und Preise, bevor wir anfangen.",
+        lb_facts=[("48 Stunden", "für das Mastering einer Single"), ("3-5 Tage", "für Mix und Master aus den Spuren"), ("Individuell", "Angebot und Zeitplan für EPs, Alben und Kataloge"), ("4 Sprachen", "Deutsch, Englisch, Italienisch und Spanisch")],
+        lb_cta="Angebot für den Katalog anfragen"),
+    "es": dict(
+        h1="Listo para publicar.",
+        lead="Mezcla y mastering en una cadena híbrida analógica, para sellos, productores y artistas. Mastering en 48 horas, de Milán a 66 países.",
+        cta1="Envía un tema", adm_label="Ingeniero certificado", manifesto_label="Cómo trabajo",
+        manifesto="Un tema entra como mezcla y sale como disco. Equilibrado, tan fuerte como debe ser, igual en auriculares, en el club y en el coche. Lo trabajo yo de principio a fin, con una cadena analógica real y quince años de escucha.",
+        lb_h2="Hecho para sellos.", lb_intro="Un solo ingeniero para todo el catálogo. Plazos y precios claros antes de empezar.",
+        lb_facts=[("48 horas", "para masterizar un single"), ("3-5 días", "para mezcla y master desde las pistas"), ("A medida", "presupuesto y calendario para EP, álbumes y catálogos"), ("4 idiomas", "español, inglés, italiano y alemán")],
+        lb_cta="Pide un presupuesto para el catálogo"),
+}
+
+
 def home_pages(arts):
     ab = ab_tracks()
     for lang in S.LANGS:
@@ -409,8 +445,7 @@ def home_pages(arts):
         posts = [dict(href=a["path"], title=a["title"], cat=a["cat"], cover=post_cover(a), cat_label=S.CATS[a["cat"]][lang] if lang in S.CATS[a["cat"]] else a["cat_label"], date=a["date"], date_label=S.date_label(a["date"], lang)) for a in posts]
         main = env.get_template("home.html").render(s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
                                                      meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
-                                                     codes=S.CLIENT_CODES, playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang])
-        main = Markup(main) + Markup('<script type="application/json" id="tool-i18n">' + json.dumps(S.BRIDGE[lang], ensure_ascii=False).replace("</", "<\\/") + "</script>")
+                                                     codes=S.CLIENT_CODES, playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang])
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",
                "description": s["description"], "url": SITE + S.HOMES[lang], "image": SITE + "/assets/img/studio-1-1400.jpg", "logo": SITE + "/assets/img/icon-512.png",
                "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}, "areaServed": "Worldwide", "knowsLanguage": ["en", "it", "de", "es"],
@@ -420,7 +455,7 @@ def home_pages(arts):
         faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["faqs"]]}
         site = {"@context": "https://schema.org", "@type": "WebSite", "name": "Angelo Pillon", "url": SITE + "/", "inLanguage": lang}
         add_page(path=S.HOMES[lang], lang=lang, title=s["title"], description=s["description"], main=Markup(main), alt_key="home", jsonld=[org, faq, site],
-                 scripts=["/assets/js/tools/common.js", "/assets/js/tools/bridge.js", "/assets/js/cosmos.js"] + (["/assets/js/ab-home.js"] if ab else []), og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
+                 scripts=(["/assets/js/ab-home.js"] if ab else []), og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
                  og_args=dict(title=s["h1"], kicker={"en": "Mixing and mastering", "it": "Mix e mastering", "de": "Mixing und Mastering", "es": "Mezcla y mastering"}[lang], readout="−8.9 LUFS  −0.3 dBTP"),
                  body_class="is-home")
 
@@ -562,7 +597,7 @@ def write_manifest_sw():
            "shortcuts": [{"name": "LUFS meter", "url": "/loudness-meter"}, {"name": "Misuratore LUFS", "url": "/it/strumenti/misuratore-lufs"}, {"name": "Tools", "url": "/tools/"}]}
     (OUT / "manifest.webmanifest").write_text(json.dumps(man, ensure_ascii=False, indent=1))
     tool_urls = sorted({p["path"] for p in PAGES if p["nav_current"] == "tools"})
-    precache = ["/", "/it/", "/offline.html", "/assets/css/site.css", "/assets/js/site.js", "/assets/js/motion.js", "/assets/js/cosmos.js", "/assets/js/dsp.js", "/assets/js/tools/common.js",
+    precache = ["/", "/it/", "/offline.html", "/assets/css/site.css", "/assets/js/site.js", "/assets/js/motion.js", "/assets/js/dsp.js", "/assets/js/tools/common.js",
                 "/assets/fonts/mona-sans-vf.woff2", "/assets/fonts/hubot-sans-vf.woff2"] + [f"/assets/js/tools/{t['js']}" for t in TL.TOOLS] + tool_urls
     sw = f"""/* angelopillon.com service worker: tools work offline, pages are network first */
 const V = "ap-{V}";
