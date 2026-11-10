@@ -70,23 +70,27 @@ function split(el) {
   return $$(".w > span", el);
 }
 
-/* ---------------- hero entrance ---------------- */
-const hero = $(".hx-hero");
+/* ---------------- hero entrance, after the big bang ---------------- */
+const hero = $(".hero");
 if (hero) {
-  const words = split($(".hx-hero__line", hero));
+  const words = split($(".hero__line", hero));
   if (!reduced) {
-    gsap.timeline({ delay: 0.12 })
-      .from("[data-hero-k]", { y: 14, opacity: 0, duration: 0.7, ease: "power3.out" })
-      .from(words, { yPercent: 112, duration: 1.15, ease: "expo.out", stagger: 0.07 }, "-=0.5")
-      .from("[data-hero-l]", { y: 20, opacity: 0, duration: 0.9, ease: "power3.out" }, "-=0.8")
-      .from("[data-hero-c] > *", { y: 16, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.08 }, "-=0.7");
-    const photo = $("[data-hero-photo]", hero);
-    if (photo) {
-      gsap.from(photo, { opacity: 0, duration: 1.2, ease: "power2.out", delay: 0.45 });
-      gsap.fromTo(photo, { scale: 0.88 }, { scale: 1, ease: "none", transformOrigin: "50% 0%", scrollTrigger: { trigger: photo, start: "top bottom", end: "top 18%", scrub: true } });
-      gsap.fromTo($("img", photo), { scale: 1.16 }, { scale: 1, ease: "none", scrollTrigger: { trigger: photo, start: "top bottom", end: "bottom 40%", scrub: true } });
-    }
+    gsap.timeline({ delay: 0.85 })
+      .from("[data-hero-k]", { y: 18, opacity: 0, duration: 0.9, ease: "power3.out" })
+      .from(words, { yPercent: 115, rotate: 4, duration: 1.25, ease: "expo.out", stagger: 0.07 }, "-=0.55")
+      .from("[data-hero-l]", { y: 24, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.85")
+      .from("[data-hero-c] > *", { y: 20, opacity: 0, duration: 0.9, ease: "power3.out", stagger: 0.08 }, "-=0.75")
+      .from("[data-hero-p] > *", { y: 16, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.06 }, "-=0.6")
+      .from(".hero__scroll", { opacity: 0, duration: 1 }, "-=0.4");
   }
+}
+
+/* ---------------- the studio photograph grows as it enters ---------------- */
+if (!reduced) {
+  $$("[data-hero-photo]").forEach((photo) => {
+    gsap.fromTo(photo, { scale: 0.8, borderRadius: 64 }, { scale: 1, borderRadius: 28, ease: "none", scrollTrigger: { trigger: photo, start: "top bottom", end: "top 16%", scrub: true } });
+    gsap.fromTo($("img", photo), { scale: 1.22 }, { scale: 1, ease: "none", scrollTrigger: { trigger: photo, start: "top bottom", end: "bottom 30%", scrub: true } });
+  });
 }
 
 /* ---------------- statement that lights up word by word ---------------- */
@@ -99,13 +103,13 @@ $$("[data-lit]").forEach((el) => {
     const sp = d.createElement("span"); sp.textContent = t; el.appendChild(sp); spans.push(sp);
   });
   if (reduced) return;
-  gsap.fromTo(spans, { opacity: 0.14 }, { opacity: 1, ease: "none", stagger: 0.12, scrollTrigger: { trigger: el, start: "top 80%", end: "bottom 58%", scrub: true } });
+  gsap.fromTo(spans, { opacity: 0.16, filter: "blur(6px)", y: 10 }, { opacity: 1, filter: "blur(0px)", y: 0, ease: "none", stagger: 0.12, scrollTrigger: { trigger: el, start: "top 82%", end: "bottom 55%", scrub: true } });
 });
 
 /* ---------------- generic reveals ---------------- */
 if (!reduced) {
   $$("[data-split]").forEach((el) => {
-    if (el.closest(".hx-hero")) return;
+    if (el.closest(".hero")) return;
     const w = split(el);
     gsap.from(w, { yPercent: 112, duration: 1.1, ease: "expo.out", stagger: 0.045, scrollTrigger: { trigger: el, start: "top 86%" } });
   });
@@ -198,13 +202,29 @@ if (ticker) {
   setInterval(() => { if (!d.hidden) next(); }, 1700);
 }
 
-/* ---------------- the analog chain: knobs turn as each unit passes ---------------- */
+/* ---------------- the analog chain: horizontal travel on desktop ---------------- */
 const chain = $(".chain");
 if (chain && !reduced) {
-  $$(".unit", chain).forEach((u) => {
-    const knobs = $$(".knob", u);
-    if (!knobs.length) return;
-    gsap.to(knobs, { rotate: (i) => 110 + i * 37, transformOrigin: "50% 50%", ease: "none", scrollTrigger: { trigger: u, start: "top bottom", end: "bottom top", scrub: true } });
+  const track = $(".chain__track", chain);
+  const mm = gsap.matchMedia();
+  mm.add("(min-width: 1000px)", () => {
+    const dist = () => Math.max(0, track.scrollWidth - window.innerWidth);
+    const tw = gsap.to(track, {
+      x: () => -dist(), ease: "none",
+      scrollTrigger: { trigger: chain, start: "top top", end: () => "+=" + dist(), pin: true, scrub: 0.25, invalidateOnRefresh: true, anticipatePin: 1 }
+    });
+    $$(".unit", chain).forEach((u) => {
+      const knobs = $$(".knob", u);
+      if (!knobs.length) return;
+      gsap.to(knobs, { rotate: (i) => 110 + i * 37, transformOrigin: "50% 50%", ease: "none", scrollTrigger: { trigger: u, containerAnimation: tw, start: "left right", end: "right left", scrub: true } });
+    });
+    return () => tw.scrollTrigger && tw.scrollTrigger.kill();
+  });
+  mm.add("(max-width: 999px)", () => {
+    $$(".unit", chain).forEach((u) => {
+      if (!$$(".knob", u).length) return;
+      gsap.to($$(".knob", u), { rotate: (i) => 110 + i * 37, transformOrigin: "50% 50%", ease: "none", scrollTrigger: { trigger: u, start: "top bottom", end: "bottom top", scrub: true } });
+    });
   });
 }
 

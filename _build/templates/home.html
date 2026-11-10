@@ -1,35 +1,68 @@
-<section class="hx-hero" id="top">
-  <div class="wrap hx-hero__in">
-    <h1 class="hx-hero__title"><span class="hx-kicker" data-hero-k>{{ c.kicker }}</span><span class="hx-hero__line">{{ v.h1 }}</span></h1>
-    <p class="hx-hero__lead" data-hero-l>{{ v.lead }}</p>
-    <div class="hx-hero__cta" data-hero-c>
-      <a class="btn" href="#contact">{{ v.cta1 }}</a>
-      <a class="btn btn--ghost" href="#listen">{{ c.listen_cta }}</a>
+<canvas id="cosmos" class="cosmos" aria-hidden="true"></canvas>
+<div class="cosmos-fallback" aria-hidden="true"></div>
+<div class="globe-labels" id="globe-labels" data-home="{{ v.home_city }}" aria-hidden="true"></div>
+
+<section class="hero" id="top">
+  <div class="wrap hero__inner">
+    <h1 class="hero__title"><span class="hero__kicker" data-hero-k>{{ c.kicker }}</span><span class="hero__line">{{ v.h1 }}</span></h1>
+    <p class="hero__lead" data-hero-l>{{ v.lead }}</p>
+    <div class="hero__cta" data-hero-c>
+      <a class="btn btn--glow" href="#contact" data-magnetic>{{ v.cta1 }}</a>
+      <a class="btn btn--ghost" href="#listen" data-magnetic>{{ c.listen_cta }}</a>
     </div>
+    <dl class="hero__proof" data-hero-p>
+      {% for val, label in proof %}<div><dt>{{ label }}</dt><dd>{{ val }}</dd></div>
+      {% endfor %}
+    </dl>
+  </div>
+  <a class="hero__scroll" href="#story"><span>{{ c.scroll }}</span><i></i></a>
+</section>
+
+<section class="story" id="story" aria-label="{{ c.story_label }}">
+  <div class="story__sticky">
+    <div class="wrap story__lines">
+      {% for line in c.story %}<p class="story__line">{{ line }}</p>
+      {% endfor %}
+    </div>
+    <div class="story__bar" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<section class="worldwide" id="worldwide" aria-labelledby="h-world">
+  <div class="wrap worldwide__grid">
+    <div class="worldwide__text">
+      <p class="worldwide__num"><span data-count="66">66</span></p>
+      <h2 class="t-display" id="h-world" data-split>{{ c.gl_h2 }}</h2>
+      <p class="t-lead" data-reveal>{{ c.gl_p }}</p>
+      <p class="worldwide__proof" data-reveal><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">{{ c.gl_proof }}</a></p>
+      <p class="worldwide__hint" data-reveal>{{ v.drag_hint }}</p>
+    </div>
+  </div>
+  <div class="countries" aria-label="{{ v.countries_label }}">
+    {% for row in country_rows %}<div class="countries__row{% if loop.index == 2 %} countries__row--rev{% endif %}">
+      <ul class="countries__track">
+        {% for pass in (0, 1) %}{% for name in row %}<li{% if pass %} aria-hidden="true"{% endif %}>{{ name }}</li>{% endfor %}{% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="hx-sec hx-dark hx-manifesto hx-after-cosmos" aria-label="{{ v.manifesto_label }}">
+  <div class="wrap">
+    <p class="hx-manifesto__text" data-lit>{{ v.manifesto }}</p>
   </div>
   <div class="hx-hero__stage">
     <figure class="hx-hero__photo" data-hero-photo>
       <picture>
         <source type="image/webp" srcset="/assets/img/studio-1-900.webp 900w, /assets/img/studio-1-1400.webp 1400w, /assets/img/studio-1-full.webp 1536w" sizes="(max-width:1400px) 100vw, 1360px">
-        <img src="/assets/img/studio-1-1400.jpg" alt="{{ s.e_alt }}" width="1400" height="839" fetchpriority="high" decoding="async">
+        <img src="/assets/img/studio-1-1400.jpg" alt="{{ s.e_alt }}" width="1400" height="839" loading="lazy" decoding="async">
       </picture>
     </figure>
   </div>
-  <div class="wrap">
-    <dl class="hx-proof" data-reveal data-reveal-kids>
-      {% for val, label in proof %}<div><dt>{{ label }}</dt><dd>{{ val }}</dd></div>
-      {% endfor %}<div class="hx-proof__badge"><dt>{{ v.adm_label }}</dt><dd>Apple Digital Masters</dd></div>
-    </dl>
-  </div>
 </section>
 
-<section class="hx-sec hx-light hx-manifesto" aria-label="{{ v.manifesto_label }}">
-  <div class="wrap">
-    <p class="hx-manifesto__text" data-lit>{{ v.manifesto }}</p>
-  </div>
-</section>
-
-<section class="hx-sec hx-mist hx-listen" id="listen" aria-labelledby="h-listen">
+<section class="hx-sec hx-dark hx-listen" id="listen" aria-labelledby="h-listen">
   <div class="wrap hx-listen__grid">
     <div class="hx-listen__text">
       <h2 class="t-display" id="h-listen" data-split>{{ c.ls_h2 }}</h2>
@@ -66,7 +99,7 @@
   </div>
 </section>
 
-<section class="hx-sec hx-light hx-labels" id="labels" aria-labelledby="h-labels">
+<section class="hx-sec hx-tone hx-labels" id="labels" aria-labelledby="h-labels">
   <div class="wrap">
     <div class="sec-head">
       <h2 class="t-display" id="h-labels" data-split>{{ v.lb_h2 }}</h2>
@@ -76,7 +109,7 @@
       {% for big, label in v.lb_facts %}<div><dt>{{ label }}</dt><dd>{{ big }}</dd></div>
       {% endfor %}
     </dl>
-    <p class="hx-labels__cta" data-reveal><a class="btn" href="#contact">{{ v.lb_cta }}</a></p>
+    <p class="hx-labels__cta" data-reveal><a class="btn btn--glow" href="#contact" data-magnetic>{{ v.lb_cta }}</a></p>
   </div>
 </section>
 
@@ -154,14 +187,14 @@
   </div>
 </section>
 
-<section class="hx-sec hx-mist services" id="services" aria-labelledby="h-svc">
+<section class="hx-sec hx-tone services" id="services" aria-labelledby="h-svc">
   <div class="wrap">
     <div class="sec-head">
       <h2 class="t-display" id="h-svc" data-split>{{ s.sv_h2 }}</h2>
       <p class="t-lead" data-reveal>{{ s.sv_intro }}</p>
     </div>
     <div class="svc-grid" tabindex="0" role="group" aria-label="{{ s.sv_h2 }}" data-reveal data-reveal-kids>
-      {% for it in s.services %}<article class="svc spot{% if loop.index == 2 %} svc--hero{% endif %}">
+      {% for it in s.services %}<article class="svc spot{% if loop.index == 2 %} svc--hero{% endif %}" data-tilt>
         <h3>{{ it.name }}</h3>
         <p>{{ it.desc }}</p>
         {% if it.tiers %}<ul class="svc__tiers">{% for label, pr in it.tiers %}<li><span>{{ label }}</span><b>{{ pr }}</b></li>{% endfor %}</ul>{% endif %}
@@ -185,7 +218,7 @@
   </div>
 </section>
 
-<section class="hx-sec hx-light reviews" id="reviews" aria-labelledby="h-rev">
+<section class="hx-sec hx-dark reviews" id="reviews" aria-labelledby="h-rev">
   <div class="wrap">
     <div class="sec-head sec-head--row">
       <div>
@@ -210,7 +243,7 @@
   </div>
 </section>
 
-<section class="hx-sec hx-mist process how" id="process" aria-labelledby="h-proc">
+<section class="hx-sec hx-tone process how" id="process" aria-labelledby="h-proc">
   <div class="wrap">
     <h2 class="t-display" id="h-proc" data-split>{{ s.pr_h2 }}</h2>
     <div class="process__line" aria-hidden="true"><i></i></div>
@@ -231,7 +264,7 @@
   </div>
 </section>
 
-<section class="hx-sec hx-light articles-home" id="articles" aria-labelledby="h-art">
+<section class="hx-sec hx-dark articles-home" id="articles" aria-labelledby="h-art">
   <div class="wrap">
     <div class="sec-head sec-head--row">
       <h2 class="t-display" id="h-art" data-split>{{ s.ar_h2 }}</h2>
@@ -258,6 +291,7 @@
 </section>
 
 <section class="hx-sec hx-dark contact" id="contact" aria-labelledby="h-ct">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
   <div class="wrap contact__grid">
     <div class="contact__text">
       <h2 class="t-mega" id="h-ct" data-split>{{ c.ct_big }}</h2>
@@ -277,7 +311,7 @@
       </label>
       <label class="field"><span>{{ s.f_files }}</span><input name="files" type="url" inputmode="url" placeholder="https://"></label>
       <label class="field"><span>{{ s.f_msg }}</span><textarea name="message" required placeholder="{{ s.f_msg_ph }}"></textarea></label>
-      <div class="btn-row"><button class="btn" type="submit">{{ s.f_send }}</button><span class="form-note">{{ s.f_note }} <a class="link" href="{{ privacy_href }}">{{ s.f_privacy }}</a>.</span></div>
+      <div class="btn-row"><button class="btn btn--glow" type="submit" data-magnetic>{{ s.f_send }}</button><span class="form-note">{{ s.f_note }} <a class="link" href="{{ privacy_href }}">{{ s.f_privacy }}</a>.</span></div>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>

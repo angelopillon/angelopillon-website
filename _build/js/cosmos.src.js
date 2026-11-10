@@ -190,11 +190,39 @@ void main(){
   gl_Position = projectionMatrix * mv;
   float origin = step(aI, -0.5);
   float pulse = 0.5 + 0.5 * sin(uT * 2.2 + aI * 19.0);
-  vCol = origin > 0.5 ? vec3(1.0) : pal(aI);
+  float hd = fract(uT * (0.16 + fract(aI * 7.13) * 0.16) + aI * 3.71) * 1.35;
+  float hit = origin > 0.5 ? 0.0 : exp(-pow((hd - 1.0) * 7.0, 2.0));
+  vCol = origin > 0.5 ? vec3(1.0) : mix(pal(aI), vec3(1.0), hit * 0.7);
   vec4 w = modelMatrix * vec4(position, 1.0);
   float face = smoothstep(-0.1, 0.25, dot(normalize(w.xyz - uC), normalize(cameraPosition - w.xyz)));
-  vA = uArcs * face * (origin > 0.5 ? 1.0 : 0.65 + 0.35 * pulse);
-  gl_PointSize = uPx * (origin > 0.5 ? 9.0 + 3.0 * sin(uT * 3.0) : 4.0 + 2.0 * pulse) * (9.0 / -mv.z);
+  vA = uArcs * face * (origin > 0.5 ? 1.0 : 0.6 + 0.3 * pulse + hit);
+  gl_PointSize = uPx * (origin > 0.5 ? 10.0 + 3.0 * sin(uT * 3.0) : 4.0 + 2.0 * pulse + 9.0 * hit) * (9.0 / -mv.z);
+}
+`;
+
+const COMET_VERT = /* glsl */ `
+attribute vec3 aB; attribute float aSeed; attribute float aIdx;
+uniform vec3 uO, uC; uniform float uT, uArcs, uPx;
+varying vec3 vCol; varying float vA;
+${GLSL_PALETTE}
+void main(){
+  float speed = 0.16 + fract(aSeed * 7.13) * 0.16;
+  float head = fract(uT * speed + aSeed * 3.71) * 1.35;
+  float t = head - aIdx * 0.2;
+  float on = step(0.0, t) * step(t, 1.0);
+  t = clamp(t, 0.0, 1.0);
+  float ang = acos(clamp(dot(uO, aB), -1.0, 1.0));
+  float sa = max(sin(ang), 0.0001);
+  vec3 p = (sin((1.0 - t) * ang) * uO + sin(t * ang) * aB) / sa;
+  p *= 1.0 + (0.06 + 0.34 * (ang / 3.14159)) * sin(3.14159 * t);
+  vec4 w = modelMatrix * vec4(p, 1.0);
+  float face = smoothstep(-0.25, 0.2, dot(normalize(w.xyz - uC), normalize(cameraPosition - w.xyz)));
+  vec4 mv = viewMatrix * w;
+  gl_Position = projectionMatrix * mv;
+  float k = 1.0 - aIdx;
+  vCol = mix(pal(aSeed), vec3(1.0), k * k * 0.85);
+  vA = on * uArcs * (0.12 + 0.88 * face) * pow(k, 1.5);
+  gl_PointSize = uPx * (1.4 + 6.0 * k * k) * (9.0 / -mv.z);
 }
 `;
 
@@ -399,8 +427,104 @@ function start() {
   }));
   dots.frustumCulled = false;
   globe.add(dots);
+  // comets: glowing packets that leave Milan and land on every client country
+  const TRAIL = mobile ? 14 : 26;
+  const cN = cities.length * TRAIL;
+  const cb = new Float32Array(cN * 3), cs = new Float32Array(cN), cx = new Float32Array(cN);
+  cities.forEach((c, ci) => {
+    const v = unit(c[1], c[2]);
+    for (let j = 0; j < TRAIL; j++) {
+      const q = ci * TRAIL + j;
+      cb[q * 3] = v[0]; cb[q * 3 + 1] = v[1]; cb[q * 3 + 2] = v[2];
+      cs[q] = ci / cities.length; cx[q] = j / (TRAIL - 1);
+    }
+  });
+  const cgeo = new BufferGeometry();
+  cgeo.setAttribute("position", new BufferAttribute(new Float32Array(cN * 3), 3));
+  cgeo.setAttribute("aB", new BufferAttribute(cb, 3));
+  cgeo.setAttribute("aSeed", new BufferAttribute(cs, 1));
+  cgeo.setAttribute("aIdx", new BufferAttribute(cx, 1));
+  const CU = { uT: { value: 0 }, uPx: { value: DPR }, uArcs: { value: 0 }, uPal: { value: pal }, uC: AU.uC, uO: { value: new Vector3(origin[0], origin[1], origin[2]) } };
+  const comets = new Points(cgeo, new ShaderMaterial({
+    uniforms: CU, vertexShader: COMET_VERT, transparent: true, depthWrite: false, depthTest: false, blending: AdditiveBlending,
+    fragmentShader: "varying vec3 vCol; varying float vA;\nvoid main(){ vec2 c = gl_PointCoord - 0.5; float a = smoothstep(0.5, 0.0, length(c)); gl_FragColor = vec4(vCol, a * a * vA);\n#include <colorspace_fragment>\n}"
+  }));
+  comets.frustumCulled = false;
+  globe.add(comets);
+  // atmosphere: a soft halo that makes the dotted sphere read as a planet
+  const atmo = new Sprite(new SpriteMaterial({ map: tex, color: new Color("#4A6BFF"), transparent: true, opacity: 0, blending: AdditiveBlending, depthWrite: false, depthTest: false }));
+  atmo.scale.set(3.5, 3.5, 1);
+  globe.add(atmo);
   globe.rotation.order = "XYZ";
   scene.add(globe);
+
+  /* ---------------- country labels that follow the globe ---------------- */
+  const layer = document.getElementById("globe-labels");
+  const SLOTS = mobile ? 3 : 6;
+  const slots = [];
+  let names = cities.map((c) => c[0]);
+  try { const dn = new Intl.DisplayNames([document.documentElement.lang || "en"], { type: "region" }); names = cities.map((c) => dn.of(c[0]) || c[0]); } catch (e) {}
+  const cityVec = cities.map((c) => { const v = unit(c[1], c[2]); return new Vector3(v[0], v[1], v[2]); });
+  const originVec = new Vector3(origin[0], origin[1], origin[2]);
+  let homeLabel = null;
+  if (layer) {
+    for (let i = 0; i < SLOTS; i++) {
+      const el = document.createElement("span"); el.className = "globe-label"; el.innerHTML = "<i></i><b></b>";
+      layer.appendChild(el); slots.push({ el, city: -1, born: 0, a: 0, x: 0, y: 0 });
+    }
+    homeLabel = document.createElement("span"); homeLabel.className = "globe-label globe-label--home"; homeLabel.innerHTML = "<i></i><b>" + (layer.getAttribute("data-home") || "Milano") + "</b>";
+    layer.appendChild(homeLabel);
+  }
+  const tmpV = new Vector3(), tmpC = new Vector3(), tmpN = new Vector3();
+  function place(v, out) {
+    tmpV.copy(v).multiplyScalar(1.02).applyMatrix4(globe.matrixWorld);
+    tmpC.setFromMatrixPosition(globe.matrixWorld);
+    tmpN.copy(tmpV).sub(tmpC).normalize();
+    out.face = tmpN.dot(tmpC.copy(camera.position).sub(tmpV).normalize());
+    tmpV.project(camera);
+    out.x = (tmpV.x * 0.5 + 0.5) * W; out.y = (-tmpV.y * 0.5 + 0.5) * H;
+    return out;
+  }
+  const probe = { x: 0, y: 0, face: 0 };
+  let nextSwap = 0;
+  function labels(on, dt) {
+    if (!layer) return;
+    layer.style.opacity = on > 0.02 ? "1" : "0";
+    if (on <= 0.02) { slots.forEach((s) => { s.a = 0; s.el.style.opacity = "0"; }); if (homeLabel) homeLabel.style.opacity = "0"; return; }
+    globe.updateMatrixWorld(true);
+    // one slot at a time picks a new country that faces the viewer and is clear of the other labels
+    if (time > nextSwap) {
+      nextSwap = time + 0.55;
+      let slot = slots.find((s) => s.city < 0) || slots.reduce((a, b) => (a.born < b.born ? a : b));
+      if (slot.city < 0 || time - slot.born > 3.4) {
+        for (let tries = 0; tries < 24; tries++) {
+          const ci = Math.floor(Math.random() * cities.length);
+          if (slots.some((s) => s.city === ci)) continue;
+          place(cityVec[ci], probe);
+          if (probe.face < 0.42 || probe.x < 60 || probe.x > W - 60 || probe.y < 90 || probe.y > H - 60) continue;
+          if (slots.some((s) => s.city >= 0 && s !== slot && Math.hypot(s.x - probe.x, s.y - probe.y) < 130)) continue;
+          slot.city = ci; slot.born = time; slot.a = 0; slot.el.lastChild.textContent = names[ci];
+          break;
+        }
+      }
+    }
+    slots.forEach((s) => {
+      if (s.city < 0) return;
+      place(cityVec[s.city], probe);
+      s.x = probe.x; s.y = probe.y;
+      const age = time - s.born;
+      const want = probe.face > 0.2 && age < 3.6 ? 1 : 0;
+      s.a += (want - s.a) * Math.min(1, dt * 7);
+      if (!want && s.a < 0.02) s.city = -1;
+      s.el.style.opacity = (s.a * on).toFixed(3);
+      s.el.style.transform = "translate3d(" + s.x.toFixed(1) + "px," + s.y.toFixed(1) + "px,0)";
+    });
+    if (homeLabel) {
+      place(originVec, probe);
+      homeLabel.style.opacity = (Math.max(0, Math.min(1, (probe.face - 0.15) * 3)) * on).toFixed(3);
+      homeLabel.style.transform = "translate3d(" + probe.x.toFixed(1) + "px," + probe.y.toFixed(1) + "px,0)";
+    }
+  }
 
   /* ---------------- bloom ---------------- */
   let composer = null, bloom = null;
@@ -432,6 +556,23 @@ function start() {
   const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
   window.addEventListener("pointermove", (e) => { mouse.tx = e.clientX / W - 0.5; mouse.ty = e.clientY / H - 0.5; }, { passive: true });
 
+  /* ---------------- drag to spin the globe ---------------- */
+  const drag = { on: false, x: 0, rot: 0, vel: 0 };
+  const zone = document.getElementById("worldwide");
+  if (zone) {
+    zone.addEventListener("pointerdown", (e) => {
+      if (e.target.closest("a, button")) return;
+      drag.on = true; drag.x = e.clientX; drag.vel = 0; zone.classList.add("is-grabbing");
+    });
+    window.addEventListener("pointermove", (e) => {
+      if (!drag.on) return;
+      const dx = e.clientX - drag.x; drag.x = e.clientX;
+      drag.rot += dx * 0.0052; drag.vel = dx * 0.0052;
+    }, { passive: true });
+    const stop = () => { if (drag.on) { drag.on = false; zone.classList.remove("is-grabbing"); } };
+    window.addEventListener("pointerup", stop); window.addEventListener("pointercancel", stop);
+  }
+
   /* ---------------- loop ---------------- */
   const cur = { p: S.p, shift: S.shift, arcs: 0, dim: 0 };
   let last = performance.now(), time = 0, introT = reduced ? 10 : 0, running = true, raf = 0;
@@ -449,13 +590,14 @@ function start() {
     cur.dim += ((S.dim || 0) - cur.dim) * k;
     mouse.x += (mouse.tx - mouse.x) * k * 0.6; mouse.y += (mouse.ty - mouse.y) * k * 0.6;
 
-    U.uT.value = time; SU.uT.value = time; AU.uT.value = time; DU.uT.value = time;
+    U.uT.value = time; SU.uT.value = time; AU.uT.value = time; DU.uT.value = time; CU.uT.value = time;
+    if (!drag.on) { drag.rot += drag.vel; drag.vel *= Math.pow(0.94, dt * 60); }
     U.uP.value = cur.p;
     U.uIntro.value = reduced ? 1 : ease(Math.min(1, introT / 2.6));
     U.uFlash.value = Math.exp(-Math.pow((cur.p - 0.55) * 5.0, 2.0)) * 1.2;
 
     // globe: Europe faces the viewer, then a slow turn
-    const gr = -0.16 - time * 0.07 + mouse.x * 0.5;
+    const gr = -0.16 - time * 0.07 + mouse.x * 0.5 + drag.rot;
     const desk = W > 900;
     U.uGRot.value = gr;
     U.uGTilt.value = 0.42 + mouse.y * 0.2;
@@ -467,7 +609,9 @@ function start() {
     AU.uC.value.set(gx, gy, 0);
     globe.scale.setScalar(U.uGR.value);
     const arcsOn = cur.arcs * Math.max(0, Math.min(1, (cur.p - 3.55) / 0.4));
-    AU.uArcs.value = arcsOn; DU.uArcs.value = arcsOn;
+    AU.uArcs.value = arcsOn; DU.uArcs.value = arcsOn; CU.uArcs.value = arcsOn;
+    atmo.material.opacity = 0.3 * Math.max(0, Math.min(1, (cur.p - 3.2) / 0.8)) * (1 - cur.dim * 0.6);
+    labels(arcsOn, dt);
 
     // camera drift
     camera.position.x = mouse.x * 0.9;

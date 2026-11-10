@@ -31,7 +31,7 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Angelo Pillon, articoli in italiano" href="/it/feed.xml">
 <link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=202611102217">
+<link rel="stylesheet" href="/assets/css/site.css?v=202611102227">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://angelopillon.com/#service","name":"Angelo Pillon, mixing and mastering","description":"Mix e mastering in uno studio ibrido analogico e digitale a Milano. Certificato Apple Digital Masters, 4,9/5 su oltre 700 recensioni. Misuratore LUFS e strumenti gratuiti.","url":"https://angelopillon.com/it/","image":"https://angelopillon.com/assets/img/studio-1-1400.jpg","logo":"https://angelopillon.com/assets/img/icon-512.png","address":{"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"},"areaServed":"Worldwide","knowsLanguage":["en","it","de","es"],"founder":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mixing and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg"},"sameAs":["https://www.fiverr.com/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"vatID":"IT01981550930","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","bestRating":"5","ratingCount":"789"},"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mastering"},"priceSpecification":{"@type":"PriceSpecification","minPrice":60,"priceCurrency":"USD"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mix e master"},"priceSpecification":{"@type":"PriceSpecification","minPrice":110,"priceCurrency":"USD"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Stem mastering"},"priceSpecification":{"@type":"PriceSpecification","minPrice":100,"priceCurrency":"USD"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Feedback sul mix"},"priceSpecification":{"@type":"PriceSpecification","minPrice":45,"priceCurrency":"USD"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"it","mainEntity":[{"@type":"Question","name":"Come ti mando i file?","acceptedAnswer":{"@type":"Answer","text":"Carica tracce o mix su WeTransfer, Google Drive o Dropbox e incolla il link nel modulo, oppure mandali tramite Fiverr. WAV alla frequenza e alla risoluzione della sessione, senza nulla sul bus master."}},{"@type":"Question","name":"Quanto tempo ci vuole?","acceptedAnswer":{"@type":"Answer","text":"Il mastering in circa 48 ore, mix e master in 3-5 giorni, il feedback sul mix entro 48 ore. Per album ed EP concordiamo un calendario all’inizio."}},{"@type":"Question","name":"Quante modifiche sono comprese?","acceptedAnswer":{"@type":"Answer","text":"Nel mastering fino a 5 revisioni; nel pacchetto di mix e master fino a 60 stem sono illimitate. Di solito bastano uno o due giri."}},{"@type":"Question","name":"Quanto sarà forte il mio master?","acceptedAnswer":{"@type":"Answer","text":"Forte quanto la musica permette senza rovinarla. Per lo streaming tengo il true peak a −0,3 o −0,2 dBTP e scelgo la loudness in base al genere; i master per il club di solito sono più forti. Puoi controllare ogni versione con il misuratore LUFS gratuito."}},{"@type":"Question","name":"Fai anche produzione o arrangiamento?","acceptedAnswer":{"@type":"Answer","text":"No. Faccio solo mix e mastering, e l’intonazione della voce fa parte del mix. Arrangiamento, produzione ed edit come le radio edit li prepari tu, pronti per il mix."}},{"@type":"Question","name":"Posso prenotare tramite Fiverr o SoundBetter?","acceptedAnswer":{"@type":"Answer","text":"Sì. Trovi i due profili qui sotto: stesso fonico, stessa catena."}},{"@type":"Question","name":"Lavori in italiano?","acceptedAnswer":{"@type":"Answer","text":"Sì. Italiano, inglese, tedesco e spagnolo."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Angelo Pillon","url":"https://angelopillon.com/","inLanguage":"it"}</script>
@@ -66,41 +66,82 @@
   </div>
 </header>
 <main id="main">
-<section class="hx-hero" id="top">
-  <div class="wrap hx-hero__in">
-    <h1 class="hx-hero__title"><span class="hx-kicker" data-hero-k>Mix e mastering · Milano</span><span class="hx-hero__line">Pronto per l’uscita.</span></h1>
-    <p class="hx-hero__lead" data-hero-l>Mix e mastering in catena ibrida analogica, per etichette, produttori e artisti. Mastering in 48 ore, da Milano a 66 paesi.</p>
-    <div class="hx-hero__cta" data-hero-c>
-      <a class="btn" href="#contact">Invia un brano</a>
-      <a class="btn btn--ghost" href="#listen">Ascolta il lavoro</a>
+<canvas id="cosmos" class="cosmos" aria-hidden="true"></canvas>
+<div class="cosmos-fallback" aria-hidden="true"></div>
+<div class="globe-labels" id="globe-labels" data-home="Milano" aria-hidden="true"></div>
+
+<section class="hero" id="top">
+  <div class="wrap hero__inner">
+    <h1 class="hero__title"><span class="hero__kicker" data-hero-k>Mix e mastering · Milano</span><span class="hero__line">Pronto per l’uscita.</span></h1>
+    <p class="hero__lead" data-hero-l>Mix e mastering in catena ibrida analogica, per etichette, produttori e artisti. Mastering in 48 ore, da Milano a 66 paesi.</p>
+    <div class="hero__cta" data-hero-c>
+      <a class="btn btn--glow" href="#contact" data-magnetic>Invia un brano</a>
+      <a class="btn btn--ghost" href="#listen" data-magnetic>Ascolta il lavoro</a>
     </div>
+    <dl class="hero__proof" data-hero-p>
+      <div><dt>Voto medio su oltre 700 recensioni</dt><dd>4,9</dd></div>
+      <div><dt>Paesi serviti</dt><dd>66</dd></div>
+      <div><dt>Brani consegnati</dt><dd>1.200+</dd></div>
+      <div><dt>Anni a tempo pieno</dt><dd>15+</dd></div>
+      
+    </dl>
+  </div>
+  <a class="hero__scroll" href="#story"><span>Scorri</span><i></i></a>
+</section>
+
+<section class="story" id="story" aria-label="Dal rumore al master">
+  <div class="story__sticky">
+    <div class="wrap story__lines">
+      <p class="story__line">All’inizio è solo rumore.</p>
+      <p class="story__line">Poi diventa suono.</p>
+      <p class="story__line">Il mix gli dà forma.</p>
+      <p class="story__line">Il master lo rende senza tempo.</p>
+      
+    </div>
+    <div class="story__bar" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<section class="worldwide" id="worldwide" aria-labelledby="h-world">
+  <div class="wrap worldwide__grid">
+    <div class="worldwide__text">
+      <p class="worldwide__num"><span data-count="66">66</span></p>
+      <h2 class="t-display" id="h-world" data-split>Paesi in cui ho già lavorato.</h2>
+      <p class="t-lead" data-reveal>Non è una stima: sono clienti veri, con ordini consegnati e recensioni verificabili su Fiverr e SoundBetter. Artisti, produttori, etichette e studi di cinque continenti, e ogni master parte da Milano.</p>
+      <p class="worldwide__proof" data-reveal><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">Verifica le recensioni</a></p>
+      <p class="worldwide__hint" data-reveal>Trascina il globo per farlo girare.</p>
+    </div>
+  </div>
+  <div class="countries" aria-label="Paesi per cui ho lavorato">
+    <div class="countries__row">
+      <ul class="countries__track">
+        <li>Albania</li><li>Arabia Saudita</li><li>Argentina</li><li>Australia</li><li>Austria</li><li>Bangladesh</li><li>Belgio</li><li>Bosnia ed Erzegovina</li><li>Brasile</li><li>Bulgaria</li><li>Cambogia</li><li>Canada</li><li>Cechia</li><li>Cile</li><li>Colombia</li><li>Corea del Sud</li><li>Costa Rica</li><li>Croazia</li><li>Cuba</li><li>Danimarca</li><li>Emirati Arabi Uniti</li><li>Estonia</li><li>Finlandia</li><li>Francia</li><li>Georgia</li><li>Germania</li><li>Grecia</li><li>Guatemala</li><li>India</li><li>Indonesia</li><li>Irlanda</li><li>Islanda</li><li>Israele</li><li aria-hidden="true">Albania</li><li aria-hidden="true">Arabia Saudita</li><li aria-hidden="true">Argentina</li><li aria-hidden="true">Australia</li><li aria-hidden="true">Austria</li><li aria-hidden="true">Bangladesh</li><li aria-hidden="true">Belgio</li><li aria-hidden="true">Bosnia ed Erzegovina</li><li aria-hidden="true">Brasile</li><li aria-hidden="true">Bulgaria</li><li aria-hidden="true">Cambogia</li><li aria-hidden="true">Canada</li><li aria-hidden="true">Cechia</li><li aria-hidden="true">Cile</li><li aria-hidden="true">Colombia</li><li aria-hidden="true">Corea del Sud</li><li aria-hidden="true">Costa Rica</li><li aria-hidden="true">Croazia</li><li aria-hidden="true">Cuba</li><li aria-hidden="true">Danimarca</li><li aria-hidden="true">Emirati Arabi Uniti</li><li aria-hidden="true">Estonia</li><li aria-hidden="true">Finlandia</li><li aria-hidden="true">Francia</li><li aria-hidden="true">Georgia</li><li aria-hidden="true">Germania</li><li aria-hidden="true">Grecia</li><li aria-hidden="true">Guatemala</li><li aria-hidden="true">India</li><li aria-hidden="true">Indonesia</li><li aria-hidden="true">Irlanda</li><li aria-hidden="true">Islanda</li><li aria-hidden="true">Israele</li>
+      </ul>
+    </div>
+    <div class="countries__row countries__row--rev">
+      <ul class="countries__track">
+        <li>Italia</li><li>Lettonia</li><li>Lituania</li><li>Lussemburgo</li><li>Macedonia del Nord</li><li>Malaysia</li><li>Montenegro</li><li>Myanmar (Birmania)</li><li>Nuova Zelanda</li><li>Oman</li><li>Paesi Bassi</li><li>Papua Nuova Guinea</li><li>Polonia</li><li>Portogallo</li><li>Regno Unito</li><li>Repubblica Dominicana</li><li>Romania</li><li>Serbia</li><li>Slovacchia</li><li>Slovenia</li><li>Spagna</li><li>Stati Uniti</li><li>Sudafrica</li><li>Svezia</li><li>Svizzera</li><li>Taiwan</li><li>Thailandia</li><li>Turchia</li><li>Ungheria</li><li>Uruguay</li><li>Venezuela</li><li>Vietnam</li><li aria-hidden="true">Italia</li><li aria-hidden="true">Lettonia</li><li aria-hidden="true">Lituania</li><li aria-hidden="true">Lussemburgo</li><li aria-hidden="true">Macedonia del Nord</li><li aria-hidden="true">Malaysia</li><li aria-hidden="true">Montenegro</li><li aria-hidden="true">Myanmar (Birmania)</li><li aria-hidden="true">Nuova Zelanda</li><li aria-hidden="true">Oman</li><li aria-hidden="true">Paesi Bassi</li><li aria-hidden="true">Papua Nuova Guinea</li><li aria-hidden="true">Polonia</li><li aria-hidden="true">Portogallo</li><li aria-hidden="true">Regno Unito</li><li aria-hidden="true">Repubblica Dominicana</li><li aria-hidden="true">Romania</li><li aria-hidden="true">Serbia</li><li aria-hidden="true">Slovacchia</li><li aria-hidden="true">Slovenia</li><li aria-hidden="true">Spagna</li><li aria-hidden="true">Stati Uniti</li><li aria-hidden="true">Sudafrica</li><li aria-hidden="true">Svezia</li><li aria-hidden="true">Svizzera</li><li aria-hidden="true">Taiwan</li><li aria-hidden="true">Thailandia</li><li aria-hidden="true">Turchia</li><li aria-hidden="true">Ungheria</li><li aria-hidden="true">Uruguay</li><li aria-hidden="true">Venezuela</li><li aria-hidden="true">Vietnam</li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
+<section class="hx-sec hx-dark hx-manifesto hx-after-cosmos" aria-label="Come lavoro">
+  <div class="wrap">
+    <p class="hx-manifesto__text" data-lit>Un brano entra come mix ed esce come disco. Bilanciato, forte quanto deve esserlo, uguale in cuffia, in club e in macchina. Lo lavoro io dall’inizio alla fine, con una catena analogica vera e quindici anni di ascolto.</p>
   </div>
   <div class="hx-hero__stage">
     <figure class="hx-hero__photo" data-hero-photo>
       <picture>
         <source type="image/webp" srcset="/assets/img/studio-1-900.webp 900w, /assets/img/studio-1-1400.webp 1400w, /assets/img/studio-1-full.webp 1536w" sizes="(max-width:1400px) 100vw, 1360px">
-        <img src="/assets/img/studio-1-1400.jpg" alt="Angelo Pillon al mixer nel suo studio di Milano" width="1400" height="839" fetchpriority="high" decoding="async">
+        <img src="/assets/img/studio-1-1400.jpg" alt="Angelo Pillon al mixer nel suo studio di Milano" width="1400" height="839" loading="lazy" decoding="async">
       </picture>
     </figure>
   </div>
-  <div class="wrap">
-    <dl class="hx-proof" data-reveal data-reveal-kids>
-      <div><dt>Voto medio su oltre 700 recensioni</dt><dd>4,9</dd></div>
-      <div><dt>Paesi serviti</dt><dd>66</dd></div>
-      <div><dt>Brani consegnati</dt><dd>1.200+</dd></div>
-      <div><dt>Anni a tempo pieno</dt><dd>15+</dd></div>
-      <div class="hx-proof__badge"><dt>Fonico certificato</dt><dd>Apple Digital Masters</dd></div>
-    </dl>
-  </div>
 </section>
 
-<section class="hx-sec hx-light hx-manifesto" aria-label="Come lavoro">
-  <div class="wrap">
-    <p class="hx-manifesto__text" data-lit>Un brano entra come mix ed esce come disco. Bilanciato, forte quanto deve esserlo, uguale in cuffia, in club e in macchina. Lo lavoro io dall’inizio alla fine, con una catena analogica vera e quindici anni di ascolto.</p>
-  </div>
-</section>
-
-<section class="hx-sec hx-mist hx-listen" id="listen" aria-labelledby="h-listen">
+<section class="hx-sec hx-dark hx-listen" id="listen" aria-labelledby="h-listen">
   <div class="wrap hx-listen__grid">
     <div class="hx-listen__text">
       <h2 class="t-display" id="h-listen" data-split>Ascolta il lavoro.</h2>
@@ -114,7 +155,7 @@
   </div>
 </section>
 
-<section class="hx-sec hx-light hx-labels" id="labels" aria-labelledby="h-labels">
+<section class="hx-sec hx-tone hx-labels" id="labels" aria-labelledby="h-labels">
   <div class="wrap">
     <div class="sec-head">
       <h2 class="t-display" id="h-labels" data-split>Fatto per le etichette.</h2>
@@ -127,7 +168,7 @@
       <div><dt>italiano, inglese, tedesco e spagnolo</dt><dd>4 lingue</dd></div>
       
     </dl>
-    <p class="hx-labels__cta" data-reveal><a class="btn" href="#contact">Chiedi un’offerta per il catalogo</a></p>
+    <p class="hx-labels__cta" data-reveal><a class="btn btn--glow" href="#contact" data-magnetic>Chiedi un’offerta per il catalogo</a></p>
   </div>
 </section>
 
@@ -305,32 +346,32 @@
   </div>
 </section>
 
-<section class="hx-sec hx-mist services" id="services" aria-labelledby="h-svc">
+<section class="hx-sec hx-tone services" id="services" aria-labelledby="h-svc">
   <div class="wrap">
     <div class="sec-head">
       <h2 class="t-display" id="h-svc" data-split>Cosa faccio</h2>
       <p class="t-lead" data-reveal>Gli stessi prezzi del mio profilo Fiverr, in dollari. Per album e progetti con più brani preparo un’offerta su misura.</p>
     </div>
     <div class="svc-grid" tabindex="0" role="group" aria-label="Cosa faccio" data-reveal data-reveal-kids>
-      <article class="svc spot">
+      <article class="svc spot" data-tilt>
         <h3>Mastering</h3>
         <p>Il tuo mix stereo masterizzato nella catena ibrida analogica: loudness, dinamica, ampiezza e true peak impostati per streaming, club e radio.</p>
         <ul class="svc__tiers"><li><span>Un brano, mastering analogico</span><b>$60</b></li><li><span>EP di 4 brani</span><b>$180</b></li></ul>
         <div class="svc__price"><b>Da $60</b><span>48 ore</span></div>
       </article>
-      <article class="svc spot svc--hero">
+      <article class="svc spot svc--hero" data-tilt>
         <h3>Mix e master</h3>
         <p>Dalle tracce al master finale. Intonazione della voce compresa, bilanciamento, profondità e spazio nella catena ibrida, per brani cantati e tracce da club.</p>
         <ul class="svc__tiers"><li><span>Fino a 10 stem, digitale</span><b>$110</b></li><li><span>Fino a 30 stem, digitale</span><b>$160</b></li><li><span>Fino a 60 stem, analogico, revisioni illimitate</span><b>$210</b></li></ul>
         <div class="svc__price"><b>Da $110</b><span>Da 3 a 5 giorni</span></div>
       </article>
-      <article class="svc spot">
+      <article class="svc spot" data-tilt>
         <h3>Stem mastering</h3>
         <p>Fino a 40 stem, masterizzati nella catena analogica. Più controllo del mastering stereo, con l’attenzione di un master e non di un mix completo.</p>
         
         <div class="svc__price"><b>$100</b><span>Da 48 a 72 ore</span></div>
       </article>
-      <article class="svc spot">
+      <article class="svc spot" data-tilt>
         <h3>Feedback sul mix</h3>
         <p>Ascolto su un sistema analogico calibrato e ti mando un report PDF: punti di forza, problemi e correzioni in ordine di priorità, con analisi di spettro e LUFS e note con i minutaggi.</p>
         
@@ -354,7 +395,7 @@
   </div>
 </section>
 
-<section class="hx-sec hx-light reviews" id="reviews" aria-labelledby="h-rev">
+<section class="hx-sec hx-dark reviews" id="reviews" aria-labelledby="h-rev">
   <div class="wrap">
     <div class="sec-head sec-head--row">
       <div>
@@ -407,7 +448,7 @@
   </div>
 </section>
 
-<section class="hx-sec hx-mist process how" id="process" aria-labelledby="h-proc">
+<section class="hx-sec hx-tone process how" id="process" aria-labelledby="h-proc">
   <div class="wrap">
     <h2 class="t-display" id="h-proc" data-split>Come si svolge un progetto</h2>
     <div class="process__line" aria-hidden="true"><i></i></div>
@@ -437,7 +478,7 @@
   </div>
 </section>
 
-<section class="hx-sec hx-light articles-home" id="articles" aria-labelledby="h-art">
+<section class="hx-sec hx-dark articles-home" id="articles" aria-labelledby="h-art">
   <div class="wrap">
     <div class="sec-head sec-head--row">
       <h2 class="t-display" id="h-art" data-split>Dal diario di studio</h2>
@@ -488,6 +529,7 @@
 </section>
 
 <section class="hx-sec hx-dark contact" id="contact" aria-labelledby="h-ct">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
   <div class="wrap contact__grid">
     <div class="contact__text">
       <h2 class="t-mega" id="h-ct" data-split>Facciamo qualcosa di grande.</h2>
@@ -507,7 +549,7 @@
       </label>
       <label class="field"><span>Link ai file (facoltativo)</span><input name="files" type="url" inputmode="url" placeholder="https://"></label>
       <label class="field"><span>Il brano</span><textarea name="message" required placeholder="Genere, reference, data di uscita, tutto ciò che aiuta"></textarea></label>
-      <div class="btn-row"><button class="btn" type="submit">Invia messaggio</button><span class="form-note">Usato solo per risponderti. <a class="link" href="/it/privacy">Privacy policy</a>.</span></div>
+      <div class="btn-row"><button class="btn btn--glow" type="submit" data-magnetic>Invia messaggio</button><span class="form-note">Usato solo per risponderti. <a class="link" href="/it/privacy">Privacy policy</a>.</span></div>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
@@ -545,8 +587,9 @@
   <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Accetta</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Rifiuta</button></div>
 </aside>
 
-<script src="/assets/js/site.js?v=202611102217" defer></script>
-<script src="/assets/js/motion.js?v=202611102217" defer></script>
+<script src="/assets/js/site.js?v=202611102227" defer></script>
+<script src="/assets/js/motion.js?v=202611102227" defer></script>
+<script src="/assets/js/cosmos.js?v=202611102227" defer></script>
 
 </body>
 </html>

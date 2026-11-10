@@ -399,6 +399,7 @@ def ab_tracks():
 
 HOME_V3 = {
     "en": dict(
+        home_city="Milan", drag_hint="Drag the globe to spin it.", countries_label="Countries I have worked for",
         h1="Release-ready.",
         lead="Mixing and mastering through a hybrid analog chain, for labels, producers and artists. Mastering in 48 hours, from Milan to 66 countries.",
         cta1="Send a track", adm_label="Certified engineer", manifesto_label="How I work",
@@ -407,6 +408,7 @@ HOME_V3 = {
         lb_facts=[("48 hours", "to master a single"), ("3-5 days", "to mix and master from the stems"), ("Custom", "quote and schedule for EPs, albums and catalogues"), ("4 languages", "English, Italian, German and Spanish")],
         lb_cta="Ask for a catalogue quote"),
     "it": dict(
+        home_city="Milano", drag_hint="Trascina il globo per farlo girare.", countries_label="Paesi per cui ho lavorato",
         h1="Pronto per l’uscita.",
         lead="Mix e mastering in catena ibrida analogica, per etichette, produttori e artisti. Mastering in 48 ore, da Milano a 66 paesi.",
         cta1="Invia un brano", adm_label="Fonico certificato", manifesto_label="Come lavoro",
@@ -415,6 +417,7 @@ HOME_V3 = {
         lb_facts=[("48 ore", "per il mastering di un singolo"), ("3-5 giorni", "per mix e master dalle tracce"), ("Su misura", "offerta e calendario per EP, album e cataloghi"), ("4 lingue", "italiano, inglese, tedesco e spagnolo")],
         lb_cta="Chiedi un’offerta per il catalogo"),
     "de": dict(
+        home_city="Mailand", drag_hint="Zieh den Globus, um ihn zu drehen.", countries_label="Länder, für die ich gearbeitet habe",
         h1="Bereit für den Release.",
         lead="Mixing und Mastering in einer hybriden Analogkette, für Labels, Produzenten und Artists. Mastering in 48 Stunden, von Mailand in 66 Länder.",
         cta1="Track senden", adm_label="Zertifizierter Engineer", manifesto_label="So arbeite ich",
@@ -423,6 +426,7 @@ HOME_V3 = {
         lb_facts=[("48 Stunden", "für das Mastering einer Single"), ("3-5 Tage", "für Mix und Master aus den Spuren"), ("Individuell", "Angebot und Zeitplan für EPs, Alben und Kataloge"), ("4 Sprachen", "Deutsch, Englisch, Italienisch und Spanisch")],
         lb_cta="Angebot für den Katalog anfragen"),
     "es": dict(
+        home_city="Milán", drag_hint="Arrastra el globo para girarlo.", countries_label="Países para los que he trabajado",
         h1="Listo para publicar.",
         lead="Mezcla y mastering en una cadena híbrida analógica, para sellos, productores y artistas. Mastering en 48 horas, de Milán a 66 países.",
         cta1="Envía un tema", adm_label="Ingeniero certificado", manifesto_label="Cómo trabajo",
@@ -431,6 +435,19 @@ HOME_V3 = {
         lb_facts=[("48 horas", "para masterizar un single"), ("3-5 días", "para mezcla y master desde las pistas"), ("A medida", "presupuesto y calendario para EP, álbumes y catálogos"), ("4 idiomas", "español, inglés, italiano y alemán")],
         lb_cta="Pide un presupuesto para el catálogo"),
 }
+
+
+def country_rows(lang):
+    """The client countries of the globe, by name, split in two rows for the marquee."""
+    codes = [c[0] for c in json.loads((B / "js" / "globe-data.json").read_text())["cities"]]
+    try:
+        from babel import Locale
+        terr = Locale(lang).territories
+        names = sorted({terr.get(c, c) for c in codes})
+    except Exception:
+        names = codes
+    half = (len(names) + 1) // 2
+    return [names[:half], names[half:]]
 
 
 def home_pages(arts):
@@ -445,7 +462,7 @@ def home_pages(arts):
         posts = [dict(href=a["path"], title=a["title"], cat=a["cat"], cover=post_cover(a), cat_label=S.CATS[a["cat"]][lang] if lang in S.CATS[a["cat"]] else a["cat_label"], date=a["date"], date_label=S.date_label(a["date"], lang)) for a in posts]
         main = env.get_template("home.html").render(s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
                                                      meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
-                                                     codes=S.CLIENT_CODES, playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang])
+                                                     codes=S.CLIENT_CODES, playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang))
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",
                "description": s["description"], "url": SITE + S.HOMES[lang], "image": SITE + "/assets/img/studio-1-1400.jpg", "logo": SITE + "/assets/img/icon-512.png",
                "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}, "areaServed": "Worldwide", "knowsLanguage": ["en", "it", "de", "es"],
@@ -455,7 +472,7 @@ def home_pages(arts):
         faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["faqs"]]}
         site = {"@context": "https://schema.org", "@type": "WebSite", "name": "Angelo Pillon", "url": SITE + "/", "inLanguage": lang}
         add_page(path=S.HOMES[lang], lang=lang, title=s["title"], description=s["description"], main=Markup(main), alt_key="home", jsonld=[org, faq, site],
-                 scripts=(["/assets/js/ab-home.js"] if ab else []), og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
+                 scripts=["/assets/js/cosmos.js"] + (["/assets/js/ab-home.js"] if ab else []), og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
                  og_args=dict(title=s["h1"], kicker={"en": "Mixing and mastering", "it": "Mix e mastering", "de": "Mixing und Mastering", "es": "Mezcla y mastering"}[lang], readout="−8.9 LUFS  −0.3 dBTP"),
                  body_class="is-home")
 
@@ -597,7 +614,7 @@ def write_manifest_sw():
            "shortcuts": [{"name": "LUFS meter", "url": "/loudness-meter"}, {"name": "Misuratore LUFS", "url": "/it/strumenti/misuratore-lufs"}, {"name": "Tools", "url": "/tools/"}]}
     (OUT / "manifest.webmanifest").write_text(json.dumps(man, ensure_ascii=False, indent=1))
     tool_urls = sorted({p["path"] for p in PAGES if p["nav_current"] == "tools"})
-    precache = ["/", "/it/", "/offline.html", "/assets/css/site.css", "/assets/js/site.js", "/assets/js/motion.js", "/assets/js/dsp.js", "/assets/js/tools/common.js",
+    precache = ["/", "/it/", "/offline.html", "/assets/css/site.css", "/assets/js/site.js", "/assets/js/motion.js", "/assets/js/cosmos.js", "/assets/js/dsp.js", "/assets/js/tools/common.js",
                 "/assets/fonts/mona-sans-vf.woff2", "/assets/fonts/hubot-sans-vf.woff2"] + [f"/assets/js/tools/{t['js']}" for t in TL.TOOLS] + tool_urls
     sw = f"""/* angelopillon.com service worker: tools work offline, pages are network first */
 const V = "ap-{V}";
