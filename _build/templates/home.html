@@ -4,7 +4,8 @@
 
 <section class="hero" id="top">
   <div class="wrap hero__inner">
-    <h1 class="hero__title"><span class="hero__kicker" data-hero-k>{{ v.kicker }}</span> <span class="hero__line" data-split-done="1">{% for w in v.h1.split(" ") %}<span class="w"><span style="--i:{{ loop.index0 }}">{{ w }}</span></span>{% if not loop.last %} {% endif %}{% endfor %}</span></h1>
+    <p class="hero__id" data-hero-k><img src="/assets/img/angelo-240.jpg" width="48" height="48" alt="" decoding="async" fetchpriority="high"><span><b>Angelo Pillon</b><span>{{ v.id_role }}</span></span></p>
+    <h1 class="hero__title"><span class="hero__kicker" data-hero-k>{{ v.kicker }}</span> <span class="hero__line" data-split-done="1">{% set n = v.h1a.split(" ")|length %}{% for w in v.h1a.split(" ") %}<span class="w"><span style="--i:{{ loop.index0 }}">{{ w }}</span></span> {% endfor %}<span class="hero__line-b">{% for w in v.h1b.split(" ") %}<span class="w"><span style="--i:{{ n + loop.index0 }}">{{ w }}</span></span>{% if not loop.last %} {% endif %}{% endfor %}</span></span></h1>
     <p class="hero__lead" data-hero-l>{{ v.lead }}</p>
     <div class="hero__cta" data-hero-c>
       <a class="btn btn--glow" href="#contact" data-magnetic>{{ v.cta1 }}</a>
@@ -254,7 +255,7 @@
   </div>
   <div class="marquee" aria-label="{{ s.rv_h2 }}">
     <div class="marquee__track">
-      {% for pass in (0, 1) %}{% for q in reviews %}<figure class="quote"{% if pass %} aria-hidden="true"{% endif %}>
+      {% for pass in (0, 1) %}{% for q in reviews[1:] if not q.marquee_skip %}<figure class="quote"{% if pass %} aria-hidden="true"{% endif %}>
         <blockquote><p>“{{ q.text }}”</p></blockquote>
         <figcaption><b>{{ q.who }}</b><span>{{ q.where[lang] }} · {{ q.badge[lang] }}</span></figcaption>
       </figure>

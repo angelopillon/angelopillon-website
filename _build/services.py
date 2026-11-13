@@ -7,19 +7,19 @@ ORDER = ["mix", "master", "stem", "feedback"]
 
 UI = {
     "en": dict(label="Services", includes_h="What you get", need_h="What I need from you", price_h="Prices",
-               price_note="Same prices as my Fiverr profile, in US dollars. Albums and catalogues get a custom quote.",
+               price_note="Prices in US dollars. Albums and catalogues get a custom quote.",
                how_h="How a project runs", faq_h="Questions", other_h="Other services", read_h="From the studio journal",
                cta="Start a project", cta2="Listen to the work", details="Details"),
     "it": dict(label="Servizi", includes_h="Cosa ricevi", need_h="Cosa mi serve da te", price_h="Prezzi",
-               price_note="Gli stessi prezzi del mio profilo Fiverr, in dollari. Per album e cataloghi preparo un’offerta su misura.",
+               price_note="Prezzi in dollari. Per album e cataloghi preparo un’offerta su misura.",
                how_h="Come si svolge un progetto", faq_h="Domande", other_h="Altri servizi", read_h="Dal diario di studio",
                cta="Inizia un progetto", cta2="Ascolta il lavoro", details="Dettagli"),
     "de": dict(label="Leistungen", includes_h="Was du bekommst", need_h="Was ich von dir brauche", price_h="Preise",
-               price_note="Dieselben Preise wie auf meinem Fiverr-Profil, in US-Dollar. Für Alben und Kataloge gibt es ein individuelles Angebot.",
+               price_note="Preise in US-Dollar. Für Alben und Kataloge gibt es ein individuelles Angebot.",
                how_h="So läuft ein Projekt ab", faq_h="Fragen", other_h="Weitere Leistungen", read_h="Aus dem Studio-Journal",
                cta="Projekt starten", cta2="Arbeiten anhören", details="Details"),
     "es": dict(label="Servicios", includes_h="Qué recibes", need_h="Qué necesito de ti", price_h="Precios",
-               price_note="Los mismos precios que en mi perfil de Fiverr, en dólares. Para álbumes y catálogos preparo una oferta a medida.",
+               price_note="Precios en dólares. Para álbumes y catálogos preparo una oferta a medida.",
                how_h="Cómo es un proyecto", faq_h="Preguntas", other_h="Otros servicios", read_h="Del diario de estudio",
                cta="Empezar un proyecto", cta2="Escuchar el trabajo", details="Detalles"),
 }

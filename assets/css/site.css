@@ -166,8 +166,15 @@ body:not(.is-home) main{ padding-top:64px; }
 .hero__inner{ position:relative; display:grid; justify-items:center; gap:26px; }
 .hero__inner::before{ content:""; position:absolute; z-index:-1; left:50%; top:46%; width:min(1100px, 130vw); height:150%; transform:translate(-50%, -50%); background:radial-gradient(closest-side, rgba(0,0,0,.72), rgba(0,0,0,.38) 55%, transparent); pointer-events:none; }
 .hero__title{ display:grid; gap:20px; justify-items:center; }
-.hero__kicker{ font-size:clamp(.875rem, 1.1vw, 1rem); font-weight:600; letter-spacing:.01em; color:rgba(255,255,255,.72); }
-.hero__line{ display:block; font-size:clamp(3.375rem, 9.6vw, 9.5rem); font-weight:800; font-stretch:106%; line-height:.9; letter-spacing:-.055em; max-width:12ch; color:#fff; text-wrap:balance; }
+.hero__kicker{ font-size:clamp(1rem, 1.5vw, 1.375rem); font-weight:650; letter-spacing:-.005em; color:rgba(255,255,255,.88); }
+.hero__line{ display:block; font-size:clamp(2.75rem, 7.6vw, 7.75rem); font-weight:800; font-stretch:106%; line-height:.92; letter-spacing:-.05em; max-width:15ch; color:#fff; text-wrap:balance; }
+.hero__line-b{ display:block; }
+.hero__line .hero__line-b .w > span{ background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.hero__id{ display:inline-flex; align-items:center; gap:12px; padding:6px 16px 6px 6px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); text-align:left; }
+.hero__id img{ width:48px; height:48px; border-radius:50%; object-fit:cover; }
+.hero__id > span{ display:grid; gap:1px; line-height:1.2; }
+.hero__id b{ font-size:1rem; font-weight:720; letter-spacing:-.01em; color:#fff; }
+.hero__id > span > span{ font-size:.8125rem; font-weight:560; color:rgba(255,255,255,.7); }
 .hero__line .w > span{ background:var(--grad-v); -webkit-background-clip:text; background-clip:text; color:transparent; }
 .hero__lead{ max-width:46ch; font-size:clamp(1.125rem, 1.6vw, 1.375rem); line-height:1.5; color:rgba(255,255,255,.8); }
 .hero__cta{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:8px; }

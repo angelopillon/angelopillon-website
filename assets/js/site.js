@@ -192,4 +192,13 @@
   if (root.getAttribute("data-sw") === "1" && "serviceWorker" in navigator) {
     addEventListener("load", function () { navigator.serviceWorker.register("/sw.js").catch(function () {}); });
   }
+
+  /* language menu: remember the choice, so the home stops redirecting by browser language or country */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("details.lang a[hreflang]");
+    if (!a) return;
+    var code = a.getAttribute("hreflang"), y = "; path=/; max-age=31536000; SameSite=Lax";
+    document.cookie = "nf_lang=" + code + y;
+    document.cookie = "nf_country=" + (code === "it" ? "IT" : code === "de" ? "DE" : code === "es" ? "ES" : "US") + y;
+  });
 })();

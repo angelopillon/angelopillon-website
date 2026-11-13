@@ -466,8 +466,8 @@ def ab_tracks():
 HOME_V3 = {
     "en": dict(
         home_city="Milan", kicker="Mix and mastering engineer · Milan", drag_hint="Drag the globe to spin it.", countries_label="Countries I have worked for",
-        h1="Release-ready.",
-        lead="Mixing and mastering through a hybrid analog chain, for labels, producers and artists. Mastering in 48 hours, from Milan to 66 countries.",
+        h1="Release-ready.", h1a="Your track,", h1b="mixed and mastered.", id_role="Apple Digital Masters certified",
+        lead="Hybrid analog studio in Milan. Send your stems or your mix and get back a record that is balanced, deep and ready for Spotify, the club and radio.",
         cta1="Send a track", adm_label="Certified engineer", manifesto_label="How I work",
         manifesto="A track comes in as a mix and leaves as a record. Balanced, as loud as it should be, the same on headphones, in a club and in the car. I work on it myself from start to finish, with a real analog chain and fifteen years of listening.",
         lb_h2="Built for labels.", lb_intro="One engineer for the whole catalogue. Clear timing and pricing before we start.",
@@ -475,8 +475,8 @@ HOME_V3 = {
         lb_cta="Ask for a catalogue quote"),
     "it": dict(
         home_city="Milano", kicker="Mix e mastering engineer · Milano", drag_hint="Trascina il globo per farlo girare.", countries_label="Paesi per cui ho lavorato",
-        h1="Pronto per l’uscita.",
-        lead="Mix e mastering in catena ibrida analogica, per etichette, produttori e artisti. Mastering in 48 ore, da Milano a 66 paesi.",
+        h1="Pronto per l’uscita.", h1a="Il tuo brano,", h1b="mixato e masterizzato.", id_role="Certificato Apple Digital Masters",
+        lead="Studio ibrido analogico a Milano. Mandami le tracce o il mix: ti torna un disco bilanciato, profondo e pronto per Spotify, club e radio.",
         cta1="Invia un brano", adm_label="Fonico certificato", manifesto_label="Come lavoro",
         manifesto="Un brano entra come mix ed esce come disco. Bilanciato, forte quanto deve esserlo, uguale in cuffia, in club e in macchina. Lo lavoro io dall’inizio alla fine, con una catena analogica vera e quindici anni di ascolto.",
         lb_h2="Fatto per le etichette.", lb_intro="Un solo fonico per tutto il catalogo. Tempi e prezzi chiari prima di iniziare.",
@@ -484,8 +484,8 @@ HOME_V3 = {
         lb_cta="Chiedi un’offerta per il catalogo"),
     "de": dict(
         home_city="Mailand", kicker="Mixing- und Mastering-Engineer · Mailand", drag_hint="Zieh den Globus, um ihn zu drehen.", countries_label="Länder, für die ich gearbeitet habe",
-        h1="Bereit für den Release.",
-        lead="Mixing und Mastering in einer hybriden Analogkette, für Labels, Produzenten und Artists. Mastering in 48 Stunden, von Mailand in 66 Länder.",
+        h1="Bereit für den Release.", h1a="Dein Track,", h1b="gemischt und gemastert.", id_role="Apple Digital Masters zertifiziert",
+        lead="Hybrides Analogstudio in Mailand. Schick mir deine Spuren oder deinen Mix und du bekommst eine Platte zurück, die ausgewogen, tief und bereit für Spotify, Club und Radio ist.",
         cta1="Track senden", adm_label="Zertifizierter Engineer", manifesto_label="So arbeite ich",
         manifesto="Ein Track kommt als Mix und geht als Platte. Ausgewogen, so laut wie er sein soll, gleich auf Kopfhörern, im Club und im Auto. Ich bearbeite ihn selbst von Anfang bis Ende, mit einer echten Analogkette und fünfzehn Jahren Hörerfahrung.",
         lb_h2="Gemacht für Labels.", lb_intro="Ein Engineer für den ganzen Katalog. Klare Zeiten und Preise, bevor wir anfangen.",
@@ -493,8 +493,8 @@ HOME_V3 = {
         lb_cta="Angebot für den Katalog anfragen"),
     "es": dict(
         home_city="Milán", kicker="Ingeniero de mezcla y mastering · Milán", drag_hint="Arrastra el globo para girarlo.", countries_label="Países para los que he trabajado",
-        h1="Listo para publicar.",
-        lead="Mezcla y mastering en una cadena híbrida analógica, para sellos, productores y artistas. Mastering en 48 horas, de Milán a 66 países.",
+        h1="Listo para publicar.", h1a="Tu tema,", h1b="mezclado y masterizado.", id_role="Certificado Apple Digital Masters",
+        lead="Estudio híbrido analógico en Milán. Envíame tus pistas o tu mezcla y te devuelvo un disco equilibrado, profundo y listo para Spotify, el club y la radio.",
         cta1="Envía un tema", adm_label="Ingeniero certificado", manifesto_label="Cómo trabajo",
         manifesto="Un tema entra como mezcla y sale como disco. Equilibrado, tan fuerte como debe ser, igual en auriculares, en el club y en el coche. Lo trabajo yo de principio a fin, con una cadena analógica real y quince años de escucha.",
         lb_h2="Hecho para sellos.", lb_intro="Un solo ingeniero para todo el catálogo. Plazos y precios claros antes de empezar.",
@@ -781,6 +781,36 @@ def write_netlify():
   to = "/404.html"
   status = 404
   force = true
+
+# The English home sends visitors to their own language. Browser language first, then Italy by country.
+# Picking a language in the menu sets the nf_lang / nf_country cookies, which Netlify reads before the browser.
+[[redirects]]
+  from = "/"
+  to = "/it/"
+  status = 302
+  force = true
+  conditions = {Language = ["it"]}
+
+[[redirects]]
+  from = "/"
+  to = "/de/"
+  status = 302
+  force = true
+  conditions = {Language = ["de"]}
+
+[[redirects]]
+  from = "/"
+  to = "/es/"
+  status = 302
+  force = true
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/"
+  to = "/it/"
+  status = 302
+  force = true
+  conditions = {Country = ["IT", "SM", "VA"]}
 
 [[redirects]]
   from = "/it/articoli"

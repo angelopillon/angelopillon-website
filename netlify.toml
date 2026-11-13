@@ -37,6 +37,36 @@
   status = 404
   force = true
 
+# The English home sends visitors to their own language. Browser language first, then Italy by country.
+# Picking a language in the menu sets the nf_lang / nf_country cookies, which Netlify reads before the browser.
+[[redirects]]
+  from = "/"
+  to = "/it/"
+  status = 302
+  force = true
+  conditions = {Language = ["it"]}
+
+[[redirects]]
+  from = "/"
+  to = "/de/"
+  status = 302
+  force = true
+  conditions = {Language = ["de"]}
+
+[[redirects]]
+  from = "/"
+  to = "/es/"
+  status = 302
+  force = true
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/"
+  to = "/it/"
+  status = 302
+  force = true
+  conditions = {Country = ["IT", "SM", "VA"]}
+
 [[redirects]]
   from = "/it/articoli"
   to = "/it/articoli/"
