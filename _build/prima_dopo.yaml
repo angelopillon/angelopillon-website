@@ -18,4 +18,20 @@
 #     before: titolo-prima.mp3
 #     after: titolo-dopo.mp3
 
-tracks: []
+tracks:
+  - title: "Melodic House"
+    service: mix_master
+    before: melodic-house-prima.mp3
+    after: melodic-house-dopo.mp3
+  - title: "Tech House"
+    service: mix_master
+    before: tech-house-prima.mp3
+    after: tech-house-dopo.mp3
+  - title: "Electronic"
+    service: mix_master
+    before: electronic-prima.mp3
+    after: electronic-dopo.mp3
+  - title: "Pop"
+    service: mix_master
+    before: pop-prima.mp3
+    after: pop-dopo.mp3
