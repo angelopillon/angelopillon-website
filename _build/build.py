@@ -39,6 +39,7 @@ V = datetime.datetime.now().strftime("%Y%m%d%H%M")
 SKIP_OG = "--no-og" in sys.argv
 
 env = Environment(loader=FileSystemLoader(str(B / "templates")), autoescape=True, trim_blocks=False, lstrip_blocks=False)
+env.filters["lufs"] = lambda v, lang="en": "" if v is None else (f"{v:.1f}".replace("-", "\u2212").replace(".", "," if lang != "en" else "."))
 env.globals["preview"] = PREVIEW
 PAGES = []
 
@@ -381,23 +382,65 @@ HOME_PROOF = {
 
 AB_DIR = "assets/audio/prima-dopo"
 AB_TEXT = {
-    "en": dict(before="Before", after="After", version="Version", play="Play", pause="Pause", seek="Position", match="Matched loudness", loading="Loading…", error="This track cannot be played right now.",
+    "en": dict(lufs="LUFS", lufs_note="integrated loudness of the file", h2="Before and after.", lead="Tracks as they arrived and as they left the studio. Press play and switch between the two while the music runs: same spot, same level.", pick="Choose a track", spotify="The full playlist is on Spotify.", before="Before", after="After", version="Version", play="Play", pause="Pause", seek="Position", match="Matched loudness", loading="Loading…", error="This track cannot be played right now.",
                note="Same track, same spot: switch between before and after while it plays.", tracks="Before and after tracks",
                service=dict(mix_master="Mix and master", mastering="Mastering", stem="Stem mastering")),
-    "it": dict(before="Prima", after="Dopo", version="Versione", play="Riproduci", pause="Pausa", seek="Posizione", match="Stesso volume", loading="Carico…", error="Questo brano ora non si può riprodurre.",
+    "it": dict(lufs="LUFS", lufs_note="loudness integrata del file", h2="Prima e dopo.", lead="I brani come sono arrivati e come sono usciti dallo studio. Premi play e passa da uno all’altro mentre la musica scorre: stesso punto, stesso volume.", pick="Scegli un brano", spotify="La playlist completa è su Spotify.", before="Prima", after="Dopo", version="Versione", play="Riproduci", pause="Pausa", seek="Posizione", match="Stesso volume", loading="Carico…", error="Questo brano ora non si può riprodurre.",
                note="Stesso brano, stesso punto: passa da prima a dopo mentre suona.", tracks="Brani prima e dopo",
                service=dict(mix_master="Mix e master", mastering="Mastering", stem="Stem mastering")),
-    "de": dict(before="Vorher", after="Nachher", version="Version", play="Abspielen", pause="Pause", seek="Position", match="Gleiche Lautstärke", loading="Lädt…", error="Dieser Track lässt sich gerade nicht abspielen.",
+    "de": dict(lufs="LUFS", lufs_note="integrierte Lautheit der Datei", h2="Vorher und nachher.", lead="Tracks, wie sie ins Studio kamen und wie sie es verlassen haben. Drück auf Play und wechsle, während die Musik läuft: dieselbe Stelle, dieselbe Lautstärke.", pick="Track wählen", spotify="Die ganze Playlist gibt es auf Spotify.", before="Vorher", after="Nachher", version="Version", play="Abspielen", pause="Pause", seek="Position", match="Gleiche Lautstärke", loading="Lädt…", error="Dieser Track lässt sich gerade nicht abspielen.",
                note="Derselbe Track, dieselbe Stelle: Wechsle beim Hören zwischen vorher und nachher.", tracks="Tracks vorher und nachher",
                service=dict(mix_master="Mix und Master", mastering="Mastering", stem="Stem-Mastering")),
-    "es": dict(before="Antes", after="Después", version="Versión", play="Reproducir", pause="Pausa", seek="Posición", match="Mismo volumen", loading="Cargando…", error="Este tema no se puede reproducir ahora.",
+    "es": dict(lufs="LUFS", lufs_note="sonoridad integrada del archivo", h2="Antes y después.", lead="Los temas tal como llegaron y tal como salieron del estudio. Dale al play y cambia de uno a otro mientras suena: el mismo punto, el mismo volumen.", pick="Elige un tema", spotify="La playlist completa está en Spotify.", before="Antes", after="Después", version="Versión", play="Reproducir", pause="Pausa", seek="Posición", match="Mismo volumen", loading="Cargando…", error="Este tema no se puede reproducir ahora.",
                note="El mismo tema, el mismo punto: cambia entre antes y después mientras suena.", tracks="Temas antes y después",
                service=dict(mix_master="Mezcla y master", mastering="Mastering", stem="Stem mastering")),
 }
 
 
+AB_CACHE = B / ".ab_cache.json"
+
+
+def ab_analyse(path):
+    """Loudness (LUFS), length and a loudness envelope for one file, cached on name, size and date."""
+    import subprocess
+    import numpy as np
+    st = path.stat()
+    key = f"{path.name}:{st.st_size}:{int(st.st_mtime)}"
+    cache = json.loads(AB_CACHE.read_text()) if AB_CACHE.exists() else {}
+    if key in cache:
+        return cache[key]
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-ac", "1", "-ar", "8000", "-f", "f32le", "-"], capture_output=True, check=True).stdout
+    x = np.frombuffer(raw, np.float32)
+    n = 480
+    step = max(1, len(x) // n)
+    rms = np.sqrt((x[: step * n].reshape(n, step) ** 2).mean(1))
+    env = [int(round(min(1.0, (v * 1.75) ** 0.92) * 255)) for v in rms]
+    lufs = None
+    log = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(path), "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
+    m = re.findall(r"I:\s+(-?[0-9.]+) LUFS", log)
+    if m:
+        lufs = float(m[-1])
+    out = dict(env=env, lufs=lufs, dur=round(len(x) / 8000, 2))
+    cache = {k: v for k, v in cache.items() if not k.startswith(path.name + ":")}
+    cache[key] = out
+    AB_CACHE.write_text(json.dumps(cache))
+    return out
+
+
+def ab_wave_svg(env, bars=44):
+    """Small bar graph of a loudness envelope, as SVG rectangles (100 x 32)."""
+    chunk = len(env) / bars
+    out = []
+    for i in range(bars):
+        part = env[int(i * chunk): max(int(i * chunk) + 1, int((i + 1) * chunk))]
+        h = max(1.2, (max(part) / 255) * 30)
+        out.append(f'<rect x="{i * 100 / bars + 0.35:.2f}" y="{16 - h / 2:.2f}" width="{100 / bars - 0.7:.2f}" height="{h:.2f}" rx=".6"/>')
+    return "".join(out)
+
+
 def ab_tracks():
     """Before/after pairs listed in _build/prima_dopo.yaml. An empty list keeps the Spotify playlist on the home."""
+    import base64
     f = B / "prima_dopo.yaml"
     items = (yaml.safe_load(f.read_text()) or {}).get("tracks") or [] if f.exists() else []
     out = []
@@ -410,8 +453,13 @@ def ab_tracks():
                 sys.exit(f"prima_dopo.yaml: file non trovato: {AB_DIR}/{t[k]}")
         if t.get("service", "mix_master") not in AB_TEXT["en"]["service"]:
             sys.exit(f"prima_dopo.yaml: service non valido in {t['title']}")
+        fb, fa = ab_analyse(ROOT / AB_DIR / t["before"]), ab_analyse(ROOT / AB_DIR / t["after"])
+        dur = min(fb["dur"], fa["dur"])
         out.append(dict(title=t["title"], artist=t.get("artist", ""), genre=t.get("genre", ""), service=t.get("service", "mix_master"),
-                        before=f"/{AB_DIR}/{quote(t['before'])}", after=f"/{AB_DIR}/{quote(t['after'])}"))
+                        before=f"/{AB_DIR}/{quote(t['before'])}", after=f"/{AB_DIR}/{quote(t['after'])}",
+                        env_b=base64.b64encode(bytes(fb["env"])).decode(), env_a=base64.b64encode(bytes(fa["env"])).decode(),
+                        lufs_b=fb["lufs"], lufs_a=fa["lufs"], dur=dur, dur_txt=f"{int(dur) // 60}:{int(dur) % 60:02d}",
+                        svg_b=Markup(ab_wave_svg(fb["env"])), svg_a=Markup(ab_wave_svg(fa["env"]))))
     return out
 
 

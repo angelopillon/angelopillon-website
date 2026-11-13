@@ -62,41 +62,60 @@
   </div>
 </section>
 
-<section class="hx-sec hx-dark hx-listen" id="listen" aria-labelledby="h-listen">
-  <div class="wrap hx-listen__grid">
-    <div class="hx-listen__text">
-      <h2 class="t-display" id="h-listen" data-split>{{ c.ls_h2 }}</h2>
-      <p class="t-lead" data-reveal>{{ c.ls_p }}</p>
-      <a class="btn btn--ghost" href="https://open.spotify.com/playlist/{{ playlist }}" rel="noopener" target="_blank" data-reveal>{{ c.ls_open }}</a>
+<section class="hx-sec hx-dark hx-listen{% if ab %} hx-listen--ab{% endif %}" id="listen" aria-labelledby="h-listen">
+  {% if ab %}<div class="wrap">
+    <div class="abx-head">
+      <h2 class="t-display" id="h-listen" data-split>{{ abt.h2 }}</h2>
+      <div class="abx-head__text" data-reveal>
+        <p class="t-lead">{{ abt.lead }}</p>
+        <p class="abx-head__more">{{ abt.spotify }} <a href="https://open.spotify.com/playlist/{{ playlist }}" rel="noopener" target="_blank">{{ c.ls_open }}</a></p>
+      </div>
     </div>
-    {% if ab %}<div class="ab" data-ab data-reveal data-play="{{ abt.play }}" data-pause="{{ abt.pause }}" data-loading="{{ abt.loading }}" data-error="{{ abt.error }}">
-      <ol class="ab__list" aria-label="{{ abt.tracks }}">
-        {% for t in ab %}<li><button class="ab__track" type="button" data-before="{{ t.before }}" data-after="{{ t.after }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">
-          <span class="ab__n" aria-hidden="true">{{ loop.index }}</span>
-          <span class="ab__meta"><b>{{ t.title }}</b>{% if t.artist or t.genre %}<span>{{ t.artist }}{% if t.artist and t.genre %}, {% endif %}{{ t.genre }}</span>{% endif %}</span>
-          <span class="ab__svc">{{ abt.service[t.service] }}</span>
-        </button></li>
-        {% endfor %}
-      </ol>
+    <div class="ab" data-ab data-reveal data-play="{{ abt.play }}" data-pause="{{ abt.pause }}" data-loading="{{ abt.loading }}" data-error="{{ abt.error }}" data-version="before">
+      <div class="ab__screen">
+        <div class="ab__top">
+          <div class="ab__now"><span class="ab__now-svc">{{ abt.service[ab[0].service] }}</span><b class="ab__now-title">{{ ab[0].title }}</b></div>
+          <div class="ab__meter" title="{{ abt.lufs_note }}"><b class="ab__lufs" data-lufs>{{ ab[0].lufs_b|lufs(lang) }}</b><span>{{ abt.lufs }}<i>{{ abt.lufs_note }}</i></span></div>
+        </div>
+        <div class="ab__wave">
+          <canvas class="ab__canvas" aria-hidden="true"></canvas>
+          <input class="ab__seek" type="range" min="0" max="1000" value="0" step="1" aria-label="{{ abt.seek }}">
+        </div>
+        <div class="ab__foot">
+          <span class="ab__time" aria-hidden="true">0:00 / {{ ab[0].dur_txt }}</span>
+          <span class="ab__legend" aria-hidden="true"><i data-l="before"></i>{{ abt.before }}<i data-l="after"></i>{{ abt.after }}</span>
+        </div>
+      </div>
       <div class="ab__deck">
         <button class="ab__play" type="button" aria-label="{{ abt.play }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="ab__ico-play" d="M8 5.2v13.6L19 12z"/><path class="ab__ico-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg></button>
         <div class="ab__switch" role="group" aria-label="{{ abt.version }}">
           <button type="button" data-v="before" aria-pressed="true">{{ abt.before }}</button>
           <button type="button" data-v="after" aria-pressed="false">{{ abt.after }}</button>
         </div>
-        <label class="ab__match"><input type="checkbox" checked> <span>{{ abt.match }}</span></label>
-        <input class="ab__seek" type="range" min="0" max="1000" value="0" step="1" aria-label="{{ abt.seek }}">
-        <span class="ab__time" aria-hidden="true">0:00 / 0:00</span>
+        <label class="ab__match"><input type="checkbox" role="switch" checked><span class="ab__toggle" aria-hidden="true"></span><span>{{ abt.match }}</span></label>
       </div>
-      <p class="ab__note">{{ abt.note }}</p>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="abgrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="0"><stop offset="0" stop-color="#4D6BFF"/><stop offset=".3" stop-color="#8B4DFF"/><stop offset=".55" stop-color="#FF3DA5"/><stop offset=".8" stop-color="#FF6A2B"/><stop offset="1" stop-color="#FFC24B"/></linearGradient></defs></svg>
+      <ol class="ab__list" aria-label="{{ abt.tracks }}">
+        {% for t in ab %}<li><button class="ab__track" type="button" data-before="{{ t.before }}" data-after="{{ t.after }}" data-eb="{{ t.env_b }}" data-ea="{{ t.env_a }}" data-lb="{{ t.lufs_b|lufs(lang) }}" data-la="{{ t.lufs_a|lufs(lang) }}" data-dur="{{ t.dur }}" data-title="{{ t.title }}" data-svc="{{ abt.service[t.service] }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">
+          <svg class="ab__mini" viewBox="0 0 100 32" preserveAspectRatio="none" aria-hidden="true"><g class="ab__mini-b">{{ t.svg_b }}</g><g class="ab__mini-a">{{ t.svg_a }}</g></svg>
+          <span class="ab__meta"><b>{{ t.title }}</b><span>{% if t.artist %}{{ t.artist }} · {% endif %}{{ abt.service[t.service] }} · {{ t.dur_txt }}</span></span>
+        </button></li>
+        {% endfor %}
+      </ol>
       <p class="ab__status" role="status" aria-live="polite"></p>
     </div>
-    {% else %}    <div class="listen__player" data-reveal>
+  </div>
+  {% else %}<div class="wrap hx-listen__grid">
+    <div class="hx-listen__text">
+      <h2 class="t-display" id="h-listen" data-split>{{ c.ls_h2 }}</h2>
+      <p class="t-lead" data-reveal>{{ c.ls_p }}</p>
+      <a class="btn btn--ghost" href="https://open.spotify.com/playlist/{{ playlist }}" rel="noopener" target="_blank" data-reveal>{{ c.ls_open }}</a>
+    </div>
+    <div class="listen__player" data-reveal>
       {% if preview %}<div class="listen__ph"><div class="eq" aria-hidden="true">{% for i in range(9) %}<i style="--i:{{ i }}"></i>{% endfor %}</div><b>Mixed and Mastered</b><small>{{ c.ls_preview }}</small></div>
       {% else %}<iframe title="Spotify: Mixed and Mastered" src="https://open.spotify.com/embed/playlist/{{ playlist }}?utm_source=generator&amp;theme=0" width="100%" height="452" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>{% endif %}
     </div>
-    {% endif %}
-  </div>
+  </div>{% endif %}
 </section>
 
 <section class="hx-sec hx-tone hx-labels" id="labels" aria-labelledby="h-labels">
