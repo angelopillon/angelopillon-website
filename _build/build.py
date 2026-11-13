@@ -26,6 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import og  # noqa: E402
 import strings as S  # noqa: E402
 import tools as TL  # noqa: E402
+import services as SV  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 B = ROOT / "_build"
@@ -75,7 +76,22 @@ def ui_for(lang):
     u["tools_href"] = "/it/strumenti/" if cl == "it" else "/tools/"
     u["meter_href"] = TL.TOOLS[0]["path"][cl]
     u["ft_cols"] = [dict(title=t, links=[dict(label=l, href=h, ext=h.startswith("http")) for l, h in items]) for t, items in S.FOOTER[lang]]
+    # the service column of the footer points at the service pages, in the order of the price list
+    by_index = {SV.SVC_INDEX[k]: SV.PAGES[lang][k]["path"] for k in SV.ORDER}
+    for i, link in enumerate(u["ft_cols"][0]["links"]):
+        link["href"] = by_index.get(i, link["href"])
+    u["svc_links"] = service_links(lang)
     return u
+
+
+def service_links(lang):
+    """Name, address and price of every service page in one language, in the order they are sold."""
+    out = []
+    for k in SV.ORDER:
+        p = SV.PAGES[lang][k]
+        card = S.HOME[lang]["services"][SV.SVC_INDEX[k]]
+        out.append(dict(key=k, name=p["name"], href=p["path"], price=card["price"], desc=card["desc"], time=card["time"]))
+    return out
 
 
 def add_page(**kw):
@@ -97,8 +113,10 @@ def crumbs_ld(items):
         {"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + h} for i, (n, h) in enumerate(items)]}
 
 
-PERSON = {"@type": "Person", "@id": SITE + "/#angelo", "name": "Angelo Pillon", "jobTitle": "Mixing and mastering engineer", "url": SITE + "/",
-          "sameAs": [CFG["fiverr"], CFG["soundbetter"]], "image": SITE + "/assets/img/angelo-240.jpg"}
+PERSON = {"@type": "Person", "@id": SITE + "/#angelo", "name": "Angelo Pillon", "jobTitle": "Mix engineer and mastering engineer", "url": SITE + "/",
+          "sameAs": [CFG["fiverr"], "https://pro.fiverr.com/freelancers/angelopillon", CFG["soundbetter"]], "image": SITE + "/assets/img/angelo-240.jpg",
+          "knowsAbout": ["Audio mixing", "Audio mastering", "Stem mastering", "Analog mastering", "Loudness (LUFS)", "Apple Digital Masters"],
+          "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}}
 
 
 # ---------------------------------------------------------------- articles
@@ -399,7 +417,7 @@ def ab_tracks():
 
 HOME_V3 = {
     "en": dict(
-        home_city="Milan", drag_hint="Drag the globe to spin it.", countries_label="Countries I have worked for",
+        home_city="Milan", kicker="Mix and mastering engineer · Milan", drag_hint="Drag the globe to spin it.", countries_label="Countries I have worked for",
         h1="Release-ready.",
         lead="Mixing and mastering through a hybrid analog chain, for labels, producers and artists. Mastering in 48 hours, from Milan to 66 countries.",
         cta1="Send a track", adm_label="Certified engineer", manifesto_label="How I work",
@@ -408,7 +426,7 @@ HOME_V3 = {
         lb_facts=[("48 hours", "to master a single"), ("3-5 days", "to mix and master from the stems"), ("Custom", "quote and schedule for EPs, albums and catalogues"), ("4 languages", "English, Italian, German and Spanish")],
         lb_cta="Ask for a catalogue quote"),
     "it": dict(
-        home_city="Milano", drag_hint="Trascina il globo per farlo girare.", countries_label="Paesi per cui ho lavorato",
+        home_city="Milano", kicker="Mix e mastering engineer · Milano", drag_hint="Trascina il globo per farlo girare.", countries_label="Paesi per cui ho lavorato",
         h1="Pronto per l’uscita.",
         lead="Mix e mastering in catena ibrida analogica, per etichette, produttori e artisti. Mastering in 48 ore, da Milano a 66 paesi.",
         cta1="Invia un brano", adm_label="Fonico certificato", manifesto_label="Come lavoro",
@@ -417,7 +435,7 @@ HOME_V3 = {
         lb_facts=[("48 ore", "per il mastering di un singolo"), ("3-5 giorni", "per mix e master dalle tracce"), ("Su misura", "offerta e calendario per EP, album e cataloghi"), ("4 lingue", "italiano, inglese, tedesco e spagnolo")],
         lb_cta="Chiedi un’offerta per il catalogo"),
     "de": dict(
-        home_city="Mailand", drag_hint="Zieh den Globus, um ihn zu drehen.", countries_label="Länder, für die ich gearbeitet habe",
+        home_city="Mailand", kicker="Mixing- und Mastering-Engineer · Mailand", drag_hint="Zieh den Globus, um ihn zu drehen.", countries_label="Länder, für die ich gearbeitet habe",
         h1="Bereit für den Release.",
         lead="Mixing und Mastering in einer hybriden Analogkette, für Labels, Produzenten und Artists. Mastering in 48 Stunden, von Mailand in 66 Länder.",
         cta1="Track senden", adm_label="Zertifizierter Engineer", manifesto_label="So arbeite ich",
@@ -426,7 +444,7 @@ HOME_V3 = {
         lb_facts=[("48 Stunden", "für das Mastering einer Single"), ("3-5 Tage", "für Mix und Master aus den Spuren"), ("Individuell", "Angebot und Zeitplan für EPs, Alben und Kataloge"), ("4 Sprachen", "Deutsch, Englisch, Italienisch und Spanisch")],
         lb_cta="Angebot für den Katalog anfragen"),
     "es": dict(
-        home_city="Milán", drag_hint="Arrastra el globo para girarlo.", countries_label="Países para los que he trabajado",
+        home_city="Milán", kicker="Ingeniero de mezcla y mastering · Milán", drag_hint="Arrastra el globo para girarlo.", countries_label="Países para los que he trabajado",
         h1="Listo para publicar.",
         lead="Mezcla y mastering en una cadena híbrida analógica, para sellos, productores y artistas. Mastering en 48 horas, de Milán a 66 países.",
         cta1="Envía un tema", adm_label="Ingeniero certificado", manifesto_label="Cómo trabajo",
@@ -460,6 +478,9 @@ def home_pages(arts):
         posts = [a for a in pool if a["cat"] == "news"][:2] + [a for a in pool if a["cat"] != "news"][:2]
         proof = [(v, S.COSMOS[lang].get(k, k)) for v, k in HOME_PROOF[lang]]
         posts = [dict(href=a["path"], title=a["title"], cat=a["cat"], cover=post_cover(a), cat_label=S.CATS[a["cat"]][lang] if lang in S.CATS[a["cat"]] else a["cat_label"], date=a["date"], date_label=S.date_label(a["date"], lang)) for a in posts]
+        by_index = {SV.SVC_INDEX[x["key"]]: x["href"] for x in service_links(lang)}
+        s["services"] = [dict(sv, href=by_index[i]) for i, sv in enumerate(s["services"])]
+        s["sv_more"] = SV.UI[lang]["details"]
         main = env.get_template("home.html").render(s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
                                                      meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
                                                      codes=S.CLIENT_CODES, playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang))
@@ -475,6 +496,35 @@ def home_pages(arts):
                  scripts=["/assets/js/cosmos.js"] + (["/assets/js/ab-home.js"] if ab else []), og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
                  og_args=dict(title=s["h1"], kicker={"en": "Mixing and mastering", "it": "Mix e mastering", "de": "Mixing und Mastering", "es": "Mezcla y mastering"}[lang], readout="−8.9 LUFS  −0.3 dBTP"),
                  body_class="is-home")
+
+
+# ---------------------------------------------------------------- service pages
+def service_pages(arts):
+    for lang in S.LANGS:
+        ui = ui_for(lang)
+        u = SV.UI[lang]
+        home = S.HOME[lang]
+        proof = [(v, S.COSMOS[lang].get(k, k)) for v, k in HOME_PROOF[lang]]
+        pool = [a for a in arts if a["lang"] == S.ARTICLE_LANG[lang]]
+        links = service_links(lang)
+        for k in SV.ORDER:
+            p = SV.PAGES[lang][k]
+            card = home["services"][SV.SVC_INDEX[k]]
+            wanted = SV.RELATED[k]
+            related = sorted([a for a in pool if a["group"] in wanted or a["slug"] in wanted], key=lambda a: min(wanted.index(x) for x in (a["group"], a["slug"]) if x in wanted))[:4]
+            related = [dict(href=a["path"], title=a["title"], cat=a["cat"], cat_label=a["cat_label"], minutes=a["minutes"]) for a in related]
+            main = env.get_template("service.html").render(ui=ui, u=u, p=p, card=card, proof=proof, steps=home["steps"], others=[o for o in links if o["key"] != k],
+                                                          related=related, ct_h2=home["ct_h2"], ct_intro=home["ct_intro"])
+            prices = [card["p"]] + [int(re.sub(r"[^0-9]", "", pr)) for _, pr in card["tiers"]]
+            svc = {"@context": "https://schema.org", "@type": "Service", "name": p["h1"], "serviceType": p["name"], "description": p["description"], "url": SITE + p["path"],
+                   "inLanguage": lang, "areaServed": "Worldwide", "provider": {"@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering", "url": SITE + "/",
+                                                                               "image": SITE + "/assets/img/studio-1-1400.jpg", "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"},
+                                                                               "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "ratingCount": "789"}},
+                   "offers": {"@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": str(min(prices)), "highPrice": str(max(prices)), "offerCount": str(max(1, len(card["tiers"])))}}
+            faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faqs"]]}
+            add_page(path=p["path"], lang=lang, title=p["title"], description=p["description"], main=main, alt_key="svc-" + k, nav_current="services",
+                     jsonld=[svc, faq, crumbs_ld([(ui["home_label"], S.HOMES[lang]), (p["name"], p["path"])])],
+                     og_image=f"/assets/og/{lang}-svc-{k}.png", og_title=p["h1"], og_args=dict(title=p["h1"], kicker=u["label"], readout=f"{card['price']}  {card['time']}"))
 
 
 # ---------------------------------------------------------------- legal + 404
@@ -773,6 +823,7 @@ def main():
     bundle_js()
     arts = load_articles()
     home_pages(arts)
+    service_pages(arts)
     article_pages(arts)
     tool_pages()
     legal_pages()

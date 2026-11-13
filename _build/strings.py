@@ -149,8 +149,8 @@ UNITS = {
 
 HOME = {}
 HOME["en"] = dict(
-    title="Angelo Pillon, mixing and mastering engineer in Milan",
-    description="Mixing and mastering from a hybrid analog and digital studio in Milan. Apple Digital Masters certified, 4.9/5 from 700+ reviews. Free LUFS meter and mixing tools.",
+    title="Mix Engineer & Mastering Engineer in Milan | Angelo Pillon",
+    description="Online mix engineer and mastering engineer with a hybrid analog studio in Milan. Apple Digital Masters certified, 4.9/5 from 700+ reviews, clients in 66 countries.",
     h1="Mixing and mastering from a hybrid studio in Milan.",
     lead="Send your stems or your mix. You get back a record that is balanced, as loud as it should be, and safe on every platform it is going to.",
     cta1="Start a project", cta2="Measure your track",
@@ -158,7 +158,7 @@ HOME["en"] = dict(
     r_i="Integrated", r_st="Short-term max", r_tp="True peak", r_lra="Range", r_corr="Correlation",
     b_drop="Drop a WAV, AIFF, FLAC or MP3 here. The analysis runs on your computer; nothing is uploaded.", b_choose="Choose a file",
     e_alt="Angelo Pillon at the console in his studio in Milan", e_alt2="Angelo Pillon in his Milan studio, between laptop, monitors and analog outboard", e_h2="Fifteen years behind the console.",
-    e_p1="I’m Angelo, an Italian engineer who has worked in some of the largest recording studios and with artists who reached Sanremo. Today I mix and master for artists, producers and labels in 66 countries.",
+    e_p1="I’m Angelo, an Italian engineer who has worked in some of the largest recording studios. Today I mix and master for artists, producers and labels in 66 countries.",
     e_p2="Every genre has its own physics. Techno lives in the low end and the space around it, R&B in vocal air and pocket, pop in a lead vocal that never fights the track. I set up each session for the record in front of me, not for a template.",
     spec=[("Experience", "15+ years, full time"), ("Reviews", "4.9 out of 5 from 700+ reviews"), ("Tracks", "1,200+ delivered"), ("Certification", "Apple Digital Masters"), ("Languages", "English, Italian, German, Spanish")],
     sv_h2="What I do", sv_intro="The same prices as my Fiverr profile, in US dollars. Albums and multi-track projects get a custom offer.",
@@ -198,8 +198,8 @@ HOME["en"] = dict(
     f_err="Not sent. Try again, or write to <a href=\"mailto:angelopillon@gmail.com\">angelopillon@gmail.com</a>.",
 )
 HOME["it"] = dict(
-    title="Angelo Pillon, mix e mastering a Milano",
-    description="Mix e mastering in uno studio ibrido analogico e digitale a Milano. Certificato Apple Digital Masters, 4,9/5 su oltre 700 recensioni. Misuratore LUFS e strumenti gratuiti.",
+    title="Mix engineer e mastering a Milano | Angelo Pillon",
+    description="Mix engineer e mastering engineer a Milano, anche online. Studio ibrido analogico, certificato Apple Digital Masters, 4,9/5 su oltre 700 recensioni, clienti in 66 paesi.",
     h1="Mix e mastering da uno studio ibrido a Milano.",
     lead="Mandami le tracce o il mix. Ti torna indietro un disco bilanciato, forte quanto deve esserlo, e sicuro su ogni piattaforma su cui uscirà.",
     cta1="Inizia un progetto", cta2="Misura il tuo brano",
@@ -207,7 +207,7 @@ HOME["it"] = dict(
     r_i="Integrato", r_st="Short-term max", r_tp="True peak", r_lra="Range", r_corr="Correlazione",
     b_drop="Trascina qui un WAV, AIFF, FLAC o MP3. L’analisi avviene sul tuo computer: non viene caricato nulla.", b_choose="Scegli un file",
     e_alt="Angelo Pillon al mixer nel suo studio di Milano", e_alt2="Angelo Pillon nel suo studio di Milano, tra laptop, monitor e outboard analogico", e_h2="Quindici anni dietro al mixer.",
-    e_p1="Sono Angelo, fonico italiano. Ho lavorato in alcuni dei più grandi studi di registrazione e con artisti arrivati a Sanremo. Oggi mixo e masterizzo per artisti, produttori ed etichette in 66 paesi.",
+    e_p1="Sono Angelo, fonico italiano. Ho lavorato in alcuni dei più grandi studi di registrazione. Oggi mixo e masterizzo per artisti, produttori ed etichette in 66 paesi.",
     e_p2="Ogni genere ha la sua fisica. La techno vive nelle basse e nello spazio attorno, l’R&B nell’aria della voce e nel groove, il pop in una voce che non litiga mai con la base. Imposto ogni sessione sul disco che ho davanti, non su un preset.",
     spec=[("Esperienza", "Oltre 15 anni, a tempo pieno"), ("Recensioni", "4,9 su 5 da oltre 700 recensioni"), ("Brani", "Oltre 1.200 consegnati"), ("Certificazione", "Apple Digital Masters"), ("Lingue", "Italiano, inglese, tedesco, spagnolo")],
     sv_h2="Cosa faccio", sv_intro="Gli stessi prezzi del mio profilo Fiverr, in dollari. Per album e progetti con più brani preparo un’offerta su misura.",
@@ -247,8 +247,8 @@ HOME["it"] = dict(
     f_err="Non inviato. Riprova, oppure scrivi a <a href=\"mailto:angelopillon@gmail.com\">angelopillon@gmail.com</a>.",
 )
 HOME["de"] = dict(
-    title="Angelo Pillon, Mixing- und Mastering-Engineer in Mailand",
-    description="Mixing und Mastering aus einem hybriden analogen und digitalen Studio in Mailand. Apple Digital Masters zertifiziert, 4,9/5 aus über 700 Bewertungen. Kostenlose Audio-Tools.",
+    title="Mixing & Mastering Engineer in Mailand | Angelo Pillon",
+    description="Mixing und Mastering Engineer online, mit hybridem Analogstudio in Mailand. Apple Digital Masters zertifiziert, 4,9/5 aus über 700 Bewertungen, Kunden in 66 Ländern.",
     h1="Mixing und Mastering aus einem hybriden Studio in Mailand.",
     lead="Schick mir deine Stems oder deinen Mix. Zurück kommt eine Platte, die ausgewogen ist, so laut wie sie sein sollte und sicher auf jeder Plattform, auf der sie erscheint.",
     cta1="Projekt starten", cta2="Track messen",
@@ -256,7 +256,7 @@ HOME["de"] = dict(
     r_i="Integriert", r_st="Short-term max", r_tp="True Peak", r_lra="Range", r_corr="Korrelation",
     b_drop="Zieh eine WAV-, AIFF-, FLAC- oder MP3-Datei hierher. Die Analyse läuft auf deinem Computer; nichts wird hochgeladen.", b_choose="Datei wählen",
     e_alt="Angelo Pillon am Mischpult in seinem Studio in Mailand", e_alt2="Angelo Pillon in seinem Studio in Mailand, zwischen Laptop, Monitoren und analogem Outboard", e_h2="Fünfzehn Jahre am Pult.",
-    e_p1="Ich bin Angelo, ein italienischer Engineer. Ich habe in einigen der größten Aufnahmestudios gearbeitet und mit Künstlern, die es bis nach Sanremo geschafft haben. Heute mische und mastere ich für Künstler, Produzenten und Labels in 66 Ländern.",
+    e_p1="Ich bin Angelo, ein italienischer Engineer. Ich habe in einigen der größten Aufnahmestudios gearbeitet. Heute mische und mastere ich für Künstler, Produzenten und Labels in 66 Ländern.",
     e_p2="Jedes Genre hat seine eigene Physik. Techno lebt vom Bass und dem Raum darum, R&B von Luft in der Stimme und Groove, Pop von einer Lead-Stimme, die nie gegen den Track kämpft. Ich richte jede Session auf die Platte vor mir aus, nicht auf ein Preset.",
     spec=[("Erfahrung", "Über 15 Jahre, hauptberuflich"), ("Bewertungen", "4,9 von 5 aus über 700 Bewertungen"), ("Tracks", "Über 1.200 geliefert"), ("Zertifizierung", "Apple Digital Masters"), ("Sprachen", "Deutsch, Englisch, Italienisch, Spanisch")],
     sv_h2="Was ich mache", sv_intro="Dieselben Preise wie auf meinem Fiverr-Profil, in US-Dollar. Alben und Projekte mit mehreren Songs bekommen ein eigenes Angebot.",
@@ -296,8 +296,8 @@ HOME["de"] = dict(
     f_err="Nicht gesendet. Versuch es noch einmal oder schreib an <a href=\"mailto:angelopillon@gmail.com\">angelopillon@gmail.com</a>.",
 )
 HOME["es"] = dict(
-    title="Angelo Pillon, ingeniero de mezcla y mastering en Milán",
-    description="Mezcla y mastering desde un estudio híbrido analógico y digital en Milán. Certificado Apple Digital Masters, 4,9/5 en más de 700 reseñas. Herramientas de audio gratuitas.",
+    title="Ingeniero de mezcla y mastering en Milán | Angelo Pillon",
+    description="Ingeniero de mezcla y mastering online, con estudio híbrido analógico en Milán. Certificado Apple Digital Masters, 4,9/5 en más de 700 reseñas, clientes en 66 países.",
     h1="Mezcla y mastering desde un estudio híbrido en Milán.",
     lead="Envíame tus stems o tu mezcla. Recibes un disco equilibrado, tan fuerte como debe ser y seguro en cada plataforma donde se publique.",
     cta1="Empezar un proyecto", cta2="Medir tu track",
@@ -305,7 +305,7 @@ HOME["es"] = dict(
     r_i="Integrada", r_st="Short-term máx.", r_tp="True peak", r_lra="Rango", r_corr="Correlación",
     b_drop="Arrastra aquí un WAV, AIFF, FLAC o MP3. El análisis se hace en tu ordenador; no se sube nada.", b_choose="Elegir archivo",
     e_alt="Angelo Pillon en la consola de su estudio en Milán", e_alt2="Angelo Pillon en su estudio de Milán, entre portátil, monitores y equipos analógicos", e_h2="Quince años detrás de la consola.",
-    e_p1="Soy Angelo, ingeniero italiano. He trabajado en algunos de los mayores estudios de grabación y con artistas que llegaron a Sanremo. Hoy mezclo y masterizo para artistas, productores y sellos en 66 países.",
+    e_p1="Soy Angelo, ingeniero italiano. He trabajado en algunos de los mayores estudios de grabación. Hoy mezclo y masterizo para artistas, productores y sellos en 66 países.",
     e_p2="Cada género tiene su propia física. El techno vive en los graves y el espacio que los rodea, el R&B en el aire de la voz y el groove, el pop en una voz principal que nunca pelea con la base. Preparo cada sesión para el disco que tengo delante, no para una plantilla.",
     spec=[("Experiencia", "Más de 15 años, a tiempo completo"), ("Reseñas", "4,9 de 5 en más de 700 reseñas"), ("Tracks", "Más de 1.200 entregados"), ("Certificación", "Apple Digital Masters"), ("Idiomas", "Español, inglés, italiano, alemán")],
     sv_h2="Qué hago", sv_intro="Los mismos precios que en mi perfil de Fiverr, en dólares. Para álbumes y proyectos con varios temas preparo una oferta a medida.",

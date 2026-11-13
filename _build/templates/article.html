@@ -37,6 +37,7 @@
             <b>Angelo Pillon</b>
             <p>{{ ui.author_bio }}</p>
             <div class="btn-row"><a class="btn btn--small" href="{{ ui.contact_href }}">{{ ui.work_with }}</a><a class="btn btn--ghost btn--small" href="{{ ui.meter_href }}">{{ ui.try_meter }}</a></div>
+            <p class="author-box__svc">{% for sv in ui.svc_links %}<a href="{{ sv.href }}">{{ sv.name }}</a>{% endfor %}</p>
           </div>
         </aside>
         {% if related %}<section class="related" aria-labelledby="h-rel">

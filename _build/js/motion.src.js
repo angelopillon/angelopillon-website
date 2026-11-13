@@ -21,6 +21,9 @@ try {
   if (!location.hash && (!nav || nav.type === "navigate")) window.scrollTo(0, 0);
 } catch (e) {}
 
+// phones: the address bar sliding in and out must not re-measure every pinned section
+ScrollTrigger.config({ ignoreMobileResize: true });
+
 /* ---------------- smooth scroll: responsive, short glide ---------------- */
 let lenis = null;
 if (!reduced) {
@@ -70,20 +73,7 @@ function split(el) {
   return $$(".w > span", el);
 }
 
-/* ---------------- hero entrance, after the big bang ---------------- */
-const hero = $(".hero");
-if (hero) {
-  const words = split($(".hero__line", hero));
-  if (!reduced) {
-    gsap.timeline({ delay: 0.85 })
-      .from("[data-hero-k]", { y: 18, opacity: 0, duration: 0.9, ease: "power3.out" })
-      .from(words, { yPercent: 115, rotate: 4, duration: 1.25, ease: "expo.out", stagger: 0.07 }, "-=0.55")
-      .from("[data-hero-l]", { y: 24, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.85")
-      .from("[data-hero-c] > *", { y: 20, opacity: 0, duration: 0.9, ease: "power3.out", stagger: 0.08 }, "-=0.75")
-      .from("[data-hero-p] > *", { y: 16, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.06 }, "-=0.6")
-      .from(".hero__scroll", { opacity: 0, duration: 1 }, "-=0.4");
-  }
-}
+/* the hero entrance is pure CSS (site.css): it starts at first paint and does not wait for this file */
 
 /* ---------------- the studio photograph grows as it enters ---------------- */
 if (!reduced) {

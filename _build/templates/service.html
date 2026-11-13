@@ -1,0 +1,72 @@
+<header class="page-head wrap sv-head">
+  <ol class="crumbs" aria-label="{{ ui.crumbs_label }}"><li><a href="{{ ui.home }}">{{ ui.home_label }}</a></li><li><a href="{{ ui.home }}#services">{{ u.label }}</a></li><li><span aria-current="page">{{ p.name }}</span></li></ol>
+  <h1 class="t-h1">{{ p.h1 }}</h1>
+  <p class="t-lead">{{ p.lead }}</p>
+  <div class="btn-row sv-head__cta"><a class="btn btn--glow" href="{{ ui.contact_href }}">{{ u.cta }}</a><a class="btn btn--ghost" href="{{ ui.home }}#listen">{{ u.cta2 }}</a></div>
+  <dl class="sv-proof">
+    {% for val, label in proof %}<div><dt>{{ label }}</dt><dd>{{ val }}</dd></div>
+    {% endfor %}
+  </dl>
+</header>
+
+<div class="wrap sv-grid">
+  <div class="prose sv-body">
+    {% for h, paras in p.sections %}<h2>{{ h }}</h2>
+    {% for t in paras %}<p>{{ t }}</p>
+    {% endfor %}{% endfor %}
+    <h2>{{ u.includes_h }}</h2>
+    <ul>{% for t in p.includes %}<li>{{ t }}</li>{% endfor %}</ul>
+    <h2>{{ u.need_h }}</h2>
+    <ul>{% for t in p.need %}<li>{{ t }}</li>{% endfor %}</ul>
+  </div>
+  <aside class="sv-side" aria-label="{{ u.price_h }}">
+    <div class="svc svc--hero sv-price">
+      <h2>{{ u.price_h }}</h2>
+      <p>{{ card.desc }}</p>
+      {% if card.tiers %}<ul class="svc__tiers">{% for label, pr in card.tiers %}<li><span>{{ label }}</span><b>{{ pr }}</b></li>{% endfor %}</ul>{% endif %}
+      <div class="svc__price"><b>{{ card.price }}</b><span>{{ card.time }}</span></div>
+      <a class="btn btn--glow sv-price__cta" href="{{ ui.contact_href }}">{{ u.cta }}</a>
+      <p class="sv-price__note">{{ u.price_note }}</p>
+    </div>
+  </aside>
+</div>
+
+<section class="wrap sv-block" aria-labelledby="h-how">
+  <h2 class="t-h2" id="h-how">{{ u.how_h }}</h2>
+  <ol class="steps">
+    {% for t, dsc in steps %}<li><h3>{{ t }}</h3><p>{{ dsc }}</p></li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="wrap sv-block" aria-labelledby="h-faq">
+  <div class="split">
+    <div class="split__head"><h2 class="t-h2" id="h-faq">{{ u.faq_h }}</h2></div>
+    <div class="faq">
+      {% for q, a in p.faqs %}<details{% if loop.first %} open{% endif %}><summary>{{ q }}</summary><div><p>{{ a }}</p></div></details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="wrap sv-block" aria-labelledby="h-other">
+  <h2 class="t-h2" id="h-other">{{ u.other_h }}</h2>
+  <div class="sv-others">
+    {% for o in others %}<a class="sv-other" href="{{ o.href }}"><b>{{ o.name }}</b><span>{{ o.desc }}</span><i>{{ o.price }}</i></a>
+    {% endfor %}
+  </div>
+</section>
+
+{% if related %}<section class="wrap sv-block" aria-labelledby="h-read">
+  <h2 class="t-h2" id="h-read">{{ u.read_h }}</h2>
+  <div class="rule-list">
+    {% for r in related %}<a class="post-row" href="{{ r.href }}"><span class="cap" data-cat="{{ r.cat }}">{{ r.cat_label }}</span><h3>{{ r.title }}</h3><span class="post-row__meta">{{ r.minutes }} {{ ui.min }}</span></a>
+    {% endfor %}
+  </div>
+</section>{% endif %}
+
+<section class="wrap sv-block sv-end">
+  <h2 class="t-h2">{{ ct_h2 }}</h2>
+  <p class="t-lead">{{ ct_intro }}</p>
+  <div class="btn-row"><a class="btn btn--glow" href="{{ ui.contact_href }}">{{ u.cta }}</a></div>
+</section>

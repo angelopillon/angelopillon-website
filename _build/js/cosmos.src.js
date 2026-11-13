@@ -501,7 +501,7 @@ function start() {
           const ci = Math.floor(Math.random() * cities.length);
           if (slots.some((s) => s.city === ci)) continue;
           place(cityVec[ci], probe);
-          if (probe.face < 0.42 || probe.x < 60 || probe.x > W - 60 || probe.y < 90 || probe.y > H - 60) continue;
+          if (probe.face < 0.42 || probe.x < 60 || probe.x > W - (W > 900 ? 60 : 150) || probe.y < 90 || probe.y > (W > 900 ? H - 60 : H * 0.4)) continue;
           if (slots.some((s) => s.city >= 0 && s !== slot && Math.hypot(s.x - probe.x, s.y - probe.y) < 130)) continue;
           slot.city = ci; slot.born = time; slot.a = 0; slot.el.lastChild.textContent = names[ci];
           break;
@@ -540,7 +540,10 @@ function start() {
   /* ---------------- sizing ---------------- */
   let W = 0, H = 0, baseZ = 11;
   function resize() {
-    W = window.innerWidth; H = window.innerHeight;
+    // the canvas box, not the window: on phones it is 100lvh tall and does not change when the address bar hides
+    const w = canvas.clientWidth || window.innerWidth, h = canvas.clientHeight || window.innerHeight;
+    if (w === W && h === H) return;
+    W = w; H = h;
     renderer.setSize(W, H, false);
     if (composer) composer.setSize(W, H);
     camera.aspect = W / H;
@@ -601,9 +604,9 @@ function start() {
     const desk = W > 900;
     U.uGRot.value = gr;
     U.uGTilt.value = 0.42 + mouse.y * 0.2;
-    const gx = desk ? cur.shift * 2.6 : 0, gy = desk ? 0 : cur.shift * 2.9;
+    const gx = desk ? cur.shift * 2.6 : 0, gy = desk ? 0 : cur.shift * 4.45;
     U.uGOff.value.set(gx, gy, 0);
-    U.uGR.value = desk ? 2.7 : 2.25;
+    U.uGR.value = desk ? 2.7 : 2.25 - cur.shift * 0.3;
     globe.rotation.set(U.uGTilt.value, gr, 0);
     globe.position.set(gx, gy, 0);
     AU.uC.value.set(gx, gy, 0);
@@ -611,7 +614,8 @@ function start() {
     const arcsOn = cur.arcs * Math.max(0, Math.min(1, (cur.p - 3.55) / 0.4));
     AU.uArcs.value = arcsOn; DU.uArcs.value = arcsOn; CU.uArcs.value = arcsOn;
     atmo.material.opacity = 0.3 * Math.max(0, Math.min(1, (cur.p - 3.2) / 0.8)) * (1 - cur.dim * 0.6);
-    labels(arcsOn, dt);
+    // names only once the globe has settled in its place, never over the story lines
+    labels(arcsOn * Math.max(0, Math.min(1, (cur.arcs - 0.55) / 0.35)), dt);
 
     // camera drift
     camera.position.x = mouse.x * 0.9;

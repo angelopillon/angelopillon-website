@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://angelopillon.com/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://angelopillon.com/it/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://angelopillon.com/de/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
@@ -29,12 +29,156 @@
   </url>
   <url>
     <loc>https://angelopillon.com/es/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/mixing-engineer</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-engineer"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/mix-e-mastering-online"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mixing-engineer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/ingeniero-de-mezcla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-engineer"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/mastering-engineer</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mastering-engineer"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/mastering-online"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mastering-engineer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/ingeniero-de-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mastering-engineer"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/stem-mastering</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/stem-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/mix-feedback</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mix-feedback"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/feedback-mix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mix-feedback"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/feedback-de-mezcla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mix-feedback"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/mix-e-mastering-online</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-engineer"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/mix-e-mastering-online"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mixing-engineer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/ingeniero-de-mezcla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-engineer"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/mastering-online</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mastering-engineer"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/mastering-online"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mastering-engineer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/ingeniero-de-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mastering-engineer"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/stem-mastering</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/stem-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/feedback-mix</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mix-feedback"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/feedback-mix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mix-feedback"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/feedback-de-mezcla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mix-feedback"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/mixing-engineer</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-engineer"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/mix-e-mastering-online"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mixing-engineer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/ingeniero-de-mezcla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-engineer"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/mastering-engineer</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mastering-engineer"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/mastering-online"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mastering-engineer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/ingeniero-de-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mastering-engineer"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/stem-mastering</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/stem-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/mix-feedback</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mix-feedback"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/feedback-mix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mix-feedback"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/feedback-de-mezcla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mix-feedback"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/es/ingeniero-de-mezcla</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mixing-engineer"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/mix-e-mastering-online"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mixing-engineer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/ingeniero-de-mezcla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mixing-engineer"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/es/ingeniero-de-mastering</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mastering-engineer"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/mastering-online"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mastering-engineer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/ingeniero-de-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mastering-engineer"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/es/stem-mastering</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/stem-mastering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/stem-mastering"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/es/feedback-de-mezcla</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/mix-feedback"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/feedback-mix"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/mix-feedback"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/feedback-de-mezcla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/mix-feedback"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/logic-pro-13-novita</loc>
@@ -398,7 +542,7 @@
   </url>
   <url>
     <loc>https://angelopillon.com/it/articoli/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/"/>
@@ -766,7 +910,7 @@
   </url>
   <url>
     <loc>https://angelopillon.com/articles</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/"/>
@@ -1134,7 +1278,7 @@
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/"/>
@@ -1142,126 +1286,126 @@
   </url>
   <url>
     <loc>https://angelopillon.com/loudness-meter</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/loudness-meter"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/misuratore-lufs"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/loudness-meter"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/stereo-phase-analyzer</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/stereo-phase-analyzer"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/analizzatore-fase-stereo"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/stereo-phase-analyzer"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/ab-reference-player</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/ab-reference-player"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/confronto-ab-reference"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/ab-reference-player"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/delay-reverb-calculator</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/delay-reverb-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/delay-reverb-calculator"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/kick-808-tuning</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/kick-808-tuning"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/accordatura-kick-808"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/kick-808-tuning"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/streaming-loudness-calculator</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/streaming-loudness-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-loudness-streaming"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/streaming-loudness-calculator"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/camelot-wheel</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/camelot-wheel"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/ruota-camelot"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/camelot-wheel"/>
   </url>
   <url>
     <loc>https://angelopillon.com/tools/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/misuratore-lufs</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/loudness-meter"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/misuratore-lufs"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/loudness-meter"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/analizzatore-fase-stereo</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/stereo-phase-analyzer"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/analizzatore-fase-stereo"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/stereo-phase-analyzer"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/confronto-ab-reference</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/ab-reference-player"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/confronto-ab-reference"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/ab-reference-player"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/delay-reverb-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-delay-riverbero"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/delay-reverb-calculator"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/accordatura-kick-808</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/kick-808-tuning"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/accordatura-kick-808"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/kick-808-tuning"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/calcolatore-loudness-streaming</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/streaming-loudness-calculator"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/calcolatore-loudness-streaming"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/streaming-loudness-calculator"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/ruota-camelot</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/camelot-wheel"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/ruota-camelot"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/camelot-wheel"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/strumenti/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/tools/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/strumenti/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/tools/"/>
   </url>
   <url>
     <loc>https://angelopillon.com/privacy-policy</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/privacy-policy"/>
   </url>
   <url>
     <loc>https://angelopillon.com/it/privacy</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/privacy-policy"/>
