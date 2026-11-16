@@ -244,7 +244,7 @@ def article_pages(arts):
         h["lang_label"] = {"en": "Article language", "it": "Lingua degli articoli", "de": "Sprache der Artikel"}[lang]
         hub_langs = [dict(code=l, name=S.LANG_NAMES[l], href=HUBS[l][0], current=(l == lang), count=sum(1 for x in arts if x["lang"] == l)) for l in ART_LANGS]
         cats_present = []
-        for c in ["news", "loudness", "mastering", "mixing", "electronic", "tutorial"]:
+        for c in ["news", "music", "loudness", "mastering", "mixing", "electronic", "tutorial"]:
             if any(x["cat"] == c or (c == "tutorial" and x["tutorial"]) for x in L):
                 cats_present.append(dict(id=c, label=S.CATS[c][lang]))
         posts = [dict(href=x["path"], title=x["title"], dek=x["dek"], cat=x["cat"], cat_label=x["cat_label"], date=x["date"], date_label=x["date_label"],

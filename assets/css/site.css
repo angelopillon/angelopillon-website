@@ -25,7 +25,7 @@
   --vfd:#7CF2DC; --vfd-mid:rgba(124,242,220,.66); --vfd-dim:rgba(124,242,220,.16); --vfd-ghost:rgba(124,242,220,.07);
   --over:#FF5A40; --over-glass:#FF5A40; --ok:#4ADE80;
 
-  --cap-loudness:#FF6A2B; --cap-mastering:#FFC24B; --cap-electronic:#22D3EE; --cap-mixing:#8B4DFF; --cap-tutorial:#FF3DA5; --cap-news:#FFB547;
+  --cap-loudness:#FF6A2B; --cap-mastering:#FFC24B; --cap-electronic:#22D3EE; --cap-mixing:#8B4DFF; --cap-tutorial:#FF3DA5; --cap-news:#FFB547; --cap-music:#4ADE80;
 
   /* legacy names still used by templates and tools */
   --chassis:var(--bg); --plate:var(--card-2); --inset:var(--bg-2); --legend:var(--ink); --legend-2:var(--ink-2); --btn-ink:#000;
@@ -1157,3 +1157,5 @@ mark.draft-gap{ background:rgba(255,181,71,.16); color:var(--amber); border:1px 
 /* small real photos in articles keep their own size instead of stretching */
 .prose figure.fig-small img{ width:auto; max-width:100%; margin-inline:auto; }
 .prose figure.fig-small figcaption{ text-align:center; }
+.cap[data-cat="music"], .chip[data-cat="music"]{ --cap:var(--cap-music); }
+.article-head:has(.cap[data-cat="music"]){ --glow:var(--cap-music); --glow2:#22D3EE; }
