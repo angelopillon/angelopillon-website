@@ -4,7 +4,7 @@ title: "EQ sottrattiva: perché nel mix conviene togliere prima di aggiungere"
 seo_title: "EQ sottrattiva nel mix: togliere prima di aggiungere"
 description: "Come usare l'EQ sottrattiva nel mix: filtri passa-alto con criterio, tagli stretti sulle risonanze, la zona tra 200 e 500 Hz e quando invece serve aggiungere."
 dek: "Quasi ogni mix affollato ha lo stesso problema: troppe tracce che occupano le stesse frequenze. Tagliare libera spazio senza alzare il volume, e il mix si apre da solo."
-date: 2026-11-09
+date: 2025-02-22
 category: mixing
 order: 26
 ---

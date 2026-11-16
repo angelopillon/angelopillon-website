@@ -5,7 +5,7 @@ title: "Why some songs sound louder than others on Spotify"
 seo_title: "Volume differences between songs on Spotify: normalisation"
 description: "Spotify, Apple Music and YouTube adjust track volume so you do not jump out of your seat. How loudness normalisation works and how to change it in the settings."
 dek: "There is a switch that decides how loud each track plays. It is called normalisation, and it is almost always on."
-date: 2026-11-16
+date: 2026-04-26
 category: music
 order: 20
 ---

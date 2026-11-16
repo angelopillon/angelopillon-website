@@ -5,7 +5,7 @@ h1: "Esportare le tracce per mix e mastering, DAW per DAW"
 seo_title: "Esportare le tracce per mix e mastering, DAW per DAW"
 description: "Come preparare ed esportare tracce, stem e premaster: formati, punto di partenza, code degli effetti, nomi. Per Ableton, FL Studio, Logic, Pro Tools e Cubase."
 dek: "Metà dei problemi di un mix nasce prima del mix: file che non partono dallo stesso punto, riverberi tagliati, limiter dimenticati sul master. Ecco come evitarli."
-date: 2026-11-05
+date: 2025-01-06
 category: tutorial
 tutorial: true
 howto:

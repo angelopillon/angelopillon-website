@@ -4,7 +4,7 @@ title: "Riverbero e delay nel mix: creare spazio senza impastare"
 seo_title: "Riverbero e delay nel mix: spazio senza impastare"
 description: "Come usare riverbero e delay in mandata, filtrare i ritorni, impostare pre-delay e tempi sul BPM e mettere il sidechain sugli effetti perché la voce resti davanti."
 dek: "Un mix asciutto suona piccolo, uno troppo bagnato suona lontano. La differenza non la fa la quantità di riverbero, ma come lo filtri, quando parte e quanto dura."
-date: 2026-11-09
+date: 2025-06-29
 category: mixing
 order: 27
 ---

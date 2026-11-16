@@ -5,7 +5,7 @@ h1: "Impostare il limiter nel mastering, passo passo"
 seo_title: "Limiter nel mastering: impostazioni passo passo"
 description: "Come impostare il limiter di mastering: tetto true peak a −0,3/−0,2 dBTP, oversampling, attacco e rilascio, quanta riduzione si può dare e come verificare il risultato."
 dek: "Il limiter è l'ultimo anello della catena e quello che decide se il master è forte e pulito o forte e stanco. Le impostazioni contano meno di quanto lavoro gli chiedi."
-date: 2026-11-09
+date: 2026-02-06
 category: tutorial
 tutorial: true
 howto:

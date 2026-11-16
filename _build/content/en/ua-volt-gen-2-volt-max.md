@@ -5,7 +5,7 @@ title: "UA Volt Gen 2 and Volt Max: new USB interfaces with compressors on board
 seo_title: "UA Volt Gen 2 and Volt Max: models, price, what’s new"
 description: "Universal Audio has renewed the Volt interfaces: 32-bit/192 kHz conversion, preamps with three characters and, on the Max models, compression inspired by the 1176 and LA-2A. From $149."
 dek: "Six new bus-powered USB interfaces with three-character preamps and, on the Max models, zero-latency compression while you record."
-date: 2026-11-16
+date: 2026-10-03
 category: news
 order: 5
 ---

@@ -4,7 +4,7 @@ title: "Come nasce una canzone: dalla demo al master, passo per passo"
 seo_title: "Come nasce una canzone: scrittura, produzione, mix, master"
 description: "Scrittura, produzione, registrazione, mix, mastering e pubblicazione: le fasi che trasformano un’idea in una canzone su Spotify, spiegate da chi lavora alla fine della catena."
 dek: "Quando ascolti un brano in radio stai sentendo il risultato di sei lavori diversi. Ecco cosa succede in ognuno."
-date: 2026-11-16
+date: 2025-04-11
 category: music
 order: 15
 ---

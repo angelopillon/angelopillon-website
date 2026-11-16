@@ -5,7 +5,7 @@ title: "Logic Pro 13 is out: a unified browser, drum stem splitting and an AI as
 seo_title: "Logic Pro 13: what’s new, price and requirements"
 description: "Logic Pro 13 has been available since 5 November 2026: a unified browser with automatic sound tags, Stem Splitter for individual drum parts and the Intelligent Assistant beta. Price, requirements and what it means for mixing and mastering."
 dek: "Apple shipped Logic Pro 13 with the November Creator Studio update. No new instruments, but three features that change how you prepare a session."
-date: 2026-11-09
+date: 2026-11-06
 category: news
 order: 16
 ---

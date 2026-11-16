@@ -4,7 +4,7 @@ title: "UA Capitol Studios: le stanze e le camere d’eco di Hollywood in un plu
 seo_title: "UA Capitol Studios plugin: stanze, microfoni, prezzo"
 description: "Universal Audio ha pubblicato Capitol Studios, plugin nativo di room modeling e riverbero con gli Studi A e B, quattro camere d’eco e i microfoni storici. Prezzo, cosa fa e come usarlo in mix."
 dek: "Dal 4 novembre 2026 le stanze della Capitol Tower girano in qualsiasi DAW, anche senza hardware UA. Ecco cosa c’è dentro e dove ha senso usarlo."
-date: 2026-11-16
+date: 2026-11-05
 category: news
 order: 1
 ---

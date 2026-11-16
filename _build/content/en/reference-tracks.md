@@ -5,7 +5,7 @@ title: "Reference tracks: how to actually use them in mixing and mastering"
 seo_title: "Reference tracks in mixing: how to use them well"
 description: "How to choose references, match loudness before comparing, what to listen for (low end, vocal, stereo, dynamics) and the mistakes that make you copy the wrong song."
 dek: "A good reference is the fastest way to know whether your mix works. Compared at the wrong level, it will lead you astray in seconds."
-date: 2026-11-09
+date: 2025-04-26
 category: mixing
 order: 33
 ---

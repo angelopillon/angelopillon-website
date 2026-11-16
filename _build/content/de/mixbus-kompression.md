@@ -6,7 +6,7 @@ h1: "Mixbus-Kompression, Schritt für Schritt"
 seo_title: "Mixbus-Kompression: Tutorial Schritt für Schritt"
 description: "So stellst du einen Kompressor auf dem Mixbus ein: Ratio, Attack, Release, Sidechain-Filter und wie viel Gain Reduction es braucht, um den Track zu verkleben, ohne ihn zu quetschen."
 dek: "Ein Kompressor auf dem Mixbus mit 1 bis 2 dB Gain Reduction lässt einzelne Spuren wie einen Song klingen. Der Trick: früh einsetzen und sanft arbeiten lassen."
-date: 2026-11-09
+date: 2026-01-15
 category: tutorial
 tutorial: true
 howto:

@@ -5,7 +5,7 @@ title: "Antares launches AutoTune Advanced: hard tuning, vibrato intact"
 seo_title: "AutoTune Advanced: what’s new, price and Pro 11 differences"
 description: "AutoTune Advanced is Antares’ new flagship, released in late September 2026: a DVA engine that preserves vibrato, Live mode under 1 ms, $450 perpetual. How it differs from AutoTune Pro 11 and AutoTune 2026."
 dek: "The promise is as old as AutoTune: fix the pitch without removing the singer’s personality. This time there is an engine dedicated to vibrato."
-date: 2026-11-09
+date: 2026-10-01
 category: news
 order: 21
 ---

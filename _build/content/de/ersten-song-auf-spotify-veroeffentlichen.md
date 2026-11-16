@@ -5,7 +5,7 @@ title: "Deinen ersten Song auf Spotify veröffentlichen, Schritt für Schritt"
 seo_title: "Song auf Spotify veröffentlichen: Leitfaden 2026"
 description: "Vertrieb, Dateien, Cover, Release-Datum und Pitch an die Redaktions-Playlists: So veröffentlichst du deinen ersten Track auf Spotify und den anderen Plattformen ohne Fehler."
 dek: "Einen Song lädt man nicht direkt bei Spotify hoch: Er geht über einen Vertrieb. Das bereitest du vor, und zwar in dieser Reihenfolge."
-date: 2026-11-16
+date: 2026-09-14
 category: tutorial
 order: 19
 ---

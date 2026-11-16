@@ -3,7 +3,7 @@ slug: voce-rap-trap-autotune
 title: "Mix della voce rap e trap con Auto-Tune: la catena che uso"
 description: "Come mixare la voce rap e trap con Auto-Tune: intonazione come effetto, pulizia, compressione decisa, saturazione, ad-lib e delay a tempo. Esempi e valori pratici."
 dek: "Nel rap la voce è il ritmo, nella trap l’Auto-Tune è uno strumento. Il mix deve rispettare entrambe le cose: presenza costante, carattere, nessun artefatto che non hai scelto."
-date: 2026-11-05
+date: 2025-03-10
 category: mixing
 order: 7
 ---

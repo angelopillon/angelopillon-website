@@ -5,7 +5,7 @@ h1: "Fase e compatibilità mono, passo passo"
 seo_title: "Fase e compatibilità mono: tutorial per il mix"
 description: "Come controllare fase e compatibilità mono nel mix: correlazione, polarità dei microfoni, layer di cassa, widener, basse in mono e verifica banda per banda."
 dek: "Molti ascoltano in mono senza saperlo: altoparlanti dei telefoni, casse Bluetooth, impianti dei locali. Ecco come verificare che il mix non perda pezzi quando i due canali si sommano."
-date: 2026-11-05
+date: 2025-05-12
 category: tutorial
 tutorial: true
 howto:

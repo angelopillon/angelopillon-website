@@ -5,7 +5,7 @@ title: "Pro Tools 2026.11 brings Extensions, a Stem Separator and MPE"
 seo_title: "Pro Tools 2026.11: Extensions, Stem Separator and MPE"
 description: "Pro Tools 2026.11 introduces Extensions, a new plug-in format not tied to tracks, a local Stem Separator with up to six stems in every tier, and MPE support. Requirements and advice before you update."
 dek: "Avid opens Pro Tools to third-party tools with a new format and puts stem separation in every tier, Intro included."
-date: 2026-11-09
+date: 2026-11-03
 category: news
 order: 17
 ---

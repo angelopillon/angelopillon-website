@@ -5,7 +5,7 @@ title: "Subtractive EQ: why cutting before boosting makes a mix breathe"
 seo_title: "Subtractive EQ in the mix: cut before you boost"
 description: "How to use subtractive EQ in a mix: high-pass filters with judgement, narrow cuts on resonances, the 200 to 500 Hz zone, and when boosting is the right call."
 dek: "Almost every crowded mix has the same problem: too many tracks living in the same frequencies. Cutting frees space without adding level, and the mix opens up on its own."
-date: 2026-11-09
+date: 2025-02-22
 category: mixing
 order: 26
 ---

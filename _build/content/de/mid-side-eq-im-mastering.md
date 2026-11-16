@@ -5,7 +5,7 @@ title: "Mid/Side-EQ im Mastering: breiter und sauberer, ohne die Mitte zu verlie
 seo_title: "Mid/Side-EQ im Mastering: ein Praxisleitfaden"
 description: "Was Mid/Side-EQ ist, wie du ihn im Mastering nutzt, um Bässe auf den Seiten zu säubern, dem Stereobild Luft zu geben und die Stimme nach vorne zu holen, und welche Grenzen Mono sicher halten."
 dek: "Mit Mid/Side-EQ behandelst du die Mitte eines Tracks und seine Seiten getrennt. Es ist das präziseste Werkzeug im Mastering und zugleich das, mit dem man am leichtesten etwas kaputt macht."
-date: 2026-11-09
+date: 2025-08-31
 category: mastering
 order: 32
 ---

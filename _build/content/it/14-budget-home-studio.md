@@ -4,7 +4,7 @@ title: "Quanto spendere per un home studio: dove i soldi contano e dove no"
 seo_title: "Budget home studio: dove i soldi contano e dove no"
 description: "Budget per l’home studio: in che ordine spendere, perché sopra gli 8–9 mila dollari i ritorni si appiattiscono e quando ha senso andare oltre i 40 mila."
 dek: "Il miglior investimento in uno studio raramente è quello che si vede nelle foto. Ecco come la penso, fascia per fascia, dopo più di quindici anni in studi di ogni dimensione."
-date: 2026-11-05
+date: 2025-08-15
 category: mixing
 order: 14
 ---

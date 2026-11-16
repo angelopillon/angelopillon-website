@@ -5,7 +5,7 @@ title: "UA Capitol Studios: Hollywood’s rooms and echo chambers in a plug-in"
 seo_title: "UA Capitol Studios plug-in: rooms, mics, price"
 description: "Universal Audio has released Capitol Studios, a native room modelling and reverb plug-in with Studios A and B, four echo chambers and historic mics. Price, features and how to use it in a mix."
 dek: "Since 4 November 2026 the rooms of the Capitol Tower run in any DAW, no UA hardware needed. Here is what is inside and where it makes sense."
-date: 2026-11-16
+date: 2026-11-05
 category: news
 order: 1
 ---

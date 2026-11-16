@@ -6,7 +6,7 @@ h1: "Phase und Monokompatibilität, Schritt für Schritt"
 seo_title: "Phase und Monokompatibilität: Tutorial für den Mix"
 description: "So prüfst du Phase und Monokompatibilität im Mix: Korrelation, Polarität der Mikrofone, Kick-Layer, Widener, Bässe in Mono und Prüfung Band für Band."
 dek: "Viele hören in Mono, ohne es zu wissen: Handylautsprecher, Bluetooth-Boxen, Anlagen in Lokalen. So prüfst du, dass der Mix keine Teile verliert, wenn die beiden Kanäle summiert werden."
-date: 2026-11-05
+date: 2025-05-12
 category: tutorial
 tutorial: true
 howto:

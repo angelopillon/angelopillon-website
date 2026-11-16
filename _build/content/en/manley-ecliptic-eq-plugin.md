@@ -5,7 +5,7 @@ title: "Manley ecliptic: Manley’s first original EQ starts life as a plug-in"
 seo_title: "Manley ecliptic: mid-side EQ, RCKFRC and Plugin Alliance"
 description: "Manley ecliptic is Manley’s first original EQ plug-in: mid-side tone shaping with a single set of controls, analogue transformer models and a possible hardware future."
 dek: "After Dirk Ulrich bought back Plugin Alliance and Brainworx, the new RCKFRC group shows its first product. And this time the road runs backwards: plug-in first, maybe hardware later."
-date: 2026-11-16
+date: 2026-11-10
 category: news
 order: 2
 ---

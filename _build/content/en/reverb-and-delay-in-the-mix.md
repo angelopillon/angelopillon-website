@@ -5,7 +5,7 @@ title: "Reverb and delay in the mix: creating space without washing it out"
 seo_title: "Reverb and delay in the mix: space without mud"
 description: "How to use reverb and delay on sends, filter the returns, set pre-delay and times to the BPM, and sidechain the effects so the vocal stays in front."
 dek: "A dry mix sounds small, a wet one sounds distant. The difference is not how much reverb you use, but how you filter it, when it starts and how long it lasts."
-date: 2026-11-09
+date: 2025-06-29
 category: mixing
 order: 27
 ---

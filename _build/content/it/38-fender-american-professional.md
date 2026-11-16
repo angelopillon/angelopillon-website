@@ -4,7 +4,7 @@ title: "Fender presenta la nuova American Professional: addio ai numeri II e III
 seo_title: "Fender American Professional 2026: novità e modelli"
 description: "Fender ha presentato a ottobre 2026 la nuova serie American Professional, che sostituisce la II: pickup V-Mod III, ponti ridisegnati, tone push-push e dieci modelli tra chitarre e bassi. Le mancine dalla primavera 2027."
 dek: "La serie più venduta di Fender made in USA cambia generazione e perde il numero. Ecco cosa cambia e cosa significa per chi registra chitarre e bassi da mandare al mix."
-date: 2026-11-09
+date: 2026-10-20
 category: news
 order: 18
 ---

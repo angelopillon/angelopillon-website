@@ -5,7 +5,7 @@ title: "Universal Audio takes the FATSO native: tape and compression in any DAW"
 seo_title: "UAD Empirical Labs FATSO native: price and features"
 description: "Since 13 October 2026 Universal Audio’s Empirical Labs FATSO runs natively on macOS and Windows, no Apollo required. Intro price $79 until 31 December, $2.99 upgrade for owners of the DSP version."
 dek: "The FATSO has been on UAD hardware since 2009. Now it opens in any DAW, and it is one of the most useful tools for adding weight to a bus without flattening it."
-date: 2026-11-09
+date: 2026-10-15
 category: news
 order: 20
 ---

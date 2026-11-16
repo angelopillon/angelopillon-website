@@ -5,7 +5,7 @@ h1: "Gain staging nel DAW, passo passo"
 seo_title: "Gain staging nel DAW: tutorial passo passo"
 description: "Come impostare i livelli nel DAW dalla registrazione al master bus: clip gain, plugin tarati a −18 dBFS, margine per il mastering. Tutorial con valori pratici."
 dek: "Un DAW a 32 bit float non va in clip al suo interno, ma i plugin e le tue orecchie reagiscono al livello. Ecco il metodo che uso in otto passaggi."
-date: 2026-11-05
+date: 2025-02-06
 category: tutorial
 tutorial: true
 howto:

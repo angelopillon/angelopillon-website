@@ -4,7 +4,7 @@ title: "Saturazione nel mix e nel master: calore, densità e quando fermarsi"
 seo_title: "Saturazione nel mix e nel master: guida pratica"
 description: "Tipi di saturazione (nastro, valvola, trasformatore, clipper), dove usarla nel mix e nel master, come dosarla a pari volume e i segnali che stai esagerando."
 dek: "La saturazione aggiunge armoniche che il nostro orecchio sente come calore, presenza e densità. Usata bene fa sembrare un mix più forte senza alzarlo; usata male lo rende stanco."
-date: 2026-11-09
+date: 2025-10-02
 category: mastering
 order: 28
 ---

@@ -5,7 +5,7 @@ title: "Sidechain-Kompression im EDM: mehr als nur Pumpen"
 seo_title: "Sidechain-Kompression im EDM: mehr als nur Pumpen"
 description: "Die zwei Jobs des Sidechains im EDM: das hörbare Pumpen und das unsichtbare Freiräumen. Release im BPM-Raster, frequenzselektives Ducking und Ghost-Trigger."
 dek: "Das Pumpen ist ein Effekt. Das Freiräumen ist Handwerk. Großartige EDM-Mixe nutzen beides und verwechseln nichts davon."
-date: 2026-03-05
+date: 2024-12-21
 category: electronic
 order: 0
 ---

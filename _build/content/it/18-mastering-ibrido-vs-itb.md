@@ -6,7 +6,7 @@ h1: "Mastering ibrido o tutto nel DAW: cosa conta davvero per il tuo master"
 seo_title: "Mastering ibrido o tutto nel DAW: cosa conta davvero"
 description: "Plugin e macchine analogiche a confronto nel mastering: cosa fa meglio il digitale, cosa l’analogico aggiunge e su quali brani la catena ibrida vale il suo costo."
 dek: "I plugin sono precisi; i circuiti analogici aggiungono densità armonica e profondità che le emulazioni approssimano soltanto. Ecco dove la differenza si sente davvero."
-date: 2026-06-18
+date: 2026-05-28
 category: mastering
 order: 0
 ---

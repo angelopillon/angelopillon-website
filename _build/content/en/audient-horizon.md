@@ -5,7 +5,7 @@ title: "Audient Horizon: three Thunderbolt interfaces for pro studios, no DSP"
 seo_title: "Audient Horizon 8P, 16 and 32: features and prices"
 description: "Audient launched Horizon, three Thunderbolt 3 interfaces with 32-bit conversion, sub-millisecond latency and no proprietary DSP: Horizon 8P, 16 and 32, from $2,799 to $3,499."
 dek: "After five years of development, Audient is betting on studios that work with native plug-ins and analogue outboard. Here are the three models and who they are for."
-date: 2026-11-09
+date: 2026-09-16
 category: news
 order: 22
 ---

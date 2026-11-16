@@ -5,7 +5,7 @@ title: "True Peak: warum −1 dBTP keine Regel ist und was ich stattdessen prüf
 seo_title: "True Peak: warum −1 dBTP keine Regel ist"
 description: "Was True Peak ist, woher der Rat zu −1 dBTP kommt, warum ich mit einem True-Peak-Limiter bei −0,3/−0,2 dBTP liefere und wie du die Datei nach der Codierung prüfst."
 dek: "Die Reserve von −1 dB soll den Track vor verlustbehafteter Codierung schützen. Ein vorsichtiger Rat, kein Gesetz: Mit dem richtigen Limiter und einer Prüfung nach der Codierung verschenkt sie oft nur Lautheit und Punch."
-date: 2026-11-05
+date: 2026-01-21
 category: loudness
 order: 5
 ---

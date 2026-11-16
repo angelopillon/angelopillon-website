@@ -5,7 +5,7 @@ title: "iZotope moves to Boris FX: what happens to Ozone, RX and Neutron"
 seo_title: "iZotope acquired by Boris FX: what changes"
 description: "On 2 July 2026 Boris FX acquired iZotope while inMusic completed its purchase of Native Instruments. What happens to Ozone, RX, Neutron and Nectar licences and subscriptions, and who owns what now."
 dek: "In 2026 the Native Instruments group split between several owners. Ozone and RX licences stay valid, but it is worth knowing who is behind your plug-ins."
-date: 2026-11-09
+date: 2026-07-04
 category: news
 order: 23
 ---

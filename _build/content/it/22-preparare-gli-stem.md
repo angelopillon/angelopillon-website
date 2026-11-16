@@ -5,7 +5,7 @@ title: "Come preparare gli stem per un mix professionale"
 seo_title: "Come preparare gli stem per un mix professionale"
 description: "La checklist che mando ai clienti prima di ogni mix: formato, lunghezza, cosa stampare e cosa togliere, livelli, nomi, un riferimento e una frase sulla tua visione."
 dek: "Stem puliti non fanno solo risparmiare tempo: portano a un mix migliore. Ecco la checklist esatta che mando ai clienti prima di ogni progetto."
-date: 2026-04-15
+date: 2025-01-21
 category: mixing
 order: 0
 ---

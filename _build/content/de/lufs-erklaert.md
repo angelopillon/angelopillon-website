@@ -5,7 +5,7 @@ title: "LUFS erklärt: der einzige Lautheits-Leitfaden, den Produzenten brauchen
 seo_title: "LUFS erklärt: der Lautheits-Leitfaden für Produzenten"
 description: "Integrated, Short-Term, Momentary, LRA, True Peak: was jede Zahl wirklich misst, was Streaming-Plattformen damit machen und welche Werte 2026 zählen."
 dek: "Integrated, Short-Term, Momentary, LRA, True Peak: was jede Zahl wirklich misst, was die Plattformen damit machen und welche Werte 2026 zählen."
-date: 2026-07-02
+date: 2026-05-12
 category: loudness
 order: 0
 ---

@@ -5,7 +5,7 @@ title: "Wie laut sollte dein Master 2026 sein? Streaming oder Club"
 seo_title: "Wie laut sollte dein Master 2026 sein?"
 description: "Warum Mastern auf −14 LUFS „für Spotify“ ein Mythos ist, wo kommerzielle Master landen und die Werte für Streaming, Club und dynamische Genres."
 dek: "−14 LUFS ist ein Abhörpegel, kein Ziel. Hier ist die Überlegung, die Engineers wirklich anstellen, Ziel für Ziel."
-date: 2026-06-30
+date: 2026-04-10
 category: loudness
 order: 0
 ---

@@ -4,7 +4,7 @@ title: "EQ mid/side nel mastering: allargare e pulire senza perdere il centro"
 seo_title: "EQ mid/side nel mastering: guida pratica"
 description: "Cos'è l'EQ mid/side, come usarla nel mastering per pulire le basse sui lati, dare aria allo stereo e far emergere la voce, e i limiti da rispettare per la compatibilità mono."
 dek: "Con l'EQ mid/side puoi trattare in modo diverso il centro del brano e i lati. È lo strumento più preciso del mastering, e anche quello che si rompe più facilmente."
-date: 2026-11-09
+date: 2025-08-31
 category: mastering
 order: 32
 ---

@@ -5,7 +5,7 @@ title: "La ruota di Camelot: il mix armonico per produttori e DJ"
 seo_title: "Ruota di Camelot: il mix armonico per produttori e DJ"
 description: "Come funziona la ruota di Camelot, quali passaggi tra tonalità funzionano in un set e perché conviene anche ai produttori: remix, acappella, sample e metadati."
 dek: "La ruota di Camelot traduce le tonalità in numeri su un orologio. Ecco come usarla in console e in studio."
-date: 2026-04-29
+date: 2025-12-20
 category: electronic
 order: 0
 ---

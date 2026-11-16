@@ -4,7 +4,7 @@ title: "Logic Pro 13 è uscito: browser unificato, Stem Splitter per la batteria
 seo_title: "Logic Pro 13: novità, prezzo e requisiti"
 description: "Logic Pro 13 è disponibile dal 5 novembre 2026: browser unificato con tag automatici, Stem Splitter che separa i pezzi della batteria, Intelligent Assistant in beta. Prezzo, requisiti e cosa cambia per mix e mastering."
 dek: "Apple ha pubblicato Logic Pro 13 con l’aggiornamento di novembre di Creator Studio. Niente strumenti nuovi, ma tre funzioni che cambiano il modo di preparare una sessione."
-date: 2026-11-09
+date: 2026-11-06
 category: news
 order: 16
 ---

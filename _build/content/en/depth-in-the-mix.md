@@ -5,7 +5,7 @@ title: "Depth in the mix: how to give a track three dimensions"
 seo_title: "Depth in the mix: how to create three dimensions"
 description: "How to build depth in the mix: level, high frequencies, transients, pre-delay, early reflections and the contrast between dry and wet elements. With a practical method."
 dek: "Left and right are easy. Front and back are what make a mix feel real. Here are the tools I use to build them."
-date: 2026-11-05
+date: 2025-05-28
 category: mixing
 order: 11
 ---

@@ -5,7 +5,7 @@ title: "True peak: why −1 dBTP is not a rule, and what I check instead"
 seo_title: "True peak: why −1 dBTP is not a rule"
 description: "What true peak is, where the −1 dBTP advice comes from, why I deliver at −0.3/−0.2 dBTP with a true peak limiter and how to check the file after encoding."
 dek: "The −1 dB margin exists to protect the track from lossy encoding. It is cautious advice, not a law: with the right limiter and a check after encoding, it often just gives away loudness and punch."
-date: 2026-11-05
+date: 2026-01-21
 category: loudness
 order: 5
 ---

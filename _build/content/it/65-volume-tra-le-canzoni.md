@@ -4,7 +4,7 @@ title: "Perché su Spotify alcune canzoni sembrano più forti di altre"
 seo_title: "Volume diverso tra canzoni su Spotify: la normalizzazione"
 description: "Spotify, Apple Music e YouTube regolano il volume dei brani per non farti saltare dalla sedia. Come funziona la normalizzazione e come cambiarla nelle impostazioni."
 dek: "Esiste un pulsante che decide quanto forte suona ogni brano. Si chiama normalizzazione, ed è quasi sempre acceso."
-date: 2026-11-16
+date: 2026-04-26
 category: music
 order: 20
 ---

@@ -5,7 +5,7 @@ title: "Der Bass im Melodic Techno: die Techniken, die wirklich funktionieren"
 seo_title: "Bass im Melodic Techno: die Techniken, die funktionieren"
 description: "So mischst du den Bassbereich in Melodic Techno und Afro House: ein einziger Besitzer des Subs, Mono unter 120 Hz, Stimmung, Filter und Sättigung vor Lautstärke."
 dek: "Melodic Techno lebt oder stirbt unter 120 Hz. Hier ist das Schema, das ich bei jedem Techno- und Afro-House-Mix im Studio anwende."
-date: 2026-05-27
+date: 2024-12-05
 category: electronic
 order: 0
 ---

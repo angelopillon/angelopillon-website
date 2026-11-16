@@ -6,7 +6,7 @@ h1: "Tuning the kick and 808 to the key of the track"
 seo_title: "Tune your kick and 808 to the key of the track"
 description: "How to find the pitch of your kick and 808, tune them to the root or the fifth and avoid cancellation between the two. With a frequency table."
 dek: "An out-of-tune kick does not sound like a wrong note: it sounds like a confused low end that pushes in one place and disappears in another. Here is how to tune it together with the 808."
-date: 2026-11-05
+date: 2024-11-19
 category: tutorial
 tutorial: true
 howto:

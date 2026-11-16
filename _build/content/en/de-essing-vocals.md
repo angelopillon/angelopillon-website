@@ -6,7 +6,7 @@ h1: "Taming sibilance in vocals, step by step"
 seo_title: "De-essing vocals: step-by-step tutorial"
 description: "How to find the sibilance frequency, set the de-esser, when to use split-band or wideband mode, and how to fix the harshest esses by hand."
 dek: "Loud esses tire the listener and get worse after compression and streaming encoding. The right de-esser pulls them down without dulling the vocal."
-date: 2026-11-09
+date: 2025-11-18
 category: tutorial
 tutorial: true
 howto:

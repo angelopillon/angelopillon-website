@@ -5,7 +5,7 @@ title: "So bereitest du deine Stems für einen professionellen Mix vor"
 seo_title: "Stems für einen professionellen Mix vorbereiten"
 description: "Die Checkliste, die ich Kunden vor jedem Mix schicke: Format, Länge, was gedruckt und was entfernt wird, Pegel, Namen, eine Referenz und ein Satz zu deiner Vision."
 dek: "Saubere Stems sparen nicht nur Zeit: Sie führen zu einem besseren Mix. Hier ist die genaue Checkliste, die ich Kunden vor jedem Projekt schicke."
-date: 2026-04-15
+date: 2025-01-21
 category: mixing
 order: 0
 ---

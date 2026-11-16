@@ -5,7 +5,7 @@ title: "Mixare la voce pop e R&B: aria, presenza e pocket"
 seo_title: "Mixare la voce pop e R&B: aria, presenza e pocket"
 description: "Come mixare la voce nel pop e nell’R&B: automazione del livello prima dei compressori, compressione in serie, presenza e aria con l’EQ, e il timing rispetto al groove."
 dek: "Nel pop e nell’R&B la voce non è un elemento del mix: è il mix. La differenza tra una voce da demo e una da disco è una sequenza di piccole discipline."
-date: 2026-05-08
+date: 2025-11-03
 category: mixing
 order: 0
 ---

@@ -6,7 +6,7 @@ h1: "Den Mastering-Limiter einstellen, Schritt für Schritt"
 seo_title: "Limiter im Mastering: Einstellungen Schritt für Schritt"
 description: "So stellst du den Mastering-Limiter ein: True-Peak-Ceiling bei −0,3/−0,2 dBTP, Oversampling, Attack und Release, wie viel Gain Reduction vertretbar ist und wie du das Ergebnis prüfst."
 dek: "Der Limiter ist das letzte Glied der Kette und entscheidet, ob ein Master laut und sauber oder laut und anstrengend klingt. Die Einstellungen zählen weniger als die Arbeit, die du ihm aufbürdest."
-date: 2026-11-09
+date: 2026-02-06
 category: tutorial
 tutorial: true
 howto:

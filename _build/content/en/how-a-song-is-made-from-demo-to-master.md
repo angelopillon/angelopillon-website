@@ -5,7 +5,7 @@ title: "How a song is made: from demo to master, step by step"
 seo_title: "How a song is made: writing, production, mixing, mastering"
 description: "Writing, production, recording, mixing, mastering and release: the stages that turn an idea into a song on Spotify, explained by someone who works at the end of the chain."
 dek: "When you hear a track on the radio, you are hearing the result of six different jobs. Here is what happens in each one."
-date: 2026-11-16
+date: 2025-04-11
 category: music
 order: 15
 ---

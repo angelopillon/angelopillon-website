@@ -4,7 +4,7 @@ title: "Differenza tra mix e mastering: chi fa cosa, e quando ti serve"
 seo_title: "Differenza tra mix e mastering: chi fa cosa"
 description: "Mix e mastering spiegati senza gergo: cosa succede in ognuna delle due fasi, cosa il mastering non può aggiustare e quando conviene lo stem mastering."
 dek: "Il mix decide come stanno insieme gli strumenti. Il mastering decide come sta il brano nel mondo. Sono due lavori diversi, ed è meglio non confonderli."
-date: 2026-11-05
+date: 2025-03-26
 category: mastering
 order: 3
 ---

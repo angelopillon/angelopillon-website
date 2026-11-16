@@ -5,7 +5,7 @@ title: "Analog mastering: what SSL Fusion, API 2500, tape and Pultec really do"
 seo_title: "Analog mastering: SSL Fusion, API 2500, tape and Pultec"
 description: "What analog gear adds to mastering, when it helps and when it does not: SSL Fusion, API 2500, tape and Pultec-style EQ inside a hybrid chain."
 dek: "Analog is not magic and it is not nostalgia. It is a set of non-linear behaviours that, dosed on a specific track, do things plugins only approximate."
-date: 2026-11-05
+date: 2025-09-16
 category: mastering
 order: 9
 ---

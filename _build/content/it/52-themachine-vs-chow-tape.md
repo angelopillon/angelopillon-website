@@ -4,7 +4,7 @@ title: "Nastro gratis: Analog Obsession TheMachine contro CHOW Tape"
 seo_title: "TheMachine vs CHOW Tape: plugin a nastro gratuiti"
 description: "Analog Obsession ha pubblicato TheMachine, emulazione gratuita di un registratore a nastro valvolare. Confronto con CHOW Tape e con i nastri a pagamento, e come usarli in mix."
 dek: "Due plugin a nastro gratuiti, due filosofie: pochi comandi e risultato immediato, oppure un modello fisico da esplorare."
-date: 2026-11-16
+date: 2026-10-27
 category: mixing
 order: 7
 ---

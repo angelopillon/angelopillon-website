@@ -6,7 +6,7 @@ h1: "Compressing vocals naturally, step by step"
 seo_title: "Vocal compression: step-by-step tutorial"
 description: "How to compress vocals in the mix: clip gain, a fast compressor on the peaks, an optical one for cohesion, de-esser and automation. With practical starting values."
 dek: "One compressor doing all the work is audible. Two doing half each are not. Here is the chain I start from almost every time."
-date: 2026-11-05
+date: 2025-10-18
 category: tutorial
 tutorial: true
 howto:

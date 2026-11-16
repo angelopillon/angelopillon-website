@@ -5,7 +5,7 @@ h1: "Comprimere la voce in modo naturale, passo passo"
 seo_title: "Compressione della voce: tutorial passo passo"
 description: "Come comprimere la voce nel mix: clip gain, un compressore veloce sui picchi, uno ottico per la coesione, de-esser e automazione. Con valori di partenza pratici."
 dek: "Un solo compressore che fa tutto il lavoro si sente. Due che ne fanno metà ciascuno no. Ecco la catena da cui parto quasi sempre."
-date: 2026-11-05
+date: 2025-10-18
 category: tutorial
 tutorial: true
 howto:

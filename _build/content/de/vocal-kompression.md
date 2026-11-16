@@ -6,7 +6,7 @@ h1: "Vocals natürlich komprimieren, Schritt für Schritt"
 seo_title: "Vocal-Kompression: Tutorial Schritt für Schritt"
 description: "So komprimierst du die Stimme im Mix: Clip Gain, ein schneller Kompressor für die Peaks, ein optischer für den Zusammenhalt, De-Esser und Automation. Mit praktischen Startwerten."
 dek: "Ein einzelner Kompressor, der die ganze Arbeit macht, ist hörbar. Zwei, die jeweils die Hälfte machen, nicht. Hier ist die Kette, von der ich fast immer ausgehe."
-date: 2026-11-05
+date: 2025-10-18
 category: tutorial
 tutorial: true
 howto:

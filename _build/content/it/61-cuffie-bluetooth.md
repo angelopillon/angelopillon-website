@@ -4,7 +4,7 @@ title: "Cuffie Bluetooth e qualità audio: cosa sono AAC, aptX e LDAC"
 seo_title: "Cuffie Bluetooth: codec AAC, aptX, LDAC spiegati"
 description: "Perché le stesse cuffie wireless suonano diverse con l’iPhone e con un Android, cosa sono i codec Bluetooth e quale ti serve davvero per ascoltare musica."
 dek: "Il Bluetooth comprime sempre, o quasi. Il codec decide quanto. Ecco come capire cosa sta arrivando alle tue orecchie."
-date: 2026-11-16
+date: 2026-01-05
 category: music
 order: 16
 ---

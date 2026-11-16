@@ -4,7 +4,7 @@ title: "Perché una canzone ti resta in testa: cosa dice la scienza dei tormento
 seo_title: "Perché le canzoni restano in testa (earworm)"
 description: "Gli earworm, i tormentoni che non escono dalla testa, hanno caratteristiche precise: tempo veloce, melodia semplice, un salto inaspettato. Cosa ha scoperto la ricerca."
 dek: "Uno studio su 3.000 persone ha messo in fila i brani che si incollano di più nella memoria. Hanno tre cose in comune."
-date: 2026-11-16
+date: 2025-12-04
 category: music
 order: 12
 ---

@@ -5,7 +5,7 @@ title: "Le basse nella melodic techno: le tecniche che funzionano davvero"
 seo_title: "Basse nella melodic techno: le tecniche che funzionano"
 description: "Come mixare le basse nella melodic techno e nell’afro house: un solo proprietario del sub, mono sotto i 120 Hz, accordatura, filtri e saturazione prima del volume."
 dek: "La melodic techno vive o muore sotto i 120 Hz. Ecco lo schema che applico a ogni mix techno e afro house che passa dallo studio."
-date: 2026-05-27
+date: 2024-12-05
 category: electronic
 order: 0
 ---

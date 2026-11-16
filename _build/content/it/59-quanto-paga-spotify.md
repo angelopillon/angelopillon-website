@@ -4,7 +4,7 @@ title: "Quanto paga Spotify per uno stream? Come guadagna davvero un artista"
 seo_title: "Quanto paga Spotify per stream nel 2026"
 description: "Spotify non paga una cifra fissa per stream: divide il denaro in proporzione agli ascolti. Come funziona, la soglia dei 1.000 stream e quanto guadagna davvero un artista."
 dek: "La domanda che fanno tutti ha una risposta scomoda: dipende. Ma si può capire bene da cosa dipende."
-date: 2026-11-16
+date: 2026-11-01
 category: music
 order: 14
 ---

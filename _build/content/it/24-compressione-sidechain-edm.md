@@ -5,7 +5,7 @@ title: "Compressione sidechain nell’EDM: oltre il pompaggio"
 seo_title: "Compressione sidechain nell’EDM: oltre il pompaggio"
 description: "I due lavori del sidechain nell’EDM: il pompaggio udibile e lo scavo invisibile dello spazio. Rilascio a tempo con il BPM, ducking per frequenza e trigger fantasma."
 dek: "Il pompaggio è un effetto. Lo scavo dello spazio è un mestiere. I grandi mix EDM usano entrambi e non li confondono mai."
-date: 2026-03-05
+date: 2024-12-21
 category: electronic
 order: 0
 ---

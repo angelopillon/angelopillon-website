@@ -5,7 +5,7 @@ title: "Saturation in mixing and mastering: warmth, density and when to stop"
 seo_title: "Saturation in the mix and master: a practical guide"
 description: "Types of saturation (tape, tube, transformer, clipper), where to use them in the mix and the master, how to set them at matched loudness and the signs you are overdoing it."
 dek: "Saturation adds harmonics that our ears hear as warmth, presence and density. Used well, it makes a mix feel louder without turning it up; used badly, it makes it tiring."
-date: 2026-11-09
+date: 2025-10-02
 category: mastering
 order: 28
 ---

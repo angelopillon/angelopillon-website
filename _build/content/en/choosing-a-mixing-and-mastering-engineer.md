@@ -5,7 +5,7 @@ title: "How to choose a mixing and mastering engineer: the right questions to as
 seo_title: "How to choose a mixing and mastering engineer"
 description: "How to choose a mixing and mastering engineer, online or in a studio: work in your genre, reviews, revisions, delivery formats, turnaround, clear prices and communication."
 dek: "The right engineer for your track is not necessarily the most famous or the cheapest. It is the one who understands what you want and gives it back to you, with clear rules. Here is how to recognise them."
-date: 2026-11-05
+date: 2026-08-31
 category: mastering
 order: 15
 ---

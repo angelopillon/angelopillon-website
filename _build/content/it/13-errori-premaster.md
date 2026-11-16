@@ -4,7 +4,7 @@ title: "Gli errori nel premaster che peggiorano il mastering, e come evitarli"
 seo_title: "Errori nel premaster da evitare prima del mastering"
 description: "Limiter sul master, clipping, normalizzazione, MP3, code tagliate, widener sul bus: gli errori più comuni nei file che arrivano al mastering e come correggerli."
 dek: "Il mastering parte da quello che ricevo. Ecco gli errori che vedo più spesso nei premaster, e cosa fare prima di premere «esporta»."
-date: 2026-11-05
+date: 2026-01-13
 category: mastering
 order: 13
 ---

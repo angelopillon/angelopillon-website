@@ -5,7 +5,7 @@ title: "Hall und Delay im Mix: Raum schaffen, ohne zu verwaschen"
 seo_title: "Hall und Delay im Mix: Raum ohne Matsch"
 description: "So nutzt du Hall und Delay auf Sends, filterst die Returns, stellst Pre-Delay und Zeiten auf das BPM ein und duckst die Effekte, damit die Stimme vorne bleibt."
 dek: "Ein trockener Mix klingt klein, ein nasser klingt weit weg. Der Unterschied liegt nicht in der Menge Hall, sondern darin, wie du ihn filterst, wann er einsetzt und wie lange er dauert."
-date: 2026-11-09
+date: 2025-06-29
 category: mixing
 order: 27
 ---

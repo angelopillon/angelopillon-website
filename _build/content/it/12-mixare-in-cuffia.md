@@ -4,7 +4,7 @@ title: "Mixare in cuffia: come ottenere un mix che funziona anche sulle casse"
 seo_title: "Mixare in cuffia: un mix che regge anche sulle casse"
 description: "I limiti delle cuffie nel mix e come superarli: cuffie aperte, correzione, crossfeed, riferimenti a pari volume e controlli su altri sistemi."
 dek: "In cuffia ogni orecchio sente solo il suo canale, le basse ingannano e dopo un’ora tutto sembra giusto. Si può mixare bene lo stesso, con qualche regola."
-date: 2026-11-05
+date: 2025-07-31
 category: mixing
 order: 12
 ---

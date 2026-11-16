@@ -6,7 +6,7 @@ h1: "Mix bus compression, step by step"
 seo_title: "Mix bus compression: step-by-step tutorial"
 description: "How to set up a mix bus compressor: ratio, attack, release, sidechain filter and how much gain reduction it takes to glue a track without squashing it."
 dek: "One compressor on the mix bus doing 1 to 2 dB is what makes separate tracks sound like one song. The trick is to put it on early and let it work gently."
-date: 2026-11-09
+date: 2026-01-15
 category: tutorial
 tutorial: true
 howto:

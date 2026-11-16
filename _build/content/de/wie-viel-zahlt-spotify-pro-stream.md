@@ -5,7 +5,7 @@ title: "Wie viel zahlt Spotify pro Stream? So verdienen Artists wirklich"
 seo_title: "Wie viel Spotify pro Stream zahlt (2026)"
 description: "Spotify zahlt keinen festen Betrag pro Stream, sondern verteilt Geld nach Anteil an den Abrufen. So funktioniert es, die Schwelle von 1.000 Streams und was Artists tatsächlich verdienen."
 dek: "Alle fragen, und die ehrliche Antwort lautet: Es kommt darauf an. Aber man kann genau verstehen, worauf."
-date: 2026-11-16
+date: 2026-11-01
 category: music
 order: 14
 ---

@@ -5,7 +5,7 @@ title: "Fender unveils the new American Professional and drops the II and III nu
 seo_title: "Fender American Professional 2026: what’s new"
 description: "Fender announced the new American Professional series in October 2026, replacing the II: V-Mod III pickups, redesigned bridges, push-push tone controls and ten guitar and bass models. Left-handed versions from spring 2027."
 dek: "Fender’s best-selling US-made series moves to a new generation and loses its number. Here is what changes, and what it means if you record guitar and bass for a mix."
-date: 2026-11-09
+date: 2026-10-20
 category: news
 order: 18
 ---

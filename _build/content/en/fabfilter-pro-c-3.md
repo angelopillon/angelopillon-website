@@ -5,7 +5,7 @@ title: "FabFilter Pro-C 3: 14 compression styles, Character and Auto Threshold"
 seo_title: "FabFilter Pro-C 3: what’s new and price"
 description: "FabFilter Pro-C 3 was released on 15 January 2026: six new styles for a total of 14, Tube, Diode and Bright Character modes, Auto Threshold, up to 32x oversampling and Atmos support up to 9.1.6."
 dek: "The compressor many engineers reach for first, me included, is now on version three. It was one of 2026’s most important releases for anyone who mixes."
-date: 2026-11-09
+date: 2026-01-17
 category: news
 order: 25
 ---

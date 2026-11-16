@@ -5,7 +5,7 @@ title: "LUFS und Streaming 2026: was die Plattformen mit deinem Master machen"
 seo_title: "LUFS und Streaming 2026: was die Plattformen machen"
 description: "Spotify, Apple Music, YouTube, Tidal, Amazon Music und Deezer: die Normalisierungswerte 2026 und was sie wirklich für die Lautheit deines Masters bedeuten."
 dek: "Die Normalisierung macht laute Master leiser und hebt leise kaum an. Hier sind die aktuellen Werte und wie du sie nutzt, ohne einer Zahl hinterherzujagen."
-date: 2026-11-05
+date: 2026-01-11
 category: loudness
 order: 1
 ---

@@ -5,7 +5,7 @@ h1: "Accordare kick e 808 sulla tonalità del brano"
 seo_title: "Accordare kick e 808 sulla tonalità del brano"
 description: "Come trovare l’altezza di cassa e 808, accordarle sulla fondamentale o sulla quinta ed evitare cancellazioni tra le due. Con tabella delle frequenze."
 dek: "Una cassa stonata non si sente come una nota sbagliata: si sente come un basso confuso, che spinge in un punto e sparisce in un altro. Ecco come accordarla insieme all’808."
-date: 2026-11-05
+date: 2024-11-19
 category: tutorial
 tutorial: true
 howto:

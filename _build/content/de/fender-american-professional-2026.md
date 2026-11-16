@@ -5,7 +5,7 @@ title: "Fender stellt die neue American Professional vor und verzichtet auf II u
 seo_title: "Fender American Professional 2026: die Neuerungen"
 description: "Fender hat im Oktober 2026 die neue American-Professional-Serie vorgestellt, Nachfolgerin der II: V-Mod-III-Tonabnehmer, neue Brücken, Push-Push-Tone und zehn Gitarren- und Bassmodelle. Linkshänder-Versionen ab Frühjahr 2027."
 dek: "Fenders meistverkaufte US-Serie geht in eine neue Generation und verliert ihre Nummer. Was sich ändert und was es bedeutet, wenn du Gitarre und Bass für einen Mix aufnimmst."
-date: 2026-11-09
+date: 2026-10-20
 category: news
 order: 18
 ---

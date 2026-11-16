@@ -4,7 +4,7 @@ title: "CodWaves Quance contro soothe3: due soppressori di risonanze a confronto
 seo_title: "Quance vs soothe3: prezzo, latenza e differenze"
 description: "Quance di CodWaves sfida soothe3 di oeksound: prezzo, modalità a latenza zero, protezione dei transienti, multicanale. Cosa cambia davvero per mix e mastering."
 dek: "Quance costa un terzo di soothe3 e promette di non mangiare i transienti. soothe3 resta il riferimento. Ecco come scegliere."
-date: 2026-11-16
+date: 2026-10-30
 category: news
 order: 3
 ---

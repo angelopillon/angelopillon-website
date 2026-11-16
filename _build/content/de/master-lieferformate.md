@@ -5,7 +5,7 @@ title: "Lieferformate für den Master: Bittiefe, Samplerate, Dither und Metadate
 seo_title: "Master-Formate: Bittiefe, Samplerate, Dither, Metadaten"
 description: "Welches Format ein Master für den Vertrieb braucht: WAV mit 24 Bit, Samplerate, wann Dither nötig ist, Dateinamen, ISRC-Codes und die Kontrollen vor dem Upload."
 dek: "Ein perfekter Master kann durch ein falsches Format oder fehlende Metadaten beschädigt auf den Plattformen landen. Das bereite ich für jede Lieferung vor, und das solltest du vor dem Upload prüfen."
-date: 2026-11-09
+date: 2026-03-09
 category: mastering
 order: 35
 ---

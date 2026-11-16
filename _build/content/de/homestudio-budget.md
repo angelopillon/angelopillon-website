@@ -5,7 +5,7 @@ title: "Wie viel ein Homestudio kosten sollte: wo Geld zählt und wo nicht"
 seo_title: "Homestudio-Budget: wo Geld zählt und wo nicht"
 description: "Budget fürs Homestudio: in welcher Reihenfolge du investierst, warum der Nutzen über 8–9 Tausend Dollar abflacht und wann es Sinn ergibt, über 40 Tausend zu gehen."
 dek: "Die beste Investition in ein Studio ist selten die, die man auf Fotos sieht. So sehe ich es, Preisklasse für Preisklasse, nach mehr als fünfzehn Jahren in Studios jeder Größe."
-date: 2026-11-05
+date: 2025-08-15
 category: mixing
 order: 14
 ---

@@ -5,7 +5,7 @@ title: "Apple Digital Masters: was es für deine Musik wirklich bedeutet"
 seo_title: "Apple Digital Masters: was es wirklich bedeutet"
 description: "Was Apple Digital Masters sind, welches Problem sie bei der AAC-Codierung lösen und warum ein Master mit kontrolliertem True Peak auf jeder Plattform besser klingt."
 dek: "Es ist kein Marketing und kein Mastering-Stil. Es ist eine qualitätsgesicherte Lieferkette, und wer sie versteht, denkt anders über den finalen Master."
-date: 2026-03-22
+date: 2026-02-21
 category: mastering
 order: 0
 ---

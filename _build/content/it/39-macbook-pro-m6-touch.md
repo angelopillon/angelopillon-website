@@ -4,7 +4,7 @@ title: "MacBook Pro M6 e MacBook Pro touchscreen: cosa conta per chi fa musica"
 seo_title: "MacBook Pro M6 e touchscreen: guida per la musica"
 description: "Apple ha presentato il MacBook Pro M6 da 1.999 $ e il primo MacBook Pro touchscreen OLED con M5 Pro e M5 Max, entrambi in consegna dal 6 novembre 2026. Cosa controllare prima di comprarli per mix, mastering e produzione."
 dek: "Due portatili nuovi nella stessa settimana: uno più potente al solito prezzo, uno con lo schermo touch. Prima di spostare lo studio su un Mac nuovo, ci sono tre controlli da fare."
-date: 2026-11-09
+date: 2026-11-08
 category: news
 order: 19
 ---

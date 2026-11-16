@@ -5,7 +5,7 @@ title: "Spatial audio and Dolby Atmos in music: what it is and how to listen"
 seo_title: "Spatial audio and Dolby Atmos music explained"
 description: "What spatial audio with Dolby Atmos on Apple Music is, how it works on headphones, what you need to hear it and why an Atmos mix is a different job from stereo."
 dek: "Music no longer comes only from left and right. Here is what changes when a track is mixed in Dolby Atmos."
-date: 2026-11-16
+date: 2025-06-13
 category: music
 order: 18
 ---

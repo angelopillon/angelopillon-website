@@ -5,7 +5,7 @@ title: "Fehler im Premaster, die das Mastering verschlechtern, und wie du sie ve
 seo_title: "Fehler im Premaster, die du vor dem Mastering vermeiden solltest"
 description: "Limiter auf dem Master, Clipping, Normalisierung, MP3, abgeschnittene Fahnen, Widener auf dem Bus: die häufigsten Fehler in Dateien fürs Mastering und wie du sie behebst."
 dek: "Das Mastering beginnt mit dem, was ich bekomme. Das sind die Fehler, die ich in Premastern am häufigsten sehe, und was du tun kannst, bevor du auf „Exportieren“ drückst."
-date: 2026-11-05
+date: 2026-01-13
 category: mastering
 order: 13
 ---

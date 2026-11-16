@@ -5,7 +5,7 @@ title: "Mixing on headphones: how to get a mix that also works on speakers"
 seo_title: "Mixing on headphones: a mix that works on speakers"
 description: "The limits of headphones in mixing and how to get past them: open-back headphones, correction, crossfeed, matched-level references and checks on other systems."
 dek: "On headphones each ear hears only its own channel, the low end deceives you and after an hour everything sounds right. You can still mix well, with a few rules."
-date: 2026-11-05
+date: 2025-07-31
 category: mixing
 order: 12
 ---

@@ -5,7 +5,7 @@ title: "Why the same song sounds different in the car, on headphones and on your
 seo_title: "Why a song sounds different in the car and on headphones"
 description: "Bass that disappears on a phone, boom in the car, details that only show up on headphones: why it happens and how an engineer makes a track sound good everywhere."
 dek: "The song does not change. The space you hear it in does. Here is what each system does to the sound."
-date: 2026-11-16
+date: 2025-07-15
 category: music
 order: 17
 ---

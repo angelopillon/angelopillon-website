@@ -5,7 +5,7 @@ title: "Ozone 12 oder ein Mastering-Engineer: Was KI kann und was nicht"
 seo_title: "Ozone 12 vs Mastering-Engineer: ein ehrlicher Vergleich"
 description: "Ozone 12 bringt Stem EQ, Unlimiter, IRC 5 und einen anpassbaren Master Assistant. Was es allein kann, wo es aufhört und wann sich ein Mastering-Engineer lohnt."
 dek: "Ich nutze Ozone selbst. Gerade deshalb weiß ich, wo es funktioniert und wo ein Ohr von außen noch den Unterschied macht."
-date: 2026-11-16
+date: 2026-03-25
 category: mastering
 order: 8
 ---

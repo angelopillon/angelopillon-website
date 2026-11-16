@@ -4,7 +4,7 @@ title: "Ableton Live 12.4: Link Audio, separazione degli stem più flessibile ed
 seo_title: "Ableton Live 12.4: Link Audio e stem separation"
 description: "Live 12.4 è gratuito per chi ha Live 12: Link Audio per mandare audio in tempo reale sulla rete locale, separazione degli stem su una selezione, Erosion ricostruito, nuovo LFO nel Delay e Learn View."
 dek: "L’aggiornamento di primavera di Ableton porta Link dal tempo all’audio. Per chi produce elettronica e manda le tracce al mix, ci sono anche novità utili sulla separazione degli stem."
-date: 2026-11-09
+date: 2026-05-07
 category: news
 order: 24
 ---

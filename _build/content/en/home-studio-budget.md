@@ -5,7 +5,7 @@ title: "How much to spend on a home studio: where money matters and where it doe
 seo_title: "Home studio budget: where money matters and where not"
 description: "Budgeting a home studio: in what order to spend, why returns flatten out above 8–9 thousand dollars and when it makes sense to go beyond 40 thousand."
 dek: "The best investment in a studio is rarely the one you see in the photos. Here is how I see it, tier by tier, after more than fifteen years in studios of every size."
-date: 2026-11-05
+date: 2025-08-15
 category: mixing
 order: 14
 ---

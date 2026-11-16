@@ -5,7 +5,7 @@ title: "Free tape: Analog Obsession TheMachine vs CHOW Tape"
 seo_title: "TheMachine vs CHOW Tape: free tape plug-ins"
 description: "Analog Obsession has released TheMachine, a free tube-driven tape machine emulation. How it compares with CHOW Tape and paid tape plug-ins, and how to use them in a mix."
 dek: "Two free tape plug-ins, two philosophies: few controls and quick results, or a physical model to explore."
-date: 2026-11-16
+date: 2026-10-27
 category: mixing
 order: 7
 ---

@@ -5,7 +5,7 @@ title: "Quanto forte deve essere il tuo master nel 2026? Streaming o club"
 seo_title: "Quanto forte deve essere il master nel 2026"
 description: "Perché masterizzare a −14 LUFS «per Spotify» è un mito, dove finiscono i master commerciali e i valori per streaming, club e generi dinamici."
 dek: "−14 LUFS è un livello di ascolto, non un obiettivo. Ecco il ragionamento che usano davvero i fonici, destinazione per destinazione."
-date: 2026-06-30
+date: 2026-04-10
 category: loudness
 order: 0
 ---

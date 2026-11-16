@@ -5,7 +5,7 @@ title: "Afro house mastering: percussion, low end and club loudness"
 seo_title: "Afro house mastering: percussion, low end and loudness"
 description: "How I master an afro house track: percussion that stays alive, a tight mono low end, vocals and ethnic instruments in their place, loudness for Beatport and streaming."
 dek: "Afro house lives on percussion and groove. A master squashed too hard kills it; one too soft will not hold up next to other tracks in a set. The sweet spot is in between."
-date: 2026-11-09
+date: 2026-07-14
 category: electronic
 order: 34
 ---

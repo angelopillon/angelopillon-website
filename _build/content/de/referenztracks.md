@@ -5,7 +5,7 @@ title: "Referenztracks: wie du sie im Mix und im Master wirklich nutzt"
 seo_title: "Referenztracks im Mix: richtig einsetzen"
 description: "So wählst du Referenzen, gleichst die Lautheit vor dem Vergleich an, worauf du achtest (Bass, Stimme, Stereo, Dynamik) und welche Fehler dich den falschen Song kopieren lassen."
 dek: "Eine gute Referenz ist der schnellste Weg zu wissen, ob dein Mix funktioniert. Bei falschem Pegel verglichen führt sie dich in Sekunden in die Irre."
-date: 2026-11-09
+date: 2025-04-26
 category: mixing
 order: 33
 ---

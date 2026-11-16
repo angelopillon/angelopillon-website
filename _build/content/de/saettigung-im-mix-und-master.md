@@ -5,7 +5,7 @@ title: "Sättigung im Mix und im Master: Wärme, Dichte und wann Schluss ist"
 seo_title: "Sättigung im Mix und Master: ein Praxisleitfaden"
 description: "Arten der Sättigung (Band, Röhre, Übertrager, Clipper), wo du sie im Mix und im Master einsetzt, wie du sie bei gleicher Lautheit dosierst und woran du merkst, dass es zu viel ist."
 dek: "Sättigung fügt Obertöne hinzu, die unser Ohr als Wärme, Präsenz und Dichte wahrnimmt. Richtig eingesetzt wirkt ein Mix lauter, ohne lauter zu sein; falsch eingesetzt wird er anstrengend."
-date: 2026-11-09
+date: 2025-10-02
 category: mastering
 order: 28
 ---

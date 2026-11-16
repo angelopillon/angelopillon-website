@@ -5,7 +5,7 @@ title: "CodWaves Quance gegen soothe3: zwei Resonanz-Unterdrücker im Vergleich"
 seo_title: "Quance vs soothe3: Preis, Latenz und Unterschiede"
 description: "CodWaves Quance tritt gegen oeksound soothe3 an: Preis, Null-Latenz-Modus, Transientenschutz, Mehrkanal. Was sich für Mixing und Mastering wirklich ändert."
 dek: "Quance kostet ein Drittel von soothe3 und verspricht, deine Transienten in Ruhe zu lassen. soothe3 bleibt die Referenz. So entscheidest du."
-date: 2026-11-16
+date: 2026-10-30
 category: news
 order: 3
 ---

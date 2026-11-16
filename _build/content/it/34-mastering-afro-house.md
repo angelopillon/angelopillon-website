@@ -4,7 +4,7 @@ title: "Mastering afro house: percussioni, basse e loudness da club"
 seo_title: "Mastering afro house: percussioni, basse e loudness"
 description: "Come masterizzo un brano afro house: percussioni che restano vive, basse compatte e mono, voce e strumenti etnici al loro posto, loudness per Beatport e per lo streaming."
 dek: "L'afro house vive di percussioni e di groove. Un master troppo schiacciato le spegne, uno troppo morbido non regge accanto agli altri brani in un set. Il punto giusto è nel mezzo."
-date: 2026-11-09
+date: 2026-07-14
 category: electronic
 order: 34
 ---

@@ -5,7 +5,7 @@ title: "Mischen mit Kopfhörern: so bekommst du einen Mix, der auch auf Lautspre
 seo_title: "Mischen mit Kopfhörern: ein Mix, der auch auf Boxen trägt"
 description: "Die Grenzen von Kopfhörern im Mix und wie du sie überwindest: offene Kopfhörer, Korrektur, Crossfeed, Referenzen bei gleicher Lautstärke und Kontrollen auf anderen Systemen."
 dek: "Auf Kopfhörern hört jedes Ohr nur seinen Kanal, der Bass täuscht, und nach einer Stunde klingt alles richtig. Man kann trotzdem gut mischen, mit ein paar Regeln."
-date: 2026-11-05
+date: 2025-07-31
 category: mixing
 order: 12
 ---

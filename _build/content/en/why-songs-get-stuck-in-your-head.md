@@ -5,7 +5,7 @@ title: "Why songs get stuck in your head: the science of earworms"
 seo_title: "Why songs get stuck in your head (earworms explained)"
 description: "Earworms, the songs you cannot shake, share clear traits: a fast tempo, a simple melody and one unexpected leap. What the research found."
 dek: "A study of 3,000 people lined up the tunes that stick hardest. They have three things in common."
-date: 2026-11-16
+date: 2025-12-04
 category: music
 order: 12
 ---

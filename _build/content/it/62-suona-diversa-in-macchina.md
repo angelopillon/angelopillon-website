@@ -4,7 +4,7 @@ title: "Perché la stessa canzone suona diversa in macchina, in cuffia e sul tel
 seo_title: "Perché una canzone suona diversa in auto e in cuffia"
 description: "Bassi che spariscono sul telefono, rimbombo in macchina, dettagli che emergono solo in cuffia: perché succede e come lavora un fonico perché il brano suoni bene ovunque."
 dek: "Non è la canzone che cambia. È lo spazio in cui la ascolti. Ecco cosa fa ogni sistema al suono."
-date: 2026-11-16
+date: 2025-07-15
 category: music
 order: 17
 ---

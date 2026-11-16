@@ -6,7 +6,7 @@ h1: "Exporting tracks for mixing and mastering, DAW by DAW"
 seo_title: "Export tracks for mixing and mastering, DAW by DAW"
 description: "How to prepare and export tracks, stems and premasters: formats, start point, effect tails, naming. For Ableton, FL Studio, Logic, Pro Tools and Cubase."
 dek: "Half of a mix’s problems start before the mix: files that do not start from the same point, cut-off reverbs, limiters forgotten on the master. Here is how to avoid them."
-date: 2026-11-05
+date: 2025-01-06
 category: tutorial
 tutorial: true
 howto:

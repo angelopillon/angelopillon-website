@@ -5,7 +5,7 @@ title: "Premaster mistakes that make mastering worse, and how to avoid them"
 seo_title: "Premaster mistakes to avoid before mastering"
 description: "A limiter on the master, clipping, normalization, MP3s, cut-off tails, wideners on the bus: the most common mistakes in files sent for mastering and how to fix them."
 dek: "Mastering starts from what I receive. These are the mistakes I see most often in premasters, and what to do before you press “export”."
-date: 2026-11-05
+date: 2026-01-13
 category: mastering
 order: 13
 ---

@@ -6,7 +6,7 @@ h1: "Kick und 808 auf die Tonart des Tracks stimmen"
 seo_title: "Kick und 808 auf die Tonart des Tracks stimmen"
 description: "So findest du die Tonhöhe von Kick und 808, stimmst sie auf Grundton oder Quinte und vermeidest Auslöschungen zwischen beiden. Mit Frequenztabelle."
 dek: "Eine verstimmte Kick klingt nicht wie ein falscher Ton: Sie klingt wie ein diffuser Bass, der an einer Stelle drückt und an einer anderen verschwindet. So stimmst du sie zusammen mit der 808."
-date: 2026-11-05
+date: 2024-11-19
 category: tutorial
 tutorial: true
 howto:

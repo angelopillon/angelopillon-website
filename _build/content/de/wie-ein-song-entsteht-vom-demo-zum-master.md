@@ -5,7 +5,7 @@ title: "Wie ein Song entsteht: vom Demo zum Master, Schritt für Schritt"
 seo_title: "Wie ein Song entsteht: Songwriting, Produktion, Mix, Master"
 description: "Songwriting, Produktion, Aufnahme, Mixing, Mastering und Veröffentlichung: die Schritte, die aus einer Idee einen Song auf Spotify machen, erklärt von jemandem am Ende der Kette."
 dek: "Wenn du einen Track im Radio hörst, hörst du das Ergebnis von sechs verschiedenen Jobs. Das passiert in jedem davon."
-date: 2026-11-16
+date: 2025-04-11
 category: music
 order: 15
 ---

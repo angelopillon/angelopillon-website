@@ -4,7 +4,7 @@ title: "Come scegliere un fonico di mix e mastering: le domande giuste da fare"
 seo_title: "Come scegliere un fonico di mix e mastering"
 description: "Come scegliere un fonico di mix e mastering, online o in studio: lavori nel tuo genere, recensioni, revisioni, formati di consegna, tempi, prezzi chiari e comunicazione."
 dek: "Il fonico giusto per il tuo brano non è per forza il più famoso né il più economico. È quello che capisce cosa vuoi e te lo restituisce, con regole chiare. Ecco come riconoscerlo."
-date: 2026-11-05
+date: 2026-08-31
 category: mastering
 order: 15
 ---

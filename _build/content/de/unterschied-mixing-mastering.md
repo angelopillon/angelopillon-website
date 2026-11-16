@@ -5,7 +5,7 @@ title: "Unterschied zwischen Mixing und Mastering: wer was macht und wann du was
 seo_title: "Unterschied zwischen Mixing und Mastering"
 description: "Mixing und Mastering ohne Fachchinesisch erklärt: was in jeder Phase passiert, was Mastering nicht reparieren kann und wann Stem-Mastering die bessere Wahl ist."
 dek: "Der Mix entscheidet, wie die Instrumente zusammenstehen. Das Mastering entscheidet, wie der Track in der Welt steht. Zwei verschiedene Jobs, und es lohnt sich, sie nicht zu verwechseln."
-date: 2026-11-05
+date: 2025-03-26
 category: mastering
 order: 3
 ---

@@ -4,7 +4,7 @@ title: "Audio spaziale e Dolby Atmos nella musica: cos’è e come ascoltarlo"
 seo_title: "Audio spaziale e Dolby Atmos: cos’è e come si ascolta"
 description: "Cos’è l’audio spaziale con Dolby Atmos su Apple Music, come funziona in cuffia, cosa serve per ascoltarlo e perché un mix in Atmos è un lavoro diverso dallo stereo."
 dek: "La musica non arriva più solo da destra e sinistra. Ecco cosa cambia quando un brano è mixato in Dolby Atmos."
-date: 2026-11-16
+date: 2025-06-13
 category: music
 order: 18
 ---

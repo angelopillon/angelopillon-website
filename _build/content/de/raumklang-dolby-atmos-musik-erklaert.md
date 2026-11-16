@@ -5,7 +5,7 @@ title: "3D-Audio und Dolby Atmos in der Musik: was es ist und wie man es hört"
 seo_title: "3D-Audio und Dolby Atmos Musik erklärt"
 description: "Was 3D-Audio mit Dolby Atmos bei Apple Music ist, wie es auf Kopfhörern funktioniert, was du dafür brauchst und warum ein Atmos-Mix eine andere Arbeit ist als Stereo."
 dek: "Musik kommt nicht mehr nur von links und rechts. Das ändert sich, wenn ein Track in Dolby Atmos gemischt ist."
-date: 2026-11-16
+date: 2025-06-13
 category: music
 order: 18
 ---

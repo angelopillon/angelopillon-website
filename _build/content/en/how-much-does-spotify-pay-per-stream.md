@@ -5,7 +5,7 @@ title: "How much does Spotify pay per stream? How artists really earn"
 seo_title: "How much Spotify pays per stream in 2026"
 description: "Spotify does not pay a fixed amount per stream: it shares money in proportion to plays. How it works, the 1,000-stream threshold and what artists actually earn."
 dek: "Everybody asks, and the honest answer is: it depends. But you can understand exactly what it depends on."
-date: 2026-11-16
+date: 2026-11-01
 category: music
 order: 14
 ---

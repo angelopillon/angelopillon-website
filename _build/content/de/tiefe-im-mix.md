@@ -5,7 +5,7 @@ title: "Tiefe im Mix: wie ein Track dreidimensional wird"
 seo_title: "Tiefe im Mix: wie ein Track dreidimensional wird"
 description: "So baust du Tiefe im Mix auf: Pegel, hohe Frequenzen, Transienten, Pre-Delay, Erstreflexionen und der Kontrast zwischen trockenen und halligen Elementen. Mit praktischer Methode."
 dek: "Links und rechts sind einfach. Vorne und hinten lassen einen Mix echt wirken. Hier sind die Werkzeuge, mit denen ich beides aufbaue."
-date: 2026-11-05
+date: 2025-05-28
 category: mixing
 order: 11
 ---

@@ -4,7 +4,7 @@ title: "Formati di consegna del master: bit, frequenza, dither e metadati"
 seo_title: "Formati del master: bit, sample rate, dither e metadati"
 description: "Quale formato serve per distribuire un master: WAV a 24 bit, frequenza di campionamento, quando usare il dither, nomi dei file, codici ISRC e controlli prima del caricamento."
 dek: "Un master perfetto può arrivare sulle piattaforme rovinato da un formato sbagliato o da metadati mancanti. Ecco cosa preparo per ogni consegna e cosa controllare prima di caricare."
-date: 2026-11-09
+date: 2026-03-09
 category: mastering
 order: 35
 ---

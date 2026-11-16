@@ -4,7 +4,7 @@ title: "Tracce di riferimento: come usarle davvero nel mix e nel master"
 seo_title: "Tracce di riferimento nel mix: come usarle bene"
 description: "Come scegliere le reference, pareggiare la loudness prima di confrontare, cosa ascoltare (basse, voce, stereo, dinamica) e gli errori che fanno copiare il brano sbagliato."
 dek: "Una buona reference è il modo più veloce per capire se il tuo mix funziona. Ma confrontata a volumi diversi ti porta fuori strada in pochi secondi."
-date: 2026-11-09
+date: 2025-04-26
 category: mixing
 order: 33
 ---

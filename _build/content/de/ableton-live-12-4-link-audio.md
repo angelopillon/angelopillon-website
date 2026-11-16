@@ -5,7 +5,7 @@ title: "Ableton Live 12.4: Link Audio, flexiblere Stem-Trennung und ein neu geba
 seo_title: "Ableton Live 12.4: Link Audio und Stem-Trennung"
 description: "Live 12.4 ist für Besitzer von Live 12 kostenlos: Link Audio streamt Audio in Echtzeit im lokalen Netz, die Stem-Trennung arbeitet auf einer Auswahl, Erosion ist neu gebaut, Delay hat einen neuen LFO und es gibt die Learn View."
 dek: "Abletons Frühjahrs-Update bringt Link vom Tempo zum Audio. Wer elektronische Musik produziert und Spuren zum Mischen gibt, findet auch nützliche Neuerungen bei der Stem-Trennung."
-date: 2026-11-09
+date: 2026-05-07
 category: news
 order: 24
 ---

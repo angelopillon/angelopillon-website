@@ -5,7 +5,7 @@ title: "Warum derselbe Song im Auto, auf Kopfhörern und am Handy anders klingt"
 seo_title: "Warum ein Song im Auto und auf Kopfhörern anders klingt"
 description: "Bässe, die am Handy verschwinden, Dröhnen im Auto, Details, die nur auf Kopfhörern auftauchen: warum das passiert und wie ein Engineer dafür sorgt, dass ein Track überall gut klingt."
 dek: "Nicht der Song ändert sich, sondern der Raum, in dem du ihn hörst. Das macht jedes System mit dem Klang."
-date: 2026-11-16
+date: 2025-07-15
 category: music
 order: 17
 ---

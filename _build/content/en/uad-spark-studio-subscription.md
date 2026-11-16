@@ -5,7 +5,7 @@ title: "UAD Spark Studio: subscription or plug-ins bought one by one?"
 seo_title: "UAD Spark Studio: price, what’s included, is it worth it?"
 description: "UAD Spark Studio bundles LUNA Studio with the whole native UAD plug-in library for $19.99 a month or $149.99 a year. The numbers, and when it pays off."
 dek: "Universal Audio has turned Spark into a complete package with its own DAW. The price is the same; what you get is not."
-date: 2026-11-16
+date: 2026-11-12
 category: news
 order: 9
 ---

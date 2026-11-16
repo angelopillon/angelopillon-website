@@ -5,7 +5,7 @@ title: "Hybrides Mastering oder alles in der DAW: was für deinen Master wirklic
 seo_title: "Hybrides Mastering oder alles in der DAW"
 description: "Plugins und analoge Geräte im Mastering im Vergleich: was Digital besser kann, was Analog hinzufügt und bei welchen Tracks die hybride Kette ihren Preis wert ist."
 dek: "Plugins sind präzise; analoge Schaltungen fügen harmonische Dichte und Tiefe hinzu, die Emulationen nur annähern. Hier hört man den Unterschied wirklich."
-date: 2026-06-18
+date: 2026-05-28
 category: mastering
 order: 0
 ---

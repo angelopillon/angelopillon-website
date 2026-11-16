@@ -5,7 +5,7 @@ title: "Warum Songs im Kopf hängen bleiben: die Wissenschaft der Ohrwürmer"
 seo_title: "Warum Songs im Kopf hängen bleiben (Ohrwürmer erklärt)"
 description: "Ohrwürmer haben klare Merkmale: schnelles Tempo, einfache Melodie, ein unerwarteter Sprung. Was die Forschung herausgefunden hat."
 dek: "Eine Studie mit 3.000 Menschen hat die hartnäckigsten Melodien gesammelt. Sie haben drei Dinge gemeinsam."
-date: 2026-11-16
+date: 2025-12-04
 category: music
 order: 12
 ---

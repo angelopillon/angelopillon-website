@@ -5,7 +5,7 @@ h1: "Compressione sul bus del mix, passo passo"
 seo_title: "Compressione sul bus del mix: tutorial passo passo"
 description: "Come impostare un compressore sul bus del mix: ratio, attacco, rilascio, filtro sidechain e quanta riduzione serve per incollare il brano senza schiacciarlo."
 dek: "Un compressore sul bus, con 1-2 dB di riduzione, è ciò che fa suonare le tracce come un unico brano. Il trucco è impostarlo presto e lasciarlo lavorare poco."
-date: 2026-11-09
+date: 2026-01-15
 category: tutorial
 tutorial: true
 howto:

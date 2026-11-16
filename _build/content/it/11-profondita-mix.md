@@ -4,7 +4,7 @@ title: "Profondità nel mix: come dare tridimensionalità a un brano"
 seo_title: "Profondità nel mix: come dare tridimensionalità"
 description: "Come costruire la profondità nel mix: volume, alte frequenze, transienti, pre-delay, prime riflessioni e contrasto tra elementi asciutti e bagnati. Con un metodo pratico."
 dek: "Destra e sinistra sono facili. Il davanti e il dietro sono quello che fa sembrare vero un mix. Ecco gli strumenti che uso per costruirli."
-date: 2026-11-05
+date: 2025-05-28
 category: mixing
 order: 11
 ---

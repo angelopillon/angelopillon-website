@@ -4,7 +4,7 @@ title: "Antares lancia AutoTune Advanced: intonazione forte, vibrato intatto"
 seo_title: "AutoTune Advanced: novità, prezzo e differenze con Pro 11"
 description: "AutoTune Advanced è il nuovo top di gamma di Antares, uscito a fine settembre 2026: motore DVA che preserva il vibrato, Live mode sotto 1 ms, 450 $ in licenza perpetua. Differenze con AutoTune Pro 11 e AutoTune 2026."
 dek: "La promessa è vecchia quanto AutoTune: correggere l’intonazione senza togliere la personalità al cantante. Questa volta c’è un motore dedicato al vibrato."
-date: 2026-11-09
+date: 2026-10-01
 category: news
 order: 21
 ---

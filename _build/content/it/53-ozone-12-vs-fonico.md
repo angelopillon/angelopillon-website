@@ -4,7 +4,7 @@ title: "Ozone 12 o un fonico di mastering: cosa fa l’AI e cosa no"
 seo_title: "Ozone 12 vs fonico di mastering: confronto onesto"
 description: "Ozone 12 ha Stem EQ, Unlimiter, IRC 5 e un Master Assistant più personalizzabile. Cosa può fare da solo, dove si ferma e quando conviene un fonico di mastering."
 dek: "Uso Ozone anch’io. Proprio per questo so dove funziona e dove un orecchio esterno fa ancora la differenza."
-date: 2026-11-16
+date: 2026-03-25
 category: mastering
 order: 8
 ---

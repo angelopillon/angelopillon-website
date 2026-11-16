@@ -5,7 +5,7 @@ title: "CodWaves Quance vs soothe3: two resonance suppressors compared"
 seo_title: "Quance vs soothe3: price, latency and differences"
 description: "CodWaves Quance takes on oeksound soothe3: price, zero-latency mode, transient protection and multichannel. What actually changes for mixing and mastering."
 dek: "Quance costs a third of soothe3 and promises not to eat your transients. soothe3 is still the reference. Here is how to choose."
-date: 2026-11-16
+date: 2026-10-30
 category: news
 order: 3
 ---

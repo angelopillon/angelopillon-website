@@ -6,7 +6,7 @@ h1: "Setting the mastering limiter, step by step"
 seo_title: "Mastering limiter settings: step-by-step tutorial"
 description: "How to set a mastering limiter: true peak ceiling at −0.3/−0.2 dBTP, oversampling, attack and release, how much gain reduction is safe and how to check the result."
 dek: "The limiter is the last link in the chain and the one that decides whether a master is loud and clean or loud and tiring. The settings matter less than how much work you ask of it."
-date: 2026-11-09
+date: 2026-02-06
 category: tutorial
 tutorial: true
 howto:

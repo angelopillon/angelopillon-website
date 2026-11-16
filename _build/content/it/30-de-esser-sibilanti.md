@@ -5,7 +5,7 @@ h1: "Togliere le sibilanti dalla voce, passo passo"
 seo_title: "De-esser e sibilanti nella voce: tutorial"
 description: "Come trovare la frequenza delle sibilanti, impostare il de-esser, quando usare la modalità a banda o a gamma intera e come correggere a mano le esse più dure."
 dek: "Le esse troppo forti stancano chi ascolta e peggiorano dopo la compressione e la codifica in streaming. Il de-esser giusto le abbassa senza togliere chiarezza alla voce."
-date: 2026-11-09
+date: 2025-11-18
 category: tutorial
 tutorial: true
 howto:

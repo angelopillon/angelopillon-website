@@ -5,7 +5,7 @@ title: "Das Camelot-Rad: harmonisches Mixen für Produzenten und DJs"
 seo_title: "Camelot-Rad: harmonisches Mixen für Produzenten und DJs"
 description: "Wie das Camelot-Rad funktioniert, welche Tonartwechsel im Set funktionieren und warum es auch Produzenten nützt: Remixe, Acapellas, Samples und Metadaten."
 dek: "Das Camelot-Rad übersetzt Tonarten in Zahlen auf einer Uhr. So nutzt du es am DJ-Pult und im Studio."
-date: 2026-04-29
+date: 2025-12-20
 category: electronic
 order: 0
 ---

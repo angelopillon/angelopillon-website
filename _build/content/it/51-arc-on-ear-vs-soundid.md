@@ -4,7 +4,7 @@ title: "Correzione delle cuffie: IK ARC ON•EAR contro Sonarworks SoundID Refer
 seo_title: "ARC ON•EAR vs SoundID Reference: quale scegliere"
 description: "Hardware o software per correggere le cuffie in mix: IK Multimedia ARC ON•EAR e Sonarworks SoundID Reference a confronto, con prezzi, profili e simulazione delle casse."
 dek: "Uno è una scatola da tenere in tasca, l’altro un software che gira sul computer. Fanno lo stesso lavoro in modo diverso."
-date: 2026-11-16
+date: 2026-09-29
 category: mixing
 order: 6
 ---

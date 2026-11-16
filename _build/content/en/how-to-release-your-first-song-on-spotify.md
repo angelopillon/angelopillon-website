@@ -5,7 +5,7 @@ title: "How to release your first song on Spotify, step by step"
 seo_title: "How to release a song on Spotify: 2026 guide"
 description: "Distributor, files, artwork, release date and editorial playlist pitching: how to release your first track on Spotify and the other platforms without mistakes."
 dek: "You do not upload a song straight to Spotify: it goes through a distributor. Here is what to prepare, and in what order."
-date: 2026-11-16
+date: 2026-09-14
 category: tutorial
 order: 19
 ---

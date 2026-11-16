@@ -5,7 +5,7 @@ title: "Einen Mixing- und Mastering-Engineer finden: die richtigen Fragen"
 seo_title: "Einen Mixing- und Mastering-Engineer finden"
 description: "So wählst du einen Mixing- und Mastering-Engineer, online oder im Studio: Arbeiten in deinem Genre, Bewertungen, Revisionen, Lieferformate, Bearbeitungszeit, klare Preise und Kommunikation."
 dek: "Der richtige Engineer für deinen Track ist nicht unbedingt der berühmteste oder der billigste. Es ist der, der versteht, was du willst, und es dir zurückgibt, mit klaren Regeln. So erkennst du ihn."
-date: 2026-11-05
+date: 2026-08-31
 category: mastering
 order: 15
 ---

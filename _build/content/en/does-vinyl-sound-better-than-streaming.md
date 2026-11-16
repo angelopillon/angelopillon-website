@@ -5,7 +5,7 @@ title: "Does vinyl really sound better than streaming?"
 seo_title: "Vinyl vs streaming: which really sounds better"
 description: "US vinyl sales have passed one billion dollars. But does a record sound better than Spotify? What really changes, explained by a mastering engineer."
 dek: "Vinyl is having its best moment in forty years. There are plenty of reasons to love it, but not every claim you hear is true."
-date: 2026-11-16
+date: 2026-10-17
 category: music
 order: 13
 ---

@@ -5,7 +5,7 @@ title: "Warum manche Songs auf Spotify lauter klingen als andere"
 seo_title: "Lautstärkeunterschiede auf Spotify: die Normalisierung"
 description: "Spotify, Apple Music und YouTube passen die Lautstärke von Tracks an, damit du nicht vom Stuhl fällst. So funktioniert die Lautheitsnormalisierung und so änderst du sie in den Einstellungen."
 dek: "Es gibt einen Schalter, der entscheidet, wie laut jeder Track spielt. Er heißt Normalisierung und ist fast immer an."
-date: 2026-11-16
+date: 2026-04-26
 category: music
 order: 20
 ---

@@ -6,7 +6,7 @@ h1: "Phase and mono compatibility, step by step"
 seo_title: "Phase and mono compatibility: mixing tutorial"
 description: "How to check phase and mono compatibility in the mix: correlation, mic polarity, kick layers, wideners, mono lows and a band-by-band check."
 dek: "Many people listen in mono without knowing it: phone speakers, Bluetooth speakers, venue systems. Here is how to make sure the mix does not lose pieces when the two channels are summed."
-date: 2026-11-05
+date: 2025-05-12
 category: tutorial
 tutorial: true
 howto:

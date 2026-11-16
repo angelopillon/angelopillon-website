@@ -6,7 +6,7 @@ h1: "Gain Staging in der DAW, Schritt für Schritt"
 seo_title: "Gain Staging in der DAW: Tutorial Schritt für Schritt"
 description: "So stellst du die Pegel in der DAW von der Aufnahme bis zum Master-Bus ein: Clip Gain, auf −18 dBFS kalibrierte Plugins, Headroom fürs Mastering. Tutorial mit praktischen Werten."
 dek: "Eine DAW mit 32 Bit Float clippt intern nicht, aber Plugins und deine Ohren reagieren auf den Pegel. Hier ist meine Methode in acht Schritten."
-date: 2026-11-05
+date: 2025-02-06
 category: tutorial
 tutorial: true
 howto:

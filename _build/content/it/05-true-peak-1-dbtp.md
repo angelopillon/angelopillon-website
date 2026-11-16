@@ -4,7 +4,7 @@ title: "True peak: perché −1 dBTP non è una regola, e cosa controllo al suo 
 seo_title: "True peak: perché −1 dBTP non è una regola"
 description: "Cos’è il true peak, da dove nasce il consiglio di −1 dBTP, perché consegno a −0,3/−0,2 dBTP con un limiter true peak e come verificare il file dopo la codifica."
 dek: "Il margine di −1 dB nasce per proteggere il brano dalla codifica lossy. È un consiglio prudente, non una legge: con il limiter giusto e una verifica dopo la codifica, spesso regala solo volume e punch."
-date: 2026-11-05
+date: 2026-01-21
 category: loudness
 order: 5
 ---

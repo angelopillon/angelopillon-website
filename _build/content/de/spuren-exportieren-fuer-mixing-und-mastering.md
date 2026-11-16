@@ -6,7 +6,7 @@ h1: "Spuren für Mixing und Mastering exportieren, DAW für DAW"
 seo_title: "Spuren für Mixing und Mastering exportieren"
 description: "So bereitest du Spuren, Stems und Premaster vor und exportierst sie: Formate, Startpunkt, Effektfahnen, Benennung. Für Ableton, FL Studio, Logic, Pro Tools und Cubase."
 dek: "Die Hälfte der Probleme eines Mixes entsteht vor dem Mix: Dateien, die nicht am selben Punkt beginnen, abgeschnittene Hallfahnen, vergessene Limiter auf dem Master. So vermeidest du sie."
-date: 2026-11-05
+date: 2025-01-06
 category: tutorial
 tutorial: true
 howto:

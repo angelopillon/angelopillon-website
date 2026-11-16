@@ -5,7 +5,7 @@ title: "LUFS and streaming in 2026: what platforms do to your master"
 seo_title: "LUFS and streaming in 2026: what platforms do"
 description: "Spotify, Apple Music, YouTube, Tidal, Amazon Music and Deezer: the 2026 normalization levels and what they really mean for the loudness of your master."
 dek: "Normalization turns loud masters down and barely lifts quiet ones. Here are the current values and how to use them without chasing a number."
-date: 2026-11-05
+date: 2026-01-11
 category: loudness
 order: 1
 ---

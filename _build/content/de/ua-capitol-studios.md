@@ -5,7 +5,7 @@ title: "UA Capitol Studios: Hollywoods Räume und Hallkammern als Plug-in"
 seo_title: "UA Capitol Studios Plug-in: Räume, Mikrofone, Preis"
 description: "Universal Audio hat Capitol Studios veröffentlicht, ein natives Raum- und Hall-Plug-in mit Studio A und B, vier Hallkammern und historischen Mikrofonen. Preis, Funktionen und Einsatz im Mix."
 dek: "Seit 4. November 2026 laufen die Räume des Capitol Tower in jeder DAW, ohne UA-Hardware. Was drin ist und wo es Sinn ergibt."
-date: 2026-11-16
+date: 2026-11-05
 category: news
 order: 1
 ---

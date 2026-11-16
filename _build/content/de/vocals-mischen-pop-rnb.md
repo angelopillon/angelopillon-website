@@ -5,7 +5,7 @@ title: "Vocals mischen für Pop und R&B: Luft, Präsenz und Pocket"
 seo_title: "Vocals mischen für Pop und R&B: Luft, Präsenz, Pocket"
 description: "So mischst du Vocals in Pop und R&B: Pegelautomation vor den Kompressoren, serielle Kompression, Präsenz und Luft mit dem EQ und das Timing gegenüber dem Groove."
 dek: "In Pop und R&B ist die Stimme kein Element des Mixes: Sie ist der Mix. Den Unterschied zwischen Demo-Vocal und Platten-Vocal macht eine Folge kleiner Disziplinen."
-date: 2026-05-08
+date: 2025-11-03
 category: mixing
 order: 0
 ---

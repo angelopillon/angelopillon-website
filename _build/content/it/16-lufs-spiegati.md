@@ -6,7 +6,7 @@ h1: "I LUFS spiegati: l’unica guida al loudness che serve a un produttore"
 seo_title: "I LUFS spiegati: la guida al loudness per produttori"
 description: "Integrated, short-term, momentary, LRA, true peak: cosa misura davvero ogni numero, cosa ne fanno le piattaforme di streaming e i valori che contano nel 2026."
 dek: "Integrated, short-term, momentary, LRA, true peak: cosa misura davvero ogni numero, cosa ne fanno le piattaforme e i valori che contano nel 2026."
-date: 2026-07-02
+date: 2026-05-12
 category: loudness
 order: 0
 ---

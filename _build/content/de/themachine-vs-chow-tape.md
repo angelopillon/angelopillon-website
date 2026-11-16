@@ -5,7 +5,7 @@ title: "Band zum Nulltarif: Analog Obsession TheMachine gegen CHOW Tape"
 seo_title: "TheMachine vs CHOW Tape: kostenlose Bandmaschinen-Plug-ins"
 description: "Analog Obsession hat TheMachine veröffentlicht, eine kostenlose Emulation einer Röhren-Bandmaschine. Vergleich mit CHOW Tape und kostenpflichtigen Band-Plug-ins, und wie man sie im Mix einsetzt."
 dek: "Zwei kostenlose Band-Plug-ins, zwei Philosophien: wenige Regler und schnelle Ergebnisse oder ein physikalisches Modell zum Erkunden."
-date: 2026-11-16
+date: 2026-10-27
 category: mixing
 order: 7
 ---

@@ -4,7 +4,7 @@ title: "iMac M6 o Mac mini M6 per lo studio: quale comprare nel 2026"
 seo_title: "iMac M6 vs Mac mini M6 per fare musica"
 description: "Il nuovo iMac M6 è arrivato il 6 novembre 2026. Confronto con il Mac mini M6 per chi produce, mixa e masterizza: prezzi, porte, schermo e cosa conta davvero in studio."
 dek: "Stesso chip di base, due filosofie diverse. Per uno studio di musica la scelta dipende più da porte, schermo e posizionamento che dalla potenza."
-date: 2026-11-16
+date: 2026-11-09
 category: news
 order: 4
 ---

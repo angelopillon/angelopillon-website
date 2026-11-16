@@ -5,7 +5,7 @@ title: "Analoges Mastering: was SSL Fusion, API 2500, Band und Pultec wirklich t
 seo_title: "Analoges Mastering: SSL Fusion, API 2500, Band und Pultec"
 description: "Was analoge Geräte zum Mastering beitragen, wann sie helfen und wann nicht: SSL Fusion, API 2500, Band und EQ im Pultec-Stil in einer hybriden Kette."
 dek: "Analog ist keine Magie und keine Nostalgie. Es ist eine Reihe nichtlinearer Verhaltensweisen, die, dosiert auf einen bestimmten Track, Dinge tun, die Plugins nur annähern."
-date: 2026-11-05
+date: 2025-09-16
 category: mastering
 order: 9
 ---

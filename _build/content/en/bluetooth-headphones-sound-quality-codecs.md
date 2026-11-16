@@ -5,7 +5,7 @@ title: "Bluetooth headphones and sound quality: AAC, aptX and LDAC explained"
 seo_title: "Bluetooth headphones: AAC, aptX, LDAC codecs explained"
 description: "Why the same wireless headphones sound different on an iPhone and an Android, what Bluetooth codecs are and which one you actually need for music."
 dek: "Bluetooth almost always compresses. The codec decides how much. Here is how to tell what is reaching your ears."
-date: 2026-11-16
+date: 2026-01-05
 category: music
 order: 16
 ---

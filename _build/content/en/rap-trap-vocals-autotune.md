@@ -4,7 +4,7 @@ group: voce-rap-trap-autotune
 title: "Mixing rap and trap vocals with Auto-Tune: the chain I use"
 description: "How to mix rap and trap vocals with Auto-Tune: tuning as an effect, clean-up, firm compression, saturation, ad-libs and tempo-synced delays. Examples and practical values."
 dek: "In rap the vocal is the rhythm; in trap, Auto-Tune is an instrument. The mix has to respect both: constant presence, character and no artifacts you did not choose."
-date: 2026-11-05
+date: 2025-03-10
 category: mixing
 order: 7
 ---

@@ -5,7 +5,7 @@ title: "Mid/side EQ in mastering: widen and clean up without losing the centre"
 seo_title: "Mid/side EQ in mastering: a practical guide"
 description: "What mid/side EQ is, how to use it in mastering to clean the low end on the sides, add air to the stereo image and bring the vocal forward, and the limits that keep mono safe."
 dek: "Mid/side EQ lets you treat the centre of a track and its sides differently. It is the most precise tool in mastering, and also the easiest to break things with."
-date: 2026-11-09
+date: 2025-08-31
 category: mastering
 order: 32
 ---

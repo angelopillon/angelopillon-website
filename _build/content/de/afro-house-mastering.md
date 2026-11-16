@@ -5,7 +5,7 @@ title: "Afro-House-Mastering: Percussion, Bass und Clublautheit"
 seo_title: "Afro-House-Mastering: Percussion, Bass und Lautheit"
 description: "Wie ich einen Afro-House-Track mastere: lebendige Percussion, ein straffer Mono-Bass, Stimmen und ethnische Instrumente am richtigen Platz, Lautheit für Beatport und Streaming."
 dek: "Afro House lebt von Percussion und Groove. Ein zu stark gequetschter Master tötet ihn, ein zu weicher hält neben anderen Tracks im Set nicht mit. Der richtige Punkt liegt dazwischen."
-date: 2026-11-09
+date: 2026-07-14
 category: electronic
 order: 34
 ---

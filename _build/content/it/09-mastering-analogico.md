@@ -4,7 +4,7 @@ title: "Mastering analogico: cosa fanno davvero SSL Fusion, API 2500, nastro e P
 seo_title: "Mastering analogico: SSL Fusion, API 2500, nastro e Pultec"
 description: "Cosa aggiungono le macchine analogiche al mastering, quando servono e quando no: SSL Fusion, API 2500, nastro ed EQ stile Pultec dentro una catena ibrida."
 dek: "L’analogico non è magia e non è nostalgia. È un insieme di comportamenti non lineari che, dosati su un brano preciso, fanno cose che i plugin approssimano soltanto."
-date: 2026-11-05
+date: 2025-09-16
 category: mastering
 order: 9
 ---

@@ -5,7 +5,7 @@ title: "Mastering per Beatport o per Spotify: un brano, due master?"
 seo_title: "Mastering per Beatport o Spotify: servono due master?"
 description: "Beatport e il club non normalizzano, lo streaming sì. Quando basta un solo master a −9/−10 LUFS e quando conviene davvero una versione club separata."
 dek: "I produttori di elettronica vivono in due economie insieme. Ecco come decido, progetto per progetto, se servono uno o due master."
-date: 2026-02-12
+date: 2026-06-28
 category: mastering
 order: 0
 ---

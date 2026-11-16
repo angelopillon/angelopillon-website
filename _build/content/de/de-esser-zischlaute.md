@@ -6,7 +6,7 @@ h1: "Zischlaute im Gesang zähmen, Schritt für Schritt"
 seo_title: "De-Esser und Zischlaute im Gesang: Tutorial"
 description: "So findest du die Frequenz der Zischlaute, stellst den De-Esser ein, wählst zwischen Split-Band und Breitband und korrigierst die schärfsten S-Laute von Hand."
 dek: "Zu laute S-Laute ermüden den Hörer und werden nach Kompression und Streaming-Codierung noch schärfer. Der richtige De-Esser senkt sie, ohne der Stimme die Klarheit zu nehmen."
-date: 2026-11-09
+date: 2025-11-18
 category: tutorial
 tutorial: true
 howto:

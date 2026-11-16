@@ -5,7 +5,7 @@ title: "Subtraktiver EQ: warum du im Mix erst absenken und dann anheben solltest
 seo_title: "Subtraktiver EQ im Mix: erst absenken, dann anheben"
 description: "So nutzt du subtraktiven EQ im Mix: Hochpassfilter mit Bedacht, schmale Absenkungen bei Resonanzen, der Bereich zwischen 200 und 500 Hz und wann Anheben richtig ist."
 dek: "Fast jeder überladene Mix hat dasselbe Problem: zu viele Spuren in denselben Frequenzen. Absenken schafft Platz, ohne Pegel hinzuzufügen, und der Mix öffnet sich von selbst."
-date: 2026-11-09
+date: 2025-02-22
 category: mixing
 order: 26
 ---

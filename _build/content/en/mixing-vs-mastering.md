@@ -5,7 +5,7 @@ title: "Mixing vs mastering: who does what, and when you need each"
 seo_title: "Mixing vs mastering: who does what"
 description: "Mixing and mastering explained without jargon: what happens in each stage, what mastering cannot fix and when stem mastering is the smarter choice."
 dek: "Mixing decides how the instruments sit together. Mastering decides how the track sits in the world. They are two different jobs, and it pays not to confuse them."
-date: 2026-11-05
+date: 2025-03-26
 category: mastering
 order: 3
 ---

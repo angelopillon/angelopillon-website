@@ -4,7 +4,7 @@ title: "Come pubblicare la tua prima canzone su Spotify, passo per passo"
 seo_title: "Come pubblicare una canzone su Spotify: guida 2026"
 description: "Distributore, file, copertina, data di uscita e pitch alle playlist editoriali: come pubblicare il tuo primo brano su Spotify e le altre piattaforme senza errori."
 dek: "Non si carica un brano direttamente su Spotify: passa da un distributore. Ecco cosa preparare e in che ordine."
-date: 2026-11-16
+date: 2026-09-14
 category: tutorial
 order: 19
 ---

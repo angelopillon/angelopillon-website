@@ -5,7 +5,7 @@ title: "Master delivery formats: bit depth, sample rate, dither and metadata"
 seo_title: "Master formats: bit depth, sample rate, dither, metadata"
 description: "Which format a master needs for distribution: 24-bit WAV, sample rate, when to dither, file naming, ISRC codes and the checks to make before uploading."
 dek: "A perfect master can reach the platforms damaged by the wrong format or missing metadata. Here is what I prepare for every delivery and what to check before you upload."
-date: 2026-11-09
+date: 2026-03-09
 category: mastering
 order: 35
 ---
