@@ -229,15 +229,15 @@ def article_pages(arts):
                      feed=dict(lang=lang, title=a["title"], description=a["description"], date=a["date"], path=a["path"]))
         # hub
         h = dict(
-            en=dict(crumb="Articles", h1="Studio journal", lead="Practical, opinionated articles on mixing, mastering and loudness: the same principles I apply to every track that comes through the studio. Eight are step-by-step tutorials, ten are news from the audio world.",
+            en=dict(crumb="Articles", h1="Studio journal", lead="Practical, opinionated articles on mixing, mastering and loudness: the same principles I apply to every track that comes through the studio. You will also find step-by-step tutorials, comparisons and news from the audio world.",
                     search="Search articles", count_tpl="{n} articles", filter="Filter by topic", all="All", empty="No article matches. Try another word.",
                     other="Leggi anche in italiano:", other_label="articoli in italiano", other_href="/it/articoli/", other_lang="it",
                     title="Mixing and mastering articles | Angelo Pillon", description="Articles on mixing, mastering and loudness: LUFS, true peak, low end, vocals, stems and streaming, from a working mixing and mastering engineer."),
-            it=dict(crumb="Articoli", h1="Diario di studio", lead="Articoli pratici, con un punto di vista, su mix, mastering e loudness: gli stessi principi che applico a ogni brano che passa dallo studio. Otto sono tutorial passo passo, dieci sono notizie dal mondo dell’audio.",
+            it=dict(crumb="Articoli", h1="Diario di studio", lead="Articoli pratici, con un punto di vista, su mix, mastering e loudness: gli stessi principi che applico a ogni brano che passa dallo studio. Ci trovi anche tutorial passo passo, confronti e notizie dal mondo dell’audio.",
                     search="Cerca negli articoli", count_tpl="{n} articoli", filter="Filtra per argomento", all="Tutti", empty="Nessun articolo corrisponde. Prova un’altra parola.",
                     other="Also in English:", other_label="articles in English", other_href="/articles", other_lang="en",
                     title="Articoli su mix, mastering e loudness | Angelo Pillon", description="Articoli e tutorial in italiano su mix, mastering e loudness: LUFS, true peak, gain staging, voce, stem, fase e streaming, da un fonico di mix e mastering."),
-            de=dict(crumb="Artikel", h1="Studio-Journal", lead="Praxisnahe Artikel mit klarer Haltung zu Mixing, Mastering und Lautheit: dieselben Prinzipien, die ich bei jedem Track im Studio anwende. Acht davon sind Schritt-für-Schritt-Tutorials, zehn sind Neuigkeiten aus der Audiowelt.",
+            de=dict(crumb="Artikel", h1="Studio-Journal", lead="Praxisnahe Artikel mit klarer Haltung zu Mixing, Mastering und Lautheit: dieselben Prinzipien, die ich bei jedem Track im Studio anwende. Dazu Schritt-für-Schritt-Tutorials, Vergleiche und Neuigkeiten aus der Audiowelt.",
                     search="Artikel durchsuchen", count_tpl="{n} Artikel", filter="Nach Thema filtern", all="Alle", empty="Kein Artikel passt. Versuch es mit einem anderen Wort.",
                     title="Artikel über Mixing, Mastering und Lautheit | Angelo Pillon", description="Artikel und Tutorials auf Deutsch über Mixing, Mastering und Lautheit: LUFS, True Peak, Gain Staging, Vocals, Stems, Phase und Streaming, von einem Mixing- und Mastering-Engineer."),
         )[lang]
@@ -531,7 +531,7 @@ def home_pages(arts):
         s["sv_more"] = SV.UI[lang]["details"]
         main = env.get_template("home.html").render(s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
                                                      meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
-                                                     codes=S.CLIENT_CODES, playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang))
+                                                     codes=S.CLIENT_CODES, reviews_live=reviews_live(), playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang))
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",
                "description": s["description"], "url": SITE + S.HOMES[lang], "image": SITE + "/assets/img/studio-1-1400.jpg", "logo": SITE + "/assets/img/icon-512.png",
                "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}, "areaServed": "Worldwide", "knowsLanguage": ["en", "it", "de", "es"],
@@ -590,6 +590,43 @@ def legal_pages():
   <div class="btn-row"><a class="btn" href="/">Home</a><a class="btn btn--ghost" href="/articles">Articles</a><a class="btn btn--ghost" href="/tools/">Tools</a><a class="btn btn--ghost" href="/it/" lang="it">Italiano</a></div>
 </section>""")
     add_page(path="/404.html", lang="en", title="Page not found | Angelo Pillon", description="This page does not exist.", main=nf, noindex=True, og_image="/assets/og/en-home.png", sitemap=False)
+
+
+# ---------------------------------------------------------------- reviews + story (Italian draft first)
+COUNTRY_IT = {"FR": "Francia", "PL": "Polonia", "HU": "Ungheria", "DE": "Germania", "US": "Stati Uniti", "PT": "Portogallo", "CA": "Canada", "GB": "Regno Unito",
+              "SE": "Svezia", "IT": "Italia", "NL": "Paesi Bassi", "BE": "Belgio", "TR": "Turchia", "AE": "Emirati Arabi Uniti", "CH": "Svizzera", "ZA": "Sudafrica"}
+QUOTE_LANG = {"svenstoffel": "de", "djfeld": "fr"}
+
+
+def reviews_live():
+    f = B / "content/reviews.it.yaml"
+    return f.exists() and (PREVIEW or not yaml.safe_load(f.read_text()).get("draft"))
+
+
+def reviews_pages():
+    f = B / "content/reviews.it.yaml"
+    if not f.exists():
+        return
+    p = yaml.safe_load(f.read_text())
+    if p.get("draft") and not PREVIEW:
+        return  # still a draft: rendered only in preview builds
+    lang = "it"
+    groups = []
+    for g in p["groups"]:
+        items = [dict(q, where=COUNTRY_IT[q["cc"]], lang=QUOTE_LANG.get(q["who"], "en")) for q in g["items"]]
+        groups.append(dict(g, quotes=items))
+    feature = next(q for g in groups for q in g["quotes"] if q.get("feature"))
+    story = Markup(md_file(B / "content/story.it.md"))
+    ui = ui_for(lang)
+    main = env.get_template("reviews.html").render(ui=ui, p=p, groups=groups, feature=feature, story=story)
+    rv = [{"@type": "Review", "reviewBody": q["text"], "author": {"@type": "Person", "name": q["who"]}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}}
+          for g in groups for q in g["quotes"]][:10]
+    jl = [{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering", "url": SITE + "/",
+           "image": SITE + "/assets/img/studio-1-1400.jpg", "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"},
+           "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.98", "bestRating": "5", "ratingCount": "791"}, "review": rv},
+          crumbs_ld([(ui["home_label"], S.HOMES[lang]), (p["crumb"], p["path"])])]
+    add_page(path=p["path"], lang=lang, title=p["title"], description=p["description"], main=main, alt_key="reviews", jsonld=jl,
+             og_image=f"/assets/og/{lang}-home.png", og_title=p["h1"])
 
 
 # ---------------------------------------------------------------- render
@@ -905,6 +942,7 @@ def main():
     article_pages(arts)
     tool_pages()
     legal_pages()
+    reviews_pages()
     OUT.mkdir(parents=True, exist_ok=True)
     images()
     og.icons(ROOT)

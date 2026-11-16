@@ -246,7 +246,7 @@ HOME["it"] = dict(
            ("Brief e reference", "Raccontami come deve suonare e dove uscirà: brani di riferimento, piattaforme, club o streaming."),
            ("Mix e master", "La sessione passa nella catena ibrida. Ricevi una prima versione con note su cosa ho cambiato e perché."),
            ("Modifiche e consegna", "Chiedi qualsiasi modifica. Quando è giusto ricevi i file finali per streaming, club e download.")],
-    rv_h2="Cosa dicono i clienti", rv_scale="su 5", rv_intro="Da oltre 700 recensioni verificate, di artisti, produttori, etichette e studi in 66 paesi.", rv_link="Leggi tutte le recensioni",
+    rv_h2="Cosa dicono i clienti", rv_scale="su 5", rv_intro="Da oltre 700 recensioni verificate, di artisti, produttori, etichette e studi in 66 paesi.", rv_link="Leggi cosa dicono di me",
     tl_h2="Strumenti gratuiti", tl_intro="Sette strumenti che girano nel browser. Il tuo audio non lascia mai il computer.", tl_all="Tutti gli strumenti", open="Apri",
     ar_h2="Dal diario di studio", ar_intro="Note pratiche su loudness, mix e mastering, in italiano e in inglese.",
     ar_links=[dict(label="Tutti gli articoli", href="/it/articoli/"), dict(label="Articles in English", href="/articles"), dict(label="Artikel auf Deutsch", href="/de/artikel/")],

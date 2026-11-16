@@ -1,0 +1,185 @@
+# Pagina "Cosa dicono di me": recensioni vere, citate parola per parola (i tagli sono segnati con …).
+# Fonte: profilo Fiverr angelopillon, letto il 16 novembre 2026. Sul sito non compare l'etichetta della piattaforma.
+draft: true  # togliere quando Angelo approva testo e titolo
+path: /it/recensioni
+crumb: Recensioni
+kicker: Recensioni e storia
+h1: "Il mio suono, raccontato da chi l’ha ascoltato."
+lead: "Più di 790 recensioni da artisti, produttori ed etichette di 66 paesi. Qui ne trovi 36, scelte perché raccontano il suono e il metodo meglio di come potrei farlo io. Più sotto, la mia storia."
+title: "Recensioni e storia | Angelo Pillon, fonico di mix e mastering"
+description: "Cosa dicono artisti, produttori ed etichette del mio mix e mastering: 36 recensioni vere su oltre 790, media 4,98 su 5, clienti in 66 paesi. E la storia dello studio ibrido di Milano."
+stats:
+  - [ "4,98", "Media su 791 recensioni" ]
+  - [ "4,99", "Qualità del lavoro" ]
+  - [ "4,96", "Comunicazione" ]
+  - [ "66", "Paesi" ]
+words_h2: "Le parole che tornano"
+words:
+  - [ "Profondità", "depth" ]
+  - [ "Chiarezza", "clarity" ]
+  - [ "Punch", "punch" ]
+  - [ "Attenzione al dettaglio", "attention to detail" ]
+  - [ "Rispetto dell’identità", "respecting its original identity" ]
+  - [ "Pazienza", "patient" ]
+groups:
+  - id: suono
+    h2: "Il suono"
+    intro: "Cosa sentono i clienti quando aprono il file."
+    items:
+      - who: rodneyjerkins
+        cc: FR
+        badge: Cliente abituale
+        feature: true
+        text: "After 20 years in the music industry, I am always a little apprehensive when listening to the first mix of a track I have produced, but his work completely exceeded my expectations. … He gave the track depth, clarity, punch, and a professional finish while fully respecting its original identity. The result is simply exceptional."
+      - who: rodneyjerkins
+        cc: FR
+        badge: Due mix dello stesso progetto
+        text: "His attention to detail is outstanding: each track retains its own personality and unique treatment while remaining part of the same cohesive musical universe. The sound is polished, powerful, and perfectly balanced."
+      - who: victoriaalexx
+        cc: PL
+        badge: Mix e master
+        text: "The mix has so much energy and everything feels well-balanced, with each instrument having its own space. The vocal sounds great and sits perfectly in the mix."
+      - who: tothbertalan87
+        cc: HU
+        badge: Mastering analogico
+        text: "Fantastic analog master! He really brought the track to life while preserving its character and groove."
+      - who: voicerose
+        cc: DE
+        badge: Mix e master
+        text: "I had a song sitting in a drawer for a year because I wasn’t sure if it was good enough, but Angelo brought it to life brilliantly. Pitch changes between verses and choruses were handled flawlessly, and the final mix sounds amazing across all systems."
+      - who: nghi1991
+        cc: US
+        badge: Mix
+        text: "The final mixes sound clean, punchy, and professional, while still keeping the character of the tracks."
+      - who: euphorofficial
+        cc: PT
+        badge: Melodic house
+        text: "I am very happy with this mixing and mastering of my new release. It makes my melodic house track ready for streaming and club use."
+      - who: rodneyjerkins
+        cc: FR
+        badge: Cliente abituale
+        text: "Every mix feels carefully crafted, balanced, powerful and musical. You can genuinely hear the time, passion and expertise behind every decision. He doesn’t simply mix a track, he brings out its full potential while always respecting the original artistic vision."
+      - who: wess14
+        cc: US
+        badge: Quarto progetto
+        text: "Angelo is the most skilled engineer you can work with. Truly brings your song to life, and has such a deep understanding of mixing and mastering. This is my 4th time working with him!"
+      - who: advantage_mast
+        cc: CA
+        badge: Mastering
+        text: "Thank you so much for exceptional quality, and perfectly adjusting to the specific sound I’m looking for!"
+      - who: gsingh99x
+        cc: GB
+        badge: Mix e master
+        text: "Amazing work Angelo knew exactly the sound I wanted and nothing was too much for him. I am 100% happy with the final mix and master!"
+      - who: chrwin
+        cc: SE
+        badge: Materiale difficile
+        text: "I’m aware about the limitations of the original source material. You delivered the best result possible."
+      - who: stepsierra
+        cc: DE
+        badge: Mix e master
+        text: "Thank you! you brought my song to the next level!!! Will Order again"
+  - id: metodo
+    h2: "Il metodo"
+    intro: "Come si lavora insieme: ascolto, spiegazioni, revisioni."
+    items:
+      - who: mattberg546
+        cc: CA
+        badge: Mix e master
+        text: "He made sure he understood my needs deeply and worked hard to make sure the end product was aligned with my vision despite me being very picky. He made changes that were beyond the scope of his work to ensure that I was satisfied with my delivery."
+      - who: isabelsantoro
+        cc: IT
+        badge: EP
+        text: "His technical expertise really stands out, and I especially appreciated how thoroughly he explained the decisions behind his mixing and mastering process. He’s also extremely helpful and always willing to listen and make adjustments."
+      - who: courzmusic
+        cc: DE
+        badge: Mastering techno
+        text: "Before the mastering process, I had him review my mixed techno tracks so I could make necessary adjustments beforehand. He then did an incredible job mastering them. Whenever I asked for changes, he addressed them immediately and delivered the updated files within a day at the latest."
+      - who: jartligterink
+        cc: NL
+        badge: EP
+        text: "His communication is very professional, showing deep understanding of my vision for the EP as a whole. … He was always patient and went above and beyond with delivering revisions, just to make sure I’d be 100% satisfied with the final result."
+      - who: skpx69
+        cc: BE
+        badge: Mix e master
+        text: "His attention to detail, technical knowledge and passion for music really stand out. He takes the time to understand what you’re looking for, listens carefully to feedback and genuinely cares about getting the best possible result."
+      - who: tailcloudstudio
+        cc: GB
+        badge: Cliente abituale
+        text: "He is very knowledgeable about production and understands his craft. For this project, I wanted to try and experiment with some different sounds and Angelo was extremely accomodating."
+      - who: dylan_drucker
+        cc: US
+        badge: Feedback sul mix
+        text: "Angelo was very polite and professional. Mix review is very detailed and has a lot of great information. Will be working with Angelo again!"
+      - who: dn_syncprep
+        cc: US
+        badge: Catalogo sync
+        text: "Angelo remained patient and responsive throughout multiple versions, and did a great job listening and communicating."
+      - who: wilkrr22
+        cc: US
+        badge: Cliente abituale
+        text: "I’m very picky and detailed, and never once has he made me feel rushed, pushed, or pressured to get to the final results I’m looking and hoping for... If you’re a package, he’s Amazon. Delivers the right thing, on time, every time. And most times early."
+      - who: yamansndl
+        cc: TR
+        badge: Mix e master
+        text: "He understood where I was headed and we worked very straightforward. Also, what I loved about working with him was him delivering the project on time and he was very quick responses."
+      - who: eenyoface
+        cc: US
+        badge: Extended e radio edit
+        text: "Absolutely amazing. Went above and beyond and did an incredible amount of work in such a short period of time."
+      - who: karl_black
+        cc: AE
+        badge: Mastering
+        text: "Angelo is super reliable, responds quickly, and delivers a great master."
+      - who: francoisemin
+        cc: NL
+        badge: Mix e master
+        text: "Angelo did an amazing work on this song, exceeding what I was expecting. The communication was perfect and delivery time was quick."
+  - id: tornano
+    h2: "Chi torna"
+    intro: "La recensione che conta di più è il secondo ordine."
+    items:
+      - who: corytyndall
+        cc: US
+        badge: Secondo progetto
+        text: "This is my second time working with Angelo and his attention to detail will keep me coming back. … I’ve been doing music for 10+ years and worked with many great producers and I’m happy to add him to my lineup of creatives that I will continue to come back to."
+      - who: crucialvalor
+        cc: US
+        badge: Sei mesi di lavoro insieme
+        text: "I have been working with him for the 6 months or so now and he has taken all of my projects to the next level - which is helping me get booked for more and more shows!"
+      - who: rodneyjerkins
+        cc: FR
+        badge: Cliente abituale
+        text: "I’ve worked with him several times now, and once again, the experience has been excellent. He’s a highly talented and professional sound engineer who really understands the music, pays attention to every detail, and always delivers high-quality work."
+      - who: econ6021
+        cc: US
+        badge: Secondo progetto
+        text: "Second time working with Angelo and the quality of his craft and attention to detail is second to none. Phenomenal engineer!"
+      - who: victoriaalexx
+        cc: PL
+        badge: Secondo progetto
+        text: "Angelo is very talented, professional, patient, and really understands the feeling and character of the song. … I’ll definitely be coming back with more songs!"
+      - who: svenstoffel
+        cc: CH
+        badge: Cliente abituale
+        text: "Hervorragender Job, Schnell und sehr gute Qualität. Ich arbeite schon länger mit ihm zusammen und bin mehr als zufrieden"
+      - who: tailcloudstudio
+        cc: GB
+        badge: Cliente abituale
+        text: "Another excellent experience. Angelo makes the process very smooth and cares about his work."
+      - who: djfeld
+        cc: FR
+        badge: EDM pop
+        text: "merci pour la rapidité la réactivité proffessionel je recommande ces un très bon travail bravo"
+      - who: crucialvalor
+        cc: US
+        badge: Cliente abituale
+        text: "Angelo continues to go above and beyond with everything I bring to the table. A true professional in his craft, his love and deep understanding for music shows clearly in his work."
+      - who: eenyoface
+        cc: US
+        badge: Cliente abituale
+        text: "Great as always. Very quick, detailed, and high quality."
+story_h2: "La mia storia"
+cta_h2: "Il prossimo brano può essere il tuo."
+cta_p: "Mandami il progetto o una demo: ti rispondo di solito entro poche ore, con un piano chiaro e un prezzo prima di cominciare."
+cta_btn: "Inizia un progetto"

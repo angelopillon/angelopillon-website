@@ -1113,3 +1113,47 @@ body:not(.is-home) main{ padding-top:64px; }
 
 /* the soft backdrop behind the globe text must not widen the page on phones */
 .worldwide{ overflow-x:clip; }
+
+/* reviews + story page */
+.rvp-head .t-h1{ max-width:18ch; }
+.rvp-kicker{ font-size:.8125rem; font-weight:620; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); margin-bottom:14px; }
+.rvp-kicker::before{ content:"★★★★★"; color:var(--amber); letter-spacing:.14em; margin-right:12px; }
+.rvp-stats{ display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:1px; margin:40px 0 0; border-radius:var(--r-l); overflow:hidden; background:var(--line); border:1px solid var(--line); max-width:880px; }
+.rvp-stats div{ display:grid; gap:4px; padding:20px 22px; background:var(--card); }
+.rvp-stats dd{ margin:0; font-size:clamp(1.75rem, 3.2vw, 2.5rem); font-weight:780; letter-spacing:-.04em; line-height:1; }
+.rvp-stats dt{ font-size:.8125rem; color:var(--ink-2); }
+.rvp-feature{ display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:clamp(24px, 4vw, 56px); align-items:center; padding-block:clamp(24px, 4vw, 48px); }
+.rvp-big{ margin:0; }
+.rvp-big blockquote{ margin:0; }
+.rvp-big blockquote p{ font-size:clamp(1.375rem, 2.4vw, 2rem); line-height:1.32; font-weight:560; letter-spacing:-.02em; }
+.rvp-big figcaption, .rvp-card figcaption{ display:grid; gap:3px; margin-top:22px; font-size:.9375rem; }
+.rvp-big figcaption b, .rvp-card figcaption b{ font-weight:650; }
+.rvp-big figcaption span, .rvp-card figcaption span{ color:var(--ink-2); }
+.rvp-photo, .rvp-story__photo{ margin:0; border-radius:var(--r-xl); overflow:hidden; border:1px solid var(--line); }
+.rvp-photo img, .rvp-story__photo img{ display:block; width:100%; height:auto; }
+.rvp-h2{ font-size:clamp(1.75rem, 3.4vw, 2.75rem); font-weight:770; letter-spacing:-.035em; line-height:1.04; }
+.rvp-words{ padding-block:clamp(32px, 5vw, 64px); }
+.rvp-words ul{ list-style:none; margin:22px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:10px; }
+.rvp-words li{ display:grid; gap:2px; padding:12px 18px; border-radius:999px; background:var(--card); border:1px solid var(--line); }
+.rvp-words li b{ font-weight:650; }
+.rvp-words li span{ font-size:.8125rem; color:var(--ink-3); }
+.rvp-group{ padding-block:clamp(32px, 5vw, 64px); }
+.rvp-group__head{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px 24px; margin-bottom:26px; padding-bottom:18px; border-bottom:1px solid var(--line); }
+.rvp-group__head p{ color:var(--ink-2); }
+.rvp-grid{ columns:3 300px; column-gap:16px; }
+.rvp-card{ break-inside:avoid; margin:0 0 16px; padding:26px; border-radius:var(--r-l); background:var(--card); border:1px solid var(--line); }
+.rvp-card blockquote{ margin:0; }
+.rvp-card blockquote p{ font-size:1.0625rem; line-height:1.55; color:#E4E4EA; }
+.rvp-story{ display:grid; gap:clamp(28px, 4vw, 48px); padding-block:clamp(48px, 7vw, 96px); }
+.rvp-story__body{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.2fr); gap:clamp(20px, 4vw, 56px); }
+.rvp-story__body .prose{ max-width:var(--measure); }
+mark.draft-gap{ background:rgba(255,181,71,.16); color:var(--amber); border:1px dashed rgba(255,181,71,.6); border-radius:6px; padding:1px 6px; }
+.rvp-cta{ text-align:center; display:grid; justify-items:center; gap:18px; padding-block:clamp(56px, 8vw, 120px) var(--sec); }
+.rvp-cta .t-lead{ max-width:52ch; }
+@media (max-width:900px){
+  .rvp-feature, .rvp-story__body{ grid-template-columns:minmax(0,1fr); }
+  .rvp-stats{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+}
+/* small real photos in articles keep their own size instead of stretching */
+.prose figure.fig-small img{ width:auto; max-width:100%; margin-inline:auto; }
+.prose figure.fig-small figcaption{ text-align:center; }

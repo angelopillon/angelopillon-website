@@ -1,0 +1,50 @@
+<header class="page-head wrap rvp-head">
+  <ol class="crumbs" aria-label="{{ ui.crumbs_label }}"><li><a href="{{ ui.home }}">{{ ui.home_label }}</a></li><li><span aria-current="page">{{ p.crumb }}</span></li></ol>
+  <p class="rvp-kicker">{{ p.kicker }}</p>
+  <h1 class="t-h1">{{ p.h1 }}</h1>
+  <p class="t-lead">{{ p.lead }}</p>
+  <dl class="rvp-stats">
+    {% for v, k in p.stats %}<div><dd>{{ v }}</dd><dt>{{ k }}</dt></div>{% endfor %}
+  </dl>
+</header>
+
+<section class="wrap rvp-feature">
+  {% set f = feature %}
+  <figure class="rvp-big">
+    <blockquote><p>“{{ f.text }}”</p></blockquote>
+    <figcaption><b>{{ f.who }}</b><span>{{ f.where }} · {{ f.badge }}</span></figcaption>
+  </figure>
+  <figure class="rvp-photo"><img src="/assets/img/photo/engineer-desk.webp" alt="Angelo Pillon al lavoro nel suo studio di Milano" width="1166" height="614" loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="wrap rvp-words" aria-labelledby="h-words">
+  <h2 id="h-words" class="rvp-h2">{{ p.words_h2 }}</h2>
+  <ul>{% for it, en in p.words %}<li><b>{{ it }}</b><span lang="en">“{{ en }}”</span></li>{% endfor %}</ul>
+</section>
+
+{% for g in groups %}
+<section class="wrap rvp-group" id="{{ g.id }}" aria-labelledby="h-{{ g.id }}">
+  <div class="rvp-group__head"><h2 id="h-{{ g.id }}" class="rvp-h2">{{ g.h2 }}</h2><p>{{ g.intro }}</p></div>
+  <div class="rvp-grid">
+    {% for q in g.quotes if not q.feature %}<figure class="rvp-card">
+      <blockquote{% if q.lang %} lang="{{ q.lang }}"{% endif %}><p>“{{ q.text }}”</p></blockquote>
+      <figcaption><b>{{ q.who }}</b><span>{{ q.where }} · {{ q.badge }}</span></figcaption>
+    </figure>{% endfor %}
+  </div>
+</section>
+{% if loop.index == 1 %}
+<section class="wrap rvp-story" id="storia" aria-labelledby="h-story">
+  <figure class="rvp-story__photo"><img src="/assets/img/photo/console-wide.webp" alt="Mani sulla catena analogica dello studio" width="1200" height="389" loading="lazy" decoding="async"></figure>
+  <div class="rvp-story__body">
+    <h2 id="h-story" class="rvp-h2">{{ p.story_h2 }}</h2>
+    <div class="prose">{{ story }}</div>
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+
+<section class="wrap rvp-cta">
+  <h2 class="t-display">{{ p.cta_h2 }}</h2>
+  <p class="t-lead">{{ p.cta_p }}</p>
+  <a class="btn btn--glow" href="{{ ui.home }}#contact">{{ p.cta_btn }}</a>
+</section>

@@ -34,7 +34,6 @@
       <p class="worldwide__num"><span data-count="66">66</span></p>
       <h2 class="t-display" id="h-world" data-split>{{ c.gl_h2 }}</h2>
       <p class="t-lead" data-reveal>{{ c.gl_p }}</p>
-      <p class="worldwide__proof" data-reveal><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">{{ c.gl_proof }}</a></p>
       <p class="worldwide__hint" data-reveal>{{ v.drag_hint }}</p>
     </div>
   </div>
@@ -245,7 +244,7 @@
         <h2 class="t-display" id="h-rev" data-split>{{ s.rv_h2 }}</h2>
         <p class="t-lead" data-reveal>{{ s.rv_intro }}</p>
       </div>
-      <div class="rating" data-reveal><b><span data-count="4.9" data-dec="1">4.9</span></b><span>{{ s.rv_scale }}</span><a class="link" href="https://www.fiverr.com/angelopillon" rel="noopener" target="_blank">{{ s.rv_link }}</a></div>
+      <div class="rating" data-reveal><b><span data-count="4.9" data-dec="1">4.9</span></b><span>{{ s.rv_scale }}</span>{% if lang == 'it' and reviews_live %}<a class="link" href="/it/recensioni">{{ s.rv_link }}</a>{% endif %}</div>
     </div>
     <figure class="hx-bigquote" data-reveal>
       <blockquote><p>“{{ reviews[0].text }}”</p></blockquote>
