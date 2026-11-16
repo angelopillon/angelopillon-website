@@ -30,8 +30,8 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Angelo Pillon, Studio-Journal" href="/de/feed.xml">
 <link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=202611161058">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Bluetooth-Kopfhörer und Klangqualität: AAC, aptX und LDAC erklärt","description":"Warum dieselben kabellosen Kopfhörer am iPhone und an einem Android anders klingen, was Bluetooth-Codecs sind und welchen du für Musik wirklich brauchst.","inLanguage":"de","datePublished":"2026-01-05","dateModified":"2026-01-05","author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mix engineer and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://pro.fiverr.com/freelancers/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg","knowsAbout":["Audio mixing","Audio mastering","Stem mastering","Analog mastering","Loudness (LUFS)","Apple Digital Masters"],"address":{"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"}},"publisher":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mix engineer and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://pro.fiverr.com/freelancers/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg","knowsAbout":["Audio mixing","Audio mastering","Stem mastering","Analog mastering","Loudness (LUFS)","Apple Digital Masters"],"address":{"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"}},"mainEntityOfPage":"https://angelopillon.com/de/artikel/bluetooth-kopfhoerer-klangqualitaet-codecs","image":"https://angelopillon.com/assets/og/de-bluetooth-kopfhoerer-klangqualitaet-codecs.png","articleSection":"Musik","wordCount":306}</script>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611161649">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Bluetooth-Kopfhörer und Klangqualität: AAC, aptX und LDAC erklärt","description":"Warum dieselben kabellosen Kopfhörer am iPhone und an einem Android anders klingen, was Bluetooth-Codecs sind und welchen du für Musik wirklich brauchst.","inLanguage":"de","datePublished":"2026-01-05","dateModified":"2026-01-05","author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mix engineer and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://pro.fiverr.com/freelancers/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg","knowsAbout":["Audio mixing","Audio mastering","Stem mastering","Analog mastering","Loudness (LUFS)","Apple Digital Masters"],"address":{"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"}},"publisher":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mix engineer and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://pro.fiverr.com/freelancers/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg","knowsAbout":["Audio mixing","Audio mastering","Stem mastering","Analog mastering","Loudness (LUFS)","Apple Digital Masters"],"address":{"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"}},"mainEntityOfPage":"https://angelopillon.com/de/artikel/bluetooth-kopfhoerer-klangqualitaet-codecs","image":"https://angelopillon.com/assets/og/de-bluetooth-kopfhoerer-klangqualitaet-codecs.png","articleSection":"Musik","wordCount":870}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://angelopillon.com/de/"},{"@type":"ListItem","position":2,"name":"Artikel","item":"https://angelopillon.com/de/artikel/"},{"@type":"ListItem","position":3,"name":"Bluetooth-Kopfhörer und Klangqualität: AAC, aptX und LDAC erklärt","item":"https://angelopillon.com/de/artikel/bluetooth-kopfhoerer-klangqualitaet-codecs"}]}</script>
 </head>
 <body class="">
@@ -76,7 +76,7 @@
     <div class="meta">
       <span>Von Angelo Pillon</span>
       <time datetime="2026-01-05">5. Januar 2026</time>
-      <span>3 Min. Lesezeit</span>
+      <span>4 Min. Lesezeit</span>
       
       <span class="share">
         <button type="button" data-share="copy" data-done="Link kopiert" aria-label="Link kopieren" title="Link kopieren"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1 1"/><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1-1"/></svg></button>
@@ -92,18 +92,23 @@
       <nav class="toc" aria-label="Auf dieser Seite">
         <details open><summary>Auf dieser Seite</summary>
         <h2 aria-hidden="true">Auf dieser Seite</h2>
-        <ol><li><a href="#die-wichtigsten-codecs">Die wichtigsten Codecs</a></li><li><a href="#was-das-fur-dich-hei-t">Was das für dich heißt</a></li><li><a href="#der-rat-vom-engineer">Der Rat vom Engineer</a></li><li><a href="#quellen">Quellen</a></li></ol>
+        <ol><li><a href="#was-ein-codec-ist">Was ein Codec ist</a></li><li><a href="#die-wichtigsten-codecs">Die wichtigsten Codecs</a></li><li><a href="#was-das-fur-dich-bedeutet">Was das für dich bedeutet</a></li><li><a href="#wie-viel-es-wirklich-ausmacht">Wie viel es wirklich ausmacht</a></li><li><a href="#weitere-details-die-einen-unterschied-machen">Weitere Details, die einen Unterschied machen</a></li><li><a href="#der-rat-vom-engineer">Der Rat vom Engineer</a></li><li><a href="#haufige-fragen">Häufige Fragen</a></li><li><a href="#quellen">Quellen</a></li></ol>
         </details>
       </nav>
       <div class="prose">
         <div class="tldr"><span class="box__title">Kurz gesagt</span>
 <ul>
-<li>Der Codec bestimmt, wie dein Handy Musik komprimiert, um sie an kabellose Kopfhörer zu schicken.</li>
-<li>iPhones nutzen AAC; viele Android-Handys können auch aptX und LDAC, die mehr Daten übertragen.</li>
-<li>Nur aptX Lossless erreicht verlustfreie CD-Qualität, und Handy wie Kopfhörer müssen es unterstützen.</li>
+<li>Der Codec ist die Art, wie dein Handy Musik komprimiert, um sie an kabellose Kopfhörer zu senden.</li>
+<li>Das iPhone nutzt AAC; viele Android-Handys unterstützen auch aptX und LDAC, die mehr Daten übertragen.</li>
+<li>Nur aptX Lossless erreicht verlustfreie CD-Qualität, und Handy und Kopfhörer müssen es beide unterstützen.</li>
+<li>Vor dem Codec zählen die Kopfhörer: ihr Frequenzgang und wie sie sitzen.</li>
 </ul></div>
-<p>Oft werde ich gefragt, ob sich Lossless bei Spotify oder Apple Music mit kabellosen Kopfhörern lohnt. Die Antwort hängt von einem Stück Technik ab, auf das kaum jemand achtet: dem Codec.</p>
-<figure><img alt="Laptop und Studiomonitore in Angelo Pillons Regie" decoding="async" height="384" loading="lazy" src="/assets/img/photo/studio-laptop.webp" width="627"/><figcaption>Im Studio läuft alles über Kabel: keine Kompression zwischen Rechner und Ohren. Foto aus dem Studio.</figcaption></figure>
+<p>Viele fragen mich, ob es Sinn hat, bei Spotify oder Apple Music Lossless mit kabellosen Kopfhörern einzuschalten. Andere wundern sich, warum derselbe Kopfhörer mit einem Handy besser klingt als mit einem anderen. In beiden Fällen hängt die Antwort von einer Technik ab, die kaum jemand beachtet: dem Bluetooth-Codec.</p>
+<p>Hier erkläre ich, was er ist, welche es gibt, was dein Handy nutzt und wie viel er für das, was du hörst, wirklich ausmacht.</p>
+<figure class="fig-web"><img alt="Kabellose Earbuds mit Ladeetui" decoding="async" height="933" loading="lazy" sizes="(max-width: 760px) 100vw, 760px" src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F7%2F73%2FYamaha_TW-E3A_Earbuds_Customize%252C_Japan%253B_April_2021_%252801%2529.jpg%2F1920px-Yamaha_TW-E3A_Earbuds_Customize%252C_Japan%253B_April_2021_%252801%2529.jpg&amp;w=1400&amp;q=78" srcset="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F7%2F73%2FYamaha_TW-E3A_Earbuds_Customize%252C_Japan%253B_April_2021_%252801%2529.jpg%2F1920px-Yamaha_TW-E3A_Earbuds_Customize%252C_Japan%253B_April_2021_%252801%2529.jpg&amp;w=800&amp;q=78 800w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F7%2F73%2FYamaha_TW-E3A_Earbuds_Customize%252C_Japan%253B_April_2021_%252801%2529.jpg%2F1920px-Yamaha_TW-E3A_Earbuds_Customize%252C_Japan%253B_April_2021_%252801%2529.jpg&amp;w=1400&amp;q=78 1400w" width="1400"/><figcaption>True-Wireless-Earbuds: bequem und überall dabei, aber zwischen Handy und Ohr wird die Musik neu komprimiert. <span class="credit">Foto: <a href="https://commons.wikimedia.org/wiki/File:Yamaha_TW-E3A_Earbuds_Customize%2C_Japan%3B_April_2021_%2801%29.jpg" rel="noopener" target="_blank">Miki Yoshihito</a>, <a href="https://creativecommons.org/licenses/by/2.0/" rel="noopener" target="_blank">CC BY 2.0</a>, via Wikimedia Commons</span></figcaption></figure>
+<h2 id="was-ein-codec-ist">Was ein Codec ist</h2>
+<p>Bluetooth hat eine begrenzte Bandbreite: Es kann nicht alle Daten eines unkomprimierten Songs übertragen. Deshalb komprimiert das Handy die Musik vor dem Senden mit einem Codec. Die Kopfhörer empfangen die Daten und decodieren sie wieder zu Klang.</p>
+<p>Das heißt: Selbst wenn du eine Lossless-Datei abspielst, findet zwischen Handy und Kopfhörer eine zweite Kompression statt. Die Endqualität hängt davon ab, wie gut dieser Codec ist und wie viele Daten er übertragen kann.</p>
 <h2 id="die-wichtigsten-codecs">Die wichtigsten Codecs</h2>
 <table tabindex="0">
 <thead>
@@ -116,8 +121,8 @@
 <tbody>
 <tr>
 <td>SBC</td>
-<td>jedes Gerät</td>
-<td>Basis</td>
+<td>alle Geräte</td>
+<td>einfach</td>
 </tr>
 <tr>
 <td>AAC</td>
@@ -130,25 +135,59 @@
 <td>bis 352 kbps, verlustbehaftet</td>
 </tr>
 <tr>
+<td>aptX HD</td>
+<td>einige Android-Handys</td>
+<td>24 Bit, etwa 576 kbps, verlustbehaftet</td>
+</tr>
+<tr>
 <td>LDAC</td>
 <td>viele Android-Handys, Sony-Kopfhörer</td>
 <td>bis 990 kbps, verlustbehaftet</td>
 </tr>
 <tr>
 <td>aptX Lossless</td>
-<td>einige neuere Android-Handys und Kopfhörer</td>
-<td>verlustfreie CD-Qualität</td>
+<td>einige Android-Handys und neue Kopfhörer</td>
+<td>CD-Qualität, verlustfrei</td>
+</tr>
+<tr>
+<td>LC3 (LE Audio)</td>
+<td>neue Geräte</td>
+<td>effizient, für geringen Verbrauch</td>
 </tr>
 </tbody>
 </table>
-<h2 id="was-das-fur-dich-hei-t">Was das für dich heißt</h2>
-<p><strong>Mit iPhone.</strong> Die Verbindung läuft über AAC, auch wenn deine Kopfhörer aptX oder LDAC können. Gut umgesetztes AAC klingt sehr gut: kein Drama.</p>
-<p><strong>Mit Android.</strong> Schau in den Entwickleroptionen nach, welcher Codec aktiv ist. LDAC in höchster Qualität braucht ein stabiles Signal.</p>
-<p><strong>Lossless-Streaming.</strong> Normales Bluetooth überträgt es nicht vollständig, die Bandbreite reicht nicht. Um es wirklich zu hören, brauchst du kabelgebundene Kopfhörer oder Lautsprecher im WLAN.</p>
+<p><strong>SBC</strong> ist der Pflicht-Codec: Alle unterstützen ihn, und er kommt zum Einsatz, wenn es nichts Besseres gemeinsam gibt. Er funktioniert, ist aber der einfachste.</p>
+<p><strong>AAC</strong> ist Apples Wahl. Auf dem iPhone klingt er sehr gut, weil Apple ihn gründlich optimiert hat. Auf manchen Android-Geräten ist die Umsetzung weniger sorgfältig.</p>
+<p><strong>aptX und aptX HD</strong> stammen von Qualcomm und sind auf Android-Handys mit Snapdragon-Chips verbreitet.</p>
+<p><strong>LDAC</strong> stammt von Sony. Mit 990 kbps hat er die meiste Bandbreite der gängigen Codecs, braucht dafür aber ein stabiles Signal: Bei Störungen fällt er auf 660 oder 330 kbps.</p>
+<p><strong>aptX Lossless</strong> ist der einzige, der CD-Qualität, 16 Bit/44,1 kHz, verlustfrei überträgt, wenn die Bedingungen es erlauben. Handy und Kopfhörer müssen ihn beide unterstützen.</p>
+<figure class="fig-web"><img alt="Kopfhörer mit Geräuschunterdrückung auf ihrem Etui" decoding="async" height="933" loading="lazy" sizes="(max-width: 760px) 100vw, 760px" src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F0%2F0a%2FBose_QuietComfort_25_Acoustic_Noise_Cancelling_Headphones_with_Carry_Case.jpg%2F1920px-Bose_QuietComfort_25_Acoustic_Noise_Cancelling_Headphones_with_Carry_Case.jpg&amp;w=1400&amp;q=78" srcset="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F0%2F0a%2FBose_QuietComfort_25_Acoustic_Noise_Cancelling_Headphones_with_Carry_Case.jpg%2F1920px-Bose_QuietComfort_25_Acoustic_Noise_Cancelling_Headphones_with_Carry_Case.jpg&amp;w=800&amp;q=78 800w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F0%2F0a%2FBose_QuietComfort_25_Acoustic_Noise_Cancelling_Headphones_with_Carry_Case.jpg%2F1920px-Bose_QuietComfort_25_Acoustic_Noise_Cancelling_Headphones_with_Carry_Case.jpg&amp;w=1400&amp;q=78 1400w" width="1400"/><figcaption>Kopfhörer mit aktiver Geräuschunterdrückung: Sie schirmen die Außenwelt ab, und Stille macht Details leichter hörbar. <span class="credit">Foto: <a href="https://commons.wikimedia.org/wiki/File:Bose_QuietComfort_25_Acoustic_Noise_Cancelling_Headphones_with_Carry_Case.jpg" rel="noopener" target="_blank">Florian Fuchs</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener" target="_blank">CC BY-SA 3.0</a>, via Wikimedia Commons</span></figcaption></figure>
+<h2 id="was-das-fur-dich-bedeutet">Was das für dich bedeutet</h2>
+<p><strong>Wenn du ein iPhone hast.</strong> Die Verbindung läuft über AAC, auch wenn deine Kopfhörer aptX oder LDAC können. Gut umgesetztes AAC klingt sehr gut, kein Drama. Für echtes Lossless mit Apple-Kopfhörern brauchst du ein Kabel: Die AirPods Max unterstützen es über USB-C.</p>
+<p><strong>Wenn du ein Android-Handy hast.</strong> Schau in den Entwickleroptionen nach, welcher Codec läuft. Oft lässt sich LDAC samt Qualitätsstufe wählen. LDAC auf Maximum braucht ein stabiles Signal: In einer Menschenmenge oder mit dem Handy in der Tasche kann es sinken.</p>
+<p><strong>Lossless-Streaming.</strong> Über normales Bluetooth kommt es nicht vollständig an, weil die Bandbreite nicht reicht. Um es wirklich zu hören, brauchst du Kabelkopfhörer, einen Lossless-Codec oder WLAN-Lautsprecher. Mehr im Artikel über <a href="/de/artikel/lossless-streaming-spotify-apple-music-tidal">Lossless bei Spotify, Apple Music und Tidal</a>.</p>
+<h2 id="wie-viel-es-wirklich-ausmacht">Wie viel es wirklich ausmacht</h2>
+<p>Viel weniger, als man denkt. Nach Wichtigkeit für das, was du hörst:</p>
+<ol>
+<li><strong>Die Kopfhörer.</strong> Frequenzgang, Treiber, Verarbeitung.</li>
+<li><strong>Der Sitz.</strong> Ein Earbud, der den Gehörgang nicht abdichtet, verliert die Hälfte des Basses. Probier verschiedene Aufsatzgrößen.</li>
+<li><strong>Die Umgebung.</strong> In der U-Bahn überdeckt Lärm Details. Geräuschunterdrückung hilft mehr als jeder Codec.</li>
+<li><strong>Der Master des Songs.</strong> Ein gut gemachter Song klingt auch in AAC gut.</li>
+<li><strong>Der Codec.</strong> Er zählt, aber am Ende der Liste.</li>
+</ol>
 <blockquote class="pull">Die besten Kopfhörer mit dem schlechtesten Codec klingen besser als die schlechtesten Kopfhörer mit dem besten Codec.</blockquote>
+<h2 id="weitere-details-die-einen-unterschied-machen">Weitere Details, die einen Unterschied machen</h2>
+<p><strong>Latenz.</strong> Hochwertige Codecs können mehr Verzögerung haben. Bei Videos gleicht das Handy meist aus; bei Spielen und beim Instrumentspielen kann es stören.</p>
+<p><strong>Der EQ der App.</strong> Viele Kopfhörer haben eine App mit EQ. Von „neutral“ oder „flat“ ausgehen und wenig korrigieren ist der sicherste Weg.</p>
+<p><strong>Akku.</strong> Hochwertige Codecs verbrauchen mehr Strom.</p>
 <h2 id="der-rat-vom-engineer">Der Rat vom Engineer</h2>
-<p>Vor dem Codec kommt der Kopfhörer: Frequenzgang, Sitz, Abschirmung. Viele Consumer-Kopfhörer heben Bässe und Höhen an, damit sie spektakulärer klingen. Zum Hören ist das in Ordnung, zum Beurteilen eines Mixes nicht. Wenn du Musik machst, lies den Leitfaden zum <a href="/de/artikel/mischen-mit-kopfhoerern">Mischen mit Kopfhörern</a>.</p>
-<div class="callout">Dein Track muss auch in den Earbuds von jemandem in der U-Bahn gut klingen. Ich prüfe jeden Master auf allen Systemen. <a class="cta" href="/de/#contact">Schreib mir</a></div>
+<p>Vor dem Codec zählt der Kopfhörer: sein Frequenzgang, wie er sitzt, wie gut er abschirmt. Viele Consumer-Kopfhörer heben Bass und Höhen an, um spektakulärer zu klingen. Zum Hören prima, zum Beurteilen eines Mixes nicht.</p>
+<p>Ich prüfe jeden Master auch auf den gängigsten kabellosen Earbuds, weil ein großer Teil des Publikums ihn dort hört. Wenn du Musik machst, lies den Leitfaden zum <a href="/de/artikel/mischen-mit-kopfhoerern">Mischen mit Kopfhörern</a>.</p>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<p><strong>Wie sehe ich, welcher Codec läuft?</strong> Bei Android in den Entwickleroptionen unter dem Bluetooth-Audio-Codec. Beim iPhone ist es immer AAC.</p>
+<p><strong>Klingen Kabelkopfhörer immer besser?</strong> Bei gleicher Kopfhörerqualität ja: keine zusätzliche Kompression. Aber ein guter kabelloser schlägt einen schlechten mit Kabel.</p>
+<p><strong>Ist LDAC verlustfrei?</strong> Nein. Ein sehr guter Codec, aber verlustbehaftet.</p>
+<div class="callout">Dein Song muss auch in den Earbuds von jemandem in der U-Bahn gut klingen. Ich prüfe den Master auf allen Systemen. <a class="cta" href="/de/#contact">Schreib mir</a></div>
 <h2 id="quellen">Quellen</h2>
 <ul>
 <li><a href="https://bgr.com/2209730/bluetooth-codecs-explained-which-gives-you-best-audio-quality/">BGR, Bluetooth-Codecs erklärt</a></li>
@@ -167,9 +206,9 @@
         <section class="related" aria-labelledby="h-rel">
           <h2 id="h-rel">Weiterlesen</h2>
           <div class="rule-list">
-            <a class="post-row" href="/de/artikel/lossless-streaming-spotify-apple-music-tidal"><span class="cap" data-cat="music">Musik</span><h3>Lossless bei Spotify, Apple Music und Tidal: Hört man den Unterschied?</h3><span class="post-row__meta">3 Min.</span></a>
-            <a class="post-row" href="/de/artikel/wie-viel-zahlt-spotify-pro-stream"><span class="cap" data-cat="music">Musik</span><h3>Wie viel zahlt Spotify pro Stream? So verdienen Artists wirklich</h3><span class="post-row__meta">3 Min.</span></a>
-            <a class="post-row" href="/de/artikel/klingt-vinyl-besser-als-streaming"><span class="cap" data-cat="music">Musik</span><h3>Klingt Vinyl wirklich besser als Streaming?</h3><span class="post-row__meta">3 Min.</span></a>
+            <a class="post-row" href="/de/artikel/lossless-streaming-spotify-apple-music-tidal"><span class="cap" data-cat="music">Musik</span><h3>Lossless bei Spotify, Apple Music und Tidal: Hört man den Unterschied?</h3><span class="post-row__meta">4 Min.</span></a>
+            <a class="post-row" href="/de/artikel/wie-viel-zahlt-spotify-pro-stream"><span class="cap" data-cat="music">Musik</span><h3>Wie viel zahlt Spotify pro Stream? So verdienen Artists wirklich</h3><span class="post-row__meta">4 Min.</span></a>
+            <a class="post-row" href="/de/artikel/klingt-vinyl-besser-als-streaming"><span class="cap" data-cat="music">Musik</span><h3>Klingt Vinyl wirklich besser als Streaming?</h3><span class="post-row__meta">4 Min.</span></a>
             
           </div>
         </section>
@@ -215,8 +254,8 @@
   <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Akzeptieren</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Ablehnen</button></div>
 </aside>
 
-<script src="/assets/js/site.js?v=202611161058" defer></script>
-<script src="/assets/js/motion.js?v=202611161058" defer></script>
+<script src="/assets/js/site.js?v=202611161649" defer></script>
+<script src="/assets/js/motion.js?v=202611161649" defer></script>
 
 </body>
 </html>

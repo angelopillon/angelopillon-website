@@ -1159,3 +1159,7 @@ mark.draft-gap{ background:rgba(255,181,71,.16); color:var(--amber); border:1px 
 .prose figure.fig-small figcaption{ text-align:center; }
 .cap[data-cat="music"], .chip[data-cat="music"]{ --cap:var(--cap-music); }
 .article-head:has(.cap[data-cat="music"]){ --glow:var(--cap-music); --glow2:#22D3EE; }
+/* web photos (Wikimedia Commons) in articles: fixed 3:2 frame, credit under the caption */
+.prose figure.fig-web img{ aspect-ratio:3/2; object-fit:cover; background:#111; }
+.prose figure.fig-web .credit{ display:block; margin-top:4px; font-size:.75rem; opacity:.8; }
+.prose figure.fig-web .credit a{ color:inherit; text-decoration:underline; text-underline-offset:2px; }

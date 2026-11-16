@@ -30,8 +30,8 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Angelo Pillon, studio journal" href="/feed.xml">
 <link rel="preload" href="/assets/fonts/mona-sans-vf.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=202611161058">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why some songs sound louder than others on Spotify","description":"Spotify, Apple Music and YouTube adjust track volume so you do not jump out of your seat. How loudness normalisation works and how to change it in the settings.","inLanguage":"en","datePublished":"2026-04-26","dateModified":"2026-04-26","author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mix engineer and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://pro.fiverr.com/freelancers/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg","knowsAbout":["Audio mixing","Audio mastering","Stem mastering","Analog mastering","Loudness (LUFS)","Apple Digital Masters"],"address":{"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"}},"publisher":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mix engineer and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://pro.fiverr.com/freelancers/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg","knowsAbout":["Audio mixing","Audio mastering","Stem mastering","Analog mastering","Loudness (LUFS)","Apple Digital Masters"],"address":{"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"}},"mainEntityOfPage":"https://angelopillon.com/why-volume-changes-between-songs-on-spotify","image":"https://angelopillon.com/assets/og/en-why-volume-changes-between-songs-on-spotify.png","articleSection":"Music","wordCount":330}</script>
+<link rel="stylesheet" href="/assets/css/site.css?v=202611161649">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why some songs sound louder than others on Spotify","description":"Spotify, Apple Music and YouTube adjust track volume so you do not jump out of your seat. How loudness normalisation works and how to change it in the settings.","inLanguage":"en","datePublished":"2026-04-26","dateModified":"2026-04-26","author":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mix engineer and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://pro.fiverr.com/freelancers/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg","knowsAbout":["Audio mixing","Audio mastering","Stem mastering","Analog mastering","Loudness (LUFS)","Apple Digital Masters"],"address":{"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"}},"publisher":{"@type":"Person","@id":"https://angelopillon.com/#angelo","name":"Angelo Pillon","jobTitle":"Mix engineer and mastering engineer","url":"https://angelopillon.com/","sameAs":["https://www.fiverr.com/angelopillon","https://pro.fiverr.com/freelancers/angelopillon","https://soundbetter.com/profiles/618271-angelo-pillon"],"image":"https://angelopillon.com/assets/img/angelo-240.jpg","knowsAbout":["Audio mixing","Audio mastering","Stem mastering","Analog mastering","Loudness (LUFS)","Apple Digital Masters"],"address":{"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"}},"mainEntityOfPage":"https://angelopillon.com/why-volume-changes-between-songs-on-spotify","image":"https://angelopillon.com/assets/og/en-why-volume-changes-between-songs-on-spotify.png","articleSection":"Music","wordCount":875}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://angelopillon.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://angelopillon.com/articles"},{"@type":"ListItem","position":3,"name":"Why some songs sound louder than others on Spotify","item":"https://angelopillon.com/why-volume-changes-between-songs-on-spotify"}]}</script>
 </head>
 <body class="">
@@ -76,7 +76,7 @@
     <div class="meta">
       <span>By Angelo Pillon</span>
       <time datetime="2026-04-26">26 April 2026</time>
-      <span>3 min read</span>
+      <span>4 min read</span>
       
       <span class="share">
         <button type="button" data-share="copy" data-done="Link copied" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1 1"/><path d="M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1-1"/></svg></button>
@@ -92,20 +92,28 @@
       <nav class="toc" aria-label="On this page">
         <details open><summary>On this page</summary>
         <h2 aria-hidden="true">On this page</h2>
-        <ol><li><a href="#how-it-works-on-spotify">How it works on Spotify</a></li><li><a href="#so-why-do-i-still-hear-differences">So why do I still hear differences?</a></li><li><a href="#sources">Sources</a></li></ol>
+        <ol><li><a href="#a-bit-of-history-the-loudness-war">A bit of history: the loudness war</a></li><li><a href="#what-lufs-are">What LUFS are</a></li><li><a href="#how-it-works-on-spotify">How it works on Spotify</a></li><li><a href="#the-other-platforms">The other platforms</a></li><li><a href="#so-why-do-i-still-hear-differences">So why do I still hear differences?</a></li><li><a href="#what-it-means-for-music-makers">What it means for music makers</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol>
         </details>
       </nav>
       <div class="prose">
         <div class="tldr"><span class="box__title">In short</span>
 <ul>
-<li>Spotify brings every track to a similar average level, -14 LUFS on the normal setting.</li>
+<li>Spotify brings all tracks to a similar average level, -14 LUFS on the normal setting.</li>
 <li>Premium subscribers can choose Loud (-11 LUFS), Normal (-14) or Quiet (-19), or switch normalisation off.</li>
-<li>Apple Music uses a lower level, -16 LUFS. A track can also seem louder or quieter because of how it was mastered.</li>
+<li>Apple Music uses a lower level, -16 LUFS.</li>
+<li>A song can still sound louder or quieter because of how it was mastered.</li>
 </ul></div>
-<p>LUFS measure perceived loudness, not peaks. Platforms use them to turn down tracks that are too loud and, in some cases, turn up quiet ones. That way you move from one song to the next without touching the volume.</p>
-<figure><img alt="Angelo Pillon checking the level of a master in the studio" decoding="async" height="614" loading="lazy" src="/assets/img/photo/engineer-desk.webp" width="1166"/><figcaption>Every master goes through the loudness meter before delivery. Studio photo.</figcaption></figure>
+<p>You are listening to a playlist, a song ends and the next one starts: suddenly it sounds quieter, or louder, or “smaller”. You reach for the volume. A few years ago this happened all the time; today far less, thanks to a technology almost nobody knows about: loudness normalisation.</p>
+<p>In this article I explain how it works, why the differences do not disappear completely and what it means for music makers.</p>
+<figure class="fig-web"><img alt="VU meter bridge on an API console with EQ modules" decoding="async" height="933" loading="lazy" sizes="(max-width: 760px) 100vw, 760px" src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Ff%2Ff1%2FAPI_Console_-_VU_Meter_Bridge%252C_API560_10_Band_EQ%252C_API550A_3_Band_EQ_%25282017-01-05_19.45.22_piqsels.com_en%2529.jpg%2F1920px-API_Console_-_VU_Meter_Bridge%252C_API560_10_Band_EQ%252C_API550A_3_Band_EQ_%25282017-01-05_19.45.22_piqsels.com_en%2529.jpg&amp;w=1400&amp;q=78" srcset="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Ff%2Ff1%2FAPI_Console_-_VU_Meter_Bridge%252C_API560_10_Band_EQ%252C_API550A_3_Band_EQ_%25282017-01-05_19.45.22_piqsels.com_en%2529.jpg%2F1920px-API_Console_-_VU_Meter_Bridge%252C_API560_10_Band_EQ%252C_API550A_3_Band_EQ_%25282017-01-05_19.45.22_piqsels.com_en%2529.jpg&amp;w=800&amp;q=78 800w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Ff%2Ff1%2FAPI_Console_-_VU_Meter_Bridge%252C_API560_10_Band_EQ%252C_API550A_3_Band_EQ_%25282017-01-05_19.45.22_piqsels.com_en%2529.jpg%2F1920px-API_Console_-_VU_Meter_Bridge%252C_API560_10_Band_EQ%252C_API550A_3_Band_EQ_%25282017-01-05_19.45.22_piqsels.com_en%2529.jpg&amp;w=1400&amp;q=78 1400w" width="1400"/><figcaption>VU meters on a console: for decades this is how level was measured. Today platforms use LUFS. <span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:API_Console_-_VU_Meter_Bridge%2C_API560_10_Band_EQ%2C_API550A_3_Band_EQ_%282017-01-05_19.45.22_piqsels.com_en%29.jpg" rel="noopener" target="_blank">autore sconosciuto</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener" target="_blank">CC0</a>, via Wikimedia Commons</span></figcaption></figure>
+<h2 id="a-bit-of-history-the-loudness-war">A bit of history: the loudness war</h2>
+<p>Between the nineties and the early 2000s, many labels started asking for ever louder masters. The reason was simple: at the same volume setting, a louder song seems better, fuller, more energetic. On radio, in shops, in CD changers, the louder song won.</p>
+<p>To raise loudness, masters were compressed and limited more and more. The result: squashed songs with no dynamics, tiring to listen to for long. It became known as the loudness war.</p>
+<h2 id="what-lufs-are">What LUFS are</h2>
+<p>LUFS measure perceived loudness, not peaks. A peak meter tells you how high the signal goes at its loudest point; LUFS tell you how loud the song seems to the ear on average, taking into account how hearing perceives different frequencies.</p>
+<p>Platforms use them to turn down tracks that are too loud and, in some cases, turn up quiet ones. That way you move from one song to the next without touching the volume.</p>
 <h2 id="how-it-works-on-spotify">How it works on Spotify</h2>
-<p>Spotify measures a track when it is uploaded but does not change it: it adjusts the volume while you listen. For albums it uses a single value for every track, so quieter songs stay as quiet as the artist intended. The web player and many third-party devices, such as TVs and speakers, do not apply normalisation.</p>
+<p>Spotify measures the track when it is uploaded but does not change it: it adjusts the volume while you listen. For albums it uses a single value for all tracks, so quieter songs stay quieter as the artist intended. The web player and many third-party devices, such as TVs and speakers, do not apply normalisation.</p>
 <table tabindex="0">
 <thead>
 <tr>
@@ -128,13 +136,29 @@
 </tr>
 </tbody>
 </table>
+<p>Tracks louder than the chosen level are turned down. Quieter ones are turned up only as far as their peaks allow; on the Loud setting, Spotify also uses a limiter.</p>
+<h2 id="the-other-platforms">The other platforms</h2>
+<p><strong>Apple Music</strong> normalises to -16 LUFS with Sound Check, on by default on recent devices. The same song can sound a little quieter than on Spotify.</p>
+<p><strong>YouTube</strong> turns down tracks louder than about -14 LUFS, but does not turn quieter ones up.</p>
+<p><strong>Tidal</strong> uses a level similar to Spotify and works per album.</p>
+<figure class="fig-web"><img alt="Small analogue VU meter with batteries for scale" decoding="async" height="933" loading="lazy" sizes="(max-width: 760px) 100vw, 760px" src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fbe%2FGeneric_Chinese_VU_meter_%2528D%253D33mm%252C_with_AAA_batteries_for_scale%2529_01.jpg%2F1920px-Generic_Chinese_VU_meter_%2528D%253D33mm%252C_with_AAA_batteries_for_scale%2529_01.jpg&amp;w=1400&amp;q=78" srcset="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fbe%2FGeneric_Chinese_VU_meter_%2528D%253D33mm%252C_with_AAA_batteries_for_scale%2529_01.jpg%2F1920px-Generic_Chinese_VU_meter_%2528D%253D33mm%252C_with_AAA_batteries_for_scale%2529_01.jpg&amp;w=800&amp;q=78 800w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fbe%2FGeneric_Chinese_VU_meter_%2528D%253D33mm%252C_with_AAA_batteries_for_scale%2529_01.jpg%2F1920px-Generic_Chinese_VU_meter_%2528D%253D33mm%252C_with_AAA_batteries_for_scale%2529_01.jpg&amp;w=1400&amp;q=78 1400w" width="1400"/><figcaption>A small VU meter: perceived loudness is not the same as peaks, and that is exactly what LUFS measure. <span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Generic_Chinese_VU_meter_%28D%3D33mm%2C_with_AAA_batteries_for_scale%29_01.jpg" rel="noopener" target="_blank">Retired electrician</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener" target="_blank">CC0</a>, via Wikimedia Commons</span></figcaption></figure>
 <h2 id="so-why-do-i-still-hear-differences">So why do I still hear differences?</h2>
-<p><strong>The master.</strong> Two tracks at the same average level can feel different: a heavily compressed one sounds “fuller”, a dynamic one livelier and more open.</p>
+<p><strong>The master.</strong> Two songs at the same average level can sound different: a heavily compressed one seems “fuller” but less alive, a dynamic one more open with stronger hits.</p>
 <p><strong>The genre.</strong> A ballad and a techno track have different frequency content, and the ear perceives them differently even at the same level.</p>
-<p><strong>The platform.</strong> Apple Music normalises to -16 LUFS, so the same track may sound slightly quieter than on Spotify.</p>
-<blockquote class="pull">Normalisation ended the loudness war. The winners were the well-made masters.</blockquote>
-<p>If you want to try it, measure a track with my <a href="/loudness-meter">free LUFS meter</a>. If you make music, the article <a href="/how-loud-should-your-master-be">how loud should your master be</a> explains how to choose the right level.</p>
-<div class="callout">Does your track sound quieter than the others in a playlist? That is almost always fixed in mastering. <a class="cta" href="/#contact">Get in touch</a></div>
+<p><strong>The platform.</strong> Apple Music normalises to -16 LUFS, so the same song can sound a little quieter than on Spotify.</p>
+<p><strong>Your settings.</strong> If you switched normalisation off, or use the web player, tracks play at their original level.</p>
+<p><strong>Devices.</strong> Some speakers and TVs do not apply normalisation.</p>
+<blockquote class="pull">Normalisation ended the loudness war. The winners were those with a well-made master.</blockquote>
+<h2 id="what-it-means-for-music-makers">What it means for music makers</h2>
+<p><strong>You do not need to crush the master to make it seem louder.</strong> If it is too loud, the platform turns it down, and you risk losing dynamics without gaining level.</p>
+<p><strong>Nor do you need to master exactly to -14 LUFS.</strong> The right level depends on the genre: a club electronic track and an acoustic ballad have different needs. What matters is that the song sounds good, with impact and breath, and holds up next to references in its genre.</p>
+<p><strong>True peak matters.</strong> When the platform converts the file to a compressed format, peaks can rise slightly. I work with a true peak limiter and stop between -0.3 and -0.2 dBTP: safe, and no loudness wasted.</p>
+<p>If you want to try, measure a track with my <a href="/loudness-meter">free LUFS meter</a>. If you make music, the article <a href="/how-loud-should-your-master-be">how loud should your master be</a> explains how to choose the right level.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<p><strong>Should I turn normalisation on?</strong> For mixed playlists, yes: you avoid volume jumps. For an album, album mode keeps the differences the artist intended.</p>
+<p><strong>Why do some old songs sound quieter?</strong> They often have more dynamic, less compressed masters. At the same average level they can seem less “full”, but they breathe more.</p>
+<p><strong>Does normalisation reduce quality?</strong> No. It only changes the volume, as you would with the knob.</p>
+<div class="callout">Does your song sound quieter than the others in a playlist? It is almost always solved in mastering. <a class="cta" href="/#contact">Get in touch</a></div>
 <h2 id="sources">Sources</h2>
 <ul>
 <li><a href="https://support.spotify.com/au/artists/article/loudness-normalization/">Spotify for Artists, loudness normalisation</a></li>
@@ -152,9 +176,9 @@
         <section class="related" aria-labelledby="h-rel">
           <h2 id="h-rel">Keep reading</h2>
           <div class="rule-list">
-            <a class="post-row" href="/lossless-streaming-spotify-apple-music-tidal"><span class="cap" data-cat="music">Music</span><h3>Lossless music on Spotify, Apple Music and Tidal: can you really hear it?</h3><span class="post-row__meta">3 min</span></a>
-            <a class="post-row" href="/how-much-does-spotify-pay-per-stream"><span class="cap" data-cat="music">Music</span><h3>How much does Spotify pay per stream? How artists really earn</h3><span class="post-row__meta">3 min</span></a>
-            <a class="post-row" href="/does-vinyl-sound-better-than-streaming"><span class="cap" data-cat="music">Music</span><h3>Does vinyl really sound better than streaming?</h3><span class="post-row__meta">3 min</span></a>
+            <a class="post-row" href="/lossless-streaming-spotify-apple-music-tidal"><span class="cap" data-cat="music">Music</span><h3>Lossless music on Spotify, Apple Music and Tidal: can you really hear it?</h3><span class="post-row__meta">5 min</span></a>
+            <a class="post-row" href="/how-much-does-spotify-pay-per-stream"><span class="cap" data-cat="music">Music</span><h3>How much does Spotify pay per stream? How artists really earn</h3><span class="post-row__meta">5 min</span></a>
+            <a class="post-row" href="/does-vinyl-sound-better-than-streaming"><span class="cap" data-cat="music">Music</span><h3>Does vinyl really sound better than streaming?</h3><span class="post-row__meta">4 min</span></a>
             
           </div>
         </section>
@@ -200,8 +224,8 @@
   <div class="btn-row"><button class="btn btn--small" type="button" data-consent="yes">Accept</button><button class="btn btn--ghost btn--small" type="button" data-consent="no">Decline</button></div>
 </aside>
 
-<script src="/assets/js/site.js?v=202611161058" defer></script>
-<script src="/assets/js/motion.js?v=202611161058" defer></script>
+<script src="/assets/js/site.js?v=202611161649" defer></script>
+<script src="/assets/js/motion.js?v=202611161649" defer></script>
 
 </body>
 </html>
