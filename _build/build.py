@@ -784,6 +784,9 @@ def write_netlify():
 [build]
   publish = "."
 
+[images]
+  remote_images = ["https://upload\\\\.wikimedia\\\\.org/.*"]
+
 [[headers]]
   for = "/*"
   [headers.values]
