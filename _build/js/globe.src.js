@@ -10,7 +10,7 @@ import DATA from "./globe-data.json";
 
 /* colours go to the shaders exactly as written (sRGB), with no colour management in between */
 const rgb = (hex) => new Vector3(parseInt(hex.slice(1, 3), 16) / 255, parseInt(hex.slice(3, 5), 16) / 255, parseInt(hex.slice(5, 7), 16) / 255);
-const GOLD = rgb("#D4B26A"), GOLD_HI = rgb("#F6E3B0"), INK = rgb("#F5F5F7");
+const GOLD = rgb("#D4B26A"), GOLD_HI = rgb("#F6E3B0"), INK = rgb("#FFF1D6");
 
 function unit(lat, lon) {
   const la = (lat * Math.PI) / 180, lo = (lon * Math.PI) / 180;
@@ -45,7 +45,7 @@ function start(host) {
   const landPts = new Points(lg, new ShaderMaterial({
     uniforms: U, transparent: true, depthWrite: false,
     vertexShader: `uniform float uPx; varying float vF; ${FACE}
-      void main(){ vec4 w = modelMatrix * vec4(position, 1.0); vF = facing(w.xyz); vec4 mv = viewMatrix * w; gl_Position = projectionMatrix * mv; gl_PointSize = uPx * 2.1 * (4.6 / -mv.z); }`,
+      void main(){ vec4 w = modelMatrix * vec4(position, 1.0); vF = facing(w.xyz); vec4 mv = viewMatrix * w; gl_Position = projectionMatrix * mv; gl_PointSize = uPx * 1.95 * (4.6 / -mv.z); }`,
     fragmentShader: `varying float vF;
       void main(){ vec2 c = gl_PointCoord - 0.5; float a = 1.0 - smoothstep(0.12, 0.5, length(c)); float f = smoothstep(-0.1, 0.45, vF);
         gl_FragColor = vec4(mix(vec3(0.34, 0.34, 0.37), vec3(0.78, 0.78, 0.81), f), a * (0.10 + 0.80 * f)); }`
@@ -102,12 +102,13 @@ function start(host) {
     uniforms: { uPx: U.uPx, uGold: { value: GOLD }, uInk: { value: INK } }, transparent: true, depthWrite: false,
     vertexShader: `attribute float aHome; uniform float uPx; varying float vF; varying float vH; ${FACE}
       void main(){ vH = aHome; vec4 w = modelMatrix * vec4(position, 1.0); vF = facing(w.xyz); vec4 mv = viewMatrix * w; gl_Position = projectionMatrix * mv;
-        gl_PointSize = uPx * (aHome > 0.5 ? 13.0 : 4.6) * (4.6 / -mv.z); }`,
+        gl_PointSize = uPx * (aHome > 0.5 ? 13.0 : 9.0) * (4.6 / -mv.z); }`,
     fragmentShader: `uniform vec3 uGold, uInk; varying float vF; varying float vH;
       void main(){ vec2 c = gl_PointCoord - 0.5; float d = length(c);
         float ring = (1.0 - smoothstep(0.40, 0.5, d)) * smoothstep(0.26, 0.34, d);
         float core = 1.0 - smoothstep(0.10, 0.2, d);
-        float a = vH > 0.5 ? ring * 0.9 + core : 1.0 - smoothstep(0.2, 0.5, d);
+        float light = (1.0 - smoothstep(0.09, 0.19, d)) + 0.32 * (1.0 - smoothstep(0.0, 0.5, d));
+        float a = vH > 0.5 ? ring * 0.9 + core : light;
         float f = smoothstep(-0.05, 0.3, vF);
         gl_FragColor = vec4(vH > 0.5 ? uGold : uInk, a * f); }`
   }));

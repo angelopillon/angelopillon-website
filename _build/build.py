@@ -44,6 +44,8 @@ env = Environment(loader=FileSystemLoader(str(B / "templates")), autoescape=True
 env.filters["lufs"] = lambda v, lang="en": "" if v is None else (f"{v:.1f}".replace("-", "\u2212").replace(".", "," if lang != "en" else "."))
 env.globals["preview"] = PREVIEW
 env.globals["brand_mark"] = Markup(brand.mark_svg(cls="brand__mark"))
+SEAL = ROOT / "assets" / "img" / "logo" / "seal.svg"   # drawn by _build/seal.py
+env.globals["seal"] = Markup(SEAL.read_text(encoding="utf-8")) if SEAL.exists() else ""
 PAGES = []
 
 

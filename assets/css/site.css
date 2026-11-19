@@ -1410,22 +1410,6 @@ body{ font-family:var(--f-text); background:#000; color:var(--ink); letter-spaci
 .ah-hero{ position:relative; isolation:isolate; overflow:hidden; }
 .ah-hero::before{ content:""; position:absolute; z-index:-1; left:50%; top:0; width:min(1400px, 160vw); height:min(900px, 120vw); transform:translateX(-50%); background:radial-gradient(46% 44% at 50% 30%, rgba(212,178,106,.17), rgba(212,178,106,.05) 55%, rgba(212,178,106,0) 75%); pointer-events:none; }
 
-/* where the masters go, and the certification */
-.ah-platforms{ padding:0 0 clamp(24px, 3vw, 40px); }
-.ah-adm{ display:inline-flex; align-items:center; gap:14px; padding:9px 22px 9px 9px; border-radius:980px; background:linear-gradient(180deg, rgba(212,178,106,.13), rgba(212,178,106,.04)); border:1px solid rgba(212,178,106,.4); color:var(--ink); text-decoration:none; text-align:left; transition:border-color .2s ease, background-color .2s ease; }
-a.ah-adm:hover{ border-color:rgba(232,203,140,.8); background-color:rgba(212,178,106,.06); }
-a.ah-adm:focus-visible{ outline:2px solid var(--link); outline-offset:3px; }
-.ah-adm__seal{ width:44px; height:44px; flex:none; display:block; }
-.ah-adm__text{ display:flex; flex-direction:column; gap:1px; }
-.ah-adm__text small{ font-size:.75rem; font-weight:600; letter-spacing:.07em; text-transform:uppercase; color:var(--accent); }
-.ah-adm__text b{ font-size:1.125rem; font-weight:600; letter-spacing:-.015em; line-height:1.25; }
-.ah-adm__more{ margin-left:8px; padding-left:18px; border-left:1px solid rgba(212,178,106,.3); color:var(--link); font-size:.9375rem; white-space:nowrap; }
-.ah-adm__more::after{ content:"\00a0\203A"; }
-.ah-platforms__label{ margin:clamp(40px, 4.6vw, 60px) 0 20px; font-size:.9375rem; color:var(--ink-3); }
-.ah-platforms__list{ display:flex; flex-wrap:nowrap; justify-content:center; gap:clamp(26px, 3vw, 44px); margin:0 auto; padding:0; list-style:none; }
-.ah-platforms__list li{ font-size:clamp(1.125rem, 1.6vw, 1.375rem); font-weight:600; letter-spacing:-.02em; color:#76767B; white-space:nowrap; }
-@media (max-width: 1100px){ .ah-platforms__list{ display:grid; grid-template-columns:repeat(4, auto); justify-content:center; gap:14px 44px; } }
-
 /* the analog chain, under a warm lamp */
 .ah-chain{ position:relative; isolation:isolate; overflow:hidden; }
 .ah-chain::before{ content:""; position:absolute; inset:0; z-index:-1; background:radial-gradient(50% 34% at 14% 30%, rgba(255,166,72,.15), rgba(255,166,72,0) 70%), radial-gradient(42% 30% at 90% 78%, rgba(255,128,48,.08), rgba(255,128,48,0) 70%); -webkit-mask-image:linear-gradient(to bottom, transparent 0, #000 18%, #000 82%, transparent 100%); mask-image:linear-gradient(to bottom, transparent 0, #000 18%, #000 82%, transparent 100%); pointer-events:none; }
@@ -1467,9 +1451,118 @@ a.ah-adm:focus-visible{ outline:2px solid var(--link); outline-offset:3px; }
   .ah-units::-webkit-scrollbar{ display:none; }
   .ah-units .unit{ scroll-snap-align:start; border-radius:22px; padding:16px 16px 22px; }
   .ah-units .unit h3{ font-size:1.25rem; margin-top:16px; }
-  .ah-adm{ display:inline-grid; grid-template-columns:auto auto; column-gap:14px; row-gap:4px; align-items:center; border-radius:24px; padding:12px 22px 12px 12px; }
-  .ah-adm__seal{ grid-row:span 2; }
-  .ah-adm__more{ margin:0; padding:0; border:0; font-size:.875rem; }
-  .ah-platforms__list{ grid-template-columns:repeat(2, auto); gap:12px 36px; }
   .ah-globe{ width:calc(100% + var(--pad) * 2); margin-inline:calc(var(--pad) * -1); }
+}
+
+/* =====================================================================
+   Premium finish, November 2026.
+   Jewellery gold with light and depth, metallic titles, light numerals like a watch dial,
+   a studio seal next to the certification, materials on cards and on the analog units,
+   and a fine grain on the warm lights so they never band.
+   ===================================================================== */
+:root{
+  --gold-fill:linear-gradient(180deg, #F3DEA6 0%, #DDBD75 46%, #C29C52 100%);
+  --gold-fill-hover:linear-gradient(180deg, #F8E7BA 0%, #E6C784 46%, #CDA85E 100%);
+  --gold-edge:inset 0 1px 0 rgba(255,255,255,.55), inset 0 -1px 0 rgba(90,64,20,.28), 0 1px 2px rgba(0,0,0,.45), 0 12px 32px -14px rgba(212,178,106,.6);
+  --tile-fill:linear-gradient(180deg, #1A1A1C 0%, #131314 100%);
+  --tile-edge:inset 0 1px 0 rgba(255,255,255,.07), inset 0 0 0 1px rgba(255,255,255,.045), 0 30px 60px -40px rgba(0,0,0,.9);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* jewellery gold */
+.btn, .btn--glow, .ah-btn{ background:var(--gold-fill); color:#1A150B; box-shadow:var(--gold-edge); text-shadow:0 1px 0 rgba(255,255,255,.25); transition:background .25s ease, box-shadow .25s ease, transform .25s ease; }
+.btn:hover, .btn--glow:hover, .ah-btn:hover{ background:var(--gold-fill-hover); box-shadow:inset 0 1px 0 rgba(255,255,255,.6), inset 0 -1px 0 rgba(90,64,20,.28), 0 1px 2px rgba(0,0,0,.45), 0 16px 40px -14px rgba(212,178,106,.75); }
+.btn:active, .ah-btn:active{ transform:translateY(1px); }
+.btn--ghost{ background:transparent; box-shadow:inset 0 0 0 1px rgba(217,188,116,.75); text-shadow:none; border:0; }
+.btn--ghost:hover{ background:rgba(212,178,106,.08); box-shadow:inset 0 0 0 1px rgba(232,203,140,.95); }
+.ah-btn{ min-height:50px; padding:0 30px; }
+
+/* hero: engraved eyebrow, metallic title, light numerals */
+.ah-eyebrow{ display:inline-flex; align-items:center; gap:14px; margin-bottom:22px; font-size:.75rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#D9BC74; }
+.ah-eyebrow::before, .ah-eyebrow::after{ content:""; width:30px; height:1px; background:linear-gradient(90deg, rgba(212,178,106,0), rgba(212,178,106,.75)); }
+.ah-eyebrow::after{ background:linear-gradient(90deg, rgba(212,178,106,.75), rgba(212,178,106,0)); }
+.ah-hero__title{ background:linear-gradient(180deg, #FFFFFF 10%, #DCDCE1 92%); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; padding-bottom:.06em; }
+.ah-hero__title span{ background:linear-gradient(180deg, #C2C2C7 0%, #85858B 100%); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; }
+.ah-hero__lead{ color:#A1A1A6; }
+.ah-proof dd{ font-weight:300; letter-spacing:-.03em; font-variant-numeric:tabular-nums lining-nums; color:#F5F5F7; }
+.ah-proof dt{ font-size:.8125rem; letter-spacing:.01em; }
+.ah-big{ font-weight:300; letter-spacing:-.05em; background:linear-gradient(180deg, #F7E7BC 0%, #DDBD75 48%, #A9853F 100%); -webkit-background-clip:text; background-clip:text; }
+.ah-big span{ font-weight:400; }
+.ah-hero__photo, .ah-about__photo{ position:relative; box-shadow:0 60px 120px -60px rgba(212,178,106,.4), 0 30px 60px -30px rgba(0,0,0,.9); }
+.ah-hero__photo::after, .ah-about__photo::after{ content:""; position:absolute; inset:0; border-radius:inherit; box-shadow:inset 0 0 0 1px rgba(255,255,255,.08), inset 0 1px 0 rgba(255,255,255,.12); pointer-events:none; }
+
+/* grain on the warm lights, so the gradients never band */
+.ah-hero::after, .ah-chain::after{ content:""; position:absolute; inset:0; z-index:-1; background-image:var(--grain); background-size:180px 180px; opacity:.045; pointer-events:none; }
+
+/* materials: cards with a lit edge */
+.ah-tile, .ah-facts div, .ab, .ah-units .unit{ background:var(--tile-fill); box-shadow:var(--tile-edge); border:0; }
+.ah-tile.estimate{ background:var(--tile-fill); }
+.ah-svc__foot b{ font-weight:400; letter-spacing:-.03em; }
+.ah-facts dd{ font-weight:400; letter-spacing:-.03em; }
+
+/* the certification: the studio seal and the programme name */
+.ah-platforms{ padding:0 0 clamp(16px, 2vw, 28px); }
+.ah-adm{ display:inline-flex; align-items:center; gap:22px; color:var(--ink); text-decoration:none; text-align:left; }
+.ah-adm__seal{ width:92px; height:92px; flex:none; display:block; filter:drop-shadow(0 10px 22px rgba(212,178,106,.15)) drop-shadow(0 2px 4px rgba(0,0,0,.6)); transition:transform .8s cubic-bezier(.2,.8,.2,1); }
+a.ah-adm:hover .ah-adm__seal{ transform:rotate(-12deg); }
+a.ah-adm:focus-visible{ outline:2px solid var(--link); outline-offset:6px; border-radius:12px; }
+.ah-adm__text{ display:flex; flex-direction:column; gap:5px; }
+.ah-adm__text small{ font-size:.6875rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#D9BC74; }
+.ah-adm__text b{ font-size:clamp(1.375rem, 2.2vw, 1.75rem); font-weight:600; line-height:1.12; letter-spacing:-.022em; background:linear-gradient(180deg, #FFFFFF, #D6D6DB); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; }
+.ah-adm__more{ margin-top:2px; font-size:.9375rem; color:var(--link); }
+.ah-adm__more::after{ content:"\00a0\203A"; }
+a.ah-adm:hover .ah-adm__more{ text-decoration:underline; }
+
+/* where the masters go: a quiet strip between two hairlines */
+.ah-platforms__strip{ position:relative; max-width:1160px; margin:clamp(52px, 5.4vw, 76px) auto 0; padding:30px 0 32px; }
+.ah-platforms__strip::before, .ah-platforms__strip::after{ content:""; position:absolute; left:0; right:0; height:1px; background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.14) 18%, rgba(255,255,255,.14) 82%, rgba(255,255,255,0)); }
+.ah-platforms__strip::before{ top:0; } .ah-platforms__strip::after{ bottom:0; }
+.ah-platforms__label{ margin:0 0 18px; font-size:.6875rem; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:#6E6E73; }
+.ah-platforms__list{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px 0; margin:0; padding:0; list-style:none; }
+.ah-platforms__list li{ display:flex; align-items:center; font-size:.8125rem; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:#B4B4B9; white-space:nowrap; }
+.ah-platforms__list li + li::before{ content:""; flex:none; width:3px; height:3px; margin:0 20px 0 calc(20px - .2em); border-radius:50%; background:#D4B26A; opacity:.75; }
+
+/* the analog units: faceplates with real materials */
+.ah-units .unit__face{ position:relative; isolation:isolate; }
+.ah-units .unit__face::before{ content:""; position:absolute; z-index:-1; left:1.5%; right:1.5%; top:5%; bottom:1%; border-radius:12px; box-shadow:0 18px 34px -10px rgba(0,0,0,.9), 0 3px 8px rgba(0,0,0,.55); }
+.ah-units .unit__face svg{ display:block; width:100%; height:auto; overflow:visible; filter:none; }
+.u-defs{ position:absolute; width:0; height:0; overflow:hidden; }
+.ah-units .u-plate{ fill:url(#u-pl-alu); stroke:#000; stroke-opacity:.4; stroke-width:1; }
+.ah-units .unit[data-kind="fet"] .u-plate{ fill:url(#u-pl-black); }
+.ah-units .unit[data-kind="fusion"] .u-plate{ fill:url(#u-pl-graphite); }
+.ah-units .unit[data-kind="pultec"] .u-plate{ fill:url(#u-pl-blue); }
+.ah-units .u-brush{ opacity:1; }
+.ah-units .unit[data-kind="fet"] .u-brush, .ah-units .unit[data-kind="fusion"] .u-brush{ opacity:.5; }
+.ah-units .u-hi{ stroke:#fff; stroke-opacity:.75; stroke-width:1; fill:none; }
+.ah-units .u-lo{ stroke:#000; stroke-opacity:.35; stroke-width:1; fill:none; }
+.ah-units .u-groove-d{ stroke:#000; stroke-opacity:.3; stroke-width:1; }
+.ah-units .u-groove-l{ stroke:#fff; stroke-opacity:.5; stroke-width:1; }
+.ah-units .unit[data-kind="fet"] .u-hi, .ah-units .unit[data-kind="fusion"] .u-hi{ stroke-opacity:.22; }
+.ah-units .unit[data-kind="fet"] .u-groove-l, .ah-units .unit[data-kind="fusion"] .u-groove-l, .ah-units .unit[data-kind="pultec"] .u-groove-l{ stroke-opacity:.14; }
+.ah-units .unit[data-kind="pultec"] .u-hi{ stroke-opacity:.45; }
+.ah-units .u-label{ font-family:var(--f-text); font-size:13.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; fill:var(--lbl); }
+.ah-units .u-label--emboss{ fill:#fff; fill-opacity:.6; }
+.ah-units .unit[data-kind="fet"] .u-label--emboss, .ah-units .unit[data-kind="fusion"] .u-label--emboss, .ah-units .unit[data-kind="pultec"] .u-label--emboss{ fill:#000; fill-opacity:.55; }
+.ah-units .u-mini{ font-family:var(--f-text); font-size:8px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; fill:var(--lbl); opacity:.75; }
+.ah-units .u-scale path{ stroke:var(--lbl); stroke-opacity:.55; stroke-width:1.2; stroke-linecap:round; }
+.ah-units .u-tick{ stroke:#F5F5F7; stroke-width:2.6; stroke-linecap:round; }
+.ah-units .u-vu-arc{ fill:none; stroke:#2B261C; stroke-width:1.2; }
+.ah-units .u-vu-red{ fill:none; stroke:#C3321D; stroke-width:2.6; }
+.ah-units .u-vu-ticks path{ stroke:#2B261C; stroke-width:1.1; }
+.ah-units .u-vu-label{ font-family:var(--f-text); font-size:9px; font-weight:700; letter-spacing:.12em; fill:#2B261C; }
+.ah-units .u-needle{ stroke:#16130E; stroke-width:1.6; stroke-linecap:round; }
+.ah-units .u-tape{ fill:none; stroke:#4A3424; stroke-width:3; stroke-linejoin:round; }
+.ah-units .u-led{ filter:none; }
+
+@media (max-width: 1100px){
+  .ah-platforms__list{ display:grid; grid-template-columns:repeat(4, auto); justify-content:center; gap:14px 40px; }
+  .ah-platforms__list li + li::before{ display:none; }
+}
+@media (max-width: 700px){
+  .ah-eyebrow{ display:block; font-size:.65625rem; letter-spacing:.14em; text-wrap:balance; }
+  .ah-eyebrow::before, .ah-eyebrow::after{ display:none; }
+  .ah-adm{ gap:16px; }
+  .ah-adm__seal{ width:76px; height:76px; }
+  .ah-platforms__list{ grid-template-columns:repeat(2, auto); gap:14px 34px; }
+  .ah-platforms__list li{ font-size:.75rem; }
 }

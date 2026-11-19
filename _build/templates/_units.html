@@ -1,0 +1,108 @@
+{# The analog units of the home, drawn as rack faceplates: brushed metal, rack ears with
+   Phillips screws, knobs with a printed scale, backlit VU meters behind glass, tape reels.
+   Shared gradients live in defs(), referenced by every face on the page.
+   Only the VU needles and the reels move (CSS, while the section is on screen). #}
+
+{% macro defs() %}<svg class="u-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+  <linearGradient id="u-pl-alu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1F3F6"/><stop offset=".46" stop-color="#D8DBE0"/><stop offset="1" stop-color="#BCC0C8"/></linearGradient>
+  <linearGradient id="u-pl-black" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#30333A"/><stop offset=".5" stop-color="#1F2126"/><stop offset="1" stop-color="#141519"/></linearGradient>
+  <linearGradient id="u-pl-graphite" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#40444D"/><stop offset=".5" stop-color="#2D3037"/><stop offset="1" stop-color="#202227"/></linearGradient>
+  <linearGradient id="u-pl-blue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#86A4C7"/><stop offset=".5" stop-color="#5F7FA6"/><stop offset="1" stop-color="#4A6A92"/></linearGradient>
+  <pattern id="u-brush" width="6" height="2" patternUnits="userSpaceOnUse"><rect width="6" height="1" fill="#fff" fill-opacity=".09"/><rect y="1" width="6" height="1" fill="#000" fill-opacity=".035"/></pattern>
+  <linearGradient id="u-sheen" x1="0" y1="0" x2="1" y2=".35"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".2" stop-color="#fff" stop-opacity=".2"/><stop offset=".34" stop-color="#fff" stop-opacity="0"/><stop offset=".72" stop-color="#fff" stop-opacity=".06"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <radialGradient id="u-shadow"><stop offset="0" stop-color="#000" stop-opacity=".6"/><stop offset=".62" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <radialGradient id="u-skirt" cx=".4" cy=".3" r=".85"><stop offset="0" stop-color="#4E535D"/><stop offset=".62" stop-color="#202227"/><stop offset="1" stop-color="#0C0D10"/></radialGradient>
+  <radialGradient id="u-cap" cx=".36" cy=".26" r=".9"><stop offset="0" stop-color="#858B97"/><stop offset=".42" stop-color="#3B3F48"/><stop offset="1" stop-color="#121317"/></radialGradient>
+  <radialGradient id="u-screw" cx=".36" cy=".3" r=".85"><stop offset="0" stop-color="#FBFCFD"/><stop offset=".55" stop-color="#C6CAD1"/><stop offset="1" stop-color="#868B94"/></radialGradient>
+  <linearGradient id="u-bezel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3C3C40"/><stop offset="1" stop-color="#0F0F11"/></linearGradient>
+  <radialGradient id="u-vuface" cx=".5" cy="1" r="1.1"><stop offset="0" stop-color="#FFF8E0"/><stop offset=".55" stop-color="#F5E2AE"/><stop offset="1" stop-color="#D2B571"/></radialGradient>
+  <linearGradient id="u-vutop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".32"/><stop offset=".3" stop-color="#000" stop-opacity="0"/></linearGradient>
+  <linearGradient id="u-glass" x1="0" y1="0" x2=".25" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".36"/><stop offset=".43" stop-color="#fff" stop-opacity=".07"/><stop offset=".44" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <radialGradient id="u-pivot" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#7A7F88"/><stop offset="1" stop-color="#101114"/></radialGradient>
+  <radialGradient id="u-led-amber" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#FFF7DC"/><stop offset=".42" stop-color="#FFC45E"/><stop offset="1" stop-color="#C46A00"/></radialGradient>
+  <radialGradient id="u-led-red" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#FFE3DE"/><stop offset=".42" stop-color="#FF5A47"/><stop offset="1" stop-color="#A3150A"/></radialGradient>
+  <radialGradient id="u-glow-amber"><stop offset="0" stop-color="#FFB547" stop-opacity=".6"/><stop offset="1" stop-color="#FFB547" stop-opacity="0"/></radialGradient>
+  <radialGradient id="u-glow-red"><stop offset="0" stop-color="#FF4D3D" stop-opacity=".6"/><stop offset="1" stop-color="#FF4D3D" stop-opacity="0"/></radialGradient>
+  <linearGradient id="u-btn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A3D44"/><stop offset="1" stop-color="#15171A"/></linearGradient>
+  <linearGradient id="u-btn-on" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE6AE"/><stop offset=".5" stop-color="#FFB547"/><stop offset="1" stop-color="#DB8510"/></linearGradient>
+  <radialGradient id="u-pack" r=".5"><stop offset=".25" stop-color="#20160F"/><stop offset=".45" stop-color="#3A2A1D"/><stop offset=".86" stop-color="#5B412C"/><stop offset="1" stop-color="#34251A"/></radialGradient>
+  <linearGradient id="u-metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#ADB3BC"/><stop offset=".7" stop-color="#EEF1F4"/><stop offset="1" stop-color="#9AA0A9"/></linearGradient>
+  <radialGradient id="u-hub" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#FAFBFC"/><stop offset="1" stop-color="#A2A7B0"/></radialGradient>
+  <linearGradient id="u-head" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9CDD4"/><stop offset="1" stop-color="#7A808A"/></linearGradient>
+  <radialGradient id="u-roller" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#4A4E57"/><stop offset="1" stop-color="#101114"/></radialGradient>
+</defs></svg>{% endmacro %}
+
+{% macro screw(x, y, a) %}<g transform="translate({{ x }} {{ y }}) rotate({{ a }})"><circle r="4.6" fill="url(#u-screw)"/><circle r="4.6" fill="none" stroke="#000" stroke-opacity=".35" stroke-width=".6"/><path d="M-2.6 0H2.6M0-2.6V2.6" stroke="#4A4F57" stroke-width="1.25" stroke-linecap="round"/></g>{% endmacro %}
+
+{% macro knob(x, y, r, a) %}<g transform="translate({{ x }} {{ y }})">
+  <g class="u-scale">{% for k in range(11) %}<path d="M0 {{ -(r + 3.5) }}V{{ -(r + (8 if k % 5 == 0 else 6)) }}" transform="rotate({{ -135 + k * 27 }})"/>{% endfor %}</g>
+  <circle cx="1.4" cy="4" r="{{ (r * 1.08)|round(1) }}" fill="url(#u-shadow)"/>
+  <circle r="{{ r }}" fill="url(#u-skirt)"/>
+  <circle r="{{ (r * 0.8)|round(1) }}" fill="url(#u-cap)"/>
+  <circle r="{{ (r * 0.8 - 0.5)|round(1) }}" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width=".8"/>
+  <path d="M0 {{ -(r * 0.24)|round(1) }}V{{ -(r * 0.7)|round(1) }}" class="u-tick" transform="rotate({{ a }})"/>
+</g>{% endmacro %}
+
+{% macro vu(vx, vy, vw, vh) %}{% set cx = vw / 2 %}{% set py = vh - 9 %}{% set R = [vh - 20, vw / 2 - 14]|min %}
+<g transform="translate({{ vx }} {{ vy }})">
+  <rect width="{{ vw }}" height="{{ vh }}" rx="6" fill="url(#u-bezel)"/>
+  <rect x="3.5" y="3.5" width="{{ vw - 7 }}" height="{{ vh - 7 }}" rx="3.5" fill="url(#u-vuface)"/>
+  <rect x="3.5" y="3.5" width="{{ vw - 7 }}" height="{{ vh - 7 }}" rx="3.5" fill="url(#u-vutop)"/>
+  {% set s50, c50 = 0.766, 0.6428 %}
+  <path d="M{{ (cx - R * s50)|round(2) }} {{ (py - R * c50)|round(2) }}A{{ R }} {{ R }} 0 0 1 {{ (cx + R * s50)|round(2) }} {{ (py - R * c50)|round(2) }}" class="u-vu-arc"/>
+  <path d="M{{ (cx + R * 0.3746)|round(2) }} {{ (py - R * 0.9272)|round(2) }}A{{ R }} {{ R }} 0 0 1 {{ (cx + R * s50)|round(2) }} {{ (py - R * c50)|round(2) }}" class="u-vu-red"/>
+  <g class="u-vu-ticks" transform="translate({{ cx }} {{ py }})">{% for k in range(11) %}<path d="M0 {{ -(R - (5.5 if k % 5 == 0 else 3.2)) }}V{{ -R }}" transform="rotate({{ -50 + k * 10 }})"/>{% endfor %}</g>
+  <text x="{{ (cx - R * 0.52)|round(1) }}" y="{{ (py - R * 0.16)|round(1) }}" text-anchor="middle" class="u-vu-label">VU</text>
+  <line x1="{{ cx }}" y1="{{ py }}" x2="{{ cx }}" y2="{{ py - R - 3 }}" class="u-needle"/>
+  <circle cx="{{ cx }}" cy="{{ py }}" r="4.6" fill="url(#u-pivot)"/>
+  <rect x="3.5" y="3.5" width="{{ vw - 7 }}" height="{{ vh - 7 }}" rx="3.5" fill="url(#u-glass)"/>
+</g>{% endmacro %}
+
+{% macro led(x, y, red=False) %}<circle cx="{{ x }}" cy="{{ y }}" r="12" fill="url(#u-glow-{{ 'red' if red else 'amber' }})"/><circle cx="{{ x }}" cy="{{ y }}" r="4.3" fill="url(#u-led-{{ 'red' if red else 'amber' }})"/><circle cx="{{ x - 1.3 }}" cy="{{ y - 1.3 }}" r="1.2" fill="#fff" fill-opacity=".85"/>{% endmacro %}
+
+{% macro label(x, y, text, anchor="start") %}<text x="{{ x }}" y="{{ y + 0.9 }}" text-anchor="{{ anchor }}" class="u-label u-label--emboss">{{ text }}</text><text x="{{ x }}" y="{{ y }}" text-anchor="{{ anchor }}" class="u-label">{{ text }}</text>{% endmacro %}
+
+{% macro face(name, kind, ui) %}<svg viewBox="0 0 420 150" role="presentation">
+  <rect x=".5" y=".5" width="419" height="149" rx="9" class="u-plate"/>
+  <rect x=".5" y=".5" width="419" height="149" rx="9" fill="url(#u-brush)" class="u-brush"/>
+  <rect x=".5" y=".5" width="419" height="149" rx="9" fill="url(#u-sheen)"/>
+  <path d="M9 1.5H411" class="u-hi"/><path d="M9 148.5H411" class="u-lo"/>
+  <path d="M25 4V146M394 4V146" class="u-groove-d"/><path d="M26 4V146M395 4V146" class="u-groove-l"/>
+  {{ screw(12.5, 22, 18 + ui * 37) }}{{ screw(12.5, 128, 61 + ui * 23) }}{{ screw(407.5, 22, 34 + ui * 29) }}{{ screw(407.5, 128, 7 + ui * 41) }}
+  {% if kind == "tape" %}
+  {{ label(210, 31, "Tape · 1/4 in", "middle") }}
+  {% for rx, rr in [(100, 46), (320, 34)] %}<g transform="translate({{ rx }} 80)">
+    <circle cx="2" cy="5" r="58" fill="url(#u-shadow)"/>
+    <g class="reel reel--{{ loop.index }}">
+      <circle r="{{ rr }}" fill="url(#u-pack)"/>
+      <circle r="{{ rr }}" fill="none" stroke="#000" stroke-opacity=".4"/>
+      <circle r="55" fill="#E9EDF2" fill-opacity=".07"/>
+      <circle r="55" fill="none" stroke="url(#u-metal)" stroke-width="3.4"/>
+      {% for a in (0, 120, 240) %}<path d="M-7.5-14L-5.2-52.5Q0-55.5 5.2-52.5L7.5-14Z" fill="url(#u-metal)" stroke="#000" stroke-opacity=".22" stroke-width=".6" transform="rotate({{ a }})"/>{% endfor %}
+      <circle r="15" fill="url(#u-hub)"/><circle r="15" fill="none" stroke="#000" stroke-opacity=".3"/>
+      {% for a in (60, 180, 300) %}<rect x="-1.7" y="-14.2" width="3.4" height="5.4" rx="1.2" fill="#2A2C31" transform="rotate({{ a }})"/>{% endfor %}
+      <circle r="4.6" fill="#15161A"/>
+    </g>
+  </g>{% endfor %}
+  <path d="M100 126L152 134.5H268L320 114" class="u-tape"/>
+  <rect x="184" y="125" width="52" height="18" rx="4" fill="url(#u-head)"/><path d="M210 126V142" stroke="#2A2D33" stroke-width="1.3"/>
+  <circle cx="152" cy="134.5" r="5.2" fill="url(#u-roller)"/><circle cx="268" cy="134.5" r="5.2" fill="url(#u-roller)"/>
+  {{ led(380, 30, True) }}
+  {% else %}
+  {{ label(40, 31, name) }}
+  {% set v = None %}{% set kn = [] %}{% set btns = [] %}{% set minis = [] %}
+  {% if kind == "fet" %}{% set v = (146, 38, 128, 70) %}{% set kn = [(70, 88, 26), (350, 88, 26)] %}{% set btns = [150, 182, 214, 246] %}{% set minis = [(70, 140, "Input"), (350, 140, "Output")] %}
+  {% elif kind == "opto" %}{% set v = (140, 34, 140, 80) %}{% set kn = [(78, 86, 29), (342, 86, 29)] %}{% set minis = [(78, 140, "Gain"), (342, 140, "Peak reduction")] %}
+  {% elif kind == "vca" %}{% set v = (40, 44, 128, 84) %}{% set kn = [(220, 92, 22), (280, 92, 22), (340, 92, 22)] %}
+  {% elif kind == "fusion" %}{% set kn = [(62, 100, 21), (136, 100, 21), (210, 100, 21), (284, 100, 21), (358, 100, 21)] %}{% set btns = [53, 127, 201, 275, 349] %}
+  {% else %}{% set kn = [(62, 92, 22), (136, 92, 22), (210, 92, 22), (284, 92, 22), (358, 92, 22)] %}{% endif %}
+  {% if v %}{{ vu(v[0], v[1], v[2], v[3]) }}{% endif %}
+  {% for bx in btns %}{% set big = kind == "fet" %}{% set by = 116 if big else 46 %}{% set bw = 24 if big else 18 %}{% set bh = 12 if big else 9 %}
+    {% if loop.index == 2 %}<ellipse cx="{{ bx + bw / 2 }}" cy="{{ by + bh / 2 }}" rx="{{ bw }}" ry="{{ bh * 1.5 }}" fill="url(#u-glow-amber)"/><rect x="{{ bx }}" y="{{ by }}" width="{{ bw }}" height="{{ bh }}" rx="2.5" fill="url(#u-btn-on)"/>
+    {% else %}<rect x="{{ bx }}" y="{{ by }}" width="{{ bw }}" height="{{ bh }}" rx="2.5" fill="url(#u-btn)" stroke="#fff" stroke-opacity=".12" stroke-width=".6"/>{% endif %}
+  {% endfor %}
+  {% for x, y, r in kn %}{{ knob(x, y, r, ((ui * 53 + loop.index0 * 71) % 220) - 110) }}{% endfor %}
+  {% for x, y, t in minis %}<text x="{{ x }}" y="{{ y }}" text-anchor="middle" class="u-mini">{{ t }}</text>{% endfor %}
+  {{ led(380, 30) }}
+  {% endif %}
+</svg>{% endmacro %}
