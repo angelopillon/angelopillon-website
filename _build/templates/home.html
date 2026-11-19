@@ -74,7 +74,6 @@
       <div class="ab__screen">
         <div class="ab__top">
           <div class="ab__now"><span class="ab__now-svc">{{ abt.service[ab[0].service] }}</span><b class="ab__now-title">{{ ab[0].title }}</b></div>
-          <div class="ab__meter" title="{{ abt.lufs_note }}"><b class="ab__lufs" data-lufs>{{ ab[0].lufs_b|lufs(lang) }}</b><span>{{ abt.lufs }}<i>{{ abt.lufs_note }}</i></span></div>
         </div>
         <div class="ab__wave">
           <canvas class="ab__canvas" aria-hidden="true"></canvas>
@@ -91,11 +90,10 @@
           <button type="button" data-v="before" aria-pressed="true">{{ abt.before }}</button>
           <button type="button" data-v="after" aria-pressed="false">{{ abt.after }}</button>
         </div>
-        <label class="ab__match"><input type="checkbox" role="switch" checked><span class="ab__toggle" aria-hidden="true"></span><span>{{ abt.match }}</span></label>
       </div>
-      <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="abgrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="0"><stop offset="0" stop-color="#4D6BFF"/><stop offset=".3" stop-color="#8B4DFF"/><stop offset=".55" stop-color="#FF3DA5"/><stop offset=".8" stop-color="#FF6A2B"/><stop offset="1" stop-color="#FFC24B"/></linearGradient></defs></svg>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="abgrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="0"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#A1A1A6"/></linearGradient></defs></svg>
       <ol class="ab__list" aria-label="{{ abt.tracks }}">
-        {% for t in ab %}<li><button class="ab__track" type="button" data-before="{{ t.before }}" data-after="{{ t.after }}" data-eb="{{ t.env_b }}" data-ea="{{ t.env_a }}" data-lb="{{ t.lufs_b|lufs(lang) }}" data-la="{{ t.lufs_a|lufs(lang) }}" data-dur="{{ t.dur }}" data-title="{{ t.title }}" data-svc="{{ abt.service[t.service] }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">
+        {% for t in ab %}<li><button class="ab__track" type="button" data-before="{{ t.before }}" data-after="{{ t.after }}" data-eb="{{ t.env_b }}" data-ea="{{ t.env_a }}" data-dur="{{ t.dur }}" data-title="{{ t.title }}" data-svc="{{ abt.service[t.service] }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">
           <svg class="ab__mini" viewBox="0 0 100 32" preserveAspectRatio="none" aria-hidden="true"><g class="ab__mini-b">{{ t.svg_b }}</g><g class="ab__mini-a">{{ t.svg_a }}</g></svg>
           <span class="ab__meta"><b>{{ t.title }}</b><span>{% if t.artist %}{{ t.artist }} · {% endif %}{{ abt.service[t.service] }} · {{ t.dur_txt }}</span></span>
         </button></li>

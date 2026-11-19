@@ -8,7 +8,7 @@ OUT = Path(__file__).resolve().parent.parent / "assets/img/news"
 W, H = 960, 540
 BG, PANEL, LINE = "#0C0C12", "#121219", "#26262E"
 INK, INK2, INK3 = "#F5F5F7", "#A1A1AA", "#808089"
-LIME, VFD, AMBER, VIOLET, PINK, ORANGE = "#A3E635", "#7CF2DC", "#FFC24B", "#8B4DFF", "#FF3DA5", "#FF6A2B"
+LIME, VFD, AMBER, VIOLET, PINK, ORANGE = "#2997FF", "#64D2FF", "#F5F5F7", "#5E8BFF", "#0A84FF", "#9FD4FF"
 FONT = "Helvetica Neue, Helvetica, Arial, sans-serif"
 
 

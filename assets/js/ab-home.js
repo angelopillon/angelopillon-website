@@ -1,6 +1,6 @@
 /* angelopillon.com — before/after player on the home.
    Both versions are decoded and started together, so switching is instant and stays in time.
-   "Matched loudness" turns the louder version down to the level of the quieter one.
+   Both play at their own level, as they were delivered: nothing is normalised.
    The waveform shows the loudness envelope of the version you hear and morphs when you switch. */
 (function () {
   "use strict";
@@ -9,8 +9,8 @@
   var AC = window.AudioContext || window.webkitAudioContext;
   var $ = function (s) { return el.querySelector(s); };
   var tracks = Array.prototype.slice.call(el.querySelectorAll(".ab__track"));
-  var playBtn = $(".ab__play"), seek = $(".ab__seek"), timeEl = $(".ab__time"), statusEl = $(".ab__status"), matchEl = $(".ab__match input");
-  var lufsEl = $("[data-lufs]"), titleEl = $(".ab__now-title"), svcEl = $(".ab__now-svc");
+  var playBtn = $(".ab__play"), seek = $(".ab__seek"), timeEl = $(".ab__time"), statusEl = $(".ab__status");
+  var titleEl = $(".ab__now-title"), svcEl = $(".ab__now-svc");
   var canvas = $(".ab__canvas"), g = canvas.getContext("2d");
   var vBtns = Array.prototype.slice.call(el.querySelectorAll(".ab__switch button"));
   var T = { play: el.getAttribute("data-play"), pause: el.getAttribute("data-pause"), loading: el.getAttribute("data-loading"), error: el.getAttribute("data-error") };
@@ -51,7 +51,7 @@
     canvas.width = W * DPR; canvas.height = H * DPR;
     g.setTransform(DPR, 0, 0, DPR, 0, 0);
     grad = g.createLinearGradient(0, 0, W, 0);
-    [["0", "#4D6BFF"], [".26", "#8B4DFF"], [".52", "#FF3DA5"], [".78", "#FF6A2B"], ["1", "#FFC24B"]].forEach(function (s) { grad.addColorStop(+s[0], s[1]); });
+    [["0", "#FFFFFF"], ["1", "#A1A1A6"]].forEach(function (s) { grad.addColorStop(+s[0], s[1]); });
     paint();
   }
   function paint() {
@@ -98,15 +98,11 @@
   function pair(i) { return Promise.all([load(tracks[i].getAttribute("data-before")), load(tracks[i].getAttribute("data-after"))]); }
   function duration() { return nodes && nodes.track === cur ? nodes.dur : 0; }
   function position() { return playing ? Math.min(duration(), offset + (ctx.currentTime - startedAt)) : offset; }
-  function levels() {
-    var m = matchEl.checked && nodes ? Math.min(nodes.rb, nodes.ra) : 0;
-    return { before: m ? m / nodes.rb : 1, after: m ? m / nodes.ra : 1 };
-  }
   function applyGains(fast) {
     if (!nodes) return;
-    var l = levels(), t = ctx.currentTime, k = fast ? 0.004 : 0.012;
-    nodes.gb.gain.setTargetAtTime(version === "before" ? l.before : 0, t, k);
-    nodes.ga.gain.setTargetAtTime(version === "after" ? l.after : 0, t, k);
+    var t = ctx.currentTime, k = fast ? 0.004 : 0.012;
+    nodes.gb.gain.setTargetAtTime(version === "before" ? 1 : 0, t, k);
+    nodes.ga.gain.setTargetAtTime(version === "after" ? 1 : 0, t, k);
   }
   function stopSources() {
     if (!nodes || !nodes.sb) return;
@@ -189,8 +185,6 @@
     var t = tracks[cur];
     titleEl.textContent = t.getAttribute("data-title");
     svcEl.textContent = t.getAttribute("data-svc");
-    var v = t.getAttribute(version === "after" ? "data-la" : "data-lb");
-    lufsEl.textContent = v || "";
   }
   function select(i) {
     if (i === cur && nodes && nodes.track === i) return;
@@ -212,7 +206,6 @@
   playBtn.addEventListener("click", function () { if (playing) pause(); else play(); });
   tracks.forEach(function (t, i) { t.addEventListener("click", function () { var same = i === cur; select(i); if (!playing && (!same || !nodes)) play(); }); });
   vBtns.forEach(function (b) { b.addEventListener("click", function () { setVersion(b.getAttribute("data-v")); }); });
-  matchEl.addEventListener("change", function () { applyGains(false); });
   seek.addEventListener("input", function () {
     dragging = true;
     var d = duration() || +tracks[cur].getAttribute("data-dur");
