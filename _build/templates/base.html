@@ -36,7 +36,7 @@
 {% if progress %}<div class="progress" aria-hidden="true"></div>{% endif %}
 <header class="site-header">
   <div class="wrap hdr">
-    <a class="brand" href="{{ ui.home }}">Angelo Pillon</a>
+    <a class="brand" href="{{ ui.home }}">{{ brand_mark }}<span>Angelo Pillon</span></a>
     <nav class="nav" aria-label="{{ ui.nav_label }}">
       {% for item in ui.nav %}<a href="{{ item.href }}"{% if item.key == nav_current %} aria-current="page"{% endif %}>{{ item.label }}</a>
       {% endfor %}
@@ -61,7 +61,7 @@
   <div class="wrap">
     <div class="ft-cols">
       <div class="ft-brand">
-        <b>Angelo Pillon</b>
+        <b>{{ brand_mark }}Angelo Pillon</b>
         <p>{{ ui.ft_tag }}</p>
       </div>
       {% for col in ui.ft_cols %}<div class="ft-col">

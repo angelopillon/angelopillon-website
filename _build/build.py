@@ -27,6 +27,7 @@ import og  # noqa: E402
 import strings as S  # noqa: E402
 import tools as TL  # noqa: E402
 import services as SV  # noqa: E402
+import brand  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 B = ROOT / "_build"
@@ -41,6 +42,7 @@ SKIP_OG = "--no-og" in sys.argv
 env = Environment(loader=FileSystemLoader(str(B / "templates")), autoescape=True, trim_blocks=False, lstrip_blocks=False)
 env.filters["lufs"] = lambda v, lang="en": "" if v is None else (f"{v:.1f}".replace("-", "\u2212").replace(".", "," if lang != "en" else "."))
 env.globals["preview"] = PREVIEW
+env.globals["brand_mark"] = Markup(brand.mark_svg(cls="brand__mark"))
 PAGES = []
 
 
@@ -382,16 +384,16 @@ HOME_PROOF = {
 
 AB_DIR = "assets/audio/prima-dopo"
 AB_TEXT = {
-    "en": dict(lufs="LUFS", lufs_note="integrated loudness of the file", h2="Before and after.", lead="Tracks as they arrived and as they left the studio. Press play and switch between the two while the music runs: same spot, same level.", pick="Choose a track", spotify="The full playlist is on Spotify.", before="Before", after="After", version="Version", play="Play", pause="Pause", seek="Position", match="Matched loudness", loading="Loading…", error="This track cannot be played right now.",
+    "en": dict(lufs="LUFS", lufs_note="integrated loudness of the file", h2="Before and after.", lead="Tracks as they arrived and as they left the studio. Press play and switch between the two while the music runs: same spot, each at its own level.", pick="Choose a track", spotify="The full playlist is on Spotify.", before="Before", after="After", version="Version", play="Play", pause="Pause", seek="Position", match="Matched loudness", loading="Loading…", error="This track cannot be played right now.",
                note="Same track, same spot: switch between before and after while it plays.", tracks="Before and after tracks",
                service=dict(mix_master="Mix and master", mastering="Mastering", stem="Stem mastering")),
-    "it": dict(lufs="LUFS", lufs_note="loudness integrata del file", h2="Prima e dopo.", lead="I brani come sono arrivati e come sono usciti dallo studio. Premi play e passa da uno all’altro mentre la musica scorre: stesso punto, stesso volume.", pick="Scegli un brano", spotify="La playlist completa è su Spotify.", before="Prima", after="Dopo", version="Versione", play="Riproduci", pause="Pausa", seek="Posizione", match="Stesso volume", loading="Carico…", error="Questo brano ora non si può riprodurre.",
+    "it": dict(lufs="LUFS", lufs_note="loudness integrata del file", h2="Prima e dopo.", lead="I brani come sono arrivati e come sono usciti dallo studio. Premi play e passa da uno all’altro mentre la musica scorre: stesso punto, ognuno al suo volume.", pick="Scegli un brano", spotify="La playlist completa è su Spotify.", before="Prima", after="Dopo", version="Versione", play="Riproduci", pause="Pausa", seek="Posizione", match="Stesso volume", loading="Carico…", error="Questo brano ora non si può riprodurre.",
                note="Stesso brano, stesso punto: passa da prima a dopo mentre suona.", tracks="Brani prima e dopo",
                service=dict(mix_master="Mix e master", mastering="Mastering", stem="Stem mastering")),
-    "de": dict(lufs="LUFS", lufs_note="integrierte Lautheit der Datei", h2="Vorher und nachher.", lead="Tracks, wie sie ins Studio kamen und wie sie es verlassen haben. Drück auf Play und wechsle, während die Musik läuft: dieselbe Stelle, dieselbe Lautstärke.", pick="Track wählen", spotify="Die ganze Playlist gibt es auf Spotify.", before="Vorher", after="Nachher", version="Version", play="Abspielen", pause="Pause", seek="Position", match="Gleiche Lautstärke", loading="Lädt…", error="Dieser Track lässt sich gerade nicht abspielen.",
+    "de": dict(lufs="LUFS", lufs_note="integrierte Lautheit der Datei", h2="Vorher und nachher.", lead="Tracks, wie sie ins Studio kamen und wie sie es verlassen haben. Drück auf Play und wechsle, während die Musik läuft: dieselbe Stelle, jede Version in ihrer eigenen Lautstärke.", pick="Track wählen", spotify="Die ganze Playlist gibt es auf Spotify.", before="Vorher", after="Nachher", version="Version", play="Abspielen", pause="Pause", seek="Position", match="Gleiche Lautstärke", loading="Lädt…", error="Dieser Track lässt sich gerade nicht abspielen.",
                note="Derselbe Track, dieselbe Stelle: Wechsle beim Hören zwischen vorher und nachher.", tracks="Tracks vorher und nachher",
                service=dict(mix_master="Mix und Master", mastering="Mastering", stem="Stem-Mastering")),
-    "es": dict(lufs="LUFS", lufs_note="sonoridad integrada del archivo", h2="Antes y después.", lead="Los temas tal como llegaron y tal como salieron del estudio. Dale al play y cambia de uno a otro mientras suena: el mismo punto, el mismo volumen.", pick="Elige un tema", spotify="La playlist completa está en Spotify.", before="Antes", after="Después", version="Versión", play="Reproducir", pause="Pausa", seek="Posición", match="Mismo volumen", loading="Cargando…", error="Este tema no se puede reproducir ahora.",
+    "es": dict(lufs="LUFS", lufs_note="sonoridad integrada del archivo", h2="Antes y después.", lead="Los temas tal como llegaron y tal como salieron del estudio. Dale al play y cambia de uno a otro mientras suena: el mismo punto, cada uno a su volumen.", pick="Elige un tema", spotify="La playlist completa está en Spotify.", before="Antes", after="Después", version="Versión", play="Reproducir", pause="Pausa", seek="Posición", match="Mismo volumen", loading="Cargando…", error="Este tema no se puede reproducir ahora.",
                note="El mismo tema, el mismo punto: cambia entre antes y después mientras suena.", tracks="Temas antes y después",
                service=dict(mix_master="Mezcla y master", mastering="Mastering", stem="Stem mastering")),
 }
@@ -948,8 +950,7 @@ def main():
     reviews_pages()
     OUT.mkdir(parents=True, exist_ok=True)
     images()
-    og.icons(ROOT)
-    favicon_svg()
+    brand.icons(ROOT)
     if not SKIP_OG:
         og_images()
     copy_assets()

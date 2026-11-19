@@ -1163,3 +1163,68 @@ mark.draft-gap{ background:rgba(255,181,71,.16); color:var(--amber); border:1px 
 .prose figure.fig-web img{ aspect-ratio:3/2; object-fit:cover; background:#111; }
 .prose figure.fig-web .credit{ display:block; margin-top:4px; font-size:.75rem; opacity:.8; }
 .prose figure.fig-web .credit a{ color:inherit; text-decoration:underline; text-underline-offset:2px; }
+
+/* =====================================================================
+   Apple refinement, November 2026.
+   One accent colour (system blue), titanium greys for type, the transient
+   mark in the header. The colour lives in the animations and the photos,
+   not in the interface.
+   ===================================================================== */
+:root{
+  --grad:linear-gradient(100deg, #FFFFFF 0%, #E3E3E8 38%, #A1A1A6 100%);
+  --grad-v:linear-gradient(180deg, #FFFFFF 35%, #D2D2D7 100%);
+  --accent:#0071E3; --accent-hover:#0077ED; --link:#2997FF;
+  --ink-2:#A1A1A6; --ink-3:#86868B;
+  --card:#111113; --card-2:#161617;
+  --line:rgba(255,255,255,.08);
+  --r-l:22px; --r-xl:28px;
+}
+
+/* brand: the transient + name */
+.brand{ display:inline-flex; align-items:center; gap:10px; font-weight:640; font-stretch:100%; letter-spacing:-.015em; }
+.brand__mark{ height:19px; width:auto; flex:none; display:block; }
+.ft-brand b{ display:inline-flex; align-items:center; gap:12px; font-weight:640; letter-spacing:-.02em; }
+.ft-brand b .brand__mark{ height:24px; }
+
+/* header: translucent like the Apple navigation bar */
+.site-header.is-solid{ background:rgba(22,22,23,.78); border-bottom-color:rgba(255,255,255,.06); }
+.nav a{ font-size:.875rem; font-weight:500; color:#D2D2D7; letter-spacing:-.005em; }
+.nav a:hover, .nav a[aria-current="page"]{ color:#fff; }
+
+/* type: semibold, a little less condensed, Apple tracking */
+.hero__line{ font-weight:700; font-stretch:100%; letter-spacing:-.035em; line-height:.98; }
+.t-mega{ font-weight:700; font-stretch:100%; letter-spacing:-.035em; line-height:.98; }
+.t-display{ font-weight:680; font-stretch:100%; letter-spacing:-.03em; line-height:1.02; }
+.t-lead{ color:var(--ink-2); font-weight:420; letter-spacing:-.012em; }
+.hx-facts dd{ font-weight:680; font-stretch:100%; letter-spacing:-.03em; }
+
+/* buttons: one blue pill for the main action, outlined pill for the second */
+.btn--glow, .btn--glow:hover{ background:var(--accent); background-size:auto; color:#fff; box-shadow:none; }
+.btn--glow:hover{ background:var(--accent-hover); }
+.site-header .btn--small{ background:var(--accent); color:#fff; border-color:var(--accent); }
+.site-header .btn--small:hover{ background:var(--accent-hover); }
+.btn--ghost{ background:rgba(0,0,0,.38); color:var(--link); border:1px solid var(--link); }
+.btn--ghost:hover{ background:rgba(41,151,255,.08); }
+.btn{ font-weight:560; letter-spacing:-.01em; }
+
+/* links and focus in system blue */
+.link{ color:var(--link); text-decoration:none; }
+.link:hover{ text-decoration:underline; text-decoration-color:var(--link); }
+.input:focus, .field input:focus, .field select:focus, .field textarea:focus,
+.hx-sec.contact .field input:focus, .hx-sec.contact .field select:focus, .hx-sec.contact .field textarea:focus{ box-shadow:0 0 0 4px rgba(0,113,227,.35); border-color:var(--accent); }
+.toc a.is-active{ border-left-color:var(--link); }
+
+/* cards: flat tiles, no borders, larger radius */
+.svc{ background:var(--card-2); border-color:transparent; }
+
+/* contact: the aurora in Apple blues instead of the spectrum */
+.aurora i:nth-child(1){ background:#0A84FF; }
+.aurora i:nth-child(2){ background:#5E5CE6; }
+.aurora i:nth-child(3){ background:#0040DD; opacity:.7; }
+.aurora i:nth-child(4){ background:#64D2FF; opacity:.55; }
+
+/* before and after player: no rainbow, "after" lights up in blue */
+.ab__screen::after{ background:radial-gradient(closest-side, rgba(255,255,255,.10), transparent); }
+.ab[data-version="after"] .ab__switch::before{ background:var(--accent); box-shadow:none; }
+.ab__legend i[data-l="after"]{ background:#fff; }
+.ab__switch button{ font-weight:600; }

@@ -71,9 +71,11 @@ def og_image(path, title, kicker="", cat=None, readout="angelopillon.com"):
     F = fonts()
     W, H = 1200, 630
     tint = CAPS.get(cat, SPEC[1])
-    im = _glow(W, H, [(980, 80, 260, tuple(int(c * 0.55) for c in tint)), (1150, 520, 220, (90, 30, 120)), (200, 700, 260, (20, 40, 140))])
+    im = _glow(W, H, [(980, 80, 260, tuple(int(c * 0.30) for c in tint)), (1150, 520, 220, (40, 40, 46)), (200, 700, 260, (18, 30, 70))])
     d = ImageDraw.Draw(im)
-    d.text((80, 64), "Angelo Pillon", font=ImageFont.truetype(F["display"], 30), fill=INK)
+    import brand
+    mw = brand.draw_mark(im, 80, 62, 36, INK)
+    d.text((80 + mw + 16, 64), "Angelo Pillon", font=ImageFont.truetype(F["display"], 30), fill=INK)
     y = 132
     if kicker:
         lab = ImageFont.truetype(F["label"], 26)
@@ -102,7 +104,8 @@ def og_image(path, title, kicker="", cat=None, readout="angelopillon.com"):
         v = 0.5 + env * 0.42 * math.sin(x * 26) + 0.05 * math.sin(x * 71)
         pts.append((560 + x * 560, 560 - v * 80))
     for i in range(len(pts) - 1):
-        d.line([pts[i], pts[i + 1]], fill=spec(i / (len(pts) - 1)), width=4)
+        g = int(255 - 90 * (i / (len(pts) - 1)))
+        d.line([pts[i], pts[i + 1]], fill=(g, g, min(255, g + 4)), width=4)
     path.parent.mkdir(parents=True, exist_ok=True)
     im.save(path, optimize=True)
 
