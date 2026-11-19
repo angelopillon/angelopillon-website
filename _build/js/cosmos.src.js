@@ -14,7 +14,7 @@ import DATA from "./globe-data.json";
 
 const S = (window.__cosmos = window.__cosmos || { p: 0, shift: 0, arcs: 0, active: true, dim: 0 });
 
-const PALETTE = ["#3D5BFF", "#8B4DFF", "#FF3DA5", "#FF6A2B", "#FFC24B"];
+const PALETTE = ["#1E3AFF", "#0A84FF", "#3FA0FF", "#9FD4FF", "#F2F6FF"];
 
 function rng(seed) {
   return function () {
@@ -277,7 +277,7 @@ function start() {
   const P0 = new Float32Array(N * 3), P1 = new Float32Array(N * 3), P2 = new Float32Array(N * 3),
     P3 = new Float32Array(N * 3), P4 = new Float32Array(N * 3), C0 = new Float32Array(N * 3), RR = new Float32Array(N * 4), KK = new Float32Array(N);
   const ARMS = 3, RMAX = 6.4, BARS = 34, STRANDS = 7;
-  const inside = new Color("#FFE2B8"), mid = new Color("#FF4FA8"), outside = new Color("#4D6BFF"), tmp = new Color();
+  const inside = new Color("#FFF6EA"), mid = new Color("#5AA9FF"), outside = new Color("#1E3AFF"), tmp = new Color();
   const land = DATA.land, landN = land.length / 2;
   const landCount = Math.min(Math.floor(N * 0.66), landN * 4);
   for (let i = 0; i < N; i++) {
@@ -353,7 +353,7 @@ function start() {
   /* ---------------- far stars ---------------- */
   const SN = mobile ? 2200 : 5200;
   const sp = new Float32Array(SN * 3), sr = new Float32Array(SN * 4), sc = new Float32Array(SN * 3);
-  const starCols = [new Color("#FFFFFF"), new Color("#CFE0FF"), new Color("#FFE7C9"), new Color("#BFC8FF")];
+  const starCols = [new Color("#FFFFFF"), new Color("#CFE0FF"), new Color("#F4F7FF"), new Color("#BFD4FF")];
   for (let i = 0; i < SN; i++) {
     const th = R() * Math.PI * 2, ph = Math.acos(2 * R() - 1), rad = 40 + R() * 70;
     sp[i * 3] = rad * Math.sin(ph) * Math.cos(th); sp[i * 3 + 1] = rad * Math.cos(ph); sp[i * 3 + 2] = rad * Math.sin(ph) * Math.sin(th);
@@ -376,7 +376,7 @@ function start() {
   /* ---------------- nebulae ---------------- */
   const tex = glowTexture();
   const nebulae = [];
-  [["#3D2BFF", -4.5, -1.6, -12, 15, 0.09], ["#C2187A", 4.5, -2.4, -13, 16, 0.07], ["#1E5BFF", 0.5, -4.5, -16, 20, 0.06], ["#FF6A2B", 2.5, -0.5, -14, 10, 0.03]].forEach((n) => {
+  [["#1E3AFF", -4.5, -1.6, -12, 15, 0.09], ["#0A84FF", 4.5, -2.4, -13, 16, 0.07], ["#1E5BFF", 0.5, -4.5, -16, 20, 0.06], ["#64D2FF", 2.5, -0.5, -14, 10, 0.03]].forEach((n) => {
     const m = new SpriteMaterial({ map: tex, color: new Color(n[0]), transparent: true, opacity: n[5], blending: AdditiveBlending, depthWrite: false });
     const s = new Sprite(m);
     s.position.set(n[1], n[2], n[3]);
