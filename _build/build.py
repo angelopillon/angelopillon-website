@@ -543,7 +543,7 @@ def home_pages(arts):
         faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["faqs"]]}
         site = {"@context": "https://schema.org", "@type": "WebSite", "name": "Angelo Pillon", "url": SITE + "/", "inLanguage": lang}
         add_page(path=S.HOMES[lang], lang=lang, title=s["title"], description=s["description"], main=Markup(main), alt_key="home", jsonld=[org, faq, site],
-                 scripts=["/assets/js/cosmos.js"] + (["/assets/js/ab-home.js"] if ab else []), og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
+                 scripts=(["/assets/js/ab-home.js"] if ab else []), og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
                  og_args=dict(title=s["h1"], kicker={"en": "Mixing and mastering", "it": "Mix e mastering", "de": "Mixing und Mastering", "es": "Mezcla y mastering"}[lang], readout="−8.9 LUFS  −0.3 dBTP"),
                  body_class="is-home")
 
@@ -753,22 +753,17 @@ def write_manifest_sw():
     tool_urls = sorted({p["path"] for p in PAGES if p["nav_current"] == "tools"})
     precache = ["/", "/it/", "/offline.html", "/assets/css/site.css", "/assets/js/site.js", "/assets/js/motion.js", "/assets/js/cosmos.js", "/assets/js/dsp.js", "/assets/js/tools/common.js",
                 "/assets/fonts/mona-sans-vf.woff2", "/assets/fonts/hubot-sans-vf.woff2"] + [f"/assets/js/tools/{t['js']}" for t in TL.TOOLS] + tool_urls
-    sw = f"""/* angelopillon.com service worker: tools work offline, pages are network first */
-const V = "ap-{V}";
-const PRECACHE = {json.dumps(precache)};
-self.addEventListener("install", e => {{ e.waitUntil(caches.open(V).then(c => Promise.all(PRECACHE.map(u => c.add(new Request(u, {{ cache: "reload" }})).catch(() => null)))).then(() => self.skipWaiting())); }});
-self.addEventListener("activate", e => {{ e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); }});
-self.addEventListener("fetch", e => {{
-  const r = e.request; if (r.method !== "GET") return;
-  const u = new URL(r.url); if (u.origin !== location.origin) return;
-  if (r.mode === "navigate") {{
-    e.respondWith(fetch(r).then(res => {{ const c = res.clone(); caches.open(V).then(x => x.put(r, c)); return res; }}).catch(() => caches.match(r).then(m => m || caches.match("/offline.html"))));
-    return;
-  }}
-  if (u.pathname.startsWith("/assets/")) {{
-    e.respondWith(caches.match(r, {{ ignoreSearch: true }}).then(m => m || fetch(r).then(res => {{ const c = res.clone(); caches.open(V).then(x => x.put(r, c)); return res; }})));
-  }}
-}});
+    sw = """/* angelopillon.com: the service worker is retired (November 2026).
+   It served cached CSS and JS after a redesign, so pages could mix old and new files.
+   This version deletes every cache, unregisters itself and reloads open tabs once. */
+self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("activate", e => e.waitUntil((async () => {
+  const ks = await caches.keys();
+  await Promise.all(ks.map(k => caches.delete(k)));
+  await self.registration.unregister();
+  const cs = await self.clients.matchAll({ type: "window" });
+  cs.forEach(c => { try { c.navigate(c.url); } catch (err) {} });
+})()));
 """
     if PREVIEW:
         return
@@ -951,6 +946,9 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     images()
     brand.icons(ROOT)
+    if not (ROOT / "assets/img/world-clients.webp").exists():
+        import worldmap
+        worldmap.render()
     if not SKIP_OG:
         og_images()
     copy_assets()

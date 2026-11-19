@@ -189,8 +189,9 @@
 
   /* ---------- year, service worker ---------- */
   $$("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
-  if (root.getAttribute("data-sw") === "1" && "serviceWorker" in navigator) {
-    addEventListener("load", function () { navigator.serviceWorker.register("/sw.js").catch(function () {}); });
+  // the old service worker is retired: remove any registration still alive in this browser
+  if ("serviceWorker" in navigator && navigator.serviceWorker.getRegistrations) {
+    navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); }).catch(function () {});
   }
 
   /* language menu: remember the choice, so the home stops redirecting by browser language or country */
