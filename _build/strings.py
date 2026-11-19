@@ -62,7 +62,7 @@ UI = {
         toc="In questa pagina", about_author="L’autore", keep_reading="Continua a leggere", more_articles="Altri articoli",
         newer="Più recente", older="Precedente", work_with="Lavora con Angelo", try_meter="Prova il misuratore LUFS gratuito",
         author_bio="Fonico di mix e mastering a Milano. Oltre 15 anni in studio, una catena ibrida analogica e digitale, certificazione Apple Digital Masters e una media di 4,9/5 su più di 700 recensioni.",
-        ft_tag="Fonico di mix e mastering. Studio ibrido analogico e digitale a Milano, certificato Apple Digital Masters.",
+        ft_tag="Ingegnere del suono e fonico di mix e mastering. Studio ibrido analogico e digitale a Milano, certificato Apple Digital Masters.",
         city="Milano", legal_label="Note legali", privacy="Privacy policy", cookie_settings="Impostazioni cookie", cookies_label="Cookie",
         consent_text="Uso cookie per statistiche anonime sul traffico, e solo se accetti. Il sito e gli strumenti funzionano comunque. Dettagli nella",
         accept="Accetta", decline="Rifiuta", open="Apri", other_tools="Altri strumenti gratuiti",
@@ -102,24 +102,24 @@ UI = {
 }
 
 NAV = {
-    "en": [("services", "Services", "/#services"), ("tools", "Tools", "/tools/"), ("articles", "Articles", "/articles"), ("contact", "Contact", "/#contact")],
-    "it": [("services", "Servizi", "/it/#services"), ("tools", "Strumenti", "/it/strumenti/"), ("articles", "Articoli", "/it/articoli/"), ("contact", "Contatti", "/it/#contact")],
-    "de": [("services", "Leistungen", "/de/#services"), ("tools", "Tools", "/tools/"), ("articles", "Artikel", "/de/artikel/"), ("contact", "Kontakt", "/de/#contact")],
-    "es": [("services", "Servicios", "/es/#services"), ("tools", "Herramientas", "/tools/"), ("articles", "Artículos", "/articles"), ("contact", "Contacto", "/es/#contact")],
+    "en": [("services", "Services", "/#services"), ("about", "About", "/about"), ("tools", "Tools", "/tools/"), ("articles", "Articles", "/articles"), ("contact", "Contact", "/#contact")],
+    "it": [("services", "Servizi", "/it/#services"), ("about", "Chi sono", "/it/chi-sono"), ("tools", "Strumenti", "/it/strumenti/"), ("articles", "Articoli", "/it/articoli/"), ("contact", "Contatti", "/it/#contact")],
+    "de": [("services", "Leistungen", "/de/#services"), ("about", "Über mich", "/de/ueber-mich"), ("tools", "Tools", "/tools/"), ("articles", "Artikel", "/de/artikel/"), ("contact", "Kontakt", "/de/#contact")],
+    "es": [("services", "Servicios", "/es/#services"), ("about", "Sobre mí", "/es/sobre-mi"), ("tools", "Herramientas", "/tools/"), ("articles", "Artículos", "/articles"), ("contact", "Contacto", "/es/#contact")],
 }
 
 FOOTER = {
     "en": [("Services", [("Mastering", "/#services"), ("Mix and master", "/#services"), ("Stem mastering", "/#services"), ("Mix feedback", "/#services")]),
-           ("Site", [("Free tools", "/tools/"), ("Articles", "/articles"), ("Articoli in italiano", "/it/articoli/"), ("Artikel auf Deutsch", "/de/artikel/"), ("RSS feed", "/feed.xml")]),
+           ("Site", [("About", "/about"), ("Free tools", "/tools/"), ("Articles", "/articles"), ("Articoli in italiano", "/it/articoli/"), ("Artikel auf Deutsch", "/de/artikel/"), ("RSS feed", "/feed.xml")]),
            ("Elsewhere", [("Fiverr", "https://www.fiverr.com/angelopillon"), ("SoundBetter", "https://soundbetter.com/profiles/618271-angelo-pillon")])],
     "it": [("Servizi", [("Mastering", "/it/#services"), ("Mix e master", "/it/#services"), ("Stem mastering", "/it/#services"), ("Feedback sul mix", "/it/#services")]),
-           ("Sito", [("Strumenti gratuiti", "/it/strumenti/"), ("Articoli", "/it/articoli/"), ("Articles in English", "/articles"), ("Artikel auf Deutsch", "/de/artikel/"), ("Feed RSS", "/it/feed.xml")]),
+           ("Sito", [("Chi sono", "/it/chi-sono"), ("Strumenti gratuiti", "/it/strumenti/"), ("Articoli", "/it/articoli/"), ("Articles in English", "/articles"), ("Artikel auf Deutsch", "/de/artikel/"), ("Feed RSS", "/it/feed.xml")]),
            ("Altrove", [("Fiverr", "https://www.fiverr.com/angelopillon"), ("SoundBetter", "https://soundbetter.com/profiles/618271-angelo-pillon")])],
     "de": [("Leistungen", [("Mastering", "/de/#services"), ("Mix und Master", "/de/#services"), ("Stem-Mastering", "/de/#services"), ("Mix-Feedback", "/de/#services")]),
-           ("Seite", [("Kostenlose Tools", "/tools/"), ("Artikel", "/de/artikel/"), ("Articles in English", "/articles"), ("Articoli in italiano", "/it/articoli/"), ("RSS-Feed", "/de/feed.xml")]),
+           ("Seite", [("Über mich", "/de/ueber-mich"), ("Kostenlose Tools", "/tools/"), ("Artikel", "/de/artikel/"), ("Articles in English", "/articles"), ("Articoli in italiano", "/it/articoli/"), ("RSS-Feed", "/de/feed.xml")]),
            ("Anderswo", [("Fiverr", "https://www.fiverr.com/angelopillon"), ("SoundBetter", "https://soundbetter.com/profiles/618271-angelo-pillon")])],
     "es": [("Servicios", [("Mastering", "/es/#services"), ("Mezcla y master", "/es/#services"), ("Stem mastering", "/es/#services"), ("Feedback de mezcla", "/es/#services")]),
-           ("Sitio", [("Herramientas gratuitas", "/tools/"), ("Artículos (inglés)", "/articles"), ("Articoli in italiano", "/it/articoli/")]),
+           ("Sitio", [("Sobre mí", "/es/sobre-mi"), ("Herramientas gratuitas", "/tools/"), ("Artículos (inglés)", "/articles"), ("Articoli in italiano", "/it/articoli/")]),
            ("En otros sitios", [("Fiverr", "https://www.fiverr.com/angelopillon"), ("SoundBetter", "https://soundbetter.com/profiles/618271-angelo-pillon")])],
 }
 
@@ -218,8 +218,8 @@ HOME["en"] = dict(
     f_err="Not sent. Try again, or write to <a href=\"mailto:angelopillon@gmail.com\">angelopillon@gmail.com</a>.",
 )
 HOME["it"] = dict(
-    title="Mix engineer e mastering a Milano | Angelo Pillon",
-    description="Mix engineer e mastering engineer a Milano, anche online. Studio ibrido analogico, certificato Apple Digital Masters, 4,9/5 su oltre 700 recensioni, clienti in 66 paesi.",
+    title="Ingegnere del suono e fonico di mix e mastering a Milano | Angelo Pillon",
+    description="Ingegnere del suono e fonico di mix e mastering a Milano, anche online: mix engineer e mastering engineer con studio ibrido analogico, certificato Apple Digital Masters, 4,9/5 su oltre 700 recensioni, clienti in 66 paesi.",
     h1="Mix e mastering da uno studio ibrido a Milano.",
     lead="Mandami le tracce o il mix. Ti torna indietro un disco bilanciato, forte quanto deve esserlo, e sicuro su ogni piattaforma su cui uscirà.",
     cta1="Inizia un progetto", cta2="Misura il tuo brano",
@@ -227,7 +227,7 @@ HOME["it"] = dict(
     r_i="Integrato", r_st="Short-term max", r_tp="True peak", r_lra="Range", r_corr="Correlazione",
     b_drop="Trascina qui un WAV, AIFF, FLAC o MP3. L’analisi avviene sul tuo computer: non viene caricato nulla.", b_choose="Scegli un file",
     e_alt="Angelo Pillon al mixer nel suo studio di Milano", e_alt2="Angelo Pillon nel suo studio di Milano, tra laptop, monitor e outboard analogico", e_h2="Quindici anni dietro al mixer.",
-    e_p1="Sono Angelo, fonico italiano. Ho lavorato in alcuni dei più grandi studi di registrazione. Oggi mixo e masterizzo per artisti, produttori ed etichette in 66 paesi.",
+    e_p1="Sono Angelo, ingegnere del suono e fonico. Ho lavorato in alcuni dei più grandi studi di registrazione. Oggi mixo e masterizzo per artisti, produttori ed etichette in 66 paesi.",
     e_p2="Ogni genere ha la sua fisica. La techno vive nelle basse e nello spazio attorno, l’R&B nell’aria della voce e nel groove, il pop in una voce che non litiga mai con la base. Imposto ogni sessione sul disco che ho davanti, non su un preset.",
     spec=[("Esperienza", "Oltre 15 anni, a tempo pieno"), ("Recensioni", "4,9 su 5 da oltre 700 recensioni"), ("Brani", "Oltre 1.200 consegnati"), ("Certificazione", "Apple Digital Masters"), ("Lingue", "Italiano, inglese, tedesco, spagnolo")],
     sv_h2="Cosa faccio", sv_intro="Prezzi in dollari. Per album e progetti con più brani preparo un’offerta su misura.",

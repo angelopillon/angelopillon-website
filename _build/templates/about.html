@@ -1,0 +1,90 @@
+{# Chi sono / About. Same Apple language as the home: native scroll, nothing moves. #}
+<section class="ah-hero">
+  <div class="ah-wrap ah-center">
+    <p class="ah-eyebrow">{{ a.eyebrow }}</p>
+    <h1 class="ah-hero__title">{{ a.h1 }} <span>{{ a.h1b }}</span></h1>
+    <p class="ah-hero__lead">{{ a.lead }}</p>
+  </div>
+  <div class="ah-wrap ah-wrap--wide">
+    <figure class="ah-hero__photo">
+      <picture>
+        <source media="(max-width: 700px)" type="image/webp" srcset="/assets/img/about/ritratto-m-1000.webp">
+        <source type="image/webp" srcset="/assets/img/about/ritratto-900.webp 900w, /assets/img/about/ritratto-1600.webp 1600w" sizes="(max-width:1260px) 100vw, 1200px">
+        <img src="/assets/img/about/ritratto-1600.jpg" alt="{{ a.photo_alt }}" width="1600" height="964" fetchpriority="high" decoding="async">
+      </picture>
+    </figure>
+    <dl class="ah-proof">
+      {% for val, label in a.nums %}<div><dt>{{ label }}</dt><dd>{{ val }}</dd></div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+
+<section class="ah-sec" aria-labelledby="h-why">
+  <div class="ah-wrap ah-center ah-head">
+    <h2 class="ah-h2" id="h-why">{{ a.why_h2 }}</h2>
+  </div>
+  <div class="ah-wrap">
+    <p class="ah-statement__text">{{ a.why_statement }}</p>
+    <div class="ah-cols ah-cols--why">
+      {% for p in a.why_ps %}<p>{{ p }}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="ah-photo-band" aria-label="{{ a.guitar_alt }}">
+  <div class="ah-wrap ah-wrap--wide">
+    <figure class="ah-hero__photo">
+      <picture>
+        <source type="image/webp" srcset="/assets/img/about/chitarra-900.webp 900w, /assets/img/about/chitarra-1600.webp 1600w" sizes="(max-width:1260px) 100vw, 1200px">
+        <img src="/assets/img/about/chitarra-1600.jpg" alt="{{ a.guitar_alt }}" width="1600" height="1066" loading="lazy" decoding="async">
+      </picture>
+    </figure>
+  </div>
+</section>
+
+<section class="ah-sec" aria-labelledby="h-path">
+  <div class="ah-wrap ah-center ah-head">
+    <h2 class="ah-h2" id="h-path">{{ a.path_h2 }}</h2>
+  </div>
+  <div class="ah-wrap">
+    <ol class="ah-grid ah-grid--3 ah-steps ah-path">
+      {% for t, txt in a.steps %}<li class="ah-tile"><span class="ah-steps__n">{{ "%02d"|format(loop.index) }}</span><h3>{{ t }}</h3><p>{{ txt }}</p></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="ah-sec" aria-labelledby="h-how">
+  <div class="ah-wrap ah-center ah-head">
+    <h2 class="ah-h2" id="h-how">{{ a.how_h2 }}</h2>
+  </div>
+  <div class="ah-wrap">
+    <ul class="ah-grid ah-grid--3">
+      {% for t, txt in a.how %}<li class="ah-tile"><h3>{{ t }}</h3><p>{{ txt }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="ah-sec" aria-labelledby="h-spec">
+  <div class="ah-wrap ah-narrow">
+    <h2 class="ah-h2 ah-center" id="h-spec">{{ a.spec_h2 }}</h2>
+    <dl class="ah-spec ah-spec--page">
+      {% for k, val in a.spec %}<div><dt>{{ k }}</dt><dd>{{ val }}</dd></div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+
+<section class="ah-sec ah-contact" aria-labelledby="h-cta">
+  <div class="ah-wrap ah-center">
+    <h2 class="ah-h2" id="h-cta">{{ a.cta_h2 }}</h2>
+    <p class="ah-lead">{{ a.cta_p }}</p>
+    <div class="ah-actions">
+      <a class="ah-btn" href="{{ contact_href }}">{{ a.cta_btn }}</a>
+      <a class="ah-more" href="{{ services_href }}">{{ a.cta_more }}</a>
+    </div>
+  </div>
+</section>

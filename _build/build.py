@@ -28,6 +28,7 @@ import strings as S  # noqa: E402
 import tools as TL  # noqa: E402
 import services as SV  # noqa: E402
 import brand  # noqa: E402
+import about as AB  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 B = ROOT / "_build"
@@ -116,7 +117,7 @@ def crumbs_ld(items):
         {"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + h} for i, (n, h) in enumerate(items)]}
 
 
-PERSON = {"@type": "Person", "@id": SITE + "/#angelo", "name": "Angelo Pillon", "jobTitle": "Mix engineer and mastering engineer", "url": SITE + "/",
+PERSON = {"@type": "Person", "@id": SITE + "/#angelo", "name": "Angelo Pillon", "jobTitle": "Sound engineer, mix and mastering engineer", "url": SITE + "/",
           "sameAs": [CFG["fiverr"], "https://pro.fiverr.com/freelancers/angelopillon", CFG["soundbetter"]], "image": SITE + "/assets/img/angelo-240.jpg",
           "knowsAbout": ["Audio mixing", "Audio mastering", "Stem mastering", "Analog mastering", "Loudness (LUFS)", "Apple Digital Masters"],
           "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}}
@@ -476,7 +477,7 @@ HOME_V3 = {
         lb_facts=[("48 hours", "to master a single"), ("3-5 days", "to mix and master from the stems"), ("Custom", "quote and schedule for EPs, albums and catalogues"), ("4 languages", "English, Italian, German and Spanish")],
         lb_cta="Ask for a catalogue quote"),
     "it": dict(
-        home_city="Milano", kicker="Mix e mastering engineer · Milano", drag_hint="Trascina il globo per farlo girare.", countries_label="Paesi per cui ho lavorato",
+        home_city="Milano", kicker="Ingegnere del suono e fonico · Milano", drag_hint="Trascina il globo per farlo girare.", countries_label="Paesi per cui ho lavorato",
         h1="Pronto per l’uscita.", h1a="Il tuo brano,", h1b="mixato e masterizzato.", id_role="Certificato Apple Digital Masters",
         lead="Studio ibrido analogico a Milano. Mandami le tracce o il mix: ti torna un disco bilanciato, profondo e pronto per Spotify, club e radio.",
         cta1="Invia un brano", adm_label="Fonico certificato", manifesto_label="Come lavoro",
@@ -533,7 +534,7 @@ def home_pages(arts):
         s["sv_more"] = SV.UI[lang]["details"]
         main = env.get_template("home.html").render(s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
                                                      meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
-                                                     codes=S.CLIENT_CODES, reviews_live=reviews_live(), playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang))
+                                                     codes=S.CLIENT_CODES, reviews_live=reviews_live(), playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang), about=AB.ABOUT[lang])
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",
                "description": s["description"], "url": SITE + S.HOMES[lang], "image": SITE + "/assets/img/studio-1-1400.jpg", "logo": SITE + "/assets/img/icon-512.png",
                "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}, "areaServed": "Worldwide", "knowsLanguage": ["en", "it", "de", "es"],
@@ -543,9 +544,21 @@ def home_pages(arts):
         faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["faqs"]]}
         site = {"@context": "https://schema.org", "@type": "WebSite", "name": "Angelo Pillon", "url": SITE + "/", "inLanguage": lang}
         add_page(path=S.HOMES[lang], lang=lang, title=s["title"], description=s["description"], main=Markup(main), alt_key="home", jsonld=[org, faq, site],
-                 scripts=["/assets/js/cosmos.js"] + (["/assets/js/ab-home.js"] if ab else []), og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
+                 scripts=(["/assets/js/ab-home.js"] if ab else []), og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
                  og_args=dict(title=s["h1"], kicker={"en": "Mixing and mastering", "it": "Mix e mastering", "de": "Mixing und Mastering", "es": "Mezcla y mastering"}[lang], readout="−8.9 LUFS  −0.3 dBTP"),
                  body_class="is-home")
+
+
+def about_pages():
+    """Chi sono / About: the path from the conservatory to the studio in Milan."""
+    for lang in S.LANGS:
+        a = AB.ABOUT[lang]
+        main = env.get_template("about.html").render(a=a, lang=lang, contact_href=S.HOMES[lang] + "#contact", services_href=S.HOMES[lang] + "#services")
+        person = dict(PERSON, description=a["description"], image=SITE + "/assets/img/angelo-ritratto-800.jpg", knowsAbout=PERSON["knowsAbout"] + ["Piano", "Guitar", "Music production", "Sound engineering"])
+        page = {"@context": "https://schema.org", "@type": "AboutPage", "name": a["title"], "url": SITE + a["path"], "inLanguage": lang, "mainEntity": person}
+        jl = [page, crumbs_ld([(a["home"], S.HOMES[lang]), (a["crumb"], a["path"])])]
+        add_page(path=a["path"], lang=lang, title=a["title"] + " | Angelo Pillon" if "Angelo Pillon" not in a["title"] else a["title"], description=a["description"], main=Markup(main),
+                 alt_key="about", nav_current="about", jsonld=jl, og_image="/assets/og/about-ritratto.jpg", og_title=a["h1"] + " " + a["h1b"], body_class="is-about")
 
 
 # ---------------------------------------------------------------- service pages
@@ -753,22 +766,17 @@ def write_manifest_sw():
     tool_urls = sorted({p["path"] for p in PAGES if p["nav_current"] == "tools"})
     precache = ["/", "/it/", "/offline.html", "/assets/css/site.css", "/assets/js/site.js", "/assets/js/motion.js", "/assets/js/cosmos.js", "/assets/js/dsp.js", "/assets/js/tools/common.js",
                 "/assets/fonts/mona-sans-vf.woff2", "/assets/fonts/hubot-sans-vf.woff2"] + [f"/assets/js/tools/{t['js']}" for t in TL.TOOLS] + tool_urls
-    sw = f"""/* angelopillon.com service worker: tools work offline, pages are network first */
-const V = "ap-{V}";
-const PRECACHE = {json.dumps(precache)};
-self.addEventListener("install", e => {{ e.waitUntil(caches.open(V).then(c => Promise.all(PRECACHE.map(u => c.add(new Request(u, {{ cache: "reload" }})).catch(() => null)))).then(() => self.skipWaiting())); }});
-self.addEventListener("activate", e => {{ e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); }});
-self.addEventListener("fetch", e => {{
-  const r = e.request; if (r.method !== "GET") return;
-  const u = new URL(r.url); if (u.origin !== location.origin) return;
-  if (r.mode === "navigate") {{
-    e.respondWith(fetch(r).then(res => {{ const c = res.clone(); caches.open(V).then(x => x.put(r, c)); return res; }}).catch(() => caches.match(r).then(m => m || caches.match("/offline.html"))));
-    return;
-  }}
-  if (u.pathname.startsWith("/assets/")) {{
-    e.respondWith(caches.match(r, {{ ignoreSearch: true }}).then(m => m || fetch(r).then(res => {{ const c = res.clone(); caches.open(V).then(x => x.put(r, c)); return res; }})));
-  }}
-}});
+    sw = """/* angelopillon.com: the service worker is retired (November 2026).
+   It served cached CSS and JS after a redesign, so pages could mix old and new files.
+   This version deletes every cache, unregisters itself and reloads open tabs once. */
+self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("activate", e => e.waitUntil((async () => {
+  const ks = await caches.keys();
+  await Promise.all(ks.map(k => caches.delete(k)));
+  await self.registration.unregister();
+  const cs = await self.clients.matchAll({ type: "window" });
+  cs.forEach(c => { try { c.navigate(c.url); } catch (err) {} });
+})()));
 """
     if PREVIEW:
         return
@@ -944,6 +952,7 @@ def main():
     arts = load_articles()
     home_pages(arts)
     service_pages(arts)
+    about_pages()
     article_pages(arts)
     tool_pages()
     legal_pages()
@@ -951,6 +960,9 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     images()
     brand.icons(ROOT)
+    if not (ROOT / "assets/img/world-clients.webp").exists():
+        import worldmap
+        worldmap.render()
     if not SKIP_OG:
         og_images()
     copy_assets()
