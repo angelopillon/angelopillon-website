@@ -1474,6 +1474,8 @@ body{ font-family:var(--f-text); background:#000; color:var(--ink); letter-spaci
 .btn:active, .ah-btn:active{ background:#C7A560; }
 .btn--ghost{ background:transparent; color:#D9BC74; box-shadow:inset 0 0 0 1px rgba(217,188,116,.6); text-shadow:none; border:0; }
 .btn--ghost:hover{ background:transparent; box-shadow:inset 0 0 0 1px #D9BC74; }
+.prose a.btn--ghost, .prose .callout a.btn--ghost{ color:#D9BC74; background:transparent; }
+.lang-seg small{ opacity:.8; color:inherit; }
 .ah-btn{ min-height:48px; padding:0 28px; }
 .ab__play{ box-shadow:none!important; transition:background-color .2s ease; }
 .ab__play:hover{ transform:none; background:#E8E8ED; }
@@ -1521,7 +1523,7 @@ a.ah-adm:hover .ah-adm__more{ text-decoration:underline; }
 .ah-platforms__strip{ position:relative; max-width:1160px; margin:clamp(52px, 5.4vw, 76px) auto 0; padding:30px 0 32px; }
 .ah-platforms__strip::before, .ah-platforms__strip::after{ content:""; position:absolute; left:0; right:0; height:1px; background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.14) 18%, rgba(255,255,255,.14) 82%, rgba(255,255,255,0)); }
 .ah-platforms__strip::before{ top:0; } .ah-platforms__strip::after{ bottom:0; }
-.ah-platforms__label{ margin:0 0 18px; font-size:.6875rem; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:#6E6E73; }
+.ah-platforms__label{ margin:0 0 18px; font-size:.6875rem; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:#8E8E93; }
 .ah-platforms__list{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px 0; margin:0; padding:0; list-style:none; }
 .ah-platforms__list li{ display:flex; align-items:center; font-size:.8125rem; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:#B4B4B9; white-space:nowrap; }
 .ah-platforms__list li + li::before{ content:""; flex:none; width:3px; height:3px; margin:0 20px 0 calc(20px - .2em); border-radius:50%; background:#D4B26A; opacity:.75; }
@@ -1567,5 +1569,6 @@ a.ah-adm:hover .ah-adm__more{ text-decoration:underline; }
   .ah-eyebrow::before, .ah-eyebrow::after{ display:none; }
   .ah-adm__badge{ width:250px; }
   .ah-platforms__list{ grid-template-columns:repeat(2, auto); gap:14px 34px; }
+  .ah-platforms__label{ font-size:.65625rem; letter-spacing:.14em; }
   .ah-platforms__list li{ font-size:.75rem; }
 }
