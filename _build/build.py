@@ -117,7 +117,7 @@ def crumbs_ld(items):
         {"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + h} for i, (n, h) in enumerate(items)]}
 
 
-PERSON = {"@type": "Person", "@id": SITE + "/#angelo", "name": "Angelo Pillon", "jobTitle": "Mix engineer and mastering engineer", "url": SITE + "/",
+PERSON = {"@type": "Person", "@id": SITE + "/#angelo", "name": "Angelo Pillon", "jobTitle": "Sound engineer, mix and mastering engineer", "url": SITE + "/",
           "sameAs": [CFG["fiverr"], "https://pro.fiverr.com/freelancers/angelopillon", CFG["soundbetter"]], "image": SITE + "/assets/img/angelo-240.jpg",
           "knowsAbout": ["Audio mixing", "Audio mastering", "Stem mastering", "Analog mastering", "Loudness (LUFS)", "Apple Digital Masters"],
           "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}}
@@ -477,7 +477,7 @@ HOME_V3 = {
         lb_facts=[("48 hours", "to master a single"), ("3-5 days", "to mix and master from the stems"), ("Custom", "quote and schedule for EPs, albums and catalogues"), ("4 languages", "English, Italian, German and Spanish")],
         lb_cta="Ask for a catalogue quote"),
     "it": dict(
-        home_city="Milano", kicker="Fonico di mix e mastering · Milano", drag_hint="Trascina il globo per farlo girare.", countries_label="Paesi per cui ho lavorato",
+        home_city="Milano", kicker="Ingegnere del suono e fonico · Milano", drag_hint="Trascina il globo per farlo girare.", countries_label="Paesi per cui ho lavorato",
         h1="Pronto per l’uscita.", h1a="Il tuo brano,", h1b="mixato e masterizzato.", id_role="Certificato Apple Digital Masters",
         lead="Studio ibrido analogico a Milano. Mandami le tracce o il mix: ti torna un disco bilanciato, profondo e pronto per Spotify, club e radio.",
         cta1="Invia un brano", adm_label="Fonico certificato", manifesto_label="Come lavoro",
@@ -554,12 +554,11 @@ def about_pages():
     for lang in S.LANGS:
         a = AB.ABOUT[lang]
         main = env.get_template("about.html").render(a=a, lang=lang, contact_href=S.HOMES[lang] + "#contact", services_href=S.HOMES[lang] + "#services")
-        person = dict(PERSON, description=a["description"], knowsAbout=PERSON["knowsAbout"] + ["Piano", "Guitar", "Music production", "Sound engineering"])
+        person = dict(PERSON, description=a["description"], image=SITE + "/assets/img/angelo-ritratto-800.jpg", knowsAbout=PERSON["knowsAbout"] + ["Piano", "Guitar", "Music production", "Sound engineering"])
         page = {"@context": "https://schema.org", "@type": "AboutPage", "name": a["title"], "url": SITE + a["path"], "inLanguage": lang, "mainEntity": person}
         jl = [page, crumbs_ld([(a["home"], S.HOMES[lang]), (a["crumb"], a["path"])])]
         add_page(path=a["path"], lang=lang, title=a["title"] + " | Angelo Pillon" if "Angelo Pillon" not in a["title"] else a["title"], description=a["description"], main=Markup(main),
-                 alt_key="about", nav_current="about", jsonld=jl, og_image=f"/assets/og/{lang}-about.png", og_title=a["h1"] + " " + a["h1b"],
-                 og_args=dict(title=a["h1"] + " " + a["h1b"], kicker=a["eyebrow"], readout="angelopillon.com"), body_class="is-about")
+                 alt_key="about", nav_current="about", jsonld=jl, og_image="/assets/og/about-ritratto.jpg", og_title=a["h1"] + " " + a["h1b"], body_class="is-about")
 
 
 # ---------------------------------------------------------------- service pages

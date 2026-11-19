@@ -8,8 +8,9 @@
   <div class="ah-wrap ah-wrap--wide">
     <figure class="ah-hero__photo">
       <picture>
-        <source type="image/webp" srcset="/assets/img/studio-2-900.webp 900w, /assets/img/studio-2-1400.webp 1400w" sizes="(max-width:1260px) 100vw, 1200px">
-        <img src="/assets/img/studio-2-1400.jpg" alt="{{ a.photo_alt }}" width="1400" height="840" fetchpriority="high" decoding="async">
+        <source media="(max-width: 700px)" type="image/webp" srcset="/assets/img/about/ritratto-m-1000.webp">
+        <source type="image/webp" srcset="/assets/img/about/ritratto-900.webp 900w, /assets/img/about/ritratto-1600.webp 1600w" sizes="(max-width:1260px) 100vw, 1200px">
+        <img src="/assets/img/about/ritratto-1600.jpg" alt="{{ a.photo_alt }}" width="1600" height="964" fetchpriority="high" decoding="async">
       </picture>
     </figure>
     <dl class="ah-proof">
@@ -32,6 +33,17 @@
   </div>
 </section>
 
+<section class="ah-photo-band" aria-label="{{ a.guitar_alt }}">
+  <div class="ah-wrap ah-wrap--wide">
+    <figure class="ah-hero__photo">
+      <picture>
+        <source type="image/webp" srcset="/assets/img/about/chitarra-900.webp 900w, /assets/img/about/chitarra-1600.webp 1600w" sizes="(max-width:1260px) 100vw, 1200px">
+        <img src="/assets/img/about/chitarra-1600.jpg" alt="{{ a.guitar_alt }}" width="1600" height="1066" loading="lazy" decoding="async">
+      </picture>
+    </figure>
+  </div>
+</section>
+
 <section class="ah-sec" aria-labelledby="h-path">
   <div class="ah-wrap ah-center ah-head">
     <h2 class="ah-h2" id="h-path">{{ a.path_h2 }}</h2>
@@ -41,11 +53,6 @@
       {% for t, txt in a.steps %}<li class="ah-tile"><span class="ah-steps__n">{{ "%02d"|format(loop.index) }}</span><h3>{{ t }}</h3><p>{{ txt }}</p></li>
       {% endfor %}
     </ol>
-  </div>
-  <div class="ah-wrap ah-wrap--wide">
-    <figure class="ah-hero__photo ah-path__photo">
-      <img src="/assets/img/photo/engineer-desk.webp" alt="" width="1166" height="614" loading="lazy" decoding="async">
-    </figure>
   </div>
 </section>
 

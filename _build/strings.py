@@ -62,7 +62,7 @@ UI = {
         toc="In questa pagina", about_author="L’autore", keep_reading="Continua a leggere", more_articles="Altri articoli",
         newer="Più recente", older="Precedente", work_with="Lavora con Angelo", try_meter="Prova il misuratore LUFS gratuito",
         author_bio="Fonico di mix e mastering a Milano. Oltre 15 anni in studio, una catena ibrida analogica e digitale, certificazione Apple Digital Masters e una media di 4,9/5 su più di 700 recensioni.",
-        ft_tag="Fonico di mix e mastering. Studio ibrido analogico e digitale a Milano, certificato Apple Digital Masters.",
+        ft_tag="Ingegnere del suono e fonico di mix e mastering. Studio ibrido analogico e digitale a Milano, certificato Apple Digital Masters.",
         city="Milano", legal_label="Note legali", privacy="Privacy policy", cookie_settings="Impostazioni cookie", cookies_label="Cookie",
         consent_text="Uso cookie per statistiche anonime sul traffico, e solo se accetti. Il sito e gli strumenti funzionano comunque. Dettagli nella",
         accept="Accetta", decline="Rifiuta", open="Apri", other_tools="Altri strumenti gratuiti",
@@ -218,8 +218,8 @@ HOME["en"] = dict(
     f_err="Not sent. Try again, or write to <a href=\"mailto:angelopillon@gmail.com\">angelopillon@gmail.com</a>.",
 )
 HOME["it"] = dict(
-    title="Fonico di mix e mastering a Milano, mix engineer | Angelo Pillon",
-    description="Fonico di mix e mastering a Milano, anche online: mix engineer e mastering engineer con studio ibrido analogico, certificato Apple Digital Masters, 4,9/5 su oltre 700 recensioni, clienti in 66 paesi.",
+    title="Ingegnere del suono e fonico di mix e mastering a Milano | Angelo Pillon",
+    description="Ingegnere del suono e fonico di mix e mastering a Milano, anche online: mix engineer e mastering engineer con studio ibrido analogico, certificato Apple Digital Masters, 4,9/5 su oltre 700 recensioni, clienti in 66 paesi.",
     h1="Mix e mastering da uno studio ibrido a Milano.",
     lead="Mandami le tracce o il mix. Ti torna indietro un disco bilanciato, forte quanto deve esserlo, e sicuro su ogni piattaforma su cui uscirà.",
     cta1="Inizia un progetto", cta2="Misura il tuo brano",
@@ -227,7 +227,7 @@ HOME["it"] = dict(
     r_i="Integrato", r_st="Short-term max", r_tp="True peak", r_lra="Range", r_corr="Correlazione",
     b_drop="Trascina qui un WAV, AIFF, FLAC o MP3. L’analisi avviene sul tuo computer: non viene caricato nulla.", b_choose="Scegli un file",
     e_alt="Angelo Pillon al mixer nel suo studio di Milano", e_alt2="Angelo Pillon nel suo studio di Milano, tra laptop, monitor e outboard analogico", e_h2="Quindici anni dietro al mixer.",
-    e_p1="Sono Angelo, fonico italiano. Ho lavorato in alcuni dei più grandi studi di registrazione. Oggi mixo e masterizzo per artisti, produttori ed etichette in 66 paesi.",
+    e_p1="Sono Angelo, ingegnere del suono e fonico. Ho lavorato in alcuni dei più grandi studi di registrazione. Oggi mixo e masterizzo per artisti, produttori ed etichette in 66 paesi.",
     e_p2="Ogni genere ha la sua fisica. La techno vive nelle basse e nello spazio attorno, l’R&B nell’aria della voce e nel groove, il pop in una voce che non litiga mai con la base. Imposto ogni sessione sul disco che ho davanti, non su un preset.",
     spec=[("Esperienza", "Oltre 15 anni, a tempo pieno"), ("Recensioni", "4,9 su 5 da oltre 700 recensioni"), ("Brani", "Oltre 1.200 consegnati"), ("Certificazione", "Apple Digital Masters"), ("Lingue", "Italiano, inglese, tedesco, spagnolo")],
     sv_h2="Cosa faccio", sv_intro="Prezzi in dollari. Per album e progetti con più brani preparo un’offerta su misura.",
