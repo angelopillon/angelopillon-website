@@ -1,5 +1,6 @@
-{# Home, November 2026: Apple-style. Native scroll, nothing pinned or scrubbed, no WebGL.
-   One accent (system blue) for actions and links; everything else black, white and greys. #}
+{% import "_units.html" as u %}{# Home, November 2026: Apple-style. Native scroll, nothing pinned or scrubbed.
+   Champagne gold for actions and links. What moves does so inside its own box and only on screen:
+   the VU needles and tape reels of the analog units, and the client globe (three.js, loaded lazily). #}
 <section class="ah-hero" id="top">
   <div class="ah-wrap ah-center">
     <p class="ah-eyebrow">{{ v.kicker }}</p>
@@ -21,6 +22,20 @@
       {% for val, label in proof %}<div><dt>{{ label }}</dt><dd>{{ val }}</dd></div>
       {% endfor %}
     </dl>
+  </div>
+</section>
+
+<section class="ah-platforms" aria-label="{{ v.pf_label }}">
+  <div class="ah-wrap ah-wrap--wide ah-center">
+    {% if adm_href %}<a class="ah-adm" href="{{ adm_href }}">{% else %}<div class="ah-adm">{% endif %}
+      <span class="ah-adm__label">{{ v.adm_label }}</span>
+      <img class="ah-adm__badge" src="/assets/img/badges/apple-digital-master.webp" width="300" height="94" alt="Apple Digital Master" loading="lazy" decoding="async">
+      {% if adm_href %}<span class="ah-adm__more">{{ v.adm_more }}</span>{% endif %}
+    {% if adm_href %}</a>{% else %}</div>{% endif %}
+    <div class="ah-platforms__strip">
+      <p class="ah-platforms__label">{{ v.pf_label }}</p>
+      <ul class="ah-platforms__list">{% for p in platforms %}<li>{{ p }}</li>{% endfor %}</ul>
+    </div>
   </div>
 </section>
 
@@ -111,16 +126,23 @@
   </div>
 </section>
 
-<section class="ah-sec" id="chain" aria-labelledby="h-chain">
+<section class="ah-sec ah-chain" id="chain" aria-labelledby="h-chain" data-live>
+  {{ u.defs() }}
   <div class="ah-wrap ah-center ah-head">
     <h2 class="ah-h2" id="h-chain">{{ s.ch_h2 }}.</h2>
     <p class="ah-lead">{{ s.ch_intro }}</p>
   </div>
-  <div class="ah-wrap">
-    <ul class="ah-grid ah-grid--3 ah-units">
-      {% for name, role, kind in s.units %}<li class="ah-tile"><h3>{{ name }}</h3><p>{{ role }}</p></li>
+  <div class="ah-wrap ah-wrap--wide">
+    <ul class="ah-units" tabindex="0" aria-label="{{ s.ch_h2 }}">
+      {% for name, role, kind in s.units %}<li class="unit" data-kind="{{ kind }}">
+        <div class="unit__face" aria-hidden="true">{{ u.face(name, kind, loop.index0) }}</div>
+        <h3>{{ name }}</h3>
+        <p>{{ role }}</p>
+      </li>
       {% endfor %}
     </ul>
+  </div>
+  <div class="ah-wrap">
     <div class="ah-cols">
       <p>{{ s.ch_p1 }}</p>
       <p>{{ s.ch_p2 }}</p>
@@ -142,21 +164,18 @@
   </div>
 </section>
 
-<section class="ah-sec" id="worldwide" aria-labelledby="h-world">
+<section class="ah-sec ah-world" id="worldwide" aria-labelledby="h-world">
   <div class="ah-wrap ah-center ah-head">
     <p class="ah-big">66</p>
     <h2 class="ah-h2" id="h-world">{{ c.gl_h2 }}</h2>
     <p class="ah-lead">{{ c.gl_p }}</p>
   </div>
-  <div class="ah-wrap ah-wrap--wide">
-    <figure class="ah-map">
-      <picture>
-        <source type="image/webp" srcset="/assets/img/world-clients.webp">
-        <img src="/assets/img/world-clients.jpg" alt="" width="2000" height="766" loading="lazy" decoding="async">
-      </picture>
-    </figure>
-  </div>
   <div class="ah-wrap">
+    <div class="ah-globe" data-globe="/assets/js/globe.js?v={{ asset_v }}">
+      <img class="ah-globe__poster" src="/assets/img/globe-poster.webp" alt="" width="840" height="840" loading="lazy" decoding="async">
+      <canvas class="ah-globe__canvas" aria-hidden="true"></canvas>
+    </div>
+    <p class="ah-globe__hint">{{ v.drag_hint }}</p>
     <p class="ah-countries" aria-label="{{ v.countries_label }}">{% for row in country_rows %}{% for name in row %}<span>{{ name }}</span>{% endfor %}{% endfor %}</p>
   </div>
 </section>
