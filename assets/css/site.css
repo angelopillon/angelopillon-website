@@ -1457,7 +1457,7 @@ body{ font-family:var(--f-text); background:#000; color:var(--ink); letter-spaci
 /* =====================================================================
    Premium finish, November 2026.
    Jewellery gold with light and depth, metallic titles, light numerals like a watch dial,
-   a studio seal next to the certification, materials on cards and on the analog units,
+   the official Apple Digital Masters badge, materials on cards and on the analog units,
    and a fine grain on the warm lights so they never band.
    ===================================================================== */
 :root{
@@ -1492,7 +1492,9 @@ body{ font-family:var(--f-text); background:#000; color:var(--ink); letter-spaci
 .ah-hero__photo::after, .ah-about__photo::after{ content:""; position:absolute; inset:0; border-radius:inherit; box-shadow:inset 0 0 0 1px rgba(255,255,255,.08), inset 0 1px 0 rgba(255,255,255,.12); pointer-events:none; }
 
 /* grain on the warm lights, so the gradients never band */
-.ah-hero::after, .ah-chain::after{ content:""; position:absolute; inset:0; z-index:-1; background-image:var(--grain); background-size:180px 180px; opacity:.045; pointer-events:none; }
+.ah-hero::after, .ah-chain::after{ content:""; position:absolute; inset:0; z-index:-1; background-image:var(--grain); background-size:180px 180px; opacity:.04; pointer-events:none; }
+.ah-hero::after{ -webkit-mask-image:radial-gradient(min(700px, 80vw) min(450px, 60vw) at 50% 30%, #000 0%, rgba(0,0,0,.5) 55%, transparent 100%); mask-image:radial-gradient(min(700px, 80vw) min(450px, 60vw) at 50% 30%, #000 0%, rgba(0,0,0,.5) 55%, transparent 100%); }
+.ah-chain::after{ -webkit-mask-image:radial-gradient(50% 34% at 14% 30%, #000, transparent 72%), radial-gradient(42% 30% at 90% 78%, #000, transparent 72%); mask-image:radial-gradient(50% 34% at 14% 30%, #000, transparent 72%), radial-gradient(42% 30% at 90% 78%, #000, transparent 72%); }
 
 /* materials: cards with a lit edge */
 .ah-tile, .ah-facts div, .ab, .ah-units .unit{ background:var(--tile-fill); box-shadow:var(--tile-edge); border:0; }
@@ -1500,16 +1502,15 @@ body{ font-family:var(--f-text); background:#000; color:var(--ink); letter-spaci
 .ah-svc__foot b{ font-weight:400; letter-spacing:-.03em; }
 .ah-facts dd{ font-weight:400; letter-spacing:-.03em; }
 
-/* the certification: the studio seal and the programme name */
+/* the certification: the official Apple Digital Masters badge, as Apple supplies it */
 .ah-platforms{ padding:0 0 clamp(16px, 2vw, 28px); }
-.ah-adm{ display:inline-flex; align-items:center; gap:22px; color:var(--ink); text-decoration:none; text-align:left; }
-.ah-adm__seal{ width:92px; height:92px; flex:none; display:block; filter:drop-shadow(0 10px 22px rgba(212,178,106,.15)) drop-shadow(0 2px 4px rgba(0,0,0,.6)); transition:transform .8s cubic-bezier(.2,.8,.2,1); }
-a.ah-adm:hover .ah-adm__seal{ transform:rotate(-12deg); }
-a.ah-adm:focus-visible{ outline:2px solid var(--link); outline-offset:6px; border-radius:12px; }
-.ah-adm__text{ display:flex; flex-direction:column; gap:5px; }
-.ah-adm__text small{ font-size:.6875rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#D9BC74; }
-.ah-adm__text b{ font-size:clamp(1.375rem, 2.2vw, 1.75rem); font-weight:600; line-height:1.12; letter-spacing:-.022em; background:linear-gradient(180deg, #FFFFFF, #D6D6DB); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; }
-.ah-adm__more{ margin-top:2px; font-size:.9375rem; color:var(--link); }
+.ah-adm{ display:inline-flex; flex-direction:column; align-items:center; gap:16px; text-decoration:none; }
+.ah-adm__label{ font-size:.6875rem; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:#D9BC74; }
+.ah-adm__badge{ display:block; width:300px; max-width:78vw; height:auto; aspect-ratio:1594 / 500; border-radius:4.705% / 15%; box-shadow:0 0 0 1px rgba(255,255,255,.24), 0 26px 50px -26px rgba(212,178,106,.38); transition:box-shadow .3s ease; }
+a.ah-adm:hover .ah-adm__badge{ box-shadow:0 0 0 1px rgba(255,255,255,.42), 0 26px 50px -22px rgba(212,178,106,.5); }
+a.ah-adm:focus-visible{ outline:none; }
+a.ah-adm:focus-visible .ah-adm__badge{ box-shadow:0 0 0 2px var(--link); }
+.ah-adm__more{ font-size:.875rem; color:var(--link); }
 .ah-adm__more::after{ content:"\00a0\203A"; }
 a.ah-adm:hover .ah-adm__more{ text-decoration:underline; }
 
@@ -1561,8 +1562,7 @@ a.ah-adm:hover .ah-adm__more{ text-decoration:underline; }
 @media (max-width: 700px){
   .ah-eyebrow{ display:block; font-size:.65625rem; letter-spacing:.14em; text-wrap:balance; }
   .ah-eyebrow::before, .ah-eyebrow::after{ display:none; }
-  .ah-adm{ gap:16px; }
-  .ah-adm__seal{ width:76px; height:76px; }
+  .ah-adm__badge{ width:250px; }
   .ah-platforms__list{ grid-template-columns:repeat(2, auto); gap:14px 34px; }
   .ah-platforms__list li{ font-size:.75rem; }
 }

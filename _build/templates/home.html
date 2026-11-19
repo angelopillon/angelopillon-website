@@ -28,8 +28,9 @@
 <section class="ah-platforms" aria-label="{{ v.pf_label }}">
   <div class="ah-wrap ah-wrap--wide ah-center">
     {% if adm_href %}<a class="ah-adm" href="{{ adm_href }}">{% else %}<div class="ah-adm">{% endif %}
-      {{ seal }}
-      <span class="ah-adm__text"><small>{{ v.adm_label }}</small><b>Apple Digital Masters</b>{% if adm_href %}<span class="ah-adm__more">{{ v.adm_more }}</span>{% endif %}</span>
+      <span class="ah-adm__label">{{ v.adm_label }}</span>
+      <img class="ah-adm__badge" src="/assets/img/badges/apple-digital-master.webp" width="300" height="94" alt="Apple Digital Master" loading="lazy" decoding="async">
+      {% if adm_href %}<span class="ah-adm__more">{{ v.adm_more }}</span>{% endif %}
     {% if adm_href %}</a>{% else %}</div>{% endif %}
     <div class="ah-platforms__strip">
       <p class="ah-platforms__label">{{ v.pf_label }}</p>
