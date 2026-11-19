@@ -1,5 +1,6 @@
-{# Home, November 2026: Apple-style. Native scroll, nothing pinned or scrubbed, no WebGL.
-   One accent (system blue) for actions and links; everything else black, white and greys. #}
+{# Home, November 2026: Apple-style. Native scroll, nothing pinned or scrubbed.
+   Champagne gold for actions and links. What moves does so inside its own box and only on screen:
+   the VU needles and tape reels of the analog units, and the client globe (three.js, loaded lazily). #}
 <section class="ah-hero" id="top">
   <div class="ah-wrap ah-center">
     <p class="ah-eyebrow">{{ v.kicker }}</p>
@@ -21,6 +22,19 @@
       {% for val, label in proof %}<div><dt>{{ label }}</dt><dd>{{ val }}</dd></div>
       {% endfor %}
     </dl>
+  </div>
+</section>
+
+<section class="ah-platforms" aria-label="{{ v.pf_label }}">
+  <div class="ah-wrap ah-wrap--wide ah-center">
+    {% set seal %}<svg class="ah-adm__seal" viewBox="0 0 44 44" aria-hidden="true"><defs><linearGradient id="admg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDD39A"/><stop offset="1" stop-color="#C9A55B"/></linearGradient></defs><circle cx="22" cy="22" r="21" fill="url(#admg)"/><circle cx="22" cy="22" r="17.5" fill="none" stroke="#0B0B0C" stroke-opacity=".22"/><path d="M14.5 22.6l5 5 10-11" fill="none" stroke="#0B0B0C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="ah-adm__text"><small>{{ v.adm_label }}</small><b>Apple Digital Masters</b></span>{% endset %}
+    {% if adm_href %}<a class="ah-adm" href="{{ adm_href }}">{{ seal }}<span class="ah-adm__more">{{ v.adm_more }}</span></a>
+    {% else %}<div class="ah-adm">{{ seal }}</div>{% endif %}
+    <p class="ah-platforms__label">{{ v.pf_label }}</p>
+    <ul class="ah-platforms__list">
+      {% for p in platforms %}<li>{{ p }}</li>{% endfor %}
+    </ul>
   </div>
 </section>
 
@@ -111,16 +125,53 @@
   </div>
 </section>
 
-<section class="ah-sec" id="chain" aria-labelledby="h-chain">
+<section class="ah-sec ah-chain" id="chain" aria-labelledby="h-chain" data-live>
   <div class="ah-wrap ah-center ah-head">
     <h2 class="ah-h2" id="h-chain">{{ s.ch_h2 }}.</h2>
     <p class="ah-lead">{{ s.ch_intro }}</p>
   </div>
-  <div class="ah-wrap">
-    <ul class="ah-grid ah-grid--3 ah-units">
-      {% for name, role, kind in s.units %}<li class="ah-tile"><h3>{{ name }}</h3><p>{{ role }}</p></li>
+  <div class="ah-wrap ah-wrap--wide">
+    <ul class="ah-units" tabindex="0" aria-label="{{ s.ch_h2 }}">
+      {% for name, role, kind in s.units %}{% set ui = loop.index0 %}<li class="unit" data-kind="{{ kind }}">
+        <div class="unit__face" aria-hidden="true">
+          <svg viewBox="0 0 420 150" role="presentation">
+            <rect x="1" y="1" width="418" height="148" rx="10" class="u-plate"/>
+            <circle cx="16" cy="16" r="4" class="u-screw"/><circle cx="404" cy="16" r="4" class="u-screw"/><circle cx="16" cy="134" r="4" class="u-screw"/><circle cx="404" cy="134" r="4" class="u-screw"/>
+            {% if kind == "tape" %}
+            <text x="210" y="31" text-anchor="middle" class="u-label">Tape · 1/4 in</text>
+            {% for rx, rr in [(100, 46), (320, 34)] %}<g transform="translate({{ rx }} 80)"><g class="reel reel--{{ loop.index }}">
+              <circle r="{{ rr }}" class="u-pack"/>
+              <circle r="56" class="u-flange"/>
+              {% for a in (0, 120, 240) %}<rect x="-6" y="-55" width="12" height="44" rx="3" class="u-spoke" transform="rotate({{ a }})"/>{% endfor %}
+              <circle r="13" class="u-hub"/><circle r="4" class="u-hub-c"/>
+            </g></g>{% endfor %}
+            <path d="M100 126 L152 134 L268 134 L320 114" class="u-tape"/>
+            <rect x="184" y="126" width="52" height="16" rx="4" class="u-head"/>
+            <circle cx="152" cy="134" r="5" class="u-roller"/><circle cx="268" cy="134" r="5" class="u-roller"/>
+            <circle cx="392" cy="30" r="5" class="u-led u-led--rec"/>
+            {% else %}
+            <text x="36" y="31" class="u-label">{{ name }}</text>
+            {% set vu = None %}{% set kn = [] %}{% set btns = [] %}{% set minis = [] %}
+            {% if kind == "fet" %}{% set vu = (146, 38, 128, 70) %}{% set kn = [(70, 90, 27), (350, 90, 27)] %}{% set btns = [150, 182, 214, 246] %}{% set minis = [(70, 140, "Input"), (350, 140, "Output")] %}
+            {% elif kind == "opto" %}{% set vu = (140, 36, 140, 78) %}{% set kn = [(76, 88, 31), (344, 88, 31)] %}{% set minis = [(76, 140, "Gain"), (344, 140, "Peak reduction")] %}
+            {% elif kind == "vca" %}{% set vu = (36, 46, 128, 82) %}{% set kn = [(216, 94, 23), (276, 94, 23), (336, 94, 23)] %}
+            {% elif kind == "fusion" %}{% set kn = [(60, 98, 22), (135, 98, 22), (210, 98, 22), (285, 98, 22), (360, 98, 22)] %}{% set btns = [51, 126, 201, 276, 351] %}
+            {% else %}{% set kn = [(60, 94, 23), (135, 94, 23), (210, 94, 23), (285, 94, 23), (360, 94, 23)] %}{% endif %}
+            {% if vu %}{% set vx, vy, vw, vh = vu %}<g transform="translate({{ vx }} {{ vy }})"><rect width="{{ vw }}" height="{{ vh }}" rx="6" class="u-vu"/><path d="M{{ (vw / 2 - 50)|round(1) }} {{ vh - 14 }} A50 50 0 0 1 {{ (vw / 2 + 50)|round(1) }} {{ vh - 14 }}" class="u-arc"/><path d="M{{ (vw / 2 + 28)|round(1) }} {{ vh - 55 }} A50 50 0 0 1 {{ (vw / 2 + 50)|round(1) }} {{ vh - 14 }}" class="u-arc u-arc--red"/><line x1="{{ vw / 2 }}" y1="{{ vh - 8 }}" x2="{{ vw / 2 }}" y2="{{ vh - 60 }}" class="u-needle"/><circle cx="{{ vw / 2 }}" cy="{{ vh - 8 }}" r="4" class="u-pivot"/></g>{% endif %}
+            {% for bx in btns %}<rect x="{{ bx }}" y="{{ 116 if kind == 'fet' else 48 }}" width="{{ 24 if kind == 'fet' else 18 }}" height="{{ 13 if kind == 'fet' else 10 }}" rx="3" class="u-btn{% if loop.index == 2 %} is-on{% endif %}"/>{% endfor %}
+            {% for x, y, r in kn %}<g transform="translate({{ x }} {{ y }})"><circle r="{{ r }}" class="u-knob-ring"/><g transform="rotate({{ ((ui * 53 + loop.index0 * 71) % 220) - 110 }})"><circle r="{{ (r * 0.74)|round(1) }}" class="u-knob"/><line x1="0" y1="{{ -(r * 0.18)|round(1) }}" x2="0" y2="{{ -(r * 0.66)|round(1) }}" class="u-tick"/></g></g>{% endfor %}
+            {% for x, y, t in minis %}<text x="{{ x }}" y="{{ y }}" text-anchor="middle" class="u-mini">{{ t }}</text>{% endfor %}
+            <circle cx="392" cy="30" r="5" class="u-led"/>
+            {% endif %}
+          </svg>
+        </div>
+        <h3>{{ name }}</h3>
+        <p>{{ role }}</p>
+      </li>
       {% endfor %}
     </ul>
+  </div>
+  <div class="ah-wrap">
     <div class="ah-cols">
       <p>{{ s.ch_p1 }}</p>
       <p>{{ s.ch_p2 }}</p>
@@ -142,21 +193,18 @@
   </div>
 </section>
 
-<section class="ah-sec" id="worldwide" aria-labelledby="h-world">
+<section class="ah-sec ah-world" id="worldwide" aria-labelledby="h-world">
   <div class="ah-wrap ah-center ah-head">
     <p class="ah-big">66</p>
     <h2 class="ah-h2" id="h-world">{{ c.gl_h2 }}</h2>
     <p class="ah-lead">{{ c.gl_p }}</p>
   </div>
-  <div class="ah-wrap ah-wrap--wide">
-    <figure class="ah-map">
-      <picture>
-        <source type="image/webp" srcset="/assets/img/world-clients.webp">
-        <img src="/assets/img/world-clients.jpg" alt="" width="2000" height="766" loading="lazy" decoding="async">
-      </picture>
-    </figure>
-  </div>
   <div class="ah-wrap">
+    <div class="ah-globe" data-globe="/assets/js/globe.js?v={{ asset_v }}">
+      <img class="ah-globe__poster" src="/assets/img/globe-poster.webp" alt="" width="840" height="840" loading="lazy" decoding="async">
+      <canvas class="ah-globe__canvas" aria-hidden="true"></canvas>
+    </div>
+    <p class="ah-globe__hint">{{ v.drag_hint }}</p>
     <p class="ah-countries" aria-label="{{ v.countries_label }}">{% for row in country_rows %}{% for name in row %}<span>{{ name }}</span>{% endfor %}{% endfor %}</p>
   </div>
 </section>

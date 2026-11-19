@@ -471,7 +471,7 @@ HOME_V3 = {
         home_city="Milan", kicker="Mix and mastering engineer · Milan", drag_hint="Drag the globe to spin it.", countries_label="Countries I have worked for",
         h1="Release-ready.", h1a="Your track,", h1b="mixed and mastered.", id_role="Apple Digital Masters certified",
         lead="Hybrid analog studio in Milan. Send your stems or your mix and get back a record that is balanced, deep and ready for Spotify, the club and radio.",
-        cta1="Send a track", adm_label="Certified engineer", manifesto_label="How I work",
+        cta1="Send a track", adm_label="Certified engineer", pf_label="Masters ready for every platform", adm_more="What it means", manifesto_label="How I work",
         manifesto="A track comes in as a mix and leaves as a record. Balanced, as loud as it should be, the same on headphones, in a club and in the car. I work on it myself from start to finish, with a real analog chain and fifteen years of listening.",
         lb_h2="Built for labels.", lb_intro="One engineer for the whole catalogue. Clear timing and pricing before we start.",
         lb_facts=[("48 hours", "to master a single"), ("3-5 days", "to mix and master from the stems"), ("Custom", "quote and schedule for EPs, albums and catalogues"), ("4 languages", "English, Italian, German and Spanish")],
@@ -480,7 +480,7 @@ HOME_V3 = {
         home_city="Milano", kicker="Ingegnere del suono e fonico · Milano", drag_hint="Trascina il globo per farlo girare.", countries_label="Paesi per cui ho lavorato",
         h1="Pronto per l’uscita.", h1a="Il tuo brano,", h1b="mixato e masterizzato.", id_role="Certificato Apple Digital Masters",
         lead="Studio ibrido analogico a Milano. Mandami le tracce o il mix: ti torna un disco bilanciato, profondo e pronto per Spotify, club e radio.",
-        cta1="Invia un brano", adm_label="Fonico certificato", manifesto_label="Come lavoro",
+        cta1="Invia un brano", adm_label="Fonico certificato", pf_label="Master pronti per tutte le piattaforme", adm_more="Cosa significa", manifesto_label="Come lavoro",
         manifesto="Un brano entra come mix ed esce come disco. Bilanciato, forte quanto deve esserlo, uguale in cuffia, in club e in macchina. Lo lavoro io dall’inizio alla fine, con una catena analogica vera e quindici anni di ascolto.",
         lb_h2="Fatto per le etichette.", lb_intro="Un solo fonico per tutto il catalogo. Tempi e prezzi chiari prima di iniziare.",
         lb_facts=[("48 ore", "per il mastering di un singolo"), ("3-5 giorni", "per mix e master dalle tracce"), ("Su misura", "offerta e calendario per EP, album e cataloghi"), ("4 lingue", "italiano, inglese, tedesco e spagnolo")],
@@ -489,7 +489,7 @@ HOME_V3 = {
         home_city="Mailand", kicker="Mixing- und Mastering-Engineer · Mailand", drag_hint="Zieh den Globus, um ihn zu drehen.", countries_label="Länder, für die ich gearbeitet habe",
         h1="Bereit für den Release.", h1a="Dein Track,", h1b="gemischt und gemastert.", id_role="Apple Digital Masters zertifiziert",
         lead="Hybrides Analogstudio in Mailand. Schick mir deine Spuren oder deinen Mix und du bekommst eine Platte zurück, die ausgewogen, tief und bereit für Spotify, Club und Radio ist.",
-        cta1="Track senden", adm_label="Zertifizierter Engineer", manifesto_label="So arbeite ich",
+        cta1="Track senden", adm_label="Zertifizierter Engineer", pf_label="Master bereit für jede Plattform", adm_more="Was das bedeutet", manifesto_label="So arbeite ich",
         manifesto="Ein Track kommt als Mix und geht als Platte. Ausgewogen, so laut wie er sein soll, gleich auf Kopfhörern, im Club und im Auto. Ich bearbeite ihn selbst von Anfang bis Ende, mit einer echten Analogkette und fünfzehn Jahren Hörerfahrung.",
         lb_h2="Gemacht für Labels.", lb_intro="Ein Engineer für den ganzen Katalog. Klare Zeiten und Preise, bevor wir anfangen.",
         lb_facts=[("48 Stunden", "für das Mastering einer Single"), ("3-5 Tage", "für Mix und Master aus den Spuren"), ("Individuell", "Angebot und Zeitplan für EPs, Alben und Kataloge"), ("4 Sprachen", "Deutsch, Englisch, Italienisch und Spanisch")],
@@ -498,12 +498,16 @@ HOME_V3 = {
         home_city="Milán", kicker="Ingeniero de mezcla y mastering · Milán", drag_hint="Arrastra el globo para girarlo.", countries_label="Países para los que he trabajado",
         h1="Listo para publicar.", h1a="Tu tema,", h1b="mezclado y masterizado.", id_role="Certificado Apple Digital Masters",
         lead="Estudio híbrido analógico en Milán. Envíame tus pistas o tu mezcla y te devuelvo un disco equilibrado, profundo y listo para Spotify, el club y la radio.",
-        cta1="Envía un tema", adm_label="Ingeniero certificado", manifesto_label="Cómo trabajo",
+        cta1="Envía un tema", adm_label="Ingeniero certificado", pf_label="Masters listos para todas las plataformas", adm_more="Qué significa", manifesto_label="Cómo trabajo",
         manifesto="Un tema entra como mezcla y sale como disco. Equilibrado, tan fuerte como debe ser, igual en auriculares, en el club y en el coche. Lo trabajo yo de principio a fin, con una cadena analógica real y quince años de escucha.",
         lb_h2="Hecho para sellos.", lb_intro="Un solo ingeniero para todo el catálogo. Plazos y precios claros antes de empezar.",
         lb_facts=[("48 horas", "para masterizar un single"), ("3-5 días", "para mezcla y master desde las pistas"), ("A medida", "presupuesto y calendario para EP, álbumes y catálogos"), ("4 idiomas", "español, inglés, italiano y alemán")],
         lb_cta="Pide un presupuesto para el catálogo"),
 }
+
+
+# Where the masters go. Names only, set in the site's own type: no third-party logos.
+PLATFORMS = ["Spotify", "Apple Music", "YouTube Music", "Amazon Music", "Tidal", "Deezer", "Beatport", "SoundCloud"]
 
 
 def country_rows(lang):
@@ -532,7 +536,9 @@ def home_pages(arts):
         by_index = {SV.SVC_INDEX[x["key"]]: x["href"] for x in service_links(lang)}
         s["services"] = [dict(sv, href=by_index[i]) for i, sv in enumerate(s["services"])]
         s["sv_more"] = SV.UI[lang]["details"]
-        main = env.get_template("home.html").render(s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
+        adm = next((a for a in pool if "apple-digital-masters" in a["path"]), None)
+        main = env.get_template("home.html").render(platforms=PLATFORMS, adm_href=adm["path"] if adm else None, asset_v=V,
+                                                     s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
                                                      meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
                                                      codes=S.CLIENT_CODES, reviews_live=reviews_live(), playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang), about=AB.ABOUT[lang])
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",

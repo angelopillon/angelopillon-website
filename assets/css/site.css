@@ -1393,3 +1393,83 @@ body{ font-family:var(--f-text); background:#000; color:var(--ink); letter-spaci
   .ah-actions{ flex-direction:column; gap:18px; }
   .ah-sep{ display:block; height:6px; }
 }
+
+/* =====================================================================
+   A little warmth, November 2026.
+   The analog units are back with their meters and reels, the client globe turns
+   again, the masters show where they go. Still native scrolling: whatever moves
+   stays inside its own box, stops off screen and stays still for reduced motion.
+   ===================================================================== */
+
+/* gold where it means something */
+.ah-eyebrow{ color:var(--accent); }
+.ah-big{ background:linear-gradient(180deg, #F3DFAA 0%, #D9B86E 52%, #B48F48 100%); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; }
+.ah-big span{ color:var(--ink-3); -webkit-text-fill-color:var(--ink-3); }
+
+/* a warm light behind the hero title */
+.ah-hero{ position:relative; isolation:isolate; overflow:hidden; }
+.ah-hero::before{ content:""; position:absolute; z-index:-1; left:50%; top:0; width:min(1400px, 160vw); height:min(900px, 120vw); transform:translateX(-50%); background:radial-gradient(46% 44% at 50% 30%, rgba(212,178,106,.17), rgba(212,178,106,.05) 55%, rgba(212,178,106,0) 75%); pointer-events:none; }
+
+/* where the masters go, and the certification */
+.ah-platforms{ padding:0 0 clamp(24px, 3vw, 40px); }
+.ah-adm{ display:inline-flex; align-items:center; gap:14px; padding:9px 22px 9px 9px; border-radius:980px; background:linear-gradient(180deg, rgba(212,178,106,.13), rgba(212,178,106,.04)); border:1px solid rgba(212,178,106,.4); color:var(--ink); text-decoration:none; text-align:left; transition:border-color .2s ease, background-color .2s ease; }
+a.ah-adm:hover{ border-color:rgba(232,203,140,.8); background-color:rgba(212,178,106,.06); }
+a.ah-adm:focus-visible{ outline:2px solid var(--link); outline-offset:3px; }
+.ah-adm__seal{ width:44px; height:44px; flex:none; display:block; }
+.ah-adm__text{ display:flex; flex-direction:column; gap:1px; }
+.ah-adm__text small{ font-size:.75rem; font-weight:600; letter-spacing:.07em; text-transform:uppercase; color:var(--accent); }
+.ah-adm__text b{ font-size:1.125rem; font-weight:600; letter-spacing:-.015em; line-height:1.25; }
+.ah-adm__more{ margin-left:8px; padding-left:18px; border-left:1px solid rgba(212,178,106,.3); color:var(--link); font-size:.9375rem; white-space:nowrap; }
+.ah-adm__more::after{ content:"\00a0\203A"; }
+.ah-platforms__label{ margin:clamp(40px, 4.6vw, 60px) 0 20px; font-size:.9375rem; color:var(--ink-3); }
+.ah-platforms__list{ display:flex; flex-wrap:nowrap; justify-content:center; gap:clamp(26px, 3vw, 44px); margin:0 auto; padding:0; list-style:none; }
+.ah-platforms__list li{ font-size:clamp(1.125rem, 1.6vw, 1.375rem); font-weight:600; letter-spacing:-.02em; color:#76767B; white-space:nowrap; }
+@media (max-width: 1100px){ .ah-platforms__list{ display:grid; grid-template-columns:repeat(4, auto); justify-content:center; gap:14px 44px; } }
+
+/* the analog chain, under a warm lamp */
+.ah-chain{ position:relative; isolation:isolate; overflow:hidden; }
+.ah-chain::before{ content:""; position:absolute; inset:0; z-index:-1; background:radial-gradient(50% 34% at 14% 30%, rgba(255,166,72,.15), rgba(255,166,72,0) 70%), radial-gradient(42% 30% at 90% 78%, rgba(255,128,48,.08), rgba(255,128,48,0) 70%); -webkit-mask-image:linear-gradient(to bottom, transparent 0, #000 18%, #000 82%, transparent 100%); mask-image:linear-gradient(to bottom, transparent 0, #000 18%, #000 82%, transparent 100%); pointer-events:none; }
+.ah-units{ display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:20px; margin:0; padding:0; list-style:none; outline:0; }
+.ah-units .unit{ width:auto; flex:initial; gap:0; padding:20px 20px 26px; border-radius:28px; background:#121214; border:1px solid rgba(255,255,255,.07); }
+.ah-units .unit h3{ margin:20px 4px 6px; font-size:1.375rem; font-weight:600; letter-spacing:-.018em; }
+.ah-units .unit p{ margin:0 4px; font-size:1rem; line-height:1.45; color:var(--ink-2); }
+.ah-units .u-label, .ah-units .u-mini{ font-family:var(--f-text); font-stretch:100%; }
+.ah-units .u-led{ filter:drop-shadow(0 0 5px var(--amber)); }
+.ah-chain .ah-cols{ margin-top:clamp(40px, 4.6vw, 64px); }
+@media (prefers-reduced-motion: no-preference){
+  .ah-units .u-needle{ animation:needle 1.9s cubic-bezier(.45,.05,.55,.95) infinite alternate!important; }
+  .ah-units .unit[data-kind="opto"] .u-needle{ animation-duration:2.6s!important; animation-delay:-.9s!important; }
+  .ah-units .unit[data-kind="vca"] .u-needle{ animation-duration:2.3s!important; animation-delay:-.7s!important; }
+  .ah-units .reel{ animation:spin 5.6s linear infinite!important; }
+  .ah-units .reel--2{ animation-duration:4.1s!important; }
+  .js-calm .ah-chain:not(.is-playing) .u-needle, .js-calm .ah-chain:not(.is-playing) .reel{ animation-play-state:paused!important; }
+}
+
+/* the client globe */
+.ah-globe{ position:relative; width:min(100%, 720px); aspect-ratio:1 / 1; margin:0 auto; }
+.ah-globe::before{ content:""; position:absolute; inset:0; border-radius:50%; background:radial-gradient(circle closest-side, rgba(212,178,106,.05) 0%, rgba(212,178,106,.04) 60%, rgba(212,178,106,.19) 70%, rgba(212,178,106,.06) 76%, rgba(212,178,106,.02) 88%, rgba(212,178,106,0) 100%); pointer-events:none; }
+.ah-globe__poster, .ah-globe__canvas{ position:absolute; inset:0; display:block; width:100%; height:100%; }
+.ah-globe__poster{ object-fit:contain; transition:opacity .9s ease; }
+.ah-globe__canvas{ opacity:0; transition:opacity .9s ease; cursor:grab; touch-action:pan-y; -webkit-tap-highlight-color:transparent; -webkit-user-select:none; user-select:none; }
+.ah-globe.is-live .ah-globe__canvas{ opacity:1; }
+.ah-globe.is-live .ah-globe__poster{ opacity:0; }
+.ah-globe.is-dragging .ah-globe__canvas{ cursor:grabbing; }
+.ah-globe.is-static .ah-globe__canvas{ display:none; }
+.ah-globe__hint{ margin:4px 0 0; text-align:center; font-size:.875rem; color:var(--ink-3); opacity:0; transition:opacity .6s ease .5s; }
+.ah-globe.is-live + .ah-globe__hint{ opacity:1; }
+.ah-world .ah-countries{ margin-top:28px; }
+
+@media (max-width: 980px){
+  .ah-units{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px){
+  .ah-units{ grid-template-columns:none; grid-auto-flow:column; grid-auto-columns:86%; gap:14px; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; scroll-padding-inline:var(--pad); margin-inline:calc(var(--pad) * -1); padding:0 var(--pad) 4px; scrollbar-width:none; }
+  .ah-units::-webkit-scrollbar{ display:none; }
+  .ah-units .unit{ scroll-snap-align:start; border-radius:22px; padding:16px 16px 22px; }
+  .ah-units .unit h3{ font-size:1.25rem; margin-top:16px; }
+  .ah-adm{ display:inline-grid; grid-template-columns:auto auto; column-gap:14px; row-gap:4px; align-items:center; border-radius:24px; padding:12px 22px 12px 12px; }
+  .ah-adm__seal{ grid-row:span 2; }
+  .ah-adm__more{ margin:0; padding:0; border:0; font-size:.875rem; }
+  .ah-platforms__list{ grid-template-columns:repeat(2, auto); gap:12px 36px; }
+  .ah-globe{ width:calc(100% + var(--pad) * 2); margin-inline:calc(var(--pad) * -1); }
+}
