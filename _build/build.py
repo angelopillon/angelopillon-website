@@ -28,6 +28,7 @@ import strings as S  # noqa: E402
 import tools as TL  # noqa: E402
 import services as SV  # noqa: E402
 import brand  # noqa: E402
+import about as AB  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 B = ROOT / "_build"
@@ -476,7 +477,7 @@ HOME_V3 = {
         lb_facts=[("48 hours", "to master a single"), ("3-5 days", "to mix and master from the stems"), ("Custom", "quote and schedule for EPs, albums and catalogues"), ("4 languages", "English, Italian, German and Spanish")],
         lb_cta="Ask for a catalogue quote"),
     "it": dict(
-        home_city="Milano", kicker="Mix e mastering engineer · Milano", drag_hint="Trascina il globo per farlo girare.", countries_label="Paesi per cui ho lavorato",
+        home_city="Milano", kicker="Fonico di mix e mastering · Milano", drag_hint="Trascina il globo per farlo girare.", countries_label="Paesi per cui ho lavorato",
         h1="Pronto per l’uscita.", h1a="Il tuo brano,", h1b="mixato e masterizzato.", id_role="Certificato Apple Digital Masters",
         lead="Studio ibrido analogico a Milano. Mandami le tracce o il mix: ti torna un disco bilanciato, profondo e pronto per Spotify, club e radio.",
         cta1="Invia un brano", adm_label="Fonico certificato", manifesto_label="Come lavoro",
@@ -533,7 +534,7 @@ def home_pages(arts):
         s["sv_more"] = SV.UI[lang]["details"]
         main = env.get_template("home.html").render(s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
                                                      meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
-                                                     codes=S.CLIENT_CODES, reviews_live=reviews_live(), playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang))
+                                                     codes=S.CLIENT_CODES, reviews_live=reviews_live(), playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang), about=AB.ABOUT[lang])
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",
                "description": s["description"], "url": SITE + S.HOMES[lang], "image": SITE + "/assets/img/studio-1-1400.jpg", "logo": SITE + "/assets/img/icon-512.png",
                "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}, "areaServed": "Worldwide", "knowsLanguage": ["en", "it", "de", "es"],
@@ -546,6 +547,19 @@ def home_pages(arts):
                  scripts=(["/assets/js/ab-home.js"] if ab else []), og_image=f"/assets/og/{lang}-home.png", og_title=s["title"],
                  og_args=dict(title=s["h1"], kicker={"en": "Mixing and mastering", "it": "Mix e mastering", "de": "Mixing und Mastering", "es": "Mezcla y mastering"}[lang], readout="−8.9 LUFS  −0.3 dBTP"),
                  body_class="is-home")
+
+
+def about_pages():
+    """Chi sono / About: the path from the conservatory to the studio in Milan."""
+    for lang in S.LANGS:
+        a = AB.ABOUT[lang]
+        main = env.get_template("about.html").render(a=a, lang=lang, contact_href=S.HOMES[lang] + "#contact", services_href=S.HOMES[lang] + "#services")
+        person = dict(PERSON, description=a["description"], knowsAbout=PERSON["knowsAbout"] + ["Piano", "Guitar", "Music production", "Sound engineering"])
+        page = {"@context": "https://schema.org", "@type": "AboutPage", "name": a["title"], "url": SITE + a["path"], "inLanguage": lang, "mainEntity": person}
+        jl = [page, crumbs_ld([(a["home"], S.HOMES[lang]), (a["crumb"], a["path"])])]
+        add_page(path=a["path"], lang=lang, title=a["title"] + " | Angelo Pillon" if "Angelo Pillon" not in a["title"] else a["title"], description=a["description"], main=Markup(main),
+                 alt_key="about", nav_current="about", jsonld=jl, og_image=f"/assets/og/{lang}-about.png", og_title=a["h1"] + " " + a["h1b"],
+                 og_args=dict(title=a["h1"] + " " + a["h1b"], kicker=a["eyebrow"], readout="angelopillon.com"), body_class="is-about")
 
 
 # ---------------------------------------------------------------- service pages
@@ -939,6 +953,7 @@ def main():
     arts = load_articles()
     home_pages(arts)
     service_pages(arts)
+    about_pages()
     article_pages(arts)
     tool_pages()
     legal_pages()

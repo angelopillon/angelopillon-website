@@ -141,7 +141,7 @@ PAGES["en"] = {
 PAGES["it"] = {
     "mix": dict(
         path="/it/mix-e-mastering-online", name="Mix e master",
-        title="Mix engineer a Milano: mix e mastering online | Angelo Pillon",
+        title="Fonico di mix a Milano: mix e mastering online | Angelo Pillon",
         description="Fonico di mix a Milano, anche online. Le tue tracce mixate e masterizzate in catena ibrida analogica, intonazione della voce compresa. Da $110, 3-5 giorni.",
         h1="Mix engineer a Milano: mix e mastering online",
         lead="Mandami le tracce. Mixo e masterizzo il brano in una catena ibrida analogica e digitale e ti torna indietro un disco bilanciato, profondo e pronto per uscire.",

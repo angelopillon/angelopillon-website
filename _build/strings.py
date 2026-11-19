@@ -102,24 +102,24 @@ UI = {
 }
 
 NAV = {
-    "en": [("services", "Services", "/#services"), ("tools", "Tools", "/tools/"), ("articles", "Articles", "/articles"), ("contact", "Contact", "/#contact")],
-    "it": [("services", "Servizi", "/it/#services"), ("tools", "Strumenti", "/it/strumenti/"), ("articles", "Articoli", "/it/articoli/"), ("contact", "Contatti", "/it/#contact")],
-    "de": [("services", "Leistungen", "/de/#services"), ("tools", "Tools", "/tools/"), ("articles", "Artikel", "/de/artikel/"), ("contact", "Kontakt", "/de/#contact")],
-    "es": [("services", "Servicios", "/es/#services"), ("tools", "Herramientas", "/tools/"), ("articles", "Artículos", "/articles"), ("contact", "Contacto", "/es/#contact")],
+    "en": [("services", "Services", "/#services"), ("about", "About", "/about"), ("tools", "Tools", "/tools/"), ("articles", "Articles", "/articles"), ("contact", "Contact", "/#contact")],
+    "it": [("services", "Servizi", "/it/#services"), ("about", "Chi sono", "/it/chi-sono"), ("tools", "Strumenti", "/it/strumenti/"), ("articles", "Articoli", "/it/articoli/"), ("contact", "Contatti", "/it/#contact")],
+    "de": [("services", "Leistungen", "/de/#services"), ("about", "Über mich", "/de/ueber-mich"), ("tools", "Tools", "/tools/"), ("articles", "Artikel", "/de/artikel/"), ("contact", "Kontakt", "/de/#contact")],
+    "es": [("services", "Servicios", "/es/#services"), ("about", "Sobre mí", "/es/sobre-mi"), ("tools", "Herramientas", "/tools/"), ("articles", "Artículos", "/articles"), ("contact", "Contacto", "/es/#contact")],
 }
 
 FOOTER = {
     "en": [("Services", [("Mastering", "/#services"), ("Mix and master", "/#services"), ("Stem mastering", "/#services"), ("Mix feedback", "/#services")]),
-           ("Site", [("Free tools", "/tools/"), ("Articles", "/articles"), ("Articoli in italiano", "/it/articoli/"), ("Artikel auf Deutsch", "/de/artikel/"), ("RSS feed", "/feed.xml")]),
+           ("Site", [("About", "/about"), ("Free tools", "/tools/"), ("Articles", "/articles"), ("Articoli in italiano", "/it/articoli/"), ("Artikel auf Deutsch", "/de/artikel/"), ("RSS feed", "/feed.xml")]),
            ("Elsewhere", [("Fiverr", "https://www.fiverr.com/angelopillon"), ("SoundBetter", "https://soundbetter.com/profiles/618271-angelo-pillon")])],
     "it": [("Servizi", [("Mastering", "/it/#services"), ("Mix e master", "/it/#services"), ("Stem mastering", "/it/#services"), ("Feedback sul mix", "/it/#services")]),
-           ("Sito", [("Strumenti gratuiti", "/it/strumenti/"), ("Articoli", "/it/articoli/"), ("Articles in English", "/articles"), ("Artikel auf Deutsch", "/de/artikel/"), ("Feed RSS", "/it/feed.xml")]),
+           ("Sito", [("Chi sono", "/it/chi-sono"), ("Strumenti gratuiti", "/it/strumenti/"), ("Articoli", "/it/articoli/"), ("Articles in English", "/articles"), ("Artikel auf Deutsch", "/de/artikel/"), ("Feed RSS", "/it/feed.xml")]),
            ("Altrove", [("Fiverr", "https://www.fiverr.com/angelopillon"), ("SoundBetter", "https://soundbetter.com/profiles/618271-angelo-pillon")])],
     "de": [("Leistungen", [("Mastering", "/de/#services"), ("Mix und Master", "/de/#services"), ("Stem-Mastering", "/de/#services"), ("Mix-Feedback", "/de/#services")]),
-           ("Seite", [("Kostenlose Tools", "/tools/"), ("Artikel", "/de/artikel/"), ("Articles in English", "/articles"), ("Articoli in italiano", "/it/articoli/"), ("RSS-Feed", "/de/feed.xml")]),
+           ("Seite", [("Über mich", "/de/ueber-mich"), ("Kostenlose Tools", "/tools/"), ("Artikel", "/de/artikel/"), ("Articles in English", "/articles"), ("Articoli in italiano", "/it/articoli/"), ("RSS-Feed", "/de/feed.xml")]),
            ("Anderswo", [("Fiverr", "https://www.fiverr.com/angelopillon"), ("SoundBetter", "https://soundbetter.com/profiles/618271-angelo-pillon")])],
     "es": [("Servicios", [("Mastering", "/es/#services"), ("Mezcla y master", "/es/#services"), ("Stem mastering", "/es/#services"), ("Feedback de mezcla", "/es/#services")]),
-           ("Sitio", [("Herramientas gratuitas", "/tools/"), ("Artículos (inglés)", "/articles"), ("Articoli in italiano", "/it/articoli/")]),
+           ("Sitio", [("Sobre mí", "/es/sobre-mi"), ("Herramientas gratuitas", "/tools/"), ("Artículos (inglés)", "/articles"), ("Articoli in italiano", "/it/articoli/")]),
            ("En otros sitios", [("Fiverr", "https://www.fiverr.com/angelopillon"), ("SoundBetter", "https://soundbetter.com/profiles/618271-angelo-pillon")])],
 }
 
@@ -218,8 +218,8 @@ HOME["en"] = dict(
     f_err="Not sent. Try again, or write to <a href=\"mailto:angelopillon@gmail.com\">angelopillon@gmail.com</a>.",
 )
 HOME["it"] = dict(
-    title="Mix engineer e mastering a Milano | Angelo Pillon",
-    description="Mix engineer e mastering engineer a Milano, anche online. Studio ibrido analogico, certificato Apple Digital Masters, 4,9/5 su oltre 700 recensioni, clienti in 66 paesi.",
+    title="Fonico di mix e mastering a Milano, mix engineer | Angelo Pillon",
+    description="Fonico di mix e mastering a Milano, anche online: mix engineer e mastering engineer con studio ibrido analogico, certificato Apple Digital Masters, 4,9/5 su oltre 700 recensioni, clienti in 66 paesi.",
     h1="Mix e mastering da uno studio ibrido a Milano.",
     lead="Mandami le tracce o il mix. Ti torna indietro un disco bilanciato, forte quanto deve esserlo, e sicuro su ogni piattaforma su cui uscirà.",
     cta1="Inizia un progetto", cta2="Misura il tuo brano",
