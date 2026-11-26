@@ -19,6 +19,23 @@
   var ctx = null, cache = {}, cur = 0, version = "before", playing = false, offset = 0, startedAt = 0, nodes = null, raf = 0, token = 0, dragging = false;
   var analyser = null, abuf = null, lvl = 0, hover = -1;
 
+  /* iPhone: Web Audio follows the ring/silent switch unless the page asks for the "playback" session.
+     Safari 16.4+ has navigator.audioSession; older iOS gets the same session from a silent looping <audio>. */
+  var iOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  var keepAlive = null;
+  function audioSession() {
+    try { if (navigator.audioSession) { navigator.audioSession.type = "playback"; return; } } catch (e) {}
+    if (!iOS) return;
+    if (!keepAlive) {
+      keepAlive = document.createElement("audio");
+      keepAlive.setAttribute("playsinline", ""); keepAlive.setAttribute("x-webkit-airplay", "deny");
+      keepAlive.loop = true; keepAlive.preload = "auto";
+      keepAlive.src = "data:audio/wav;base64,UklGRkQDAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YSADAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgA==";
+    }
+    var p = keepAlive.play(); if (p && p.catch) p.catch(function () {});
+  }
+  function audioSessionIdle() { if (keepAlive) keepAlive.pause(); }
+
   function fmt(t) { t = Math.max(0, Math.floor(t)); return Math.floor(t / 60) + ":" + ("0" + (t % 60)).slice(-2); }
 
   /* ---------- envelopes ---------- */
@@ -146,7 +163,7 @@
   }
   function pause() {
     if (!playing) return;
-    offset = position(); stopSources(); setPlaying(false);
+    offset = position(); stopSources(); setPlaying(false); audioSessionIdle();
   }
   function prepare(i) {
     var my = ++token;
@@ -156,6 +173,8 @@
       if (nodes) { stopSources(); nodes.gb.disconnect(); nodes.ga.disconnect(); }
       var gb = ctx.createGain(), ga = ctx.createGain();
       gb.gain.value = 0; ga.gain.value = 0; gb.connect(analyser); ga.connect(analyser);
+      var keep = [tracks[i].getAttribute("data-before"), tracks[i].getAttribute("data-after")];
+      Object.keys(cache).forEach(function (u) { if (keep.indexOf(u) < 0) delete cache[u]; });
       nodes = { b: r[0].buf, a: r[1].buf, rb: r[0].rms, ra: r[1].rms, gb: gb, ga: ga, dur: Math.min(r[0].buf.duration, r[1].buf.duration), track: i };
       el.classList.remove("is-loading"); statusEl.textContent = "";
       return true;
@@ -167,14 +186,16 @@
   }
   function play() {
     if (!AC) return;
+    audioSession();
     if (!ctx) {
       ctx = new AC();
       analyser = ctx.createAnalyser(); analyser.fftSize = 1024; abuf = new Float32Array(analyser.fftSize);
       analyser.connect(ctx.destination);
     }
-    if (ctx.state === "suspended") ctx.resume();
+    var resumed = ctx.state !== "running" && ctx.resume ? ctx.resume().catch(function () {}) : Promise.resolve();
     var ready = nodes && nodes.track === cur ? Promise.resolve(true) : prepare(cur);
-    ready.then(function (ok) {
+    Promise.all([ready, resumed]).then(function (r) {
+      var ok = r[0];
       if (!ok) return;
       if (offset >= duration() - 0.05) offset = 0;
       startSources(); applyGains(true); setPlaying(true);
