@@ -19,14 +19,14 @@
 #     after: titolo-dopo.mp3
 
 tracks:
-  - title: "Afro House"
-    service: mix_master
-    before: afro-house-prima.mp3
-    after: afro-house-dopo.mp3
   - title: "Melodic House"
     service: mix_master
     before: melodic-house-prima.mp3
     after: melodic-house-dopo.mp3
+  - title: "Afro House"
+    service: mix_master
+    before: afro-house-prima.mp3
+    after: afro-house-dopo.mp3
   - title: "Tech House"
     service: mix_master
     before: tech-house-prima.mp3
