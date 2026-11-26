@@ -217,6 +217,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/about"/>
   </url>
   <url>
+    <loc>https://angelopillon.com/music-production</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/music-production"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/produzione-musicale"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/musikproduktion"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/produccion-musical"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/music-production"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/it/produzione-musicale</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/music-production"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/produzione-musicale"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/musikproduktion"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/produccion-musical"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/music-production"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/musikproduktion</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/music-production"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/produzione-musicale"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/musikproduktion"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/produccion-musical"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/music-production"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/es/produccion-musical</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/music-production"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/produzione-musicale"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/musikproduktion"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angelopillon.com/es/produccion-musical"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/music-production"/>
+  </url>
+  <url>
     <loc>https://angelopillon.com/it/articoli/musica-lossless-spotify-apple-music-tidal</loc>
     <lastmod>2026-11-16</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/musica-lossless-spotify-apple-music-tidal"/>

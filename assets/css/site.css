@@ -1581,3 +1581,57 @@ a.ah-adm:hover .ah-adm__more{ text-decoration:underline; }
 .ah-tools > p,
 .rvp-group__head p{ text-align:justify; -webkit-hyphens:auto; hyphens:auto; hyphenate-limit-chars:7 3 3; }
 .prose .callout p, .prose .disclaimer, .prose figure figcaption, .prose td p{ text-align:left; -webkit-hyphens:manual; hyphens:manual; }
+/* =====================================================================
+   Produzione e arrangiamento, November 2026.
+   The instruments as cards: the part drawn on a dark bench, then the spec sheet.
+   The tech specs read like an Apple spec page. Nothing moves.
+   ===================================================================== */
+.ah-gear{ display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:20px; margin:0; padding:0; list-style:none; }
+.ah-gear__card{ display:flex; flex-direction:column; padding:clamp(20px, 2.4vw, 30px); border-radius:28px; background:var(--tile-fill); box-shadow:var(--tile-edge); }
+.ah-gear__face{ margin:0 0 clamp(24px, 2.8vw, 32px); padding:clamp(20px, 3.2vw, 38px) clamp(16px, 3.4vw, 44px); border-radius:20px; background:radial-gradient(120% 150% at 50% 0%, #242427 0%, #141416 60%, #0B0B0C 100%); box-shadow:inset 0 0 0 1px rgba(255,255,255,.06), inset 0 1px 0 rgba(255,255,255,.09); }
+.ah-gear__face svg{ display:block; width:100%; height:auto; overflow:visible; }
+.ah-gear__type{ margin:0 0 12px; font-size:.6875rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#D9BC74; }
+.ah-gear__card h3{ margin:0; font-size:clamp(1.375rem, 2.2vw, 1.875rem); font-weight:600; line-height:1.12; letter-spacing:-.02em; color:var(--ink); text-wrap:balance; }
+.ah-gear__meta{ margin:8px 0 0; font-size:.9375rem; color:var(--ink-3); }
+.ah-gear__role{ margin:16px 0 0; font-size:1.0625rem; line-height:1.5; color:var(--ink-2); text-wrap:pretty; }
+.ah-gear__specs{ margin:24px 0 0; border-top:1px solid var(--line); }
+.ah-gear__specs div{ display:grid; grid-template-columns:minmax(96px, 30%) 1fr; gap:14px; padding:11px 0; border-bottom:1px solid var(--line); font-size:.9375rem; line-height:1.45; }
+.ah-gear__specs dt{ color:var(--ink-3); }
+.ah-gear__specs dd{ margin:0; color:var(--ink); }
+
+.ah-techspecs{ max-width:980px; margin:0 auto; border-top:1px solid var(--line); }
+.ah-techspecs > div{ display:grid; grid-template-columns:minmax(160px, 28%) 1fr; gap:14px 32px; padding:24px 0; border-bottom:1px solid var(--line); }
+.ah-techspecs dt{ font-size:1.0625rem; font-weight:600; line-height:1.35; letter-spacing:-.012em; color:var(--ink); }
+.ah-techspecs dd{ margin:0; }
+.ah-techspecs ul{ display:grid; gap:14px 32px; margin:0; padding:0; list-style:none; }
+.ah-techspecs ul.is-cols{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+.ah-techspecs li{ font-size:1.0625rem; line-height:1.35; color:var(--ink); }
+.ah-techspecs li span{ display:block; margin-top:3px; font-size:.875rem; line-height:1.4; color:var(--ink-3); }
+
+/* home: the production line under the price list */
+.ah-prodline{ display:grid; grid-template-columns:1fr auto; align-items:center; gap:10px 32px; margin-top:20px; text-decoration:none; color:var(--ink); }
+.ah-prodline__kicker{ grid-column:1 / -1; font-size:.6875rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#D9BC74; }
+.ah-prodline__title{ display:block; font-size:clamp(1.3125rem, 2vw, 1.75rem); font-weight:600; line-height:1.15; letter-spacing:-.018em; }
+.ah-prodline__text{ display:block; margin-top:6px; font-size:1.0625rem; line-height:1.47; color:var(--ink-2); }
+.ah-prodline:hover .ah-more{ text-decoration:underline; }
+.ah-prodline:focus-visible{ outline:2px solid var(--link); outline-offset:3px; }
+
+@media (max-width: 860px){
+  .ah-gear{ grid-template-columns:1fr; max-width:640px; margin-inline:auto; }
+}
+@media (max-width: 700px){
+  .ah-gear__card{ border-radius:22px; }
+  .ah-gear__face{ border-radius:16px; }
+  .ah-gear__specs div{ grid-template-columns:minmax(88px, 32%) 1fr; gap:12px; }
+  .ah-techspecs > div{ grid-template-columns:1fr; gap:12px; padding:20px 0; }
+  .ah-techspecs ul.is-cols{ grid-template-columns:1fr; }
+  .ah-prodline{ grid-template-columns:1fr; }
+  .ah-prodline__kicker{ font-size:.65625rem; letter-spacing:.14em; }
+}
+
+/* six menu items: keep every label on one line before the menu collapses */
+.nav a{ white-space:nowrap; }
+@media (min-width: 1041px) and (max-width: 1220px){
+  .hdr{ gap:20px; }
+  .nav{ gap:20px; }
+}

@@ -1,0 +1,118 @@
+{% import "_gear.html" as g %}{# Produzione e arrangiamento: the guitar-first production page.
+   Same Apple language as Chi sono: native scroll, nothing moves. Rows of the tech specs with no items are skipped. #}
+<section class="ah-hero">
+  <div class="ah-wrap ah-center">
+    <p class="ah-eyebrow">{{ p.eyebrow }}</p>
+    <h1 class="ah-hero__title">{{ p.h1 }} <span>{{ p.h1b }}</span></h1>
+    <p class="ah-hero__lead">{{ p.lead }}</p>
+    <div class="ah-actions">
+      <a class="ah-btn" href="{{ contact_href }}">{{ p.cta_btn }}</a>
+      <a class="ah-more" href="#{{ p.gt_id }}">{{ p.gt_more }}</a>
+    </div>
+  </div>
+  <div class="ah-wrap ah-wrap--wide">
+    <figure class="ah-hero__photo">
+      <picture>
+        <source type="image/webp" srcset="/assets/img/about/chitarra-900.webp 900w, /assets/img/about/chitarra-1600.webp 1600w" sizes="(max-width:1260px) 100vw, 1200px">
+        <img src="/assets/img/about/chitarra-1600.jpg" alt="{{ p.photo_alt }}" width="1600" height="1066" fetchpriority="high" decoding="async">
+      </picture>
+    </figure>
+    <dl class="ah-proof">
+      {% for val, label in p.nums %}<div><dt>{{ label }}</dt><dd>{{ val }}</dd></div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+
+<section class="ah-sec ah-statement" aria-label="{{ p.statement_label }}">
+  <div class="ah-wrap">
+    <p class="ah-statement__text">{{ p.statement }}</p>
+  </div>
+</section>
+
+<section class="ah-sec" aria-labelledby="h-sv">
+  <div class="ah-wrap ah-center ah-head">
+    <h2 class="ah-h2" id="h-sv">{{ p.sv_h2 }}</h2>
+    <p class="ah-lead">{{ p.sv_intro }}</p>
+  </div>
+  <div class="ah-wrap">
+    <ul class="ah-grid ah-grid--3 ah-steps">
+      {% for t, txt in p.sv %}<li class="ah-tile"><span class="ah-steps__n">{{ "%02d"|format(loop.index) }}</span><h3>{{ t }}</h3><p>{{ txt }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="ah-sec ah-gear-sec" id="{{ p.gt_id }}" aria-labelledby="h-gt">
+  {{ g.defs() }}
+  <div class="ah-wrap ah-center ah-head">
+    <h2 class="ah-h2" id="h-gt">{{ p.gt_h2 }}</h2>
+    <p class="ah-lead">{{ p.gt_intro }}</p>
+  </div>
+  <div class="ah-wrap ah-wrap--wide">
+    <ul class="ah-gear">
+      {% for it in p.gear %}<li class="ah-gear__card" data-kind="{{ it.kind }}">
+        <div class="ah-gear__face" aria-hidden="true">{{ g.face(it.kind) }}</div>
+        <p class="ah-gear__type">{{ it.type }}</p>
+        <h3>{{ it.name }}</h3>
+        <p class="ah-gear__meta">{{ it.meta }}</p>
+        <p class="ah-gear__role">{{ it.role }}</p>
+        <dl class="ah-gear__specs">
+          {% for k, v in it.specs %}<div><dt>{{ k }}</dt><dd>{{ v }}</dd></div>
+          {% endfor %}
+        </dl>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="ah-sec" aria-labelledby="h-ap">
+  <div class="ah-wrap ah-center ah-head">
+    <h2 class="ah-h2" id="h-ap">{{ p.ap_h2 }}</h2>
+  </div>
+  <div class="ah-wrap">
+    <ul class="ah-grid ah-grid--3">
+      {% for t, txt in p.ap %}<li class="ah-tile"><h3>{{ t }}</h3><p>{{ txt }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="ah-sec" aria-labelledby="h-pr">
+  <div class="ah-wrap ah-center ah-head">
+    <h2 class="ah-h2" id="h-pr">{{ p.pr_h2 }}</h2>
+  </div>
+  <div class="ah-wrap">
+    <ol class="ah-grid ah-grid--4 ah-steps">
+      {% for t, txt in p.pr %}<li class="ah-tile"><span class="ah-steps__n">{{ loop.index }}</span><h3>{{ t }}</h3><p>{{ txt }}</p></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="ah-sec" aria-labelledby="h-ts">
+  <div class="ah-wrap ah-center ah-head">
+    <h2 class="ah-h2" id="h-ts">{{ p.ts_h2 }}</h2>
+  </div>
+  <div class="ah-wrap">
+    <dl class="ah-techspecs">
+      {% for cat, items in p.ts if items %}<div>
+        <dt>{{ cat }}</dt>
+        <dd><ul{% if items|length > 4 %} class="is-cols"{% endif %}>{% for name, note in items %}<li>{{ name }}{% if note %}<span>{{ note }}</span>{% endif %}</li>{% endfor %}</ul></dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+
+<section class="ah-sec ah-contact" aria-labelledby="h-cta">
+  <div class="ah-wrap ah-center">
+    <h2 class="ah-h2" id="h-cta">{{ p.cta_h2 }}</h2>
+    <p class="ah-lead">{{ p.cta_p }}</p>
+    <div class="ah-actions">
+      <a class="ah-btn" href="{{ contact_href }}">{{ p.cta_btn }}</a>
+      <a class="ah-more" href="{{ services_href }}">{{ p.cta_more }}</a>
+    </div>
+  </div>
+</section>

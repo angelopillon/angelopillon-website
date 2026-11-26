@@ -117,6 +117,11 @@
       </div>
       <p class="estimate__note">{{ s.est_note }}</p>
     </div>
+    {% if prod %}<a class="ah-tile ah-prodline" href="{{ prod.path }}">
+      <span class="ah-prodline__kicker">Les Paul · Stratocaster · Thinline</span>
+      <span><span class="ah-prodline__title">{{ prod.tz_h }}</span><span class="ah-prodline__text">{{ prod.tz_p }}</span></span>
+      <span class="ah-more">{{ prod.tz_more }}</span>
+    </a>{% endif %}
   </div>
 </section>
 
@@ -283,7 +288,7 @@
         <label class="field"><span>{{ s.f_email }}</span><input name="email" type="email" required autocomplete="email"></label>
       </div>
       <label class="field"><span>{{ s.f_need }}</span>
-        <select name="service">{% for o in s.f_options %}<option>{{ o }}</option>{% endfor %}</select>
+        <select name="service">{% for o in s.f_options %}<option{% if o == s.f_prod %} data-k="prod"{% endif %}>{{ o }}</option>{% endfor %}</select>
       </label>
       <label class="field"><span>{{ s.f_files }}</span><input name="files" type="url" inputmode="url" placeholder="https://"></label>
       <label class="field"><span>{{ s.f_msg }}</span><textarea name="message" required placeholder="{{ s.f_msg_ph }}"></textarea></label>

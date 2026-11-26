@@ -29,6 +29,7 @@ import tools as TL  # noqa: E402
 import services as SV  # noqa: E402
 import brand  # noqa: E402
 import about as AB  # noqa: E402
+import production as PD  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 B = ROOT / "_build"
@@ -73,6 +74,8 @@ def ui_for(lang):
     u = dict(S.UI[lang])
     u["home"] = S.HOMES[lang]
     u["nav"] = [dict(key=k, label=l, href=h) for k, l, h in S.NAV[lang]]
+    pd = PD.PRODUCTION[lang]
+    u["nav"].insert(1, dict(key="production", label=pd["nav"], href=pd["path"]))
     u["contact_href"] = S.HOMES[lang] + "#contact"
     u["privacy_href"] = S.PRIVACY_HREF[lang]
     u["feed_href"] = S.FEEDS[lang]
@@ -84,6 +87,7 @@ def ui_for(lang):
     by_index = {SV.SVC_INDEX[k]: SV.PAGES[lang][k]["path"] for k in SV.ORDER}
     for i, link in enumerate(u["ft_cols"][0]["links"]):
         link["href"] = by_index.get(i, link["href"])
+    u["ft_cols"][0]["links"].append(dict(label=pd["footer"], href=pd["path"], ext=False))
     u["svc_links"] = service_links(lang)
     return u
 
@@ -536,6 +540,9 @@ def home_pages(arts):
     ab = ab_tracks()
     for lang in S.LANGS:
         s = dict(S.HOME[lang]); s["units"] = S.UNITS[lang]
+        pd = PD.PRODUCTION[lang]
+        s["f_options"] = s["f_options"][:-1] + [pd["form_option"]] + s["f_options"][-1:]
+        s["f_prod"] = pd["form_option"]
         ui = ui_for(lang)
         cl = S.CONTENT_LANG[lang]
         pool = sorted([a for a in arts if a["lang"] == S.ARTICLE_LANG[lang]], key=lambda a: (a["date"], -a["order"]), reverse=True)
@@ -549,7 +556,8 @@ def home_pages(arts):
         main = env.get_template("home.html").render(platforms=PLATFORMS, adm_href=adm["path"] if adm else None, asset_v=V,
                                                      s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
                                                      meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action=(S.HOMES[lang] if S.HOMES[lang] != "/" else "/about.html"),
-                                                     codes=S.CLIENT_CODES, reviews_live=reviews_live(), playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang), about=AB.ABOUT[lang])
+                                                     codes=S.CLIENT_CODES, reviews_live=reviews_live(), playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang), about=AB.ABOUT[lang],
+                                                     prod=pd)
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",
                "description": s["description"], "url": SITE + S.HOMES[lang], "image": SITE + "/assets/img/studio-1-1400.jpg", "logo": SITE + "/assets/img/icon-512.png",
                "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}, "areaServed": "Worldwide", "knowsLanguage": ["en", "it", "de", "es"],
@@ -579,6 +587,34 @@ def about_pages():
         jl = [page, faq, crumbs_ld([(a["home"], S.HOMES[lang]), (a["crumb"], a["path"])])]
         add_page(path=a["path"], lang=lang, title=a["title"] + " | Angelo Pillon" if "Angelo Pillon" not in a["title"] else a["title"], description=a["description"], main=Markup(main),
                  alt_key="about", nav_current="about", jsonld=jl, og_image="/assets/og/about-ritratto.jpg", og_title=a["h1"] + " " + a["h1b"], body_class="is-about")
+
+
+def production_pages():
+    """Produzione e arrangiamento: production built around real guitars, with the instruments and the tech specs."""
+    for lang in S.LANGS:
+        p = PD.PRODUCTION[lang]
+        main = env.get_template("production.html").render(p=p, lang=lang, contact_href=S.HOMES[lang] + "?s=prod#contact", services_href=S.HOMES[lang] + "#services")
+        svc = {"@context": "https://schema.org", "@type": "Service", "name": p["crumb"], "serviceType": "Music production and arrangement", "description": p["description"],
+               "url": SITE + p["path"], "inLanguage": lang, "areaServed": "Worldwide",
+               "provider": {"@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering", "url": SITE + "/",
+                            "image": SITE + "/assets/img/studio-1-1400.jpg", "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}},
+               "hasOfferCatalog": {"@type": "OfferCatalog", "name": p["crumb"],
+                                   "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": t, "description": d}} for t, d in p["sv"]]}}
+        jl = [svc, crumbs_ld([(p["home"], S.HOMES[lang]), (p["crumb"], p["path"])])]
+        add_page(path=p["path"], lang=lang, title=p["title"], description=p["description"], main=Markup(main), alt_key="production", nav_current="production",
+                 jsonld=jl, og_image="/assets/og/produzione-chitarra.jpg", og_title=p["h1"] + " " + p["h1b"], body_class="is-production")
+
+
+def production_og():
+    """Share image of the production page: the guitar photo of Chi sono, cropped to 1200 x 630."""
+    dest = ROOT / "assets/og/produzione-chitarra.jpg"
+    if dest.exists() and "--force-og" not in sys.argv:
+        return
+    im = Image.open(ROOT / "assets/img/about/chitarra-1600.jpg").convert("RGB")
+    w, h = im.size
+    ch = round(w * 630 / 1200)
+    top = max(0, (h - ch) // 2)
+    im.crop((0, top, w, top + ch)).resize((1200, 630), Image.LANCZOS).save(dest, "JPEG", quality=84, optimize=True, progressive=True)
 
 
 # ---------------------------------------------------------------- service pages
@@ -992,12 +1028,14 @@ def main():
     home_pages(arts)
     service_pages(arts)
     about_pages()
+    production_pages()
     article_pages(arts)
     tool_pages()
     legal_pages()
     reviews_pages()
     OUT.mkdir(parents=True, exist_ok=True)
     images()
+    production_og()
     brand.icons(ROOT)
     if not (ROOT / "assets/img/world-clients.webp").exists():
         import worldmap
