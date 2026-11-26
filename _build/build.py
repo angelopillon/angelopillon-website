@@ -117,9 +117,18 @@ def crumbs_ld(items):
         {"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + h} for i, (n, h) in enumerate(items)]}
 
 
-PERSON = {"@type": "Person", "@id": SITE + "/#angelo", "name": "Angelo Pillon", "jobTitle": "Sound engineer, mix and mastering engineer", "url": SITE + "/",
+PERSON = {"@type": "Person", "@id": SITE + "/#angelo", "name": "Angelo Pillon", "givenName": "Angelo", "familyName": "Pillon",
+          "jobTitle": "Sound engineer, mix and mastering engineer", "url": SITE + "/",
           "sameAs": [CFG["fiverr"], "https://pro.fiverr.com/freelancers/angelopillon", CFG["soundbetter"]], "image": SITE + "/assets/img/angelo-240.jpg",
           "knowsAbout": ["Audio mixing", "Audio mastering", "Stem mastering", "Analog mastering", "Loudness (LUFS)", "Apple Digital Masters"],
+          "alumniOf": {"@type": "CollegeOrUniversity", "name": "Conservatorio di Musica Benedetto Marcello di Venezia", "url": "https://www.conservatoriovenezia.net",
+                       "sameAs": "https://en.wikipedia.org/wiki/Conservatorio_di_Musica_Benedetto_Marcello_di_Venezia"},
+          "hasCredential": {"@type": "EducationalOccupationalCredential", "name": "Apple Digital Masters", "credentialCategory": "certification",
+                            "recognizedBy": {"@type": "Organization", "name": "Apple"}},
+          "hasOccupation": [{"@type": "Occupation", "name": n} for n in ("Sound engineer", "Mixing engineer", "Mastering engineer")],
+          "workLocation": [{"@type": "Place", "name": "Milano", "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}},
+                           {"@type": "Place", "name": "Friuli", "address": {"@type": "PostalAddress", "addressRegion": "Friuli-Venezia Giulia", "addressCountry": "IT"}}],
+          "knowsLanguage": ["it", "en", "de", "es"],
           "address": {"@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT"}}
 
 
@@ -560,9 +569,14 @@ def about_pages():
     for lang in S.LANGS:
         a = AB.ABOUT[lang]
         main = env.get_template("about.html").render(a=a, lang=lang, contact_href=S.HOMES[lang] + "#contact", services_href=S.HOMES[lang] + "#services")
-        person = dict(PERSON, description=a["description"], image=SITE + "/assets/img/angelo-ritratto-800.jpg", knowsAbout=PERSON["knowsAbout"] + ["Piano", "Guitar", "Music production", "Sound engineering"])
-        page = {"@context": "https://schema.org", "@type": "AboutPage", "name": a["title"], "url": SITE + a["path"], "inLanguage": lang, "mainEntity": person}
-        jl = [page, crumbs_ld([(a["home"], S.HOMES[lang]), (a["crumb"], a["path"])])]
+        person = dict(PERSON, description=a["faqs"][0][1], image=SITE + "/assets/img/angelo-ritratto-800.jpg",
+                      knowsAbout=PERSON["knowsAbout"] + ["Phase and mono compatibility", "Stereo imaging", "Piano", "Rock guitar", "Blues guitar", "Live performance",
+                                                         "Music production", "Hip hop production", "Techno production", "Sound engineering", "Session guitar recording"])
+        page = {"@context": "https://schema.org", "@type": ["AboutPage", "ProfilePage"], "name": a["title"], "description": a["description"], "url": SITE + a["path"],
+                "inLanguage": lang, "mainEntity": person}
+        faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang,
+               "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": ans}} for q, ans in a["faqs"]]}
+        jl = [page, faq, crumbs_ld([(a["home"], S.HOMES[lang]), (a["crumb"], a["path"])])]
         add_page(path=a["path"], lang=lang, title=a["title"] + " | Angelo Pillon" if "Angelo Pillon" not in a["title"] else a["title"], description=a["description"], main=Markup(main),
                  alt_key="about", nav_current="about", jsonld=jl, og_image="/assets/og/about-ritratto.jpg", og_title=a["h1"] + " " + a["h1b"], body_class="is-about")
 
@@ -735,6 +749,25 @@ def write_feeds():
         out.append("</channel></rss>")
         (OUT / path).parent.mkdir(parents=True, exist_ok=True)
         (OUT / path).write_text("\n".join(out))
+
+
+def write_llms():
+    """llms.txt: a plain summary for AI assistants and answer engines, built from the same facts as the About page."""
+    a = AB.ABOUT["en"]
+    lines = ["# Angelo Pillon", "", "> " + a["faqs"][0][1], "",
+             "Angelo Pillon is an Italian sound engineer (in Italian: ingegnere del suono e fonico) who mixes and masters music online for artists, producers and labels worldwide.", "",
+             "## Key facts", ""]
+    lines += [f"- {k}: {v}" for k, v in a["spec"]]
+    lines += ["- Sound: modern but full of life, loud and energetic, never dull or mechanical; roundness and melody come first",
+              "- Technical focus: phase and mono compatibility, stereo imaging, depth and three-dimensionality, loudness and true peak, translation on every system",
+              "- Genres: techno, house, deep, melodic and afro house, EDM, pop, R&B, hip hop, rap, rock", "",
+              "## About (one page per language)", ""]
+    lines += [f"- [{AB.ABOUT[l]['title']}]({SITE}{AB.ABOUT[l]['path']})" for l in S.LANGS]
+    lines += ["", "## Services", ""]
+    for l in S.LANGS:
+        lines += [f"- [{SV.PAGES[l][k]['name']} ({l})]({SITE}{SV.PAGES[l][k]['path']})" for k in SV.ORDER]
+    lines += ["", "## Contact", "", f"- Website: {SITE}/ (contact form on every home page)", f"- SoundBetter: {CFG['soundbetter']}", ""]
+    (OUT / "llms.txt").write_text("\n".join(lines), encoding="utf-8")
 
 
 def write_sitemap():
@@ -975,6 +1008,7 @@ def main():
     render_all()
     write_feeds()
     write_sitemap()
+    write_llms()
     write_manifest_sw()
     write_netlify()
     print(f"{len(PAGES)} pages -> {OUT}")

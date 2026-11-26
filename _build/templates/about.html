@@ -44,6 +44,19 @@
   </div>
 </section>
 
+<section class="ah-sec" aria-labelledby="h-sound">
+  <div class="ah-wrap ah-center ah-head">
+    <h2 class="ah-h2" id="h-sound">{{ a.sound_h2 }}</h2>
+  </div>
+  <div class="ah-wrap">
+    <p class="ah-statement__text">{{ a.sound_statement }}</p>
+    <div class="ah-cols ah-cols--why">
+      {% for p in a.sound_ps %}<p>{{ p }}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="ah-sec" aria-labelledby="h-path">
   <div class="ah-wrap ah-center ah-head">
     <h2 class="ah-h2" id="h-path">{{ a.path_h2 }}</h2>
@@ -65,6 +78,16 @@
       {% for t, txt in a.how %}<li class="ah-tile"><h3>{{ t }}</h3><p>{{ txt }}</p></li>
       {% endfor %}
     </ul>
+  </div>
+</section>
+
+<section class="ah-sec" id="faq" aria-labelledby="h-faq">
+  <div class="ah-wrap ah-narrow">
+    <h2 class="ah-h2 ah-center" id="h-faq">{{ a.faq_h2 }}</h2>
+    <div class="ah-faq faq">
+      {% for q, ans in a.faqs %}<details{% if loop.first %} open{% endif %}><summary>{{ q }}</summary><div><p>{{ ans }}</p></div></details>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
