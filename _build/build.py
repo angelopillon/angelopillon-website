@@ -539,7 +539,7 @@ def home_pages(arts):
         adm = next((a for a in pool if "apple-digital-masters" in a["path"]), None)
         main = env.get_template("home.html").render(platforms=PLATFORMS, adm_href=adm["path"] if adm else None, asset_v=V,
                                                      s=s, c=S.COSMOS[lang], lang=lang, reviews=S.REVIEWS, tools=tool_list(cl), posts=posts, channels=channels_html(lang),
-                                                     meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action="/",
+                                                     meter_href=TL.TOOLS[0]["path"][cl], tools_href=ui["tools_href"], privacy_href=ui["privacy_href"], form_action=(S.HOMES[lang] if S.HOMES[lang] != "/" else "/about.html"),
                                                      codes=S.CLIENT_CODES, reviews_live=reviews_live(), playlist=S.SPOTIFY_PLAYLIST, proof=proof, ab=ab, abt=AB_TEXT[lang], v=HOME_V3[lang], country_rows=country_rows(lang), about=AB.ABOUT[lang])
         org = {"@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#service", "name": "Angelo Pillon, mixing and mastering",
                "description": s["description"], "url": SITE + S.HOMES[lang], "image": SITE + "/assets/img/studio-1-1400.jpg", "logo": SITE + "/assets/img/icon-512.png",
