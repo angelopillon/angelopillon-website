@@ -19,6 +19,10 @@
 #     after: titolo-dopo.mp3
 
 tracks:
+  - title: "Afro House"
+    service: mix_master
+    before: afro-house-prima.mp3
+    after: afro-house-dopo.mp3
   - title: "Melodic House"
     service: mix_master
     before: melodic-house-prima.mp3
@@ -27,11 +31,39 @@ tracks:
     service: mix_master
     before: tech-house-prima.mp3
     after: tech-house-dopo.mp3
+  - title: "EDM"
+    service: mix_master
+    before: edm-prima.mp3
+    after: edm-dopo.mp3
   - title: "Electronic"
     service: mix_master
     before: electronic-prima.mp3
     after: electronic-dopo.mp3
+  - title: "House"
+    service: mix_master
+    before: house-prima.mp3
+    after: house-dopo.mp3
+  - title: "Tech House II"
+    service: mix_master
+    before: tech-house-2-prima.mp3
+    after: tech-house-2-dopo.mp3
+  - title: "Melodic Rap"
+    service: mix_master
+    before: melodic-rap-prima.mp3
+    after: melodic-rap-dopo.mp3
+  - title: "Latin Pop"
+    service: mix_master
+    before: latin-pop-prima.mp3
+    after: latin-pop-dopo.mp3
+  - title: "Alt Pop"
+    service: mix_master
+    before: alt-pop-prima.mp3
+    after: alt-pop-dopo.mp3
   - title: "Pop"
     service: mix_master
     before: pop-prima.mp3
     after: pop-dopo.mp3
+  - title: "Acoustic Pop"
+    service: mix_master
+    before: acoustic-pop-prima.mp3
+    after: acoustic-pop-dopo.mp3
