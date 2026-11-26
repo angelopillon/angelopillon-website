@@ -1572,3 +1572,12 @@ a.ah-adm:hover .ah-adm__more{ text-decoration:underline; }
   .ah-platforms__label{ font-size:.65625rem; letter-spacing:.14em; }
   .ah-platforms__list li{ font-size:.75rem; }
 }
+
+/* ---------- discursive text: justified, with hyphenation so the right edge stays clean and the spacing even ---------- */
+.prose p, .prose li,
+.ah-cols p,
+.ah-about__text > p:not(.ah-about__more),
+.faq details > div p,
+.ah-tools > p,
+.rvp-group__head p{ text-align:justify; -webkit-hyphens:auto; hyphens:auto; hyphenate-limit-chars:7 3 3; }
+.prose .callout p, .prose .disclaimer, .prose figure figcaption, .prose td p{ text-align:left; -webkit-hyphens:manual; hyphens:manual; }
