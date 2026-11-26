@@ -173,6 +173,9 @@
   var form = $("#contact-form");
   if (form) {
     var status = $(".form-status", form);
+    /* coming from a page that asks for one service (?s=prod), preselect it */
+    var want = (location.search.match(/[?&]s=([a-z]+)/) || [])[1];
+    if (want) { var pick = $('select[name=service] option[data-k="' + want + '"]', form); if (pick) pick.selected = true; }
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
