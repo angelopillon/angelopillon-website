@@ -253,6 +253,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/music-production"/>
   </url>
   <url>
+    <loc>https://angelopillon.com/it/articoli/izotope-nectar-5-novita</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/izotope-nectar-5-novita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/izotope-nectar-5-whats-new"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/izotope-nectar-5-neuerungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/izotope-nectar-5-whats-new"/>
+  </url>
+  <url>
     <loc>https://angelopillon.com/it/articoli/musica-lossless-spotify-apple-music-tidal</loc>
     <lastmod>2026-11-16</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/musica-lossless-spotify-apple-music-tidal"/>
@@ -781,6 +789,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/articles"/>
   </url>
   <url>
+    <loc>https://angelopillon.com/izotope-nectar-5-whats-new</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/izotope-nectar-5-novita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/izotope-nectar-5-whats-new"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/izotope-nectar-5-neuerungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/izotope-nectar-5-whats-new"/>
+  </url>
+  <url>
     <loc>https://angelopillon.com/lossless-streaming-spotify-apple-music-tidal</loc>
     <lastmod>2026-11-16</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/musica-lossless-spotify-apple-music-tidal"/>
@@ -1307,6 +1323,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/articles"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/articles"/>
+  </url>
+  <url>
+    <loc>https://angelopillon.com/de/artikel/izotope-nectar-5-neuerungen</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://angelopillon.com/it/articoli/izotope-nectar-5-novita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angelopillon.com/izotope-nectar-5-whats-new"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://angelopillon.com/de/artikel/izotope-nectar-5-neuerungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angelopillon.com/izotope-nectar-5-whats-new"/>
   </url>
   <url>
     <loc>https://angelopillon.com/de/artikel/lossless-streaming-spotify-apple-music-tidal</loc>
